@@ -2,10 +2,6 @@
 <?eclipse version="3.0"?>
 
 <!--
- <copyright>
- </copyright>
-
- $Id$
 -->
 
 <plugin>
@@ -38,6 +34,19 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
+            uri="http://sdq.ipd.uka.de/ExperimentAutomation/Experiments/AbstractSimulation/1.0"
+            class="de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.AbstractSimulationPackage"
+            genModel="model/ExperimentAutomation.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="abstractsimulation"
+            class="de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.util.AbstractSimulationResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
             uri="http://sdq.ipd.uka.de/ExperimentAutomation/Experiments/SimuCom/1.0"
             class="de.uka.ipd.sdq.experimentautomation.experiments.simucom.SimuComPackage"
             genModel="model/ExperimentAutomation.genmodel"/>
@@ -47,19 +56,6 @@
       <parser
             type="simucom"
             class="de.uka.ipd.sdq.experimentautomation.experiments.simucom.util.SimuComResourceFactoryImpl"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <package
-            uri="http://sdq.ipd.uka.de/ExperimentAutomation/Experiments/AbstractSimEngine/1.0"
-            class="de.uka.ipd.sdq.experimentautomation.experiments.abstractsimengine.AbstractSimEnginePackage"
-            genModel="model/ExperimentAutomation.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.extension_parser">
-      <parser
-            type="abstractsimengine"
-            class="de.uka.ipd.sdq.experimentautomation.experiments.abstractsimengine.util.AbstractSimEngineResourceFactoryImpl"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
