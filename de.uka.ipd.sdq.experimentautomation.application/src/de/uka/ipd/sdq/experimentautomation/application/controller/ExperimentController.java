@@ -49,6 +49,7 @@ public class ExperimentController {
     private Path bookkeepingLocation;
     private String args[];
     private List<IRunListener> listeners;
+	private boolean copyAuxModelFiles;
 
     /**
      * 
@@ -65,7 +66,15 @@ public class ExperimentController {
         this.bookkeepingLocation = bookkeepingLocation;
         this.args = args;
         this.listeners = new ArrayList<IRunListener>();
-    }
+		this.copyAuxModelFiles = true;
+	}
+
+	public ExperimentController(Path bookkeepingLocation) {
+		this.bookkeepingLocation = bookkeepingLocation;
+		this.args = new String[] { "none (call by code)" };
+		this.copyAuxModelFiles = false;
+	}
+
 
     private IVariationStrategy initialiseVariations(Variation v, ResourceSet rs) {
         EObject variedObject = PCMModelHelper.findModelElementById(rs, v.getVariedObjectId());
@@ -230,8 +239,12 @@ public class ExperimentController {
                 + "/");
 
         // copy initial PCM model files to experiment folder
-        PCMModelFiles modelCopy = PCMModelHelper.copyToExperimentFolder(exp.getInitialModel(), experimentsLocation,
-                variationsLocation, variationFolderUri);
+		PCMModelFiles modelCopy;
+		if (copyAuxModelFiles) {
+			modelCopy = PCMModelHelper.copyToExperimentFolder(exp.getInitialModel(), experimentsLocation, variationsLocation, variationFolderUri);
+		} else {
+			modelCopy = PCMModelHelper.copyToExperimentFolder(exp.getInitialModel(), variationFolderUri);
+		}
 
         // load PCM model from copied model files
         final ResourceSet resourceSet = new ResourceSetImpl();

@@ -31,8 +31,9 @@ public class ClosedWorkloadVariation implements IVariationStrategy {
         if (value > Integer.MAX_VALUE) {
             logger.warn("Warning: Converted long to int, but the value was larger than MAXINT.");
             intValue = Integer.MAX_VALUE;
-        }
-        intValue = new Long(value).intValue();
+		} else {
+			intValue = new Long(value).intValue();
+		}
         workload.setPopulation(intValue);
 
         return "Closed workload population = " + value + ": " + workload.eClass().getName() + " of "
