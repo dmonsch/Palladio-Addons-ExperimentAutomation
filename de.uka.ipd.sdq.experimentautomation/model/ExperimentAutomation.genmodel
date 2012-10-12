@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel" modelDirectory="/de.uka.ipd.sdq.experimentautomation/src"
-    modelPluginID="de.uka.ipd.sdq.experimentautomation" modelName="ExperimentAutomation"
-    testsDirectory="/de.uka.ipd.sdq.experimentautomation.tests/src" importerID="org.eclipse.uml2.uml.ecore.importer"
-    complianceLevel="6.0" copyrightFields="false" testsPluginID="de.uka.ipd.sdq.experimentautomation.tests"
-    usedGenPackages="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier">
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
+    modelDirectory="/de.uka.ipd.sdq.experimentautomation/src" modelPluginID="de.uka.ipd.sdq.experimentautomation"
+    modelName="ExperimentAutomation" testsDirectory="/de.uka.ipd.sdq.experimentautomation.tests/src"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    testsPluginID="de.uka.ipd.sdq.experimentautomation.tests" usedGenPackages="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier">
   <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
     <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
     <details key="UNION_PROPERTIES" value="REPORT"/>
@@ -24,7 +23,7 @@
     <details key="CAMEL_CASE_NAMES" value="IGNORE"/>
     <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
   </genAnnotations>
-  <foreignModel>file:/W:/ExperimentAutomation.uml</foreignModel>
+  <foreignModel>experimentautomation.ecore</foreignModel>
   <genPackages xsi:type="genmodel:GenPackage" prefix="ExperimentAutomation" basePackage="de.uka.ipd.sdq"
       disposableProviderFactory="true" ecorePackage="experimentautomation.ecore#/">
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Variation" basePackage="de.uka.ipd.sdq.experimentautomation"
@@ -112,6 +111,10 @@
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//experiments/ProfilingMeasurement"/>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//experiments/JMXMeasurement">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//experiments/JMXMeasurement/pollingPeriod"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//experiments/LinearValueProvider">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//experiments/LinearValueProvider/summand"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//experiments/LinearValueProvider/factor"/>
       </genClasses>
       <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="AbstractSimulation"
           basePackage="de.uka.ipd.sdq.experimentautomation.experiments" resource="XML"

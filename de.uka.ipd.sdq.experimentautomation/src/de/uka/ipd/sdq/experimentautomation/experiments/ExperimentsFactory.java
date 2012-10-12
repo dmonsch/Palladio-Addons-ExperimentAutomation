@@ -152,6 +152,15 @@ public interface ExperimentsFactory extends EFactory {
 	JMXMeasurement createJMXMeasurement();
 
 	/**
+	 * Returns a new object of class '<em>Linear Value Provider</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Linear Value Provider</em>'.
+	 * @generated
+	 */
+	LinearValueProvider createLinearValueProvider();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

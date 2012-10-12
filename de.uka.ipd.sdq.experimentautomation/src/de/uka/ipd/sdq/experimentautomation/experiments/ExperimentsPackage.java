@@ -691,6 +691,44 @@ public interface ExperimentsPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.LinearValueProviderImpl <em>Linear Value Provider</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.LinearValueProviderImpl
+	 * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getLinearValueProvider()
+	 * @generated
+	 */
+	int LINEAR_VALUE_PROVIDER = 18;
+
+	/**
+	 * The feature id for the '<em><b>Summand</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINEAR_VALUE_PROVIDER__SUMMAND = VALUE_PROVIDER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Factor</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINEAR_VALUE_PROVIDER__FACTOR = VALUE_PROVIDER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Linear Value Provider</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINEAR_VALUE_PROVIDER_FEATURE_COUNT = VALUE_PROVIDER_FEATURE_COUNT + 2;
+
+
+	/**
 	 * Returns the meta object for class '{@link de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository <em>Experiment Repository</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1223,6 +1261,38 @@ public interface ExperimentsPackage extends EPackage {
 	EAttribute getJMXMeasurement_PollingPeriod();
 
 	/**
+	 * Returns the meta object for class '{@link de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider <em>Linear Value Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Linear Value Provider</em>'.
+	 * @see de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider
+	 * @generated
+	 */
+	EClass getLinearValueProvider();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider#getSummand <em>Summand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Summand</em>'.
+	 * @see de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider#getSummand()
+	 * @see #getLinearValueProvider()
+	 * @generated
+	 */
+	EAttribute getLinearValueProvider_Summand();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider#getFactor <em>Factor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Factor</em>'.
+	 * @see de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider#getFactor()
+	 * @see #getLinearValueProvider()
+	 * @generated
+	 */
+	EAttribute getLinearValueProvider_Factor();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1679,6 +1749,32 @@ public interface ExperimentsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute JMX_MEASUREMENT__POLLING_PERIOD = eINSTANCE.getJMXMeasurement_PollingPeriod();
+
+		/**
+		 * The meta object literal for the '{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.LinearValueProviderImpl <em>Linear Value Provider</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.LinearValueProviderImpl
+		 * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getLinearValueProvider()
+		 * @generated
+		 */
+		EClass LINEAR_VALUE_PROVIDER = eINSTANCE.getLinearValueProvider();
+
+		/**
+		 * The meta object literal for the '<em><b>Summand</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LINEAR_VALUE_PROVIDER__SUMMAND = eINSTANCE.getLinearValueProvider_Summand();
+
+		/**
+		 * The meta object literal for the '<em><b>Factor</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LINEAR_VALUE_PROVIDER__FACTOR = eINSTANCE.getLinearValueProvider_Factor();
 
 	}
 

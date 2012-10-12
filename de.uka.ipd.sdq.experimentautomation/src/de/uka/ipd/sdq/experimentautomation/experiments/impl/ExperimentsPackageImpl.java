@@ -15,6 +15,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider;
 import de.uka.ipd.sdq.experimentautomation.experiments.FractionalFactorialDesign;
 import de.uka.ipd.sdq.experimentautomation.experiments.FullFactorialDesign;
 import de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement;
+import de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider;
 import de.uka.ipd.sdq.experimentautomation.experiments.OneFactorAtATime;
 import de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles;
 import de.uka.ipd.sdq.experimentautomation.experiments.PlacketBurmanDesign;
@@ -184,6 +185,13 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 	 * @generated
 	 */
 	private EClass jmxMeasurementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass linearValueProviderEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -718,6 +726,33 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getLinearValueProvider() {
+		return linearValueProviderEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLinearValueProvider_Summand() {
+		return (EAttribute)linearValueProviderEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLinearValueProvider_Factor() {
+		return (EAttribute)linearValueProviderEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ExperimentsFactory getExperimentsFactory() {
 		return (ExperimentsFactory)getEFactoryInstance();
 	}
@@ -808,6 +843,10 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
 		jmxMeasurementEClass = createEClass(JMX_MEASUREMENT);
 		createEAttribute(jmxMeasurementEClass, JMX_MEASUREMENT__POLLING_PERIOD);
+
+		linearValueProviderEClass = createEClass(LINEAR_VALUE_PROVIDER);
+		createEAttribute(linearValueProviderEClass, LINEAR_VALUE_PROVIDER__SUMMAND);
+		createEAttribute(linearValueProviderEClass, LINEAR_VALUE_PROVIDER__FACTOR);
 	}
 
 	/**
@@ -857,6 +896,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 		simulationDurationMeasurementEClass.getESuperTypes().add(this.getResponseMeasurement());
 		profilingMeasurementEClass.getESuperTypes().add(this.getResponseMeasurement());
 		jmxMeasurementEClass.getESuperTypes().add(this.getResponseMeasurement());
+		linearValueProviderEClass.getESuperTypes().add(this.getValueProvider());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(experimentRepositoryEClass, ExperimentRepository.class, "ExperimentRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -926,6 +966,10 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
 		initEClass(jmxMeasurementEClass, JMXMeasurement.class, "JMXMeasurement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getJMXMeasurement_PollingPeriod(), ecorePackage.getEIntegerObject(), "pollingPeriod", null, 1, 1, JMXMeasurement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(linearValueProviderEClass, LinearValueProvider.class, "LinearValueProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLinearValueProvider_Summand(), ecorePackage.getEDouble(), "summand", null, 1, 1, LinearValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getLinearValueProvider_Factor(), ecorePackage.getEDouble(), "factor", null, 1, 1, LinearValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

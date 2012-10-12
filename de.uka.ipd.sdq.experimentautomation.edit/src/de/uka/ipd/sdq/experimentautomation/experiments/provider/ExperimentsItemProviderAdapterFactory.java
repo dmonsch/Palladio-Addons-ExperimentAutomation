@@ -398,6 +398,29 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LinearValueProviderItemProvider linearValueProviderItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLinearValueProviderAdapter() {
+		if (linearValueProviderItemProvider == null) {
+			linearValueProviderItemProvider = new LinearValueProviderItemProvider(this);
+		}
+
+		return linearValueProviderItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -510,6 +533,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 		if (simulationDurationMeasurementItemProvider != null) simulationDurationMeasurementItemProvider.dispose();
 		if (profilingMeasurementItemProvider != null) profilingMeasurementItemProvider.dispose();
 		if (jmxMeasurementItemProvider != null) jmxMeasurementItemProvider.dispose();
+		if (linearValueProviderItemProvider != null) linearValueProviderItemProvider.dispose();
 	}
 
 }
