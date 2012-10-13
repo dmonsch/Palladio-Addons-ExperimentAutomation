@@ -16,6 +16,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.FractionalFactorialDesign
 import de.uka.ipd.sdq.experimentautomation.experiments.FullFactorialDesign;
 import de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement;
 import de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider;
+import de.uka.ipd.sdq.experimentautomation.experiments.Modification;
 import de.uka.ipd.sdq.experimentautomation.experiments.OneFactorAtATime;
 import de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles;
 import de.uka.ipd.sdq.experimentautomation.experiments.PlacketBurmanDesign;
@@ -194,6 +195,13 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 	private EClass linearValueProviderEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass modificationEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -330,8 +338,8 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getExperiment_Id() {
-		return (EAttribute)experimentEClass.getEStructuralFeatures().get(1);
+	public EReference getExperiment_Modifications() {
+		return (EReference)experimentEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -339,7 +347,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getExperiment_Name() {
+	public EAttribute getExperiment_Id() {
 		return (EAttribute)experimentEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -348,8 +356,8 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getExperiment_InitialModel() {
-		return (EReference)experimentEClass.getEStructuralFeatures().get(3);
+	public EAttribute getExperiment_Name() {
+		return (EAttribute)experimentEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -357,7 +365,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getExperiment_ToolConfiguration() {
+	public EReference getExperiment_InitialModel() {
 		return (EReference)experimentEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -366,7 +374,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getExperiment_StopConditions() {
+	public EReference getExperiment_ToolConfiguration() {
 		return (EReference)experimentEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -375,8 +383,17 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getExperiment_StopConditions() {
+		return (EReference)experimentEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getExperiment_Description() {
-		return (EAttribute)experimentEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)experimentEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -385,7 +402,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 	 * @generated
 	 */
 	public EReference getExperiment_ExperimentDesign() {
-		return (EReference)experimentEClass.getEStructuralFeatures().get(7);
+		return (EReference)experimentEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -394,7 +411,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 	 * @generated
 	 */
 	public EReference getExperiment_ResponseMeasurement() {
-		return (EReference)experimentEClass.getEStructuralFeatures().get(8);
+		return (EReference)experimentEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -753,6 +770,51 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getModification() {
+		return modificationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModification_Type() {
+		return (EReference)modificationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModification_Name() {
+		return (EAttribute)modificationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModification_VariedObjectId() {
+		return (EAttribute)modificationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModification_Value() {
+		return (EAttribute)modificationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ExperimentsFactory getExperimentsFactory() {
 		return (ExperimentsFactory)getEFactoryInstance();
 	}
@@ -783,6 +845,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
 		experimentEClass = createEClass(EXPERIMENT);
 		createEReference(experimentEClass, EXPERIMENT__VARIATIONS);
+		createEReference(experimentEClass, EXPERIMENT__MODIFICATIONS);
 		createEAttribute(experimentEClass, EXPERIMENT__ID);
 		createEAttribute(experimentEClass, EXPERIMENT__NAME);
 		createEReference(experimentEClass, EXPERIMENT__INITIAL_MODEL);
@@ -847,6 +910,12 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 		linearValueProviderEClass = createEClass(LINEAR_VALUE_PROVIDER);
 		createEAttribute(linearValueProviderEClass, LINEAR_VALUE_PROVIDER__SUMMAND);
 		createEAttribute(linearValueProviderEClass, LINEAR_VALUE_PROVIDER__FACTOR);
+
+		modificationEClass = createEClass(MODIFICATION);
+		createEReference(modificationEClass, MODIFICATION__TYPE);
+		createEAttribute(modificationEClass, MODIFICATION__NAME);
+		createEAttribute(modificationEClass, MODIFICATION__VARIED_OBJECT_ID);
+		createEAttribute(modificationEClass, MODIFICATION__VALUE);
 	}
 
 	/**
@@ -905,7 +974,8 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 		initEAttribute(getExperimentRepository_Repetitions(), ecorePackage.getEInt(), "repetitions", null, 1, 1, ExperimentRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(experimentEClass, Experiment.class, "Experiment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getExperiment_Variations(), this.getVariation(), null, "variations", null, 1, -1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getExperiment_Variations(), this.getVariation(), null, "variations", null, 0, -1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getExperiment_Modifications(), this.getModification(), null, "modifications", null, 0, -1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getExperiment_Id(), ecorePackage.getEString(), "id", null, 1, 1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getExperiment_Name(), ecorePackage.getEString(), "name", null, 1, 1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getExperiment_InitialModel(), this.getPCMModelFiles(), null, "initialModel", null, 1, 1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -970,6 +1040,12 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 		initEClass(linearValueProviderEClass, LinearValueProvider.class, "LinearValueProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLinearValueProvider_Summand(), ecorePackage.getEDouble(), "summand", null, 1, 1, LinearValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getLinearValueProvider_Factor(), ecorePackage.getEDouble(), "factor", null, 1, 1, LinearValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(modificationEClass, Modification.class, "Modification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getModification_Type(), theVariationPackage.getVariationType(), null, "type", null, 0, 1, Modification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModification_Name(), ecorePackage.getEString(), "name", null, 1, 1, Modification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getModification_VariedObjectId(), ecorePackage.getEString(), "variedObjectId", null, 1, 1, Modification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getModification_Value(), ecorePackage.getELong(), "value", null, 1, 1, Modification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

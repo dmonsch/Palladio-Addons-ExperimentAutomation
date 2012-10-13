@@ -1,6 +1,5 @@
 package de.uka.ipd.sdq.experimentautomation.application.variation;
 
-import org.apache.log4j.Logger;
 import org.eclipse.emf.ecore.EObject;
 
 import de.uka.ipd.sdq.pcm.core.CoreFactory;
@@ -10,8 +9,6 @@ import de.uka.ipd.sdq.pcm.usagemodel.UsageScenario;
 import edu.kit.ipd.sdq.eventsim.util.PCMEntityHelper;
 
 public class OpenWorkloadVariation implements IVariationStrategy {
-
-	private static final Logger logger = Logger.getLogger(OpenWorkloadVariation.class);
 
 	private OpenWorkload workload;
 

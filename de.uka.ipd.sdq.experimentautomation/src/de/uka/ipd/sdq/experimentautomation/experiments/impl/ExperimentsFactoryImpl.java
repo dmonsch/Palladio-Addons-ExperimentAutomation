@@ -75,6 +75,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 			case ExperimentsPackage.PROFILING_MEASUREMENT: return createProfilingMeasurement();
 			case ExperimentsPackage.JMX_MEASUREMENT: return createJMXMeasurement();
 			case ExperimentsPackage.LINEAR_VALUE_PROVIDER: return createLinearValueProvider();
+			case ExperimentsPackage.MODIFICATION: return createModification();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -228,6 +229,16 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 	public LinearValueProvider createLinearValueProvider() {
 		LinearValueProviderImpl linearValueProvider = new LinearValueProviderImpl();
 		return linearValueProvider;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Modification createModification() {
+		ModificationImpl modification = new ModificationImpl();
+		return modification;
 	}
 
 	/**

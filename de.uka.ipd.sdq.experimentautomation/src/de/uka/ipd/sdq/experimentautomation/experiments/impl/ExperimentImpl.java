@@ -9,6 +9,7 @@ package de.uka.ipd.sdq.experimentautomation.experiments.impl;
 import de.uka.ipd.sdq.experimentautomation.experiments.Experiment;
 import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentDesign;
 import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
+import de.uka.ipd.sdq.experimentautomation.experiments.Modification;
 import de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles;
 import de.uka.ipd.sdq.experimentautomation.experiments.ResponseMeasurement;
 import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
@@ -41,6 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl#getVariations <em>Variations</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl#getModifications <em>Modifications</em>}</li>
  *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl#getId <em>Id</em>}</li>
  *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl#getInitialModel <em>Initial Model</em>}</li>
@@ -64,6 +66,16 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 	 * @ordered
 	 */
 	protected EList<Variation> variations;
+
+	/**
+	 * The cached value of the '{@link #getModifications() <em>Modifications</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getModifications()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Modification> modifications;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -204,6 +216,18 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 			variations = new EObjectContainmentEList<Variation>(Variation.class, this, ExperimentsPackage.EXPERIMENT__VARIATIONS);
 		}
 		return variations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Modification> getModifications() {
+		if (modifications == null) {
+			modifications = new EObjectContainmentEList<Modification>(Modification.class, this, ExperimentsPackage.EXPERIMENT__MODIFICATIONS);
+		}
+		return modifications;
 	}
 
 	/**
@@ -432,6 +456,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 		switch (featureID) {
 			case ExperimentsPackage.EXPERIMENT__VARIATIONS:
 				return ((InternalEList<?>)getVariations()).basicRemove(otherEnd, msgs);
+			case ExperimentsPackage.EXPERIMENT__MODIFICATIONS:
+				return ((InternalEList<?>)getModifications()).basicRemove(otherEnd, msgs);
 			case ExperimentsPackage.EXPERIMENT__INITIAL_MODEL:
 				return basicSetInitialModel(null, msgs);
 			case ExperimentsPackage.EXPERIMENT__STOP_CONDITIONS:
@@ -454,6 +480,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 		switch (featureID) {
 			case ExperimentsPackage.EXPERIMENT__VARIATIONS:
 				return getVariations();
+			case ExperimentsPackage.EXPERIMENT__MODIFICATIONS:
+				return getModifications();
 			case ExperimentsPackage.EXPERIMENT__ID:
 				return getId();
 			case ExperimentsPackage.EXPERIMENT__NAME:
@@ -486,6 +514,10 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 			case ExperimentsPackage.EXPERIMENT__VARIATIONS:
 				getVariations().clear();
 				getVariations().addAll((Collection<? extends Variation>)newValue);
+				return;
+			case ExperimentsPackage.EXPERIMENT__MODIFICATIONS:
+				getModifications().clear();
+				getModifications().addAll((Collection<? extends Modification>)newValue);
 				return;
 			case ExperimentsPackage.EXPERIMENT__ID:
 				setId((String)newValue);
@@ -528,6 +560,9 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 			case ExperimentsPackage.EXPERIMENT__VARIATIONS:
 				getVariations().clear();
 				return;
+			case ExperimentsPackage.EXPERIMENT__MODIFICATIONS:
+				getModifications().clear();
+				return;
 			case ExperimentsPackage.EXPERIMENT__ID:
 				setId(ID_EDEFAULT);
 				return;
@@ -566,6 +601,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 		switch (featureID) {
 			case ExperimentsPackage.EXPERIMENT__VARIATIONS:
 				return variations != null && !variations.isEmpty();
+			case ExperimentsPackage.EXPERIMENT__MODIFICATIONS:
+				return modifications != null && !modifications.isEmpty();
 			case ExperimentsPackage.EXPERIMENT__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case ExperimentsPackage.EXPERIMENT__NAME:

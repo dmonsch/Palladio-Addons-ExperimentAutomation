@@ -161,6 +161,15 @@ public interface ExperimentsFactory extends EFactory {
 	LinearValueProvider createLinearValueProvider();
 
 	/**
+	 * Returns a new object of class '<em>Modification</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Modification</em>'.
+	 * @generated
+	 */
+	Modification createModification();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

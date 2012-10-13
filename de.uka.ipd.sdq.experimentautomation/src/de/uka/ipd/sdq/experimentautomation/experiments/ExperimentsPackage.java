@@ -125,13 +125,22 @@ public interface ExperimentsPackage extends EPackage {
 	int EXPERIMENT__VARIATIONS = 0;
 
 	/**
+	 * The feature id for the '<em><b>Modifications</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPERIMENT__MODIFICATIONS = 1;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPERIMENT__ID = 1;
+	int EXPERIMENT__ID = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -140,7 +149,7 @@ public interface ExperimentsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPERIMENT__NAME = 2;
+	int EXPERIMENT__NAME = 3;
 
 	/**
 	 * The feature id for the '<em><b>Initial Model</b></em>' containment reference.
@@ -149,7 +158,7 @@ public interface ExperimentsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPERIMENT__INITIAL_MODEL = 3;
+	int EXPERIMENT__INITIAL_MODEL = 4;
 
 	/**
 	 * The feature id for the '<em><b>Tool Configuration</b></em>' reference list.
@@ -158,7 +167,7 @@ public interface ExperimentsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPERIMENT__TOOL_CONFIGURATION = 4;
+	int EXPERIMENT__TOOL_CONFIGURATION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Stop Conditions</b></em>' containment reference list.
@@ -167,7 +176,7 @@ public interface ExperimentsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPERIMENT__STOP_CONDITIONS = 5;
+	int EXPERIMENT__STOP_CONDITIONS = 6;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -176,7 +185,7 @@ public interface ExperimentsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPERIMENT__DESCRIPTION = 6;
+	int EXPERIMENT__DESCRIPTION = 7;
 
 	/**
 	 * The feature id for the '<em><b>Experiment Design</b></em>' containment reference.
@@ -185,7 +194,7 @@ public interface ExperimentsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPERIMENT__EXPERIMENT_DESIGN = 7;
+	int EXPERIMENT__EXPERIMENT_DESIGN = 8;
 
 	/**
 	 * The feature id for the '<em><b>Response Measurement</b></em>' containment reference.
@@ -194,7 +203,7 @@ public interface ExperimentsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPERIMENT__RESPONSE_MEASUREMENT = 8;
+	int EXPERIMENT__RESPONSE_MEASUREMENT = 9;
 
 	/**
 	 * The number of structural features of the '<em>Experiment</em>' class.
@@ -203,7 +212,7 @@ public interface ExperimentsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPERIMENT_FEATURE_COUNT = 9;
+	int EXPERIMENT_FEATURE_COUNT = 10;
 
 	/**
 	 * The meta object id for the '{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.VariationImpl <em>Variation</em>}' class.
@@ -729,6 +738,62 @@ public interface ExperimentsPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl <em>Modification</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl
+	 * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getModification()
+	 * @generated
+	 */
+	int MODIFICATION = 19;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFICATION__TYPE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFICATION__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Varied Object Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFICATION__VARIED_OBJECT_ID = 2;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFICATION__VALUE = 3;
+
+	/**
+	 * The number of structural features of the '<em>Modification</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFICATION_FEATURE_COUNT = 4;
+
+
+	/**
 	 * Returns the meta object for class '{@link de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository <em>Experiment Repository</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -791,6 +856,17 @@ public interface ExperimentsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getExperiment_Variations();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getModifications <em>Modifications</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Modifications</em>'.
+	 * @see de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getModifications()
+	 * @see #getExperiment()
+	 * @generated
+	 */
+	EReference getExperiment_Modifications();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getId <em>Id</em>}'.
@@ -1293,6 +1369,60 @@ public interface ExperimentsPackage extends EPackage {
 	EAttribute getLinearValueProvider_Factor();
 
 	/**
+	 * Returns the meta object for class '{@link de.uka.ipd.sdq.experimentautomation.experiments.Modification <em>Modification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Modification</em>'.
+	 * @see de.uka.ipd.sdq.experimentautomation.experiments.Modification
+	 * @generated
+	 */
+	EClass getModification();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.uka.ipd.sdq.experimentautomation.experiments.Modification#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @see de.uka.ipd.sdq.experimentautomation.experiments.Modification#getType()
+	 * @see #getModification()
+	 * @generated
+	 */
+	EReference getModification_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.experimentautomation.experiments.Modification#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see de.uka.ipd.sdq.experimentautomation.experiments.Modification#getName()
+	 * @see #getModification()
+	 * @generated
+	 */
+	EAttribute getModification_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.experimentautomation.experiments.Modification#getVariedObjectId <em>Varied Object Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Varied Object Id</em>'.
+	 * @see de.uka.ipd.sdq.experimentautomation.experiments.Modification#getVariedObjectId()
+	 * @see #getModification()
+	 * @generated
+	 */
+	EAttribute getModification_VariedObjectId();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.experimentautomation.experiments.Modification#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see de.uka.ipd.sdq.experimentautomation.experiments.Modification#getValue()
+	 * @see #getModification()
+	 * @generated
+	 */
+	EAttribute getModification_Value();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1365,6 +1495,14 @@ public interface ExperimentsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EXPERIMENT__VARIATIONS = eINSTANCE.getExperiment_Variations();
+
+		/**
+		 * The meta object literal for the '<em><b>Modifications</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPERIMENT__MODIFICATIONS = eINSTANCE.getExperiment_Modifications();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -1775,6 +1913,48 @@ public interface ExperimentsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LINEAR_VALUE_PROVIDER__FACTOR = eINSTANCE.getLinearValueProvider_Factor();
+
+		/**
+		 * The meta object literal for the '{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl <em>Modification</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl
+		 * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getModification()
+		 * @generated
+		 */
+		EClass MODIFICATION = eINSTANCE.getModification();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODIFICATION__TYPE = eINSTANCE.getModification_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODIFICATION__NAME = eINSTANCE.getModification_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Varied Object Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODIFICATION__VARIED_OBJECT_ID = eINSTANCE.getModification_VariedObjectId();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODIFICATION__VALUE = eINSTANCE.getModification_Value();
 
 	}
 

@@ -180,6 +180,7 @@ public class ExperimentItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ExperimentsPackage.Literals.EXPERIMENT__VARIATIONS);
+			childrenFeatures.add(ExperimentsPackage.Literals.EXPERIMENT__MODIFICATIONS);
 			childrenFeatures.add(ExperimentsPackage.Literals.EXPERIMENT__INITIAL_MODEL);
 			childrenFeatures.add(ExperimentsPackage.Literals.EXPERIMENT__STOP_CONDITIONS);
 			childrenFeatures.add(ExperimentsPackage.Literals.EXPERIMENT__EXPERIMENT_DESIGN);
@@ -244,6 +245,7 @@ public class ExperimentItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ExperimentsPackage.EXPERIMENT__VARIATIONS:
+			case ExperimentsPackage.EXPERIMENT__MODIFICATIONS:
 			case ExperimentsPackage.EXPERIMENT__INITIAL_MODEL:
 			case ExperimentsPackage.EXPERIMENT__STOP_CONDITIONS:
 			case ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN:
@@ -269,6 +271,11 @@ public class ExperimentItemProvider
 			(createChildParameter
 				(ExperimentsPackage.Literals.EXPERIMENT__VARIATIONS,
 				 ExperimentsFactory.eINSTANCE.createVariation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ExperimentsPackage.Literals.EXPERIMENT__MODIFICATIONS,
+				 ExperimentsFactory.eINSTANCE.createModification()));
 
 		newChildDescriptors.add
 			(createChildParameter

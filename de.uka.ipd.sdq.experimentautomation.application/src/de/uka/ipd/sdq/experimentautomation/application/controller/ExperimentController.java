@@ -83,6 +83,12 @@ public class ExperimentController {
         return s;
     }
 
+	public void runExperiment(Experiment experiment) {
+		List<Experiment> experiments = new ArrayList<Experiment>(1);
+		experiments.add(experiment);
+		runExperiment(experiments, 1);
+	}
+
     public void runExperiment(List<Experiment> experiments, int repetitions) {
         for (Experiment exp : experiments) {
             for (ToolConfiguration c : exp.getToolConfiguration()) {

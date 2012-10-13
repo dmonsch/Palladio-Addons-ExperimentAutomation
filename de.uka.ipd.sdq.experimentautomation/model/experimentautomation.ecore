@@ -31,7 +31,9 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Experiment">
       <eStructuralFeatures xsi:type="ecore:EReference" name="variations" ordered="false"
-          lowerBound="1" upperBound="-1" eType="#//experiments/Variation" containment="true"/>
+          upperBound="-1" eType="#//experiments/Variation" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="modifications" upperBound="-1"
+          eType="#//experiments/Modification" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
@@ -119,6 +121,15 @@
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="factor" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Modification">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//variation/VariationType"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="variedObjectId" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
     </eClassifiers>
     <eSubpackages name="abstractsimulation" nsURI="http://sdq.ipd.uka.de/ExperimentAutomation/Experiments/AbstractSimulation/1.0"
         nsPrefix="ExperimentAutomation.Experiments.AbstractSimulation">

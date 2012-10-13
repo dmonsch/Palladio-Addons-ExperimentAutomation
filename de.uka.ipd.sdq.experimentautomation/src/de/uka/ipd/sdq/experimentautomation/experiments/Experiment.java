@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getVariations <em>Variations</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getModifications <em>Modifications</em>}</li>
  *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getId <em>Id</em>}</li>
  *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getName <em>Name</em>}</li>
  *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getInitialModel <em>Initial Model</em>}</li>
@@ -48,10 +49,26 @@ public interface Experiment extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variations</em>' containment reference list.
 	 * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment_Variations()
-	 * @model containment="true" required="true" ordered="false"
+	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
 	EList<Variation> getVariations();
+
+	/**
+	 * Returns the value of the '<em><b>Modifications</b></em>' containment reference list.
+	 * The list contents are of type {@link de.uka.ipd.sdq.experimentautomation.experiments.Modification}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Modifications</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Modifications</em>' containment reference list.
+	 * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment_Modifications()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Modification> getModifications();
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.

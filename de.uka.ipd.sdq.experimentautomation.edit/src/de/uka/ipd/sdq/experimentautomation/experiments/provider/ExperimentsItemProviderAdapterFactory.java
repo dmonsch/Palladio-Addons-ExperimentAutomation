@@ -421,6 +421,29 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.uka.ipd.sdq.experimentautomation.experiments.Modification} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ModificationItemProvider modificationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.uka.ipd.sdq.experimentautomation.experiments.Modification}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createModificationAdapter() {
+		if (modificationItemProvider == null) {
+			modificationItemProvider = new ModificationItemProvider(this);
+		}
+
+		return modificationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -534,6 +557,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 		if (profilingMeasurementItemProvider != null) profilingMeasurementItemProvider.dispose();
 		if (jmxMeasurementItemProvider != null) jmxMeasurementItemProvider.dispose();
 		if (linearValueProviderItemProvider != null) linearValueProviderItemProvider.dispose();
+		if (modificationItemProvider != null) modificationItemProvider.dispose();
 	}
 
 }
