@@ -26,6 +26,7 @@ Require-Bundle: org.eclipse.core.runtime,
  edu.kit.ipd.sdq.eventsim;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: de.uka.ipd.sdq.experimentautomation.application.controller,
+ de.uka.ipd.sdq.experimentautomation.application.utils,
  de.uka.ipd.sdq.experimentautomation.application.variation
 Bundle-ClassPath: lib/agent.jar,
  .
