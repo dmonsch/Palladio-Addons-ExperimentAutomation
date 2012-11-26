@@ -12,29 +12,30 @@ public class AbstractActionReplication implements IVariationStrategy {
     private AbstractAction action;
 
     @Override
-    public void setVariedObject(EObject o) {
+    public void setVariedObject(final EObject o) {
         if (!AbstractAction.class.isInstance(o)) {
             throw new RuntimeException("Expected an instance of " + AbstractAction.class.getName()
                     + ", but encountered a " + o.getClass().getName());
         }
-        action = (AbstractAction) o;
+        this.action = (AbstractAction) o;
     }
 
     @Override
-    public String vary(long value) {
-        AbstractAction lastAction = action;
+    public String vary(final long value) {
+        AbstractAction lastAction = this.action;
         for (int i = 0; i < value; i++) {
-            AbstractAction previousSuccessor = lastAction.getSuccessor_AbstractAction();
-            AbstractAction copy = EcoreHelper.copy(action);
+            final AbstractAction previousSuccessor = lastAction.getSuccessor_AbstractAction();
+            final AbstractAction copy = EcoreHelper.copy(this.action);
             lastAction.setSuccessor_AbstractAction(copy);
-            copy.setResourceDemandingBehaviour_AbstractAction(action.getResourceDemandingBehaviour_AbstractAction());
+            copy.setResourceDemandingBehaviour_AbstractAction(this.action
+                    .getResourceDemandingBehaviour_AbstractAction());
             copy.setPredecessor_AbstractAction(lastAction);
             copy.setSuccessor_AbstractAction(previousSuccessor);
             copy.setEntityName(copy.getEntityName() + (i + 1));
             lastAction = copy;
         }
 
-        return "Replication count = " + value + ": " + PCMEntityHelper.toString(action);
+        return "Replication count = " + value + ": " + PCMEntityHelper.toString(this.action);
     }
 
 }

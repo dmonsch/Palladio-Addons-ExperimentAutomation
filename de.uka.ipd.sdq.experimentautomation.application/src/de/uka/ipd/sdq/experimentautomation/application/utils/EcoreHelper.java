@@ -16,21 +16,21 @@ public class EcoreHelper {
      *            the object that is to be copied
      */
     @SuppressWarnings("unchecked")
-    public static <T extends EObject> T copy(T source) {
-        T copy = (T) EcoreUtil.copy(source);
+    public static <T extends EObject> T copy(final T source) {
+        final T copy = EcoreUtil.copy(source);
         createNewIds(copy);
         return copy;
     }
-    
-    private static <T extends EObject> void createNewIds(T source) {
+
+    private static <T extends EObject> void createNewIds(final T source) {
         // create and set new UUID
-        if(Identifier.class.isInstance(source)) {
+        if (Identifier.class.isInstance(source)) {
             ((Identifier) source).setId(EcoreUtil.generateUUID());
         }
-      
+
         // recursively create new UUIDs for contained objects
-        EList<EObject> contents = source.eContents();
-        for(EObject o : contents) {
+        final EList<EObject> contents = source.eContents();
+        for (final EObject o : contents) {
             createNewIds(o);
         }
     }

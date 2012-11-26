@@ -22,15 +22,16 @@ import edu.kit.ipd.sdq.eventsim.controller.workflow.jobs.EventSimJob;
 public class EventSimToolAdapter implements IToolAdapter {
 
     @Override
-    public void runExperiment(String experimentName, PCMModelFiles model, ToolConfiguration configuration,
-            List<StopCondition> stopConditions, ISimulationListener listener) throws CoreException {
+    public void runExperiment(final String experimentName, final PCMModelFiles model,
+            final ToolConfiguration configuration, final List<StopCondition> stopConditions,
+            final ISimulationListener listener) throws CoreException {
         // create simulation configuration
-        EventSimConfig simConfig = EventSimConfigFactory.createConfig((EventSimConfiguration) configuration, stopConditions, model,
-                experimentName);
+        final EventSimConfig simConfig = EventSimConfigFactory.createConfig((EventSimConfiguration) configuration,
+                stopConditions, model, experimentName);
         simConfig.addListener(listener);
 
         // create workflow configuration
-        EventSimWorkflowConfiguration workflowConfig = EventSimWorkflowConfigurationFactory
+        final EventSimWorkflowConfiguration workflowConfig = EventSimWorkflowConfigurationFactory
                 .createWorkflowConfiguration((EventSimConfiguration) configuration, model, simConfig);
 
         // run simulation
@@ -39,10 +40,11 @@ public class EventSimToolAdapter implements IToolAdapter {
         final BlackboardBasedWorkflow<MDSDBlackboard> workflow = new BlackboardBasedWorkflow<MDSDBlackboard>(run,
                 blackboard);
         workflow.run();
-        
+
         // clean up TODO
-        SensorFramework sensorFramework = (SensorFramework) ((EventSimConfiguration) configuration).getPersistenceFramework();
-        SensorFrameworkDatasource datasource = sensorFramework.getDatasource();
+        final SensorFramework sensorFramework = (SensorFramework) ((EventSimConfiguration) configuration)
+                .getPersistenceFramework();
+        final SensorFrameworkDatasource datasource = sensorFramework.getDatasource();
         SensorFrameworkFactory.closeDatasource(datasource);
     }
 

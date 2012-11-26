@@ -8,7 +8,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.simucom.SimuComPackage;
 
 public class AnalysisToolFactory {
 
-    public static IToolAdapter createToolAdapater(ToolConfiguration configuration) {
+    public static IToolAdapter createToolAdapater(final ToolConfiguration configuration) {
         assert configuration != null : "The configuration may not be null";
         if (SimuComPackage.eINSTANCE.getSimuComConfiguration().isInstance(configuration)) {
             return new SimuComToolAdapter();

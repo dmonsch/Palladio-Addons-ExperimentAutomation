@@ -29,13 +29,13 @@ public class ConfigurationModel {
     private static final Logger logger = Logger.getLogger(ConfigurationModel.class);
 
     private ExperimentRepository experimentRepository;
-    private VariationRepository variations;
+    private final VariationRepository variations;
 
-    private Bundle bundle;
-    private IPath experimentsLocation;
+    private final Bundle bundle;
+    private final IPath experimentsLocation;
 
-    private ConfigurationModel(ExperimentRepository experiments, VariationRepository variations, Bundle bundle,
-            IPath experimentsLocation) {
+    private ConfigurationModel(final ExperimentRepository experiments, final VariationRepository variations,
+            final Bundle bundle, final IPath experimentsLocation) {
         this.experimentRepository = experiments;
         this.variations = variations;
         this.bundle = bundle;
@@ -43,30 +43,32 @@ public class ConfigurationModel {
     }
 
     public ExperimentRepository getExperiments() {
-        return experimentRepository;
+        return this.experimentRepository;
     }
 
     public VariationRepository getVariations() {
-        return variations;
+        return this.variations;
     }
 
-    public static ConfigurationModel loadFromBundle(Bundle bundle, IPath experimentsLocation, IPath variationsLocation) {
+    public static ConfigurationModel loadFromBundle(final Bundle bundle, final IPath experimentsLocation,
+            final IPath variationsLocation) {
         final ResourceSet resourceSet = new ResourceSetImpl();
-        ExperimentRepository experiments = (ExperimentRepository) loadResourceFromBundle(resourceSet, bundle,
+        final ExperimentRepository experiments = (ExperimentRepository) loadResourceFromBundle(resourceSet, bundle,
                 experimentsLocation, ExperimentsPackage.eINSTANCE.getExperimentRepository());
-        VariationRepository variations = (VariationRepository) loadResourceFromBundle(resourceSet, bundle,
+        final VariationRepository variations = (VariationRepository) loadResourceFromBundle(resourceSet, bundle,
                 variationsLocation, VariationPackage.eINSTANCE.getVariationRepository());
 
         return new ConfigurationModel(experiments, variations, bundle, experimentsLocation);
     }
 
-    private static <T extends EClass> EObject loadResourceFromBundle(ResourceSet resourceSet, Bundle bundle,
-            IPath modelLocation, T expectedType) {
+    private static <T extends EClass> EObject loadResourceFromBundle(final ResourceSet resourceSet,
+            final Bundle bundle, final IPath modelLocation, final T expectedType) {
         logger.debug("Loading resource " + modelLocation.toString() + " from bundle");
-        URI modelUri = URI.createFileURI(modelLocation.toOSString());//absolutePathToBundleURI(bundle, modelLocation);
-        Resource r = resourceSet.getResource(modelUri, true);
+        final URI modelUri = URI.createFileURI(modelLocation.toOSString());// absolutePathToBundleURI(bundle,
+                                                                           // modelLocation);
+        final Resource r = resourceSet.getResource(modelUri, true);
 
-        EObject o = r.getContents().get(0);
+        final EObject o = r.getContents().get(0);
         if (expectedType.isInstance(o)) {
             return o;
         } else {
@@ -75,33 +77,33 @@ public class ConfigurationModel {
         }
     }
 
-    private static URI absolutePathToBundleURI(Bundle bundle, IPath modelLocation) {
+    private static URI absolutePathToBundleURI(final Bundle bundle, final IPath modelLocation) {
         // create URI pointing to the model file contained in the bundle
-        URL bundleUrl = FileLocator.find(bundle, modelLocation, null);
-        URI bundleUri = URI.createURI(bundleUrl.toExternalForm());
+        final URL bundleUrl = FileLocator.find(bundle, modelLocation, null);
+        final URI bundleUri = URI.createURI(bundleUrl.toExternalForm());
         return bundleUri;
     }
 
-    public void setPCMModel(PCMModelFiles pcm) {
+    public void setPCMModel(final PCMModelFiles pcm) {
         final ResourceSet resourceSet = new ResourceSetImpl();
-        ExperimentRepository experimentRepository = (ExperimentRepository) loadResourceFromBundle(resourceSet, bundle,
-                experimentsLocation, ExperimentsPackage.eINSTANCE.getExperimentRepository());
+        final ExperimentRepository experimentRepository = (ExperimentRepository) loadResourceFromBundle(resourceSet,
+                this.bundle, this.experimentsLocation, ExperimentsPackage.eINSTANCE.getExperimentRepository());
 
         // tell Ecore where to find the PCM partial models by overwriting the relative path with
         // the absolute path to the temporary folder.
-        String[] modelFilePaths = { pcm.getAllocationFile(), pcm.getRepositoryFile(), pcm.getResourceenvironmentFile(),
-                pcm.getSystemFile(), pcm.getUsagemodelFile() };
-        for (String path : modelFilePaths) {
-            File modelFile = new File(path);
+        final String[] modelFilePaths = { pcm.getAllocationFile(), pcm.getRepositoryFile(),
+                pcm.getResourceenvironmentFile(), pcm.getSystemFile(), pcm.getUsagemodelFile() };
+        for (final String path : modelFilePaths) {
+            final File modelFile = new File(path);
             if (!modelFile.exists() || modelFile.isDirectory()) {
                 throw new RuntimeException("Could not find file " + modelFile.toString()
                         + ". Check your configuration model.");
             }
-            String fileName = modelFile.getName();
-            URI absoluteFileUri = URI.createFileURI(modelFile.getPath());
+            final String fileName = modelFile.getName();
+            final URI absoluteFileUri = URI.createFileURI(modelFile.getPath());
 
-            URL bundleBaseUrl = bundle.getEntry("/");
-            URI bundleRelativeFileUri = URI.createURI(bundleBaseUrl.toExternalForm() + "config/" + fileName);
+            final URL bundleBaseUrl = this.bundle.getEntry("/");
+            final URI bundleRelativeFileUri = URI.createURI(bundleBaseUrl.toExternalForm() + "config/" + fileName);
             resourceSet.getURIConverter().getURIMap().put(bundleRelativeFileUri, absoluteFileUri);
         }
 
@@ -109,8 +111,8 @@ public class ConfigurationModel {
         EcoreUtil.resolveAll(resourceSet);
 
         // ...and check, whether there are unresolved references
-        Map<EObject, Collection<Setting>> map = EcoreUtil.UnresolvedProxyCrossReferencer.find(resourceSet);
-        for (EObject o : map.keySet()) {
+        final Map<EObject, Collection<Setting>> map = EcoreUtil.UnresolvedProxyCrossReferencer.find(resourceSet);
+        for (final EObject o : map.keySet()) {
             logger.warn("There are unresolved references: " + o);
         }
 

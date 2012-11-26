@@ -21,10 +21,10 @@ import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
 import de.uka.ipd.sdq.workflow.pcm.ConstantsContainer;
 
 public class AbstractSimulationConfigFactory {
-    
-    public static Map<String, Object> createConfigMap(AbstractSimulationConfiguration config,
-            List<StopCondition> stopConditions, PCMModelFiles model, String experimentName) {
-        Map<String, Object> map = new HashMap<String, Object>();
+
+    public static Map<String, Object> createConfigMap(final AbstractSimulationConfiguration config,
+            final List<StopCondition> stopConditions, final PCMModelFiles model, final String experimentName) {
+        final Map<String, Object> map = new HashMap<String, Object>();
 
         map.put(AbstractSimulationConfig.EXPERIMENT_RUN, experimentName);
         map.put(AbstractSimulationConfig.SIMULATION_TIME, getMaximumSimulationTime(config, stopConditions));
@@ -51,10 +51,10 @@ public class AbstractSimulationConfigFactory {
      * 
      * @param map
      */
-    private static void adjustMapValueTypes(Map<String, Object> map) {
-        for (Entry<String, Object> entry : map.entrySet()) {
-            String key = entry.getKey();
-            Object value = entry.getValue();
+    private static void adjustMapValueTypes(final Map<String, Object> map) {
+        for (final Entry<String, Object> entry : map.entrySet()) {
+            final String key = entry.getKey();
+            final Object value = entry.getValue();
             if (key.equals(SensorFrameworkConfig.DATASOURCE_ID)) {
                 // FIXME the DATASOURCE_ID should be of type String. Fix this in the class
                 // de.uka.ipd.sdq.pipesandfilters.framework.recorder.sensorframework.launch.SensorFrameworkTab
@@ -67,16 +67,16 @@ public class AbstractSimulationConfigFactory {
         }
     }
 
-    private static IDAOFactory fillAndConfigurePersistenceFramework(AbstractSimulationConfiguration config,
-            Map<String, Object> map) {
+    private static IDAOFactory fillAndConfigurePersistenceFramework(final AbstractSimulationConfiguration config,
+            final Map<String, Object> map) {
         // if SensorFramework is to be used
         if (AbstractSimulationPackage.eINSTANCE.getSensorFramework().isInstance(config.getPersistenceFramework())) {
             map.put(AbstractSimulationConfig.PERSISTENCE_RECORDER_NAME, "SensorFramework");
 
             // create or open datasource as specified
-            SensorFramework sensorFramework = (SensorFramework) config.getPersistenceFramework();
-            SensorFrameworkDatasource datasource = sensorFramework.getDatasource();
-            IDAOFactory daoFactory = SensorFrameworkFactory.createOrOpenDatasource(datasource);
+            final SensorFramework sensorFramework = (SensorFramework) config.getPersistenceFramework();
+            final SensorFrameworkDatasource datasource = sensorFramework.getDatasource();
+            final IDAOFactory daoFactory = SensorFrameworkFactory.createOrOpenDatasource(datasource);
 
             map.put(SensorFrameworkConfig.DATASOURCE_ID, daoFactory.getID());
 
@@ -104,11 +104,12 @@ public class AbstractSimulationConfigFactory {
     // }
     // }
 
-    private static void fillRandomNumberGeneratorSeed(AbstractSimulationConfiguration config, Map<String, Object> map) {
+    private static void fillRandomNumberGeneratorSeed(final AbstractSimulationConfiguration config,
+            final Map<String, Object> map) {
         if (config.getRandomNumberGeneratorSeed() != null) {
             map.put(AbstractSimulationConfig.USE_FIXED_SEED, true);
 
-            RandomNumberGeneratorSeed seed = config.getRandomNumberGeneratorSeed();
+            final RandomNumberGeneratorSeed seed = config.getRandomNumberGeneratorSeed();
             map.put(AbstractSimulationConfig.FIXED_SEED_PREFIX + "0", seed.getSeed0());
             map.put(AbstractSimulationConfig.FIXED_SEED_PREFIX + "1", seed.getSeed1());
             map.put(AbstractSimulationConfig.FIXED_SEED_PREFIX + "2", seed.getSeed2());
@@ -120,16 +121,16 @@ public class AbstractSimulationConfigFactory {
         }
     }
 
-    private static int getMaximumSimulationTime(AbstractSimulationConfiguration config,
-            List<StopCondition> stopConditions) {
-        for (StopCondition s : stopConditions) {
+    private static int getMaximumSimulationTime(final AbstractSimulationConfiguration config,
+            final List<StopCondition> stopConditions) {
+        for (final StopCondition s : stopConditions) {
             if (AbstractSimulationPackage.eINSTANCE.getSimTimeStopCondition().isInstance(s)) {
                 return ((SimTimeStopCondition) s).getSimulationTime();
             }
         }
 
-        List<StopCondition> defaultConditions = config.getStopConditions();
-        for (StopCondition s : defaultConditions) {
+        final List<StopCondition> defaultConditions = config.getStopConditions();
+        for (final StopCondition s : defaultConditions) {
             if (AbstractSimulationPackage.eINSTANCE.getSimTimeStopCondition().isInstance(s)) {
                 return ((SimTimeStopCondition) s).getSimulationTime();
             }
@@ -139,16 +140,16 @@ public class AbstractSimulationConfigFactory {
         return -1;
     }
 
-    private static int getMaximumMeasurementCount(AbstractSimulationConfiguration config,
-            List<StopCondition> stopConditions) {
-        for (StopCondition s : stopConditions) {
+    private static int getMaximumMeasurementCount(final AbstractSimulationConfiguration config,
+            final List<StopCondition> stopConditions) {
+        for (final StopCondition s : stopConditions) {
             if (AbstractSimulationPackage.eINSTANCE.getMeasurementCountStopCondition().isInstance(s)) {
                 return ((MeasurementCountStopCondition) s).getMeasurementCount();
             }
         }
 
-        List<StopCondition> defaultConditions = config.getStopConditions();
-        for (StopCondition s : defaultConditions) {
+        final List<StopCondition> defaultConditions = config.getStopConditions();
+        for (final StopCondition s : defaultConditions) {
             if (AbstractSimulationPackage.eINSTANCE.getMeasurementCountStopCondition().isInstance(s)) {
                 return ((MeasurementCountStopCondition) s).getMeasurementCount();
             }

@@ -14,131 +14,136 @@ import de.uka.ipd.sdq.experimentautomation.application.ExperimentBookkeeping;
 
 public class JMXSimulationListener implements IResponseMeasurement {
 
-    private ExperimentBookkeeping bookkeeping;
-    private List<Long> variationValues;
-    private URI variationFolderUri;
-    private int pollingPeriod;
+    private final ExperimentBookkeeping bookkeeping;
+    private final List<Long> variationValues;
+    private final URI variationFolderUri;
+    private final int pollingPeriod;
 
-    private Timer timer;
-    private ThreadMonitor threadMonitor;
+    private final Timer timer;
+    private final ThreadMonitor threadMonitor;
 
-    public JMXSimulationListener(ExperimentBookkeeping bookkeeping, List<Long> variationValues, URI variationFolderUri, int pollingPeriod) {
+    public JMXSimulationListener(final ExperimentBookkeeping bookkeeping, final List<Long> variationValues,
+            final URI variationFolderUri, final int pollingPeriod) {
         this.bookkeeping = bookkeeping;
         this.variationValues = variationValues;
         this.variationFolderUri = variationFolderUri;
         this.pollingPeriod = pollingPeriod;
-        
+
         this.timer = new Timer();
         this.threadMonitor = new ThreadMonitor();
     }
 
     @Override
-    public void prepareBookkeeping(ExperimentBookkeeping bookeeping, String[] factorNames) {
-        bookkeeping.prepareResultFile(new String[] { "InitialThreads", "MeanThreads", "MaxThreads", "InitialMemory", "MeanMemory", "MaxMemory", "SampleCount" }, factorNames);
+    public void prepareBookkeeping(final ExperimentBookkeeping bookeeping, final String[] factorNames) {
+        this.bookkeeping.prepareResultFile(new String[] { "InitialThreads", "MeanThreads", "MaxThreads",
+                "InitialMemory", "MeanMemory", "MaxMemory", "SampleCount" }, factorNames);
     }
 
     @Override
     public void simulationStart() {
         System.gc();
-        threadMonitor.resetStatistics();
-        timer.scheduleAtFixedRate(threadMonitor, 50, this.pollingPeriod);
+        this.threadMonitor.resetStatistics();
+        this.timer.scheduleAtFixedRate(this.threadMonitor, 50, this.pollingPeriod);
     }
 
     @Override
     public void simulationStop() {
-        threadMonitor.cancel();
-        
-        String initialThreads = Integer.toString(threadMonitor.getInitialThreadCount());
-        String maxThreads = Integer.toString(threadMonitor.getMaxThreadCount());
-        String meanThreads = Integer.toString(threadMonitor.getMeanThreadCount());
-        
-        String initialMemory = Long.toString(threadMonitor.getInitialMemory());
-        String maxMemory = Long.toString(threadMonitor.getMaxMemory());
-        String meanMemory = Double.toString(threadMonitor.getMeanMemory());
-        
-        String sampleCount = Integer.toString(threadMonitor.getSampleCount());
-        
-        String[] factorLevels = new String[variationValues.size()];
-        for (int i = 0; i < variationValues.size(); i++) {
-            factorLevels[i] = variationValues.get(i).toString();
+        this.threadMonitor.cancel();
+
+        final String initialThreads = Integer.toString(this.threadMonitor.getInitialThreadCount());
+        final String maxThreads = Integer.toString(this.threadMonitor.getMaxThreadCount());
+        final String meanThreads = Integer.toString(this.threadMonitor.getMeanThreadCount());
+
+        final String initialMemory = Long.toString(this.threadMonitor.getInitialMemory());
+        final String maxMemory = Long.toString(this.threadMonitor.getMaxMemory());
+        final String meanMemory = Double.toString(this.threadMonitor.getMeanMemory());
+
+        final String sampleCount = Integer.toString(this.threadMonitor.getSampleCount());
+
+        final String[] factorLevels = new String[this.variationValues.size()];
+        for (int i = 0; i < this.variationValues.size(); i++) {
+            factorLevels[i] = this.variationValues.get(i).toString();
         }
-        bookkeeping.addResult(new String[] { initialThreads, meanThreads, maxThreads, initialMemory, meanMemory, maxMemory, sampleCount}, factorLevels);
+        this.bookkeeping.addResult(new String[] { initialThreads, meanThreads, maxThreads, initialMemory, meanMemory,
+                maxMemory, sampleCount }, factorLevels);
     }
 
     private class ThreadMonitor extends TimerTask {
 
-        private ThreadMXBean threadBean;
+        private final ThreadMXBean threadBean;
         private int initialThreads;
         private int maxThreads;
         private long sumThreads;
         private int countThreads;
-        
-        private MemoryMXBean memoryBean;
+
+        private final MemoryMXBean memoryBean;
         private long initialMemory;
         private long maxMemory;
-        private Mean meanMemory;
+        private final Mean meanMemory;
 
         public ThreadMonitor() {
             this.threadBean = ManagementFactory.getThreadMXBean();
             this.memoryBean = ManagementFactory.getMemoryMXBean();
-            this.meanMemory  = new Mean();
+            this.meanMemory = new Mean();
         }
 
         @Override
         public void run() {
             // Threads
-            int threads = this.threadBean.getThreadCount();
-            if (threads > maxThreads)
-                maxThreads = threads;
-            sumThreads += threads;
-            countThreads++;
-            
+            final int threads = this.threadBean.getThreadCount();
+            if (threads > this.maxThreads) {
+                this.maxThreads = threads;
+            }
+            this.sumThreads += threads;
+            this.countThreads++;
+
             // Memory
-            long memory = this.memoryBean.getHeapMemoryUsage().getUsed();
-            if(memory > maxMemory)
-                maxMemory = memory;
-            meanMemory.increment(memory);
+            final long memory = this.memoryBean.getHeapMemoryUsage().getUsed();
+            if (memory > this.maxMemory) {
+                this.maxMemory = memory;
+            }
+            this.meanMemory.increment(memory);
         }
 
         public void resetStatistics() {
-            maxThreads = 0;
-            sumThreads = 0;
-            countThreads = 0;
-            initialThreads = this.threadBean.getThreadCount();
-            
-            maxMemory = 0;
-            meanMemory.clear();
-            initialMemory = this.memoryBean.getHeapMemoryUsage().getUsed();
+            this.maxThreads = 0;
+            this.sumThreads = 0;
+            this.countThreads = 0;
+            this.initialThreads = this.threadBean.getThreadCount();
+
+            this.maxMemory = 0;
+            this.meanMemory.clear();
+            this.initialMemory = this.memoryBean.getHeapMemoryUsage().getUsed();
         }
 
         public int getMeanThreadCount() {
-            return (int) (sumThreads / countThreads);
+            return (int) (this.sumThreads / this.countThreads);
         }
 
         public int getMaxThreadCount() {
-            return maxThreads;
+            return this.maxThreads;
         }
 
         public int getInitialThreadCount() {
-            return initialThreads;
+            return this.initialThreads;
         }
 
         public int getSampleCount() {
-            return countThreads;
+            return this.countThreads;
         }
 
         public long getInitialMemory() {
-            return initialMemory;
+            return this.initialMemory;
         }
 
         public long getMaxMemory() {
-            return maxMemory;
+            return this.maxMemory;
         }
 
         public double getMeanMemory() {
-            return meanMemory.getResult();
+            return this.meanMemory.getResult();
         }
-        
+
     }
 
 }

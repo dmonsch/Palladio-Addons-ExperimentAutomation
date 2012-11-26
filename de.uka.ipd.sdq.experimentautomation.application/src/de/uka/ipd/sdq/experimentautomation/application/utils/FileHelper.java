@@ -22,18 +22,19 @@ public class FileHelper {
      * @param target
      *            the target file
      */
-    public static void copyFile(File source, File target) {
+    public static void copyFile(final File source, final File target) {
         try {
-            FileReader in = new FileReader(source);
-            FileWriter out = new FileWriter(target);
+            final FileReader in = new FileReader(source);
+            final FileWriter out = new FileWriter(target);
             int c;
-            while ((c = in.read()) != -1)
+            while ((c = in.read()) != -1) {
                 out.write(c);
+            }
             in.close();
             out.close();
-        } catch (FileNotFoundException e) {
+        } catch (final FileNotFoundException e) {
             throw new RuntimeException(e);
-        } catch (IOException e) {
+        } catch (final IOException e) {
             throw new RuntimeException(e);
         }
     }

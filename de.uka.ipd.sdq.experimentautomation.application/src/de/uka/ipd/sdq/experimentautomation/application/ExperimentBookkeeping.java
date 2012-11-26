@@ -18,7 +18,7 @@ public class ExperimentBookkeeping {
     private static final String RESULTS_FILE = "results.csv";
     private static final String CSV_COLUMN_DELIMITER = ";";
 
-    private File experimentFolder;
+    private final File experimentFolder;
     private PrintWriter resultWriter;
     private int columnsCount;
 
@@ -28,7 +28,7 @@ public class ExperimentBookkeeping {
      * @param folder
      *            the folder in which experiment results and metadata will be stored
      */
-    public ExperimentBookkeeping(File folder) {
+    public ExperimentBookkeeping(final File folder) {
         assert folder != null : "The folder may not be null";
         if (folder.exists()) {
             throw new RuntimeException("There is already a file or folder named " + folder);
@@ -37,63 +37,63 @@ public class ExperimentBookkeeping {
 
         // create folder
         logger.debug("Creating folder " + folder.getPath());
-        boolean created = folder.mkdir();
+        final boolean created = folder.mkdir();
         if (!created) {
             throw new RuntimeException("Could not create folder " + folder);
         }
     }
-    
-    public void prepareResultFile(String[] responseVariableNames, String[] columnNames) {
-        String[] headerNames = new String[responseVariableNames.length + columnNames.length];
-        for(int i = 0; i < responseVariableNames.length; i++) {
+
+    public void prepareResultFile(final String[] responseVariableNames, final String[] columnNames) {
+        final String[] headerNames = new String[responseVariableNames.length + columnNames.length];
+        for (int i = 0; i < responseVariableNames.length; i++) {
             headerNames[i] = responseVariableNames[i];
         }
-        for(int i = 0; i< columnNames.length; i++) {
-            headerNames[responseVariableNames.length+i] = columnNames[i];
+        for (int i = 0; i < columnNames.length; i++) {
+            headerNames[responseVariableNames.length + i] = columnNames[i];
         }
-        
+
         this.columnsCount = headerNames.length;
-        URI resultFileUri = createExperimentFolderUri(RESULTS_FILE);
-        File resultFile = new File(resultFileUri.toFileString());
-        resultWriter = createAndOpenFile(resultFile);
+        final URI resultFileUri = this.createExperimentFolderUri(RESULTS_FILE);
+        final File resultFile = new File(resultFileUri.toFileString());
+        this.resultWriter = this.createAndOpenFile(resultFile);
         for (int i = 0; i < headerNames.length; i++) {
-            resultWriter.print(headerNames[i]);
+            this.resultWriter.print(headerNames[i]);
             if (i + 1 < headerNames.length) {
-                resultWriter.print(CSV_COLUMN_DELIMITER);
+                this.resultWriter.print(CSV_COLUMN_DELIMITER);
             }
         }
-        resultWriter.println();
-        resultWriter.flush();
+        this.resultWriter.println();
+        this.resultWriter.flush();
     }
 
-    public void addResult(String responses[], String[] factorLevels) {
-        String[] cols = new String[responses.length + factorLevels.length];
-        for(int i = 0; i < responses.length; i++) {
+    public void addResult(final String responses[], final String[] factorLevels) {
+        final String[] cols = new String[responses.length + factorLevels.length];
+        for (int i = 0; i < responses.length; i++) {
             cols[i] = responses[i];
         }
-        for(int i = 0; i< factorLevels.length; i++) {
-            cols[responses.length+i] = factorLevels[i];
+        for (int i = 0; i < factorLevels.length; i++) {
+            cols[responses.length + i] = factorLevels[i];
         }
-        
-        
-        if (resultWriter == null) {
+
+        if (this.resultWriter == null) {
             throw new IllegalStateException("The result file needs to be initialised first");
         }
-//        assert (this.columnsCount == columns.length) : "The result file has been initialised with " + columnsCount
-//                + " columns, but tried to write " + columns.length + " columns.";
+        // assert (this.columnsCount == columns.length) :
+        // "The result file has been initialised with " + columnsCount
+        // + " columns, but tried to write " + columns.length + " columns.";
         for (int i = 0; i < cols.length; i++) {
-            resultWriter.print(cols[i]);
+            this.resultWriter.print(cols[i]);
             if (i + 1 < cols.length) {
-                resultWriter.print(CSV_COLUMN_DELIMITER);
+                this.resultWriter.print(CSV_COLUMN_DELIMITER);
             }
         }
-        resultWriter.println();
-        resultWriter.flush();
+        this.resultWriter.println();
+        this.resultWriter.flush();
     }
 
     public void finishResultFile() {
-        if (resultWriter != null) {
-            resultWriter.close();
+        if (this.resultWriter != null) {
+            this.resultWriter.close();
         }
     }
 
@@ -103,7 +103,7 @@ public class ExperimentBookkeeping {
      * @param model
      *            the model whose files are to be copied
      */
-    public void copyModelFilesToExperimentFolder(PCMModelFiles model) {
+    public void copyModelFilesToExperimentFolder(final PCMModelFiles model) {
 
     }
 
@@ -113,49 +113,50 @@ public class ExperimentBookkeeping {
      * @param metadata
      *            the metadata which is to be stored in a newly created file
      */
-    public void writeMetadata(ExperimentMetadata metadata) {
-        URI absoluteMetadataUri = createExperimentFolderUri(METADATA_FILE);
-        File metadataFile = new File(absoluteMetadataUri.toFileString());
-        PrintWriter writer = createAndOpenFile(metadataFile);
+    public void writeMetadata(final ExperimentMetadata metadata) {
+        final URI absoluteMetadataUri = this.createExperimentFolderUri(METADATA_FILE);
+        final File metadataFile = new File(absoluteMetadataUri.toFileString());
+        final PrintWriter writer = this.createAndOpenFile(metadataFile);
         writer.print(metadata);
         writer.close();
     }
 
-    public void logException(Exception ex) {
-        URI absoluteErrorLogUri = createExperimentFolderUri("errorlog_" + System.currentTimeMillis() + ".txt");
-        File logFile = new File(absoluteErrorLogUri.toFileString());
-        PrintWriter writer = createAndOpenFile(logFile);
+    public void logException(final Exception ex) {
+        final URI absoluteErrorLogUri = this.createExperimentFolderUri("errorlog_" + System.currentTimeMillis()
+                + ".txt");
+        final File logFile = new File(absoluteErrorLogUri.toFileString());
+        final PrintWriter writer = this.createAndOpenFile(logFile);
         ex.printStackTrace(writer);
         writer.close();
     }
 
-    private URI createExperimentFolderUri(String fileName) {
-        URI experimentFolderUri = URI.createFileURI(experimentFolder.getPath() + File.separator);
-        URI relativeMetadataUri = URI.createURI(fileName);
-        URI absoluteMetadataUri = relativeMetadataUri.resolve(experimentFolderUri);
+    private URI createExperimentFolderUri(final String fileName) {
+        final URI experimentFolderUri = URI.createFileURI(this.experimentFolder.getPath() + File.separator);
+        final URI relativeMetadataUri = URI.createURI(fileName);
+        final URI absoluteMetadataUri = relativeMetadataUri.resolve(experimentFolderUri);
         return absoluteMetadataUri;
     }
 
-    private PrintWriter createAndOpenFile(File file) {
+    private PrintWriter createAndOpenFile(final File file) {
         try {
             if (file.exists()) {
                 throw new RuntimeException("The file " + file + " does already exists.");
             } else {
-                boolean created = file.createNewFile();
+                final boolean created = file.createNewFile();
                 if (!created) {
                     throw new RuntimeException("Could not create file " + file);
                 }
             }
             return new PrintWriter(file);
-        } catch (FileNotFoundException e) {
+        } catch (final FileNotFoundException e) {
             throw new RuntimeException(e);
-        } catch (IOException e) {
+        } catch (final IOException e) {
             throw new RuntimeException(e);
         }
     }
 
     public File getExperimentFolder() {
-        return experimentFolder;
+        return this.experimentFolder;
     }
 
 }

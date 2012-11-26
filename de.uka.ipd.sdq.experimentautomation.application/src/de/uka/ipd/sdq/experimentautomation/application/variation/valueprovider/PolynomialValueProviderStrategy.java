@@ -4,15 +4,15 @@ import de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider;
 
 public class PolynomialValueProviderStrategy implements IValueProviderStrategy {
 
-    private PolynomialValueProvider specification;
+    private final PolynomialValueProvider specification;
 
-    public PolynomialValueProviderStrategy(PolynomialValueProvider specification) {
+    public PolynomialValueProviderStrategy(final PolynomialValueProvider specification) {
         this.specification = specification;
     }
 
     @Override
-    public long valueAtPosition(int position) {
-        double result = Math.pow(position, specification.getExponent()) * specification.getFactor();
+    public long valueAtPosition(final int position) {
+        final double result = Math.pow(position, this.specification.getExponent()) * this.specification.getFactor();
         return new Double(result).longValue();
     }
 

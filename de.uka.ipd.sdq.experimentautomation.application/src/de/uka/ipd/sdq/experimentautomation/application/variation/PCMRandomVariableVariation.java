@@ -1,4 +1,5 @@
 package de.uka.ipd.sdq.experimentautomation.application.variation;
+
 //package de.uka.ipd.sdq.experimentautomation.variation;
 //
 //import org.eclipse.emf.ecore.EObject;
@@ -20,4 +21,4 @@ package de.uka.ipd.sdq.experimentautomation.application.variation;
 //        
 //    }
 //
-//}
+// }

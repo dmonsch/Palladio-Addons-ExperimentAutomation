@@ -12,15 +12,15 @@ import de.uka.ipd.sdq.sensorframework.entities.dao.IDAOFactory;
 
 public class SensorFrameworkFactory {
 
-    public static IDAOFactory createOrOpenDatasource(SensorFrameworkDatasource datasource) {
+    public static IDAOFactory createOrOpenDatasource(final SensorFrameworkDatasource datasource) {
         IDAOFactory daoFactory = null;
         if (AbstractSimulationPackage.eINSTANCE.getMemoryDatasource().isInstance(datasource)) {
             // create MemoryDatasource
             daoFactory = SensorFrameworkFactory.createMemoryDatasource();
         } else if (AbstractSimulationPackage.eINSTANCE.getFileDatasource().isInstance(datasource)) {
             // create or open FileDatasource
-            FileDatasource fileDatasource = (FileDatasource) datasource;
-            Path directory = new Path(fileDatasource.getLocation());
+            final FileDatasource fileDatasource = (FileDatasource) datasource;
+            final Path directory = new Path(fileDatasource.getLocation());
             daoFactory = SensorFrameworkFactory.createOrOpenFileDatasource(directory);
         } else {
             throw new RuntimeException("Could not determine datasource type. This should not have happened.");
@@ -29,16 +29,16 @@ public class SensorFrameworkFactory {
 
         return daoFactory;
     }
-    
-    public static void closeDatasource(SensorFrameworkDatasource datasource) {
+
+    public static void closeDatasource(final SensorFrameworkDatasource datasource) {
         IDAOFactory daoFactory = null;
         if (AbstractSimulationPackage.eINSTANCE.getMemoryDatasource().isInstance(datasource)) {
             // create MemoryDatasource
             daoFactory = SensorFrameworkFactory.createMemoryDatasource();
         } else if (AbstractSimulationPackage.eINSTANCE.getFileDatasource().isInstance(datasource)) {
             // create or open FileDatasource
-            FileDatasource fileDatasource = (FileDatasource) datasource;
-            Path directory = new Path(fileDatasource.getLocation());
+            final FileDatasource fileDatasource = (FileDatasource) datasource;
+            final Path directory = new Path(fileDatasource.getLocation());
             daoFactory = SensorFrameworkFactory.createOrOpenFileDatasource(directory);
         } else {
             throw new RuntimeException("Could not determine datasource type. This should not have happened.");
@@ -46,8 +46,8 @@ public class SensorFrameworkFactory {
         SensorFrameworkDataset.singleton().removeDataSource(daoFactory);
     }
 
-    private static IDAOFactory createOrOpenFileDatasource(Path directory) {
-        IDAOFactory fileFactory = new FileDAOFactory(directory.toOSString());
+    private static IDAOFactory createOrOpenFileDatasource(final Path directory) {
+        final IDAOFactory fileFactory = new FileDAOFactory(directory.toOSString());
 
         return fileFactory;
     }

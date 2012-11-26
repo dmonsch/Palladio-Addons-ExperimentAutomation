@@ -12,12 +12,12 @@ import edu.kit.ipd.sdq.eventsim.controller.runconfig.EventSimWorkflowConfigurati
 
 public class EventSimWorkflowConfigurationFactory {
 
-    public static EventSimWorkflowConfiguration createWorkflowConfiguration(EventSimConfiguration configuration,
-            PCMModelFiles pcm, AbstractSimulationConfig simConfig) {
-    	Map<String, Object> attributesMap = new HashMap<String, Object>();
-        EventSimWorkflowConfiguration workflowConfig = new EventSimWorkflowConfiguration(attributesMap);
-        workflowConfig.setSimulationConfiguration((EventSimConfig)simConfig);
-       
+    public static EventSimWorkflowConfiguration createWorkflowConfiguration(final EventSimConfiguration configuration,
+            final PCMModelFiles pcm, final AbstractSimulationConfig simConfig) {
+        final Map<String, Object> attributesMap = new HashMap<String, Object>();
+        final EventSimWorkflowConfiguration workflowConfig = new EventSimWorkflowConfiguration(attributesMap);
+        workflowConfig.setSimulationConfiguration((EventSimConfig) simConfig);
+
         AbstractSimulationWorkflowConfigurationFactory.fillWorkflowConfiguration(workflowConfig, configuration, pcm,
                 simConfig);
 

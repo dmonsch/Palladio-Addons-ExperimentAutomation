@@ -13,28 +13,28 @@ public class ForkedBehaviourReplication implements IVariationStrategy {
     private ForkAction fork;
 
     @Override
-    public void setVariedObject(EObject o) {
+    public void setVariedObject(final EObject o) {
         if (!ForkAction.class.isInstance(o)) {
             throw new RuntimeException("Expected an instance of " + ForkAction.class.getName() + ", but encountered a "
                     + o.getClass().getName());
         }
-        fork = (ForkAction) o;
+        this.fork = (ForkAction) o;
 
-        if (fork.getAsynchronousForkedBehaviours_ForkAction().size() != 1) {
+        if (this.fork.getAsynchronousForkedBehaviours_ForkAction().size() != 1) {
             throw new RuntimeException("Expected a fork with a single (asynchronous) "
                     + ForkedBehaviour.class.getName() + ", but encountered two or more behaviours.");
         }
     }
 
     @Override
-    public String vary(long value) {
-        ForkedBehaviour referenceBehaviour = fork.getAsynchronousForkedBehaviours_ForkAction().get(0);
+    public String vary(final long value) {
+        final ForkedBehaviour referenceBehaviour = this.fork.getAsynchronousForkedBehaviours_ForkAction().get(0);
         for (int i = 0; i < value; i++) {
-            ForkedBehaviour copy = EcoreHelper.copy(referenceBehaviour);
-            copy.setForkAction_ForkedBehaivour(fork);
+            final ForkedBehaviour copy = EcoreHelper.copy(referenceBehaviour);
+            copy.setForkAction_ForkedBehaivour(this.fork);
         }
 
-        return "Replication count = " + value + ": ForkedBehaviour of " + PCMEntityHelper.toString(fork);
+        return "Replication count = " + value + ": ForkedBehaviour of " + PCMEntityHelper.toString(this.fork);
     }
 
 }

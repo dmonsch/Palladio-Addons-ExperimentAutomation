@@ -4,16 +4,16 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider;
 
 public class ExponentialValueProviderStrategy implements IValueProviderStrategy {
 
-    private ExponentialValueProvider specification;
+    private final ExponentialValueProvider specification;
 
-    public ExponentialValueProviderStrategy(ExponentialValueProvider specification) {
+    public ExponentialValueProviderStrategy(final ExponentialValueProvider specification) {
         this.specification = specification;
     }
-    
+
     @Override
-    public long valueAtPosition(int position) {
-        double base = specification.getBase();   
-        double result = Math.pow(base, position);
+    public long valueAtPosition(final int position) {
+        final double base = this.specification.getBase();
+        final double result = Math.pow(base, position);
         return new Double(result).longValue();
     }
 

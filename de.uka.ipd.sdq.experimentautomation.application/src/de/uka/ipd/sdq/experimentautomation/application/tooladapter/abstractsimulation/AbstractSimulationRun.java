@@ -5,10 +5,9 @@ import de.uka.ipd.sdq.workflow.Blackboard;
 import de.uka.ipd.sdq.workflow.OrderPreservingBlackboardCompositeJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 
-public abstract class AbstractSimulationRun extends
-        OrderPreservingBlackboardCompositeJob<Blackboard<MDSDBlackboard>> {
+public abstract class AbstractSimulationRun extends OrderPreservingBlackboardCompositeJob<Blackboard<MDSDBlackboard>> {
 
-    private ToolConfiguration config;
+    private final ToolConfiguration config;
 
     /**
      * Default constructor.
@@ -16,12 +15,12 @@ public abstract class AbstractSimulationRun extends
      * @param config
      *            the tool configuration
      */
-    public AbstractSimulationRun(ToolConfiguration config) {
+    public AbstractSimulationRun(final ToolConfiguration config) {
         this.config = config;
     }
 
     public ToolConfiguration getConfig() {
-        return config;
+        return this.config;
     }
 
 }

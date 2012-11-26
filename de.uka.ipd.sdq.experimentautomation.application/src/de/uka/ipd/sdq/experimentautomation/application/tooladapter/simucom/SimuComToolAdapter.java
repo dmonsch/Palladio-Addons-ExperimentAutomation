@@ -22,16 +22,17 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 public class SimuComToolAdapter implements IToolAdapter {
 
     @Override
-    public void runExperiment(String experimentName, PCMModelFiles model, ToolConfiguration configuration,
-            List<StopCondition> stopConditions, ISimulationListener listener) throws CoreException {
+    public void runExperiment(final String experimentName, final PCMModelFiles model,
+            final ToolConfiguration configuration, final List<StopCondition> stopConditions,
+            final ISimulationListener listener) throws CoreException {
         // create simulation configuration
-        SimuComConfig simuComConfig = SimuComConfigFactory.createConfig((SimuComConfiguration) configuration, stopConditions, model,
-                experimentName);
+        final SimuComConfig simuComConfig = SimuComConfigFactory.createConfig((SimuComConfiguration) configuration,
+                stopConditions, model, experimentName);
         simuComConfig.addListener(listener);
 
         // create workflow configuration
-        SimuComWorkflowConfiguration workflowConfig = SimuComWorkflowConfigurationFactory.createWorkflowConfiguration(
-                (SimuComConfiguration) configuration, model, simuComConfig);
+        final SimuComWorkflowConfiguration workflowConfig = SimuComWorkflowConfigurationFactory
+                .createWorkflowConfiguration((SimuComConfiguration) configuration, model, simuComConfig);
 
         // run simulation
         final SimuComJob run = new SimuComJob(workflowConfig, null);
@@ -39,10 +40,11 @@ public class SimuComToolAdapter implements IToolAdapter {
         final BlackboardBasedWorkflow<MDSDBlackboard> workflow = new BlackboardBasedWorkflow<MDSDBlackboard>(run,
                 blackboard);
         workflow.run();
-        
+
         // clean up TODO
-        SensorFramework sensorFramework = (SensorFramework) ((SimuComConfiguration) configuration).getPersistenceFramework();
-        SensorFrameworkDatasource datasource = sensorFramework.getDatasource();
+        final SensorFramework sensorFramework = (SensorFramework) ((SimuComConfiguration) configuration)
+                .getPersistenceFramework();
+        final SensorFrameworkDatasource datasource = sensorFramework.getDatasource();
         SensorFrameworkFactory.closeDatasource(datasource);
     }
 

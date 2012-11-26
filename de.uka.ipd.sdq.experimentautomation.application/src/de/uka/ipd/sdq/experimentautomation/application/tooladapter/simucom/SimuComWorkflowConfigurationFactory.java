@@ -12,14 +12,14 @@ import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
 
 public class SimuComWorkflowConfigurationFactory {
 
-    public static SimuComWorkflowConfiguration createWorkflowConfiguration(SimuComConfiguration configuration,
-            PCMModelFiles pcm, AbstractSimulationConfig simConfig) {
-    	Map<String, Object> attributesMap = new HashMap<String, Object>();
-        SimuComWorkflowConfiguration workflowConfig = new SimuComWorkflowConfiguration(attributesMap);
+    public static SimuComWorkflowConfiguration createWorkflowConfiguration(final SimuComConfiguration configuration,
+            final PCMModelFiles pcm, final AbstractSimulationConfig simConfig) {
+        final Map<String, Object> attributesMap = new HashMap<String, Object>();
+        final SimuComWorkflowConfiguration workflowConfig = new SimuComWorkflowConfiguration(attributesMap);
         workflowConfig.setSimulateFailures(configuration.isSimulateFailures());
         workflowConfig.setSimulateLinkingResources(configuration.isSimulateLinkingResources());
-        workflowConfig.setSimuComConfiguration((SimuComConfig)simConfig);
-        
+        workflowConfig.setSimuComConfiguration((SimuComConfig) simConfig);
+
         AbstractSimulationWorkflowConfigurationFactory.fillWorkflowConfiguration(workflowConfig, configuration, pcm,
                 simConfig);
 

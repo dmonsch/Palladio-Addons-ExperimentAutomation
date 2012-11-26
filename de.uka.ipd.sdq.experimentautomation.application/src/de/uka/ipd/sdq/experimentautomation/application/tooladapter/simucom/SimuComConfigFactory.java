@@ -21,9 +21,11 @@ import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
  */
 public class SimuComConfigFactory {
 
-    public static SimuComConfig createConfig(SimuComConfiguration config, List<StopCondition> stopConditions, PCMModelFiles model, String experimentName) {
-    	Map<String, Object> configMap = AbstractSimulationConfigFactory.createConfigMap(config, stopConditions, model, experimentName);
-    	configMap.put(AbstractSimulationConfig.SIMULATOR_ID, "de.uka.ipd.sdq.codegen.simucontroller.simucom");
+    public static SimuComConfig createConfig(final SimuComConfiguration config,
+            final List<StopCondition> stopConditions, final PCMModelFiles model, final String experimentName) {
+        final Map<String, Object> configMap = AbstractSimulationConfigFactory.createConfigMap(config, stopConditions,
+                model, experimentName);
+        configMap.put(AbstractSimulationConfig.SIMULATOR_ID, "de.uka.ipd.sdq.codegen.simucontroller.simucom");
         return new SimuComConfig(configMap, false);
     }
 

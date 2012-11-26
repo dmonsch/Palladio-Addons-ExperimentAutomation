@@ -15,7 +15,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.Experiment;
 public class ExperimentApplication implements IApplication {
 
     private static final Logger logger = Logger.getLogger(ExperimentApplication.class);
-    
+
     private ConfigurationModel config;
 
     @Override
@@ -28,13 +28,13 @@ public class ExperimentApplication implements IApplication {
             System.out.println("The mandatory parameters have not been specified.");
             return IApplication.EXIT_OK;
         }
-        
-        // prepare experiment list, if parameter has been specified 
-        List<String> experimentIds = new ArrayList<String>();
+
+        // prepare experiment list, if parameter has been specified
+        final List<String> experimentIds = new ArrayList<String>();
         if (args.length >= 4) {
-            String[] ids = args[3].split(";");
-            for(int i = 0; i<ids.length; i++) {
-                experimentIds.add(ids[i]);
+            final String[] ids = args[3].split(";");
+            for (final String id : ids) {
+                experimentIds.add(id);
             }
         }
 
@@ -46,26 +46,26 @@ public class ExperimentApplication implements IApplication {
         this.config = ConfigurationModel.loadFromBundle(bundle, experimentsLocation, variationsLocation);
 
         // filter experiment list
-        List<Experiment> filteredExperiments = new ArrayList<Experiment>();
-        for(Experiment e : this.config.getExperiments().getExperiments()) {
-            for(String id : experimentIds) {
-                if(e.getId().equalsIgnoreCase(id)) {
+        final List<Experiment> filteredExperiments = new ArrayList<Experiment>();
+        for (final Experiment e : this.config.getExperiments().getExperiments()) {
+            for (final String id : experimentIds) {
+                if (e.getId().equalsIgnoreCase(id)) {
                     filteredExperiments.add(e);
                     break;
                 }
             }
         }
-        
+
         // run experiments
-        final ExperimentController controller = new ExperimentController(this.config, experimentsLocation, variationsLocation, bookkeepingLocation, args);
-        
-        int repetitions = this.config.getExperiments().getRepetitions();
-        if(experimentIds.isEmpty()) {
-            controller.runExperiments(repetitions); 
+        final ExperimentController controller = new ExperimentController(this.config, experimentsLocation,
+                variationsLocation, bookkeepingLocation, args);
+
+        final int repetitions = this.config.getExperiments().getRepetitions();
+        if (experimentIds.isEmpty()) {
+            controller.runExperiments(repetitions);
         } else {
             controller.runExperiment(filteredExperiments, repetitions);
         }
-        
 
         return IApplication.EXIT_OK;
     }

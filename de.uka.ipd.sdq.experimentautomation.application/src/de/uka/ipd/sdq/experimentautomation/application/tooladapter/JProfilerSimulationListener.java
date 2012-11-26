@@ -10,13 +10,13 @@ public class JProfilerSimulationListener implements ISimulationListener {
 
     @Override
     public void simulationStart() {
-        File resultFile = new File("W:\\results\\start" + System.currentTimeMillis() + ".jps");
+        final File resultFile = new File("W:\\results\\start" + System.currentTimeMillis() + ".jps");
         Controller.saveSnapshot(resultFile);
     }
 
     @Override
     public void simulationStop() {
-        File resultFile = new File("W:\\results\\stop" + System.currentTimeMillis() + ".jps");
+        final File resultFile = new File("W:\\results\\stop" + System.currentTimeMillis() + ".jps");
         Controller.saveSnapshot(resultFile);
     }
 

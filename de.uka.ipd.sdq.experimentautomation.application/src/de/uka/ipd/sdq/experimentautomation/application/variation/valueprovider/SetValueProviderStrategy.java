@@ -8,30 +8,30 @@ import de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider;
 
 public class SetValueProviderStrategy implements IValueProviderStrategy {
 
-    private SetValueProvider specification;
-    private List<Double> values;
+    private final SetValueProvider specification;
+    private final List<Double> values;
 
-    public SetValueProviderStrategy(SetValueProvider specification) {
+    public SetValueProviderStrategy(final SetValueProvider specification) {
         this.specification = specification;
         this.values = parseValueString(this.specification.getValues());
     }
 
     @Override
-    public long valueAtPosition(int position) {
-        if (position > values.size() - 1) {
+    public long valueAtPosition(final int position) {
+        if (position > this.values.size() - 1) {
             return -1;
-//            throw new RuntimeException("Requested the value at position " + (position + 1)
-//                    + ", but the set contains only " + values.size() + " values.");
+            // throw new RuntimeException("Requested the value at position " + (position + 1)
+            // + ", but the set contains only " + values.size() + " values.");
         }
-        return values.get(position).longValue();
+        return this.values.get(position).longValue();
     }
 
-    private static List<Double> parseValueString(String values) {
-        List<Double> result = new ArrayList<Double>();
-        StringTokenizer tokens = new StringTokenizer(values, ",");
+    private static List<Double> parseValueString(final String values) {
+        final List<Double> result = new ArrayList<Double>();
+        final StringTokenizer tokens = new StringTokenizer(values, ",");
         while (tokens.hasMoreElements()) {
-            String value = tokens.nextToken();
-            Double d = new Double(value);
+            final String value = tokens.nextToken();
+            final Double d = new Double(value);
             result.add(d);
         }
         return result;

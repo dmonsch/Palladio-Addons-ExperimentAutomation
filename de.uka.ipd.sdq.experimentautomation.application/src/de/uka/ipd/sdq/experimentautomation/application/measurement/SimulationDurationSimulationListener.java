@@ -8,14 +8,14 @@ import de.uka.ipd.sdq.experimentautomation.application.ExperimentBookkeeping;
 
 public class SimulationDurationSimulationListener implements IResponseMeasurement {
 
-    private ExperimentBookkeeping bookkeeping;
-    
-    private List<Long> variationValues;
-    
+    private final ExperimentBookkeeping bookkeeping;
+
+    private final List<Long> variationValues;
+
     private long startTime;
 
-    public SimulationDurationSimulationListener(ExperimentBookkeeping bookkeeping, List<Long> variationValues,
-            URI variationFolderUri) {
+    public SimulationDurationSimulationListener(final ExperimentBookkeeping bookkeeping,
+            final List<Long> variationValues, final URI variationFolderUri) {
         this.bookkeeping = bookkeeping;
         this.variationValues = variationValues;
     }
@@ -23,27 +23,27 @@ public class SimulationDurationSimulationListener implements IResponseMeasuremen
     @Override
     public void simulationStart() {
         System.gc();
-        startTime = System.nanoTime();
+        this.startTime = System.nanoTime();
     }
 
     @Override
     public void simulationStop() {
         // trigger garbage collection
         System.gc();
-    	
-        long stopTime = System.nanoTime();
-        long duration = stopTime - startTime;
 
-        String[] factorLevels = new String[variationValues.size()];
-        for (int i = 0; i < variationValues.size(); i++) {
-            factorLevels[i] = variationValues.get(i).toString();
+        final long stopTime = System.nanoTime();
+        final long duration = stopTime - this.startTime;
+
+        final String[] factorLevels = new String[this.variationValues.size()];
+        for (int i = 0; i < this.variationValues.size(); i++) {
+            factorLevels[i] = this.variationValues.get(i).toString();
         }
-        bookkeeping.addResult(new String[] { new Long(duration).toString() }, factorLevels);
+        this.bookkeeping.addResult(new String[] { new Long(duration).toString() }, factorLevels);
     }
 
     @Override
-    public void prepareBookkeeping(ExperimentBookkeeping bookeeping, String[] factorNames) {
-        bookkeeping.prepareResultFile(new String[] { "RuntimeNano" }, factorNames);
+    public void prepareBookkeeping(final ExperimentBookkeeping bookeeping, final String[] factorNames) {
+        this.bookkeeping.prepareResultFile(new String[] { "RuntimeNano" }, factorNames);
     }
 
 }

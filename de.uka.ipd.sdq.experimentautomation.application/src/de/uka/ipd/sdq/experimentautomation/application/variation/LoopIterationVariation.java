@@ -14,7 +14,8 @@ public class LoopIterationVariation implements IVariationStrategy {
 
     private Loop loop;
 
-    public void setVariedObject(EObject o) {
+    @Override
+    public void setVariedObject(final EObject o) {
         if (!Loop.class.isInstance(o)) {
             throw new RuntimeException("Expected a Loop, but encountered a " + o.getClass().getName());
         }
@@ -22,18 +23,18 @@ public class LoopIterationVariation implements IVariationStrategy {
     }
 
     @Override
-    public String vary(long value) {
+    public String vary(final long value) {
         int intValue;
         if (value > Integer.MAX_VALUE) {
             logger.warn("Warning: Converted long to int, but the value was larger than MAXINT.");
             intValue = Integer.MAX_VALUE;
         }
         intValue = new Long(value).intValue();
-        PCMRandomVariable r = CoreFactory.eINSTANCE.createPCMRandomVariable();
+        final PCMRandomVariable r = CoreFactory.eINSTANCE.createPCMRandomVariable();
         r.setSpecification(new Integer(intValue).toString());
-        loop.setLoopIteration_Loop(r);
+        this.loop.setLoopIteration_Loop(r);
 
-        return "Loop Iteration Count = " + value + ": " + PCMEntityHelper.toString(loop);
+        return "Loop Iteration Count = " + value + ": " + PCMEntityHelper.toString(this.loop);
     }
 
 }

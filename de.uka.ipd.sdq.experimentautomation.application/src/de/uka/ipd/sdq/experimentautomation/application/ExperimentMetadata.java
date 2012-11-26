@@ -23,60 +23,60 @@ public class ExperimentMetadata {
     }
 
     public String getExperimentName() {
-        return experimentName;
+        return this.experimentName;
     }
 
-    public void setExperimentName(String experimentName) {
+    public void setExperimentName(final String experimentName) {
         this.experimentName = experimentName;
     }
 
     public String[] getCommandLineArguments() {
-        return commandLineArguments;
+        return this.commandLineArguments;
     }
 
-    public void setCommandLineArguments(String[] commandLineArguments) {
+    public void setCommandLineArguments(final String[] commandLineArguments) {
         this.commandLineArguments = commandLineArguments;
     }
 
     public String getVirtualMachineArguments() {
-        return virtualMachineArguments;
+        return this.virtualMachineArguments;
     }
 
-    public void setVirtualMachineArguments(String virtualMachineArguments) {
+    public void setVirtualMachineArguments(final String virtualMachineArguments) {
         this.virtualMachineArguments = virtualMachineArguments;
     }
 
     public Date getStartTime() {
-        return startTime;
+        return this.startTime;
     }
 
-    public void setStartTime(Date startTime) {
+    public void setStartTime(final Date startTime) {
         this.startTime = startTime;
     }
 
     public Date getEndTime() {
-        return endTime;
+        return this.endTime;
     }
 
-    public void setEndTime(Date endTime) {
+    public void setEndTime(final Date endTime) {
         this.endTime = endTime;
     }
 
     @Override
     public String toString() {
-        StringBuilder builder = new StringBuilder();
-        builder.append("Experiment name:        " + experimentName + "\r\n");
-        builder.append("Workstation name:       " + getWorkstationName() + "\r\n");
-        builder.append("Command line arguments: " + toString(commandLineArguments) + "\r\n");
-        builder.append("VM arguments:           " + getVMArguments() + "\r\n");
-        builder.append("Started:                " + startTime + "\r\n");
-        builder.append("Finished:               " + endTime + "\r\n");
+        final StringBuilder builder = new StringBuilder();
+        builder.append("Experiment name:        " + this.experimentName + "\r\n");
+        builder.append("Workstation name:       " + this.getWorkstationName() + "\r\n");
+        builder.append("Command line arguments: " + this.toString(this.commandLineArguments) + "\r\n");
+        builder.append("VM arguments:           " + this.getVMArguments() + "\r\n");
+        builder.append("Started:                " + this.startTime + "\r\n");
+        builder.append("Finished:               " + this.endTime + "\r\n");
 
         // append OS properties
-        builder.append(getOSProperties());
+        builder.append(this.getOSProperties());
 
         // append VM properties
-        builder.append(getVMProperties());
+        builder.append(this.getVMProperties());
 
         return builder.toString();
     }
@@ -84,20 +84,20 @@ public class ExperimentMetadata {
     private String getWorkstationName() {
         try {
             return InetAddress.getLocalHost().getHostName();
-        } catch (UnknownHostException e) {
+        } catch (final UnknownHostException e) {
             return "Could not determine the host name";
         }
     }
 
     private String getVMArguments() {
-        RuntimeMXBean bean = ManagementFactory.getRuntimeMXBean();
-        List<String> arguments = bean.getInputArguments();
+        final RuntimeMXBean bean = ManagementFactory.getRuntimeMXBean();
+        final List<String> arguments = bean.getInputArguments();
         return arguments.toString();
     }
 
     private String getVMProperties() {
-        RuntimeMXBean bean = ManagementFactory.getRuntimeMXBean();
-        StringBuilder b = new StringBuilder();
+        final RuntimeMXBean bean = ManagementFactory.getRuntimeMXBean();
+        final StringBuilder b = new StringBuilder();
         b.append(LINE_FEED);
         b.append("--[ Virtual Machine ]---------------------------------------." + LINE_FEED);
         b.append("Name:                   " + bean.getName() + LINE_FEED);
@@ -111,8 +111,8 @@ public class ExperimentMetadata {
     }
 
     private String getOSProperties() {
-        OperatingSystemMXBean bean = ManagementFactory.getOperatingSystemMXBean();
-        StringBuilder b = new StringBuilder();
+        final OperatingSystemMXBean bean = ManagementFactory.getOperatingSystemMXBean();
+        final StringBuilder b = new StringBuilder();
         b.append(LINE_FEED);
         b.append("--[ Operating System ]---------------------------------------" + LINE_FEED);
         b.append("Architecture:           " + bean.getArch() + LINE_FEED);
@@ -121,8 +121,8 @@ public class ExperimentMetadata {
         return b.toString();
     }
 
-    private String toString(String[] strings) {
-        StringBuilder b = new StringBuilder();
+    private String toString(final String[] strings) {
+        final StringBuilder b = new StringBuilder();
         for (int i = 0; i < strings.length; i++) {
             b.append(strings[i]);
             if (i + 1 < strings.length) {

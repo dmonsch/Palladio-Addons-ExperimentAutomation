@@ -9,18 +9,18 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ValueProvider;
 
 public class ValueProviderFactory {
 
-    public static IValueProviderStrategy createValueProvider(ValueProvider specification) {
+    public static IValueProviderStrategy createValueProvider(final ValueProvider specification) {
         if (ExperimentsPackage.eINSTANCE.getPolynomialValueProvider().isInstance(specification)) {
-            PolynomialValueProvider p = (PolynomialValueProvider) specification;
+            final PolynomialValueProvider p = (PolynomialValueProvider) specification;
             return new PolynomialValueProviderStrategy(p);
         } else if (ExperimentsPackage.eINSTANCE.getExponentialValueProvider().isInstance(specification)) {
-            ExponentialValueProvider p = (ExponentialValueProvider)specification;
+            final ExponentialValueProvider p = (ExponentialValueProvider) specification;
             return new ExponentialValueProviderStrategy(p);
         } else if (ExperimentsPackage.eINSTANCE.getSetValueProvider().isInstance(specification)) {
-            SetValueProvider p = (SetValueProvider)specification;
+            final SetValueProvider p = (SetValueProvider) specification;
             return new SetValueProviderStrategy(p);
         } else if (ExperimentsPackage.eINSTANCE.getLinearValueProvider().isInstance(specification)) {
-            LinearValueProvider p = (LinearValueProvider)specification;
+            final LinearValueProvider p = (LinearValueProvider) specification;
             return new LinearValueProviderStrategy(p);
         }
         throw new RuntimeException("Could not find a value provider strategy for " + specification.eClass().getName());

@@ -14,16 +14,18 @@ public class AbstractSimulationWorkflowConfigurationFactory {
 
     // copied from de.uka.ipd.sdq.codegen.simucontroller.runconfig.FeatureOptionsTab
     private static final String DEFAULT_CONNECTOR_FEATURE_CONFIG = "pathmap://PCM_MODELS/ConnectorConfig.featureconfig";
-    
-    public static void fillWorkflowConfiguration(AbstractSimulationWorkflowConfiguration workflowConfig, AbstractSimulationConfiguration configuration, PCMModelFiles pcm, AbstractSimulationConfig simConfig) {
-//        PCMModel pcm = experimentRepository.getInitialModel();
-        List<String> allocationFiles = new ArrayList<String>();
+
+    public static void fillWorkflowConfiguration(final AbstractSimulationWorkflowConfiguration workflowConfig,
+            final AbstractSimulationConfiguration configuration, final PCMModelFiles pcm,
+            final AbstractSimulationConfig simConfig) {
+        // PCMModel pcm = experimentRepository.getInitialModel();
+        final List<String> allocationFiles = new ArrayList<String>();
         allocationFiles.add(pcm.getAllocationFile());
         workflowConfig.setAllocationFiles(allocationFiles);
         workflowConfig.setUsageModelFile(pcm.getUsagemodelFile());
         workflowConfig.setMiddlewareFile(pcm.getMiddlewareRepositoryFile());
         workflowConfig.setEventMiddlewareFile(pcm.getEventMiddlewareRepositoryFile());
-        
+
         workflowConfig.setCodeGenerationAdvicesFile(CodeGenerationAdvice.SIMULATION);
 
         workflowConfig.setDebug(simConfig.isDebug());
@@ -33,21 +35,21 @@ public class AbstractSimulationWorkflowConfigurationFactory {
         // else
         // config.setInteractive(true);
 
-        
-//        AbstractSimulationConfiguration configuration = (AbstractSimulationConfiguration) experimentRepository.getToolConfiguration();
-        
+        // AbstractSimulationConfiguration configuration = (AbstractSimulationConfiguration)
+        // experimentRepository.getToolConfiguration();
+
         workflowConfig.setSimulateLinkingResources(configuration.isSimulateLinkingResources());
         workflowConfig.setDeleteTemporaryDataAfterAnalysis(true); // TODO
-        workflowConfig.setOverwriteWithoutAsking(true); // TODO ensure that no folders can be deleted accidentally
+        workflowConfig.setOverwriteWithoutAsking(true); // TODO ensure that no folders can be
+                                                        // deleted accidentally
         workflowConfig.setStoragePluginID(ConstantsContainer.DEFAULT_TEMPORARY_DATA_LOCATION);
-//        workflowConfig.setPluginID(ConstantsContainer.SIMUCOM_DEFAULT_PROJECT_ID); // TODO
+        // workflowConfig.setPluginID(ConstantsContainer.SIMUCOM_DEFAULT_PROJECT_ID); // TODO
         workflowConfig.setFeatureConfigFile(DEFAULT_CONNECTOR_FEATURE_CONFIG);
 
         workflowConfig.setSensitivityAnalysisEnabled(false); // TODO
 
-        
         // config.setCompletionConfiguration(new PCMCompletionRunConfiguration(config, properties));
-        
+
     }
-    
+
 }

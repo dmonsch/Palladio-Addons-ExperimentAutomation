@@ -4,14 +4,14 @@ import de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider;
 
 public class LinearValueProviderStrategy implements IValueProviderStrategy {
 
-	private LinearValueProvider specification;
+    private final LinearValueProvider specification;
 
-	public LinearValueProviderStrategy(LinearValueProvider specification) {
-		this.specification = specification;
-	}
+    public LinearValueProviderStrategy(final LinearValueProvider specification) {
+        this.specification = specification;
+    }
 
-	@Override
-	public long valueAtPosition(int position) {
-		return (long) (specification.getFactor()*position + specification.getSummand());
-	}
+    @Override
+    public long valueAtPosition(final int position) {
+        return (long) (this.specification.getFactor() * position + this.specification.getSummand());
+    }
 }

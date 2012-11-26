@@ -16,14 +16,14 @@ import de.uka.ipd.sdq.identifier.Identifier;
 
 public class PCMModelHelper {
 
-    public static EObject findModelElementById(ResourceSet rs, String id) {
-        TreeIterator<?> i = EcoreUtil.getAllContents(rs, true);
+    public static EObject findModelElementById(final ResourceSet rs, final String id) {
+        final TreeIterator<?> i = EcoreUtil.getAllContents(rs, true);
         while (i.hasNext()) {
-            Object o = i.next();
+            final Object o = i.next();
             if (Identifier.class.isInstance(o)) {
-                Identifier identifyable = (Identifier) o;
+                final Identifier identifyable = (Identifier) o;
                 if (identifyable.getId().equals(id)) {
-                    return (EObject) identifyable;
+                    return identifyable;
                 }
             }
         }
@@ -36,27 +36,27 @@ public class PCMModelHelper {
      * @param model
      * @return the locations of the copied files
      */
-    private static PCMModelFiles createTemporaryCopy(PCMModelFiles model, URI destDirUri) {
+    private static PCMModelFiles createTemporaryCopy(final PCMModelFiles model, final URI destDirUri) {
         // create the temporary directory
         // URI tmpDirUri = createTemporaryDirectory("expaut" + System.currentTimeMillis());
 
         // copy model files to the temporary directory
-        String[] modelPaths = { model.getAllocationFile(), model.getRepositoryFile(),
+        final String[] modelPaths = { model.getAllocationFile(), model.getRepositoryFile(),
                 model.getResourceenvironmentFile(), model.getSystemFile(), model.getUsagemodelFile() };
         // PCMModel result = ExperimentsFactory.eINSTANCE.createPCMModel();
-        PCMModelFiles result = (PCMModelFiles) EcoreUtil.copy(model);
-        for (String path : modelPaths) {
-            File modelFile = new File(path);
+        final PCMModelFiles result = EcoreUtil.copy(model);
+        for (final String path : modelPaths) {
+            final File modelFile = new File(path);
             if (!modelFile.exists() || modelFile.isDirectory()) {
                 throw new RuntimeException("Could not find file " + modelFile.toString() + ".");
             }
-            String fileName = modelFile.getName();
-            URI fileUri = URI.createURI(fileName);
-            URI absoluteFileUri = fileUri.resolve(destDirUri);
+            final String fileName = modelFile.getName();
+            final URI fileUri = URI.createURI(fileName);
+            final URI absoluteFileUri = fileUri.resolve(destDirUri);
 
             // copy file
-            File inputFile = modelFile;
-            File outputFile = new File(absoluteFileUri.toFileString());
+            final File inputFile = modelFile;
+            final File outputFile = new File(absoluteFileUri.toFileString());
             FileHelper.copyFile(inputFile, outputFile);
 
             setFileLocation(result, outputFile);
@@ -64,101 +64,103 @@ public class PCMModelHelper {
         return result;
     }
 
-    public static PCMModelFiles createTemporaryCopy(PCMModelFiles model, Bundle bundle, Path experimentsLocation,
-            Path variationsLocation) {
+    public static PCMModelFiles createTemporaryCopy(final PCMModelFiles model, final Bundle bundle,
+            final Path experimentsLocation, final Path variationsLocation) {
         // create the temporary directory
-        URI tmpDirUri = createTemporaryDirectory("expaut" + System.currentTimeMillis());
+        final URI tmpDirUri = createTemporaryDirectory("expaut" + System.currentTimeMillis());
 
         // copy experiment model files to temporary directory
-        Path[] modelPaths = { experimentsLocation, variationsLocation };
-        Path[] outputPaths = new Path[2];
+        final Path[] modelPaths = { experimentsLocation, variationsLocation };
+        final Path[] outputPaths = new Path[2];
         for (int i = 0; i < modelPaths.length; i++) {
-            Path p = modelPaths[i];
-            File modelFile = new File(p.toOSString());
+            final Path p = modelPaths[i];
+            final File modelFile = new File(p.toOSString());
             if (!modelFile.exists() || modelFile.isDirectory()) {
                 throw new RuntimeException("Could not find file " + modelFile.toString() + ".");
             }
 
-            String fileName = modelFile.getName();
-            URI fileUri = URI.createURI(fileName);
-            URI absoluteFileUri = fileUri.resolve(tmpDirUri);
+            final String fileName = modelFile.getName();
+            final URI fileUri = URI.createURI(fileName);
+            final URI absoluteFileUri = fileUri.resolve(tmpDirUri);
 
             // copy file
-            File inputFile = modelFile;
-            File outputFile = new File(absoluteFileUri.toFileString());
+            final File inputFile = modelFile;
+            final File outputFile = new File(absoluteFileUri.toFileString());
             FileHelper.copyFile(inputFile, outputFile);
 
             outputPaths[i] = new Path(outputFile.getPath());
         }
 
         // copy PCM model files to temporary directory
-        ConfigurationModel config = ConfigurationModel.loadFromBundle(bundle, experimentsLocation, variationsLocation);
-        PCMModelFiles modelCopy = createTemporaryCopy(model, tmpDirUri);
+        final ConfigurationModel config = ConfigurationModel.loadFromBundle(bundle, experimentsLocation,
+                variationsLocation);
+        final PCMModelFiles modelCopy = createTemporaryCopy(model, tmpDirUri);
 
-        ConfigurationModel result = ConfigurationModel.loadFromBundle(bundle, outputPaths[0], outputPaths[1]);
+        final ConfigurationModel result = ConfigurationModel.loadFromBundle(bundle, outputPaths[0], outputPaths[1]);
         // result.getExperiments().setInitialModel(pcmmodel);
 
         return modelCopy;
     }
 
-    public static PCMModelFiles copyToExperimentFolder(PCMModelFiles model, Path experimentsLocation, Path variationsLocation, URI experimentFolderUri) {
-		PCMModelFiles modelCopy = copyToExperimentFolder(model, experimentFolderUri);
+    public static PCMModelFiles copyToExperimentFolder(final PCMModelFiles model, final Path experimentsLocation,
+            final Path variationsLocation, final URI experimentFolderUri) {
+        final PCMModelFiles modelCopy = copyToExperimentFolder(model, experimentFolderUri);
 
-		// copy experiment model files to temporary directory
-		Path[] modelPaths = { experimentsLocation, variationsLocation };
-		Path[] outputPaths = new Path[2];
-		for (int i = 0; i < modelPaths.length; i++) {
-			Path p = modelPaths[i];
-			File modelFile = new File(p.toOSString());
-			if (!modelFile.exists() || modelFile.isDirectory()) {
-				throw new RuntimeException("Could not find file " + modelFile.toString() + ".");
-			}
+        // copy experiment model files to temporary directory
+        final Path[] modelPaths = { experimentsLocation, variationsLocation };
+        final Path[] outputPaths = new Path[2];
+        for (int i = 0; i < modelPaths.length; i++) {
+            final Path p = modelPaths[i];
+            final File modelFile = new File(p.toOSString());
+            if (!modelFile.exists() || modelFile.isDirectory()) {
+                throw new RuntimeException("Could not find file " + modelFile.toString() + ".");
+            }
 
-			String fileName = modelFile.getName();
-			URI fileUri = URI.createURI(fileName);
-			URI absoluteFileUri = fileUri.resolve(experimentFolderUri);
+            final String fileName = modelFile.getName();
+            final URI fileUri = URI.createURI(fileName);
+            final URI absoluteFileUri = fileUri.resolve(experimentFolderUri);
 
-			// copy file
-			File inputFile = modelFile;
-			File outputFile = new File(absoluteFileUri.toFileString());
-			FileHelper.copyFile(inputFile, outputFile);
+            // copy file
+            final File inputFile = modelFile;
+            final File outputFile = new File(absoluteFileUri.toFileString());
+            FileHelper.copyFile(inputFile, outputFile);
 
-			outputPaths[i] = new Path(outputFile.getPath());
-		}
+            outputPaths[i] = new Path(outputFile.getPath());
+        }
 
-		return modelCopy;
-	}
+        return modelCopy;
+    }
 
-	public static PCMModelFiles copyToExperimentFolder(PCMModelFiles model, URI experimentFolderUri) {
-		// create experiment folder if it does not exit yet
-		File f = new File(experimentFolderUri.toFileString());
-		if (!f.exists()) {
-			f.mkdir();
-		}
+    public static PCMModelFiles copyToExperimentFolder(final PCMModelFiles model, final URI experimentFolderUri) {
+        // create experiment folder if it does not exit yet
+        final File f = new File(experimentFolderUri.toFileString());
+        if (!f.exists()) {
+            f.mkdir();
+        }
 
-		// copy PCM model files to temporary directory
-		// ConfigurationModel config = ConfigurationModel.loadFromBundle(bundle,
-		// experimentsLocation, variationsLocation);
-		PCMModelFiles modelCopy = createTemporaryCopy(model, experimentFolderUri);
+        // copy PCM model files to temporary directory
+        // ConfigurationModel config = ConfigurationModel.loadFromBundle(bundle,
+        // experimentsLocation, variationsLocation);
+        final PCMModelFiles modelCopy = createTemporaryCopy(model, experimentFolderUri);
 
         // ConfigurationModel result = ConfigurationModel.loadFromBundle(bundle, outputPaths[0],
-		// outputPaths[1]);
-		// result.getExperiments().setInitialModel(pcmmodel);
+        // outputPaths[1]);
+        // result.getExperiments().setInitialModel(pcmmodel);
 
-		return modelCopy;
-	}
+        return modelCopy;
+    }
 
-    private static URI createTemporaryDirectory(String folderName) {
-        String tmpDir = System.getProperty("java.io.tmpdir");
-        File tmpDirFile = new File(tmpDir + File.separator + folderName);
+    private static URI createTemporaryDirectory(final String folderName) {
+        final String tmpDir = System.getProperty("java.io.tmpdir");
+        final File tmpDirFile = new File(tmpDir + File.separator + folderName);
         tmpDirFile.mkdir();
-        URI tmpDirUri = URI.createFileURI(tmpDirFile.getPath() + "/");
+        final URI tmpDirUri = URI.createFileURI(tmpDirFile.getPath() + "/");
         return tmpDirUri;
     }
 
-    private static void setFileLocation(PCMModelFiles model, File temporaryFile) {
-        String[] fileSegments = temporaryFile.getName().split("\\.");
-        String fileExtension = fileSegments[fileSegments.length - 1];
+    private static void setFileLocation(final PCMModelFiles model, final File temporaryFile) {
+        final String[] fileSegments = temporaryFile.getName().split("\\.");
+        final String fileExtension = fileSegments[fileSegments.length - 1];
 
         if (fileExtension.equalsIgnoreCase("allocation")) {
             model.setAllocationFile(temporaryFile.getPath());

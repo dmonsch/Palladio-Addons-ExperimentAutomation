@@ -2,21 +2,20 @@ package de.uka.ipd.sdq.experimentautomation.application.variation;
 
 import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
 
-
 public class VariationStrategyFactory {
 
-    public static IVariationStrategy createStrategy(VariationType type) {
+    public static IVariationStrategy createStrategy(final VariationType type) {
         assert type != null : "The variation type may not be null";
-        String className = type.getStrategyClass();
+        final String className = type.getStrategyClass();
 
         Object o = null;
         try {
             o = Class.forName(className).newInstance();
-        } catch (ClassNotFoundException e) {
+        } catch (final ClassNotFoundException e) {
             e.printStackTrace();
-        } catch (InstantiationException e) {
+        } catch (final InstantiationException e) {
             e.printStackTrace();
-        } catch (IllegalAccessException e) {
+        } catch (final IllegalAccessException e) {
             e.printStackTrace();
         }
 

@@ -41,15 +41,15 @@ public class ExperimentController {
     private static final Logger logger = Logger.getLogger(ExperimentController.class);
 
     private static final boolean ZIP_AND_UPLOAD_RESULTS_WHEN_FINISHED = false;
-    
+
     private Bundle bundle;
     private ConfigurationModel config;
     private Path experimentsLocation;
     private Path variationsLocation;
-    private Path bookkeepingLocation;
-    private String args[];
+    private final Path bookkeepingLocation;
+    private final String args[];
     private List<IRunListener> listeners;
-	private boolean copyAuxModelFiles;
+    private final boolean copyAuxModelFiles;
 
     /**
      * 
@@ -57,8 +57,8 @@ public class ExperimentController {
      * @param args
      *            the command line arguments passed to this application
      */
-    public ExperimentController(ConfigurationModel config, Path experimentsLocation, Path variationsLocation,
-            Path bookkeepingLocation, String[] args) {
+    public ExperimentController(final ConfigurationModel config, final Path experimentsLocation,
+            final Path variationsLocation, final Path bookkeepingLocation, final String[] args) {
         this.bundle = Activator.getDefault().getBundle();
         this.config = config;
         this.experimentsLocation = experimentsLocation;
@@ -66,99 +66,98 @@ public class ExperimentController {
         this.bookkeepingLocation = bookkeepingLocation;
         this.args = args;
         this.listeners = new ArrayList<IRunListener>();
-		this.copyAuxModelFiles = true;
-	}
+        this.copyAuxModelFiles = true;
+    }
 
-	public ExperimentController(Path bookkeepingLocation) {
-		this.bookkeepingLocation = bookkeepingLocation;
-		this.args = new String[] { "none (call by code)" };
-		this.copyAuxModelFiles = false;
-	}
+    public ExperimentController(final Path bookkeepingLocation) {
+        this.bookkeepingLocation = bookkeepingLocation;
+        this.args = new String[] { "none (call by code)" };
+        this.copyAuxModelFiles = false;
+    }
 
-
-    private IVariationStrategy initialiseVariations(Variation v, ResourceSet rs) {
-        EObject variedObject = PCMModelHelper.findModelElementById(rs, v.getVariedObjectId());
-        IVariationStrategy s = VariationStrategyFactory.createStrategy(v.getType());
+    private IVariationStrategy initialiseVariations(final Variation v, final ResourceSet rs) {
+        final EObject variedObject = PCMModelHelper.findModelElementById(rs, v.getVariedObjectId());
+        final IVariationStrategy s = VariationStrategyFactory.createStrategy(v.getType());
         s.setVariedObject(variedObject);
         return s;
     }
 
-	public void runExperiment(Experiment experiment) {
-		List<Experiment> experiments = new ArrayList<Experiment>(1);
-		experiments.add(experiment);
-		runExperiment(experiments, 1);
-	}
+    public void runExperiment(final Experiment experiment) {
+        final List<Experiment> experiments = new ArrayList<Experiment>(1);
+        experiments.add(experiment);
+        this.runExperiment(experiments, 1);
+    }
 
-    public void runExperiment(List<Experiment> experiments, int repetitions) {
-        for (Experiment exp : experiments) {
-            for (ToolConfiguration c : exp.getToolConfiguration()) {
-                runExperiment(exp, c, repetitions);
+    public void runExperiment(final List<Experiment> experiments, final int repetitions) {
+        for (final Experiment exp : experiments) {
+            for (final ToolConfiguration c : exp.getToolConfiguration()) {
+                this.runExperiment(exp, c, repetitions);
             }
         }
     }
 
-    public void runExperiments(int repetitions) {
-        runExperiment(config.getExperiments().getExperiments(), repetitions);
+    public void runExperiments(final int repetitions) {
+        this.runExperiment(this.config.getExperiments().getExperiments(), repetitions);
     }
 
-    private void runExperiment(Experiment exp, ToolConfiguration toolConfig, int repetitions) {
-        String experimentName = "(" + exp.getId() + ", " + toolConfig.getName() + ") " + exp.getName();
-        File experimentFolder = new File(bookkeepingLocation.toOSString() + File.separator + experimentName + " ("
-                + System.currentTimeMillis() + ")" + File.separator);
-        ExperimentBookkeeping bookkeeping = new ExperimentBookkeeping(experimentFolder);
-        ExperimentMetadata metadata = new ExperimentMetadata();
+    private void runExperiment(final Experiment exp, final ToolConfiguration toolConfig, final int repetitions) {
+        final String experimentName = "(" + exp.getId() + ", " + toolConfig.getName() + ") " + exp.getName();
+        final File experimentFolder = new File(this.bookkeepingLocation.toOSString() + File.separator + experimentName
+                + " (" + System.currentTimeMillis() + ")" + File.separator);
+        final ExperimentBookkeeping bookkeeping = new ExperimentBookkeeping(experimentFolder);
+        final ExperimentMetadata metadata = new ExperimentMetadata();
         metadata.setExperimentName(experimentName);
         metadata.setStartTime(new Date());
-        metadata.setCommandLineArguments(args);
+        metadata.setCommandLineArguments(this.args);
         metadata.setVirtualMachineArguments("TODO");
 
-        String[] factorNames = new String[exp.getVariations().size()];
+        final String[] factorNames = new String[exp.getVariations().size()];
         for (int i = 0; i < factorNames.length; i++) {
             factorNames[i] = exp.getVariations().get(i).getName();
         }
-        IResponseMeasurement m = ResponseMeasurementFactory.createResponseMeasurement(exp.getResponseMeasurement(), bookkeeping, null, null);         // TODO
+        final IResponseMeasurement m = ResponseMeasurementFactory.createResponseMeasurement(
+                exp.getResponseMeasurement(), bookkeeping, null, null); // TODO
         m.prepareBookkeeping(bookkeeping, factorNames);
 
-
-        ExperimentContext settings = new ExperimentContext(bookkeeping, experimentName, experimentFolder, toolConfig,
-                repetitions, exp);
-        runExperiments(exp.getVariations(), settings, new ArrayList<Variation>(), new ArrayList<Long>());
+        final ExperimentContext settings = new ExperimentContext(bookkeeping, experimentName, experimentFolder,
+                toolConfig, repetitions, exp);
+        this.runExperiments(exp.getVariations(), settings, new ArrayList<Variation>(), new ArrayList<Long>());
 
         bookkeeping.finishResultFile();
         metadata.setEndTime(new Date());
         bookkeeping.writeMetadata(metadata);
 
-		// TODO the zip-and-upload feature has not been test after a recrent refactoring. If you want to use it, be 
-        // aware of this and better use a debugger the first time. 
-        if(ZIP_AND_UPLOAD_RESULTS_WHEN_FINISHED) {
-	        // name of zip file to create
-	        String zipFileName = experimentName + ".zip";
-	        
-	        // location of zip to create 
-	        File zipFile = new File(experimentFolder.getParent() + File.separator + zipFileName);
-	        
-	        String hostName = "YOUR_HOST";
-	        String user = "YOUR_USER";
-	        String password = "YOUR_PASSWORD";
-	        
-	        Utils.zipFolder(experimentFolder, zipFile);
-	        Utils.ftpUpload(hostName, user, password, zipFile, zipFileName);
+        // TODO the zip-and-upload feature has not been test after a recrent refactoring. If you
+        // want to use it, be
+        // aware of this and better use a debugger the first time.
+        if (ZIP_AND_UPLOAD_RESULTS_WHEN_FINISHED) {
+            // name of zip file to create
+            final String zipFileName = experimentName + ".zip";
+
+            // location of zip to create
+            final File zipFile = new File(experimentFolder.getParent() + File.separator + zipFileName);
+
+            final String hostName = "YOUR_HOST";
+            final String user = "YOUR_USER";
+            final String password = "YOUR_PASSWORD";
+
+            Utils.zipFolder(experimentFolder, zipFile);
+            Utils.ftpUpload(hostName, user, password, zipFile, zipFileName);
         }
     }
 
-    
-
     private class ExperimentContext {
 
-        private ExperimentBookkeeping bookkeeping;
-        private String experimentName;
-        private File experimentFolder;
-        private ToolConfiguration toolConfiguration;
-        private int repetitions;
-        private Experiment experiment;
+        private final ExperimentBookkeeping bookkeeping;
+        private final String experimentName;
+        private final File experimentFolder;
+        private final ToolConfiguration toolConfiguration;
+        private final int repetitions;
+        private final Experiment experiment;
 
-        public ExperimentContext(ExperimentBookkeeping bookkeeping, String experimentName, File experimentFolder,
-                ToolConfiguration toolConfiguration, int repetitions, Experiment experiment) {
+        public ExperimentContext(final ExperimentBookkeeping bookkeeping, final String experimentName,
+                final File experimentFolder, final ToolConfiguration toolConfiguration, final int repetitions,
+                final Experiment experiment) {
             super();
             this.bookkeeping = bookkeeping;
             this.experimentName = experimentName;
@@ -169,41 +168,41 @@ public class ExperimentController {
         }
 
         public ExperimentBookkeeping getBookkeeping() {
-            return bookkeeping;
+            return this.bookkeeping;
         }
 
         public String getExperimentname() {
-            return experimentName;
+            return this.experimentName;
         }
 
         public File getExperimentFolder() {
-            return experimentFolder;
+            return this.experimentFolder;
         }
 
         public ToolConfiguration getToolConfiguration() {
-            return toolConfiguration;
+            return this.toolConfiguration;
         }
 
         public int getRepetitions() {
-            return repetitions;
+            return this.repetitions;
         }
 
         public Experiment getExperiment() {
-            return experiment;
+            return this.experiment;
         }
 
     }
 
-    public void runExperiments(List<Variation> list, ExperimentContext settings, List<Variation> variants,
-            List<Long> currentFactorLevels) {
+    public void runExperiments(final List<Variation> list, final ExperimentContext settings,
+            final List<Variation> variants, final List<Long> currentFactorLevels) {
         if (!list.isEmpty()) {
             // obtain variation description
-            List<Variation> copy = new ArrayList<Variation>();
+            final List<Variation> copy = new ArrayList<Variation>();
             copy.addAll(list);
-            Variation variation = copy.remove(0);
+            final Variation variation = copy.remove(0);
 
             // obtain value provider
-            IValueProviderStrategy valueProvider = ValueProviderFactory.createValueProvider(variation
+            final IValueProviderStrategy valueProvider = ValueProviderFactory.createValueProvider(variation
                     .getValueProvider());
 
             long factorLevel = 0;
@@ -218,7 +217,7 @@ public class ExperimentController {
                     variants.add(variation);
                     currentFactorLevels.add(factorLevel);
 
-                    runExperiments(copy, settings, variants, currentFactorLevels);
+                    this.runExperiments(copy, settings, variants, currentFactorLevels);
 
                     variants.remove(variants.size() - 1);
                     currentFactorLevels.remove(currentFactorLevels.size() - 1);
@@ -227,30 +226,33 @@ public class ExperimentController {
                 iteration++;
             }
         } else {
-            variateModelAndSimulate(settings, variants, currentFactorLevels);
+            this.variateModelAndSimulate(settings, variants, currentFactorLevels);
         }
     }
 
-    private void variateModelAndSimulate(ExperimentContext settings, List<Variation> variations, List<Long> factorLevels) {
-        Experiment exp = settings.getExperiment();
+    private void variateModelAndSimulate(final ExperimentContext settings, final List<Variation> variations,
+            final List<Long> factorLevels) {
+        final Experiment exp = settings.getExperiment();
 
         // build experiment folder URI
         String factorLevelsString = "";
         for (int i = 0; i < factorLevels.size(); i++) {
             factorLevelsString += variations.get(i).getName() + "=" + factorLevels.get(i);
-            if (i + 1 < factorLevels.size())
+            if (i + 1 < factorLevels.size()) {
                 factorLevelsString += ", ";
+            }
         }
-        URI variationFolderUri = URI.createFileURI(settings.getExperimentFolder().toString() + "/" + factorLevelsString
-                + "/");
+        final URI variationFolderUri = URI.createFileURI(settings.getExperimentFolder().toString() + "/"
+                + factorLevelsString + "/");
 
         // copy initial PCM model files to experiment folder
-		PCMModelFiles modelCopy;
-		if (copyAuxModelFiles) {
-			modelCopy = PCMModelHelper.copyToExperimentFolder(exp.getInitialModel(), experimentsLocation, variationsLocation, variationFolderUri);
-		} else {
-			modelCopy = PCMModelHelper.copyToExperimentFolder(exp.getInitialModel(), variationFolderUri);
-		}
+        PCMModelFiles modelCopy;
+        if (this.copyAuxModelFiles) {
+            modelCopy = PCMModelHelper.copyToExperimentFolder(exp.getInitialModel(), this.experimentsLocation,
+                    this.variationsLocation, variationFolderUri);
+        } else {
+            modelCopy = PCMModelHelper.copyToExperimentFolder(exp.getInitialModel(), variationFolderUri);
+        }
 
         // load PCM model from copied model files
         final ResourceSet resourceSet = new ResourceSetImpl();
@@ -259,62 +261,65 @@ public class ExperimentController {
         EcoreUtil.resolveAll(resourceSet);
 
         // modify the copied PCM model according to the variation descriptions
-        List<String> variationDescriptions = new ArrayList<String>();
+        final List<String> variationDescriptions = new ArrayList<String>();
         for (int i = 0; i < variations.size(); i++) {
-            Variation v = variations.get(i);
-            long currentValue = factorLevels.get(i);
-            IVariationStrategy variationStrategy = initialiseVariations(v, resourceSet);
-            String desc = variationStrategy.vary(currentValue);
+            final Variation v = variations.get(i);
+            final long currentValue = factorLevels.get(i);
+            final IVariationStrategy variationStrategy = this.initialiseVariations(v, resourceSet);
+            final String desc = variationStrategy.vary(currentValue);
             variationDescriptions.add(desc);
         }
 
         // save the varied PCM model
         try {
-            saveResources(resourceSet);
-        } catch (IOException e) {
+            this.saveResources(resourceSet);
+        } catch (final IOException e) {
             throw new RuntimeException(e);
         }
 
         // simulate the varied PCM model one or more times as specified by the replication count
         for (int i = 1; i <= settings.getRepetitions(); i++) {
-//            ISimulationListener l = new SimulationDurationSimulationListener(settings.getBookkeeping(), factorLevels);
-            IResponseMeasurement m = ResponseMeasurementFactory.createResponseMeasurement(exp.getResponseMeasurement(), settings.getBookkeeping(), factorLevels, variationFolderUri);
+            // ISimulationListener l = new
+            // SimulationDurationSimulationListener(settings.getBookkeeping(), factorLevels);
+            final IResponseMeasurement m = ResponseMeasurementFactory.createResponseMeasurement(
+                    exp.getResponseMeasurement(), settings.getBookkeeping(), factorLevels, variationFolderUri);
             try {
-                IToolAdapter analysisTool = AnalysisToolFactory.createToolAdapater(settings.getToolConfiguration());
+                final IToolAdapter analysisTool = AnalysisToolFactory.createToolAdapater(settings
+                        .getToolConfiguration());
                 analysisTool.runExperiment(settings.getExperimentname() + " "
                         + settings.getToolConfiguration().getName(), modelCopy, settings.getToolConfiguration(),
                         settings.getExperiment().getStopConditions(), m);
-            } catch (Exception ex) {
+            } catch (final Exception ex) {
                 settings.getBookkeeping().logException(ex);
             }
         }
     }
 
-    public void addListener(IRunListener l) {
+    public void addListener(final IRunListener l) {
         this.listeners.add(l);
     }
 
-    public void removeListener(IRunListener l) {
+    public void removeListener(final IRunListener l) {
         this.listeners.remove(l);
     }
 
     private void notifyBeforeListener() {
-        for (IRunListener l : listeners) {
+        for (final IRunListener l : this.listeners) {
             l.beforeRun();
         }
     }
 
     private void notifyAfterListener() {
-        for (IRunListener l : listeners) {
+        for (final IRunListener l : this.listeners) {
             l.afterRun();
         }
     }
 
-    private void saveResources(ResourceSet rs) throws IOException {
-        for (Resource r : rs.getResources()) {
-            URI n = rs.getURIConverter().normalize(r.getURI());
+    private void saveResources(final ResourceSet rs) throws IOException {
+        for (final Resource r : rs.getResources()) {
+            final URI n = rs.getURIConverter().normalize(r.getURI());
             if (n.isFile()) {
-                OutputStream out = rs.getURIConverter().createOutputStream(r.getURI());
+                final OutputStream out = rs.getURIConverter().createOutputStream(r.getURI());
                 r.save(out, null);
                 logger.info("Saving resource: " + r.toString());
             }

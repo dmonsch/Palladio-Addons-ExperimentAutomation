@@ -21,14 +21,14 @@ import de.uka.ipd.sdq.experimentautomation.application.ExperimentBookkeeping;
 
 public class JProfilerSimulationListener implements IResponseMeasurement {
 
-    private ExperimentBookkeeping bookkeeping;
-    private List<Long> variationValues;
-    private URI variationFolderUri;
+    private final ExperimentBookkeeping bookkeeping;
+    private final List<Long> variationValues;
+    private final URI variationFolderUri;
     private long id;
     private File beforeFile;
 
-    public JProfilerSimulationListener(ExperimentBookkeeping bookkeeping, List<Long> variationValues,
-            URI variationFolderUri) {
+    public JProfilerSimulationListener(final ExperimentBookkeeping bookkeeping, final List<Long> variationValues,
+            final URI variationFolderUri) {
         this.bookkeeping = bookkeeping;
         this.variationValues = variationValues;
         this.variationFolderUri = variationFolderUri;
@@ -44,7 +44,7 @@ public class JProfilerSimulationListener implements IResponseMeasurement {
     @Override
     public void simulationStart() {
         this.id = System.currentTimeMillis();
-        File resultFile = new File(variationFolderUri.toFileString() + id + "_before.jps");
+        final File resultFile = new File(this.variationFolderUri.toFileString() + this.id + "_before.jps");
         this.beforeFile = resultFile;
         System.gc();
         Controller.startVMTelemetryRecording();
@@ -53,12 +53,12 @@ public class JProfilerSimulationListener implements IResponseMeasurement {
 
     @Override
     public void simulationStop() {
-        File resultFile = new File(variationFolderUri.toFileString() + id + "_after.jps");
+        final File resultFile = new File(this.variationFolderUri.toFileString() + this.id + "_after.jps");
         Controller.saveSnapshot(resultFile);
         Controller.stopVMTelemetryRecording();
 
-        String csvFile = exportSnapshotToCSV(resultFile, this.bookkeeping);
-        save(extractMeasurementsFromCSV(csvFile), bookkeeping);
+        final String csvFile = this.exportSnapshotToCSV(resultFile, this.bookkeeping);
+        this.save(this.extractMeasurementsFromCSV(csvFile), this.bookkeeping);
         // Connection conn = null;
         // try {
         // // conn = ConnectionFactory.getLocalConnection()
@@ -76,21 +76,22 @@ public class JProfilerSimulationListener implements IResponseMeasurement {
         // }
     }
 
-    private String exportSnapshotToCSV(File snapshotFile, ExperimentBookkeeping bookeeping) {
+    private String exportSnapshotToCSV(final File snapshotFile, final ExperimentBookkeeping bookeeping) {
         // Execute JProfiler export command-line utility
-        String inputFilePath = snapshotFile.toString();
-        String outputFilePath = snapshotFile.toString().substring(0, snapshotFile.toString().length() - 4) + ".csv";
+        final String inputFilePath = snapshotFile.toString();
+        final String outputFilePath = snapshotFile.toString().substring(0, snapshotFile.toString().length() - 4)
+                + ".csv";
 
         String arguments = "";
         arguments = "\"" + inputFilePath + "\"" + " TelemetryThreads " + "-format=csv " + "\"" + outputFilePath + "\"";
 
         try {
-            String exec = "\"C:/Program Files/jprofiler6/bin/jpexport.exe\" " + arguments;
+            final String exec = "\"C:/Program Files/jprofiler6/bin/jpexport.exe\" " + arguments;
             System.out.println("Executing " + exec + "...");
-            Process p = Runtime.getRuntime().exec(exec);
-            OutputStream stdin = p.getOutputStream();
-            InputStream stderr = p.getErrorStream();
-            InputStream stdout = p.getInputStream();
+            final Process p = Runtime.getRuntime().exec(exec);
+            final OutputStream stdin = p.getOutputStream();
+            final InputStream stderr = p.getErrorStream();
+            final InputStream stdout = p.getInputStream();
 
             new Thread(new StdoutRunnable(stdout)).start();
             new Thread(new StderrRunnable(stderr)).start();
@@ -100,91 +101,93 @@ public class JProfilerSimulationListener implements IResponseMeasurement {
             stdout.close();
             stderr.close();
             stdin.close();
-        } catch (IOException e) {
+        } catch (final IOException e) {
             e.printStackTrace();
-        } catch (InterruptedException e) {
+        } catch (final InterruptedException e) {
             e.printStackTrace();
         }
 
         return outputFilePath;
     }
 
-    private Map<String, List<Double>> extractMeasurementsFromCSV(String csvFile) {
-        Map<String, List<Double>> result = new HashMap<String, List<Double>>();
+    private Map<String, List<Double>> extractMeasurementsFromCSV(final String csvFile) {
+        final Map<String, List<Double>> result = new HashMap<String, List<Double>>();
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(new File(csvFile)));
+            final BufferedReader reader = new BufferedReader(new FileReader(new File(csvFile)));
             String line;
-            int lineNumber = 0;
+            final int lineNumber = 0;
 
             // read column headers
             line = reader.readLine();
-            if (line == null)
+            if (line == null) {
                 throw new RuntimeException("Could not read the column headers from file " + csvFile);
-            String[] columHeaders = line.split(";");
-            for (String h : columHeaders) {
+            }
+            final String[] columHeaders = line.split(";");
+            for (final String h : columHeaders) {
                 result.put(h, new ArrayList<Double>());
             }
 
             // read column line by line
             while ((line = reader.readLine()) != null) {
-                String[] cols = line.split(";");
+                final String[] cols = line.split(";");
                 for (int i = 0; i < cols.length; i++) {
                     result.get(columHeaders[i]).add(new Double(cols[i]));
                 }
             }
-        } catch (FileNotFoundException e) {
+        } catch (final FileNotFoundException e) {
             e.printStackTrace();
-        } catch (IOException e) {
+        } catch (final IOException e) {
             e.printStackTrace();
         }
         return result;
     }
 
-    private void save(Map<String, List<Double>> measurements, ExperimentBookkeeping bookkeeping) {
-        List<Double> m = measurements.get("\"Total number of threads\"");
-        Double mean = calculateMean(m);
-        Double max = calculateMax(m);
-        String[] factorLevels = new String[variationValues.size()];
-        for (int i = 0; i < variationValues.size(); i++) {
-            factorLevels[i] = variationValues.get(i).toString();
+    private void save(final Map<String, List<Double>> measurements, final ExperimentBookkeeping bookkeeping) {
+        final List<Double> m = measurements.get("\"Total number of threads\"");
+        final Double mean = this.calculateMean(m);
+        final Double max = this.calculateMax(m);
+        final String[] factorLevels = new String[this.variationValues.size()];
+        for (int i = 0; i < this.variationValues.size(); i++) {
+            factorLevels[i] = this.variationValues.get(i).toString();
         }
         // variationValues.toArray(factorLevels);
         bookkeeping.addResult(new String[] { mean.toString(), max.toString() }, factorLevels);
     }
 
-    private double calculateMax(List<Double> doubles) {
+    private double calculateMax(final List<Double> doubles) {
         double max = 0;
-        for (Double d : doubles) {
-            if (d > max)
+        for (final Double d : doubles) {
+            if (d > max) {
                 max = d;
+            }
         }
         return max;
     }
 
-    private double calculateMean(List<Double> doubles) {
-        double sum = calculateSum(doubles);
-        int count = doubles.size();
+    private double calculateMean(final List<Double> doubles) {
+        final double sum = this.calculateSum(doubles);
+        final int count = doubles.size();
         return sum / count;
     }
 
-    private double calculateSum(List<Double> doubles) {
+    private double calculateSum(final List<Double> doubles) {
         double sum = 0;
-        for (Double d : doubles) {
+        for (final Double d : doubles) {
             sum += d;
         }
         return sum;
     }
 
     @Override
-    public void prepareBookkeeping(ExperimentBookkeeping bookeeping, String[] factorNames) {
-        bookkeeping.prepareResultFile(new String[] { "Mean", "Max" }, factorNames);
+    public void prepareBookkeeping(final ExperimentBookkeeping bookeeping, final String[] factorNames) {
+        this.bookkeeping.prepareResultFile(new String[] { "Mean", "Max" }, factorNames);
     }
 
     private class StdoutRunnable implements Runnable {
 
-        private InputStream stdout;
+        private final InputStream stdout;
 
-        public StdoutRunnable(InputStream stdout) {
+        public StdoutRunnable(final InputStream stdout) {
             this.stdout = stdout;
         }
 
@@ -192,13 +195,13 @@ public class JProfilerSimulationListener implements IResponseMeasurement {
         public void run() {
             // Write R output to the specified file
             try {
-                BufferedReader stdoutReader = new BufferedReader(new InputStreamReader(stdout));
+                final BufferedReader stdoutReader = new BufferedReader(new InputStreamReader(this.stdout));
                 int x;
                 while ((x = stdoutReader.read()) != -1) {
                     System.out.print(x);
                 }
                 stdoutReader.close();
-            } catch (Exception ex) {
+            } catch (final Exception ex) {
                 ex.printStackTrace();
             }
         }
@@ -207,9 +210,9 @@ public class JProfilerSimulationListener implements IResponseMeasurement {
 
     private class StderrRunnable implements Runnable {
 
-        private InputStream stderr;
+        private final InputStream stderr;
 
-        public StderrRunnable(InputStream stderr) {
+        public StderrRunnable(final InputStream stderr) {
             this.stderr = stderr;
         }
 
@@ -217,13 +220,13 @@ public class JProfilerSimulationListener implements IResponseMeasurement {
         public void run() {
             // Write R error output to the console
             try {
-                BufferedReader r2 = new BufferedReader(new InputStreamReader(stderr));
+                final BufferedReader r2 = new BufferedReader(new InputStreamReader(this.stderr));
                 String x2;
                 while ((x2 = r2.readLine()) != null) {
                     System.err.println(x2);
                 }
                 r2.close();
-            } catch (Exception ex) {
+            } catch (final Exception ex) {
                 ex.printStackTrace();
             }
 

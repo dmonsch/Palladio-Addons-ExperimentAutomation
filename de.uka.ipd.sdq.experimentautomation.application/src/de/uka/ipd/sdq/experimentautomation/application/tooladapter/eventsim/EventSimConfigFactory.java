@@ -12,12 +12,13 @@ import edu.kit.ipd.sdq.eventsim.EventSimConfig;
 
 public class EventSimConfigFactory {
 
-    public static EventSimConfig createConfig(EventSimConfiguration config, List<StopCondition> stopConditions, PCMModelFiles model, String experimentName) {
-    	Map<String, Object> configMap = AbstractSimulationConfigFactory.createConfigMap(config, stopConditions, model, experimentName);
-    	configMap.put(AbstractSimulationConfig.SIMULATOR_ID, "de.uka.ipd.sdq.codegen.simucontroller.eventsim");
-    	return new EventSimConfig(configMap, false);
- 
-    	
+    public static EventSimConfig createConfig(final EventSimConfiguration config,
+            final List<StopCondition> stopConditions, final PCMModelFiles model, final String experimentName) {
+        final Map<String, Object> configMap = AbstractSimulationConfigFactory.createConfigMap(config, stopConditions,
+                model, experimentName);
+        configMap.put(AbstractSimulationConfig.SIMULATOR_ID, "de.uka.ipd.sdq.codegen.simucontroller.eventsim");
+        return new EventSimConfig(configMap, false);
+
     }
 
 }

@@ -12,8 +12,9 @@ import de.uka.ipd.sdq.experimentautomation.experiments.SimulationDurationMeasure
 
 public class ResponseMeasurementFactory {
 
-    public static IResponseMeasurement createResponseMeasurement(ResponseMeasurement configuration, ExperimentBookkeeping bookkeeping, List<Long> variationValues, URI variationFolderUri) {
-        if(configuration == null) {
+    public static IResponseMeasurement createResponseMeasurement(final ResponseMeasurement configuration,
+            final ExperimentBookkeeping bookkeeping, final List<Long> variationValues, final URI variationFolderUri) {
+        if (configuration == null) {
             throw new RuntimeException("The configuration may not be null");
         }
         if (SimulationDurationMeasurement.class.isInstance(configuration)) {
@@ -21,10 +22,10 @@ public class ResponseMeasurementFactory {
         } else if (ProfilingMeasurement.class.isInstance(configuration)) {
             return new JProfilerSimulationListener(bookkeeping, variationValues, variationFolderUri);
         } else if (JMXMeasurement.class.isInstance(configuration)) {
-            JMXMeasurement m = (JMXMeasurement) configuration;
+            final JMXMeasurement m = (JMXMeasurement) configuration;
             return new JMXSimulationListener(bookkeeping, variationValues, variationFolderUri, m.getPollingPeriod());
         }
         throw new RuntimeException("Unknown response measurement type: " + configuration.eClass().getName());
     }
-    
+
 }

@@ -6,5 +6,5 @@ import de.uka.ipd.sdq.simulation.ISimulationListener;
 public interface IResponseMeasurement extends ISimulationListener {
 
     public void prepareBookkeeping(ExperimentBookkeeping bookeeping, String[] factorNames);
-    
+
 }
