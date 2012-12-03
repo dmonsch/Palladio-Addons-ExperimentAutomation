@@ -77,6 +77,7 @@ public class ConfigurationModel {
         }
     }
 
+    //dead code
     private static URI absolutePathToBundleURI(final Bundle bundle, final IPath modelLocation) {
         // create URI pointing to the model file contained in the bundle
         final URL bundleUrl = FileLocator.find(bundle, modelLocation, null);
@@ -84,6 +85,7 @@ public class ConfigurationModel {
         return bundleUri;
     }
 
+    //dead code
     public void setPCMModel(final PCMModelFiles pcm) {
         final ResourceSet resourceSet = new ResourceSetImpl();
         final ExperimentRepository experimentRepository = (ExperimentRepository) loadResourceFromBundle(resourceSet,

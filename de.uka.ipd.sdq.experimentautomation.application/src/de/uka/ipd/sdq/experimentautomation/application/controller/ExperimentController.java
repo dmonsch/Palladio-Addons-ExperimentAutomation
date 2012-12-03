@@ -42,6 +42,7 @@ public class ExperimentController {
 
     private static final boolean ZIP_AND_UPLOAD_RESULTS_WHEN_FINISHED = false;
 
+    // bundle currently not used
     private Bundle bundle;
     private ConfigurationModel config;
     private Path experimentsLocation;
@@ -295,20 +296,24 @@ public class ExperimentController {
         }
     }
 
+    // dead code
     public void addListener(final IRunListener l) {
         this.listeners.add(l);
     }
 
+    // dead code
     public void removeListener(final IRunListener l) {
         this.listeners.remove(l);
     }
 
+    // dead code
     private void notifyBeforeListener() {
         for (final IRunListener l : this.listeners) {
             l.beforeRun();
         }
     }
 
+    // dead code
     private void notifyAfterListener() {
         for (final IRunListener l : this.listeners) {
             l.afterRun();
