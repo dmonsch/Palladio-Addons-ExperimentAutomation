@@ -19,7 +19,7 @@ public class SimuComWorkflowConfigurationFactory {
         workflowConfig.setSimulateFailures(configuration.isSimulateFailures());
         workflowConfig.setSimulateLinkingResources(configuration.isSimulateLinkingResources());
         workflowConfig.setSimuComConfiguration((SimuComConfig) simConfig);
-        workflowConfig.setOverwriteWithoutAsking(true);
+        // workflowConfig.setOverwriteWithoutAsking(true);
 
         AbstractSimulationWorkflowConfigurationFactory.fillWorkflowConfiguration(workflowConfig, configuration, pcm,
                 simConfig);
