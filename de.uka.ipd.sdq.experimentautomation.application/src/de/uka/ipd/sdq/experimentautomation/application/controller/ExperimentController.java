@@ -291,7 +291,8 @@ public class ExperimentController {
                         + settings.getToolConfiguration().getName(), modelCopy, settings.getToolConfiguration(),
                         settings.getExperiment().getStopConditions(), m);
             } catch (final Exception ex) {
-                settings.getBookkeeping().logException(ex);
+                // settings.getBookkeeping().logException(ex);
+                throw new RuntimeException("The simulation failed", ex);
             }
         }
     }
