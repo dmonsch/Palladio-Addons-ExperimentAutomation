@@ -54,9 +54,7 @@ public class SystemCallActionParameterVariation implements IVariationStrategy {
 				+ "' = "
 				+ value
 				+ ": "
-				+ this.variedParameter.eClass().getName()
-				+ " of "
-				+ PCMEntityHelper.toString(this.variedParameter.getEntryLevelSystemCall_OutputParameterUsage());
+				+ this.variedParameter.eClass().getName();
 	}
 
 }
