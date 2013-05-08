@@ -44,9 +44,8 @@ public class LoadBalancingVariation implements IVariationStrategy {
 		PassiveResource semaphore = getFirstPassiveResource(loadBalancer);
 		semaphore.getCapacity_PassiveResource().setSpecification(Long.toString(value));
 		
-		return "Parameter value of '"
-			+ semaphore.getEntityName() + "' = " + value + ": "
-			+ semaphore.eClass().getName();
+		return "Parameter value of " + semaphore.eClass().getName() 
+				+ "'" + semaphore.getEntityName() + "' = " + value + ": ";
 	}
 
 	private PassiveResource getFirstPassiveResource(BasicComponent loadBalancer) {
