@@ -9,6 +9,7 @@ import de.uka.ipd.sdq.pcm.core.CoreFactory;
 import de.uka.ipd.sdq.pcm.core.PCMRandomVariable;
 import de.uka.ipd.sdq.pcm.parameter.VariableUsage;
 import de.uka.ipd.sdq.pcm.repository.BasicComponent;
+import de.uka.ipd.sdq.pcm.repository.PassiveResource;
 import de.uka.ipd.sdq.pcm.repository.RequiredRole;
 import de.uka.ipd.sdq.pcm.seff.AbstractAction;
 import de.uka.ipd.sdq.pcm.seff.AbstractBranchTransition;
@@ -40,23 +41,17 @@ public class LoadBalancingVariation implements IVariationStrategy {
 	}
 
 	private String adjustSemaphore(long value) {
-		VariableUsage semaphore = getFirstComponentParameter(loadBalancer);
-		
-		PCMRandomVariable newValue = CoreFactory.eINSTANCE
-				.createPCMRandomVariable();
-		newValue.setSpecification(Long.toString(value));
-		
-		semaphore.getVariableCharacterisation_VariableUsage().get(0)
-			.setSpecification_VariableCharacterisation(newValue);
+		PassiveResource semaphore = getFirstPassiveResource(loadBalancer);
+		semaphore.getCapacity_PassiveResource().setSpecification(Long.toString(value));
 		
 		return "Parameter value of '"
-			+ semaphore.getNamedReference__VariableUsage()
-			.getReferenceName() + "' = " + value + ": "
+			+ semaphore.getEntityName() + "' = " + value + ": "
 			+ semaphore.eClass().getName();
 	}
 
-	private VariableUsage getFirstComponentParameter(BasicComponent loadBalancer) {
-		return loadBalancer.getComponentParameterUsage_ImplementationComponentType().get(0);
+	private PassiveResource getFirstPassiveResource(BasicComponent loadBalancer) {
+		return loadBalancer.getPassiveResource_BasicComponent().get(0);
+		
 	}
 
 	private String adjustBranchProbabilities(long value) {
