@@ -1,11 +1,11 @@
 package de.uka.ipd.sdq.experimentautomation.application.tooladapter.abstractsimulation;
 
 import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
-import de.uka.ipd.sdq.workflow.Blackboard;
-import de.uka.ipd.sdq.workflow.OrderPreservingBlackboardCompositeJob;
+import de.uka.ipd.sdq.workflow.blackboard.Blackboard;
+import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 
-public abstract class AbstractSimulationRun extends OrderPreservingBlackboardCompositeJob<Blackboard<MDSDBlackboard>> {
+public abstract class AbstractSimulationRun extends SequentialBlackboardInteractingJob<Blackboard<MDSDBlackboard>> {
 
     private final ToolConfiguration config;
 
