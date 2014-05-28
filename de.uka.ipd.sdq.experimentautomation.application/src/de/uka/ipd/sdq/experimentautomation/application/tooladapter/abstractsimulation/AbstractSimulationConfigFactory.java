@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.palladiosimulator.recorderframework.sensorframework.SensorFrameworkRecorderConfigurationFactory;
+
 import de.uka.ipd.sdq.experimentautomation.application.tooladapter.abstractsimulation.sensorframework.SensorFrameworkFactory;
 import de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles;
 import de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.AbstractSimulationConfiguration;
@@ -15,7 +17,6 @@ import de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.Sensor
 import de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.SensorFrameworkDatasource;
 import de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.SimTimeStopCondition;
 import de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.StopCondition;
-import de.uka.ipd.sdq.pipesandfilters.framework.recorder.sensorframework.launch.SensorFrameworkConfig;
 import de.uka.ipd.sdq.sensorframework.entities.dao.IDAOFactory;
 import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
 import de.uka.ipd.sdq.workflow.pcm.ConstantsContainer;
@@ -55,7 +56,7 @@ public class AbstractSimulationConfigFactory {
         for (final Entry<String, Object> entry : map.entrySet()) {
             final String key = entry.getKey();
             final Object value = entry.getValue();
-            if (key.equals(SensorFrameworkConfig.DATASOURCE_ID)) {
+            if (key.equals(SensorFrameworkRecorderConfigurationFactory.DATASOURCE_ID)) {
                 // FIXME the DATASOURCE_ID should be of type String. Fix this in the class
                 // de.uka.ipd.sdq.pipesandfilters.framework.recorder.sensorframework.launch.SensorFrameworkTab
                 entry.setValue(((Long) value).intValue());
@@ -78,7 +79,7 @@ public class AbstractSimulationConfigFactory {
             final SensorFrameworkDatasource datasource = sensorFramework.getDatasource();
             final IDAOFactory daoFactory = SensorFrameworkFactory.createOrOpenDatasource(datasource);
 
-            map.put(SensorFrameworkConfig.DATASOURCE_ID, daoFactory.getID());
+            map.put(SensorFrameworkRecorderConfigurationFactory.DATASOURCE_ID, daoFactory.getID());
 
             return daoFactory;
         }
