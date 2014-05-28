@@ -3,9 +3,9 @@ package de.uka.ipd.sdq.experimentautomation.application.variation;
 import org.eclipse.emf.ecore.EObject;
 
 import de.uka.ipd.sdq.experimentautomation.application.utils.EcoreHelper;
+import de.uka.ipd.sdq.experimentautomation.application.utils.PCMModelHelper;
 import de.uka.ipd.sdq.pcm.seff.ForkAction;
 import de.uka.ipd.sdq.pcm.seff.ForkedBehaviour;
-import edu.kit.ipd.sdq.eventsim.util.PCMEntityHelper;
 
 public class ForkedBehaviourReplication implements IVariationStrategy {
 
@@ -34,7 +34,7 @@ public class ForkedBehaviourReplication implements IVariationStrategy {
             copy.setForkAction_ForkedBehaivour(this.fork);
         }
 
-        return "Replication count = " + value + ": ForkedBehaviour of " + PCMEntityHelper.toString(this.fork);
+        return "Replication count = " + value + ": ForkedBehaviour of " + PCMModelHelper.toString(this.fork);
     }
 
 }

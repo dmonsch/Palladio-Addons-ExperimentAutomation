@@ -3,9 +3,9 @@ package de.uka.ipd.sdq.experimentautomation.application.variation;
 import org.apache.log4j.Logger;
 import org.eclipse.emf.ecore.EObject;
 
+import de.uka.ipd.sdq.experimentautomation.application.utils.PCMModelHelper;
 import de.uka.ipd.sdq.pcm.usagemodel.ClosedWorkload;
 import de.uka.ipd.sdq.pcm.usagemodel.UsageScenario;
-import edu.kit.ipd.sdq.eventsim.util.PCMEntityHelper;
 
 public class ClosedWorkloadVariation implements IVariationStrategy {
 
@@ -39,7 +39,7 @@ public class ClosedWorkloadVariation implements IVariationStrategy {
         this.workload.setPopulation(intValue);
 
         return "Closed workload population = " + value + ": " + this.workload.eClass().getName() + " of "
-                + PCMEntityHelper.toString(this.workload.getUsageScenario_Workload());
+                + PCMModelHelper.toString(this.workload.getUsageScenario_Workload());
     }
 
 }

@@ -2,11 +2,11 @@ package de.uka.ipd.sdq.experimentautomation.application.variation;
 
 import org.eclipse.emf.ecore.EObject;
 
+import de.uka.ipd.sdq.experimentautomation.application.utils.PCMModelHelper;
 import de.uka.ipd.sdq.pcm.core.CoreFactory;
 import de.uka.ipd.sdq.pcm.core.PCMRandomVariable;
 import de.uka.ipd.sdq.pcm.usagemodel.OpenWorkload;
 import de.uka.ipd.sdq.pcm.usagemodel.UsageScenario;
-import edu.kit.ipd.sdq.eventsim.util.PCMEntityHelper;
 
 public class OpenWorkloadVariation implements IVariationStrategy {
 
@@ -41,7 +41,7 @@ public class OpenWorkloadVariation implements IVariationStrategy {
         this.workload.setInterArrivalTime_OpenWorkload(var);
 
         return "Open workload interarrival time = " + value + ": " + this.workload.eClass().getName() + " of "
-                + PCMEntityHelper.toString(this.workload.getUsageScenario_Workload());
+                + PCMModelHelper.toString(this.workload.getUsageScenario_Workload());
     }
 
 }

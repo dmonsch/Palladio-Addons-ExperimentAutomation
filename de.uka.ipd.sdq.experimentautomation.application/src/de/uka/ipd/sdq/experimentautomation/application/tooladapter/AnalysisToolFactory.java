@@ -1,6 +1,5 @@
 package de.uka.ipd.sdq.experimentautomation.application.tooladapter;
 
-import de.uka.ipd.sdq.experimentautomation.application.tooladapter.eventsim.EventSimToolAdapter;
 import de.uka.ipd.sdq.experimentautomation.application.tooladapter.simucom.SimuComToolAdapter;
 import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
 import de.uka.ipd.sdq.experimentautomation.experiments.eventsim.EventSimPackage;
@@ -13,7 +12,9 @@ public class AnalysisToolFactory {
         if (SimuComPackage.eINSTANCE.getSimuComConfiguration().isInstance(configuration)) {
             return new SimuComToolAdapter();
         } else if (EventSimPackage.eINSTANCE.getEventSimConfiguration().isInstance(configuration)) {
-            return new EventSimToolAdapter();
+            throw new RuntimeException("TODO: plug-in EventSimToolAdapter");
+            // FIXME Experiment automation should not have dependencies to adapters like the EventSim adapter. Fix that.
+            //return new EventSimToolAdapter();
         }
         throw new RuntimeException("Unknown tool configuration type: " + configuration.eClass().getName());
     }

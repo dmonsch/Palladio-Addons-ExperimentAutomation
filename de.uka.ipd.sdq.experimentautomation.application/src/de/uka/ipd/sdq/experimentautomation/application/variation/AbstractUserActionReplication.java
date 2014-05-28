@@ -3,8 +3,8 @@ package de.uka.ipd.sdq.experimentautomation.application.variation;
 import org.eclipse.emf.ecore.EObject;
 
 import de.uka.ipd.sdq.experimentautomation.application.utils.EcoreHelper;
+import de.uka.ipd.sdq.experimentautomation.application.utils.PCMModelHelper;
 import de.uka.ipd.sdq.pcm.usagemodel.AbstractUserAction;
-import edu.kit.ipd.sdq.eventsim.util.PCMEntityHelper;
 
 public class AbstractUserActionReplication implements IVariationStrategy {
 
@@ -34,7 +34,7 @@ public class AbstractUserActionReplication implements IVariationStrategy {
             lastAction = copy;
         }
 
-        return "Replication count = " + value + ": " + PCMEntityHelper.toString(this.action);
+        return "Replication count = " + value + ": " + PCMModelHelper.toString(this.action);
     }
 
 }

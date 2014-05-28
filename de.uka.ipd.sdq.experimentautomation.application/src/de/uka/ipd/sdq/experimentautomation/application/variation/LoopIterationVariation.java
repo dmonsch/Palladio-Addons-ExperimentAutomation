@@ -3,10 +3,10 @@ package de.uka.ipd.sdq.experimentautomation.application.variation;
 import org.apache.log4j.Logger;
 import org.eclipse.emf.ecore.EObject;
 
+import de.uka.ipd.sdq.experimentautomation.application.utils.PCMModelHelper;
 import de.uka.ipd.sdq.pcm.core.CoreFactory;
 import de.uka.ipd.sdq.pcm.core.PCMRandomVariable;
 import de.uka.ipd.sdq.pcm.usagemodel.Loop;
-import edu.kit.ipd.sdq.eventsim.util.PCMEntityHelper;
 
 public class LoopIterationVariation implements IVariationStrategy {
 
@@ -34,7 +34,7 @@ public class LoopIterationVariation implements IVariationStrategy {
         r.setSpecification(new Integer(intValue).toString());
         this.loop.setLoopIteration_Loop(r);
 
-        return "Loop Iteration Count = " + value + ": " + PCMEntityHelper.toString(this.loop);
+        return "Loop Iteration Count = " + value + ": " + PCMModelHelper.toString(this.loop);
     }
 
 }
