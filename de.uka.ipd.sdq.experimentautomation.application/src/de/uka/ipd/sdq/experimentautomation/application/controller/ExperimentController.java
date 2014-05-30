@@ -15,9 +15,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.osgi.framework.Bundle;
 
-import de.uka.ipd.sdq.experimentautomation.application.Activator;
 import de.uka.ipd.sdq.experimentautomation.application.ConfigurationModel;
 import de.uka.ipd.sdq.experimentautomation.application.ExperimentBookkeeping;
 import de.uka.ipd.sdq.experimentautomation.application.ExperimentMetadata;
@@ -26,7 +24,6 @@ import de.uka.ipd.sdq.experimentautomation.application.measurement.ResponseMeasu
 import de.uka.ipd.sdq.experimentautomation.application.tooladapter.AnalysisToolFactory;
 import de.uka.ipd.sdq.experimentautomation.application.tooladapter.IToolAdapter;
 import de.uka.ipd.sdq.experimentautomation.application.utils.PCMModelHelper;
-import de.uka.ipd.sdq.experimentautomation.application.utils.Utils;
 import de.uka.ipd.sdq.experimentautomation.application.variation.IVariationStrategy;
 import de.uka.ipd.sdq.experimentautomation.application.variation.VariationStrategyFactory;
 import de.uka.ipd.sdq.experimentautomation.application.variation.valueprovider.IValueProviderStrategy;
@@ -38,18 +35,13 @@ import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
 
 public class ExperimentController {
 
-    private static final Logger logger = Logger.getLogger(ExperimentController.class);
-
-    private static final boolean ZIP_AND_UPLOAD_RESULTS_WHEN_FINISHED = false;
-
-    // bundle currently not used
-    private Bundle bundle;
-    private ConfigurationModel config;
-    private Path experimentsLocation;
-    private Path variationsLocation;
+    private static final Logger logger = Logger.getLogger(ExperimentController.class); 
+   
+    private final ConfigurationModel config;
+    private final Path experimentsLocation;
+    private final Path variationsLocation;
     private final Path bookkeepingLocation;
     private final String args[];
-    private List<IRunListener> listeners;
     private final boolean copyAuxModelFiles;
 
     /**
@@ -60,13 +52,11 @@ public class ExperimentController {
      */
     public ExperimentController(final ConfigurationModel config, final Path experimentsLocation,
             final Path variationsLocation, final Path bookkeepingLocation, final String[] args) {
-        this.bundle = Activator.getDefault().getBundle();
         this.config = config;
         this.experimentsLocation = experimentsLocation;
         this.variationsLocation = variationsLocation;
         this.bookkeepingLocation = bookkeepingLocation;
         this.args = args;
-        this.listeners = new ArrayList<IRunListener>();
         this.copyAuxModelFiles = true;
     }
 
@@ -74,6 +64,9 @@ public class ExperimentController {
         this.bookkeepingLocation = bookkeepingLocation;
         this.args = new String[] { "none (call by code)" };
         this.copyAuxModelFiles = false;
+        this.variationsLocation = null;
+        this.experimentsLocation = null;
+        this.config = null;
     }
 
     private IVariationStrategy initialiseVariations(final Variation v, final ResourceSet rs) {
@@ -127,24 +120,6 @@ public class ExperimentController {
         bookkeeping.finishResultFile();
         metadata.setEndTime(new Date());
         bookkeeping.writeMetadata(metadata);
-
-        // TODO the zip-and-upload feature has not been test after a recrent refactoring. If you
-        // want to use it, be
-        // aware of this and better use a debugger the first time.
-        if (ZIP_AND_UPLOAD_RESULTS_WHEN_FINISHED) {
-            // name of zip file to create
-            final String zipFileName = experimentName + ".zip";
-
-            // location of zip to create
-            final File zipFile = new File(experimentFolder.getParent() + File.separator + zipFileName);
-
-            final String hostName = "YOUR_HOST";
-            final String user = "YOUR_USER";
-            final String password = "YOUR_PASSWORD";
-
-            Utils.zipFolder(experimentFolder, zipFile);
-            Utils.ftpUpload(hostName, user, password, zipFile, zipFileName);
-        }
     }
 
     private class ExperimentContext {
@@ -297,29 +272,6 @@ public class ExperimentController {
         }
     }
 
-    // dead code
-    public void addListener(final IRunListener l) {
-        this.listeners.add(l);
-    }
-
-    // dead code
-    public void removeListener(final IRunListener l) {
-        this.listeners.remove(l);
-    }
-
-    // dead code
-    private void notifyBeforeListener() {
-        for (final IRunListener l : this.listeners) {
-            l.beforeRun();
-        }
-    }
-
-    // dead code
-    private void notifyAfterListener() {
-        for (final IRunListener l : this.listeners) {
-            l.afterRun();
-        }
-    }
 
     private void saveResources(final ResourceSet rs) throws IOException {
         for (final Resource r : rs.getResources()) {
