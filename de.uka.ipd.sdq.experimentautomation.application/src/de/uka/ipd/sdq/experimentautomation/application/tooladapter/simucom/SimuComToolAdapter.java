@@ -15,7 +15,6 @@ import de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.Sensor
 import de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.StopCondition;
 import de.uka.ipd.sdq.experimentautomation.experiments.simucom.SimuComConfiguration;
 import de.uka.ipd.sdq.simucomframework.SimuComConfig;
-import de.uka.ipd.sdq.simulation.ISimulationListener;
 import de.uka.ipd.sdq.workflow.BlackboardBasedWorkflow;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 
@@ -23,12 +22,10 @@ public class SimuComToolAdapter implements IToolAdapter {
 
     @Override
     public void runExperiment(final String experimentName, final PCMModelFiles model,
-            final ToolConfiguration configuration, final List<StopCondition> stopConditions,
-            final ISimulationListener listener) throws CoreException {
+            final ToolConfiguration configuration, final List<StopCondition> stopConditions) throws CoreException {
         // create simulation configuration
         final SimuComConfig simuComConfig = SimuComConfigFactory.createConfig((SimuComConfiguration) configuration,
                 stopConditions, model, experimentName);
-        simuComConfig.addListener(listener);
 
         // create workflow configuration
         final SimuComWorkflowConfiguration workflowConfig = SimuComWorkflowConfigurationFactory

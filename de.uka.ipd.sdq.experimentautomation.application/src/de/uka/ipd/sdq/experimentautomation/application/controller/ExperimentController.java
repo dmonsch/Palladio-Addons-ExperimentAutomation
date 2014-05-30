@@ -17,10 +17,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import de.uka.ipd.sdq.experimentautomation.application.ConfigurationModel;
-import de.uka.ipd.sdq.experimentautomation.application.ExperimentBookkeeping;
 import de.uka.ipd.sdq.experimentautomation.application.ExperimentMetadata;
-import de.uka.ipd.sdq.experimentautomation.application.measurement.IResponseMeasurement;
-import de.uka.ipd.sdq.experimentautomation.application.measurement.ResponseMeasurementFactory;
 import de.uka.ipd.sdq.experimentautomation.application.tooladapter.AnalysisToolFactory;
 import de.uka.ipd.sdq.experimentautomation.application.tooladapter.IToolAdapter;
 import de.uka.ipd.sdq.experimentautomation.application.utils.PCMModelHelper;
@@ -98,7 +95,6 @@ public class ExperimentController {
         final String experimentName = "(" + exp.getId() + ", " + toolConfig.getName() + ") " + exp.getName();
         final File experimentFolder = new File(this.bookkeepingLocation.toOSString() + File.separator + experimentName
                 + " (" + System.currentTimeMillis() + ")" + File.separator);
-        final ExperimentBookkeeping bookkeeping = new ExperimentBookkeeping(experimentFolder);
         final ExperimentMetadata metadata = new ExperimentMetadata();
         metadata.setExperimentName(experimentName);
         metadata.setStartTime(new Date());
@@ -109,42 +105,31 @@ public class ExperimentController {
         for (int i = 0; i < factorNames.length; i++) {
             factorNames[i] = exp.getVariations().get(i).getName();
         }
-        final IResponseMeasurement m = ResponseMeasurementFactory.createResponseMeasurement(
-                exp.getResponseMeasurement(), bookkeeping, null, null); // TODO
-        m.prepareBookkeeping(bookkeeping, factorNames);
 
-        final ExperimentContext settings = new ExperimentContext(bookkeeping, experimentName, experimentFolder,
+        final ExperimentContext settings = new ExperimentContext(experimentName, experimentFolder,
                 toolConfig, repetitions, exp);
         this.runExperiments(exp.getVariations(), settings, new ArrayList<Variation>(), new ArrayList<Long>());
 
-        bookkeeping.finishResultFile();
         metadata.setEndTime(new Date());
-        bookkeeping.writeMetadata(metadata);
     }
 
     private class ExperimentContext {
 
-        private final ExperimentBookkeeping bookkeeping;
         private final String experimentName;
         private final File experimentFolder;
         private final ToolConfiguration toolConfiguration;
         private final int repetitions;
         private final Experiment experiment;
 
-        public ExperimentContext(final ExperimentBookkeeping bookkeeping, final String experimentName,
+        public ExperimentContext(final String experimentName,
                 final File experimentFolder, final ToolConfiguration toolConfiguration, final int repetitions,
                 final Experiment experiment) {
             super();
-            this.bookkeeping = bookkeeping;
             this.experimentName = experimentName;
             this.experimentFolder = experimentFolder;
             this.toolConfiguration = toolConfiguration;
             this.repetitions = repetitions;
             this.experiment = experiment;
-        }
-
-        public ExperimentBookkeeping getBookkeeping() {
-            return this.bookkeeping;
         }
 
         public String getExperimentname() {
@@ -257,14 +242,12 @@ public class ExperimentController {
         for (int i = 1; i <= settings.getRepetitions(); i++) {
             // ISimulationListener l = new
             // SimulationDurationSimulationListener(settings.getBookkeeping(), factorLevels);
-            final IResponseMeasurement m = ResponseMeasurementFactory.createResponseMeasurement(
-                    exp.getResponseMeasurement(), settings.getBookkeeping(), factorLevels, variationFolderUri);
             try {
                 final IToolAdapter analysisTool = AnalysisToolFactory.createToolAdapater(settings
                         .getToolConfiguration());
                 analysisTool.runExperiment(settings.getExperimentname() + " "
                         + settings.getToolConfiguration().getName(), modelCopy, settings.getToolConfiguration(),
-                        settings.getExperiment().getStopConditions(), m);
+                        settings.getExperiment().getStopConditions());
             } catch (final Exception ex) {
                 // settings.getBookkeeping().logException(ex);
                 throw new RuntimeException("The simulation failed", ex);
