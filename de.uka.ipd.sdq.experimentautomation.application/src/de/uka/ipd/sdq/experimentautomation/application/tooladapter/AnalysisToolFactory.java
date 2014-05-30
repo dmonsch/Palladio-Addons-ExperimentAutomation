@@ -13,8 +13,9 @@ public class AnalysisToolFactory {
             return new SimuComToolAdapter();
         } else if (EventSimPackage.eINSTANCE.getEventSimConfiguration().isInstance(configuration)) {
             throw new RuntimeException("TODO: plug-in EventSimToolAdapter");
-            // FIXME Experiment automation should not have dependencies to adapters like the EventSim adapter. Fix that.
-            //return new EventSimToolAdapter();
+            // FIXME Experiment automation should not have dependencies to adapters like the
+            // EventSim adapter. Fix that.
+            // return new EventSimToolAdapter();
         }
         throw new RuntimeException("Unknown tool configuration type: " + configuration.eClass().getName());
     }

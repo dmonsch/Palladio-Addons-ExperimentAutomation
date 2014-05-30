@@ -29,6 +29,5 @@ Export-Package: de.uka.ipd.sdq.experimentautomation.application.controller,
  de.uka.ipd.sdq.experimentautomation.application.tooladapter.abstractsimulation.sensorframework,
  de.uka.ipd.sdq.experimentautomation.application.utils,
  de.uka.ipd.sdq.experimentautomation.application.variation
-Bundle-ClassPath: lib/agent.jar,
- .
+Bundle-ClassPath: .
 Bundle-ActivationPolicy: lazy

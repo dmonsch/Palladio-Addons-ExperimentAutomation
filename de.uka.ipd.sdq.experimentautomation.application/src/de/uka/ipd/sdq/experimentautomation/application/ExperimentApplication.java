@@ -3,7 +3,6 @@ package de.uka.ipd.sdq.experimentautomation.application;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.equinox.app.IApplication;
 import org.eclipse.equinox.app.IApplicationContext;
@@ -13,8 +12,6 @@ import de.uka.ipd.sdq.experimentautomation.application.controller.ExperimentCont
 import de.uka.ipd.sdq.experimentautomation.experiments.Experiment;
 
 public class ExperimentApplication implements IApplication {
-
-    private static final Logger logger = Logger.getLogger(ExperimentApplication.class);
 
     private ConfigurationModel config;
 

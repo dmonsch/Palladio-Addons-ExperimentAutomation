@@ -32,8 +32,8 @@ import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
 
 public class ExperimentController {
 
-    private static final Logger logger = Logger.getLogger(ExperimentController.class); 
-   
+    private static final Logger logger = Logger.getLogger(ExperimentController.class);
+
     private final ConfigurationModel config;
     private final Path experimentsLocation;
     private final Path variationsLocation;
@@ -106,8 +106,8 @@ public class ExperimentController {
             factorNames[i] = exp.getVariations().get(i).getName();
         }
 
-        final ExperimentContext settings = new ExperimentContext(experimentName, experimentFolder,
-                toolConfig, repetitions, exp);
+        final ExperimentContext settings = new ExperimentContext(experimentName, experimentFolder, toolConfig,
+                repetitions, exp);
         this.runExperiments(exp.getVariations(), settings, new ArrayList<Variation>(), new ArrayList<Long>());
 
         metadata.setEndTime(new Date());
@@ -121,9 +121,8 @@ public class ExperimentController {
         private final int repetitions;
         private final Experiment experiment;
 
-        public ExperimentContext(final String experimentName,
-                final File experimentFolder, final ToolConfiguration toolConfiguration, final int repetitions,
-                final Experiment experiment) {
+        public ExperimentContext(final String experimentName, final File experimentFolder,
+                final ToolConfiguration toolConfiguration, final int repetitions, final Experiment experiment) {
             super();
             this.experimentName = experimentName;
             this.experimentFolder = experimentFolder;
@@ -254,7 +253,6 @@ public class ExperimentController {
             }
         }
     }
-
 
     private void saveResources(final ResourceSet rs) throws IOException {
         for (final Resource r : rs.getResources()) {
