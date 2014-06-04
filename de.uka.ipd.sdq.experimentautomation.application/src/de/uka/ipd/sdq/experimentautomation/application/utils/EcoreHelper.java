@@ -15,7 +15,6 @@ public class EcoreHelper {
      * @param source
      *            the object that is to be copied
      */
-    @SuppressWarnings("unchecked")
     public static <T extends EObject> T copy(final T source) {
         final T copy = EcoreUtil.copy(source);
         createNewIds(copy);
