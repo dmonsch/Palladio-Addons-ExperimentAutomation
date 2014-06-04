@@ -43,8 +43,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="toolConfiguration" ordered="false"
           lowerBound="1" upperBound="-1" eType="#//experiments/ToolConfiguration"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="stopConditions" ordered="false"
-          upperBound="-1" eType="#//experiments/abstractsimulation/StopCondition"
-          containment="true"/>
+          upperBound="-1" eType="#//abstractsimulation/StopCondition" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="experimentDesign" ordered="false"
@@ -131,79 +130,78 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
     </eClassifiers>
-    <eSubpackages name="abstractsimulation" nsURI="http://sdq.ipd.uka.de/ExperimentAutomation/Experiments/AbstractSimulation/1.0"
-        nsPrefix="ExperimentAutomation.Experiments.AbstractSimulation">
-      <eClassifiers xsi:type="ecore:EClass" name="AbstractSimulationConfiguration"
-          abstract="true" eSuperTypes="#//experiments/ToolConfiguration">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="persistenceFramework"
-            ordered="false" lowerBound="1" eType="#//experiments/abstractsimulation/PersistenceFramework"
-            containment="true"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="stopConditions" ordered="false"
-            lowerBound="1" upperBound="-1" eType="#//experiments/abstractsimulation/StopCondition"
-            containment="true"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="randomNumberGeneratorSeed"
-            ordered="false" eType="#//experiments/abstractsimulation/RandomNumberGeneratorSeed"
-            containment="true"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="simulateLinkingResources"
-            ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="simulateFailures" ordered="false"
-            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="probeSpecConfiguration"
-            ordered="false" lowerBound="1" eType="#//experiments/abstractsimulation/ProbeSpecConfiguration"
-            containment="true"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="PersistenceFramework" abstract="true"/>
-      <eClassifiers xsi:type="ecore:EClass" name="RandomNumberGeneratorSeed">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="seed0" ordered="false"
-            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="seed1" ordered="false"
-            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="seed2" ordered="false"
-            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="seed3" ordered="false"
-            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="seed4" ordered="false"
-            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="seed5" ordered="false"
-            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="ProbeSpecConfiguration">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="blackboardType" ordered="false"
-            lowerBound="1" eType="#//experiments/abstractsimulation/BlackboardType"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EEnum" name="BlackboardType">
-        <eLiterals name="SIMPLE"/>
-        <eLiterals name="CONCURRENT" value="1"/>
-        <eLiterals name="NONE" value="2"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="SensorFramework" eSuperTypes="#//experiments/abstractsimulation/PersistenceFramework">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="datasource" ordered="false"
-            lowerBound="1" eType="#//experiments/abstractsimulation/SensorFrameworkDatasource"
-            containment="true"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="SensorFrameworkDatasource" abstract="true"/>
-      <eClassifiers xsi:type="ecore:EClass" name="MemoryDatasource" eSuperTypes="#//experiments/abstractsimulation/SensorFrameworkDatasource"/>
-      <eClassifiers xsi:type="ecore:EClass" name="FileDatasource" eSuperTypes="#//experiments/abstractsimulation/SensorFrameworkDatasource">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" ordered="false"
-            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="MeasurementCountStopCondition" eSuperTypes="#//experiments/abstractsimulation/StopCondition">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="measurementCount" ordered="false"
-            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="SimTimeStopCondition" eSuperTypes="#//experiments/abstractsimulation/StopCondition">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="simulationTime" ordered="false"
-            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="StopCondition" abstract="true"/>
-    </eSubpackages>
-    <eSubpackages name="simucom" nsURI="http://sdq.ipd.uka.de/ExperimentAutomation/Experiments/SimuCom/1.0"
-        nsPrefix="ExperimentAutomation.Experiments.SimuCom">
-      <eClassifiers xsi:type="ecore:EClass" name="SimuComConfiguration" eSuperTypes="#//experiments/abstractsimulation/AbstractSimulationConfiguration"/>
-    </eSubpackages>
-    <eSubpackages name="eventsim" nsURI="http://sdq.ipd.uka.de/ExperimentAutomation/Experiments/EventSim/1.0"
-        nsPrefix="ExperimentAutomation.Experiments.EventSim">
-      <eClassifiers xsi:type="ecore:EClass" name="EventSimConfiguration" eSuperTypes="#//experiments/abstractsimulation/AbstractSimulationConfiguration"/>
-    </eSubpackages>
+  </eSubpackages>
+  <eSubpackages name="abstractsimulation" nsURI="http://sdq.ipd.uka.de/ExperimentAutomation/AbstractSimulation/1.0"
+      nsPrefix="ExperimentAutomation.Experiments.AbstractSimulation">
+    <eClassifiers xsi:type="ecore:EClass" name="AbstractSimulationConfiguration" abstract="true"
+        eSuperTypes="#//experiments/ToolConfiguration">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="persistenceFramework"
+          ordered="false" lowerBound="1" eType="#//abstractsimulation/PersistenceFramework"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="stopConditions" ordered="false"
+          lowerBound="1" upperBound="-1" eType="#//abstractsimulation/StopCondition"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="randomNumberGeneratorSeed"
+          ordered="false" eType="#//abstractsimulation/RandomNumberGeneratorSeed"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="simulateLinkingResources"
+          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="simulateFailures" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="probeSpecConfiguration"
+          ordered="false" lowerBound="1" eType="#//abstractsimulation/ProbeSpecConfiguration"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PersistenceFramework" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="RandomNumberGeneratorSeed">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="seed0" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="seed1" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="seed2" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="seed3" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="seed4" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="seed5" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ProbeSpecConfiguration">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="blackboardType" ordered="false"
+          lowerBound="1" eType="#//abstractsimulation/BlackboardType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="BlackboardType">
+      <eLiterals name="SIMPLE"/>
+      <eLiterals name="CONCURRENT" value="1"/>
+      <eLiterals name="NONE" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SensorFramework" eSuperTypes="#//abstractsimulation/PersistenceFramework">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="datasource" ordered="false"
+          lowerBound="1" eType="#//abstractsimulation/SensorFrameworkDatasource" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SensorFrameworkDatasource" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="MemoryDatasource" eSuperTypes="#//abstractsimulation/SensorFrameworkDatasource"/>
+    <eClassifiers xsi:type="ecore:EClass" name="FileDatasource" eSuperTypes="#//abstractsimulation/SensorFrameworkDatasource">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MeasurementCountStopCondition" eSuperTypes="#//abstractsimulation/StopCondition">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="measurementCount" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SimTimeStopCondition" eSuperTypes="#//abstractsimulation/StopCondition">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="simulationTime" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="StopCondition" abstract="true"/>
+  </eSubpackages>
+  <eSubpackages name="simucom" nsURI="http://sdq.ipd.uka.de/ExperimentAutomation/SimuCom/1.0"
+      nsPrefix="ExperimentAutomation.Experiments.SimuCom">
+    <eClassifiers xsi:type="ecore:EClass" name="SimuComConfiguration" eSuperTypes="#//abstractsimulation/AbstractSimulationConfiguration"/>
+  </eSubpackages>
+  <eSubpackages name="eventsim" nsURI="http://sdq.ipd.uka.de/ExperimentAutomation/EventSim/1.0"
+      nsPrefix="ExperimentAutomation.Experiments.EventSim">
+    <eClassifiers xsi:type="ecore:EClass" name="EventSimConfiguration" eSuperTypes="#//abstractsimulation/AbstractSimulationConfiguration"/>
   </eSubpackages>
 </ecore:EPackage>

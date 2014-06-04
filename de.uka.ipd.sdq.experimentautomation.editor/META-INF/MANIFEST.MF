@@ -8,10 +8,10 @@ Bundle-Activator: de.uka.ipd.sdq.experimentautomation.variation.presentation.Exp
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.presentation,
- de.uka.ipd.sdq.experimentautomation.experiments.eventsim.presentation,
+Export-Package: de.uka.ipd.sdq.experimentautomation.abstractsimulation.presentation,
+ de.uka.ipd.sdq.experimentautomation.eventsim.presentation,
  de.uka.ipd.sdq.experimentautomation.experiments.presentation,
- de.uka.ipd.sdq.experimentautomation.experiments.simucom.presentation,
+ de.uka.ipd.sdq.experimentautomation.simucom.presentation,
  de.uka.ipd.sdq.experimentautomation.variation.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,

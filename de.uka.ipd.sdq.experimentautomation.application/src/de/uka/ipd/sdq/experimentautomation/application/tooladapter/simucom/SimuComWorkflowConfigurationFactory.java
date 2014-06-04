@@ -6,7 +6,7 @@ import java.util.Map;
 import de.uka.ipd.sdq.codegen.simucontroller.runconfig.SimuComWorkflowConfiguration;
 import de.uka.ipd.sdq.experimentautomation.application.tooladapter.abstractsimulation.AbstractSimulationWorkflowConfigurationFactory;
 import de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles;
-import de.uka.ipd.sdq.experimentautomation.experiments.simucom.SimuComConfiguration;
+import de.uka.ipd.sdq.experimentautomation.simucom.SimuComConfiguration;
 import de.uka.ipd.sdq.simucomframework.SimuComConfig;
 import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
 

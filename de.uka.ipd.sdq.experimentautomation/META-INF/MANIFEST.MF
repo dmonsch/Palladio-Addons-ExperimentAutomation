@@ -7,18 +7,18 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: de.uka.ipd.sdq.experimentautomation.experiments,
- de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation,
- de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.impl,
- de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.util,
- de.uka.ipd.sdq.experimentautomation.experiments.eventsim,
- de.uka.ipd.sdq.experimentautomation.experiments.eventsim.impl,
- de.uka.ipd.sdq.experimentautomation.experiments.eventsim.util,
+Export-Package: de.uka.ipd.sdq.experimentautomation.abstractsimulation,
+ de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl,
+ de.uka.ipd.sdq.experimentautomation.abstractsimulation.util,
+ de.uka.ipd.sdq.experimentautomation.eventsim,
+ de.uka.ipd.sdq.experimentautomation.eventsim.impl,
+ de.uka.ipd.sdq.experimentautomation.eventsim.util,
+ de.uka.ipd.sdq.experimentautomation.experiments,
  de.uka.ipd.sdq.experimentautomation.experiments.impl,
- de.uka.ipd.sdq.experimentautomation.experiments.simucom,
- de.uka.ipd.sdq.experimentautomation.experiments.simucom.impl,
- de.uka.ipd.sdq.experimentautomation.experiments.simucom.util,
  de.uka.ipd.sdq.experimentautomation.experiments.util,
+ de.uka.ipd.sdq.experimentautomation.simucom,
+ de.uka.ipd.sdq.experimentautomation.simucom.impl,
+ de.uka.ipd.sdq.experimentautomation.simucom.util,
  de.uka.ipd.sdq.experimentautomation.variation,
  de.uka.ipd.sdq.experimentautomation.variation.impl,
  de.uka.ipd.sdq.experimentautomation.variation.util

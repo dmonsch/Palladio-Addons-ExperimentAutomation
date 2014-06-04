@@ -18,25 +18,20 @@ import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl#getType <em>Type
- * </em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl#getName <em>Name
- * </em>}</li>
- * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl#getVariedObjectId
- * <em>Varied Object Id</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl#getValue <em>
- * Value</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl#getType <em>Type</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl#getVariedObjectId <em>Varied Object Id</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class ModificationImpl extends EObjectImpl implements Modification {
     /**
-     * The cached value of the '{@link #getType() <em>Type</em>}' reference. <!-- begin-user-doc -->
+     * The cached value of the '{@link #getType() <em>Type</em>}' reference.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getType()
      * @generated
      * @ordered
@@ -44,9 +39,9 @@ public class ModificationImpl extends EObjectImpl implements Modification {
     protected VariationType type;
 
     /**
-     * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc
+     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -54,9 +49,9 @@ public class ModificationImpl extends EObjectImpl implements Modification {
     protected static final String NAME_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc -->
+     * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -66,7 +61,6 @@ public class ModificationImpl extends EObjectImpl implements Modification {
     /**
      * The default value of the '{@link #getVariedObjectId() <em>Varied Object Id</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @see #getVariedObjectId()
      * @generated
      * @ordered
@@ -76,7 +70,6 @@ public class ModificationImpl extends EObjectImpl implements Modification {
     /**
      * The cached value of the '{@link #getVariedObjectId() <em>Varied Object Id</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @see #getVariedObjectId()
      * @generated
      * @ordered
@@ -84,9 +77,9 @@ public class ModificationImpl extends EObjectImpl implements Modification {
     protected String variedObjectId = VARIED_OBJECT_ID_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getValue() <em>Value</em>}' attribute. <!-- begin-user-doc
+     * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+     * <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
      * @see #getValue()
      * @generated
      * @ordered
@@ -94,9 +87,9 @@ public class ModificationImpl extends EObjectImpl implements Modification {
     protected static final long VALUE_EDEFAULT = 0L;
 
     /**
-     * The cached value of the '{@link #getValue() <em>Value</em>}' attribute. <!-- begin-user-doc
+     * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+     * <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
      * @see #getValue()
      * @generated
      * @ordered
@@ -105,7 +98,6 @@ public class ModificationImpl extends EObjectImpl implements Modification {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected ModificationImpl() {
@@ -114,7 +106,6 @@ public class ModificationImpl extends EObjectImpl implements Modification {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -124,17 +115,15 @@ public class ModificationImpl extends EObjectImpl implements Modification {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public VariationType getType() {
         if (type != null && type.eIsProxy()) {
-            InternalEObject oldType = (InternalEObject) type;
-            type = (VariationType) eResolveProxy(oldType);
+            InternalEObject oldType = (InternalEObject)type;
+            type = (VariationType)eResolveProxy(oldType);
             if (type != oldType) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExperimentsPackage.MODIFICATION__TYPE,
-                            oldType, type));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExperimentsPackage.MODIFICATION__TYPE, oldType, type));
             }
         }
         return type;
@@ -142,7 +131,6 @@ public class ModificationImpl extends EObjectImpl implements Modification {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public VariationType basicGetType() {
@@ -151,7 +139,6 @@ public class ModificationImpl extends EObjectImpl implements Modification {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setType(VariationType newType) {
@@ -163,7 +150,6 @@ public class ModificationImpl extends EObjectImpl implements Modification {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getName() {
@@ -172,7 +158,6 @@ public class ModificationImpl extends EObjectImpl implements Modification {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setName(String newName) {
@@ -184,7 +169,6 @@ public class ModificationImpl extends EObjectImpl implements Modification {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public String getVariedObjectId() {
@@ -193,20 +177,17 @@ public class ModificationImpl extends EObjectImpl implements Modification {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setVariedObjectId(String newVariedObjectId) {
         String oldVariedObjectId = variedObjectId;
         variedObjectId = newVariedObjectId;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.MODIFICATION__VARIED_OBJECT_ID,
-                    oldVariedObjectId, variedObjectId));
+            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.MODIFICATION__VARIED_OBJECT_ID, oldVariedObjectId, variedObjectId));
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public long getValue() {
@@ -215,117 +196,107 @@ public class ModificationImpl extends EObjectImpl implements Modification {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setValue(long newValue) {
         long oldValue = value;
         value = newValue;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.MODIFICATION__VALUE, oldValue,
-                    value));
+            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.MODIFICATION__VALUE, oldValue, value));
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case ExperimentsPackage.MODIFICATION__TYPE:
-            if (resolve)
-                return getType();
-            return basicGetType();
-        case ExperimentsPackage.MODIFICATION__NAME:
-            return getName();
-        case ExperimentsPackage.MODIFICATION__VARIED_OBJECT_ID:
-            return getVariedObjectId();
-        case ExperimentsPackage.MODIFICATION__VALUE:
-            return getValue();
+            case ExperimentsPackage.MODIFICATION__TYPE:
+                if (resolve) return getType();
+                return basicGetType();
+            case ExperimentsPackage.MODIFICATION__NAME:
+                return getName();
+            case ExperimentsPackage.MODIFICATION__VARIED_OBJECT_ID:
+                return getVariedObjectId();
+            case ExperimentsPackage.MODIFICATION__VALUE:
+                return getValue();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case ExperimentsPackage.MODIFICATION__TYPE:
-            setType((VariationType) newValue);
-            return;
-        case ExperimentsPackage.MODIFICATION__NAME:
-            setName((String) newValue);
-            return;
-        case ExperimentsPackage.MODIFICATION__VARIED_OBJECT_ID:
-            setVariedObjectId((String) newValue);
-            return;
-        case ExperimentsPackage.MODIFICATION__VALUE:
-            setValue((Long) newValue);
-            return;
+            case ExperimentsPackage.MODIFICATION__TYPE:
+                setType((VariationType)newValue);
+                return;
+            case ExperimentsPackage.MODIFICATION__NAME:
+                setName((String)newValue);
+                return;
+            case ExperimentsPackage.MODIFICATION__VARIED_OBJECT_ID:
+                setVariedObjectId((String)newValue);
+                return;
+            case ExperimentsPackage.MODIFICATION__VALUE:
+                setValue((Long)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case ExperimentsPackage.MODIFICATION__TYPE:
-            setType((VariationType) null);
-            return;
-        case ExperimentsPackage.MODIFICATION__NAME:
-            setName(NAME_EDEFAULT);
-            return;
-        case ExperimentsPackage.MODIFICATION__VARIED_OBJECT_ID:
-            setVariedObjectId(VARIED_OBJECT_ID_EDEFAULT);
-            return;
-        case ExperimentsPackage.MODIFICATION__VALUE:
-            setValue(VALUE_EDEFAULT);
-            return;
+            case ExperimentsPackage.MODIFICATION__TYPE:
+                setType((VariationType)null);
+                return;
+            case ExperimentsPackage.MODIFICATION__NAME:
+                setName(NAME_EDEFAULT);
+                return;
+            case ExperimentsPackage.MODIFICATION__VARIED_OBJECT_ID:
+                setVariedObjectId(VARIED_OBJECT_ID_EDEFAULT);
+                return;
+            case ExperimentsPackage.MODIFICATION__VALUE:
+                setValue(VALUE_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case ExperimentsPackage.MODIFICATION__TYPE:
-            return type != null;
-        case ExperimentsPackage.MODIFICATION__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-        case ExperimentsPackage.MODIFICATION__VARIED_OBJECT_ID:
-            return VARIED_OBJECT_ID_EDEFAULT == null ? variedObjectId != null : !VARIED_OBJECT_ID_EDEFAULT
-                    .equals(variedObjectId);
-        case ExperimentsPackage.MODIFICATION__VALUE:
-            return value != VALUE_EDEFAULT;
+            case ExperimentsPackage.MODIFICATION__TYPE:
+                return type != null;
+            case ExperimentsPackage.MODIFICATION__NAME:
+                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+            case ExperimentsPackage.MODIFICATION__VARIED_OBJECT_ID:
+                return VARIED_OBJECT_ID_EDEFAULT == null ? variedObjectId != null : !VARIED_OBJECT_ID_EDEFAULT.equals(variedObjectId);
+            case ExperimentsPackage.MODIFICATION__VALUE:
+                return value != VALUE_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (name: ");

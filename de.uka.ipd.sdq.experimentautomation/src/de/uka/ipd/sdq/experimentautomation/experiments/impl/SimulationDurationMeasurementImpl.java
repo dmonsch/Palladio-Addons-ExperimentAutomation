@@ -16,13 +16,12 @@ import de.uka.ipd.sdq.experimentautomation.experiments.SimulationDurationMeasure
  * <em><b>Simulation Duration Measurement</b></em>'. <!-- end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public class SimulationDurationMeasurementImpl extends ResponseMeasurementImpl implements SimulationDurationMeasurement {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected SimulationDurationMeasurementImpl() {
@@ -31,7 +30,6 @@ public class SimulationDurationMeasurementImpl extends ResponseMeasurementImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

@@ -19,19 +19,16 @@ import de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.JMXMeasurementImpl#getPollingPeriod
- * <em>Polling Period</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.JMXMeasurementImpl#getPollingPeriod <em>Polling Period</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMeasurement {
     /**
      * The default value of the '{@link #getPollingPeriod() <em>Polling Period</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @see #getPollingPeriod()
      * @generated
      * @ordered
@@ -50,7 +47,6 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected JMXMeasurementImpl() {
@@ -59,7 +55,6 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -69,7 +64,6 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Integer getPollingPeriod() {
@@ -78,85 +72,76 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public void setPollingPeriod(Integer newPollingPeriod) {
         Integer oldPollingPeriod = pollingPeriod;
         pollingPeriod = newPollingPeriod;
         if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD,
-                    oldPollingPeriod, pollingPeriod));
+            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD, oldPollingPeriod, pollingPeriod));
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD:
-            return getPollingPeriod();
+            case ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD:
+                return getPollingPeriod();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD:
-            setPollingPeriod((Integer) newValue);
-            return;
+            case ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD:
+                setPollingPeriod((Integer)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD:
-            setPollingPeriod(POLLING_PERIOD_EDEFAULT);
-            return;
+            case ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD:
+                setPollingPeriod(POLLING_PERIOD_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD:
-            return POLLING_PERIOD_EDEFAULT == null ? pollingPeriod != null : !POLLING_PERIOD_EDEFAULT
-                    .equals(pollingPeriod);
+            case ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD:
+                return POLLING_PERIOD_EDEFAULT == null ? pollingPeriod != null : !POLLING_PERIOD_EDEFAULT.equals(pollingPeriod);
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
+        if (eIsProxy()) return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (pollingPeriod: ");

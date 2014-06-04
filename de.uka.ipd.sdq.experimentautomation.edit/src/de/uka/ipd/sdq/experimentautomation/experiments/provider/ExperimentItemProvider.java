@@ -24,10 +24,10 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationFactory;
 import de.uka.ipd.sdq.experimentautomation.experiments.Experiment;
 import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsFactory;
 import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.AbstractSimulationFactory;
 import de.uka.ipd.sdq.experimentautomation.variation.provider.ExperimentAutomationEditPlugin;
 
 /**
@@ -238,10 +238,10 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
                 ExperimentsFactory.eINSTANCE.createPCMModelFiles()));
 
         newChildDescriptors.add(createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__STOP_CONDITIONS,
-                AbstractSimulationFactory.eINSTANCE.createMeasurementCountStopCondition()));
+                AbstractsimulationFactory.eINSTANCE.createMeasurementCountStopCondition()));
 
         newChildDescriptors.add(createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__STOP_CONDITIONS,
-                AbstractSimulationFactory.eINSTANCE.createSimTimeStopCondition()));
+                AbstractsimulationFactory.eINSTANCE.createSimTimeStopCondition()));
 
         newChildDescriptors.add(createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__EXPERIMENT_DESIGN,
                 ExperimentsFactory.eINSTANCE.createFullFactorialDesign()));

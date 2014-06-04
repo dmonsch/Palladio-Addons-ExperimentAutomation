@@ -2,9 +2,9 @@ package de.uka.ipd.sdq.experimentautomation.application.tooladapter.abstractsimu
 
 import org.eclipse.core.runtime.Path;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.AbstractSimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.FileDatasource;
-import de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.SensorFrameworkDatasource;
+import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource;
+import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFrameworkDatasource;
 import de.uka.ipd.sdq.sensorframework.SensorFrameworkDataset;
 import de.uka.ipd.sdq.sensorframework.dao.file.FileDAOFactory;
 import de.uka.ipd.sdq.sensorframework.dao.memory.MemoryDAOFactory;
@@ -14,10 +14,10 @@ public class SensorFrameworkFactory {
 
     public static IDAOFactory createOrOpenDatasource(final SensorFrameworkDatasource datasource) {
         IDAOFactory daoFactory = null;
-        if (AbstractSimulationPackage.eINSTANCE.getMemoryDatasource().isInstance(datasource)) {
+        if (AbstractsimulationPackage.eINSTANCE.getMemoryDatasource().isInstance(datasource)) {
             // create MemoryDatasource
             daoFactory = SensorFrameworkFactory.createMemoryDatasource();
-        } else if (AbstractSimulationPackage.eINSTANCE.getFileDatasource().isInstance(datasource)) {
+        } else if (AbstractsimulationPackage.eINSTANCE.getFileDatasource().isInstance(datasource)) {
             // create or open FileDatasource
             final FileDatasource fileDatasource = (FileDatasource) datasource;
             final Path directory = new Path(fileDatasource.getLocation());
@@ -32,10 +32,10 @@ public class SensorFrameworkFactory {
 
     public static void closeDatasource(final SensorFrameworkDatasource datasource) {
         IDAOFactory daoFactory = null;
-        if (AbstractSimulationPackage.eINSTANCE.getMemoryDatasource().isInstance(datasource)) {
+        if (AbstractsimulationPackage.eINSTANCE.getMemoryDatasource().isInstance(datasource)) {
             // create MemoryDatasource
             daoFactory = SensorFrameworkFactory.createMemoryDatasource();
-        } else if (AbstractSimulationPackage.eINSTANCE.getFileDatasource().isInstance(datasource)) {
+        } else if (AbstractsimulationPackage.eINSTANCE.getFileDatasource().isInstance(datasource)) {
             // create or open FileDatasource
             final FileDatasource fileDatasource = (FileDatasource) datasource;
             final Path directory = new Path(fileDatasource.getLocation());

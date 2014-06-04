@@ -16,13 +16,12 @@ import de.uka.ipd.sdq.experimentautomation.variation.VariationPackage;
  * <!-- end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public class ValueVariationImpl extends VariationTypeImpl implements ValueVariation {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected ValueVariationImpl() {
@@ -31,7 +30,6 @@ public class ValueVariationImpl extends VariationTypeImpl implements ValueVariat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

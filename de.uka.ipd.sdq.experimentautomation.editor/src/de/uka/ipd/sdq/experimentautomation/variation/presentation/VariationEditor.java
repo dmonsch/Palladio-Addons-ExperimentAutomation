@@ -43,8 +43,6 @@ import org.eclipse.emf.common.ui.viewer.IViewerProvider;
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EContentAdapter;
@@ -75,6 +73,7 @@ import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.action.Separator;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.dialogs.ProgressMonitorDialog;
+import org.eclipse.jface.util.LocalSelectionTransfer;
 import org.eclipse.jface.viewers.ColumnWeightData;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -91,6 +90,7 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.CTabFolder;
 import org.eclipse.swt.dnd.DND;
+import org.eclipse.swt.dnd.FileTransfer;
 import org.eclipse.swt.dnd.Transfer;
 import org.eclipse.swt.events.ControlAdapter;
 import org.eclipse.swt.events.ControlEvent;
@@ -121,10 +121,10 @@ import org.eclipse.ui.views.properties.IPropertySheetPage;
 import org.eclipse.ui.views.properties.PropertySheet;
 import org.eclipse.ui.views.properties.PropertySheetPage;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.provider.AbstractSimulationItemProviderAdapterFactory;
-import de.uka.ipd.sdq.experimentautomation.experiments.eventsim.provider.EventSimItemProviderAdapterFactory;
+import de.uka.ipd.sdq.experimentautomation.abstractsimulation.provider.AbstractsimulationItemProviderAdapterFactory;
+import de.uka.ipd.sdq.experimentautomation.eventsim.provider.EventsimItemProviderAdapterFactory;
 import de.uka.ipd.sdq.experimentautomation.experiments.provider.ExperimentsItemProviderAdapterFactory;
-import de.uka.ipd.sdq.experimentautomation.experiments.simucom.provider.SimuComItemProviderAdapterFactory;
+import de.uka.ipd.sdq.experimentautomation.simucom.provider.SimucomItemProviderAdapterFactory;
 import de.uka.ipd.sdq.experimentautomation.variation.provider.VariationItemProviderAdapterFactory;
 import de.uka.ipd.sdq.identifier.provider.IdentifierItemProviderAdapterFactory;
 
@@ -177,7 +177,7 @@ public class VariationEditor extends MultiPageEditorPart implements IEditingDoma
      * 
      * @generated
      */
-    protected PropertySheetPage propertySheetPage;
+    protected List<PropertySheetPage> propertySheetPages = new ArrayList<PropertySheetPage>();
 
     /**
      * This is the viewer that shadows the selection in the content outline. The parent relation
@@ -287,7 +287,7 @@ public class VariationEditor extends MultiPageEditorPart implements IEditingDoma
                     setCurrentViewer(contentOutlineViewer);
                 }
             } else if (p instanceof PropertySheet) {
-                if (((PropertySheet) p).getCurrentPage() == propertySheetPage) {
+                if (propertySheetPages.contains(((PropertySheet) p).getCurrentPage())) {
                     getActionBarContributor().setActiveEditor(VariationEditor.this);
                     handleActivate();
                 }
@@ -397,6 +397,14 @@ public class VariationEditor extends MultiPageEditorPart implements IEditingDoma
         @Override
         protected void unsetTarget(Resource target) {
             basicUnsetTarget(target);
+            resourceToDiagnosticMap.remove(target);
+            if (updateProblemIndication) {
+                getSite().getShell().getDisplay().asyncExec(new Runnable() {
+                    public void run() {
+                        updateProblemIndication();
+                    }
+                });
+            }
         }
     };
 
@@ -428,6 +436,7 @@ public class VariationEditor extends MultiPageEditorPart implements IEditingDoma
                                     }
                                 }
                             }
+                            return false;
                         }
 
                         return true;
@@ -626,9 +635,9 @@ public class VariationEditor extends MultiPageEditorPart implements IEditingDoma
         adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
         adapterFactory.addAdapterFactory(new VariationItemProviderAdapterFactory());
         adapterFactory.addAdapterFactory(new ExperimentsItemProviderAdapterFactory());
-        adapterFactory.addAdapterFactory(new AbstractSimulationItemProviderAdapterFactory());
-        adapterFactory.addAdapterFactory(new SimuComItemProviderAdapterFactory());
-        adapterFactory.addAdapterFactory(new EventSimItemProviderAdapterFactory());
+        adapterFactory.addAdapterFactory(new AbstractsimulationItemProviderAdapterFactory());
+        adapterFactory.addAdapterFactory(new SimucomItemProviderAdapterFactory());
+        adapterFactory.addAdapterFactory(new EventsimItemProviderAdapterFactory());
         adapterFactory.addAdapterFactory(new IdentifierItemProviderAdapterFactory());
         adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
@@ -651,8 +660,13 @@ public class VariationEditor extends MultiPageEditorPart implements IEditingDoma
                         if (mostRecentCommand != null) {
                             setSelectionToViewer(mostRecentCommand.getAffectedObjects());
                         }
-                        if (propertySheetPage != null && !propertySheetPage.getControl().isDisposed()) {
-                            propertySheetPage.refresh();
+                        for (Iterator<PropertySheetPage> i = propertySheetPages.iterator(); i.hasNext();) {
+                            PropertySheetPage propertySheetPage = i.next();
+                            if (propertySheetPage.getControl().isDisposed()) {
+                                i.remove();
+                            } else {
+                                propertySheetPage.refresh();
+                            }
                         }
                     }
                 });
@@ -855,7 +869,8 @@ public class VariationEditor extends MultiPageEditorPart implements IEditingDoma
         getSite().registerContextMenu(contextMenu, new UnwrappingSelectionProvider(viewer));
 
         int dndOperations = DND.DROP_COPY | DND.DROP_MOVE | DND.DROP_LINK;
-        Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance() };
+        Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(), LocalSelectionTransfer.getTransfer(),
+                FileTransfer.getInstance() };
         viewer.addDragSupport(dndOperations, transfers, new ViewerDragAdapter(viewer));
         viewer.addDropSupport(dndOperations, transfers, new EditingDomainViewerDropAdapter(editingDomain, viewer));
     }
@@ -1294,22 +1309,21 @@ public class VariationEditor extends MultiPageEditorPart implements IEditingDoma
      * @generated
      */
     public IPropertySheetPage getPropertySheetPage() {
-        if (propertySheetPage == null) {
-            propertySheetPage = new ExtendedPropertySheetPage(editingDomain) {
-                @Override
-                public void setSelectionToViewer(List<?> selection) {
-                    VariationEditor.this.setSelectionToViewer(selection);
-                    VariationEditor.this.setFocus();
-                }
+        PropertySheetPage propertySheetPage = new ExtendedPropertySheetPage(editingDomain) {
+            @Override
+            public void setSelectionToViewer(List<?> selection) {
+                VariationEditor.this.setSelectionToViewer(selection);
+                VariationEditor.this.setFocus();
+            }
 
-                @Override
-                public void setActionBars(IActionBars actionBars) {
-                    super.setActionBars(actionBars);
-                    getActionBarContributor().shareGlobalActions(this, actionBars);
-                }
-            };
-            propertySheetPage.setPropertySourceProvider(new AdapterFactoryContentProvider(adapterFactory));
-        }
+            @Override
+            public void setActionBars(IActionBars actionBars) {
+                super.setActionBars(actionBars);
+                getActionBarContributor().shareGlobalActions(this, actionBars);
+            }
+        };
+        propertySheetPage.setPropertySourceProvider(new AdapterFactoryContentProvider(adapterFactory));
+        propertySheetPages.add(propertySheetPage);
 
         return propertySheetPage;
     }
@@ -1376,6 +1390,7 @@ public class VariationEditor extends MultiPageEditorPart implements IEditingDoma
         //
         final Map<Object, Object> saveOptions = new HashMap<Object, Object>();
         saveOptions.put(Resource.OPTION_SAVE_ONLY_IF_CHANGED, Resource.OPTION_SAVE_ONLY_IF_CHANGED_MEMORY_BUFFER);
+        saveOptions.put(Resource.OPTION_LINE_DELIMITER, Resource.OPTION_LINE_DELIMITER_UNSPECIFIED);
 
         // Do the work within an operation because this is a long running activity that modifies the
         // workbench.
@@ -1495,19 +1510,9 @@ public class VariationEditor extends MultiPageEditorPart implements IEditingDoma
      * @generated
      */
     public void gotoMarker(IMarker marker) {
-        try {
-            if (marker.getType().equals(EValidator.MARKER)) {
-                String uriAttribute = marker.getAttribute(EValidator.URI_ATTRIBUTE, null);
-                if (uriAttribute != null) {
-                    URI uri = URI.createURI(uriAttribute);
-                    EObject eObject = editingDomain.getResourceSet().getEObject(uri, true);
-                    if (eObject != null) {
-                        setSelectionToViewer(Collections.singleton(editingDomain.getWrapper(eObject)));
-                    }
-                }
-            }
-        } catch (CoreException exception) {
-            ExperimentAutomationEditorPlugin.INSTANCE.log(exception);
+        List<?> targetObjects = markerHelper.getTargetObjects(editingDomain, marker);
+        if (!targetObjects.isEmpty()) {
+            setSelectionToViewer(targetObjects);
         }
     }
 
@@ -1697,7 +1702,7 @@ public class VariationEditor extends MultiPageEditorPart implements IEditingDoma
             getActionBarContributor().setActiveEditor(null);
         }
 
-        if (propertySheetPage != null) {
+        for (PropertySheetPage propertySheetPage : propertySheetPages) {
             propertySheetPage.dispose();
         }
 

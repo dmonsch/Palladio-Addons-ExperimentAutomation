@@ -4,7 +4,7 @@ import java.util.List;
 
 import de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles;
 import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
-import de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.StopCondition;
+import de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition;
 
 public interface IToolAdapter {
 

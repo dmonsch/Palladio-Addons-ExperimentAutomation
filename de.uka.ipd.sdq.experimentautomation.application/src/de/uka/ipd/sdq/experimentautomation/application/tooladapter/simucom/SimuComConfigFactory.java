@@ -5,9 +5,9 @@ import java.util.Map;
 
 import de.uka.ipd.sdq.experimentautomation.application.tooladapter.abstractsimulation.AbstractSimulationConfigFactory;
 import de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles;
-import de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.AbstractSimulationConfiguration;
-import de.uka.ipd.sdq.experimentautomation.experiments.abstractsimulation.StopCondition;
-import de.uka.ipd.sdq.experimentautomation.experiments.simucom.SimuComConfiguration;
+import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
+import de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition;
+import de.uka.ipd.sdq.experimentautomation.simucom.SimuComConfiguration;
 import de.uka.ipd.sdq.simucomframework.SimuComConfig;
 import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
 

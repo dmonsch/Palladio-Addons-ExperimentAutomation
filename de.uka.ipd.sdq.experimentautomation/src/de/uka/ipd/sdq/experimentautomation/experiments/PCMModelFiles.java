@@ -11,43 +11,33 @@ import org.eclipse.emf.ecore.EObject;
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>PCM Model Files</b></em>'.
  * <!-- end-user-doc -->
- * 
+ *
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getAllocationFile <em>
- * Allocation File</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getUsagemodelFile <em>
- * Usagemodel File</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getSystemFile <em>System
- * File</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getRepositoryFile <em>
- * Repository File</em>}</li>
- * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getResourceenvironmentFile
- * <em>Resourceenvironment File</em>}</li>
- * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getMiddlewareRepositoryFile
- * <em>Middleware Repository File</em>}</li>
- * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getEventMiddlewareRepositoryFile
- * <em>Event Middleware Repository File</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getAllocationFile <em>Allocation File</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getUsagemodelFile <em>Usagemodel File</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getSystemFile <em>System File</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getRepositoryFile <em>Repository File</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getResourceenvironmentFile <em>Resourceenvironment File</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getMiddlewareRepositoryFile <em>Middleware Repository File</em>}</li>
+ *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getEventMiddlewareRepositoryFile <em>Event Middleware Repository File</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getPCMModelFiles()
  * @model
  * @generated
  */
 public interface PCMModelFiles extends EObject {
     /**
-     * Returns the value of the '<em><b>Allocation File</b></em>' attribute. <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Allocation File</b></em>' attribute.
+     * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Allocation File</em>' attribute isn't clear, there really should
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
      * @return the value of the '<em>Allocation File</em>' attribute.
      * @see #setAllocationFile(String)
      * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getPCMModelFiles_AllocationFile()
@@ -57,25 +47,22 @@ public interface PCMModelFiles extends EObject {
     String getAllocationFile();
 
     /**
-     * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getAllocationFile
-     * <em>Allocation File</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param value
-     *            the new value of the '<em>Allocation File</em>' attribute.
+     * Sets the value of the '{@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getAllocationFile <em>Allocation File</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @param value the new value of the '<em>Allocation File</em>' attribute.
      * @see #getAllocationFile()
      * @generated
      */
     void setAllocationFile(String value);
 
     /**
-     * Returns the value of the '<em><b>Usagemodel File</b></em>' attribute. <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Usagemodel File</b></em>' attribute.
+     * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Usagemodel File</em>' attribute isn't clear, there really should
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
      * @return the value of the '<em>Usagemodel File</em>' attribute.
      * @see #setUsagemodelFile(String)
      * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getPCMModelFiles_UsagemodelFile()
@@ -85,25 +72,22 @@ public interface PCMModelFiles extends EObject {
     String getUsagemodelFile();
 
     /**
-     * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getUsagemodelFile
-     * <em>Usagemodel File</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param value
-     *            the new value of the '<em>Usagemodel File</em>' attribute.
+     * Sets the value of the '{@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getUsagemodelFile <em>Usagemodel File</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @param value the new value of the '<em>Usagemodel File</em>' attribute.
      * @see #getUsagemodelFile()
      * @generated
      */
     void setUsagemodelFile(String value);
 
     /**
-     * Returns the value of the '<em><b>System File</b></em>' attribute. <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>System File</b></em>' attribute.
+     * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>System File</em>' attribute isn't clear, there really should be
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
      * @return the value of the '<em>System File</em>' attribute.
      * @see #setSystemFile(String)
      * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getPCMModelFiles_SystemFile()
@@ -113,25 +97,22 @@ public interface PCMModelFiles extends EObject {
     String getSystemFile();
 
     /**
-     * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getSystemFile
-     * <em>System File</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param value
-     *            the new value of the '<em>System File</em>' attribute.
+     * Sets the value of the '{@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getSystemFile <em>System File</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @param value the new value of the '<em>System File</em>' attribute.
      * @see #getSystemFile()
      * @generated
      */
     void setSystemFile(String value);
 
     /**
-     * Returns the value of the '<em><b>Repository File</b></em>' attribute. <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Repository File</b></em>' attribute.
+     * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Repository File</em>' attribute isn't clear, there really should
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
      * @return the value of the '<em>Repository File</em>' attribute.
      * @see #setRepositoryFile(String)
      * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getPCMModelFiles_RepositoryFile()
@@ -141,12 +122,9 @@ public interface PCMModelFiles extends EObject {
     String getRepositoryFile();
 
     /**
-     * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getRepositoryFile
-     * <em>Repository File</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param value
-     *            the new value of the '<em>Repository File</em>' attribute.
+     * Sets the value of the '{@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getRepositoryFile <em>Repository File</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @param value the new value of the '<em>Repository File</em>' attribute.
      * @see #getRepositoryFile()
      * @generated
      */
@@ -170,12 +148,9 @@ public interface PCMModelFiles extends EObject {
     String getResourceenvironmentFile();
 
     /**
-     * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getResourceenvironmentFile
-     * <em>Resourceenvironment File</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param value
-     *            the new value of the '<em>Resourceenvironment File</em>' attribute.
+     * Sets the value of the '{@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getResourceenvironmentFile <em>Resourceenvironment File</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @param value the new value of the '<em>Resourceenvironment File</em>' attribute.
      * @see #getResourceenvironmentFile()
      * @generated
      */
@@ -229,13 +204,10 @@ public interface PCMModelFiles extends EObject {
     String getEventMiddlewareRepositoryFile();
 
     /**
-     * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getEventMiddlewareRepositoryFile
-     * <em>Event Middleware Repository File</em>}' attribute. <!-- begin-user-doc --> <!--
+     * Sets the value of the '{@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getEventMiddlewareRepositoryFile <em>Event Middleware Repository File</em>}' attribute.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
-     * @param value
-     *            the new value of the '<em>Event Middleware Repository File</em>' attribute.
+     * @param value the new value of the '<em>Event Middleware Repository File</em>' attribute.
      * @see #getEventMiddlewareRepositoryFile()
      * @generated
      */

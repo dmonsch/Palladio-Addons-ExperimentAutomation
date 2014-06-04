@@ -20,31 +20,30 @@ import de.uka.ipd.sdq.experimentautomation.variation.VariationRepository;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
- * 
  * @generated
  */
 public class VariationFactoryImpl extends EFactoryImpl implements VariationFactory {
     /**
-     * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Creates the default factory implementation.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public static VariationFactory init() {
         try {
-            VariationFactory theVariationFactory = (VariationFactory) EPackage.Registry.INSTANCE
-                    .getEFactory("http://sdq.ipd.uka.de/ExperimentAutomation/Variation/1.0");
+            VariationFactory theVariationFactory = (VariationFactory)EPackage.Registry.INSTANCE.getEFactory(VariationPackage.eNS_URI);
             if (theVariationFactory != null) {
                 return theVariationFactory;
             }
-        } catch (Exception exception) {
+        }
+        catch (Exception exception) {
             EcorePlugin.INSTANCE.log(exception);
         }
         return new VariationFactoryImpl();
     }
 
     /**
-     * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Creates an instance of the factory.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     public VariationFactoryImpl() {
@@ -53,26 +52,21 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public EObject create(EClass eClass) {
         switch (eClass.getClassifierID()) {
-        case VariationPackage.VALUE_VARIATION:
-            return createValueVariation();
-        case VariationPackage.STRUCTURAL_VARIATION:
-            return createStructuralVariation();
-        case VariationPackage.VARIATION_REPOSITORY:
-            return createVariationRepository();
-        default:
-            throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+            case VariationPackage.VALUE_VARIATION: return createValueVariation();
+            case VariationPackage.STRUCTURAL_VARIATION: return createStructuralVariation();
+            case VariationPackage.VARIATION_REPOSITORY: return createVariationRepository();
+            default:
+                throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public ValueVariation createValueVariation() {
@@ -82,7 +76,6 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public StructuralVariation createStructuralVariation() {
@@ -92,7 +85,6 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public VariationRepository createVariationRepository() {
@@ -102,16 +94,14 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public VariationPackage getVariationPackage() {
-        return (VariationPackage) getEPackage();
+        return (VariationPackage)getEPackage();
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @deprecated
      * @generated
      */
