@@ -37,7 +37,6 @@ public class ExperimentController {
     private final ConfigurationModel config;
     private final Path experimentsLocation;
     private final Path variationsLocation;
-    private final Path bookkeepingLocation;
     private final String args[];
     private final boolean copyAuxModelFiles;
 
@@ -48,17 +47,15 @@ public class ExperimentController {
      *            the command line arguments passed to this application
      */
     public ExperimentController(final ConfigurationModel config, final Path experimentsLocation,
-            final Path variationsLocation, final Path bookkeepingLocation, final String[] args) {
+            final Path variationsLocation, final String[] args) {
         this.config = config;
         this.experimentsLocation = experimentsLocation;
         this.variationsLocation = variationsLocation;
-        this.bookkeepingLocation = bookkeepingLocation;
         this.args = args;
         this.copyAuxModelFiles = true;
     }
 
-    public ExperimentController(final Path bookkeepingLocation) {
-        this.bookkeepingLocation = bookkeepingLocation;
+    public ExperimentController() {
         this.args = new String[] { "none (call by code)" };
         this.copyAuxModelFiles = false;
         this.variationsLocation = null;
@@ -93,7 +90,7 @@ public class ExperimentController {
 
     private void runExperiment(final Experiment exp, final ToolConfiguration toolConfig, final int repetitions) {
         final String experimentName = "(" + exp.getId() + ", " + toolConfig.getName() + ") " + exp.getName();
-        final File experimentFolder = new File(this.bookkeepingLocation.toOSString() + File.separator + experimentName
+        final File experimentFolder = new File(File.separator + experimentName
                 + " (" + System.currentTimeMillis() + ")" + File.separator);
         final ExperimentMetadata metadata = new ExperimentMetadata();
         metadata.setExperimentName(experimentName);
@@ -239,8 +236,6 @@ public class ExperimentController {
 
         // simulate the varied PCM model one or more times as specified by the replication count
         for (int i = 1; i <= settings.getRepetitions(); i++) {
-            // ISimulationListener l = new
-            // SimulationDurationSimulationListener(settings.getBookkeeping(), factorLevels);
             try {
                 final IToolAdapter analysisTool = AnalysisToolFactory.createToolAdapater(settings
                         .getToolConfiguration());
@@ -248,7 +243,6 @@ public class ExperimentController {
                         + settings.getToolConfiguration().getName(), modelCopy, settings.getToolConfiguration(),
                         settings.getExperiment().getStopConditions());
             } catch (final Exception ex) {
-                // settings.getBookkeeping().logException(ex);
                 throw new RuntimeException("The simulation failed", ex);
             }
         }

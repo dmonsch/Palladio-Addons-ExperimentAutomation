@@ -39,7 +39,6 @@ public class ExperimentApplication implements IApplication {
         final Bundle bundle = Activator.getDefault().getBundle();
         final Path experimentsLocation = new Path(args[0]);
         final Path variationsLocation = new Path(args[1]);
-        final Path bookkeepingLocation = new Path(args[2]);
         this.config = ConfigurationModel.loadFromBundle(bundle, experimentsLocation, variationsLocation);
 
         // filter experiment list
@@ -55,7 +54,7 @@ public class ExperimentApplication implements IApplication {
 
         // run experiments
         final ExperimentController controller = new ExperimentController(this.config, experimentsLocation,
-                variationsLocation, bookkeepingLocation, args);
+                variationsLocation, args);
 
         final int repetitions = this.config.getExperiments().getRepetitions();
         if (experimentIds.isEmpty()) {
