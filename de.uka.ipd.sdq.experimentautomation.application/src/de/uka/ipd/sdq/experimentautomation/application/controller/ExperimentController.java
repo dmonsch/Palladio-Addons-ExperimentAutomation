@@ -32,7 +32,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
 
 public class ExperimentController {
 
-    private static final Logger logger = Logger.getLogger(ExperimentController.class);
+    private static final Logger LOGGER = Logger.getLogger(ExperimentController.class);
 
     private final ConfigurationModel config;
     private final Path experimentsLocation;
@@ -40,78 +40,7 @@ public class ExperimentController {
     private final String args[];
     private final boolean copyAuxModelFiles;
 
-    /**
-     * 
-     * @param config
-     * @param args
-     *            the command line arguments passed to this application
-     */
-    public ExperimentController(final ConfigurationModel config, final Path experimentsLocation,
-            final Path variationsLocation, final String[] args) {
-        this.config = config;
-        this.experimentsLocation = experimentsLocation;
-        this.variationsLocation = variationsLocation;
-        this.args = args;
-        this.copyAuxModelFiles = true;
-    }
-
-    public ExperimentController() {
-        this.args = new String[] { "none (call by code)" };
-        this.copyAuxModelFiles = false;
-        this.variationsLocation = null;
-        this.experimentsLocation = null;
-        this.config = null;
-    }
-
-    private IVariationStrategy initialiseVariations(final Variation v, final ResourceSet rs) {
-        final EObject variedObject = PCMModelHelper.findModelElementById(rs, v.getVariedObjectId());
-        final IVariationStrategy s = VariationStrategyFactory.createStrategy(v.getType());
-        s.setVariedObject(variedObject);
-        return s;
-    }
-
-    public void runExperiment(final Experiment experiment) {
-        final List<Experiment> experiments = new ArrayList<Experiment>(1);
-        experiments.add(experiment);
-        this.runExperiment(experiments, 1);
-    }
-
-    public void runExperiment(final List<Experiment> experiments, final int repetitions) {
-        for (final Experiment exp : experiments) {
-            for (final ToolConfiguration c : exp.getToolConfiguration()) {
-                this.runExperiment(exp, c, repetitions);
-            }
-        }
-    }
-
-    public void runExperiments(final int repetitions) {
-        this.runExperiment(this.config.getExperiments().getExperiments(), repetitions);
-    }
-
-    private void runExperiment(final Experiment exp, final ToolConfiguration toolConfig, final int repetitions) {
-        final String experimentName = "(" + exp.getId() + ", " + toolConfig.getName() + ") " + exp.getName();
-        final File experimentFolder = new File(File.separator + experimentName
-                + " (" + System.currentTimeMillis() + ")" + File.separator);
-        final ExperimentMetadata metadata = new ExperimentMetadata();
-        metadata.setExperimentName(experimentName);
-        metadata.setStartTime(new Date());
-        metadata.setCommandLineArguments(this.args);
-        metadata.setVirtualMachineArguments("TODO");
-
-        final String[] factorNames = new String[exp.getVariations().size()];
-        for (int i = 0; i < factorNames.length; i++) {
-            factorNames[i] = exp.getVariations().get(i).getName();
-        }
-
-        final ExperimentContext settings = new ExperimentContext(experimentName, experimentFolder, toolConfig,
-                repetitions, exp);
-        this.runExperiments(exp.getVariations(), settings, new ArrayList<Variation>(), new ArrayList<Long>());
-
-        metadata.setEndTime(new Date());
-    }
-
     private class ExperimentContext {
-
         private final String experimentName;
         private final File experimentFolder;
         private final ToolConfiguration toolConfiguration;
@@ -147,10 +76,58 @@ public class ExperimentController {
         public Experiment getExperiment() {
             return this.experiment;
         }
-
     }
 
-    public void runExperiments(final List<Variation> list, final ExperimentContext settings,
+    /**
+     * 
+     * @param config
+     * @param args
+     *            the command line arguments passed to this application
+     */
+    public ExperimentController(final ConfigurationModel config, final Path experimentsLocation,
+            final Path variationsLocation, final String[] args) {
+        this.config = config;
+        this.experimentsLocation = experimentsLocation;
+        this.variationsLocation = variationsLocation;
+        this.args = args;
+        this.copyAuxModelFiles = true;
+    }
+
+    public void runExperiments(final int repetitions) {
+        this.runExperiment(this.config.getExperiments().getExperiments(), repetitions);
+    }
+
+    public void runExperiment(final List<Experiment> experiments, final int repetitions) {
+        for (final Experiment exp : experiments) {
+            for (final ToolConfiguration c : exp.getToolConfiguration()) {
+                this.runExperiment(exp, c, repetitions);
+            }
+        }
+    }
+
+    private void runExperiment(final Experiment exp, final ToolConfiguration toolConfig, final int repetitions) {
+        final String experimentName = "(" + exp.getId() + ", " + toolConfig.getName() + ") " + exp.getName();
+        final File experimentFolder = new File(File.separator + experimentName + " (" + System.currentTimeMillis()
+                + ")" + File.separator);
+        final ExperimentMetadata metadata = new ExperimentMetadata();
+        metadata.setExperimentName(experimentName);
+        metadata.setStartTime(new Date());
+        metadata.setCommandLineArguments(this.args);
+        metadata.setVirtualMachineArguments("TODO");
+
+        final String[] factorNames = new String[exp.getVariations().size()];
+        for (int i = 0; i < factorNames.length; i++) {
+            factorNames[i] = exp.getVariations().get(i).getName();
+        }
+
+        final ExperimentContext settings = new ExperimentContext(experimentName, experimentFolder, toolConfig,
+                repetitions, exp);
+        this.runExperiments(exp.getVariations(), settings, new ArrayList<Variation>(), new ArrayList<Long>());
+
+        metadata.setEndTime(new Date());
+    }
+
+    private void runExperiments(final List<Variation> list, final ExperimentContext settings,
             final List<Variation> variants, final List<Long> currentFactorLevels) {
         if (!list.isEmpty()) {
             // obtain variation description
@@ -248,13 +225,20 @@ public class ExperimentController {
         }
     }
 
+    private IVariationStrategy initialiseVariations(final Variation v, final ResourceSet rs) {
+        final EObject variedObject = PCMModelHelper.findModelElementById(rs, v.getVariedObjectId());
+        final IVariationStrategy s = VariationStrategyFactory.createStrategy(v.getType());
+        s.setVariedObject(variedObject);
+        return s;
+    }
+
     private void saveResources(final ResourceSet rs) throws IOException {
         for (final Resource r : rs.getResources()) {
             final URI n = rs.getURIConverter().normalize(r.getURI());
             if (n.isFile()) {
                 final OutputStream out = rs.getURIConverter().createOutputStream(r.getURI());
                 r.save(out, null);
-                logger.info("Saving resource: " + r.toString());
+                LOGGER.info("Saving resource: " + r.toString());
             }
         }
     }
