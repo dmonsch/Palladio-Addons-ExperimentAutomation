@@ -25,7 +25,5 @@ Export-Package: de.uka.ipd.sdq.experimentautomation.abstractsimulation,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
- de.uka.ipd.sdq.identifier;visibility:=reexport,
- edu.kit.ipd.sdq.mdsd.profiles;bundle-version="1.0.0",
- org.modelversioning.emfprofile;bundle-version="1.1.0"
+ de.uka.ipd.sdq.identifier;visibility:=reexport
 Bundle-ActivationPolicy: lazy
