@@ -30,6 +30,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
 import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
 
 /**
+ * TODO Instead of using ExperimentContext, we should use EDP2 constructs. [Lehrig]
  * 
  * @author Merkle, Sebastian Lehrig
  */
@@ -107,31 +108,50 @@ public class ExperimentController {
         }
     }
 
+    /**
+     * Runs a single experiment for a given tool. Note that a single experiment comes with
+     * variations, each potentially repeated according the configuration of this experiment
+     * controller.
+     * 
+     * @param experiment
+     *            The experiment to run.
+     * @param toolConfiguration
+     *            The given tool, e.g., SimuCom.
+     */
     private void runExperiment(final Experiment experiment, final ToolConfiguration toolConfiguration) {
         final String experimentName = "(" + experiment.getId() + ", " + toolConfiguration.getName() + ") "
                 + experiment.getName();
         final File experimentFolder = new File(File.separator + experimentName + " (" + System.currentTimeMillis()
                 + ")" + File.separator);
-
+        final ExperimentContext settings = new ExperimentContext(experimentName, experimentFolder, toolConfiguration,
+                experiment);
         final ExperimentMetadata metadata = new ExperimentMetadata();
+
         metadata.setExperimentName(experimentName);
         metadata.setStartTime(new Date());
         metadata.setCommandLineArguments(this.args);
         metadata.setVirtualMachineArguments("TODO");
-
-        final ExperimentContext settings = new ExperimentContext(experimentName, experimentFolder, toolConfiguration,
-                experiment);
-        this.runExperiments(experiment.getVariations(), settings, new ArrayList<Variation>(), new ArrayList<Long>());
-
+        this.runExperimentVariations(experiment.getVariations(), settings, new ArrayList<Variation>(),
+                new ArrayList<Long>());
         metadata.setEndTime(new Date());
+        LOGGER.info(metadata);
     }
 
-    private void runExperiments(final List<Variation> list, final ExperimentContext settings,
+    /**
+     * TODO There should really be an explanation here describing variations vs. variants! [Lehrig]
+     * 
+     * Recursive call, each time reducing variations by 1. Initially, variants and
+     * currentFactorLevels are empty. Seems to be something statistical done here like trying out
+     * each pair-wise combination...
+     */
+    private void runExperimentVariations(final List<Variation> variations, final ExperimentContext settings,
             final List<Variation> variants, final List<Long> currentFactorLevels) {
-        if (!list.isEmpty()) {
+        if (variations.isEmpty()) {
+            this.variateModelAndSimulate(settings, variants, currentFactorLevels);
+        } else {
             // obtain variation description
             final List<Variation> copy = new ArrayList<Variation>();
-            copy.addAll(list);
+            copy.addAll(variations);
             final Variation variation = copy.remove(0);
 
             // obtain value provider
@@ -150,7 +170,7 @@ public class ExperimentController {
                     variants.add(variation);
                     currentFactorLevels.add(factorLevel);
 
-                    this.runExperiments(copy, settings, variants, currentFactorLevels);
+                    this.runExperimentVariations(copy, settings, variants, currentFactorLevels);
 
                     variants.remove(variants.size() - 1);
                     currentFactorLevels.remove(currentFactorLevels.size() - 1);
@@ -158,14 +178,12 @@ public class ExperimentController {
 
                 iteration++;
             }
-        } else {
-            this.variateModelAndSimulate(settings, variants, currentFactorLevels);
         }
     }
 
     private void variateModelAndSimulate(final ExperimentContext settings, final List<Variation> variations,
             final List<Long> factorLevels) {
-        final Experiment exp = settings.getExperiment();
+        final Experiment experiment = settings.getExperiment();
 
         // build experiment folder URI
         String factorLevelsString = "";
@@ -181,10 +199,10 @@ public class ExperimentController {
         // copy initial PCM model files to experiment folder
         PCMModelFiles modelCopy;
         if (this.copyAuxModelFiles) {
-            modelCopy = PCMModelHelper.copyToExperimentFolder(exp.getInitialModel(), this.experimentsLocation,
+            modelCopy = PCMModelHelper.copyToExperimentFolder(experiment.getInitialModel(), this.experimentsLocation,
                     this.variationsLocation, variationFolderUri);
         } else {
-            modelCopy = PCMModelHelper.copyToExperimentFolder(exp.getInitialModel(), variationFolderUri);
+            modelCopy = PCMModelHelper.copyToExperimentFolder(experiment.getInitialModel(), variationFolderUri);
         }
 
         // load PCM model from copied model files
@@ -194,13 +212,14 @@ public class ExperimentController {
         EcoreUtil.resolveAll(resourceSet);
 
         // modify the copied PCM model according to the variation descriptions
-        final List<String> variationDescriptions = new ArrayList<String>();
         for (int i = 0; i < variations.size(); i++) {
-            final Variation v = variations.get(i);
+            final Variation variation = variations.get(i);
             final long currentValue = factorLevels.get(i);
-            final IVariationStrategy variationStrategy = this.initialiseVariations(v, resourceSet);
+            final IVariationStrategy variationStrategy = this.initialiseVariations(variation, resourceSet);
             final String desc = variationStrategy.vary(currentValue);
-            variationDescriptions.add(desc);
+            if (LOGGER.isDebugEnabled()) {
+                LOGGER.debug("Varyied: " + desc);
+            }
         }
 
         // save the varied PCM model
@@ -224,11 +243,11 @@ public class ExperimentController {
         }
     }
 
-    private IVariationStrategy initialiseVariations(final Variation v, final ResourceSet rs) {
-        final EObject variedObject = PCMModelHelper.findModelElementById(rs, v.getVariedObjectId());
-        final IVariationStrategy s = VariationStrategyFactory.createStrategy(v.getType());
-        s.setVariedObject(variedObject);
-        return s;
+    private IVariationStrategy initialiseVariations(final Variation variation, final ResourceSet resourceSet) {
+        final EObject variedObject = PCMModelHelper.findModelElementById(resourceSet, variation.getVariedObjectId());
+        final IVariationStrategy variationStrategy = VariationStrategyFactory.createStrategy(variation.getType());
+        variationStrategy.setVariedObject(variedObject);
+        return variationStrategy;
     }
 
     private void saveResources(final ResourceSet rs) throws IOException {
