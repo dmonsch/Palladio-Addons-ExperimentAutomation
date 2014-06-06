@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
-import de.uka.ipd.sdq.experimentautomation.application.ConfigurationModel;
 import de.uka.ipd.sdq.experimentautomation.application.ExperimentMetadata;
 import de.uka.ipd.sdq.experimentautomation.application.tooladapter.AnalysisToolFactory;
 import de.uka.ipd.sdq.experimentautomation.application.tooladapter.IToolAdapter;
@@ -30,11 +29,16 @@ import de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles;
 import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
 import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
 
+/**
+ * 
+ * @author Merkle, Sebastian Lehrig
+ */
 public class ExperimentController {
 
     private static final Logger LOGGER = Logger.getLogger(ExperimentController.class);
 
-    private final ConfigurationModel config;
+    private final List<Experiment> experiments;
+    private final int repetitions;
     private final Path experimentsLocation;
     private final Path variationsLocation;
     private final String args[];
@@ -79,28 +83,32 @@ public class ExperimentController {
     }
 
     /**
-     * 
-     * @param config
+     * @param experiments
+     *            List of experiments to be run.
+     * @param repetitions
+     *            States how often a single experiment is repeated for a single tool. Has an
+     *            influence on the statistical significance of an experiment.
      * @param args
-     *            the command line arguments passed to this application
+     *            The command line arguments passed to this application. Only used to store metadata
+     *            information.
      */
-    public ExperimentController(final ConfigurationModel config, final Path experimentsLocation,
-            final Path variationsLocation, final String[] args) {
-        this.config = config;
+    public ExperimentController(final List<Experiment> experiments, final int repetitions,
+            final Path experimentsLocation, final Path variationsLocation, final String[] args) {
+        this.experiments = experiments;
+        this.repetitions = repetitions;
         this.experimentsLocation = experimentsLocation;
         this.variationsLocation = variationsLocation;
         this.args = args;
         this.copyAuxModelFiles = true;
     }
 
-    public void runExperiments(final int repetitions) {
-        this.runExperiment(this.config.getExperiments().getExperiments(), repetitions);
-    }
-
-    public void runExperiment(final List<Experiment> experiments, final int repetitions) {
-        for (final Experiment exp : experiments) {
+    /**
+     * Runs the list of experiments as registered and configured at this controller.
+     */
+    public void runExperiments() {
+        for (final Experiment exp : this.experiments) {
             for (final ToolConfiguration c : exp.getToolConfiguration()) {
-                this.runExperiment(exp, c, repetitions);
+                this.runExperiment(exp, c, this.repetitions);
             }
         }
     }
@@ -109,6 +117,7 @@ public class ExperimentController {
         final String experimentName = "(" + exp.getId() + ", " + toolConfig.getName() + ") " + exp.getName();
         final File experimentFolder = new File(File.separator + experimentName + " (" + System.currentTimeMillis()
                 + ")" + File.separator);
+
         final ExperimentMetadata metadata = new ExperimentMetadata();
         metadata.setExperimentName(experimentName);
         metadata.setStartTime(new Date());

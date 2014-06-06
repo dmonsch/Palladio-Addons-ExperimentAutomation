@@ -41,28 +41,32 @@ public class ExperimentApplication implements IApplication {
         final Path variationsLocation = new Path(args[1]);
         this.config = ConfigurationModel.loadFromBundle(bundle, experimentsLocation, variationsLocation);
 
-        // filter experiment list
-        final List<Experiment> filteredExperiments = new ArrayList<Experiment>();
-        for (final Experiment e : this.config.getExperiments().getExperiments()) {
-            for (final String id : experimentIds) {
-                if (e.getId().equalsIgnoreCase(id)) {
-                    filteredExperiments.add(e);
-                    break;
+        final List<Experiment> experiments;
+        if (experimentIds.isEmpty()) {
+            // experiments as in config
+            experiments = this.config.getExperiments().getExperiments();
+        } else {
+            // filter experiment list
+            experiments = new ArrayList<Experiment>();
+            for (final Experiment e : this.config.getExperiments().getExperiments()) {
+                for (final String id : experimentIds) {
+                    if (e.getId().equalsIgnoreCase(id)) {
+                        experiments.add(e);
+                        break;
+                    }
                 }
             }
         }
 
+        final int repetitions = this.config.getExperiments().getRepetitions();
+
         // run experiments
-        final ExperimentController controller = new ExperimentController(this.config, experimentsLocation,
+        final ExperimentController controller = new ExperimentController(experiments, repetitions, experimentsLocation,
                 variationsLocation, args);
 
-        final int repetitions = this.config.getExperiments().getRepetitions();
-        if (experimentIds.isEmpty()) {
-            controller.runExperiments(repetitions);
-        } else {
-            controller.runExperiment(filteredExperiments, repetitions);
-        }
-
+        
+        controller.runExperiments();
+        
         return IApplication.EXIT_OK;
     }
 
