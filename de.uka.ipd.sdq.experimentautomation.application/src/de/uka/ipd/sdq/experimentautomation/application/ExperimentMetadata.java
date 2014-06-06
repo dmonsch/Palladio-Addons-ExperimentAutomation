@@ -8,6 +8,12 @@ import java.net.UnknownHostException;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Only used to document a single experiment run. For instance, a logger to use an object of this
+ * class to output some information about an experiment.
+ * 
+ * @author Merkle, Sebastian Lehrig
+ */
 public class ExperimentMetadata {
 
     private static final String LINE_FEED = "\r\n";

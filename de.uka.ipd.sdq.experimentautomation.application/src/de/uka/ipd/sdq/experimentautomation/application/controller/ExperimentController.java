@@ -30,6 +30,14 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
 import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
 
 /**
+ * This class is responsible for executing a given experiment configuration. Such a configuration
+ * includes the list of experiments to conduct and the tools to use for these experiments (e.g.,
+ * SimuCom). A single experiment includes a list of variations, each analyzed according to a
+ * configurable number of repetitions.
+ * 
+ * Objects of this class are completely configured via their constructor. Afterwards, experiments
+ * can be conducted by invoking their <code>runExperiments()</code> method.
+ * 
  * TODO Instead of using ExperimentContext, we should use EDP2 constructs. [Lehrig]
  * 
  * @author Merkle, Sebastian Lehrig
