@@ -48,16 +48,14 @@ public class ExperimentController {
         private final String experimentName;
         private final File experimentFolder;
         private final ToolConfiguration toolConfiguration;
-        private final int repetitions;
         private final Experiment experiment;
 
         public ExperimentContext(final String experimentName, final File experimentFolder,
-                final ToolConfiguration toolConfiguration, final int repetitions, final Experiment experiment) {
+                final ToolConfiguration toolConfiguration, final Experiment experiment) {
             super();
             this.experimentName = experimentName;
             this.experimentFolder = experimentFolder;
             this.toolConfiguration = toolConfiguration;
-            this.repetitions = repetitions;
             this.experiment = experiment;
         }
 
@@ -71,10 +69,6 @@ public class ExperimentController {
 
         public ToolConfiguration getToolConfiguration() {
             return this.toolConfiguration;
-        }
-
-        public int getRepetitions() {
-            return this.repetitions;
         }
 
         public Experiment getExperiment() {
@@ -106,15 +100,16 @@ public class ExperimentController {
      * Runs the list of experiments as registered and configured at this controller.
      */
     public void runExperiments() {
-        for (final Experiment exp : this.experiments) {
-            for (final ToolConfiguration c : exp.getToolConfiguration()) {
-                this.runExperiment(exp, c, this.repetitions);
+        for (final Experiment experiment : this.experiments) {
+            for (final ToolConfiguration toolConfiguration : experiment.getToolConfiguration()) {
+                this.runExperiment(experiment, toolConfiguration);
             }
         }
     }
 
-    private void runExperiment(final Experiment exp, final ToolConfiguration toolConfig, final int repetitions) {
-        final String experimentName = "(" + exp.getId() + ", " + toolConfig.getName() + ") " + exp.getName();
+    private void runExperiment(final Experiment experiment, final ToolConfiguration toolConfiguration) {
+        final String experimentName = "(" + experiment.getId() + ", " + toolConfiguration.getName() + ") "
+                + experiment.getName();
         final File experimentFolder = new File(File.separator + experimentName + " (" + System.currentTimeMillis()
                 + ")" + File.separator);
 
@@ -124,14 +119,9 @@ public class ExperimentController {
         metadata.setCommandLineArguments(this.args);
         metadata.setVirtualMachineArguments("TODO");
 
-        final String[] factorNames = new String[exp.getVariations().size()];
-        for (int i = 0; i < factorNames.length; i++) {
-            factorNames[i] = exp.getVariations().get(i).getName();
-        }
-
-        final ExperimentContext settings = new ExperimentContext(experimentName, experimentFolder, toolConfig,
-                repetitions, exp);
-        this.runExperiments(exp.getVariations(), settings, new ArrayList<Variation>(), new ArrayList<Long>());
+        final ExperimentContext settings = new ExperimentContext(experimentName, experimentFolder, toolConfiguration,
+                experiment);
+        this.runExperiments(experiment.getVariations(), settings, new ArrayList<Variation>(), new ArrayList<Long>());
 
         metadata.setEndTime(new Date());
     }
@@ -221,7 +211,7 @@ public class ExperimentController {
         }
 
         // simulate the varied PCM model one or more times as specified by the replication count
-        for (int i = 1; i <= settings.getRepetitions(); i++) {
+        for (int i = 1; i <= this.repetitions; i++) {
             try {
                 final IToolAdapter analysisTool = AnalysisToolFactory.createToolAdapater(settings
                         .getToolConfiguration());
