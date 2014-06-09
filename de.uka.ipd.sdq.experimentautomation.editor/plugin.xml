@@ -25,46 +25,7 @@
       </wizard>
    </extension>
 
-   <extension point="org.eclipse.ui.editors">
-      <!-- @generated ExperimentAutomation -->
-      <editor
-            id="de.uka.ipd.sdq.experimentautomation.eventsim.presentation.EventsimEditorID"
-            name="%_UI_EventsimEditor_label"
-            icon="icons/full/obj16/EventsimModelFile.gif"
-            extensions="eventsim"
-            class="de.uka.ipd.sdq.experimentautomation.eventsim.presentation.EventsimEditor"
-            contributorClass="de.uka.ipd.sdq.experimentautomation.eventsim.presentation.EventsimActionBarContributor">
-      </editor>
-   </extension>
-
-   <extension point="org.eclipse.ui.editors">
-      <!-- @generated ExperimentAutomation -->
-      <editor
-            id="de.uka.ipd.sdq.experimentautomation.simucom.presentation.SimucomEditorID"
-            name="%_UI_SimucomEditor_label"
-            icon="icons/full/obj16/SimucomModelFile.gif"
-            extensions="simucom"
-            class="de.uka.ipd.sdq.experimentautomation.simucom.presentation.SimucomEditor"
-            contributorClass="de.uka.ipd.sdq.experimentautomation.simucom.presentation.SimucomActionBarContributor">
-      </editor>
-   </extension>
-
-   <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated ExperimentAutomation -->
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="de.uka.ipd.sdq.experimentautomation.eventsim.presentation.EventsimModelWizardID"
-            name="%_UI_EventsimModelWizard_label"
-            class="de.uka.ipd.sdq.experimentautomation.eventsim.presentation.EventsimModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/EventsimModelFile.gif">
-         <description>%_UI_EventsimModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
-
+null
 null
    <extension point="org.eclipse.ui.editors">
       <!-- @generated ExperimentAutomation -->
@@ -78,22 +39,7 @@ null
       </editor>
    </extension>
 
-   <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated ExperimentAutomation -->
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="de.uka.ipd.sdq.experimentautomation.simucom.presentation.SimucomModelWizardID"
-            name="%_UI_SimucomModelWizard_label"
-            class="de.uka.ipd.sdq.experimentautomation.simucom.presentation.SimucomModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/SimucomModelFile.gif">
-         <description>%_UI_SimucomModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
-
+null
 null
    <extension point="org.eclipse.ui.editors">
       <editor
@@ -122,6 +68,8 @@ null
       </wizard>
    </extension>
 
+null
+null
 null
    <extension point="org.eclipse.ui.newWizards">
       <category
@@ -166,6 +114,8 @@ null
    </extension>
 
 null
+null
+null
    <extension point="org.eclipse.ui.newWizards">
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
@@ -189,58 +139,6 @@ null
             extensions="abstractsimulation"
             class="de.uka.ipd.sdq.experimentautomation.abstractsimulation.presentation.AbstractsimulationEditor"
             contributorClass="de.uka.ipd.sdq.experimentautomation.abstractsimulation.presentation.AbstractsimulationActionBarContributor">
-      </editor>
-   </extension>
-
-   <extension point="org.eclipse.ui.newWizards">
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="de.uka.ipd.sdq.experimentautomation.simucom.presentation.SimuComModelWizardID"
-            name="%_UI_SimuComModelWizard_label"
-            class="de.uka.ipd.sdq.experimentautomation.simucom.presentation.SimucomModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/SimucomModelFile.gif">
-         <description>%_UI_SimuComModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
-
-   <extension point="org.eclipse.ui.editors">
-      <editor
-            id="de.uka.ipd.sdq.experimentautomation.simucom.presentation.SimuComEditorID"
-            name="%_UI_SimuComEditor_label"
-            icon="icons/full/obj16/SimucomModelFile.gif"
-            extensions="simucom"
-            class="de.uka.ipd.sdq.experimentautomation.simucom.presentation.SimucomEditor"
-            contributorClass="de.uka.ipd.sdq.experimentautomation.simucom.presentation.SimucomActionBarContributor">
-      </editor>
-   </extension>
-
-   <extension point="org.eclipse.ui.newWizards">
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="de.uka.ipd.sdq.experimentautomation.eventsim.presentation.EventSimModelWizardID"
-            name="%_UI_EventSimModelWizard_label"
-            class="de.uka.ipd.sdq.experimentautomation.eventsim.presentation.EventsimModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/EventsimModelFile.gif">
-         <description>%_UI_EventSimModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
-
-   <extension point="org.eclipse.ui.editors">
-      <editor
-            id="de.uka.ipd.sdq.experimentautomation.eventsim.presentation.EventSimEditorID"
-            name="%_UI_EventSimEditor_label"
-            icon="icons/full/obj16/EventsimModelFile.gif"
-            extensions="eventsim"
-            class="de.uka.ipd.sdq.experimentautomation.eventsim.presentation.EventsimEditor"
-            contributorClass="de.uka.ipd.sdq.experimentautomation.eventsim.presentation.EventsimActionBarContributor">
       </editor>
    </extension>
 

@@ -36,20 +36,21 @@ import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
  * <code>createXXX</code> method for each class of the model. <!-- end-user-doc -->
+ * 
  * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage
  * @generated
  */
 public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     /**
-     * The cached model package.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The cached model package. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected static ExperimentsPackage modelPackage;
 
     /**
-     * Creates an instance of the adapter factory.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Creates an instance of the adapter factory. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public ExperimentsAdapterFactory() {
@@ -59,134 +60,157 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Returns whether this factory is applicable for the type of the object.
-     * <!-- begin-user-doc
+     * Returns whether this factory is applicable for the type of the object. <!-- begin-user-doc
      * --> This implementation returns <code>true</code> if the object is either the model's package
      * or is an instance object of the model. <!-- end-user-doc -->
+     * 
      * @return whether this factory is applicable for the type of the object.
      * @generated
      */
     @Override
-    public boolean isFactoryForType(Object object) {
+    public boolean isFactoryForType(final Object object) {
         if (object == modelPackage) {
             return true;
         }
         if (object instanceof EObject) {
-            return ((EObject)object).eClass().getEPackage() == modelPackage;
+            return ((EObject) object).eClass().getEPackage() == modelPackage;
         }
         return false;
     }
 
     /**
-     * The switch that delegates to the <code>createXXX</code> methods.
-     * <!-- begin-user-doc --> <!--
+     * The switch that delegates to the <code>createXXX</code> methods. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      */
     protected ExperimentsSwitch<Adapter> modelSwitch = new ExperimentsSwitch<Adapter>() {
-            @Override
-            public Adapter caseExperimentRepository(ExperimentRepository object) {
-                return createExperimentRepositoryAdapter();
-            }
-            @Override
-            public Adapter caseExperiment(Experiment object) {
-                return createExperimentAdapter();
-            }
-            @Override
-            public Adapter caseVariation(Variation object) {
-                return createVariationAdapter();
-            }
-            @Override
-            public Adapter caseValueProvider(ValueProvider object) {
-                return createValueProviderAdapter();
-            }
-            @Override
-            public Adapter casePCMModelFiles(PCMModelFiles object) {
-                return createPCMModelFilesAdapter();
-            }
-            @Override
-            public Adapter caseToolConfiguration(ToolConfiguration object) {
-                return createToolConfigurationAdapter();
-            }
-            @Override
-            public Adapter caseExperimentDesign(ExperimentDesign object) {
-                return createExperimentDesignAdapter();
-            }
-            @Override
-            public Adapter caseResponseMeasurement(ResponseMeasurement object) {
-                return createResponseMeasurementAdapter();
-            }
-            @Override
-            public Adapter casePolynomialValueProvider(PolynomialValueProvider object) {
-                return createPolynomialValueProviderAdapter();
-            }
-            @Override
-            public Adapter caseExponentialValueProvider(ExponentialValueProvider object) {
-                return createExponentialValueProviderAdapter();
-            }
-            @Override
-            public Adapter caseSetValueProvider(SetValueProvider object) {
-                return createSetValueProviderAdapter();
-            }
-            @Override
-            public Adapter casePlacketBurmanDesign(PlacketBurmanDesign object) {
-                return createPlacketBurmanDesignAdapter();
-            }
-            @Override
-            public Adapter caseFullFactorialDesign(FullFactorialDesign object) {
-                return createFullFactorialDesignAdapter();
-            }
-            @Override
-            public Adapter caseFractionalFactorialDesign(FractionalFactorialDesign object) {
-                return createFractionalFactorialDesignAdapter();
-            }
-            @Override
-            public Adapter caseOneFactorAtATime(OneFactorAtATime object) {
-                return createOneFactorAtATimeAdapter();
-            }
-            @Override
-            public Adapter caseSimulationDurationMeasurement(SimulationDurationMeasurement object) {
-                return createSimulationDurationMeasurementAdapter();
-            }
-            @Override
-            public Adapter caseProfilingMeasurement(ProfilingMeasurement object) {
-                return createProfilingMeasurementAdapter();
-            }
-            @Override
-            public Adapter caseJMXMeasurement(JMXMeasurement object) {
-                return createJMXMeasurementAdapter();
-            }
-            @Override
-            public Adapter caseLinearValueProvider(LinearValueProvider object) {
-                return createLinearValueProviderAdapter();
-            }
-            @Override
-            public Adapter caseModification(Modification object) {
-                return createModificationAdapter();
-            }
-            @Override
-            public Adapter defaultCase(EObject object) {
-                return createEObjectAdapter();
-            }
-        };
+        @Override
+        public Adapter caseExperimentRepository(final ExperimentRepository object) {
+            return ExperimentsAdapterFactory.this.createExperimentRepositoryAdapter();
+        }
+
+        @Override
+        public Adapter caseExperiment(final Experiment object) {
+            return ExperimentsAdapterFactory.this.createExperimentAdapter();
+        }
+
+        @Override
+        public Adapter caseVariation(final Variation object) {
+            return ExperimentsAdapterFactory.this.createVariationAdapter();
+        }
+
+        @Override
+        public Adapter caseValueProvider(final ValueProvider object) {
+            return ExperimentsAdapterFactory.this.createValueProviderAdapter();
+        }
+
+        @Override
+        public Adapter casePCMModelFiles(final PCMModelFiles object) {
+            return ExperimentsAdapterFactory.this.createPCMModelFilesAdapter();
+        }
+
+        @Override
+        public Adapter caseToolConfiguration(final ToolConfiguration object) {
+            return ExperimentsAdapterFactory.this.createToolConfigurationAdapter();
+        }
+
+        @Override
+        public Adapter caseExperimentDesign(final ExperimentDesign object) {
+            return ExperimentsAdapterFactory.this.createExperimentDesignAdapter();
+        }
+
+        @Override
+        public Adapter caseResponseMeasurement(final ResponseMeasurement object) {
+            return ExperimentsAdapterFactory.this.createResponseMeasurementAdapter();
+        }
+
+        @Override
+        public Adapter casePolynomialValueProvider(final PolynomialValueProvider object) {
+            return ExperimentsAdapterFactory.this.createPolynomialValueProviderAdapter();
+        }
+
+        @Override
+        public Adapter caseExponentialValueProvider(final ExponentialValueProvider object) {
+            return ExperimentsAdapterFactory.this.createExponentialValueProviderAdapter();
+        }
+
+        @Override
+        public Adapter caseSetValueProvider(final SetValueProvider object) {
+            return ExperimentsAdapterFactory.this.createSetValueProviderAdapter();
+        }
+
+        @Override
+        public Adapter casePlacketBurmanDesign(final PlacketBurmanDesign object) {
+            return ExperimentsAdapterFactory.this.createPlacketBurmanDesignAdapter();
+        }
+
+        @Override
+        public Adapter caseFullFactorialDesign(final FullFactorialDesign object) {
+            return ExperimentsAdapterFactory.this.createFullFactorialDesignAdapter();
+        }
+
+        @Override
+        public Adapter caseFractionalFactorialDesign(final FractionalFactorialDesign object) {
+            return ExperimentsAdapterFactory.this.createFractionalFactorialDesignAdapter();
+        }
+
+        @Override
+        public Adapter caseOneFactorAtATime(final OneFactorAtATime object) {
+            return ExperimentsAdapterFactory.this.createOneFactorAtATimeAdapter();
+        }
+
+        @Override
+        public Adapter caseSimulationDurationMeasurement(final SimulationDurationMeasurement object) {
+            return ExperimentsAdapterFactory.this.createSimulationDurationMeasurementAdapter();
+        }
+
+        @Override
+        public Adapter caseProfilingMeasurement(final ProfilingMeasurement object) {
+            return ExperimentsAdapterFactory.this.createProfilingMeasurementAdapter();
+        }
+
+        @Override
+        public Adapter caseJMXMeasurement(final JMXMeasurement object) {
+            return ExperimentsAdapterFactory.this.createJMXMeasurementAdapter();
+        }
+
+        @Override
+        public Adapter caseLinearValueProvider(final LinearValueProvider object) {
+            return ExperimentsAdapterFactory.this.createLinearValueProviderAdapter();
+        }
+
+        @Override
+        public Adapter caseModification(final Modification object) {
+            return ExperimentsAdapterFactory.this.createModificationAdapter();
+        }
+
+        @Override
+        public Adapter defaultCase(final EObject object) {
+            return ExperimentsAdapterFactory.this.createEObjectAdapter();
+        }
+    };
 
     /**
-     * Creates an adapter for the <code>target</code>.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @param target the object to adapt.
+     * Creates an adapter for the <code>target</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @param target
+     *            the object to adapt.
      * @return the adapter for the <code>target</code>.
      * @generated
      */
     @Override
-    public Adapter createAdapter(Notifier target) {
-        return modelSwitch.doSwitch((EObject)target);
+    public Adapter createAdapter(final Notifier target) {
+        return this.modelSwitch.doSwitch((EObject) target);
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository <em>Experiment Repository</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository
+     * <em>Experiment Repository</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository
      * @generated
@@ -226,10 +250,12 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.experimentautomation.experiments.ValueProvider <em>Value Provider</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ValueProvider <em>Value Provider</em>}
+     * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
      * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.ValueProvider
      * @generated
@@ -239,10 +265,12 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles <em>PCM Model Files</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns null
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles
+     * <em>PCM Model Files</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles
      * @generated
@@ -252,10 +280,12 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration <em>Tool Configuration</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration
+     * <em>Tool Configuration</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration
      * @generated
@@ -265,10 +295,12 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.experimentautomation.experiments.ExperimentDesign <em>Experiment Design</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ExperimentDesign
+     * <em>Experiment Design</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentDesign
      * @generated
@@ -278,10 +310,12 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.experimentautomation.experiments.ResponseMeasurement <em>Response Measurement</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ResponseMeasurement
+     * <em>Response Measurement</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.ResponseMeasurement
      * @generated
@@ -291,10 +325,12 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider <em>Polynomial Value Provider</em>}'.
-     * <!-- begin-user-doc --> This default implementation
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider
+     * <em>Polynomial Value Provider</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider
      * @generated
@@ -304,10 +340,12 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider <em>Exponential Value Provider</em>}'.
-     * <!-- begin-user-doc --> This default implementation
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider
+     * <em>Exponential Value Provider</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider
      * @generated
@@ -317,10 +355,12 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider <em>Set Value Provider</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider
+     * <em>Set Value Provider</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider
      * @generated
@@ -330,10 +370,12 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.experimentautomation.experiments.PlacketBurmanDesign <em>Placket Burman Design</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PlacketBurmanDesign
+     * <em>Placket Burman Design</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.PlacketBurmanDesign
      * @generated
@@ -343,10 +385,12 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.experimentautomation.experiments.FullFactorialDesign <em>Full Factorial Design</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.FullFactorialDesign
+     * <em>Full Factorial Design</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.FullFactorialDesign
      * @generated
@@ -356,10 +400,12 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.experimentautomation.experiments.FractionalFactorialDesign <em>Fractional Factorial Design</em>}'.
-     * <!-- begin-user-doc --> This default implementation
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.FractionalFactorialDesign
+     * <em>Fractional Factorial Design</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.FractionalFactorialDesign
      * @generated
@@ -369,10 +415,12 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.experimentautomation.experiments.OneFactorAtATime <em>One Factor At ATime</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.OneFactorAtATime
+     * <em>One Factor At ATime</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.OneFactorAtATime
      * @generated
@@ -382,10 +430,12 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.experimentautomation.experiments.SimulationDurationMeasurement <em>Simulation Duration Measurement</em>}'.
-     * <!-- begin-user-doc --> This default
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.SimulationDurationMeasurement
+     * <em>Simulation Duration Measurement</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.SimulationDurationMeasurement
      * @generated
@@ -395,10 +445,12 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.experimentautomation.experiments.ProfilingMeasurement <em>Profiling Measurement</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ProfilingMeasurement
+     * <em>Profiling Measurement</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.ProfilingMeasurement
      * @generated
@@ -408,10 +460,12 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement <em>JMX Measurement</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns null
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement
+     * <em>JMX Measurement</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement
      * @generated
@@ -421,10 +475,12 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider <em>Linear Value Provider</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider
+     * <em>Linear Value Provider</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider
      * @generated
@@ -434,10 +490,12 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.experimentautomation.experiments.Modification <em>Modification</em>}'.
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Modification <em>Modification</em>}'.
      * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
+     * 
      * @return the new adapter.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.Modification
      * @generated
@@ -447,9 +505,9 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for the default case.
-     * <!-- begin-user-doc --> This default
+     * Creates a new adapter for the default case. <!-- begin-user-doc --> This default
      * implementation returns null. <!-- end-user-doc -->
+     * 
      * @return the new adapter.
      * @generated
      */

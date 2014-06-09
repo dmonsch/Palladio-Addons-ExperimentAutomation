@@ -10,20 +10,20 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: de.uka.ipd.sdq.experimentautomation.abstractsimulation,
  de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl,
  de.uka.ipd.sdq.experimentautomation.abstractsimulation.util,
- de.uka.ipd.sdq.experimentautomation.eventsim,
- de.uka.ipd.sdq.experimentautomation.eventsim.impl,
- de.uka.ipd.sdq.experimentautomation.eventsim.util,
  de.uka.ipd.sdq.experimentautomation.experiments,
  de.uka.ipd.sdq.experimentautomation.experiments.impl,
  de.uka.ipd.sdq.experimentautomation.experiments.util,
- de.uka.ipd.sdq.experimentautomation.simucom,
- de.uka.ipd.sdq.experimentautomation.simucom.impl,
- de.uka.ipd.sdq.experimentautomation.simucom.util,
  de.uka.ipd.sdq.experimentautomation.variation,
  de.uka.ipd.sdq.experimentautomation.variation.impl,
  de.uka.ipd.sdq.experimentautomation.variation.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
- de.uka.ipd.sdq.identifier;visibility:=reexport
+ de.uka.ipd.sdq.identifier;visibility:=reexport,
+ org.palladiosimulator.metricspec;visibility:=reexport,
+ org.palladiosimulator.edp2;bundle-version="2.0.0",
+ org.palladiosimulator.edp2.edit;bundle-version="1.0.0",
+ org.palladiosimulator.pcm.edp2.measuringpoint;bundle-version="1.0.0",
+ org.palladiosimulator.pcm.edp2.measuringpoint.edit;bundle-version="1.0.0",
+ org.palladiosimulator.edp2.dao;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy

@@ -195,13 +195,9 @@
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="StopCondition" abstract="true"/>
-  </eSubpackages>
-  <eSubpackages name="simucom" nsURI="http://sdq.ipd.uka.de/ExperimentAutomation/SimuCom/1.0"
-      nsPrefix="ExperimentAutomation.Experiments.SimuCom">
-    <eClassifiers xsi:type="ecore:EClass" name="SimuComConfiguration" eSuperTypes="#//abstractsimulation/AbstractSimulationConfiguration"/>
-  </eSubpackages>
-  <eSubpackages name="eventsim" nsURI="http://sdq.ipd.uka.de/ExperimentAutomation/EventSim/1.0"
-      nsPrefix="ExperimentAutomation.Experiments.EventSim">
-    <eClassifiers xsi:type="ecore:EClass" name="EventSimConfiguration" eSuperTypes="#//abstractsimulation/AbstractSimulationConfiguration"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EDP2" eSuperTypes="#//abstractsimulation/PersistenceFramework">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repository" lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.edp2/model/EDP2.ecore#//Repository/Repository"/>
+    </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

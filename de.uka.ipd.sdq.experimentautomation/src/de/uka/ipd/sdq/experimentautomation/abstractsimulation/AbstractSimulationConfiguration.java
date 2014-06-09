@@ -9,19 +9,31 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
 /**
  * <!-- begin-user-doc --> A representation of the model object '
  * <em><b>Abstract Simulation Configuration</b></em>'. <!-- end-user-doc -->
- *
+ * 
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getPersistenceFramework <em>Persistence Framework</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getStopConditions <em>Stop Conditions</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed <em>Random Number Generator Seed</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateLinkingResources <em>Simulate Linking Resources</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures <em>Simulate Failures</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration <em>Probe Spec Configuration</em>}</li>
+ * <li>
+ * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getPersistenceFramework
+ * <em>Persistence Framework</em>}</li>
+ * <li>
+ * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getStopConditions
+ * <em>Stop Conditions</em>}</li>
+ * <li>
+ * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed
+ * <em>Random Number Generator Seed</em>}</li>
+ * <li>
+ * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateLinkingResources
+ * <em>Simulate Linking Resources</em>}</li>
+ * <li>
+ * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
+ * <em>Simulate Failures</em>}</li>
+ * <li>
+ * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration
+ * <em>Probe Spec Configuration</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration()
  * @model abstract="true"
  * @generated
@@ -45,10 +57,13 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
     PersistenceFramework getPersistenceFramework();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getPersistenceFramework <em>Persistence Framework</em>}' containment reference.
-     * <!-- begin-user-doc --> <!--
+     * Sets the value of the '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getPersistenceFramework
+     * <em>Persistence Framework</em>}' containment reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * @param value the new value of the '<em>Persistence Framework</em>' containment reference.
+     * 
+     * @param value
+     *            the new value of the '<em>Persistence Framework</em>' containment reference.
      * @see #getPersistenceFramework()
      * @generated
      */
@@ -73,13 +88,14 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
     EList<StopCondition> getStopConditions();
 
     /**
-     * Returns the value of the '<em><b>Random Number Generator Seed</b></em>' containment reference.
-     * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Random Number Generator Seed</b></em>' containment
+     * reference. <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Random Number Generator Seed</em>' containment reference isn't
      * clear, there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * 
      * @return the value of the '<em>Random Number Generator Seed</em>' containment reference.
      * @see #setRandomNumberGeneratorSeed(RandomNumberGeneratorSeed)
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_RandomNumberGeneratorSeed()
@@ -89,10 +105,14 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
     RandomNumberGeneratorSeed getRandomNumberGeneratorSeed();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed <em>Random Number Generator Seed</em>}' containment reference.
-     * <!-- begin-user-doc --> <!--
+     * Sets the value of the '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed
+     * <em>Random Number Generator Seed</em>}' containment reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * @param value the new value of the '<em>Random Number Generator Seed</em>' containment reference.
+     * 
+     * @param value
+     *            the new value of the '<em>Random Number Generator Seed</em>' containment
+     *            reference.
      * @see #getRandomNumberGeneratorSeed()
      * @generated
      */
@@ -129,14 +149,14 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
     void setSimulateLinkingResources(boolean value);
 
     /**
-     * Returns the value of the '<em><b>Simulate Failures</b></em>' attribute.
-     * <!-- begin-user-doc
+     * Returns the value of the '<em><b>Simulate Failures</b></em>' attribute. <!-- begin-user-doc
      * -->
      * <p>
      * If the meaning of the '<em>Simulate Failures</em>' attribute isn't clear, there really should
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * 
      * @return the value of the '<em>Simulate Failures</em>' attribute.
      * @see #setSimulateFailures(boolean)
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_SimulateFailures()
@@ -146,9 +166,12 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
     boolean isSimulateFailures();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures <em>Simulate Failures</em>}' attribute.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @param value the new value of the '<em>Simulate Failures</em>' attribute.
+     * Sets the value of the '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
+     * <em>Simulate Failures</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @param value
+     *            the new value of the '<em>Simulate Failures</em>' attribute.
      * @see #isSimulateFailures()
      * @generated
      */
@@ -162,6 +185,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * 
      * @return the value of the '<em>Probe Spec Configuration</em>' containment reference.
      * @see #setProbeSpecConfiguration(ProbeSpecConfiguration)
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_ProbeSpecConfiguration()
@@ -171,10 +195,13 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
     ProbeSpecConfiguration getProbeSpecConfiguration();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration <em>Probe Spec Configuration</em>}' containment reference.
-     * <!-- begin-user-doc --> <!--
+     * Sets the value of the '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration
+     * <em>Probe Spec Configuration</em>}' containment reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * @param value the new value of the '<em>Probe Spec Configuration</em>' containment reference.
+     * 
+     * @param value
+     *            the new value of the '<em>Probe Spec Configuration</em>' containment reference.
      * @see #getProbeSpecConfiguration()
      * @generated
      */

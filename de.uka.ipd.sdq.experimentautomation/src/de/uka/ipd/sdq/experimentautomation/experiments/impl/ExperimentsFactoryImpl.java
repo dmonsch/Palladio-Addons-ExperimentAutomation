@@ -33,30 +33,31 @@ import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsFactory {
     /**
-     * Creates the default factory implementation.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public static ExperimentsFactory init() {
         try {
-            ExperimentsFactory theExperimentsFactory = (ExperimentsFactory)EPackage.Registry.INSTANCE.getEFactory(ExperimentsPackage.eNS_URI);
+            final ExperimentsFactory theExperimentsFactory = (ExperimentsFactory) EPackage.Registry.INSTANCE
+                    .getEFactory(ExperimentsPackage.eNS_URI);
             if (theExperimentsFactory != null) {
                 return theExperimentsFactory;
             }
-        }
-        catch (Exception exception) {
+        } catch (final Exception exception) {
             EcorePlugin.INSTANCE.log(exception);
         }
         return new ExperimentsFactoryImpl();
     }
 
     /**
-     * Creates an instance of the factory.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public ExperimentsFactoryImpl() {
@@ -65,186 +66,238 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    public EObject create(EClass eClass) {
+    public EObject create(final EClass eClass) {
         switch (eClass.getClassifierID()) {
-            case ExperimentsPackage.EXPERIMENT_REPOSITORY: return createExperimentRepository();
-            case ExperimentsPackage.EXPERIMENT: return createExperiment();
-            case ExperimentsPackage.VARIATION: return createVariation();
-            case ExperimentsPackage.PCM_MODEL_FILES: return createPCMModelFiles();
-            case ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER: return createPolynomialValueProvider();
-            case ExperimentsPackage.EXPONENTIAL_VALUE_PROVIDER: return createExponentialValueProvider();
-            case ExperimentsPackage.SET_VALUE_PROVIDER: return createSetValueProvider();
-            case ExperimentsPackage.PLACKET_BURMAN_DESIGN: return createPlacketBurmanDesign();
-            case ExperimentsPackage.FULL_FACTORIAL_DESIGN: return createFullFactorialDesign();
-            case ExperimentsPackage.FRACTIONAL_FACTORIAL_DESIGN: return createFractionalFactorialDesign();
-            case ExperimentsPackage.ONE_FACTOR_AT_ATIME: return createOneFactorAtATime();
-            case ExperimentsPackage.SIMULATION_DURATION_MEASUREMENT: return createSimulationDurationMeasurement();
-            case ExperimentsPackage.PROFILING_MEASUREMENT: return createProfilingMeasurement();
-            case ExperimentsPackage.JMX_MEASUREMENT: return createJMXMeasurement();
-            case ExperimentsPackage.LINEAR_VALUE_PROVIDER: return createLinearValueProvider();
-            case ExperimentsPackage.MODIFICATION: return createModification();
-            default:
-                throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+        case ExperimentsPackage.EXPERIMENT_REPOSITORY:
+            return this.createExperimentRepository();
+        case ExperimentsPackage.EXPERIMENT:
+            return this.createExperiment();
+        case ExperimentsPackage.VARIATION:
+            return this.createVariation();
+        case ExperimentsPackage.PCM_MODEL_FILES:
+            return this.createPCMModelFiles();
+        case ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER:
+            return this.createPolynomialValueProvider();
+        case ExperimentsPackage.EXPONENTIAL_VALUE_PROVIDER:
+            return this.createExponentialValueProvider();
+        case ExperimentsPackage.SET_VALUE_PROVIDER:
+            return this.createSetValueProvider();
+        case ExperimentsPackage.PLACKET_BURMAN_DESIGN:
+            return this.createPlacketBurmanDesign();
+        case ExperimentsPackage.FULL_FACTORIAL_DESIGN:
+            return this.createFullFactorialDesign();
+        case ExperimentsPackage.FRACTIONAL_FACTORIAL_DESIGN:
+            return this.createFractionalFactorialDesign();
+        case ExperimentsPackage.ONE_FACTOR_AT_ATIME:
+            return this.createOneFactorAtATime();
+        case ExperimentsPackage.SIMULATION_DURATION_MEASUREMENT:
+            return this.createSimulationDurationMeasurement();
+        case ExperimentsPackage.PROFILING_MEASUREMENT:
+            return this.createProfilingMeasurement();
+        case ExperimentsPackage.JMX_MEASUREMENT:
+            return this.createJMXMeasurement();
+        case ExperimentsPackage.LINEAR_VALUE_PROVIDER:
+            return this.createLinearValueProvider();
+        case ExperimentsPackage.MODIFICATION:
+            return this.createModification();
+        default:
+            throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public ExperimentRepository createExperimentRepository() {
-        ExperimentRepositoryImpl experimentRepository = new ExperimentRepositoryImpl();
+        final ExperimentRepositoryImpl experimentRepository = new ExperimentRepositoryImpl();
         return experimentRepository;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public Experiment createExperiment() {
-        ExperimentImpl experiment = new ExperimentImpl();
+        final ExperimentImpl experiment = new ExperimentImpl();
         return experiment;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public Variation createVariation() {
-        VariationImpl variation = new VariationImpl();
+        final VariationImpl variation = new VariationImpl();
         return variation;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public PCMModelFiles createPCMModelFiles() {
-        PCMModelFilesImpl pcmModelFiles = new PCMModelFilesImpl();
+        final PCMModelFilesImpl pcmModelFiles = new PCMModelFilesImpl();
         return pcmModelFiles;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public PolynomialValueProvider createPolynomialValueProvider() {
-        PolynomialValueProviderImpl polynomialValueProvider = new PolynomialValueProviderImpl();
+        final PolynomialValueProviderImpl polynomialValueProvider = new PolynomialValueProviderImpl();
         return polynomialValueProvider;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public ExponentialValueProvider createExponentialValueProvider() {
-        ExponentialValueProviderImpl exponentialValueProvider = new ExponentialValueProviderImpl();
+        final ExponentialValueProviderImpl exponentialValueProvider = new ExponentialValueProviderImpl();
         return exponentialValueProvider;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public SetValueProvider createSetValueProvider() {
-        SetValueProviderImpl setValueProvider = new SetValueProviderImpl();
+        final SetValueProviderImpl setValueProvider = new SetValueProviderImpl();
         return setValueProvider;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public PlacketBurmanDesign createPlacketBurmanDesign() {
-        PlacketBurmanDesignImpl placketBurmanDesign = new PlacketBurmanDesignImpl();
+        final PlacketBurmanDesignImpl placketBurmanDesign = new PlacketBurmanDesignImpl();
         return placketBurmanDesign;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public FullFactorialDesign createFullFactorialDesign() {
-        FullFactorialDesignImpl fullFactorialDesign = new FullFactorialDesignImpl();
+        final FullFactorialDesignImpl fullFactorialDesign = new FullFactorialDesignImpl();
         return fullFactorialDesign;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public FractionalFactorialDesign createFractionalFactorialDesign() {
-        FractionalFactorialDesignImpl fractionalFactorialDesign = new FractionalFactorialDesignImpl();
+        final FractionalFactorialDesignImpl fractionalFactorialDesign = new FractionalFactorialDesignImpl();
         return fractionalFactorialDesign;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public OneFactorAtATime createOneFactorAtATime() {
-        OneFactorAtATimeImpl oneFactorAtATime = new OneFactorAtATimeImpl();
+        final OneFactorAtATimeImpl oneFactorAtATime = new OneFactorAtATimeImpl();
         return oneFactorAtATime;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public SimulationDurationMeasurement createSimulationDurationMeasurement() {
-        SimulationDurationMeasurementImpl simulationDurationMeasurement = new SimulationDurationMeasurementImpl();
+        final SimulationDurationMeasurementImpl simulationDurationMeasurement = new SimulationDurationMeasurementImpl();
         return simulationDurationMeasurement;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public ProfilingMeasurement createProfilingMeasurement() {
-        ProfilingMeasurementImpl profilingMeasurement = new ProfilingMeasurementImpl();
+        final ProfilingMeasurementImpl profilingMeasurement = new ProfilingMeasurementImpl();
         return profilingMeasurement;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public JMXMeasurement createJMXMeasurement() {
-        JMXMeasurementImpl jmxMeasurement = new JMXMeasurementImpl();
+        final JMXMeasurementImpl jmxMeasurement = new JMXMeasurementImpl();
         return jmxMeasurement;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public LinearValueProvider createLinearValueProvider() {
-        LinearValueProviderImpl linearValueProvider = new LinearValueProviderImpl();
+        final LinearValueProviderImpl linearValueProvider = new LinearValueProviderImpl();
         return linearValueProvider;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public Modification createModification() {
-        ModificationImpl modification = new ModificationImpl();
+        final ModificationImpl modification = new ModificationImpl();
         return modification;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public ExperimentsPackage getExperimentsPackage() {
-        return (ExperimentsPackage)getEPackage();
+        return (ExperimentsPackage) this.getEPackage();
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @deprecated
      * @generated
      */

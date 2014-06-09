@@ -12,12 +12,13 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.MemoryDatasource;
  * '. <!-- end-user-doc -->
  * <p>
  * </p>
- *
+ * 
  * @generated
  */
 public class MemoryDatasourceImpl extends SensorFrameworkDatasourceImpl implements MemoryDatasource {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected MemoryDatasourceImpl() {
@@ -26,6 +27,7 @@ public class MemoryDatasourceImpl extends SensorFrameworkDatasourceImpl implemen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override

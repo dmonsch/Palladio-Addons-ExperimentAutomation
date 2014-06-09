@@ -17,12 +17,13 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ResponseMeasurement;
  * <em><b>Response Measurement</b></em>'. <!-- end-user-doc -->
  * <p>
  * </p>
- *
+ * 
  * @generated
  */
 public abstract class ResponseMeasurementImpl extends EObjectImpl implements ResponseMeasurement {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected ResponseMeasurementImpl() {
@@ -31,6 +32,7 @@ public abstract class ResponseMeasurementImpl extends EObjectImpl implements Res
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override

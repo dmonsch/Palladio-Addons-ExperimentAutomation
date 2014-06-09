@@ -48,36 +48,6 @@
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated ExperimentAutomation -->
-      <package
-            uri="http://sdq.ipd.uka.de/ExperimentAutomation/SimuCom/1.0"
-            class="de.uka.ipd.sdq.experimentautomation.simucom.SimucomPackage"
-            genModel="model/ExperimentAutomation.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.extension_parser">
-      <!-- @generated ExperimentAutomation -->
-      <parser
-            type="simucom"
-            class="de.uka.ipd.sdq.experimentautomation.simucom.util.SimucomResourceFactoryImpl"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated ExperimentAutomation -->
-      <package
-            uri="http://sdq.ipd.uka.de/ExperimentAutomation/EventSim/1.0"
-            class="de.uka.ipd.sdq.experimentautomation.eventsim.EventsimPackage"
-            genModel="model/ExperimentAutomation.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.extension_parser">
-      <!-- @generated ExperimentAutomation -->
-      <parser
-            type="eventsim"
-            class="de.uka.ipd.sdq.experimentautomation.eventsim.util.EventsimResourceFactoryImpl"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://sdq.ipd.uka.de/ExperimentAutomation/AbstractSimulation/1.0"
             class="de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage"
@@ -88,32 +58,6 @@
       <parser
             type="abstractsimulation"
             class="de.uka.ipd.sdq.experimentautomation.abstractsimulation.util.AbstractsimulationResourceFactoryImpl"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <package
-            uri="http://sdq.ipd.uka.de/ExperimentAutomation/SimuCom/1.0"
-            class="de.uka.ipd.sdq.experimentautomation.simucom.SimucomPackage"
-            genModel="model/ExperimentAutomation.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.extension_parser">
-      <parser
-            type="simucom"
-            class="de.uka.ipd.sdq.experimentautomation.simucom.util.SimucomResourceFactoryImpl"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <package
-            uri="http://sdq.ipd.uka.de/ExperimentAutomation/EventSim/1.0"
-            class="de.uka.ipd.sdq.experimentautomation.eventsim.EventsimPackage"
-            genModel="model/ExperimentAutomation.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.extension_parser">
-      <parser
-            type="eventsim"
-            class="de.uka.ipd.sdq.experimentautomation.eventsim.util.EventsimResourceFactoryImpl"/>
    </extension>
 
 </plugin>

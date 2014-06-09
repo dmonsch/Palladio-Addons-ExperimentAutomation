@@ -5,27 +5,29 @@ package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
 /**
  * <!-- begin-user-doc --> A representation of the model object '
  * <em><b>Sim Time Stop Condition</b></em>'. <!-- end-user-doc -->
- *
+ * 
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition#getSimulationTime <em>Simulation Time</em>}</li>
+ * <li>
+ * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition#getSimulationTime
+ * <em>Simulation Time</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getSimTimeStopCondition()
  * @model
  * @generated
  */
 public interface SimTimeStopCondition extends StopCondition {
     /**
-     * Returns the value of the '<em><b>Simulation Time</b></em>' attribute.
-     * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Simulation Time</b></em>' attribute. <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Simulation Time</em>' attribute isn't clear, there really should
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * 
      * @return the value of the '<em>Simulation Time</em>' attribute.
      * @see #setSimulationTime(int)
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getSimTimeStopCondition_SimulationTime()
@@ -35,9 +37,12 @@ public interface SimTimeStopCondition extends StopCondition {
     int getSimulationTime();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition#getSimulationTime <em>Simulation Time</em>}' attribute.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @param value the new value of the '<em>Simulation Time</em>' attribute.
+     * Sets the value of the '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition#getSimulationTime
+     * <em>Simulation Time</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @param value
+     *            the new value of the '<em>Simulation Time</em>' attribute.
      * @see #getSimulationTime()
      * @generated
      */

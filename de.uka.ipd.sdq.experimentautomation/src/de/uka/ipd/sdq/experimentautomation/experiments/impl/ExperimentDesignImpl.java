@@ -17,12 +17,13 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
  * '. <!-- end-user-doc -->
  * <p>
  * </p>
- *
+ * 
  * @generated
  */
 public abstract class ExperimentDesignImpl extends EObjectImpl implements ExperimentDesign {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected ExperimentDesignImpl() {
@@ -31,6 +32,7 @@ public abstract class ExperimentDesignImpl extends EObjectImpl implements Experi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override

@@ -20,38 +20,40 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
  * <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
+ * 
  * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationFactory
  * @model kind="package"
  * @generated
  */
 public interface AbstractsimulationPackage extends EPackage {
     /**
-     * The package name.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The package name. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     String eNAME = "abstractsimulation";
 
     /**
-     * The package namespace URI.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     String eNS_URI = "http://sdq.ipd.uka.de/ExperimentAutomation/AbstractSimulation/1.0";
 
     /**
-     * The package namespace name.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     String eNS_PREFIX = "ExperimentAutomation.Experiments.AbstractSimulation";
 
     /**
-     * The singleton instance of the package.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The singleton instance of the package. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-    AbstractsimulationPackage eINSTANCE = de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl.init();
+    AbstractsimulationPackage eINSTANCE = de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl
+            .init();
 
     /**
      * The meta object id for the '
@@ -66,9 +68,9 @@ public interface AbstractsimulationPackage extends EPackage {
     int ABSTRACT_SIMULATION_CONFIGURATION = 0;
 
     /**
-     * The feature id for the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc --> <!--
+     * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
@@ -95,6 +97,7 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Random Number Generator Seed</b></em>' containment reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
@@ -110,9 +113,9 @@ public interface AbstractsimulationPackage extends EPackage {
     int ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES = ExperimentsPackage.TOOL_CONFIGURATION_FEATURE_COUNT + 3;
 
     /**
-     * The feature id for the '<em><b>Simulate Failures</b></em>' attribute.
-     * <!-- begin-user-doc -->
+     * The feature id for the '<em><b>Simulate Failures</b></em>' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
@@ -130,14 +133,17 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Abstract Simulation Configuration</em>' class.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
     int ABSTRACT_SIMULATION_CONFIGURATION_FEATURE_COUNT = ExperimentsPackage.TOOL_CONFIGURATION_FEATURE_COUNT + 6;
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.PersistenceFrameworkImpl <em>Persistence Framework</em>}' class.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.PersistenceFrameworkImpl
+     * <em>Persistence Framework</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.PersistenceFrameworkImpl
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getPersistenceFramework()
      * @generated
@@ -154,8 +160,10 @@ public interface AbstractsimulationPackage extends EPackage {
     int PERSISTENCE_FRAMEWORK_FEATURE_COUNT = 0;
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl <em>Random Number Generator Seed</em>}' class.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl
+     * <em>Random Number Generator Seed</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getRandomNumberGeneratorSeed()
      * @generated
@@ -163,54 +171,54 @@ public interface AbstractsimulationPackage extends EPackage {
     int RANDOM_NUMBER_GENERATOR_SEED = 2;
 
     /**
-     * The feature id for the '<em><b>Seed0</b></em>' attribute.
-     * <!-- begin-user-doc --> <!--
+     * The feature id for the '<em><b>Seed0</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
     int RANDOM_NUMBER_GENERATOR_SEED__SEED0 = 0;
 
     /**
-     * The feature id for the '<em><b>Seed1</b></em>' attribute.
-     * <!-- begin-user-doc --> <!--
+     * The feature id for the '<em><b>Seed1</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
     int RANDOM_NUMBER_GENERATOR_SEED__SEED1 = 1;
 
     /**
-     * The feature id for the '<em><b>Seed2</b></em>' attribute.
-     * <!-- begin-user-doc --> <!--
+     * The feature id for the '<em><b>Seed2</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
     int RANDOM_NUMBER_GENERATOR_SEED__SEED2 = 2;
 
     /**
-     * The feature id for the '<em><b>Seed3</b></em>' attribute.
-     * <!-- begin-user-doc --> <!--
+     * The feature id for the '<em><b>Seed3</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
     int RANDOM_NUMBER_GENERATOR_SEED__SEED3 = 3;
 
     /**
-     * The feature id for the '<em><b>Seed4</b></em>' attribute.
-     * <!-- begin-user-doc --> <!--
+     * The feature id for the '<em><b>Seed4</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
     int RANDOM_NUMBER_GENERATOR_SEED__SEED4 = 4;
 
     /**
-     * The feature id for the '<em><b>Seed5</b></em>' attribute.
-     * <!-- begin-user-doc --> <!--
+     * The feature id for the '<em><b>Seed5</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
@@ -226,8 +234,10 @@ public interface AbstractsimulationPackage extends EPackage {
     int RANDOM_NUMBER_GENERATOR_SEED_FEATURE_COUNT = 6;
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl <em>Probe Spec Configuration</em>}' class.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl
+     * <em>Probe Spec Configuration</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getProbeSpecConfiguration()
      * @generated
@@ -235,9 +245,9 @@ public interface AbstractsimulationPackage extends EPackage {
     int PROBE_SPEC_CONFIGURATION = 3;
 
     /**
-     * The feature id for the '<em><b>Blackboard Type</b></em>' attribute.
-     * <!-- begin-user-doc -->
+     * The feature id for the '<em><b>Blackboard Type</b></em>' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
@@ -253,8 +263,10 @@ public interface AbstractsimulationPackage extends EPackage {
     int PROBE_SPEC_CONFIGURATION_FEATURE_COUNT = 1;
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SensorFrameworkImpl <em>Sensor Framework</em>}' class.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SensorFrameworkImpl
+     * <em>Sensor Framework</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SensorFrameworkImpl
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSensorFramework()
      * @generated
@@ -280,8 +292,10 @@ public interface AbstractsimulationPackage extends EPackage {
     int SENSOR_FRAMEWORK_FEATURE_COUNT = PERSISTENCE_FRAMEWORK_FEATURE_COUNT + 1;
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SensorFrameworkDatasourceImpl <em>Sensor Framework Datasource</em>}' class.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SensorFrameworkDatasourceImpl
+     * <em>Sensor Framework Datasource</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SensorFrameworkDatasourceImpl
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSensorFrameworkDatasource()
      * @generated
@@ -298,8 +312,10 @@ public interface AbstractsimulationPackage extends EPackage {
     int SENSOR_FRAMEWORK_DATASOURCE_FEATURE_COUNT = 0;
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl <em>Memory Datasource</em>}' class.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl
+     * <em>Memory Datasource</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getMemoryDatasource()
      * @generated
@@ -316,8 +332,10 @@ public interface AbstractsimulationPackage extends EPackage {
     int MEMORY_DATASOURCE_FEATURE_COUNT = SENSOR_FRAMEWORK_DATASOURCE_FEATURE_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.FileDatasourceImpl <em>File Datasource</em>}' class.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.FileDatasourceImpl
+     * <em>File Datasource</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.FileDatasourceImpl
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getFileDatasource()
      * @generated
@@ -325,9 +343,9 @@ public interface AbstractsimulationPackage extends EPackage {
     int FILE_DATASOURCE = 7;
 
     /**
-     * The feature id for the '<em><b>Location</b></em>' attribute.
-     * <!-- begin-user-doc --> <!--
+     * The feature id for the '<em><b>Location</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
@@ -343,8 +361,10 @@ public interface AbstractsimulationPackage extends EPackage {
     int FILE_DATASOURCE_FEATURE_COUNT = SENSOR_FRAMEWORK_DATASOURCE_FEATURE_COUNT + 1;
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.StopConditionImpl <em>Stop Condition</em>}' class.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.StopConditionImpl
+     * <em>Stop Condition</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.StopConditionImpl
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getStopCondition()
      * @generated
@@ -352,9 +372,9 @@ public interface AbstractsimulationPackage extends EPackage {
     int STOP_CONDITION = 10;
 
     /**
-     * The number of structural features of the '<em>Stop Condition</em>' class.
-     * <!-- begin-user-doc
+     * The number of structural features of the '<em>Stop Condition</em>' class. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
@@ -373,9 +393,9 @@ public interface AbstractsimulationPackage extends EPackage {
     int MEASUREMENT_COUNT_STOP_CONDITION = 8;
 
     /**
-     * The feature id for the '<em><b>Measurement Count</b></em>' attribute.
-     * <!-- begin-user-doc -->
+     * The feature id for the '<em><b>Measurement Count</b></em>' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
@@ -384,14 +404,17 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Measurement Count Stop Condition</em>' class.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
     int MEASUREMENT_COUNT_STOP_CONDITION_FEATURE_COUNT = STOP_CONDITION_FEATURE_COUNT + 1;
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl <em>Sim Time Stop Condition</em>}' class.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl
+     * <em>Sim Time Stop Condition</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSimTimeStopCondition()
      * @generated
@@ -399,9 +422,9 @@ public interface AbstractsimulationPackage extends EPackage {
     int SIM_TIME_STOP_CONDITION = 9;
 
     /**
-     * The feature id for the '<em><b>Simulation Time</b></em>' attribute.
-     * <!-- begin-user-doc -->
+     * The feature id for the '<em><b>Simulation Time</b></em>' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
@@ -417,17 +440,50 @@ public interface AbstractsimulationPackage extends EPackage {
     int SIM_TIME_STOP_CONDITION_FEATURE_COUNT = STOP_CONDITION_FEATURE_COUNT + 1;
 
     /**
-     * The meta object id for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType <em>Blackboard Type</em>}' enum.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.EDP2Impl <em>EDP2</em>}'
+     * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.EDP2Impl
+     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getEDP2()
+     * @generated
+     */
+    int EDP2 = 11;
+
+    /**
+     * The feature id for the '<em><b>Repository</b></em>' reference. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int EDP2__REPOSITORY = PERSISTENCE_FRAMEWORK_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>EDP2</em>' class. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int EDP2_FEATURE_COUNT = PERSISTENCE_FRAMEWORK_FEATURE_COUNT + 1;
+
+    /**
+     * The meta object id for the '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType
+     * <em>Blackboard Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getBlackboardType()
      * @generated
      */
-    int BLACKBOARD_TYPE = 11;
+    int BLACKBOARD_TYPE = 12;
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration <em>Abstract Simulation Configuration</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
+     * <em>Abstract Simulation Configuration</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for class '<em>Abstract Simulation Configuration</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
      * @generated
@@ -435,8 +491,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getAbstractSimulationConfiguration();
 
     /**
-     * Returns the meta object for the containment reference '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getPersistenceFramework <em>Persistence Framework</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for the containment reference '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getPersistenceFramework
+     * <em>Persistence Framework</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for the containment reference '<em>Persistence Framework</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getPersistenceFramework()
      * @see #getAbstractSimulationConfiguration()
@@ -445,8 +503,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EReference getAbstractSimulationConfiguration_PersistenceFramework();
 
     /**
-     * Returns the meta object for the containment reference list '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getStopConditions <em>Stop Conditions</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for the containment reference list '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getStopConditions
+     * <em>Stop Conditions</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for the containment reference list '<em>Stop Conditions</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getStopConditions()
      * @see #getAbstractSimulationConfiguration()
@@ -455,9 +515,12 @@ public interface AbstractsimulationPackage extends EPackage {
     EReference getAbstractSimulationConfiguration_StopConditions();
 
     /**
-     * Returns the meta object for the containment reference '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed <em>Random Number Generator Seed</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @return the meta object for the containment reference '<em>Random Number Generator Seed</em>'.
+     * Returns the meta object for the containment reference '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed
+     * <em>Random Number Generator Seed</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for the containment reference '<em>Random Number Generator Seed</em>
+     *         '.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed()
      * @see #getAbstractSimulationConfiguration()
      * @generated
@@ -465,8 +528,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EReference getAbstractSimulationConfiguration_RandomNumberGeneratorSeed();
 
     /**
-     * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateLinkingResources <em>Simulate Linking Resources</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for the attribute '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateLinkingResources
+     * <em>Simulate Linking Resources</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for the attribute '<em>Simulate Linking Resources</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateLinkingResources()
      * @see #getAbstractSimulationConfiguration()
@@ -475,8 +540,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getAbstractSimulationConfiguration_SimulateLinkingResources();
 
     /**
-     * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures <em>Simulate Failures</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for the attribute '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
+     * <em>Simulate Failures</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for the attribute '<em>Simulate Failures</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures()
      * @see #getAbstractSimulationConfiguration()
@@ -485,8 +552,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getAbstractSimulationConfiguration_SimulateFailures();
 
     /**
-     * Returns the meta object for the containment reference '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration <em>Probe Spec Configuration</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for the containment reference '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration
+     * <em>Probe Spec Configuration</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for the containment reference '<em>Probe Spec Configuration</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration()
      * @see #getAbstractSimulationConfiguration()
@@ -495,8 +564,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EReference getAbstractSimulationConfiguration_ProbeSpecConfiguration();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.PersistenceFramework <em>Persistence Framework</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.PersistenceFramework
+     * <em>Persistence Framework</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for class '<em>Persistence Framework</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.PersistenceFramework
      * @generated
@@ -504,8 +575,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getPersistenceFramework();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed <em>Random Number Generator Seed</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed
+     * <em>Random Number Generator Seed</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for class '<em>Random Number Generator Seed</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed
      * @generated
@@ -513,8 +586,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getRandomNumberGeneratorSeed();
 
     /**
-     * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed0 <em>Seed0</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for the attribute '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed0
+     * <em>Seed0</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for the attribute '<em>Seed0</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed0()
      * @see #getRandomNumberGeneratorSeed()
@@ -523,8 +598,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getRandomNumberGeneratorSeed_Seed0();
 
     /**
-     * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed1 <em>Seed1</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for the attribute '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed1
+     * <em>Seed1</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for the attribute '<em>Seed1</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed1()
      * @see #getRandomNumberGeneratorSeed()
@@ -533,8 +610,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getRandomNumberGeneratorSeed_Seed1();
 
     /**
-     * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed2 <em>Seed2</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for the attribute '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed2
+     * <em>Seed2</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for the attribute '<em>Seed2</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed2()
      * @see #getRandomNumberGeneratorSeed()
@@ -543,8 +622,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getRandomNumberGeneratorSeed_Seed2();
 
     /**
-     * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed3 <em>Seed3</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for the attribute '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed3
+     * <em>Seed3</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for the attribute '<em>Seed3</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed3()
      * @see #getRandomNumberGeneratorSeed()
@@ -553,8 +634,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getRandomNumberGeneratorSeed_Seed3();
 
     /**
-     * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed4 <em>Seed4</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for the attribute '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed4
+     * <em>Seed4</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for the attribute '<em>Seed4</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed4()
      * @see #getRandomNumberGeneratorSeed()
@@ -563,8 +646,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getRandomNumberGeneratorSeed_Seed4();
 
     /**
-     * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed5 <em>Seed5</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for the attribute '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed5
+     * <em>Seed5</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for the attribute '<em>Seed5</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed5()
      * @see #getRandomNumberGeneratorSeed()
@@ -573,8 +658,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getRandomNumberGeneratorSeed_Seed5();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration <em>Probe Spec Configuration</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration
+     * <em>Probe Spec Configuration</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for class '<em>Probe Spec Configuration</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration
      * @generated
@@ -582,8 +669,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getProbeSpecConfiguration();
 
     /**
-     * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration#getBlackboardType <em>Blackboard Type</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for the attribute '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration#getBlackboardType
+     * <em>Blackboard Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for the attribute '<em>Blackboard Type</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration#getBlackboardType()
      * @see #getProbeSpecConfiguration()
@@ -592,8 +681,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getProbeSpecConfiguration_BlackboardType();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework <em>Sensor Framework</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework
+     * <em>Sensor Framework</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for class '<em>Sensor Framework</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework
      * @generated
@@ -601,8 +692,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getSensorFramework();
 
     /**
-     * Returns the meta object for the containment reference '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework#getDatasource <em>Datasource</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for the containment reference '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework#getDatasource
+     * <em>Datasource</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for the containment reference '<em>Datasource</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework#getDatasource()
      * @see #getSensorFramework()
@@ -611,8 +704,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EReference getSensorFramework_Datasource();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFrameworkDatasource <em>Sensor Framework Datasource</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFrameworkDatasource
+     * <em>Sensor Framework Datasource</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for class '<em>Sensor Framework Datasource</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFrameworkDatasource
      * @generated
@@ -620,8 +715,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getSensorFrameworkDatasource();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.MemoryDatasource <em>Memory Datasource</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.MemoryDatasource
+     * <em>Memory Datasource</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for class '<em>Memory Datasource</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.MemoryDatasource
      * @generated
@@ -629,8 +726,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getMemoryDatasource();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource <em>File Datasource</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource
+     * <em>File Datasource</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for class '<em>File Datasource</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource
      * @generated
@@ -638,8 +737,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getFileDatasource();
 
     /**
-     * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource#getLocation <em>Location</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for the attribute '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource#getLocation
+     * <em>Location</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for the attribute '<em>Location</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource#getLocation()
      * @see #getFileDatasource()
@@ -648,8 +749,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getFileDatasource_Location();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition <em>Measurement Count Stop Condition</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition
+     * <em>Measurement Count Stop Condition</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for class '<em>Measurement Count Stop Condition</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition
      * @generated
@@ -657,8 +760,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getMeasurementCountStopCondition();
 
     /**
-     * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition#getMeasurementCount <em>Measurement Count</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for the attribute '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition#getMeasurementCount
+     * <em>Measurement Count</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for the attribute '<em>Measurement Count</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition#getMeasurementCount()
      * @see #getMeasurementCountStopCondition()
@@ -667,8 +772,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getMeasurementCountStopCondition_MeasurementCount();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition <em>Sim Time Stop Condition</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition
+     * <em>Sim Time Stop Condition</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for class '<em>Sim Time Stop Condition</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition
      * @generated
@@ -676,8 +783,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getSimTimeStopCondition();
 
     /**
-     * Returns the meta object for the attribute '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition#getSimulationTime <em>Simulation Time</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for the attribute '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition#getSimulationTime
+     * <em>Simulation Time</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for the attribute '<em>Simulation Time</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition#getSimulationTime()
      * @see #getSimTimeStopCondition()
@@ -686,8 +795,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getSimTimeStopCondition_SimulationTime();
 
     /**
-     * Returns the meta object for class '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition <em>Stop Condition</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition
+     * <em>Stop Condition</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for class '<em>Stop Condition</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition
      * @generated
@@ -695,8 +806,33 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getStopCondition();
 
     /**
-     * Returns the meta object for enum '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType <em>Blackboard Type</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2 <em>EDP2</em>}'. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for class '<em>EDP2</em>'.
+     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2
+     * @generated
+     */
+    EClass getEDP2();
+
+    /**
+     * Returns the meta object for the reference '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2#getRepository
+     * <em>Repository</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for the reference '<em>Repository</em>'.
+     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2#getRepository()
+     * @see #getEDP2()
+     * @generated
+     */
+    EReference getEDP2_Repository();
+
+    /**
+     * Returns the meta object for enum '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType
+     * <em>Blackboard Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for enum '<em>Blackboard Type</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType
      * @generated
@@ -704,9 +840,9 @@ public interface AbstractsimulationPackage extends EPackage {
     EEnum getBlackboardType();
 
     /**
-     * Returns the factory that creates the instances of the model.
-     * <!-- begin-user-doc --> <!--
+     * Returns the factory that creates the instances of the model. <!-- begin-user-doc --> <!--
      * end-user-doc -->
+     * 
      * @return the factory that creates the instances of the model.
      * @generated
      */
@@ -721,13 +857,16 @@ public interface AbstractsimulationPackage extends EPackage {
      * <li>and each data type</li>
      * </ul>
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     interface Literals {
         /**
-         * The meta object literal for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl <em>Abstract Simulation Configuration</em>}' class.
-         * <!-- begin-user-doc --> <!--
+         * The meta object literal for the '
+         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl
+         * <em>Abstract Simulation Configuration</em>}' class. <!-- begin-user-doc --> <!--
          * end-user-doc -->
+         * 
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getAbstractSimulationConfiguration()
          * @generated
@@ -735,50 +874,64 @@ public interface AbstractsimulationPackage extends EPackage {
         EClass ABSTRACT_SIMULATION_CONFIGURATION = eINSTANCE.getAbstractSimulationConfiguration();
 
         /**
-         * The meta object literal for the '<em><b>Persistence Framework</b></em>' containment reference feature.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '<em><b>Persistence Framework</b></em>' containment
+         * reference feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
-        EReference ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK = eINSTANCE.getAbstractSimulationConfiguration_PersistenceFramework();
+        EReference ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK = eINSTANCE
+                .getAbstractSimulationConfiguration_PersistenceFramework();
 
         /**
-         * The meta object literal for the '<em><b>Stop Conditions</b></em>' containment reference list feature.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '<em><b>Stop Conditions</b></em>' containment reference
+         * list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
-        EReference ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS = eINSTANCE.getAbstractSimulationConfiguration_StopConditions();
+        EReference ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS = eINSTANCE
+                .getAbstractSimulationConfiguration_StopConditions();
 
         /**
-         * The meta object literal for the '<em><b>Random Number Generator Seed</b></em>' containment reference feature.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '<em><b>Random Number Generator Seed</b></em>'
+         * containment reference feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
-        EReference ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED = eINSTANCE.getAbstractSimulationConfiguration_RandomNumberGeneratorSeed();
+        EReference ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED = eINSTANCE
+                .getAbstractSimulationConfiguration_RandomNumberGeneratorSeed();
 
         /**
-         * The meta object literal for the '<em><b>Simulate Linking Resources</b></em>' attribute feature.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '<em><b>Simulate Linking Resources</b></em>' attribute
+         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
-        EAttribute ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES = eINSTANCE.getAbstractSimulationConfiguration_SimulateLinkingResources();
+        EAttribute ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES = eINSTANCE
+                .getAbstractSimulationConfiguration_SimulateLinkingResources();
 
         /**
          * The meta object literal for the '<em><b>Simulate Failures</b></em>' attribute feature.
          * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
-        EAttribute ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES = eINSTANCE.getAbstractSimulationConfiguration_SimulateFailures();
+        EAttribute ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES = eINSTANCE
+                .getAbstractSimulationConfiguration_SimulateFailures();
 
         /**
-         * The meta object literal for the '<em><b>Probe Spec Configuration</b></em>' containment reference feature.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '<em><b>Probe Spec Configuration</b></em>' containment
+         * reference feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
-        EReference ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION = eINSTANCE.getAbstractSimulationConfiguration_ProbeSpecConfiguration();
+        EReference ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION = eINSTANCE
+                .getAbstractSimulationConfiguration_ProbeSpecConfiguration();
 
         /**
-         * The meta object literal for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.PersistenceFrameworkImpl <em>Persistence Framework</em>}' class.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '
+         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.PersistenceFrameworkImpl
+         * <em>Persistence Framework</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.PersistenceFrameworkImpl
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getPersistenceFramework()
          * @generated
@@ -846,8 +999,10 @@ public interface AbstractsimulationPackage extends EPackage {
         EAttribute RANDOM_NUMBER_GENERATOR_SEED__SEED5 = eINSTANCE.getRandomNumberGeneratorSeed_Seed5();
 
         /**
-         * The meta object literal for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl <em>Probe Spec Configuration</em>}' class.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '
+         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl
+         * <em>Probe Spec Configuration</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getProbeSpecConfiguration()
          * @generated
@@ -863,8 +1018,10 @@ public interface AbstractsimulationPackage extends EPackage {
         EAttribute PROBE_SPEC_CONFIGURATION__BLACKBOARD_TYPE = eINSTANCE.getProbeSpecConfiguration_BlackboardType();
 
         /**
-         * The meta object literal for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SensorFrameworkImpl <em>Sensor Framework</em>}' class.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '
+         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SensorFrameworkImpl
+         * <em>Sensor Framework</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SensorFrameworkImpl
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSensorFramework()
          * @generated
@@ -872,8 +1029,9 @@ public interface AbstractsimulationPackage extends EPackage {
         EClass SENSOR_FRAMEWORK = eINSTANCE.getSensorFramework();
 
         /**
-         * The meta object literal for the '<em><b>Datasource</b></em>' containment reference feature.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '<em><b>Datasource</b></em>' containment reference
+         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
         EReference SENSOR_FRAMEWORK__DATASOURCE = eINSTANCE.getSensorFramework_Datasource();
@@ -891,8 +1049,10 @@ public interface AbstractsimulationPackage extends EPackage {
         EClass SENSOR_FRAMEWORK_DATASOURCE = eINSTANCE.getSensorFrameworkDatasource();
 
         /**
-         * The meta object literal for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl <em>Memory Datasource</em>}' class.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '
+         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl
+         * <em>Memory Datasource</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getMemoryDatasource()
          * @generated
@@ -900,8 +1060,10 @@ public interface AbstractsimulationPackage extends EPackage {
         EClass MEMORY_DATASOURCE = eINSTANCE.getMemoryDatasource();
 
         /**
-         * The meta object literal for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.FileDatasourceImpl <em>File Datasource</em>}' class.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '
+         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.FileDatasourceImpl
+         * <em>File Datasource</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.FileDatasourceImpl
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getFileDatasource()
          * @generated
@@ -917,9 +1079,11 @@ public interface AbstractsimulationPackage extends EPackage {
         EAttribute FILE_DATASOURCE__LOCATION = eINSTANCE.getFileDatasource_Location();
 
         /**
-         * The meta object literal for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.MeasurementCountStopConditionImpl <em>Measurement Count Stop Condition</em>}' class.
-         * <!-- begin-user-doc --> <!--
+         * The meta object literal for the '
+         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.MeasurementCountStopConditionImpl
+         * <em>Measurement Count Stop Condition</em>}' class. <!-- begin-user-doc --> <!--
          * end-user-doc -->
+         * 
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.MeasurementCountStopConditionImpl
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getMeasurementCountStopCondition()
          * @generated
@@ -929,13 +1093,17 @@ public interface AbstractsimulationPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Measurement Count</b></em>' attribute feature.
          * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @generated
          */
-        EAttribute MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT = eINSTANCE.getMeasurementCountStopCondition_MeasurementCount();
+        EAttribute MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT = eINSTANCE
+                .getMeasurementCountStopCondition_MeasurementCount();
 
         /**
-         * The meta object literal for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl <em>Sim Time Stop Condition</em>}' class.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '
+         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl
+         * <em>Sim Time Stop Condition</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSimTimeStopCondition()
          * @generated
@@ -951,8 +1119,10 @@ public interface AbstractsimulationPackage extends EPackage {
         EAttribute SIM_TIME_STOP_CONDITION__SIMULATION_TIME = eINSTANCE.getSimTimeStopCondition_SimulationTime();
 
         /**
-         * The meta object literal for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.StopConditionImpl <em>Stop Condition</em>}' class.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '
+         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.StopConditionImpl
+         * <em>Stop Condition</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.StopConditionImpl
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getStopCondition()
          * @generated
@@ -960,8 +1130,29 @@ public interface AbstractsimulationPackage extends EPackage {
         EClass STOP_CONDITION = eINSTANCE.getStopCondition();
 
         /**
-         * The meta object literal for the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType <em>Blackboard Type</em>}' enum.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '
+         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.EDP2Impl
+         * <em>EDP2</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
+         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.EDP2Impl
+         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getEDP2()
+         * @generated
+         */
+        EClass EDP2 = eINSTANCE.getEDP2();
+
+        /**
+         * The meta object literal for the '<em><b>Repository</b></em>' reference feature. <!--
+         * begin-user-doc --> <!-- end-user-doc -->
+         * 
+         * @generated
+         */
+        EReference EDP2__REPOSITORY = eINSTANCE.getEDP2_Repository();
+
+        /**
+         * The meta object literal for the '
+         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType
+         * <em>Blackboard Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType
          * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getBlackboardType()
          * @generated

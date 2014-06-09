@@ -1,23 +1,35 @@
 package de.uka.ipd.sdq.experimentautomation.application.tooladapter;
 
-import de.uka.ipd.sdq.experimentautomation.application.tooladapter.simucom.SimuComToolAdapter;
-import de.uka.ipd.sdq.experimentautomation.eventsim.EventsimPackage;
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IConfigurationElement;
+import org.eclipse.core.runtime.Platform;
+
 import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
-import de.uka.ipd.sdq.experimentautomation.simucom.SimucomPackage;
 
 public class AnalysisToolFactory {
 
     public static IToolAdapter createToolAdapater(final ToolConfiguration configuration) {
         assert configuration != null : "The configuration may not be null";
-        if (SimucomPackage.eINSTANCE.getSimuComConfiguration().isInstance(configuration)) {
-            return new SimuComToolAdapter();
-        } else if (EventsimPackage.eINSTANCE.getEventSimConfiguration().isInstance(configuration)) {
-            throw new RuntimeException("TODO: plug-in EventSimToolAdapter");
-            // FIXME Experiment automation should not have dependencies to adapters like the
-            // EventSim adapter. Fix that.
-            // return new EventSimToolAdapter();
-        }
-        throw new RuntimeException("Unknown tool configuration type: " + configuration.eClass().getName());
-    }
 
+        if (Platform.getExtensionRegistry() != null) {
+            try {
+                final IConfigurationElement[] adapterExtensions = Platform.getExtensionRegistry()
+                        .getConfigurationElementsFor("de.uka.ipd.sdq.experimentautomation.application.tooladapter");
+                for (final IConfigurationElement e : adapterExtensions) {
+                    try {
+                        IToolAdapter toolAdapter = (IToolAdapter) e.createExecutableExtension("class");
+                        if (toolAdapter != null && toolAdapter.hasSupportFor(configuration)) {
+                            return toolAdapter;
+                        }
+                    } catch (final CoreException e1) {
+                        throw new RuntimeException();
+                    }
+                }
+            } catch (final Exception e) {
+                throw new RuntimeException("Could not load tool adapter from extension point: " + e);
+            }
+        }
+
+        throw new IllegalArgumentException("Unknown tool configuration type: " + configuration.eClass().getName());
+    }
 }

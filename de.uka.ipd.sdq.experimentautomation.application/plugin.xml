@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
+   <extension-point id="de.uka.ipd.sdq.experimentautomation.application.tooladapter" name="de.uka.ipd.sdq.experimentautomation.application.tooladapter" schema="schema/de.uka.ipd.sdq.experimentautomation.application.tooladapter.exsd"/>
 	<extension
          id="de.uka.ipd.sdq.experimentautomation.application"
          name="Palladio Experiment Automation"

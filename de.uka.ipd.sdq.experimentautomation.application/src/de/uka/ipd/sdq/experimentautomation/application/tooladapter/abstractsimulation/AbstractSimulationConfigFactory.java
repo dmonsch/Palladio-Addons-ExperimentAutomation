@@ -21,6 +21,11 @@ import de.uka.ipd.sdq.sensorframework.entities.dao.IDAOFactory;
 import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
 import de.uka.ipd.sdq.workflow.pcm.ConstantsContainer;
 
+/**
+ * This class allows to create the properties of a run configuration for an analyzer.
+ * 
+ * @author Merkle, Sebastian Lehrig
+ */
 public class AbstractSimulationConfigFactory {
 
     public static Map<String, Object> createConfigMap(final AbstractSimulationConfiguration config,

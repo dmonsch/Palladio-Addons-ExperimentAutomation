@@ -5,14 +5,15 @@ package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Sensor Framework</b></em>'.
  * <!-- end-user-doc -->
- *
+ * 
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework#getDatasource <em>Datasource</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework#getDatasource
+ * <em>Datasource</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getSensorFramework()
  * @model
  * @generated
@@ -36,9 +37,12 @@ public interface SensorFramework extends PersistenceFramework {
     SensorFrameworkDatasource getDatasource();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework#getDatasource <em>Datasource</em>}' containment reference.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @param value the new value of the '<em>Datasource</em>' containment reference.
+     * Sets the value of the '
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework#getDatasource
+     * <em>Datasource</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @param value
+     *            the new value of the '<em>Datasource</em>' containment reference.
      * @see #getDatasource()
      * @generated
      */

@@ -20,30 +20,31 @@ import de.uka.ipd.sdq.experimentautomation.variation.VariationRepository;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class VariationFactoryImpl extends EFactoryImpl implements VariationFactory {
     /**
-     * Creates the default factory implementation.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public static VariationFactory init() {
         try {
-            VariationFactory theVariationFactory = (VariationFactory)EPackage.Registry.INSTANCE.getEFactory(VariationPackage.eNS_URI);
+            final VariationFactory theVariationFactory = (VariationFactory) EPackage.Registry.INSTANCE
+                    .getEFactory(VariationPackage.eNS_URI);
             if (theVariationFactory != null) {
                 return theVariationFactory;
             }
-        }
-        catch (Exception exception) {
+        } catch (final Exception exception) {
             EcorePlugin.INSTANCE.log(exception);
         }
         return new VariationFactoryImpl();
     }
 
     /**
-     * Creates an instance of the factory.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public VariationFactoryImpl() {
@@ -52,56 +53,69 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    public EObject create(EClass eClass) {
+    public EObject create(final EClass eClass) {
         switch (eClass.getClassifierID()) {
-            case VariationPackage.VALUE_VARIATION: return createValueVariation();
-            case VariationPackage.STRUCTURAL_VARIATION: return createStructuralVariation();
-            case VariationPackage.VARIATION_REPOSITORY: return createVariationRepository();
-            default:
-                throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+        case VariationPackage.VALUE_VARIATION:
+            return this.createValueVariation();
+        case VariationPackage.STRUCTURAL_VARIATION:
+            return this.createStructuralVariation();
+        case VariationPackage.VARIATION_REPOSITORY:
+            return this.createVariationRepository();
+        default:
+            throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public ValueVariation createValueVariation() {
-        ValueVariationImpl valueVariation = new ValueVariationImpl();
+        final ValueVariationImpl valueVariation = new ValueVariationImpl();
         return valueVariation;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public StructuralVariation createStructuralVariation() {
-        StructuralVariationImpl structuralVariation = new StructuralVariationImpl();
+        final StructuralVariationImpl structuralVariation = new StructuralVariationImpl();
         return structuralVariation;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public VariationRepository createVariationRepository() {
-        VariationRepositoryImpl variationRepository = new VariationRepositoryImpl();
+        final VariationRepositoryImpl variationRepository = new VariationRepositoryImpl();
         return variationRepository;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public VariationPackage getVariationPackage() {
-        return (VariationPackage)getEPackage();
+        return (VariationPackage) this.getEPackage();
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @deprecated
      * @generated
      */

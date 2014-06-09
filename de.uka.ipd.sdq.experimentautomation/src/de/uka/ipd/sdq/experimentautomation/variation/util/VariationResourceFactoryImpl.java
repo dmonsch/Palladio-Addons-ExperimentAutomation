@@ -14,13 +14,14 @@ import org.eclipse.emf.ecore.xmi.XMLResource;
 /**
  * <!-- begin-user-doc --> The <b>Resource Factory</b> associated with the package. <!--
  * end-user-doc -->
+ * 
  * @see de.uka.ipd.sdq.experimentautomation.variation.util.VariationResourceImpl
  * @generated
  */
 public class VariationResourceFactoryImpl extends ResourceFactoryImpl {
     /**
-     * Creates an instance of the resource factory.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Creates an instance of the resource factory. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public VariationResourceFactoryImpl() {
@@ -28,13 +29,13 @@ public class VariationResourceFactoryImpl extends ResourceFactoryImpl {
     }
 
     /**
-     * Creates an instance of the resource.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Creates an instance of the resource. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    public Resource createResource(URI uri) {
-        XMLResource result = new VariationResourceImpl(uri);
+    public Resource createResource(final URI uri) {
+        final XMLResource result = new VariationResourceImpl(uri);
         result.getDefaultSaveOptions().put(XMLResource.OPTION_EXTENDED_META_DATA, Boolean.TRUE);
         result.getDefaultLoadOptions().put(XMLResource.OPTION_EXTENDED_META_DATA, Boolean.TRUE);
 

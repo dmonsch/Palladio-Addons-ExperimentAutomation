@@ -1,13 +1,13 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.eventsim.provider;
+package de.uka.ipd.sdq.experimentautomation.abstractsimulation.provider;
 
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -15,27 +15,24 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.provider.AbstractSimulationConfigurationItemProvider;
-import de.uka.ipd.sdq.experimentautomation.eventsim.EventSimConfiguration;
-import de.uka.ipd.sdq.experimentautomation.variation.provider.ExperimentAutomationEditPlugin;
+import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
 
 /**
  * This is the item provider adapter for a
- * {@link de.uka.ipd.sdq.experimentautomation.eventsim.EventSimConfiguration} object. <!--
- * begin-user-doc --> <!-- end-user-doc -->
+ * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2} object. <!-- begin-user-doc
+ * --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public class EventSimConfigurationItemProvider extends AbstractSimulationConfigurationItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
-        IItemPropertySource {
+public class EDP2ItemProvider extends PersistenceFrameworkItemProvider implements IEditingDomainItemProvider,
+        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      * 
      * @generated
      */
-    public EventSimConfigurationItemProvider(AdapterFactory adapterFactory) {
+    public EDP2ItemProvider(AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -50,18 +47,33 @@ public class EventSimConfigurationItemProvider extends AbstractSimulationConfigu
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
+            addRepositoryPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
 
     /**
-     * This returns EventSimConfiguration.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This adds a property descriptor for the Repository feature. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
+     * @generated
+     */
+    protected void addRepositoryPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+                getString("_UI_EDP2_repository_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_EDP2_repository_feature", "_UI_EDP2_type"),
+                AbstractsimulationPackage.Literals.EDP2__REPOSITORY, true, false, true, null, null, null));
+    }
+
+    /**
+     * This returns EDP2.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
      */
     @Override
     public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/EventSimConfiguration"));
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/EDP2"));
     }
 
     /**
@@ -72,9 +84,7 @@ public class EventSimConfigurationItemProvider extends AbstractSimulationConfigu
      */
     @Override
     public String getText(Object object) {
-        String label = ((EventSimConfiguration) object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_EventSimConfiguration_type")
-                : getString("_UI_EventSimConfiguration_type") + " " + label;
+        return getString("_UI_EDP2_type");
     }
 
     /**
@@ -99,17 +109,6 @@ public class EventSimConfigurationItemProvider extends AbstractSimulationConfigu
     @Override
     protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
-    }
-
-    /**
-     * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public ResourceLocator getResourceLocator() {
-        return ExperimentAutomationEditPlugin.INSTANCE;
     }
 
 }

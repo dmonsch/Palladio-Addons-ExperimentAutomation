@@ -9,9 +9,7 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: de.uka.ipd.sdq.experimentautomation.abstractsimulation.presentation,
- de.uka.ipd.sdq.experimentautomation.eventsim.presentation,
  de.uka.ipd.sdq.experimentautomation.experiments.presentation,
- de.uka.ipd.sdq.experimentautomation.simucom.presentation,
  de.uka.ipd.sdq.experimentautomation.variation.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
@@ -19,5 +17,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport,
- de.uka.ipd.sdq.identifier.edit;visibility:=reexport
+ org.palladiosimulator.edp2.edit;visibility:=reexport,
+ de.uka.ipd.sdq.identifier.edit;visibility:=reexport,
+ org.palladiosimulator.metricspec.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

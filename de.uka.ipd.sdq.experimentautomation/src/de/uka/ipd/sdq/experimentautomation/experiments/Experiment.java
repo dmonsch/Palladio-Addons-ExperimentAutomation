@@ -14,23 +14,31 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition;
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Experiment</b></em>'. <!--
  * end-user-doc -->
- *
+ * 
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getVariations <em>Variations</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getModifications <em>Modifications</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getId <em>Id</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getName <em>Name</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getInitialModel <em>Initial Model</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getToolConfiguration <em>Tool Configuration</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getStopConditions <em>Stop Conditions</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getDescription <em>Description</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getExperimentDesign <em>Experiment Design</em>}</li>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getResponseMeasurement <em>Response Measurement</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getVariations <em>
+ * Variations</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getModifications <em>
+ * Modifications</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getId <em>Id</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getName <em>Name</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getInitialModel <em>Initial
+ * Model</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getToolConfiguration <em>
+ * Tool Configuration</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getStopConditions <em>Stop
+ * Conditions</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getDescription <em>
+ * Description</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getExperimentDesign <em>
+ * Experiment Design</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getResponseMeasurement <em>
+ * Response Measurement</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment()
  * @model
  * @generated
@@ -54,14 +62,15 @@ public interface Experiment extends EObject {
     EList<Variation> getVariations();
 
     /**
-     * Returns the value of the '<em><b>Modifications</b></em>' containment reference list.
-     * The list contents are of type {@link de.uka.ipd.sdq.experimentautomation.experiments.Modification}.
+     * Returns the value of the '<em><b>Modifications</b></em>' containment reference list. The list
+     * contents are of type {@link de.uka.ipd.sdq.experimentautomation.experiments.Modification}.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Modifications</em>' containment reference list isn't clear, there
      * really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * 
      * @return the value of the '<em>Modifications</em>' containment reference list.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment_Modifications()
      * @model containment="true"
@@ -70,13 +79,13 @@ public interface Experiment extends EObject {
     EList<Modification> getModifications();
 
     /**
-     * Returns the value of the '<em><b>Id</b></em>' attribute.
-     * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Id</em>' attribute isn't clear, there really should be more of a
      * description here...
      * </p>
      * <!-- end-user-doc -->
+     * 
      * @return the value of the '<em>Id</em>' attribute.
      * @see #setId(String)
      * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment_Id()
@@ -86,22 +95,25 @@ public interface Experiment extends EObject {
     String getId();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getId <em>Id</em>}' attribute.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @param value the new value of the '<em>Id</em>' attribute.
+     * Sets the value of the '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getId <em>Id</em>}'
+     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @param value
+     *            the new value of the '<em>Id</em>' attribute.
      * @see #getId()
      * @generated
      */
     void setId(String value);
 
     /**
-     * Returns the value of the '<em><b>Name</b></em>' attribute.
-     * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a
      * description here...
      * </p>
      * <!-- end-user-doc -->
+     * 
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
      * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment_Name()
@@ -111,9 +123,12 @@ public interface Experiment extends EObject {
     String getName();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getName <em>Name</em>}' attribute.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @param value the new value of the '<em>Name</em>' attribute.
+     * Sets the value of the '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getName <em>Name</em>}'
+     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @param value
+     *            the new value of the '<em>Name</em>' attribute.
      * @see #getName()
      * @generated
      */
@@ -137,9 +152,12 @@ public interface Experiment extends EObject {
     PCMModelFiles getInitialModel();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getInitialModel <em>Initial Model</em>}' containment reference.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @param value the new value of the '<em>Initial Model</em>' containment reference.
+     * Sets the value of the '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getInitialModel
+     * <em>Initial Model</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @param value
+     *            the new value of the '<em>Initial Model</em>' containment reference.
      * @see #getInitialModel()
      * @generated
      */
@@ -182,13 +200,13 @@ public interface Experiment extends EObject {
     EList<StopCondition> getStopConditions();
 
     /**
-     * Returns the value of the '<em><b>Description</b></em>' attribute.
-     * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Description</em>' attribute isn't clear, there really should be
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
+     * 
      * @return the value of the '<em>Description</em>' attribute.
      * @see #setDescription(String)
      * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment_Description()
@@ -198,9 +216,12 @@ public interface Experiment extends EObject {
     String getDescription();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getDescription <em>Description</em>}' attribute.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @param value the new value of the '<em>Description</em>' attribute.
+     * Sets the value of the '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getDescription
+     * <em>Description</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @param value
+     *            the new value of the '<em>Description</em>' attribute.
      * @see #getDescription()
      * @generated
      */
@@ -254,10 +275,13 @@ public interface Experiment extends EObject {
     ResponseMeasurement getResponseMeasurement();
 
     /**
-     * Sets the value of the '{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getResponseMeasurement <em>Response Measurement</em>}' containment reference.
-     * <!-- begin-user-doc --> <!--
+     * Sets the value of the '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getResponseMeasurement
+     * <em>Response Measurement</em>}' containment reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * @param value the new value of the '<em>Response Measurement</em>' containment reference.
+     * 
+     * @param value
+     *            the new value of the '<em>Response Measurement</em>' containment reference.
      * @see #getResponseMeasurement()
      * @generated
      */

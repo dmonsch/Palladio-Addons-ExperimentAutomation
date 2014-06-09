@@ -15,10 +15,12 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.FileDatasourceImpl#getLocation <em>Location</em>}</li>
+ * <li>
+ * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.FileDatasourceImpl#getLocation
+ * <em>Location</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class FileDatasourceImpl extends SensorFrameworkDatasourceImpl implements FileDatasource {
@@ -44,6 +46,7 @@ public class FileDatasourceImpl extends SensorFrameworkDatasourceImpl implements
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected FileDatasourceImpl() {
@@ -52,6 +55,7 @@ public class FileDatasourceImpl extends SensorFrameworkDatasourceImpl implements
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -61,88 +65,101 @@ public class FileDatasourceImpl extends SensorFrameworkDatasourceImpl implements
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public String getLocation() {
-        return location;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public void setLocation(String newLocation) {
-        String oldLocation = location;
-        location = newLocation;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, AbstractsimulationPackage.FILE_DATASOURCE__LOCATION, oldLocation, location));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public String getLocation() {
+        return this.location;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public void setLocation(final String newLocation) {
+        final String oldLocation = this.location;
+        this.location = newLocation;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    AbstractsimulationPackage.FILE_DATASOURCE__LOCATION, oldLocation, this.location));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-            case AbstractsimulationPackage.FILE_DATASOURCE__LOCATION:
-                return getLocation();
+        case AbstractsimulationPackage.FILE_DATASOURCE__LOCATION:
+            return this.getLocation();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-            case AbstractsimulationPackage.FILE_DATASOURCE__LOCATION:
-                setLocation((String)newValue);
-                return;
+        case AbstractsimulationPackage.FILE_DATASOURCE__LOCATION:
+            this.setLocation((String) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
-            case AbstractsimulationPackage.FILE_DATASOURCE__LOCATION:
-                setLocation(LOCATION_EDEFAULT);
-                return;
+        case AbstractsimulationPackage.FILE_DATASOURCE__LOCATION:
+            this.setLocation(LOCATION_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
-            case AbstractsimulationPackage.FILE_DATASOURCE__LOCATION:
-                return LOCATION_EDEFAULT == null ? location != null : !LOCATION_EDEFAULT.equals(location);
+        case AbstractsimulationPackage.FILE_DATASOURCE__LOCATION:
+            return LOCATION_EDEFAULT == null ? this.location != null : !LOCATION_EDEFAULT.equals(this.location);
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (this.eIsProxy()) {
+            return super.toString();
+        }
 
-        StringBuffer result = new StringBuffer(super.toString());
+        final StringBuffer result = new StringBuffer(super.toString());
         result.append(" (location: ");
-        result.append(location);
+        result.append(this.location);
         result.append(')');
         return result.toString();
     }

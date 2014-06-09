@@ -13,12 +13,13 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFrameworkDat
  * <em><b>Sensor Framework Datasource</b></em>'. <!-- end-user-doc -->
  * <p>
  * </p>
- *
+ * 
  * @generated
  */
 public abstract class SensorFrameworkDatasourceImpl extends EObjectImpl implements SensorFrameworkDatasource {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected SensorFrameworkDatasourceImpl() {
@@ -27,6 +28,7 @@ public abstract class SensorFrameworkDatasourceImpl extends EObjectImpl implemen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override

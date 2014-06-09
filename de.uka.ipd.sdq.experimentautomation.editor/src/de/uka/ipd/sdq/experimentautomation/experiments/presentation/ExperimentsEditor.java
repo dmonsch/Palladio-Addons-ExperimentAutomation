@@ -120,11 +120,13 @@ import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
 import org.eclipse.ui.views.properties.IPropertySheetPage;
 import org.eclipse.ui.views.properties.PropertySheet;
 import org.eclipse.ui.views.properties.PropertySheetPage;
+import org.palladiosimulator.edp2.models.ExperimentData.provider.ExperimentDataItemProviderAdapterFactory;
+import org.palladiosimulator.edp2.models.Repository.provider.RepositoryItemProviderAdapterFactory;
+import org.palladiosimulator.edp2.models.measuringpoint.provider.MeasuringpointItemProviderAdapterFactory;
+import org.palladiosimulator.metricspec.provider.MetricSpecItemProviderAdapterFactory;
 
 import de.uka.ipd.sdq.experimentautomation.abstractsimulation.provider.AbstractsimulationItemProviderAdapterFactory;
-import de.uka.ipd.sdq.experimentautomation.eventsim.provider.EventsimItemProviderAdapterFactory;
 import de.uka.ipd.sdq.experimentautomation.experiments.provider.ExperimentsItemProviderAdapterFactory;
-import de.uka.ipd.sdq.experimentautomation.simucom.provider.SimucomItemProviderAdapterFactory;
 import de.uka.ipd.sdq.experimentautomation.variation.presentation.ExperimentAutomationEditorPlugin;
 import de.uka.ipd.sdq.experimentautomation.variation.provider.VariationItemProviderAdapterFactory;
 import de.uka.ipd.sdq.identifier.provider.IdentifierItemProviderAdapterFactory;
@@ -637,9 +639,11 @@ public class ExperimentsEditor extends MultiPageEditorPart implements IEditingDo
         adapterFactory.addAdapterFactory(new VariationItemProviderAdapterFactory());
         adapterFactory.addAdapterFactory(new ExperimentsItemProviderAdapterFactory());
         adapterFactory.addAdapterFactory(new AbstractsimulationItemProviderAdapterFactory());
-        adapterFactory.addAdapterFactory(new SimucomItemProviderAdapterFactory());
-        adapterFactory.addAdapterFactory(new EventsimItemProviderAdapterFactory());
+        adapterFactory.addAdapterFactory(new ExperimentDataItemProviderAdapterFactory());
+        adapterFactory.addAdapterFactory(new RepositoryItemProviderAdapterFactory());
+        adapterFactory.addAdapterFactory(new MeasuringpointItemProviderAdapterFactory());
         adapterFactory.addAdapterFactory(new IdentifierItemProviderAdapterFactory());
+        adapterFactory.addAdapterFactory(new MetricSpecItemProviderAdapterFactory());
         adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
         // Create the command stack that will notify this editor as commands are executed.

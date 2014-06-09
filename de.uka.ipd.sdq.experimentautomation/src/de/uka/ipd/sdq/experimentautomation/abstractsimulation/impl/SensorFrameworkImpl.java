@@ -18,16 +18,19 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFrameworkDat
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SensorFrameworkImpl#getDatasource <em>Datasource</em>}</li>
+ * <li>
+ * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SensorFrameworkImpl#getDatasource
+ * <em>Datasource</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class SensorFrameworkImpl extends PersistenceFrameworkImpl implements SensorFramework {
     /**
      * The cached value of the '{@link #getDatasource() <em>Datasource</em>}' containment reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getDatasource()
      * @generated
      * @ordered
@@ -36,6 +39,7 @@ public class SensorFrameworkImpl extends PersistenceFrameworkImpl implements Sen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected SensorFrameworkImpl() {
@@ -44,6 +48,7 @@ public class SensorFrameworkImpl extends PersistenceFrameworkImpl implements Sen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -53,107 +58,130 @@ public class SensorFrameworkImpl extends PersistenceFrameworkImpl implements Sen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public SensorFrameworkDatasource getDatasource() {
-        return datasource;
+        return this.datasource;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-    public NotificationChain basicSetDatasource(SensorFrameworkDatasource newDatasource, NotificationChain msgs) {
-        SensorFrameworkDatasource oldDatasource = datasource;
-        datasource = newDatasource;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE, oldDatasource, newDatasource);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
+    public NotificationChain basicSetDatasource(final SensorFrameworkDatasource newDatasource, NotificationChain msgs) {
+        final SensorFrameworkDatasource oldDatasource = this.datasource;
+        this.datasource = newDatasource;
+        if (this.eNotificationRequired()) {
+            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE, oldDatasource, newDatasource);
+            if (msgs == null) {
+                msgs = notification;
+            } else {
+                msgs.add(notification);
+            }
         }
         return msgs;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-    public void setDatasource(SensorFrameworkDatasource newDatasource) {
-        if (newDatasource != datasource) {
+    @Override
+    public void setDatasource(final SensorFrameworkDatasource newDatasource) {
+        if (newDatasource != this.datasource) {
             NotificationChain msgs = null;
-            if (datasource != null)
-                msgs = ((InternalEObject)datasource).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE, null, msgs);
-            if (newDatasource != null)
-                msgs = ((InternalEObject)newDatasource).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE, null, msgs);
-            msgs = basicSetDatasource(newDatasource, msgs);
-            if (msgs != null) msgs.dispatch();
+            if (this.datasource != null) {
+                msgs = ((InternalEObject) this.datasource).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE, null, msgs);
+            }
+            if (newDatasource != null) {
+                msgs = ((InternalEObject) newDatasource).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE, null, msgs);
+            }
+            msgs = this.basicSetDatasource(newDatasource, msgs);
+            if (msgs != null) {
+                msgs.dispatch();
+            }
+        } else if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE, newDatasource, newDatasource));
         }
-        else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE, newDatasource, newDatasource));
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
+            final NotificationChain msgs) {
         switch (featureID) {
-            case AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE:
-                return basicSetDatasource(null, msgs);
+        case AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE:
+            return this.basicSetDatasource(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-            case AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE:
-                return getDatasource();
+        case AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE:
+            return this.getDatasource();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-            case AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE:
-                setDatasource((SensorFrameworkDatasource)newValue);
-                return;
+        case AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE:
+            this.setDatasource((SensorFrameworkDatasource) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
-            case AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE:
-                setDatasource((SensorFrameworkDatasource)null);
-                return;
+        case AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE:
+            this.setDatasource((SensorFrameworkDatasource) null);
+            return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
-            case AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE:
-                return datasource != null;
+        case AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE:
+            return this.datasource != null;
         }
         return super.eIsSet(featureID);
     }

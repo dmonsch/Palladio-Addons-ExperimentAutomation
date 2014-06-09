@@ -24,11 +24,9 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import de.uka.ipd.sdq.experimentautomation.eventsim.EventsimFactory;
 import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository;
 import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsFactory;
 import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.simucom.SimucomFactory;
 import de.uka.ipd.sdq.experimentautomation.variation.provider.ExperimentAutomationEditPlugin;
 
 /**
@@ -172,14 +170,6 @@ public class ExperimentRepositoryItemProvider extends ItemProviderAdapter implem
 
         newChildDescriptors.add(createChildParameter(ExperimentsPackage.Literals.EXPERIMENT_REPOSITORY__EXPERIMENTS,
                 ExperimentsFactory.eINSTANCE.createExperiment()));
-
-        newChildDescriptors.add(createChildParameter(
-                ExperimentsPackage.Literals.EXPERIMENT_REPOSITORY__TOOL_CONFIGURATION,
-                SimucomFactory.eINSTANCE.createSimuComConfiguration()));
-
-        newChildDescriptors.add(createChildParameter(
-                ExperimentsPackage.Literals.EXPERIMENT_REPOSITORY__TOOL_CONFIGURATION,
-                EventsimFactory.eINSTANCE.createEventSimConfiguration()));
     }
 
     /**

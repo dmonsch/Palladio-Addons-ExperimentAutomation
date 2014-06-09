@@ -26,16 +26,19 @@ import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.uka.ipd.sdq.experimentautomation.variation.impl.VariationRepositoryImpl#getVariation <em>Variation</em>}</li>
+ * <li>
+ * {@link de.uka.ipd.sdq.experimentautomation.variation.impl.VariationRepositoryImpl#getVariation
+ * <em>Variation</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class VariationRepositoryImpl extends EObjectImpl implements VariationRepository {
     /**
-     * The cached value of the '{@link #getVariation() <em>Variation</em>}' containment reference list.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The cached value of the '{@link #getVariation() <em>Variation</em>}' containment reference
+     * list. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getVariation()
      * @generated
      * @ordered
@@ -44,6 +47,7 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected VariationRepositoryImpl() {
@@ -52,6 +56,7 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -61,80 +66,89 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
+    @Override
     public EList<VariationType> getVariation() {
-        if (variation == null) {
-            variation = new EObjectContainmentEList<VariationType>(VariationType.class, this, VariationPackage.VARIATION_REPOSITORY__VARIATION);
+        if (this.variation == null) {
+            this.variation = new EObjectContainmentEList<VariationType>(VariationType.class, this,
+                    VariationPackage.VARIATION_REPOSITORY__VARIATION);
         }
-        return variation;
+        return this.variation;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
+            final NotificationChain msgs) {
         switch (featureID) {
-            case VariationPackage.VARIATION_REPOSITORY__VARIATION:
-                return ((InternalEList<?>)getVariation()).basicRemove(otherEnd, msgs);
+        case VariationPackage.VARIATION_REPOSITORY__VARIATION:
+            return ((InternalEList<?>) this.getVariation()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-            case VariationPackage.VARIATION_REPOSITORY__VARIATION:
-                return getVariation();
+        case VariationPackage.VARIATION_REPOSITORY__VARIATION:
+            return this.getVariation();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-            case VariationPackage.VARIATION_REPOSITORY__VARIATION:
-                getVariation().clear();
-                getVariation().addAll((Collection<? extends VariationType>)newValue);
-                return;
+        case VariationPackage.VARIATION_REPOSITORY__VARIATION:
+            this.getVariation().clear();
+            this.getVariation().addAll((Collection<? extends VariationType>) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
-            case VariationPackage.VARIATION_REPOSITORY__VARIATION:
-                getVariation().clear();
-                return;
+        case VariationPackage.VARIATION_REPOSITORY__VARIATION:
+            this.getVariation().clear();
+            return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
-            case VariationPackage.VARIATION_REPOSITORY__VARIATION:
-                return variation != null && !variation.isEmpty();
+        case VariationPackage.VARIATION_REPOSITORY__VARIATION:
+            return this.variation != null && !this.variation.isEmpty();
         }
         return super.eIsSet(featureID);
     }

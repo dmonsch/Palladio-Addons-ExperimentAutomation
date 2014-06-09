@@ -189,6 +189,10 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
                 AbstractsimulationFactory.eINSTANCE.createSensorFramework()));
 
         newChildDescriptors.add(createChildParameter(
+                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK,
+                AbstractsimulationFactory.eINSTANCE.createEDP2()));
+
+        newChildDescriptors.add(createChildParameter(
                 AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS,
                 AbstractsimulationFactory.eINSTANCE.createMeasurementCountStopCondition()));
 

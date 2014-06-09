@@ -16,12 +16,13 @@ import de.uka.ipd.sdq.experimentautomation.experiments.OneFactorAtATime;
  * <em><b>One Factor At ATime</b></em>'. <!-- end-user-doc -->
  * <p>
  * </p>
- *
+ * 
  * @generated
  */
 public class OneFactorAtATimeImpl extends ExperimentDesignImpl implements OneFactorAtATime {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected OneFactorAtATimeImpl() {
@@ -30,6 +31,7 @@ public class OneFactorAtATimeImpl extends ExperimentDesignImpl implements OneFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override

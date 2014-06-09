@@ -246,6 +246,31 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
     }
 
     /**
+     * This keeps track of the one adapter used for all
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2} instances. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    protected EDP2ItemProvider edp2ItemProvider;
+
+    /**
+     * This creates an adapter for a
+     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2}. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public Adapter createEDP2Adapter() {
+        if (edp2ItemProvider == null) {
+            edp2ItemProvider = new EDP2ItemProvider(this);
+        }
+
+        return edp2ItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
@@ -356,6 +381,8 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
             measurementCountStopConditionItemProvider.dispose();
         if (simTimeStopConditionItemProvider != null)
             simTimeStopConditionItemProvider.dispose();
+        if (edp2ItemProvider != null)
+            edp2ItemProvider.dispose();
     }
 
 }
