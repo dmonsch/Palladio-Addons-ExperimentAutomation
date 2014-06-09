@@ -171,7 +171,7 @@ public class SimucomtooladapterPackageImpl extends EPackageImpl implements Simuc
         simuComConfigurationEClass.getESuperTypes().add(
                 theAbstractsimulationPackage.getAbstractSimulationConfiguration());
 
-        // Initialize classes, features, and operations; add parameters
+        // Initialize classes and features; add operations and parameters
         initEClass(simuComConfigurationEClass, SimuComConfiguration.class, "SimuComConfiguration", !IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

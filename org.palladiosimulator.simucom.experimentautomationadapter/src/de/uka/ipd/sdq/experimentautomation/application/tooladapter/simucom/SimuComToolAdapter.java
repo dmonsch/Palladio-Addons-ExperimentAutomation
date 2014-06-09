@@ -8,6 +8,7 @@ import org.palladiosimulator.simucom.simucomtooladapter.SimucomtooladapterPackag
 
 import de.uka.ipd.sdq.codegen.simucontroller.runconfig.SimuComWorkflowConfiguration;
 import de.uka.ipd.sdq.codegen.simucontroller.workflow.jobs.SimuComJob;
+import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
 import de.uka.ipd.sdq.experimentautomation.abstractsimulation.PersistenceFramework;
 import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework;
 import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFrameworkDatasource;
@@ -42,11 +43,28 @@ public class SimuComToolAdapter implements IToolAdapter {
                 blackboard);
         workflow.run();
 
-        // clean up TODO
+        // clean up
         final PersistenceFramework persistenceFramework = simuComConfiguration.getPersistenceFramework();
-        final SensorFramework sensorFramework = (SensorFramework) persistenceFramework;
-        final SensorFrameworkDatasource datasource = sensorFramework.getDatasource();
-        SensorFrameworkFactory.closeDatasource(datasource);
+        if (AbstractsimulationPackage.eINSTANCE.getSensorFramework().isInstance(persistenceFramework)) {
+            final SensorFramework sensorFramework = (SensorFramework) persistenceFramework;
+            final SensorFrameworkDatasource datasource = sensorFramework.getDatasource();
+
+            SensorFrameworkFactory.closeDatasource(datasource);
+        } else if (AbstractsimulationPackage.eINSTANCE.getEDP2().isInstance(persistenceFramework)) {
+            // For EDP2, nothing to do!
+            
+            
+//            final EDP2 edp2 = (EDP2) persistenceFramework;
+//            final Repository repository = edp2.getRepository();
+//
+//            try {
+//                MeasurementsUtility.ensureClosedRepository(repository);
+//            } catch (DataNotAccessibleException e) {
+//                throw new RuntimeException("Unable to write to EDP2 repository: " + e);
+//            }
+        } else {
+            throw new IllegalArgumentException("Tried to clean up unknown persistency framework");
+        }
     }
 
     @Override

@@ -3,29 +3,24 @@ package de.uka.ipd.sdq.experimentautomation.application.utils;
 import java.io.File;
 
 import org.eclipse.core.runtime.Path;
-import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.osgi.framework.Bundle;
 
 import de.uka.ipd.sdq.experimentautomation.application.ConfigurationModel;
 import de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles;
-import de.uka.ipd.sdq.identifier.Identifier;
 import de.uka.ipd.sdq.pcm.core.entity.Entity;
 
 public class PCMModelHelper {
 
-    public static EObject findModelElementById(final ResourceSet rs, final String id) {
-        final TreeIterator<?> i = EcoreUtil.getAllContents(rs, true);
-        while (i.hasNext()) {
-            final Object o = i.next();
-            if (Identifier.class.isInstance(o)) {
-                final Identifier identifyable = (Identifier) o;
-                if (identifyable.getId().equals(id)) {
-                    return identifyable;
-                }
+    public static EObject findModelElementById(final ResourceSet resourceSet, final String id) {
+        for (Resource resource : resourceSet.getResources()) {
+            EObject eObject = resource.getEObject(id);
+            if(eObject != null) {
+                return eObject;
             }
         }
         return null;

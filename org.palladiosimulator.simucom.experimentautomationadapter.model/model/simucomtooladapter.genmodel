@@ -5,7 +5,7 @@
     modelName="Simucomtooladapter" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
     usedGenPackages="../../org.palladiosimulator.edp2/model/EDP2.genmodel#//models ../../de.uka.ipd.sdq.experimentautomation/model/ExperimentAutomation.genmodel#//experimentautomation ../../de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier ../../org.palladiosimulator.metricspec/model/metricspec.genmodel#//metricspec"
-    operationReflection="true" importOrganizing="true">
+    importOrganizing="true">
   <foreignModel>simucomtooladapter.ecore</foreignModel>
   <genPackages prefix="Simucomtooladapter" basePackage="org.palladiosimulator.simucom"
       resource="XML" disposableProviderFactory="true" ecorePackage="simucomtooladapter.ecore#/">
