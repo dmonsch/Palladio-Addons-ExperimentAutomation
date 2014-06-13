@@ -93,7 +93,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
      */
     @Override
     public double getSummand() {
-        return this.summand;
+        return summand;
     }
 
     /**
@@ -102,13 +102,12 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
      * @generated
      */
     @Override
-    public void setSummand(final double newSummand) {
-        final double oldSummand = this.summand;
-        this.summand = newSummand;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.LINEAR_VALUE_PROVIDER__SUMMAND, oldSummand, this.summand));
-        }
+    public void setSummand(double newSummand) {
+        double oldSummand = summand;
+        summand = newSummand;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.LINEAR_VALUE_PROVIDER__SUMMAND,
+                    oldSummand, summand));
     }
 
     /**
@@ -118,7 +117,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
      */
     @Override
     public double getFactor() {
-        return this.factor;
+        return factor;
     }
 
     /**
@@ -127,13 +126,12 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
      * @generated
      */
     @Override
-    public void setFactor(final double newFactor) {
-        final double oldFactor = this.factor;
-        this.factor = newFactor;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.LINEAR_VALUE_PROVIDER__FACTOR, oldFactor, this.factor));
-        }
+    public void setFactor(double newFactor) {
+        double oldFactor = factor;
+        factor = newFactor;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.LINEAR_VALUE_PROVIDER__FACTOR,
+                    oldFactor, factor));
     }
 
     /**
@@ -142,12 +140,12 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
      * @generated
      */
     @Override
-    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER__SUMMAND:
-            return this.getSummand();
+            return getSummand();
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER__FACTOR:
-            return this.getFactor();
+            return getFactor();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -158,13 +156,13 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
      * @generated
      */
     @Override
-    public void eSet(final int featureID, final Object newValue) {
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER__SUMMAND:
-            this.setSummand((Double) newValue);
+            setSummand((Double) newValue);
             return;
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER__FACTOR:
-            this.setFactor((Double) newValue);
+            setFactor((Double) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -176,13 +174,13 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
      * @generated
      */
     @Override
-    public void eUnset(final int featureID) {
+    public void eUnset(int featureID) {
         switch (featureID) {
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER__SUMMAND:
-            this.setSummand(SUMMAND_EDEFAULT);
+            setSummand(SUMMAND_EDEFAULT);
             return;
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER__FACTOR:
-            this.setFactor(FACTOR_EDEFAULT);
+            setFactor(FACTOR_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -194,12 +192,12 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
      * @generated
      */
     @Override
-    public boolean eIsSet(final int featureID) {
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER__SUMMAND:
-            return this.summand != SUMMAND_EDEFAULT;
+            return summand != SUMMAND_EDEFAULT;
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER__FACTOR:
-            return this.factor != FACTOR_EDEFAULT;
+            return factor != FACTOR_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -211,15 +209,14 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
      */
     @Override
     public String toString() {
-        if (this.eIsProxy()) {
+        if (eIsProxy())
             return super.toString();
-        }
 
-        final StringBuffer result = new StringBuffer(super.toString());
+        StringBuffer result = new StringBuffer(super.toString());
         result.append(" (summand: ");
-        result.append(this.summand);
+        result.append(summand);
         result.append(", factor: ");
-        result.append(this.factor);
+        result.append(factor);
         result.append(')');
         return result.toString();
     }

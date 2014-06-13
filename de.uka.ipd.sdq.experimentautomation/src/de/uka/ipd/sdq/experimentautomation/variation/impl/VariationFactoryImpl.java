@@ -31,12 +31,12 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
      */
     public static VariationFactory init() {
         try {
-            final VariationFactory theVariationFactory = (VariationFactory) EPackage.Registry.INSTANCE
+            VariationFactory theVariationFactory = (VariationFactory) EPackage.Registry.INSTANCE
                     .getEFactory(VariationPackage.eNS_URI);
             if (theVariationFactory != null) {
                 return theVariationFactory;
             }
-        } catch (final Exception exception) {
+        } catch (Exception exception) {
             EcorePlugin.INSTANCE.log(exception);
         }
         return new VariationFactoryImpl();
@@ -57,14 +57,14 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
      * @generated
      */
     @Override
-    public EObject create(final EClass eClass) {
+    public EObject create(EClass eClass) {
         switch (eClass.getClassifierID()) {
         case VariationPackage.VALUE_VARIATION:
-            return this.createValueVariation();
+            return createValueVariation();
         case VariationPackage.STRUCTURAL_VARIATION:
-            return this.createStructuralVariation();
+            return createStructuralVariation();
         case VariationPackage.VARIATION_REPOSITORY:
-            return this.createVariationRepository();
+            return createVariationRepository();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -77,7 +77,7 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
      */
     @Override
     public ValueVariation createValueVariation() {
-        final ValueVariationImpl valueVariation = new ValueVariationImpl();
+        ValueVariationImpl valueVariation = new ValueVariationImpl();
         return valueVariation;
     }
 
@@ -88,7 +88,7 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
      */
     @Override
     public StructuralVariation createStructuralVariation() {
-        final StructuralVariationImpl structuralVariation = new StructuralVariationImpl();
+        StructuralVariationImpl structuralVariation = new StructuralVariationImpl();
         return structuralVariation;
     }
 
@@ -99,7 +99,7 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
      */
     @Override
     public VariationRepository createVariationRepository() {
-        final VariationRepositoryImpl variationRepository = new VariationRepositoryImpl();
+        VariationRepositoryImpl variationRepository = new VariationRepositoryImpl();
         return variationRepository;
     }
 
@@ -110,7 +110,7 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
      */
     @Override
     public VariationPackage getVariationPackage() {
-        return (VariationPackage) this.getEPackage();
+        return (VariationPackage) getEPackage();
     }
 
     /**

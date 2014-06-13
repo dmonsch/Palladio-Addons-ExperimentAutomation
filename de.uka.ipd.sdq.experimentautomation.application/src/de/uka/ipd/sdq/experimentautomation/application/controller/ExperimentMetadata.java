@@ -1,4 +1,4 @@
-package de.uka.ipd.sdq.experimentautomation.application;
+package de.uka.ipd.sdq.experimentautomation.application.controller;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.OperatingSystemMXBean;
@@ -19,7 +19,6 @@ public class ExperimentMetadata {
     private static final String LINE_FEED = "\r\n";
 
     private String experimentName;
-    private String[] commandLineArguments;
     private String virtualMachineArguments;
     private Date startTime;
     private Date endTime;
@@ -34,14 +33,6 @@ public class ExperimentMetadata {
 
     public void setExperimentName(final String experimentName) {
         this.experimentName = experimentName;
-    }
-
-    public String[] getCommandLineArguments() {
-        return this.commandLineArguments;
-    }
-
-    public void setCommandLineArguments(final String[] commandLineArguments) {
-        this.commandLineArguments = commandLineArguments;
     }
 
     public String getVirtualMachineArguments() {
@@ -73,7 +64,6 @@ public class ExperimentMetadata {
         final StringBuilder builder = new StringBuilder();
         builder.append("Experiment name:        " + this.experimentName + "\r\n");
         builder.append("Workstation name:       " + this.getWorkstationName() + "\r\n");
-        builder.append("Command line arguments: " + this.toString(this.commandLineArguments) + "\r\n");
         builder.append("VM arguments:           " + this.getVMArguments() + "\r\n");
         builder.append("Started:                " + this.startTime + "\r\n");
         builder.append("Finished:               " + this.endTime + "\r\n");
@@ -124,17 +114,6 @@ public class ExperimentMetadata {
         b.append("Architecture:           " + bean.getArch() + LINE_FEED);
         b.append("Available Processors:   " + bean.getAvailableProcessors() + LINE_FEED);
         b.append("Version:                " + bean.getVersion() + LINE_FEED);
-        return b.toString();
-    }
-
-    private String toString(final String[] strings) {
-        final StringBuilder b = new StringBuilder();
-        for (int i = 0; i < strings.length; i++) {
-            b.append(strings[i]);
-            if (i + 1 < strings.length) {
-                b.append(", ");
-            }
-        }
         return b.toString();
     }
 

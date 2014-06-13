@@ -119,7 +119,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
      */
     @Override
     public String getName() {
-        return this.name;
+        return name;
     }
 
     /**
@@ -128,13 +128,11 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
      * @generated
      */
     @Override
-    public void setName(final String newName) {
-        final String oldName = this.name;
-        this.name = newName;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, VariationPackage.VARIATION_TYPE__NAME, oldName,
-                    this.name));
-        }
+    public void setName(String newName) {
+        String oldName = name;
+        name = newName;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, VariationPackage.VARIATION_TYPE__NAME, oldName, name));
     }
 
     /**
@@ -144,7 +142,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
      */
     @Override
     public String getStrategyClass() {
-        return this.strategyClass;
+        return strategyClass;
     }
 
     /**
@@ -153,13 +151,12 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
      * @generated
      */
     @Override
-    public void setStrategyClass(final String newStrategyClass) {
-        final String oldStrategyClass = this.strategyClass;
-        this.strategyClass = newStrategyClass;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, VariationPackage.VARIATION_TYPE__STRATEGY_CLASS,
-                    oldStrategyClass, this.strategyClass));
-        }
+    public void setStrategyClass(String newStrategyClass) {
+        String oldStrategyClass = strategyClass;
+        strategyClass = newStrategyClass;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, VariationPackage.VARIATION_TYPE__STRATEGY_CLASS,
+                    oldStrategyClass, strategyClass));
     }
 
     /**
@@ -169,7 +166,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
      */
     @Override
     public String getVariedEntityInterface() {
-        return this.variedEntityInterface;
+        return variedEntityInterface;
     }
 
     /**
@@ -178,14 +175,13 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
      * @generated
      */
     @Override
-    public void setVariedEntityInterface(final String newVariedEntityInterface) {
-        final String oldVariedEntityInterface = this.variedEntityInterface;
-        this.variedEntityInterface = newVariedEntityInterface;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
+    public void setVariedEntityInterface(String newVariedEntityInterface) {
+        String oldVariedEntityInterface = variedEntityInterface;
+        variedEntityInterface = newVariedEntityInterface;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
                     VariationPackage.VARIATION_TYPE__VARIED_ENTITY_INTERFACE, oldVariedEntityInterface,
-                    this.variedEntityInterface));
-        }
+                    variedEntityInterface));
     }
 
     /**
@@ -194,14 +190,14 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
      * @generated
      */
     @Override
-    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case VariationPackage.VARIATION_TYPE__NAME:
-            return this.getName();
+            return getName();
         case VariationPackage.VARIATION_TYPE__STRATEGY_CLASS:
-            return this.getStrategyClass();
+            return getStrategyClass();
         case VariationPackage.VARIATION_TYPE__VARIED_ENTITY_INTERFACE:
-            return this.getVariedEntityInterface();
+            return getVariedEntityInterface();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -212,16 +208,16 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
      * @generated
      */
     @Override
-    public void eSet(final int featureID, final Object newValue) {
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
         case VariationPackage.VARIATION_TYPE__NAME:
-            this.setName((String) newValue);
+            setName((String) newValue);
             return;
         case VariationPackage.VARIATION_TYPE__STRATEGY_CLASS:
-            this.setStrategyClass((String) newValue);
+            setStrategyClass((String) newValue);
             return;
         case VariationPackage.VARIATION_TYPE__VARIED_ENTITY_INTERFACE:
-            this.setVariedEntityInterface((String) newValue);
+            setVariedEntityInterface((String) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -233,16 +229,16 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
      * @generated
      */
     @Override
-    public void eUnset(final int featureID) {
+    public void eUnset(int featureID) {
         switch (featureID) {
         case VariationPackage.VARIATION_TYPE__NAME:
-            this.setName(NAME_EDEFAULT);
+            setName(NAME_EDEFAULT);
             return;
         case VariationPackage.VARIATION_TYPE__STRATEGY_CLASS:
-            this.setStrategyClass(STRATEGY_CLASS_EDEFAULT);
+            setStrategyClass(STRATEGY_CLASS_EDEFAULT);
             return;
         case VariationPackage.VARIATION_TYPE__VARIED_ENTITY_INTERFACE:
-            this.setVariedEntityInterface(VARIED_ENTITY_INTERFACE_EDEFAULT);
+            setVariedEntityInterface(VARIED_ENTITY_INTERFACE_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -254,16 +250,16 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
      * @generated
      */
     @Override
-    public boolean eIsSet(final int featureID) {
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
         case VariationPackage.VARIATION_TYPE__NAME:
-            return NAME_EDEFAULT == null ? this.name != null : !NAME_EDEFAULT.equals(this.name);
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         case VariationPackage.VARIATION_TYPE__STRATEGY_CLASS:
-            return STRATEGY_CLASS_EDEFAULT == null ? this.strategyClass != null : !STRATEGY_CLASS_EDEFAULT
-                    .equals(this.strategyClass);
+            return STRATEGY_CLASS_EDEFAULT == null ? strategyClass != null : !STRATEGY_CLASS_EDEFAULT
+                    .equals(strategyClass);
         case VariationPackage.VARIATION_TYPE__VARIED_ENTITY_INTERFACE:
-            return VARIED_ENTITY_INTERFACE_EDEFAULT == null ? this.variedEntityInterface != null
-                    : !VARIED_ENTITY_INTERFACE_EDEFAULT.equals(this.variedEntityInterface);
+            return VARIED_ENTITY_INTERFACE_EDEFAULT == null ? variedEntityInterface != null
+                    : !VARIED_ENTITY_INTERFACE_EDEFAULT.equals(variedEntityInterface);
         }
         return super.eIsSet(featureID);
     }
@@ -275,17 +271,16 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
      */
     @Override
     public String toString() {
-        if (this.eIsProxy()) {
+        if (eIsProxy())
             return super.toString();
-        }
 
-        final StringBuffer result = new StringBuffer(super.toString());
+        StringBuffer result = new StringBuffer(super.toString());
         result.append(" (name: ");
-        result.append(this.name);
+        result.append(name);
         result.append(", strategyClass: ");
-        result.append(this.strategyClass);
+        result.append(strategyClass);
         result.append(", variedEntityInterface: ");
-        result.append(this.variedEntityInterface);
+        result.append(variedEntityInterface);
         result.append(')');
         return result.toString();
     }

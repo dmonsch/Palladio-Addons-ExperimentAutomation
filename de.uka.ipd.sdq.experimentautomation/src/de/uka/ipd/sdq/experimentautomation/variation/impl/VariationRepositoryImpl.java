@@ -71,11 +71,11 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
      */
     @Override
     public EList<VariationType> getVariation() {
-        if (this.variation == null) {
-            this.variation = new EObjectContainmentEList<VariationType>(VariationType.class, this,
+        if (variation == null) {
+            variation = new EObjectContainmentEList<VariationType>(VariationType.class, this,
                     VariationPackage.VARIATION_REPOSITORY__VARIATION);
         }
-        return this.variation;
+        return variation;
     }
 
     /**
@@ -84,11 +84,10 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
-            final NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case VariationPackage.VARIATION_REPOSITORY__VARIATION:
-            return ((InternalEList<?>) this.getVariation()).basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) getVariation()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -99,10 +98,10 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
      * @generated
      */
     @Override
-    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case VariationPackage.VARIATION_REPOSITORY__VARIATION:
-            return this.getVariation();
+            return getVariation();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -114,11 +113,11 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
      */
     @SuppressWarnings("unchecked")
     @Override
-    public void eSet(final int featureID, final Object newValue) {
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
         case VariationPackage.VARIATION_REPOSITORY__VARIATION:
-            this.getVariation().clear();
-            this.getVariation().addAll((Collection<? extends VariationType>) newValue);
+            getVariation().clear();
+            getVariation().addAll((Collection<? extends VariationType>) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -130,10 +129,10 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
      * @generated
      */
     @Override
-    public void eUnset(final int featureID) {
+    public void eUnset(int featureID) {
         switch (featureID) {
         case VariationPackage.VARIATION_REPOSITORY__VARIATION:
-            this.getVariation().clear();
+            getVariation().clear();
             return;
         }
         super.eUnset(featureID);
@@ -145,10 +144,10 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
      * @generated
      */
     @Override
-    public boolean eIsSet(final int featureID) {
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
         case VariationPackage.VARIATION_REPOSITORY__VARIATION:
-            return this.variation != null && !this.variation.isEmpty();
+            return variation != null && !variation.isEmpty();
         }
         return super.eIsSet(featureID);
     }

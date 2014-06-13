@@ -19,7 +19,7 @@ public class AbstractsimulationResourceImpl extends XMLResourceImpl {
      *            the URI of the new resource.
      * @generated
      */
-    public AbstractsimulationResourceImpl(final URI uri) {
+    public AbstractsimulationResourceImpl(URI uri) {
         super(uri);
     }
 

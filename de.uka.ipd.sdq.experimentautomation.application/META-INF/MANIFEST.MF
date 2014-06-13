@@ -24,7 +24,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.edp2;bundle-version="2.0.0",
  org.palladiosimulator.recorderframework.edp2;bundle-version="2.0.1",
  org.palladiosimulator.edp2.dao;bundle-version="1.0.0",
- org.palladiosimulator.edp2.util;bundle-version="1.0.0"
+ org.palladiosimulator.edp2.util;bundle-version="1.0.0",
+ org.palladiosimulator.commons
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: de.uka.ipd.sdq.experimentautomation.application.controller,
  de.uka.ipd.sdq.experimentautomation.application.tooladapter,

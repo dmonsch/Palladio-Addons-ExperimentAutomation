@@ -150,22 +150,13 @@ public interface ExperimentsPackage extends EPackage {
     int EXPERIMENT__NAME = 3;
 
     /**
-     * The feature id for the '<em><b>Initial Model</b></em>' containment reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     * @ordered
-     */
-    int EXPERIMENT__INITIAL_MODEL = 4;
-
-    /**
      * The feature id for the '<em><b>Tool Configuration</b></em>' reference list. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
      * @ordered
      */
-    int EXPERIMENT__TOOL_CONFIGURATION = 5;
+    int EXPERIMENT__TOOL_CONFIGURATION = 4;
 
     /**
      * The feature id for the '<em><b>Stop Conditions</b></em>' containment reference list. <!--
@@ -174,7 +165,7 @@ public interface ExperimentsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int EXPERIMENT__STOP_CONDITIONS = 6;
+    int EXPERIMENT__STOP_CONDITIONS = 5;
 
     /**
      * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -183,7 +174,7 @@ public interface ExperimentsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int EXPERIMENT__DESCRIPTION = 7;
+    int EXPERIMENT__DESCRIPTION = 6;
 
     /**
      * The feature id for the '<em><b>Experiment Design</b></em>' containment reference. <!--
@@ -192,7 +183,7 @@ public interface ExperimentsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int EXPERIMENT__EXPERIMENT_DESIGN = 8;
+    int EXPERIMENT__EXPERIMENT_DESIGN = 7;
 
     /**
      * The feature id for the '<em><b>Response Measurement</b></em>' containment reference. <!--
@@ -201,7 +192,16 @@ public interface ExperimentsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int EXPERIMENT__RESPONSE_MEASUREMENT = 9;
+    int EXPERIMENT__RESPONSE_MEASUREMENT = 8;
+
+    /**
+     * The feature id for the '<em><b>Initial Model</b></em>' containment reference. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int EXPERIMENT__INITIAL_MODEL = 9;
 
     /**
      * The number of structural features of the '<em>Experiment</em>' class. <!-- begin-user-doc -->
@@ -317,89 +317,6 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.PCMModelFilesImpl
-     * <em>PCM Model Files</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.PCMModelFilesImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getPCMModelFiles()
-     * @generated
-     */
-    int PCM_MODEL_FILES = 4;
-
-    /**
-     * The feature id for the '<em><b>Allocation File</b></em>' attribute. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @generated
-     * @ordered
-     */
-    int PCM_MODEL_FILES__ALLOCATION_FILE = 0;
-
-    /**
-     * The feature id for the '<em><b>Usagemodel File</b></em>' attribute. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @generated
-     * @ordered
-     */
-    int PCM_MODEL_FILES__USAGEMODEL_FILE = 1;
-
-    /**
-     * The feature id for the '<em><b>System File</b></em>' attribute. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     * 
-     * @generated
-     * @ordered
-     */
-    int PCM_MODEL_FILES__SYSTEM_FILE = 2;
-
-    /**
-     * The feature id for the '<em><b>Repository File</b></em>' attribute. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @generated
-     * @ordered
-     */
-    int PCM_MODEL_FILES__REPOSITORY_FILE = 3;
-
-    /**
-     * The feature id for the '<em><b>Resourceenvironment File</b></em>' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     * @ordered
-     */
-    int PCM_MODEL_FILES__RESOURCEENVIRONMENT_FILE = 4;
-
-    /**
-     * The feature id for the '<em><b>Middleware Repository File</b></em>' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     * @ordered
-     */
-    int PCM_MODEL_FILES__MIDDLEWARE_REPOSITORY_FILE = 5;
-
-    /**
-     * The feature id for the '<em><b>Event Middleware Repository File</b></em>' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     * @ordered
-     */
-    int PCM_MODEL_FILES__EVENT_MIDDLEWARE_REPOSITORY_FILE = 6;
-
-    /**
-     * The number of structural features of the '<em>PCM Model Files</em>' class. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     * @ordered
-     */
-    int PCM_MODEL_FILES_FEATURE_COUNT = 7;
-
-    /**
-     * The meta object id for the '
      * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ToolConfigurationImpl
      * <em>Tool Configuration</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
@@ -407,7 +324,7 @@ public interface ExperimentsPackage extends EPackage {
      * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getToolConfiguration()
      * @generated
      */
-    int TOOL_CONFIGURATION = 5;
+    int TOOL_CONFIGURATION = 4;
 
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -436,7 +353,7 @@ public interface ExperimentsPackage extends EPackage {
      * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getExperimentDesign()
      * @generated
      */
-    int EXPERIMENT_DESIGN = 6;
+    int EXPERIMENT_DESIGN = 5;
 
     /**
      * The number of structural features of the '<em>Experiment Design</em>' class. <!--
@@ -456,7 +373,7 @@ public interface ExperimentsPackage extends EPackage {
      * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getResponseMeasurement()
      * @generated
      */
-    int RESPONSE_MEASUREMENT = 7;
+    int RESPONSE_MEASUREMENT = 6;
 
     /**
      * The number of structural features of the '<em>Response Measurement</em>' class. <!--
@@ -476,7 +393,7 @@ public interface ExperimentsPackage extends EPackage {
      * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getPolynomialValueProvider()
      * @generated
      */
-    int POLYNOMIAL_VALUE_PROVIDER = 8;
+    int POLYNOMIAL_VALUE_PROVIDER = 7;
 
     /**
      * The feature id for the '<em><b>Exponent</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -514,7 +431,7 @@ public interface ExperimentsPackage extends EPackage {
      * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getExponentialValueProvider()
      * @generated
      */
-    int EXPONENTIAL_VALUE_PROVIDER = 9;
+    int EXPONENTIAL_VALUE_PROVIDER = 8;
 
     /**
      * The feature id for the '<em><b>Base</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -543,7 +460,7 @@ public interface ExperimentsPackage extends EPackage {
      * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getSetValueProvider()
      * @generated
      */
-    int SET_VALUE_PROVIDER = 10;
+    int SET_VALUE_PROVIDER = 9;
 
     /**
      * The feature id for the '<em><b>Values</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -572,7 +489,7 @@ public interface ExperimentsPackage extends EPackage {
      * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getPlacketBurmanDesign()
      * @generated
      */
-    int PLACKET_BURMAN_DESIGN = 11;
+    int PLACKET_BURMAN_DESIGN = 10;
 
     /**
      * The number of structural features of the '<em>Placket Burman Design</em>' class. <!--
@@ -592,7 +509,7 @@ public interface ExperimentsPackage extends EPackage {
      * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getFullFactorialDesign()
      * @generated
      */
-    int FULL_FACTORIAL_DESIGN = 12;
+    int FULL_FACTORIAL_DESIGN = 11;
 
     /**
      * The number of structural features of the '<em>Full Factorial Design</em>' class. <!--
@@ -612,7 +529,7 @@ public interface ExperimentsPackage extends EPackage {
      * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getFractionalFactorialDesign()
      * @generated
      */
-    int FRACTIONAL_FACTORIAL_DESIGN = 13;
+    int FRACTIONAL_FACTORIAL_DESIGN = 12;
 
     /**
      * The number of structural features of the '<em>Fractional Factorial Design</em>' class. <!--
@@ -632,7 +549,7 @@ public interface ExperimentsPackage extends EPackage {
      * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getOneFactorAtATime()
      * @generated
      */
-    int ONE_FACTOR_AT_ATIME = 14;
+    int ONE_FACTOR_AT_ATIME = 13;
 
     /**
      * The number of structural features of the '<em>One Factor At ATime</em>' class. <!--
@@ -653,7 +570,7 @@ public interface ExperimentsPackage extends EPackage {
      * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getSimulationDurationMeasurement()
      * @generated
      */
-    int SIMULATION_DURATION_MEASUREMENT = 15;
+    int SIMULATION_DURATION_MEASUREMENT = 14;
 
     /**
      * The number of structural features of the '<em>Simulation Duration Measurement</em>' class.
@@ -673,7 +590,7 @@ public interface ExperimentsPackage extends EPackage {
      * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getProfilingMeasurement()
      * @generated
      */
-    int PROFILING_MEASUREMENT = 16;
+    int PROFILING_MEASUREMENT = 15;
 
     /**
      * The number of structural features of the '<em>Profiling Measurement</em>' class. <!--
@@ -693,7 +610,7 @@ public interface ExperimentsPackage extends EPackage {
      * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getJMXMeasurement()
      * @generated
      */
-    int JMX_MEASUREMENT = 17;
+    int JMX_MEASUREMENT = 16;
 
     /**
      * The feature id for the '<em><b>Polling Period</b></em>' attribute. <!-- begin-user-doc -->
@@ -722,7 +639,7 @@ public interface ExperimentsPackage extends EPackage {
      * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getLinearValueProvider()
      * @generated
      */
-    int LINEAR_VALUE_PROVIDER = 18;
+    int LINEAR_VALUE_PROVIDER = 17;
 
     /**
      * The feature id for the '<em><b>Summand</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -760,7 +677,7 @@ public interface ExperimentsPackage extends EPackage {
      * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getModification()
      * @generated
      */
-    int MODIFICATION = 19;
+    int MODIFICATION = 18;
 
     /**
      * The feature id for the '<em><b>Type</b></em>' reference. <!-- begin-user-doc --> <!--
@@ -806,6 +723,109 @@ public interface ExperimentsPackage extends EPackage {
      * @ordered
      */
     int MODIFICATION_FEATURE_COUNT = 4;
+
+    /**
+     * The meta object id for the '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.InitialModelImpl
+     * <em>Initial Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.InitialModelImpl
+     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getInitialModel()
+     * @generated
+     */
+    int INITIAL_MODEL = 19;
+
+    /**
+     * The feature id for the '<em><b>Usage Model</b></em>' reference. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int INITIAL_MODEL__USAGE_MODEL = 0;
+
+    /**
+     * The feature id for the '<em><b>Allocation</b></em>' reference. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int INITIAL_MODEL__ALLOCATION = 1;
+
+    /**
+     * The feature id for the '<em><b>Middleware Repository</b></em>' reference. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int INITIAL_MODEL__MIDDLEWARE_REPOSITORY = 2;
+
+    /**
+     * The feature id for the '<em><b>Event Middle Ware Repository</b></em>' reference. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY = 3;
+
+    /**
+     * The feature id for the '<em><b>Reconfiguration Rules</b></em>' reference. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int INITIAL_MODEL__RECONFIGURATION_RULES = 4;
+
+    /**
+     * The feature id for the '<em><b>Platform Monitoring Specification</b></em>' reference. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION = 5;
+
+    /**
+     * The number of structural features of the '<em>Initial Model</em>' class. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int INITIAL_MODEL_FEATURE_COUNT = 6;
+
+    /**
+     * The meta object id for the '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ReconfigurationRulesFolderImpl
+     * <em>Reconfiguration Rules Folder</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ReconfigurationRulesFolderImpl
+     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getReconfigurationRulesFolder()
+     * @generated
+     */
+    int RECONFIGURATION_RULES_FOLDER = 20;
+
+    /**
+     * The feature id for the '<em><b>Folder Uri</b></em>' attribute. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int RECONFIGURATION_RULES_FOLDER__FOLDER_URI = 0;
+
+    /**
+     * The number of structural features of the '<em>Reconfiguration Rules Folder</em>' class. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int RECONFIGURATION_RULES_FOLDER_FEATURE_COUNT = 1;
 
     /**
      * Returns the meta object for class '
@@ -1090,101 +1110,6 @@ public interface ExperimentsPackage extends EPackage {
      * @generated
      */
     EClass getValueProvider();
-
-    /**
-     * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles
-     * <em>PCM Model Files</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for class '<em>PCM Model Files</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles
-     * @generated
-     */
-    EClass getPCMModelFiles();
-
-    /**
-     * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getAllocationFile
-     * <em>Allocation File</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for the attribute '<em>Allocation File</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getAllocationFile()
-     * @see #getPCMModelFiles()
-     * @generated
-     */
-    EAttribute getPCMModelFiles_AllocationFile();
-
-    /**
-     * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getUsagemodelFile
-     * <em>Usagemodel File</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for the attribute '<em>Usagemodel File</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getUsagemodelFile()
-     * @see #getPCMModelFiles()
-     * @generated
-     */
-    EAttribute getPCMModelFiles_UsagemodelFile();
-
-    /**
-     * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getSystemFile
-     * <em>System File</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for the attribute '<em>System File</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getSystemFile()
-     * @see #getPCMModelFiles()
-     * @generated
-     */
-    EAttribute getPCMModelFiles_SystemFile();
-
-    /**
-     * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getRepositoryFile
-     * <em>Repository File</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for the attribute '<em>Repository File</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getRepositoryFile()
-     * @see #getPCMModelFiles()
-     * @generated
-     */
-    EAttribute getPCMModelFiles_RepositoryFile();
-
-    /**
-     * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getResourceenvironmentFile
-     * <em>Resourceenvironment File</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for the attribute '<em>Resourceenvironment File</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getResourceenvironmentFile()
-     * @see #getPCMModelFiles()
-     * @generated
-     */
-    EAttribute getPCMModelFiles_ResourceenvironmentFile();
-
-    /**
-     * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getMiddlewareRepositoryFile
-     * <em>Middleware Repository File</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for the attribute '<em>Middleware Repository File</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getMiddlewareRepositoryFile()
-     * @see #getPCMModelFiles()
-     * @generated
-     */
-    EAttribute getPCMModelFiles_MiddlewareRepositoryFile();
-
-    /**
-     * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getEventMiddlewareRepositoryFile
-     * <em>Event Middleware Repository File</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for the attribute '<em>Event Middleware Repository File</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles#getEventMiddlewareRepositoryFile()
-     * @see #getPCMModelFiles()
-     * @generated
-     */
-    EAttribute getPCMModelFiles_EventMiddlewareRepositoryFile();
 
     /**
      * Returns the meta object for class '
@@ -1496,6 +1421,112 @@ public interface ExperimentsPackage extends EPackage {
     EAttribute getModification_Value();
 
     /**
+     * Returns the meta object for class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel <em>Initial Model</em>}'.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for class '<em>Initial Model</em>'.
+     * @see de.uka.ipd.sdq.experimentautomation.experiments.InitialModel
+     * @generated
+     */
+    EClass getInitialModel();
+
+    /**
+     * Returns the meta object for the reference '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getUsageModel
+     * <em>Usage Model</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for the reference '<em>Usage Model</em>'.
+     * @see de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getUsageModel()
+     * @see #getInitialModel()
+     * @generated
+     */
+    EReference getInitialModel_UsageModel();
+
+    /**
+     * Returns the meta object for the reference '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getAllocation
+     * <em>Allocation</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for the reference '<em>Allocation</em>'.
+     * @see de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getAllocation()
+     * @see #getInitialModel()
+     * @generated
+     */
+    EReference getInitialModel_Allocation();
+
+    /**
+     * Returns the meta object for the reference '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getMiddlewareRepository
+     * <em>Middleware Repository</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for the reference '<em>Middleware Repository</em>'.
+     * @see de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getMiddlewareRepository()
+     * @see #getInitialModel()
+     * @generated
+     */
+    EReference getInitialModel_MiddlewareRepository();
+
+    /**
+     * Returns the meta object for the reference '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getEventMiddleWareRepository
+     * <em>Event Middle Ware Repository</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for the reference '<em>Event Middle Ware Repository</em>'.
+     * @see de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getEventMiddleWareRepository()
+     * @see #getInitialModel()
+     * @generated
+     */
+    EReference getInitialModel_EventMiddleWareRepository();
+
+    /**
+     * Returns the meta object for the reference '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getReconfigurationRules
+     * <em>Reconfiguration Rules</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for the reference '<em>Reconfiguration Rules</em>'.
+     * @see de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getReconfigurationRules()
+     * @see #getInitialModel()
+     * @generated
+     */
+    EReference getInitialModel_ReconfigurationRules();
+
+    /**
+     * Returns the meta object for the reference '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getPlatformMonitoringSpecification
+     * <em>Platform Monitoring Specification</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for the reference '<em>Platform Monitoring Specification</em>'.
+     * @see de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getPlatformMonitoringSpecification()
+     * @see #getInitialModel()
+     * @generated
+     */
+    EReference getInitialModel_PlatformMonitoringSpecification();
+
+    /**
+     * Returns the meta object for class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder
+     * <em>Reconfiguration Rules Folder</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for class '<em>Reconfiguration Rules Folder</em>'.
+     * @see de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder
+     * @generated
+     */
+    EClass getReconfigurationRulesFolder();
+
+    /**
+     * Returns the meta object for the attribute '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder#getFolderUri
+     * <em>Folder Uri</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for the attribute '<em>Folder Uri</em>'.
+     * @see de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder#getFolderUri()
+     * @see #getReconfigurationRulesFolder()
+     * @generated
+     */
+    EAttribute getReconfigurationRulesFolder_FolderUri();
+
+    /**
      * Returns the factory that creates the instances of the model. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      * 
@@ -1720,74 +1751,6 @@ public interface ExperimentsPackage extends EPackage {
          * @generated
          */
         EClass VALUE_PROVIDER = eINSTANCE.getValueProvider();
-
-        /**
-         * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.PCMModelFilesImpl
-         * <em>PCM Model Files</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.PCMModelFilesImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getPCMModelFiles()
-         * @generated
-         */
-        EClass PCM_MODEL_FILES = eINSTANCE.getPCMModelFiles();
-
-        /**
-         * The meta object literal for the '<em><b>Allocation File</b></em>' attribute feature. <!--
-         * begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @generated
-         */
-        EAttribute PCM_MODEL_FILES__ALLOCATION_FILE = eINSTANCE.getPCMModelFiles_AllocationFile();
-
-        /**
-         * The meta object literal for the '<em><b>Usagemodel File</b></em>' attribute feature. <!--
-         * begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @generated
-         */
-        EAttribute PCM_MODEL_FILES__USAGEMODEL_FILE = eINSTANCE.getPCMModelFiles_UsagemodelFile();
-
-        /**
-         * The meta object literal for the '<em><b>System File</b></em>' attribute feature. <!--
-         * begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @generated
-         */
-        EAttribute PCM_MODEL_FILES__SYSTEM_FILE = eINSTANCE.getPCMModelFiles_SystemFile();
-
-        /**
-         * The meta object literal for the '<em><b>Repository File</b></em>' attribute feature. <!--
-         * begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @generated
-         */
-        EAttribute PCM_MODEL_FILES__REPOSITORY_FILE = eINSTANCE.getPCMModelFiles_RepositoryFile();
-
-        /**
-         * The meta object literal for the '<em><b>Resourceenvironment File</b></em>' attribute
-         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @generated
-         */
-        EAttribute PCM_MODEL_FILES__RESOURCEENVIRONMENT_FILE = eINSTANCE.getPCMModelFiles_ResourceenvironmentFile();
-
-        /**
-         * The meta object literal for the '<em><b>Middleware Repository File</b></em>' attribute
-         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @generated
-         */
-        EAttribute PCM_MODEL_FILES__MIDDLEWARE_REPOSITORY_FILE = eINSTANCE.getPCMModelFiles_MiddlewareRepositoryFile();
-
-        /**
-         * The meta object literal for the '<em><b>Event Middleware Repository File</b></em>'
-         * attribute feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @generated
-         */
-        EAttribute PCM_MODEL_FILES__EVENT_MIDDLEWARE_REPOSITORY_FILE = eINSTANCE
-                .getPCMModelFiles_EventMiddlewareRepositoryFile();
 
         /**
          * The meta object literal for the '
@@ -2052,6 +2015,86 @@ public interface ExperimentsPackage extends EPackage {
          * @generated
          */
         EAttribute MODIFICATION__VALUE = eINSTANCE.getModification_Value();
+
+        /**
+         * The meta object literal for the '
+         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.InitialModelImpl
+         * <em>Initial Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
+         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.InitialModelImpl
+         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getInitialModel()
+         * @generated
+         */
+        EClass INITIAL_MODEL = eINSTANCE.getInitialModel();
+
+        /**
+         * The meta object literal for the '<em><b>Usage Model</b></em>' reference feature. <!--
+         * begin-user-doc --> <!-- end-user-doc -->
+         * 
+         * @generated
+         */
+        EReference INITIAL_MODEL__USAGE_MODEL = eINSTANCE.getInitialModel_UsageModel();
+
+        /**
+         * The meta object literal for the '<em><b>Allocation</b></em>' reference feature. <!--
+         * begin-user-doc --> <!-- end-user-doc -->
+         * 
+         * @generated
+         */
+        EReference INITIAL_MODEL__ALLOCATION = eINSTANCE.getInitialModel_Allocation();
+
+        /**
+         * The meta object literal for the '<em><b>Middleware Repository</b></em>' reference
+         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
+         * @generated
+         */
+        EReference INITIAL_MODEL__MIDDLEWARE_REPOSITORY = eINSTANCE.getInitialModel_MiddlewareRepository();
+
+        /**
+         * The meta object literal for the '<em><b>Event Middle Ware Repository</b></em>' reference
+         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
+         * @generated
+         */
+        EReference INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY = eINSTANCE.getInitialModel_EventMiddleWareRepository();
+
+        /**
+         * The meta object literal for the '<em><b>Reconfiguration Rules</b></em>' reference
+         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
+         * @generated
+         */
+        EReference INITIAL_MODEL__RECONFIGURATION_RULES = eINSTANCE.getInitialModel_ReconfigurationRules();
+
+        /**
+         * The meta object literal for the '<em><b>Platform Monitoring Specification</b></em>'
+         * reference feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
+         * @generated
+         */
+        EReference INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION = eINSTANCE
+                .getInitialModel_PlatformMonitoringSpecification();
+
+        /**
+         * The meta object literal for the '
+         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ReconfigurationRulesFolderImpl
+         * <em>Reconfiguration Rules Folder</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
+         * -->
+         * 
+         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ReconfigurationRulesFolderImpl
+         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getReconfigurationRulesFolder()
+         * @generated
+         */
+        EClass RECONFIGURATION_RULES_FOLDER = eINSTANCE.getReconfigurationRulesFolder();
+
+        /**
+         * The meta object literal for the '<em><b>Folder Uri</b></em>' attribute feature. <!--
+         * begin-user-doc --> <!-- end-user-doc -->
+         * 
+         * @generated
+         */
+        EAttribute RECONFIGURATION_RULES_FOLDER__FOLDER_URI = eINSTANCE.getReconfigurationRulesFolder_FolderUri();
 
     }
 

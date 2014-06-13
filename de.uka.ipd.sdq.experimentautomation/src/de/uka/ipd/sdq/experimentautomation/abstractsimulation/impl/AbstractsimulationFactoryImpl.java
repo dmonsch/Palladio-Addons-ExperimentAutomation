@@ -34,12 +34,12 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
      */
     public static AbstractsimulationFactory init() {
         try {
-            final AbstractsimulationFactory theAbstractsimulationFactory = (AbstractsimulationFactory) EPackage.Registry.INSTANCE
+            AbstractsimulationFactory theAbstractsimulationFactory = (AbstractsimulationFactory) EPackage.Registry.INSTANCE
                     .getEFactory(AbstractsimulationPackage.eNS_URI);
             if (theAbstractsimulationFactory != null) {
                 return theAbstractsimulationFactory;
             }
-        } catch (final Exception exception) {
+        } catch (Exception exception) {
             EcorePlugin.INSTANCE.log(exception);
         }
         return new AbstractsimulationFactoryImpl();
@@ -60,24 +60,24 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
      * @generated
      */
     @Override
-    public EObject create(final EClass eClass) {
+    public EObject create(EClass eClass) {
         switch (eClass.getClassifierID()) {
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED:
-            return this.createRandomNumberGeneratorSeed();
+            return createRandomNumberGeneratorSeed();
         case AbstractsimulationPackage.PROBE_SPEC_CONFIGURATION:
-            return this.createProbeSpecConfiguration();
+            return createProbeSpecConfiguration();
         case AbstractsimulationPackage.SENSOR_FRAMEWORK:
-            return this.createSensorFramework();
+            return createSensorFramework();
         case AbstractsimulationPackage.MEMORY_DATASOURCE:
-            return this.createMemoryDatasource();
+            return createMemoryDatasource();
         case AbstractsimulationPackage.FILE_DATASOURCE:
-            return this.createFileDatasource();
+            return createFileDatasource();
         case AbstractsimulationPackage.MEASUREMENT_COUNT_STOP_CONDITION:
-            return this.createMeasurementCountStopCondition();
+            return createMeasurementCountStopCondition();
         case AbstractsimulationPackage.SIM_TIME_STOP_CONDITION:
-            return this.createSimTimeStopCondition();
+            return createSimTimeStopCondition();
         case AbstractsimulationPackage.EDP2:
-            return this.createEDP2();
+            return createEDP2();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -89,10 +89,10 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
      * @generated
      */
     @Override
-    public Object createFromString(final EDataType eDataType, final String initialValue) {
+    public Object createFromString(EDataType eDataType, String initialValue) {
         switch (eDataType.getClassifierID()) {
         case AbstractsimulationPackage.BLACKBOARD_TYPE:
-            return this.createBlackboardTypeFromString(eDataType, initialValue);
+            return createBlackboardTypeFromString(eDataType, initialValue);
         default:
             throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -104,10 +104,10 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
      * @generated
      */
     @Override
-    public String convertToString(final EDataType eDataType, final Object instanceValue) {
+    public String convertToString(EDataType eDataType, Object instanceValue) {
         switch (eDataType.getClassifierID()) {
         case AbstractsimulationPackage.BLACKBOARD_TYPE:
-            return this.convertBlackboardTypeToString(eDataType, instanceValue);
+            return convertBlackboardTypeToString(eDataType, instanceValue);
         default:
             throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -120,7 +120,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
      */
     @Override
     public RandomNumberGeneratorSeed createRandomNumberGeneratorSeed() {
-        final RandomNumberGeneratorSeedImpl randomNumberGeneratorSeed = new RandomNumberGeneratorSeedImpl();
+        RandomNumberGeneratorSeedImpl randomNumberGeneratorSeed = new RandomNumberGeneratorSeedImpl();
         return randomNumberGeneratorSeed;
     }
 
@@ -131,7 +131,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
      */
     @Override
     public ProbeSpecConfiguration createProbeSpecConfiguration() {
-        final ProbeSpecConfigurationImpl probeSpecConfiguration = new ProbeSpecConfigurationImpl();
+        ProbeSpecConfigurationImpl probeSpecConfiguration = new ProbeSpecConfigurationImpl();
         return probeSpecConfiguration;
     }
 
@@ -142,7 +142,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
      */
     @Override
     public SensorFramework createSensorFramework() {
-        final SensorFrameworkImpl sensorFramework = new SensorFrameworkImpl();
+        SensorFrameworkImpl sensorFramework = new SensorFrameworkImpl();
         return sensorFramework;
     }
 
@@ -153,7 +153,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
      */
     @Override
     public MemoryDatasource createMemoryDatasource() {
-        final MemoryDatasourceImpl memoryDatasource = new MemoryDatasourceImpl();
+        MemoryDatasourceImpl memoryDatasource = new MemoryDatasourceImpl();
         return memoryDatasource;
     }
 
@@ -164,7 +164,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
      */
     @Override
     public FileDatasource createFileDatasource() {
-        final FileDatasourceImpl fileDatasource = new FileDatasourceImpl();
+        FileDatasourceImpl fileDatasource = new FileDatasourceImpl();
         return fileDatasource;
     }
 
@@ -175,7 +175,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
      */
     @Override
     public MeasurementCountStopCondition createMeasurementCountStopCondition() {
-        final MeasurementCountStopConditionImpl measurementCountStopCondition = new MeasurementCountStopConditionImpl();
+        MeasurementCountStopConditionImpl measurementCountStopCondition = new MeasurementCountStopConditionImpl();
         return measurementCountStopCondition;
     }
 
@@ -186,7 +186,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
      */
     @Override
     public SimTimeStopCondition createSimTimeStopCondition() {
-        final SimTimeStopConditionImpl simTimeStopCondition = new SimTimeStopConditionImpl();
+        SimTimeStopConditionImpl simTimeStopCondition = new SimTimeStopConditionImpl();
         return simTimeStopCondition;
     }
 
@@ -197,7 +197,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
      */
     @Override
     public EDP2 createEDP2() {
-        final EDP2Impl edp2 = new EDP2Impl();
+        EDP2Impl edp2 = new EDP2Impl();
         return edp2;
     }
 
@@ -206,12 +206,11 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
      * 
      * @generated
      */
-    public BlackboardType createBlackboardTypeFromString(final EDataType eDataType, final String initialValue) {
-        final BlackboardType result = BlackboardType.get(initialValue);
-        if (result == null) {
+    public BlackboardType createBlackboardTypeFromString(EDataType eDataType, String initialValue) {
+        BlackboardType result = BlackboardType.get(initialValue);
+        if (result == null)
             throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '"
                     + eDataType.getName() + "'");
-        }
         return result;
     }
 
@@ -220,7 +219,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
      * 
      * @generated
      */
-    public String convertBlackboardTypeToString(final EDataType eDataType, final Object instanceValue) {
+    public String convertBlackboardTypeToString(EDataType eDataType, Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
@@ -231,7 +230,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
      */
     @Override
     public AbstractsimulationPackage getAbstractsimulationPackage() {
-        return (AbstractsimulationPackage) this.getEPackage();
+        return (AbstractsimulationPackage) getEPackage();
     }
 
     /**

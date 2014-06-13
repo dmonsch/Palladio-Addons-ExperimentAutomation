@@ -11,9 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.palladiosimulator.edp2.models.ExperimentData.ExperimentDataPackage;
-import org.palladiosimulator.edp2.models.Repository.RepositoryPackage;
-import org.palladiosimulator.edp2.models.measuringpoint.MeasuringpointPackage;
+import org.palladiosimulator.simulizar.pms.PmsPackage;
 
 import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
 import de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl;
@@ -101,27 +99,23 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
      * @generated
      */
     public static VariationPackage init() {
-        if (isInited) {
+        if (isInited)
             return (VariationPackage) EPackage.Registry.INSTANCE.getEPackage(VariationPackage.eNS_URI);
-        }
 
         // Obtain or create and register package
-        final VariationPackageImpl theVariationPackage = (VariationPackageImpl) (EPackage.Registry.INSTANCE
-                .get(eNS_URI) instanceof VariationPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
-                : new VariationPackageImpl());
+        VariationPackageImpl theVariationPackage = (VariationPackageImpl) (EPackage.Registry.INSTANCE.get(eNS_URI) instanceof VariationPackageImpl ? EPackage.Registry.INSTANCE
+                .get(eNS_URI) : new VariationPackageImpl());
 
         isInited = true;
 
         // Initialize simple dependencies
-        ExperimentDataPackage.eINSTANCE.eClass();
-        RepositoryPackage.eINSTANCE.eClass();
-        MeasuringpointPackage.eINSTANCE.eClass();
+        PmsPackage.eINSTANCE.eClass();
 
         // Obtain or create and register interdependencies
-        final ExperimentsPackageImpl theExperimentsPackage = (ExperimentsPackageImpl) (EPackage.Registry.INSTANCE
+        ExperimentsPackageImpl theExperimentsPackage = (ExperimentsPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(ExperimentsPackage.eNS_URI) instanceof ExperimentsPackageImpl ? EPackage.Registry.INSTANCE
                 .getEPackage(ExperimentsPackage.eNS_URI) : ExperimentsPackage.eINSTANCE);
-        final AbstractsimulationPackageImpl theAbstractsimulationPackage = (AbstractsimulationPackageImpl) (EPackage.Registry.INSTANCE
+        AbstractsimulationPackageImpl theAbstractsimulationPackage = (AbstractsimulationPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(AbstractsimulationPackage.eNS_URI) instanceof AbstractsimulationPackageImpl ? EPackage.Registry.INSTANCE
                 .getEPackage(AbstractsimulationPackage.eNS_URI) : AbstractsimulationPackage.eINSTANCE);
 
@@ -150,7 +144,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
      */
     @Override
     public EClass getVariationType() {
-        return this.variationTypeEClass;
+        return variationTypeEClass;
     }
 
     /**
@@ -160,7 +154,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
      */
     @Override
     public EAttribute getVariationType_Name() {
-        return (EAttribute) this.variationTypeEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) variationTypeEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -170,7 +164,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
      */
     @Override
     public EAttribute getVariationType_StrategyClass() {
-        return (EAttribute) this.variationTypeEClass.getEStructuralFeatures().get(1);
+        return (EAttribute) variationTypeEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -180,7 +174,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
      */
     @Override
     public EAttribute getVariationType_VariedEntityInterface() {
-        return (EAttribute) this.variationTypeEClass.getEStructuralFeatures().get(2);
+        return (EAttribute) variationTypeEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -190,7 +184,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
      */
     @Override
     public EClass getValueVariation() {
-        return this.valueVariationEClass;
+        return valueVariationEClass;
     }
 
     /**
@@ -200,7 +194,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
      */
     @Override
     public EClass getStructuralVariation() {
-        return this.structuralVariationEClass;
+        return structuralVariationEClass;
     }
 
     /**
@@ -210,7 +204,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
      */
     @Override
     public EClass getVariationRepository() {
-        return this.variationRepositoryEClass;
+        return variationRepositoryEClass;
     }
 
     /**
@@ -220,7 +214,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
      */
     @Override
     public EReference getVariationRepository_Variation() {
-        return (EReference) this.variationRepositoryEClass.getEStructuralFeatures().get(0);
+        return (EReference) variationRepositoryEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -230,7 +224,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
      */
     @Override
     public VariationFactory getVariationFactory() {
-        return (VariationFactory) this.getEFactoryInstance();
+        return (VariationFactory) getEFactoryInstance();
     }
 
     /**
@@ -247,23 +241,22 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
      * @generated
      */
     public void createPackageContents() {
-        if (this.isCreated) {
+        if (isCreated)
             return;
-        }
-        this.isCreated = true;
+        isCreated = true;
 
         // Create classes and their features
-        this.variationTypeEClass = this.createEClass(VARIATION_TYPE);
-        this.createEAttribute(this.variationTypeEClass, VARIATION_TYPE__NAME);
-        this.createEAttribute(this.variationTypeEClass, VARIATION_TYPE__STRATEGY_CLASS);
-        this.createEAttribute(this.variationTypeEClass, VARIATION_TYPE__VARIED_ENTITY_INTERFACE);
+        variationTypeEClass = createEClass(VARIATION_TYPE);
+        createEAttribute(variationTypeEClass, VARIATION_TYPE__NAME);
+        createEAttribute(variationTypeEClass, VARIATION_TYPE__STRATEGY_CLASS);
+        createEAttribute(variationTypeEClass, VARIATION_TYPE__VARIED_ENTITY_INTERFACE);
 
-        this.valueVariationEClass = this.createEClass(VALUE_VARIATION);
+        valueVariationEClass = createEClass(VALUE_VARIATION);
 
-        this.structuralVariationEClass = this.createEClass(STRUCTURAL_VARIATION);
+        structuralVariationEClass = createEClass(STRUCTURAL_VARIATION);
 
-        this.variationRepositoryEClass = this.createEClass(VARIATION_REPOSITORY);
-        this.createEReference(this.variationRepositoryEClass, VARIATION_REPOSITORY__VARIATION);
+        variationRepositoryEClass = createEClass(VARIATION_REPOSITORY);
+        createEReference(variationRepositoryEClass, VARIATION_REPOSITORY__VARIATION);
     }
 
     /**
@@ -280,18 +273,17 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
      * @generated
      */
     public void initializePackageContents() {
-        if (this.isInitialized) {
+        if (isInitialized)
             return;
-        }
-        this.isInitialized = true;
+        isInitialized = true;
 
         // Initialize package
-        this.setName(eNAME);
-        this.setNsPrefix(eNS_PREFIX);
-        this.setNsURI(eNS_URI);
+        setName(eNAME);
+        setNsPrefix(eNS_PREFIX);
+        setNsURI(eNS_URI);
 
         // Obtain other dependent packages
-        final IdentifierPackage theIdentifierPackage = (IdentifierPackage) EPackage.Registry.INSTANCE
+        IdentifierPackage theIdentifierPackage = (IdentifierPackage) EPackage.Registry.INSTANCE
                 .getEPackage(IdentifierPackage.eNS_URI);
 
         // Create type parameters
@@ -299,37 +291,36 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
         // Set bounds for type parameters
 
         // Add supertypes to classes
-        this.variationTypeEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
-        this.valueVariationEClass.getESuperTypes().add(this.getVariationType());
-        this.structuralVariationEClass.getESuperTypes().add(this.getVariationType());
+        variationTypeEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
+        valueVariationEClass.getESuperTypes().add(this.getVariationType());
+        structuralVariationEClass.getESuperTypes().add(this.getVariationType());
 
         // Initialize classes and features; add operations and parameters
-        this.initEClass(this.variationTypeEClass, VariationType.class, "VariationType", IS_ABSTRACT, !IS_INTERFACE,
+        initEClass(variationTypeEClass, VariationType.class, "VariationType", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        this.initEAttribute(this.getVariationType_Name(), this.ecorePackage.getEString(), "name", null, 1, 1,
+        initEAttribute(getVariationType_Name(), ecorePackage.getEString(), "name", null, 1, 1, VariationType.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getVariationType_StrategyClass(), ecorePackage.getEString(), "strategyClass", null, 1, 1,
                 VariationType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, !IS_ORDERED);
-        this.initEAttribute(this.getVariationType_StrategyClass(), this.ecorePackage.getEString(), "strategyClass",
+        initEAttribute(getVariationType_VariedEntityInterface(), ecorePackage.getEString(), "variedEntityInterface",
                 null, 1, 1, VariationType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
                 IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEAttribute(this.getVariationType_VariedEntityInterface(), this.ecorePackage.getEString(),
-                "variedEntityInterface", null, 1, 1, VariationType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        this.initEClass(this.valueVariationEClass, ValueVariation.class, "ValueVariation", !IS_ABSTRACT, !IS_INTERFACE,
+        initEClass(valueVariationEClass, ValueVariation.class, "ValueVariation", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
 
-        this.initEClass(this.structuralVariationEClass, StructuralVariation.class, "StructuralVariation", !IS_ABSTRACT,
+        initEClass(structuralVariationEClass, StructuralVariation.class, "StructuralVariation", !IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-        this.initEClass(this.variationRepositoryEClass, VariationRepository.class, "VariationRepository", !IS_ABSTRACT,
+        initEClass(variationRepositoryEClass, VariationRepository.class, "VariationRepository", !IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getVariationRepository_Variation(), this.getVariationType(), null, "variation", null,
-                0, -1, VariationRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+        initEReference(getVariationRepository_Variation(), this.getVariationType(), null, "variation", null, 0, -1,
+                VariationRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
                 !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         // Create resource
-        this.createResource(eNS_URI);
+        createResource(eNS_URI);
     }
 
 } // VariationPackageImpl

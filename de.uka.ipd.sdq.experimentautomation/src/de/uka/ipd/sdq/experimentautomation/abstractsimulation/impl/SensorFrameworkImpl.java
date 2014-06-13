@@ -63,7 +63,7 @@ public class SensorFrameworkImpl extends PersistenceFrameworkImpl implements Sen
      */
     @Override
     public SensorFrameworkDatasource getDatasource() {
-        return this.datasource;
+        return datasource;
     }
 
     /**
@@ -71,17 +71,16 @@ public class SensorFrameworkImpl extends PersistenceFrameworkImpl implements Sen
      * 
      * @generated
      */
-    public NotificationChain basicSetDatasource(final SensorFrameworkDatasource newDatasource, NotificationChain msgs) {
-        final SensorFrameworkDatasource oldDatasource = this.datasource;
-        this.datasource = newDatasource;
-        if (this.eNotificationRequired()) {
-            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+    public NotificationChain basicSetDatasource(SensorFrameworkDatasource newDatasource, NotificationChain msgs) {
+        SensorFrameworkDatasource oldDatasource = datasource;
+        datasource = newDatasource;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
                     AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE, oldDatasource, newDatasource);
-            if (msgs == null) {
+            if (msgs == null)
                 msgs = notification;
-            } else {
+            else
                 msgs.add(notification);
-            }
         }
         return msgs;
     }
@@ -92,25 +91,21 @@ public class SensorFrameworkImpl extends PersistenceFrameworkImpl implements Sen
      * @generated
      */
     @Override
-    public void setDatasource(final SensorFrameworkDatasource newDatasource) {
-        if (newDatasource != this.datasource) {
+    public void setDatasource(SensorFrameworkDatasource newDatasource) {
+        if (newDatasource != datasource) {
             NotificationChain msgs = null;
-            if (this.datasource != null) {
-                msgs = ((InternalEObject) this.datasource).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+            if (datasource != null)
+                msgs = ((InternalEObject) datasource).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
                         - AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE, null, msgs);
-            }
-            if (newDatasource != null) {
+            if (newDatasource != null)
                 msgs = ((InternalEObject) newDatasource).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
                         - AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE, null, msgs);
-            }
-            msgs = this.basicSetDatasource(newDatasource, msgs);
-            if (msgs != null) {
+            msgs = basicSetDatasource(newDatasource, msgs);
+            if (msgs != null)
                 msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
+        } else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
                     AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE, newDatasource, newDatasource));
-        }
     }
 
     /**
@@ -119,11 +114,10 @@ public class SensorFrameworkImpl extends PersistenceFrameworkImpl implements Sen
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
-            final NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE:
-            return this.basicSetDatasource(null, msgs);
+            return basicSetDatasource(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -134,10 +128,10 @@ public class SensorFrameworkImpl extends PersistenceFrameworkImpl implements Sen
      * @generated
      */
     @Override
-    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE:
-            return this.getDatasource();
+            return getDatasource();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -148,10 +142,10 @@ public class SensorFrameworkImpl extends PersistenceFrameworkImpl implements Sen
      * @generated
      */
     @Override
-    public void eSet(final int featureID, final Object newValue) {
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
         case AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE:
-            this.setDatasource((SensorFrameworkDatasource) newValue);
+            setDatasource((SensorFrameworkDatasource) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -163,10 +157,10 @@ public class SensorFrameworkImpl extends PersistenceFrameworkImpl implements Sen
      * @generated
      */
     @Override
-    public void eUnset(final int featureID) {
+    public void eUnset(int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE:
-            this.setDatasource((SensorFrameworkDatasource) null);
+            setDatasource((SensorFrameworkDatasource) null);
             return;
         }
         super.eUnset(featureID);
@@ -178,10 +172,10 @@ public class SensorFrameworkImpl extends PersistenceFrameworkImpl implements Sen
      * @generated
      */
     @Override
-    public boolean eIsSet(final int featureID) {
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.SENSOR_FRAMEWORK__DATASOURCE:
-            return this.datasource != null;
+            return datasource != null;
         }
         return super.eIsSet(featureID);
     }

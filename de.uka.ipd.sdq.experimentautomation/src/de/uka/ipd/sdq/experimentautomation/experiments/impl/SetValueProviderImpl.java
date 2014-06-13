@@ -73,7 +73,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
      */
     @Override
     public String getValues() {
-        return this.values;
+        return values;
     }
 
     /**
@@ -82,13 +82,12 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
      * @generated
      */
     @Override
-    public void setValues(final String newValues) {
-        final String oldValues = this.values;
-        this.values = newValues;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.SET_VALUE_PROVIDER__VALUES,
-                    oldValues, this.values));
-        }
+    public void setValues(String newValues) {
+        String oldValues = values;
+        values = newValues;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.SET_VALUE_PROVIDER__VALUES,
+                    oldValues, values));
     }
 
     /**
@@ -97,10 +96,10 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
      * @generated
      */
     @Override
-    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case ExperimentsPackage.SET_VALUE_PROVIDER__VALUES:
-            return this.getValues();
+            return getValues();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -111,10 +110,10 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
      * @generated
      */
     @Override
-    public void eSet(final int featureID, final Object newValue) {
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
         case ExperimentsPackage.SET_VALUE_PROVIDER__VALUES:
-            this.setValues((String) newValue);
+            setValues((String) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -126,10 +125,10 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
      * @generated
      */
     @Override
-    public void eUnset(final int featureID) {
+    public void eUnset(int featureID) {
         switch (featureID) {
         case ExperimentsPackage.SET_VALUE_PROVIDER__VALUES:
-            this.setValues(VALUES_EDEFAULT);
+            setValues(VALUES_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -141,10 +140,10 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
      * @generated
      */
     @Override
-    public boolean eIsSet(final int featureID) {
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
         case ExperimentsPackage.SET_VALUE_PROVIDER__VALUES:
-            return VALUES_EDEFAULT == null ? this.values != null : !VALUES_EDEFAULT.equals(this.values);
+            return VALUES_EDEFAULT == null ? values != null : !VALUES_EDEFAULT.equals(values);
         }
         return super.eIsSet(featureID);
     }
@@ -156,13 +155,12 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
      */
     @Override
     public String toString() {
-        if (this.eIsProxy()) {
+        if (eIsProxy())
             return super.toString();
-        }
 
-        final StringBuffer result = new StringBuffer(super.toString());
+        StringBuffer result = new StringBuffer(super.toString());
         result.append(" (values: ");
-        result.append(this.values);
+        result.append(values);
         result.append(')');
         return result.toString();
     }

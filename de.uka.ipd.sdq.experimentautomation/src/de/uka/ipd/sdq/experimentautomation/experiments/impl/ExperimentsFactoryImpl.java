@@ -19,14 +19,15 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
 import de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider;
 import de.uka.ipd.sdq.experimentautomation.experiments.FractionalFactorialDesign;
 import de.uka.ipd.sdq.experimentautomation.experiments.FullFactorialDesign;
+import de.uka.ipd.sdq.experimentautomation.experiments.InitialModel;
 import de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement;
 import de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider;
 import de.uka.ipd.sdq.experimentautomation.experiments.Modification;
 import de.uka.ipd.sdq.experimentautomation.experiments.OneFactorAtATime;
-import de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles;
 import de.uka.ipd.sdq.experimentautomation.experiments.PlacketBurmanDesign;
 import de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider;
 import de.uka.ipd.sdq.experimentautomation.experiments.ProfilingMeasurement;
+import de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder;
 import de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider;
 import de.uka.ipd.sdq.experimentautomation.experiments.SimulationDurationMeasurement;
 import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
@@ -44,12 +45,12 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      */
     public static ExperimentsFactory init() {
         try {
-            final ExperimentsFactory theExperimentsFactory = (ExperimentsFactory) EPackage.Registry.INSTANCE
+            ExperimentsFactory theExperimentsFactory = (ExperimentsFactory) EPackage.Registry.INSTANCE
                     .getEFactory(ExperimentsPackage.eNS_URI);
             if (theExperimentsFactory != null) {
                 return theExperimentsFactory;
             }
-        } catch (final Exception exception) {
+        } catch (Exception exception) {
             EcorePlugin.INSTANCE.log(exception);
         }
         return new ExperimentsFactoryImpl();
@@ -70,40 +71,42 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      * @generated
      */
     @Override
-    public EObject create(final EClass eClass) {
+    public EObject create(EClass eClass) {
         switch (eClass.getClassifierID()) {
         case ExperimentsPackage.EXPERIMENT_REPOSITORY:
-            return this.createExperimentRepository();
+            return createExperimentRepository();
         case ExperimentsPackage.EXPERIMENT:
-            return this.createExperiment();
+            return createExperiment();
         case ExperimentsPackage.VARIATION:
-            return this.createVariation();
-        case ExperimentsPackage.PCM_MODEL_FILES:
-            return this.createPCMModelFiles();
+            return createVariation();
         case ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER:
-            return this.createPolynomialValueProvider();
+            return createPolynomialValueProvider();
         case ExperimentsPackage.EXPONENTIAL_VALUE_PROVIDER:
-            return this.createExponentialValueProvider();
+            return createExponentialValueProvider();
         case ExperimentsPackage.SET_VALUE_PROVIDER:
-            return this.createSetValueProvider();
+            return createSetValueProvider();
         case ExperimentsPackage.PLACKET_BURMAN_DESIGN:
-            return this.createPlacketBurmanDesign();
+            return createPlacketBurmanDesign();
         case ExperimentsPackage.FULL_FACTORIAL_DESIGN:
-            return this.createFullFactorialDesign();
+            return createFullFactorialDesign();
         case ExperimentsPackage.FRACTIONAL_FACTORIAL_DESIGN:
-            return this.createFractionalFactorialDesign();
+            return createFractionalFactorialDesign();
         case ExperimentsPackage.ONE_FACTOR_AT_ATIME:
-            return this.createOneFactorAtATime();
+            return createOneFactorAtATime();
         case ExperimentsPackage.SIMULATION_DURATION_MEASUREMENT:
-            return this.createSimulationDurationMeasurement();
+            return createSimulationDurationMeasurement();
         case ExperimentsPackage.PROFILING_MEASUREMENT:
-            return this.createProfilingMeasurement();
+            return createProfilingMeasurement();
         case ExperimentsPackage.JMX_MEASUREMENT:
-            return this.createJMXMeasurement();
+            return createJMXMeasurement();
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER:
-            return this.createLinearValueProvider();
+            return createLinearValueProvider();
         case ExperimentsPackage.MODIFICATION:
-            return this.createModification();
+            return createModification();
+        case ExperimentsPackage.INITIAL_MODEL:
+            return createInitialModel();
+        case ExperimentsPackage.RECONFIGURATION_RULES_FOLDER:
+            return createReconfigurationRulesFolder();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -116,7 +119,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      */
     @Override
     public ExperimentRepository createExperimentRepository() {
-        final ExperimentRepositoryImpl experimentRepository = new ExperimentRepositoryImpl();
+        ExperimentRepositoryImpl experimentRepository = new ExperimentRepositoryImpl();
         return experimentRepository;
     }
 
@@ -127,7 +130,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      */
     @Override
     public Experiment createExperiment() {
-        final ExperimentImpl experiment = new ExperimentImpl();
+        ExperimentImpl experiment = new ExperimentImpl();
         return experiment;
     }
 
@@ -138,7 +141,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      */
     @Override
     public Variation createVariation() {
-        final VariationImpl variation = new VariationImpl();
+        VariationImpl variation = new VariationImpl();
         return variation;
     }
 
@@ -148,19 +151,8 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      * @generated
      */
     @Override
-    public PCMModelFiles createPCMModelFiles() {
-        final PCMModelFilesImpl pcmModelFiles = new PCMModelFilesImpl();
-        return pcmModelFiles;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
     public PolynomialValueProvider createPolynomialValueProvider() {
-        final PolynomialValueProviderImpl polynomialValueProvider = new PolynomialValueProviderImpl();
+        PolynomialValueProviderImpl polynomialValueProvider = new PolynomialValueProviderImpl();
         return polynomialValueProvider;
     }
 
@@ -171,7 +163,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      */
     @Override
     public ExponentialValueProvider createExponentialValueProvider() {
-        final ExponentialValueProviderImpl exponentialValueProvider = new ExponentialValueProviderImpl();
+        ExponentialValueProviderImpl exponentialValueProvider = new ExponentialValueProviderImpl();
         return exponentialValueProvider;
     }
 
@@ -182,7 +174,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      */
     @Override
     public SetValueProvider createSetValueProvider() {
-        final SetValueProviderImpl setValueProvider = new SetValueProviderImpl();
+        SetValueProviderImpl setValueProvider = new SetValueProviderImpl();
         return setValueProvider;
     }
 
@@ -193,7 +185,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      */
     @Override
     public PlacketBurmanDesign createPlacketBurmanDesign() {
-        final PlacketBurmanDesignImpl placketBurmanDesign = new PlacketBurmanDesignImpl();
+        PlacketBurmanDesignImpl placketBurmanDesign = new PlacketBurmanDesignImpl();
         return placketBurmanDesign;
     }
 
@@ -204,7 +196,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      */
     @Override
     public FullFactorialDesign createFullFactorialDesign() {
-        final FullFactorialDesignImpl fullFactorialDesign = new FullFactorialDesignImpl();
+        FullFactorialDesignImpl fullFactorialDesign = new FullFactorialDesignImpl();
         return fullFactorialDesign;
     }
 
@@ -215,7 +207,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      */
     @Override
     public FractionalFactorialDesign createFractionalFactorialDesign() {
-        final FractionalFactorialDesignImpl fractionalFactorialDesign = new FractionalFactorialDesignImpl();
+        FractionalFactorialDesignImpl fractionalFactorialDesign = new FractionalFactorialDesignImpl();
         return fractionalFactorialDesign;
     }
 
@@ -226,7 +218,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      */
     @Override
     public OneFactorAtATime createOneFactorAtATime() {
-        final OneFactorAtATimeImpl oneFactorAtATime = new OneFactorAtATimeImpl();
+        OneFactorAtATimeImpl oneFactorAtATime = new OneFactorAtATimeImpl();
         return oneFactorAtATime;
     }
 
@@ -237,7 +229,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      */
     @Override
     public SimulationDurationMeasurement createSimulationDurationMeasurement() {
-        final SimulationDurationMeasurementImpl simulationDurationMeasurement = new SimulationDurationMeasurementImpl();
+        SimulationDurationMeasurementImpl simulationDurationMeasurement = new SimulationDurationMeasurementImpl();
         return simulationDurationMeasurement;
     }
 
@@ -248,7 +240,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      */
     @Override
     public ProfilingMeasurement createProfilingMeasurement() {
-        final ProfilingMeasurementImpl profilingMeasurement = new ProfilingMeasurementImpl();
+        ProfilingMeasurementImpl profilingMeasurement = new ProfilingMeasurementImpl();
         return profilingMeasurement;
     }
 
@@ -259,7 +251,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      */
     @Override
     public JMXMeasurement createJMXMeasurement() {
-        final JMXMeasurementImpl jmxMeasurement = new JMXMeasurementImpl();
+        JMXMeasurementImpl jmxMeasurement = new JMXMeasurementImpl();
         return jmxMeasurement;
     }
 
@@ -270,7 +262,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      */
     @Override
     public LinearValueProvider createLinearValueProvider() {
-        final LinearValueProviderImpl linearValueProvider = new LinearValueProviderImpl();
+        LinearValueProviderImpl linearValueProvider = new LinearValueProviderImpl();
         return linearValueProvider;
     }
 
@@ -281,8 +273,28 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      */
     @Override
     public Modification createModification() {
-        final ModificationImpl modification = new ModificationImpl();
+        ModificationImpl modification = new ModificationImpl();
         return modification;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    public InitialModel createInitialModel() {
+        InitialModelImpl initialModel = new InitialModelImpl();
+        return initialModel;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    public ReconfigurationRulesFolder createReconfigurationRulesFolder() {
+        ReconfigurationRulesFolderImpl reconfigurationRulesFolder = new ReconfigurationRulesFolderImpl();
+        return reconfigurationRulesFolder;
     }
 
     /**
@@ -292,7 +304,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      */
     @Override
     public ExperimentsPackage getExperimentsPackage() {
-        return (ExperimentsPackage) this.getEPackage();
+        return (ExperimentsPackage) getEPackage();
     }
 
     /**

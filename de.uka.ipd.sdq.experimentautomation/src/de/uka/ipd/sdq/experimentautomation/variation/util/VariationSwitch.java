@@ -55,7 +55,7 @@ public class VariationSwitch<T> extends Switch<T> {
      * @generated
      */
     @Override
-    protected boolean isSwitchFor(final EPackage ePackage) {
+    protected boolean isSwitchFor(EPackage ePackage) {
         return ePackage == modelPackage;
     }
 
@@ -67,57 +67,48 @@ public class VariationSwitch<T> extends Switch<T> {
      * @generated
      */
     @Override
-    protected T doSwitch(final int classifierID, final EObject theEObject) {
+    protected T doSwitch(int classifierID, EObject theEObject) {
         switch (classifierID) {
         case VariationPackage.VARIATION_TYPE: {
-            final VariationType variationType = (VariationType) theEObject;
-            T result = this.caseVariationType(variationType);
-            if (result == null) {
-                result = this.caseIdentifier(variationType);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            VariationType variationType = (VariationType) theEObject;
+            T result = caseVariationType(variationType);
+            if (result == null)
+                result = caseIdentifier(variationType);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case VariationPackage.VALUE_VARIATION: {
-            final ValueVariation valueVariation = (ValueVariation) theEObject;
-            T result = this.caseValueVariation(valueVariation);
-            if (result == null) {
-                result = this.caseVariationType(valueVariation);
-            }
-            if (result == null) {
-                result = this.caseIdentifier(valueVariation);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            ValueVariation valueVariation = (ValueVariation) theEObject;
+            T result = caseValueVariation(valueVariation);
+            if (result == null)
+                result = caseVariationType(valueVariation);
+            if (result == null)
+                result = caseIdentifier(valueVariation);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case VariationPackage.STRUCTURAL_VARIATION: {
-            final StructuralVariation structuralVariation = (StructuralVariation) theEObject;
-            T result = this.caseStructuralVariation(structuralVariation);
-            if (result == null) {
-                result = this.caseVariationType(structuralVariation);
-            }
-            if (result == null) {
-                result = this.caseIdentifier(structuralVariation);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            StructuralVariation structuralVariation = (StructuralVariation) theEObject;
+            T result = caseStructuralVariation(structuralVariation);
+            if (result == null)
+                result = caseVariationType(structuralVariation);
+            if (result == null)
+                result = caseIdentifier(structuralVariation);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case VariationPackage.VARIATION_REPOSITORY: {
-            final VariationRepository variationRepository = (VariationRepository) theEObject;
-            T result = this.caseVariationRepository(variationRepository);
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            VariationRepository variationRepository = (VariationRepository) theEObject;
+            T result = caseVariationRepository(variationRepository);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         default:
-            return this.defaultCase(theEObject);
+            return defaultCase(theEObject);
         }
     }
 
@@ -132,7 +123,7 @@ public class VariationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseVariationType(final VariationType object) {
+    public T caseVariationType(VariationType object) {
         return null;
     }
 
@@ -147,7 +138,7 @@ public class VariationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseValueVariation(final ValueVariation object) {
+    public T caseValueVariation(ValueVariation object) {
         return null;
     }
 
@@ -163,7 +154,7 @@ public class VariationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseStructuralVariation(final StructuralVariation object) {
+    public T caseStructuralVariation(StructuralVariation object) {
         return null;
     }
 
@@ -178,7 +169,7 @@ public class VariationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseVariationRepository(final VariationRepository object) {
+    public T caseVariationRepository(VariationRepository object) {
         return null;
     }
 
@@ -193,7 +184,7 @@ public class VariationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseIdentifier(final Identifier object) {
+    public T caseIdentifier(Identifier object) {
         return null;
     }
 
@@ -209,7 +200,7 @@ public class VariationSwitch<T> extends Switch<T> {
      * @generated
      */
     @Override
-    public T defaultCase(final EObject object) {
+    public T defaultCase(EObject object) {
         return null;
     }
 

@@ -30,8 +30,8 @@ public class AbstractsimulationResourceFactoryImpl extends ResourceFactoryImpl {
      * @generated
      */
     @Override
-    public Resource createResource(final URI uri) {
-        final XMLResource result = new AbstractsimulationResourceImpl(uri);
+    public Resource createResource(URI uri) {
+        XMLResource result = new AbstractsimulationResourceImpl(uri);
         result.getDefaultSaveOptions().put(XMLResource.OPTION_EXTENDED_META_DATA, Boolean.TRUE);
         result.getDefaultLoadOptions().put(XMLResource.OPTION_EXTENDED_META_DATA, Boolean.TRUE);
 

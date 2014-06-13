@@ -74,7 +74,7 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
      */
     @Override
     public Integer getPollingPeriod() {
-        return this.pollingPeriod;
+        return pollingPeriod;
     }
 
     /**
@@ -83,13 +83,12 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
      * @generated
      */
     @Override
-    public void setPollingPeriod(final Integer newPollingPeriod) {
-        final Integer oldPollingPeriod = this.pollingPeriod;
-        this.pollingPeriod = newPollingPeriod;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD, oldPollingPeriod, this.pollingPeriod));
-        }
+    public void setPollingPeriod(Integer newPollingPeriod) {
+        Integer oldPollingPeriod = pollingPeriod;
+        pollingPeriod = newPollingPeriod;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD,
+                    oldPollingPeriod, pollingPeriod));
     }
 
     /**
@@ -98,10 +97,10 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
      * @generated
      */
     @Override
-    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD:
-            return this.getPollingPeriod();
+            return getPollingPeriod();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -112,10 +111,10 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
      * @generated
      */
     @Override
-    public void eSet(final int featureID, final Object newValue) {
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
         case ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD:
-            this.setPollingPeriod((Integer) newValue);
+            setPollingPeriod((Integer) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -127,10 +126,10 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
      * @generated
      */
     @Override
-    public void eUnset(final int featureID) {
+    public void eUnset(int featureID) {
         switch (featureID) {
         case ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD:
-            this.setPollingPeriod(POLLING_PERIOD_EDEFAULT);
+            setPollingPeriod(POLLING_PERIOD_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -142,11 +141,11 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
      * @generated
      */
     @Override
-    public boolean eIsSet(final int featureID) {
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
         case ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD:
-            return POLLING_PERIOD_EDEFAULT == null ? this.pollingPeriod != null : !POLLING_PERIOD_EDEFAULT
-                    .equals(this.pollingPeriod);
+            return POLLING_PERIOD_EDEFAULT == null ? pollingPeriod != null : !POLLING_PERIOD_EDEFAULT
+                    .equals(pollingPeriod);
         }
         return super.eIsSet(featureID);
     }
@@ -158,13 +157,12 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
      */
     @Override
     public String toString() {
-        if (this.eIsProxy()) {
+        if (eIsProxy())
             return super.toString();
-        }
 
-        final StringBuffer result = new StringBuffer(super.toString());
+        StringBuffer result = new StringBuffer(super.toString());
         result.append(" (pollingPeriod: ");
-        result.append(this.pollingPeriod);
+        result.append(pollingPeriod);
         result.append(')');
         return result.toString();
     }

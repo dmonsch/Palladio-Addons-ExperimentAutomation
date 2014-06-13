@@ -51,15 +51,6 @@ public interface ExperimentsFactory extends EFactory {
     Variation createVariation();
 
     /**
-     * Returns a new object of class '<em>PCM Model Files</em>'. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     * 
-     * @return a new object of class '<em>PCM Model Files</em>'.
-     * @generated
-     */
-    PCMModelFiles createPCMModelFiles();
-
-    /**
      * Returns a new object of class '<em>Polynomial Value Provider</em>'. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
@@ -166,6 +157,24 @@ public interface ExperimentsFactory extends EFactory {
      * @generated
      */
     Modification createModification();
+
+    /**
+     * Returns a new object of class '<em>Initial Model</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
+     * @return a new object of class '<em>Initial Model</em>'.
+     * @generated
+     */
+    InitialModel createInitialModel();
+
+    /**
+     * Returns a new object of class '<em>Reconfiguration Rules Folder</em>'. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     * 
+     * @return a new object of class '<em>Reconfiguration Rules Folder</em>'.
+     * @generated
+     */
+    ReconfigurationRulesFolder createReconfigurationRulesFolder();
 
     /**
      * Returns the package supported by this factory. <!-- begin-user-doc --> <!-- end-user-doc -->

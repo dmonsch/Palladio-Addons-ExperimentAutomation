@@ -19,10 +19,9 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFrameworkDat
 import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition;
 import de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition;
 import de.uka.ipd.sdq.experimentautomation.application.tooladapter.abstractsimulation.sensorframework.SensorFrameworkFactory;
-import de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles;
+import de.uka.ipd.sdq.experimentautomation.experiments.InitialModel;
 import de.uka.ipd.sdq.sensorframework.entities.dao.IDAOFactory;
 import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
-import de.uka.ipd.sdq.workflow.pcm.ConstantsContainer;
 
 /**
  * This class allows to create the properties of a run configuration for an analyzer.
@@ -32,7 +31,7 @@ import de.uka.ipd.sdq.workflow.pcm.ConstantsContainer;
 public class AbstractSimulationConfigFactory {
 
     public static Map<String, Object> createConfigMap(final AbstractSimulationConfiguration config,
-            final List<StopCondition> stopConditions, final PCMModelFiles model, final String experimentName) {
+            final List<StopCondition> stopConditions, final InitialModel model, final String experimentName) {
         final Map<String, Object> map = new HashMap<String, Object>();
 
         map.put(AbstractSimulationConfig.EXPERIMENT_RUN, experimentName);
@@ -41,8 +40,10 @@ public class AbstractSimulationConfigFactory {
         map.put(AbstractSimulationConfig.VERBOSE_LOGGING, false);
         map.put(AbstractSimulationConfig.BLACKBOARD_TYPE, config.getProbeSpecConfiguration().getBlackboardType());
 
-        map.put(ConstantsContainer.ALLOCATION_FILE, model.getAllocationFile());
-        map.put(ConstantsContainer.USAGE_FILE, model.getUsagemodelFile());
+// TODO Remove next few lines if done with replacement. [Lehrig]
+// Lehrig: Remove configuration via files. To be replaced by direct access to blackboard.
+//        map.put(ConstantsContainer.ALLOCATION_FILE, model.getAllocationFile());
+//        map.put(ConstantsContainer.USAGE_FILE, model.getUsagemodelFile());
 
         fillRandomNumberGeneratorSeed(config, map);
         // fillConfidenceStopCondition(config, map);

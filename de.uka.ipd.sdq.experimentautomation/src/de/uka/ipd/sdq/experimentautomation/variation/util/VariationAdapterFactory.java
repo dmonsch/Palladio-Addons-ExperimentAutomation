@@ -53,7 +53,7 @@ public class VariationAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     @Override
-    public boolean isFactoryForType(final Object object) {
+    public boolean isFactoryForType(Object object) {
         if (object == modelPackage) {
             return true;
         }
@@ -71,33 +71,33 @@ public class VariationAdapterFactory extends AdapterFactoryImpl {
      */
     protected VariationSwitch<Adapter> modelSwitch = new VariationSwitch<Adapter>() {
         @Override
-        public Adapter caseVariationType(final VariationType object) {
-            return VariationAdapterFactory.this.createVariationTypeAdapter();
+        public Adapter caseVariationType(VariationType object) {
+            return createVariationTypeAdapter();
         }
 
         @Override
-        public Adapter caseValueVariation(final ValueVariation object) {
-            return VariationAdapterFactory.this.createValueVariationAdapter();
+        public Adapter caseValueVariation(ValueVariation object) {
+            return createValueVariationAdapter();
         }
 
         @Override
-        public Adapter caseStructuralVariation(final StructuralVariation object) {
-            return VariationAdapterFactory.this.createStructuralVariationAdapter();
+        public Adapter caseStructuralVariation(StructuralVariation object) {
+            return createStructuralVariationAdapter();
         }
 
         @Override
-        public Adapter caseVariationRepository(final VariationRepository object) {
-            return VariationAdapterFactory.this.createVariationRepositoryAdapter();
+        public Adapter caseVariationRepository(VariationRepository object) {
+            return createVariationRepositoryAdapter();
         }
 
         @Override
-        public Adapter caseIdentifier(final Identifier object) {
-            return VariationAdapterFactory.this.createIdentifierAdapter();
+        public Adapter caseIdentifier(Identifier object) {
+            return createIdentifierAdapter();
         }
 
         @Override
-        public Adapter defaultCase(final EObject object) {
-            return VariationAdapterFactory.this.createEObjectAdapter();
+        public Adapter defaultCase(EObject object) {
+            return createEObjectAdapter();
         }
     };
 
@@ -110,8 +110,8 @@ public class VariationAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     @Override
-    public Adapter createAdapter(final Notifier target) {
-        return this.modelSwitch.doSwitch((EObject) target);
+    public Adapter createAdapter(Notifier target) {
+        return modelSwitch.doSwitch((EObject) target);
     }
 
     /**

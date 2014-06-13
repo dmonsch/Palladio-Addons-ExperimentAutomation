@@ -113,8 +113,9 @@ public enum BlackboardType implements Enumerator {
      * 
      * @generated
      */
-    public static BlackboardType get(final String literal) {
-        for (final BlackboardType result : VALUES_ARRAY) {
+    public static BlackboardType get(String literal) {
+        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+            BlackboardType result = VALUES_ARRAY[i];
             if (result.toString().equals(literal)) {
                 return result;
             }
@@ -128,8 +129,9 @@ public enum BlackboardType implements Enumerator {
      * 
      * @generated
      */
-    public static BlackboardType getByName(final String name) {
-        for (final BlackboardType result : VALUES_ARRAY) {
+    public static BlackboardType getByName(String name) {
+        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+            BlackboardType result = VALUES_ARRAY[i];
             if (result.getName().equals(name)) {
                 return result;
             }
@@ -143,7 +145,7 @@ public enum BlackboardType implements Enumerator {
      * 
      * @generated
      */
-    public static BlackboardType get(final int value) {
+    public static BlackboardType get(int value) {
         switch (value) {
         case SIMPLE_VALUE:
             return SIMPLE;
@@ -181,7 +183,7 @@ public enum BlackboardType implements Enumerator {
      * 
      * @generated
      */
-    private BlackboardType(final int value, final String name, final String literal) {
+    private BlackboardType(int value, String name, String literal) {
         this.value = value;
         this.name = name;
         this.literal = literal;
@@ -194,7 +196,7 @@ public enum BlackboardType implements Enumerator {
      */
     @Override
     public int getValue() {
-        return this.value;
+        return value;
     }
 
     /**
@@ -204,7 +206,7 @@ public enum BlackboardType implements Enumerator {
      */
     @Override
     public String getName() {
-        return this.name;
+        return name;
     }
 
     /**
@@ -214,7 +216,7 @@ public enum BlackboardType implements Enumerator {
      */
     @Override
     public String getLiteral() {
-        return this.literal;
+        return literal;
     }
 
     /**
@@ -225,7 +227,7 @@ public enum BlackboardType implements Enumerator {
      */
     @Override
     public String toString() {
-        return this.literal;
+        return literal;
     }
 
 } // BlackboardType

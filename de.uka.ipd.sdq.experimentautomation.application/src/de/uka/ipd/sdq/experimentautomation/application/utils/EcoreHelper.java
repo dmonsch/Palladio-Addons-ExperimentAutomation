@@ -2,6 +2,8 @@ package de.uka.ipd.sdq.experimentautomation.application.utils;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import de.uka.ipd.sdq.identifier.Identifier;
@@ -32,6 +34,16 @@ public class EcoreHelper {
         for (final EObject o : contents) {
             createNewIds(o);
         }
+    }
+    
+    public static EObject findModelElementById(final ResourceSet resourceSet, final String id) {
+        for (Resource resource : resourceSet.getResources()) {
+            EObject eObject = resource.getEObject(id);
+            if(eObject != null) {
+                return eObject;
+            }
+        }
+        return null;
     }
 
 }

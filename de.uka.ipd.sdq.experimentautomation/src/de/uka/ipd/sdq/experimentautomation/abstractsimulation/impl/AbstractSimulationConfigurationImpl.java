@@ -162,7 +162,7 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      */
     @Override
     public PersistenceFramework getPersistenceFramework() {
-        return this.persistenceFramework;
+        return persistenceFramework;
     }
 
     /**
@@ -170,19 +170,18 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      * 
      * @generated
      */
-    public NotificationChain basicSetPersistenceFramework(final PersistenceFramework newPersistenceFramework,
+    public NotificationChain basicSetPersistenceFramework(PersistenceFramework newPersistenceFramework,
             NotificationChain msgs) {
-        final PersistenceFramework oldPersistenceFramework = this.persistenceFramework;
-        this.persistenceFramework = newPersistenceFramework;
-        if (this.eNotificationRequired()) {
-            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+        PersistenceFramework oldPersistenceFramework = persistenceFramework;
+        persistenceFramework = newPersistenceFramework;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
                     AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK,
                     oldPersistenceFramework, newPersistenceFramework);
-            if (msgs == null) {
+            if (msgs == null)
                 msgs = notification;
-            } else {
+            else
                 msgs.add(notification);
-            }
         }
         return msgs;
     }
@@ -193,28 +192,24 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      * @generated
      */
     @Override
-    public void setPersistenceFramework(final PersistenceFramework newPersistenceFramework) {
-        if (newPersistenceFramework != this.persistenceFramework) {
+    public void setPersistenceFramework(PersistenceFramework newPersistenceFramework) {
+        if (newPersistenceFramework != persistenceFramework) {
             NotificationChain msgs = null;
-            if (this.persistenceFramework != null) {
-                msgs = ((InternalEObject) this.persistenceFramework).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+            if (persistenceFramework != null)
+                msgs = ((InternalEObject) persistenceFramework).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
                         - AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK, null,
                         msgs);
-            }
-            if (newPersistenceFramework != null) {
+            if (newPersistenceFramework != null)
                 msgs = ((InternalEObject) newPersistenceFramework).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
                         - AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK, null,
                         msgs);
-            }
-            msgs = this.basicSetPersistenceFramework(newPersistenceFramework, msgs);
-            if (msgs != null) {
+            msgs = basicSetPersistenceFramework(newPersistenceFramework, msgs);
+            if (msgs != null)
                 msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
+        } else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
                     AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK,
                     newPersistenceFramework, newPersistenceFramework));
-        }
     }
 
     /**
@@ -224,11 +219,11 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      */
     @Override
     public EList<StopCondition> getStopConditions() {
-        if (this.stopConditions == null) {
-            this.stopConditions = new EObjectContainmentEList<StopCondition>(StopCondition.class, this,
+        if (stopConditions == null) {
+            stopConditions = new EObjectContainmentEList<StopCondition>(StopCondition.class, this,
                     AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS);
         }
-        return this.stopConditions;
+        return stopConditions;
     }
 
     /**
@@ -238,7 +233,7 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      */
     @Override
     public RandomNumberGeneratorSeed getRandomNumberGeneratorSeed() {
-        return this.randomNumberGeneratorSeed;
+        return randomNumberGeneratorSeed;
     }
 
     /**
@@ -246,19 +241,18 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      * 
      * @generated
      */
-    public NotificationChain basicSetRandomNumberGeneratorSeed(
-            final RandomNumberGeneratorSeed newRandomNumberGeneratorSeed, NotificationChain msgs) {
-        final RandomNumberGeneratorSeed oldRandomNumberGeneratorSeed = this.randomNumberGeneratorSeed;
-        this.randomNumberGeneratorSeed = newRandomNumberGeneratorSeed;
-        if (this.eNotificationRequired()) {
-            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+    public NotificationChain basicSetRandomNumberGeneratorSeed(RandomNumberGeneratorSeed newRandomNumberGeneratorSeed,
+            NotificationChain msgs) {
+        RandomNumberGeneratorSeed oldRandomNumberGeneratorSeed = randomNumberGeneratorSeed;
+        randomNumberGeneratorSeed = newRandomNumberGeneratorSeed;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
                     AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED,
                     oldRandomNumberGeneratorSeed, newRandomNumberGeneratorSeed);
-            if (msgs == null) {
+            if (msgs == null)
                 msgs = notification;
-            } else {
+            else
                 msgs.add(notification);
-            }
         }
         return msgs;
     }
@@ -269,28 +263,24 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      * @generated
      */
     @Override
-    public void setRandomNumberGeneratorSeed(final RandomNumberGeneratorSeed newRandomNumberGeneratorSeed) {
-        if (newRandomNumberGeneratorSeed != this.randomNumberGeneratorSeed) {
+    public void setRandomNumberGeneratorSeed(RandomNumberGeneratorSeed newRandomNumberGeneratorSeed) {
+        if (newRandomNumberGeneratorSeed != randomNumberGeneratorSeed) {
             NotificationChain msgs = null;
-            if (this.randomNumberGeneratorSeed != null) {
-                msgs = ((InternalEObject) this.randomNumberGeneratorSeed).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+            if (randomNumberGeneratorSeed != null)
+                msgs = ((InternalEObject) randomNumberGeneratorSeed).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
                         - AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED,
                         null, msgs);
-            }
-            if (newRandomNumberGeneratorSeed != null) {
+            if (newRandomNumberGeneratorSeed != null)
                 msgs = ((InternalEObject) newRandomNumberGeneratorSeed).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
                         - AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED,
                         null, msgs);
-            }
-            msgs = this.basicSetRandomNumberGeneratorSeed(newRandomNumberGeneratorSeed, msgs);
-            if (msgs != null) {
+            msgs = basicSetRandomNumberGeneratorSeed(newRandomNumberGeneratorSeed, msgs);
+            if (msgs != null)
                 msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
+        } else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
                     AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED,
                     newRandomNumberGeneratorSeed, newRandomNumberGeneratorSeed));
-        }
     }
 
     /**
@@ -300,7 +290,7 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      */
     @Override
     public boolean isSimulateLinkingResources() {
-        return this.simulateLinkingResources;
+        return simulateLinkingResources;
     }
 
     /**
@@ -309,14 +299,13 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      * @generated
      */
     @Override
-    public void setSimulateLinkingResources(final boolean newSimulateLinkingResources) {
-        final boolean oldSimulateLinkingResources = this.simulateLinkingResources;
-        this.simulateLinkingResources = newSimulateLinkingResources;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
+    public void setSimulateLinkingResources(boolean newSimulateLinkingResources) {
+        boolean oldSimulateLinkingResources = simulateLinkingResources;
+        simulateLinkingResources = newSimulateLinkingResources;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
                     AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES,
-                    oldSimulateLinkingResources, this.simulateLinkingResources));
-        }
+                    oldSimulateLinkingResources, simulateLinkingResources));
     }
 
     /**
@@ -326,7 +315,7 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      */
     @Override
     public boolean isSimulateFailures() {
-        return this.simulateFailures;
+        return simulateFailures;
     }
 
     /**
@@ -335,14 +324,13 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      * @generated
      */
     @Override
-    public void setSimulateFailures(final boolean newSimulateFailures) {
-        final boolean oldSimulateFailures = this.simulateFailures;
-        this.simulateFailures = newSimulateFailures;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
+    public void setSimulateFailures(boolean newSimulateFailures) {
+        boolean oldSimulateFailures = simulateFailures;
+        simulateFailures = newSimulateFailures;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
                     AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES,
-                    oldSimulateFailures, this.simulateFailures));
-        }
+                    oldSimulateFailures, simulateFailures));
     }
 
     /**
@@ -352,7 +340,7 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      */
     @Override
     public ProbeSpecConfiguration getProbeSpecConfiguration() {
-        return this.probeSpecConfiguration;
+        return probeSpecConfiguration;
     }
 
     /**
@@ -360,19 +348,18 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      * 
      * @generated
      */
-    public NotificationChain basicSetProbeSpecConfiguration(final ProbeSpecConfiguration newProbeSpecConfiguration,
+    public NotificationChain basicSetProbeSpecConfiguration(ProbeSpecConfiguration newProbeSpecConfiguration,
             NotificationChain msgs) {
-        final ProbeSpecConfiguration oldProbeSpecConfiguration = this.probeSpecConfiguration;
-        this.probeSpecConfiguration = newProbeSpecConfiguration;
-        if (this.eNotificationRequired()) {
-            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+        ProbeSpecConfiguration oldProbeSpecConfiguration = probeSpecConfiguration;
+        probeSpecConfiguration = newProbeSpecConfiguration;
+        if (eNotificationRequired()) {
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
                     AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION,
                     oldProbeSpecConfiguration, newProbeSpecConfiguration);
-            if (msgs == null) {
+            if (msgs == null)
                 msgs = notification;
-            } else {
+            else
                 msgs.add(notification);
-            }
         }
         return msgs;
     }
@@ -383,28 +370,24 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      * @generated
      */
     @Override
-    public void setProbeSpecConfiguration(final ProbeSpecConfiguration newProbeSpecConfiguration) {
-        if (newProbeSpecConfiguration != this.probeSpecConfiguration) {
+    public void setProbeSpecConfiguration(ProbeSpecConfiguration newProbeSpecConfiguration) {
+        if (newProbeSpecConfiguration != probeSpecConfiguration) {
             NotificationChain msgs = null;
-            if (this.probeSpecConfiguration != null) {
-                msgs = ((InternalEObject) this.probeSpecConfiguration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+            if (probeSpecConfiguration != null)
+                msgs = ((InternalEObject) probeSpecConfiguration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
                         - AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION, null,
                         msgs);
-            }
-            if (newProbeSpecConfiguration != null) {
+            if (newProbeSpecConfiguration != null)
                 msgs = ((InternalEObject) newProbeSpecConfiguration).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
                         - AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION, null,
                         msgs);
-            }
-            msgs = this.basicSetProbeSpecConfiguration(newProbeSpecConfiguration, msgs);
-            if (msgs != null) {
+            msgs = basicSetProbeSpecConfiguration(newProbeSpecConfiguration, msgs);
+            if (msgs != null)
                 msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
+        } else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
                     AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION,
                     newProbeSpecConfiguration, newProbeSpecConfiguration));
-        }
     }
 
     /**
@@ -413,17 +396,16 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
-            final NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK:
-            return this.basicSetPersistenceFramework(null, msgs);
+            return basicSetPersistenceFramework(null, msgs);
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS:
-            return ((InternalEList<?>) this.getStopConditions()).basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) getStopConditions()).basicRemove(otherEnd, msgs);
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED:
-            return this.basicSetRandomNumberGeneratorSeed(null, msgs);
+            return basicSetRandomNumberGeneratorSeed(null, msgs);
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION:
-            return this.basicSetProbeSpecConfiguration(null, msgs);
+            return basicSetProbeSpecConfiguration(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -434,20 +416,20 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      * @generated
      */
     @Override
-    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK:
-            return this.getPersistenceFramework();
+            return getPersistenceFramework();
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS:
-            return this.getStopConditions();
+            return getStopConditions();
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED:
-            return this.getRandomNumberGeneratorSeed();
+            return getRandomNumberGeneratorSeed();
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES:
-            return this.isSimulateLinkingResources();
+            return isSimulateLinkingResources();
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES:
-            return this.isSimulateFailures();
+            return isSimulateFailures();
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION:
-            return this.getProbeSpecConfiguration();
+            return getProbeSpecConfiguration();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -459,26 +441,26 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      */
     @SuppressWarnings("unchecked")
     @Override
-    public void eSet(final int featureID, final Object newValue) {
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK:
-            this.setPersistenceFramework((PersistenceFramework) newValue);
+            setPersistenceFramework((PersistenceFramework) newValue);
             return;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS:
-            this.getStopConditions().clear();
-            this.getStopConditions().addAll((Collection<? extends StopCondition>) newValue);
+            getStopConditions().clear();
+            getStopConditions().addAll((Collection<? extends StopCondition>) newValue);
             return;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED:
-            this.setRandomNumberGeneratorSeed((RandomNumberGeneratorSeed) newValue);
+            setRandomNumberGeneratorSeed((RandomNumberGeneratorSeed) newValue);
             return;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES:
-            this.setSimulateLinkingResources((Boolean) newValue);
+            setSimulateLinkingResources((Boolean) newValue);
             return;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES:
-            this.setSimulateFailures((Boolean) newValue);
+            setSimulateFailures((Boolean) newValue);
             return;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION:
-            this.setProbeSpecConfiguration((ProbeSpecConfiguration) newValue);
+            setProbeSpecConfiguration((ProbeSpecConfiguration) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -490,25 +472,25 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      * @generated
      */
     @Override
-    public void eUnset(final int featureID) {
+    public void eUnset(int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK:
-            this.setPersistenceFramework((PersistenceFramework) null);
+            setPersistenceFramework((PersistenceFramework) null);
             return;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS:
-            this.getStopConditions().clear();
+            getStopConditions().clear();
             return;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED:
-            this.setRandomNumberGeneratorSeed((RandomNumberGeneratorSeed) null);
+            setRandomNumberGeneratorSeed((RandomNumberGeneratorSeed) null);
             return;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES:
-            this.setSimulateLinkingResources(SIMULATE_LINKING_RESOURCES_EDEFAULT);
+            setSimulateLinkingResources(SIMULATE_LINKING_RESOURCES_EDEFAULT);
             return;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES:
-            this.setSimulateFailures(SIMULATE_FAILURES_EDEFAULT);
+            setSimulateFailures(SIMULATE_FAILURES_EDEFAULT);
             return;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION:
-            this.setProbeSpecConfiguration((ProbeSpecConfiguration) null);
+            setProbeSpecConfiguration((ProbeSpecConfiguration) null);
             return;
         }
         super.eUnset(featureID);
@@ -520,20 +502,20 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      * @generated
      */
     @Override
-    public boolean eIsSet(final int featureID) {
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK:
-            return this.persistenceFramework != null;
+            return persistenceFramework != null;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS:
-            return this.stopConditions != null && !this.stopConditions.isEmpty();
+            return stopConditions != null && !stopConditions.isEmpty();
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED:
-            return this.randomNumberGeneratorSeed != null;
+            return randomNumberGeneratorSeed != null;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES:
-            return this.simulateLinkingResources != SIMULATE_LINKING_RESOURCES_EDEFAULT;
+            return simulateLinkingResources != SIMULATE_LINKING_RESOURCES_EDEFAULT;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES:
-            return this.simulateFailures != SIMULATE_FAILURES_EDEFAULT;
+            return simulateFailures != SIMULATE_FAILURES_EDEFAULT;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION:
-            return this.probeSpecConfiguration != null;
+            return probeSpecConfiguration != null;
         }
         return super.eIsSet(featureID);
     }
@@ -545,15 +527,14 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
      */
     @Override
     public String toString() {
-        if (this.eIsProxy()) {
+        if (eIsProxy())
             return super.toString();
-        }
 
-        final StringBuffer result = new StringBuffer(super.toString());
+        StringBuffer result = new StringBuffer(super.toString());
         result.append(" (simulateLinkingResources: ");
-        result.append(this.simulateLinkingResources);
+        result.append(simulateLinkingResources);
         result.append(", simulateFailures: ");
-        result.append(this.simulateFailures);
+        result.append(simulateFailures);
         result.append(')');
         return result.toString();
     }

@@ -145,10 +145,10 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
             super.getChildrenFeatures(object);
             childrenFeatures.add(ExperimentsPackage.Literals.EXPERIMENT__VARIATIONS);
             childrenFeatures.add(ExperimentsPackage.Literals.EXPERIMENT__MODIFICATIONS);
-            childrenFeatures.add(ExperimentsPackage.Literals.EXPERIMENT__INITIAL_MODEL);
             childrenFeatures.add(ExperimentsPackage.Literals.EXPERIMENT__STOP_CONDITIONS);
             childrenFeatures.add(ExperimentsPackage.Literals.EXPERIMENT__EXPERIMENT_DESIGN);
             childrenFeatures.add(ExperimentsPackage.Literals.EXPERIMENT__RESPONSE_MEASUREMENT);
+            childrenFeatures.add(ExperimentsPackage.Literals.EXPERIMENT__INITIAL_MODEL);
         }
         return childrenFeatures;
     }
@@ -208,10 +208,10 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
             return;
         case ExperimentsPackage.EXPERIMENT__VARIATIONS:
         case ExperimentsPackage.EXPERIMENT__MODIFICATIONS:
-        case ExperimentsPackage.EXPERIMENT__INITIAL_MODEL:
         case ExperimentsPackage.EXPERIMENT__STOP_CONDITIONS:
         case ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN:
         case ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT:
+        case ExperimentsPackage.EXPERIMENT__INITIAL_MODEL:
             fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
@@ -234,9 +234,6 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
         newChildDescriptors.add(createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__MODIFICATIONS,
                 ExperimentsFactory.eINSTANCE.createModification()));
 
-        newChildDescriptors.add(createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__INITIAL_MODEL,
-                ExperimentsFactory.eINSTANCE.createPCMModelFiles()));
-
         newChildDescriptors.add(createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__STOP_CONDITIONS,
                 AbstractsimulationFactory.eINSTANCE.createMeasurementCountStopCondition()));
 
@@ -257,6 +254,9 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
 
         newChildDescriptors.add(createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__RESPONSE_MEASUREMENT,
                 ExperimentsFactory.eINSTANCE.createJMXMeasurement()));
+
+        newChildDescriptors.add(createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__INITIAL_MODEL,
+                ExperimentsFactory.eINSTANCE.createInitialModel()));
     }
 
     /**

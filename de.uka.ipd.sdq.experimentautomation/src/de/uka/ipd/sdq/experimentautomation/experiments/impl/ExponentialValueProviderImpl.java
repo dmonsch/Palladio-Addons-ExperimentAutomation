@@ -74,7 +74,7 @@ public class ExponentialValueProviderImpl extends ValueProviderImpl implements E
      */
     @Override
     public double getBase() {
-        return this.base;
+        return base;
     }
 
     /**
@@ -83,13 +83,12 @@ public class ExponentialValueProviderImpl extends ValueProviderImpl implements E
      * @generated
      */
     @Override
-    public void setBase(final double newBase) {
-        final double oldBase = this.base;
-        this.base = newBase;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.EXPONENTIAL_VALUE_PROVIDER__BASE, oldBase, this.base));
-        }
+    public void setBase(double newBase) {
+        double oldBase = base;
+        base = newBase;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.EXPONENTIAL_VALUE_PROVIDER__BASE,
+                    oldBase, base));
     }
 
     /**
@@ -98,10 +97,10 @@ public class ExponentialValueProviderImpl extends ValueProviderImpl implements E
      * @generated
      */
     @Override
-    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case ExperimentsPackage.EXPONENTIAL_VALUE_PROVIDER__BASE:
-            return this.getBase();
+            return getBase();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -112,10 +111,10 @@ public class ExponentialValueProviderImpl extends ValueProviderImpl implements E
      * @generated
      */
     @Override
-    public void eSet(final int featureID, final Object newValue) {
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
         case ExperimentsPackage.EXPONENTIAL_VALUE_PROVIDER__BASE:
-            this.setBase((Double) newValue);
+            setBase((Double) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -127,10 +126,10 @@ public class ExponentialValueProviderImpl extends ValueProviderImpl implements E
      * @generated
      */
     @Override
-    public void eUnset(final int featureID) {
+    public void eUnset(int featureID) {
         switch (featureID) {
         case ExperimentsPackage.EXPONENTIAL_VALUE_PROVIDER__BASE:
-            this.setBase(BASE_EDEFAULT);
+            setBase(BASE_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -142,10 +141,10 @@ public class ExponentialValueProviderImpl extends ValueProviderImpl implements E
      * @generated
      */
     @Override
-    public boolean eIsSet(final int featureID) {
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
         case ExperimentsPackage.EXPONENTIAL_VALUE_PROVIDER__BASE:
-            return this.base != BASE_EDEFAULT;
+            return base != BASE_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -157,13 +156,12 @@ public class ExponentialValueProviderImpl extends ValueProviderImpl implements E
      */
     @Override
     public String toString() {
-        if (this.eIsProxy()) {
+        if (eIsProxy())
             return super.toString();
-        }
 
-        final StringBuffer result = new StringBuffer(super.toString());
+        StringBuffer result = new StringBuffer(super.toString());
         result.append(" (base: ");
-        result.append(this.base);
+        result.append(base);
         result.append(')');
         return result.toString();
     }

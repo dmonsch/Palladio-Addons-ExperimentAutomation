@@ -17,14 +17,15 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
 import de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider;
 import de.uka.ipd.sdq.experimentautomation.experiments.FractionalFactorialDesign;
 import de.uka.ipd.sdq.experimentautomation.experiments.FullFactorialDesign;
+import de.uka.ipd.sdq.experimentautomation.experiments.InitialModel;
 import de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement;
 import de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider;
 import de.uka.ipd.sdq.experimentautomation.experiments.Modification;
 import de.uka.ipd.sdq.experimentautomation.experiments.OneFactorAtATime;
-import de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles;
 import de.uka.ipd.sdq.experimentautomation.experiments.PlacketBurmanDesign;
 import de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider;
 import de.uka.ipd.sdq.experimentautomation.experiments.ProfilingMeasurement;
+import de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder;
 import de.uka.ipd.sdq.experimentautomation.experiments.ResponseMeasurement;
 import de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider;
 import de.uka.ipd.sdq.experimentautomation.experiments.SimulationDurationMeasurement;
@@ -70,7 +71,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @generated
      */
     @Override
-    protected boolean isSwitchFor(final EPackage ePackage) {
+    protected boolean isSwitchFor(EPackage ePackage) {
         return ePackage == modelPackage;
     }
 
@@ -82,197 +83,175 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @generated
      */
     @Override
-    protected T doSwitch(final int classifierID, final EObject theEObject) {
+    protected T doSwitch(int classifierID, EObject theEObject) {
         switch (classifierID) {
         case ExperimentsPackage.EXPERIMENT_REPOSITORY: {
-            final ExperimentRepository experimentRepository = (ExperimentRepository) theEObject;
-            T result = this.caseExperimentRepository(experimentRepository);
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            ExperimentRepository experimentRepository = (ExperimentRepository) theEObject;
+            T result = caseExperimentRepository(experimentRepository);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case ExperimentsPackage.EXPERIMENT: {
-            final Experiment experiment = (Experiment) theEObject;
-            T result = this.caseExperiment(experiment);
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            Experiment experiment = (Experiment) theEObject;
+            T result = caseExperiment(experiment);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case ExperimentsPackage.VARIATION: {
-            final Variation variation = (Variation) theEObject;
-            T result = this.caseVariation(variation);
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            Variation variation = (Variation) theEObject;
+            T result = caseVariation(variation);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case ExperimentsPackage.VALUE_PROVIDER: {
-            final ValueProvider valueProvider = (ValueProvider) theEObject;
-            T result = this.caseValueProvider(valueProvider);
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
-            return result;
-        }
-        case ExperimentsPackage.PCM_MODEL_FILES: {
-            final PCMModelFiles pcmModelFiles = (PCMModelFiles) theEObject;
-            T result = this.casePCMModelFiles(pcmModelFiles);
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            ValueProvider valueProvider = (ValueProvider) theEObject;
+            T result = caseValueProvider(valueProvider);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case ExperimentsPackage.TOOL_CONFIGURATION: {
-            final ToolConfiguration toolConfiguration = (ToolConfiguration) theEObject;
-            T result = this.caseToolConfiguration(toolConfiguration);
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            ToolConfiguration toolConfiguration = (ToolConfiguration) theEObject;
+            T result = caseToolConfiguration(toolConfiguration);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case ExperimentsPackage.EXPERIMENT_DESIGN: {
-            final ExperimentDesign experimentDesign = (ExperimentDesign) theEObject;
-            T result = this.caseExperimentDesign(experimentDesign);
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            ExperimentDesign experimentDesign = (ExperimentDesign) theEObject;
+            T result = caseExperimentDesign(experimentDesign);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case ExperimentsPackage.RESPONSE_MEASUREMENT: {
-            final ResponseMeasurement responseMeasurement = (ResponseMeasurement) theEObject;
-            T result = this.caseResponseMeasurement(responseMeasurement);
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            ResponseMeasurement responseMeasurement = (ResponseMeasurement) theEObject;
+            T result = caseResponseMeasurement(responseMeasurement);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER: {
-            final PolynomialValueProvider polynomialValueProvider = (PolynomialValueProvider) theEObject;
-            T result = this.casePolynomialValueProvider(polynomialValueProvider);
-            if (result == null) {
-                result = this.caseValueProvider(polynomialValueProvider);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            PolynomialValueProvider polynomialValueProvider = (PolynomialValueProvider) theEObject;
+            T result = casePolynomialValueProvider(polynomialValueProvider);
+            if (result == null)
+                result = caseValueProvider(polynomialValueProvider);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case ExperimentsPackage.EXPONENTIAL_VALUE_PROVIDER: {
-            final ExponentialValueProvider exponentialValueProvider = (ExponentialValueProvider) theEObject;
-            T result = this.caseExponentialValueProvider(exponentialValueProvider);
-            if (result == null) {
-                result = this.caseValueProvider(exponentialValueProvider);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            ExponentialValueProvider exponentialValueProvider = (ExponentialValueProvider) theEObject;
+            T result = caseExponentialValueProvider(exponentialValueProvider);
+            if (result == null)
+                result = caseValueProvider(exponentialValueProvider);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case ExperimentsPackage.SET_VALUE_PROVIDER: {
-            final SetValueProvider setValueProvider = (SetValueProvider) theEObject;
-            T result = this.caseSetValueProvider(setValueProvider);
-            if (result == null) {
-                result = this.caseValueProvider(setValueProvider);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            SetValueProvider setValueProvider = (SetValueProvider) theEObject;
+            T result = caseSetValueProvider(setValueProvider);
+            if (result == null)
+                result = caseValueProvider(setValueProvider);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case ExperimentsPackage.PLACKET_BURMAN_DESIGN: {
-            final PlacketBurmanDesign placketBurmanDesign = (PlacketBurmanDesign) theEObject;
-            T result = this.casePlacketBurmanDesign(placketBurmanDesign);
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            PlacketBurmanDesign placketBurmanDesign = (PlacketBurmanDesign) theEObject;
+            T result = casePlacketBurmanDesign(placketBurmanDesign);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case ExperimentsPackage.FULL_FACTORIAL_DESIGN: {
-            final FullFactorialDesign fullFactorialDesign = (FullFactorialDesign) theEObject;
-            T result = this.caseFullFactorialDesign(fullFactorialDesign);
-            if (result == null) {
-                result = this.caseExperimentDesign(fullFactorialDesign);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            FullFactorialDesign fullFactorialDesign = (FullFactorialDesign) theEObject;
+            T result = caseFullFactorialDesign(fullFactorialDesign);
+            if (result == null)
+                result = caseExperimentDesign(fullFactorialDesign);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case ExperimentsPackage.FRACTIONAL_FACTORIAL_DESIGN: {
-            final FractionalFactorialDesign fractionalFactorialDesign = (FractionalFactorialDesign) theEObject;
-            T result = this.caseFractionalFactorialDesign(fractionalFactorialDesign);
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            FractionalFactorialDesign fractionalFactorialDesign = (FractionalFactorialDesign) theEObject;
+            T result = caseFractionalFactorialDesign(fractionalFactorialDesign);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case ExperimentsPackage.ONE_FACTOR_AT_ATIME: {
-            final OneFactorAtATime oneFactorAtATime = (OneFactorAtATime) theEObject;
-            T result = this.caseOneFactorAtATime(oneFactorAtATime);
-            if (result == null) {
-                result = this.caseExperimentDesign(oneFactorAtATime);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            OneFactorAtATime oneFactorAtATime = (OneFactorAtATime) theEObject;
+            T result = caseOneFactorAtATime(oneFactorAtATime);
+            if (result == null)
+                result = caseExperimentDesign(oneFactorAtATime);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case ExperimentsPackage.SIMULATION_DURATION_MEASUREMENT: {
-            final SimulationDurationMeasurement simulationDurationMeasurement = (SimulationDurationMeasurement) theEObject;
-            T result = this.caseSimulationDurationMeasurement(simulationDurationMeasurement);
-            if (result == null) {
-                result = this.caseResponseMeasurement(simulationDurationMeasurement);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            SimulationDurationMeasurement simulationDurationMeasurement = (SimulationDurationMeasurement) theEObject;
+            T result = caseSimulationDurationMeasurement(simulationDurationMeasurement);
+            if (result == null)
+                result = caseResponseMeasurement(simulationDurationMeasurement);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case ExperimentsPackage.PROFILING_MEASUREMENT: {
-            final ProfilingMeasurement profilingMeasurement = (ProfilingMeasurement) theEObject;
-            T result = this.caseProfilingMeasurement(profilingMeasurement);
-            if (result == null) {
-                result = this.caseResponseMeasurement(profilingMeasurement);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            ProfilingMeasurement profilingMeasurement = (ProfilingMeasurement) theEObject;
+            T result = caseProfilingMeasurement(profilingMeasurement);
+            if (result == null)
+                result = caseResponseMeasurement(profilingMeasurement);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case ExperimentsPackage.JMX_MEASUREMENT: {
-            final JMXMeasurement jmxMeasurement = (JMXMeasurement) theEObject;
-            T result = this.caseJMXMeasurement(jmxMeasurement);
-            if (result == null) {
-                result = this.caseResponseMeasurement(jmxMeasurement);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            JMXMeasurement jmxMeasurement = (JMXMeasurement) theEObject;
+            T result = caseJMXMeasurement(jmxMeasurement);
+            if (result == null)
+                result = caseResponseMeasurement(jmxMeasurement);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER: {
-            final LinearValueProvider linearValueProvider = (LinearValueProvider) theEObject;
-            T result = this.caseLinearValueProvider(linearValueProvider);
-            if (result == null) {
-                result = this.caseValueProvider(linearValueProvider);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            LinearValueProvider linearValueProvider = (LinearValueProvider) theEObject;
+            T result = caseLinearValueProvider(linearValueProvider);
+            if (result == null)
+                result = caseValueProvider(linearValueProvider);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case ExperimentsPackage.MODIFICATION: {
-            final Modification modification = (Modification) theEObject;
-            T result = this.caseModification(modification);
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            Modification modification = (Modification) theEObject;
+            T result = caseModification(modification);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case ExperimentsPackage.INITIAL_MODEL: {
+            InitialModel initialModel = (InitialModel) theEObject;
+            T result = caseInitialModel(initialModel);
+            if (result == null)
+                result = defaultCase(theEObject);
+            return result;
+        }
+        case ExperimentsPackage.RECONFIGURATION_RULES_FOLDER: {
+            ReconfigurationRulesFolder reconfigurationRulesFolder = (ReconfigurationRulesFolder) theEObject;
+            T result = caseReconfigurationRulesFolder(reconfigurationRulesFolder);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         default:
-            return this.defaultCase(theEObject);
+            return defaultCase(theEObject);
         }
     }
 
@@ -288,7 +267,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseExperimentRepository(final ExperimentRepository object) {
+    public T caseExperimentRepository(ExperimentRepository object) {
         return null;
     }
 
@@ -303,7 +282,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseExperiment(final Experiment object) {
+    public T caseExperiment(Experiment object) {
         return null;
     }
 
@@ -318,7 +297,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseVariation(final Variation object) {
+    public T caseVariation(Variation object) {
         return null;
     }
 
@@ -333,22 +312,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseValueProvider(final ValueProvider object) {
-        return null;
-    }
-
-    /**
-     * Returns the result of interpreting the object as an instance of '<em>PCM Model Files</em>'.
-     * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
-     * terminate the switch. <!-- end-user-doc -->
-     * 
-     * @param object
-     *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>PCM Model Files</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T casePCMModelFiles(final PCMModelFiles object) {
+    public T caseValueProvider(ValueProvider object) {
         return null;
     }
 
@@ -364,7 +328,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseToolConfiguration(final ToolConfiguration object) {
+    public T caseToolConfiguration(ToolConfiguration object) {
         return null;
     }
 
@@ -379,7 +343,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseExperimentDesign(final ExperimentDesign object) {
+    public T caseExperimentDesign(ExperimentDesign object) {
         return null;
     }
 
@@ -395,7 +359,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseResponseMeasurement(final ResponseMeasurement object) {
+    public T caseResponseMeasurement(ResponseMeasurement object) {
         return null;
     }
 
@@ -411,7 +375,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T casePolynomialValueProvider(final PolynomialValueProvider object) {
+    public T casePolynomialValueProvider(PolynomialValueProvider object) {
         return null;
     }
 
@@ -427,7 +391,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseExponentialValueProvider(final ExponentialValueProvider object) {
+    public T caseExponentialValueProvider(ExponentialValueProvider object) {
         return null;
     }
 
@@ -443,7 +407,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseSetValueProvider(final SetValueProvider object) {
+    public T caseSetValueProvider(SetValueProvider object) {
         return null;
     }
 
@@ -459,7 +423,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T casePlacketBurmanDesign(final PlacketBurmanDesign object) {
+    public T casePlacketBurmanDesign(PlacketBurmanDesign object) {
         return null;
     }
 
@@ -475,7 +439,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseFullFactorialDesign(final FullFactorialDesign object) {
+    public T caseFullFactorialDesign(FullFactorialDesign object) {
         return null;
     }
 
@@ -491,7 +455,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseFractionalFactorialDesign(final FractionalFactorialDesign object) {
+    public T caseFractionalFactorialDesign(FractionalFactorialDesign object) {
         return null;
     }
 
@@ -507,7 +471,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseOneFactorAtATime(final OneFactorAtATime object) {
+    public T caseOneFactorAtATime(OneFactorAtATime object) {
         return null;
     }
 
@@ -523,7 +487,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseSimulationDurationMeasurement(final SimulationDurationMeasurement object) {
+    public T caseSimulationDurationMeasurement(SimulationDurationMeasurement object) {
         return null;
     }
 
@@ -539,7 +503,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseProfilingMeasurement(final ProfilingMeasurement object) {
+    public T caseProfilingMeasurement(ProfilingMeasurement object) {
         return null;
     }
 
@@ -554,7 +518,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseJMXMeasurement(final JMXMeasurement object) {
+    public T caseJMXMeasurement(JMXMeasurement object) {
         return null;
     }
 
@@ -570,7 +534,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseLinearValueProvider(final LinearValueProvider object) {
+    public T caseLinearValueProvider(LinearValueProvider object) {
         return null;
     }
 
@@ -585,7 +549,38 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseModification(final Modification object) {
+    public T caseModification(Modification object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Initial Model</em>'.
+     * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
+     * terminate the switch. <!-- end-user-doc -->
+     * 
+     * @param object
+     *            the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Initial Model</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseInitialModel(InitialModel object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '
+     * <em>Reconfiguration Rules Folder</em>'. <!-- begin-user-doc --> This implementation returns
+     * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
+     * 
+     * @param object
+     *            the target of the switch.
+     * @return the result of interpreting the object as an instance of '
+     *         <em>Reconfiguration Rules Folder</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseReconfigurationRulesFolder(ReconfigurationRulesFolder object) {
         return null;
     }
 
@@ -601,7 +596,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @generated
      */
     @Override
-    public T defaultCase(final EObject object) {
+    public T defaultCase(EObject object) {
         return null;
     }
 

@@ -59,7 +59,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @generated
      */
     @Override
-    protected boolean isSwitchFor(final EPackage ePackage) {
+    protected boolean isSwitchFor(EPackage ePackage) {
         return ePackage == modelPackage;
     }
 
@@ -71,127 +71,108 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @generated
      */
     @Override
-    protected T doSwitch(final int classifierID, final EObject theEObject) {
+    protected T doSwitch(int classifierID, EObject theEObject) {
         switch (classifierID) {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION: {
-            final AbstractSimulationConfiguration abstractSimulationConfiguration = (AbstractSimulationConfiguration) theEObject;
-            T result = this.caseAbstractSimulationConfiguration(abstractSimulationConfiguration);
-            if (result == null) {
-                result = this.caseToolConfiguration(abstractSimulationConfiguration);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            AbstractSimulationConfiguration abstractSimulationConfiguration = (AbstractSimulationConfiguration) theEObject;
+            T result = caseAbstractSimulationConfiguration(abstractSimulationConfiguration);
+            if (result == null)
+                result = caseToolConfiguration(abstractSimulationConfiguration);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case AbstractsimulationPackage.PERSISTENCE_FRAMEWORK: {
-            final PersistenceFramework persistenceFramework = (PersistenceFramework) theEObject;
-            T result = this.casePersistenceFramework(persistenceFramework);
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            PersistenceFramework persistenceFramework = (PersistenceFramework) theEObject;
+            T result = casePersistenceFramework(persistenceFramework);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED: {
-            final RandomNumberGeneratorSeed randomNumberGeneratorSeed = (RandomNumberGeneratorSeed) theEObject;
-            T result = this.caseRandomNumberGeneratorSeed(randomNumberGeneratorSeed);
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            RandomNumberGeneratorSeed randomNumberGeneratorSeed = (RandomNumberGeneratorSeed) theEObject;
+            T result = caseRandomNumberGeneratorSeed(randomNumberGeneratorSeed);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case AbstractsimulationPackage.PROBE_SPEC_CONFIGURATION: {
-            final ProbeSpecConfiguration probeSpecConfiguration = (ProbeSpecConfiguration) theEObject;
-            T result = this.caseProbeSpecConfiguration(probeSpecConfiguration);
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            ProbeSpecConfiguration probeSpecConfiguration = (ProbeSpecConfiguration) theEObject;
+            T result = caseProbeSpecConfiguration(probeSpecConfiguration);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case AbstractsimulationPackage.SENSOR_FRAMEWORK: {
-            final SensorFramework sensorFramework = (SensorFramework) theEObject;
-            T result = this.caseSensorFramework(sensorFramework);
-            if (result == null) {
-                result = this.casePersistenceFramework(sensorFramework);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            SensorFramework sensorFramework = (SensorFramework) theEObject;
+            T result = caseSensorFramework(sensorFramework);
+            if (result == null)
+                result = casePersistenceFramework(sensorFramework);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case AbstractsimulationPackage.SENSOR_FRAMEWORK_DATASOURCE: {
-            final SensorFrameworkDatasource sensorFrameworkDatasource = (SensorFrameworkDatasource) theEObject;
-            T result = this.caseSensorFrameworkDatasource(sensorFrameworkDatasource);
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            SensorFrameworkDatasource sensorFrameworkDatasource = (SensorFrameworkDatasource) theEObject;
+            T result = caseSensorFrameworkDatasource(sensorFrameworkDatasource);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case AbstractsimulationPackage.MEMORY_DATASOURCE: {
-            final MemoryDatasource memoryDatasource = (MemoryDatasource) theEObject;
-            T result = this.caseMemoryDatasource(memoryDatasource);
-            if (result == null) {
-                result = this.caseSensorFrameworkDatasource(memoryDatasource);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            MemoryDatasource memoryDatasource = (MemoryDatasource) theEObject;
+            T result = caseMemoryDatasource(memoryDatasource);
+            if (result == null)
+                result = caseSensorFrameworkDatasource(memoryDatasource);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case AbstractsimulationPackage.FILE_DATASOURCE: {
-            final FileDatasource fileDatasource = (FileDatasource) theEObject;
-            T result = this.caseFileDatasource(fileDatasource);
-            if (result == null) {
-                result = this.caseSensorFrameworkDatasource(fileDatasource);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            FileDatasource fileDatasource = (FileDatasource) theEObject;
+            T result = caseFileDatasource(fileDatasource);
+            if (result == null)
+                result = caseSensorFrameworkDatasource(fileDatasource);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case AbstractsimulationPackage.MEASUREMENT_COUNT_STOP_CONDITION: {
-            final MeasurementCountStopCondition measurementCountStopCondition = (MeasurementCountStopCondition) theEObject;
-            T result = this.caseMeasurementCountStopCondition(measurementCountStopCondition);
-            if (result == null) {
-                result = this.caseStopCondition(measurementCountStopCondition);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            MeasurementCountStopCondition measurementCountStopCondition = (MeasurementCountStopCondition) theEObject;
+            T result = caseMeasurementCountStopCondition(measurementCountStopCondition);
+            if (result == null)
+                result = caseStopCondition(measurementCountStopCondition);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case AbstractsimulationPackage.SIM_TIME_STOP_CONDITION: {
-            final SimTimeStopCondition simTimeStopCondition = (SimTimeStopCondition) theEObject;
-            T result = this.caseSimTimeStopCondition(simTimeStopCondition);
-            if (result == null) {
-                result = this.caseStopCondition(simTimeStopCondition);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            SimTimeStopCondition simTimeStopCondition = (SimTimeStopCondition) theEObject;
+            T result = caseSimTimeStopCondition(simTimeStopCondition);
+            if (result == null)
+                result = caseStopCondition(simTimeStopCondition);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case AbstractsimulationPackage.STOP_CONDITION: {
-            final StopCondition stopCondition = (StopCondition) theEObject;
-            T result = this.caseStopCondition(stopCondition);
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            StopCondition stopCondition = (StopCondition) theEObject;
+            T result = caseStopCondition(stopCondition);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         case AbstractsimulationPackage.EDP2: {
-            final EDP2 edp2 = (EDP2) theEObject;
-            T result = this.caseEDP2(edp2);
-            if (result == null) {
-                result = this.casePersistenceFramework(edp2);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
+            EDP2 edp2 = (EDP2) theEObject;
+            T result = caseEDP2(edp2);
+            if (result == null)
+                result = casePersistenceFramework(edp2);
+            if (result == null)
+                result = defaultCase(theEObject);
             return result;
         }
         default:
-            return this.defaultCase(theEObject);
+            return defaultCase(theEObject);
         }
     }
 
@@ -207,7 +188,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseAbstractSimulationConfiguration(final AbstractSimulationConfiguration object) {
+    public T caseAbstractSimulationConfiguration(AbstractSimulationConfiguration object) {
         return null;
     }
 
@@ -223,7 +204,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T casePersistenceFramework(final PersistenceFramework object) {
+    public T casePersistenceFramework(PersistenceFramework object) {
         return null;
     }
 
@@ -239,7 +220,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseRandomNumberGeneratorSeed(final RandomNumberGeneratorSeed object) {
+    public T caseRandomNumberGeneratorSeed(RandomNumberGeneratorSeed object) {
         return null;
     }
 
@@ -255,7 +236,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseProbeSpecConfiguration(final ProbeSpecConfiguration object) {
+    public T caseProbeSpecConfiguration(ProbeSpecConfiguration object) {
         return null;
     }
 
@@ -270,7 +251,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseSensorFramework(final SensorFramework object) {
+    public T caseSensorFramework(SensorFramework object) {
         return null;
     }
 
@@ -286,7 +267,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseSensorFrameworkDatasource(final SensorFrameworkDatasource object) {
+    public T caseSensorFrameworkDatasource(SensorFrameworkDatasource object) {
         return null;
     }
 
@@ -301,7 +282,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseMemoryDatasource(final MemoryDatasource object) {
+    public T caseMemoryDatasource(MemoryDatasource object) {
         return null;
     }
 
@@ -316,7 +297,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseFileDatasource(final FileDatasource object) {
+    public T caseFileDatasource(FileDatasource object) {
         return null;
     }
 
@@ -332,7 +313,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseMeasurementCountStopCondition(final MeasurementCountStopCondition object) {
+    public T caseMeasurementCountStopCondition(MeasurementCountStopCondition object) {
         return null;
     }
 
@@ -348,7 +329,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseSimTimeStopCondition(final SimTimeStopCondition object) {
+    public T caseSimTimeStopCondition(SimTimeStopCondition object) {
         return null;
     }
 
@@ -363,7 +344,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseStopCondition(final StopCondition object) {
+    public T caseStopCondition(StopCondition object) {
         return null;
     }
 
@@ -378,7 +359,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseEDP2(final EDP2 object) {
+    public T caseEDP2(EDP2 object) {
         return null;
     }
 
@@ -394,7 +375,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseToolConfiguration(final ToolConfiguration object) {
+    public T caseToolConfiguration(ToolConfiguration object) {
         return null;
     }
 
@@ -410,7 +391,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @generated
      */
     @Override
-    public T defaultCase(final EObject object) {
+    public T defaultCase(EObject object) {
         return null;
     }
 

@@ -72,7 +72,7 @@ public class ProbeSpecConfigurationImpl extends EObjectImpl implements ProbeSpec
      */
     @Override
     public BlackboardType getBlackboardType() {
-        return this.blackboardType;
+        return blackboardType;
     }
 
     /**
@@ -81,14 +81,13 @@ public class ProbeSpecConfigurationImpl extends EObjectImpl implements ProbeSpec
      * @generated
      */
     @Override
-    public void setBlackboardType(final BlackboardType newBlackboardType) {
-        final BlackboardType oldBlackboardType = this.blackboardType;
-        this.blackboardType = newBlackboardType == null ? BLACKBOARD_TYPE_EDEFAULT : newBlackboardType;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
+    public void setBlackboardType(BlackboardType newBlackboardType) {
+        BlackboardType oldBlackboardType = blackboardType;
+        blackboardType = newBlackboardType == null ? BLACKBOARD_TYPE_EDEFAULT : newBlackboardType;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
                     AbstractsimulationPackage.PROBE_SPEC_CONFIGURATION__BLACKBOARD_TYPE, oldBlackboardType,
-                    this.blackboardType));
-        }
+                    blackboardType));
     }
 
     /**
@@ -97,10 +96,10 @@ public class ProbeSpecConfigurationImpl extends EObjectImpl implements ProbeSpec
      * @generated
      */
     @Override
-    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case AbstractsimulationPackage.PROBE_SPEC_CONFIGURATION__BLACKBOARD_TYPE:
-            return this.getBlackboardType();
+            return getBlackboardType();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -111,10 +110,10 @@ public class ProbeSpecConfigurationImpl extends EObjectImpl implements ProbeSpec
      * @generated
      */
     @Override
-    public void eSet(final int featureID, final Object newValue) {
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
         case AbstractsimulationPackage.PROBE_SPEC_CONFIGURATION__BLACKBOARD_TYPE:
-            this.setBlackboardType((BlackboardType) newValue);
+            setBlackboardType((BlackboardType) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -126,10 +125,10 @@ public class ProbeSpecConfigurationImpl extends EObjectImpl implements ProbeSpec
      * @generated
      */
     @Override
-    public void eUnset(final int featureID) {
+    public void eUnset(int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.PROBE_SPEC_CONFIGURATION__BLACKBOARD_TYPE:
-            this.setBlackboardType(BLACKBOARD_TYPE_EDEFAULT);
+            setBlackboardType(BLACKBOARD_TYPE_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -141,10 +140,10 @@ public class ProbeSpecConfigurationImpl extends EObjectImpl implements ProbeSpec
      * @generated
      */
     @Override
-    public boolean eIsSet(final int featureID) {
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.PROBE_SPEC_CONFIGURATION__BLACKBOARD_TYPE:
-            return this.blackboardType != BLACKBOARD_TYPE_EDEFAULT;
+            return blackboardType != BLACKBOARD_TYPE_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -156,13 +155,12 @@ public class ProbeSpecConfigurationImpl extends EObjectImpl implements ProbeSpec
      */
     @Override
     public String toString() {
-        if (this.eIsProxy()) {
+        if (eIsProxy())
             return super.toString();
-        }
 
-        final StringBuffer result = new StringBuffer(super.toString());
+        StringBuffer result = new StringBuffer(super.toString());
         result.append(" (blackboardType: ");
-        result.append(this.blackboardType);
+        result.append(blackboardType);
         result.append(')');
         return result.toString();
     }

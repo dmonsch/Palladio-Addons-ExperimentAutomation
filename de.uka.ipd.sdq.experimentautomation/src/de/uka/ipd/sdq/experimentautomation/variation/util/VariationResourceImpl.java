@@ -23,7 +23,7 @@ public class VariationResourceImpl extends XMLResourceImpl {
      *            the URI of the new resource.
      * @generated
      */
-    public VariationResourceImpl(final URI uri) {
+    public VariationResourceImpl(URI uri) {
         super(uri);
     }
 

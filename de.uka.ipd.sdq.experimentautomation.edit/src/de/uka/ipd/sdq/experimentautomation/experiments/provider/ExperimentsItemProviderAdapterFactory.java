@@ -151,31 +151,6 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles} instances. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    protected PCMModelFilesItemProvider pcmModelFilesItemProvider;
-
-    /**
-     * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles}. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public Adapter createPCMModelFilesAdapter() {
-        if (pcmModelFilesItemProvider == null) {
-            pcmModelFilesItemProvider = new PCMModelFilesItemProvider(this);
-        }
-
-        return pcmModelFilesItemProvider;
-    }
-
-    /**
-     * This keeps track of the one adapter used for all
      * {@link de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
@@ -475,6 +450,56 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
     }
 
     /**
+     * This keeps track of the one adapter used for all
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel} instances. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    protected InitialModelItemProvider initialModelItemProvider;
+
+    /**
+     * This creates an adapter for a
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel}. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public Adapter createInitialModelAdapter() {
+        if (initialModelItemProvider == null) {
+            initialModelItemProvider = new InitialModelItemProvider(this);
+        }
+
+        return initialModelItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder} instances.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    protected ReconfigurationRulesFolderItemProvider reconfigurationRulesFolderItemProvider;
+
+    /**
+     * This creates an adapter for a
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder}. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public Adapter createReconfigurationRulesFolderAdapter() {
+        if (reconfigurationRulesFolderItemProvider == null) {
+            reconfigurationRulesFolderItemProvider = new ReconfigurationRulesFolderItemProvider(this);
+        }
+
+        return reconfigurationRulesFolderItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
@@ -577,8 +602,6 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
             experimentItemProvider.dispose();
         if (variationItemProvider != null)
             variationItemProvider.dispose();
-        if (pcmModelFilesItemProvider != null)
-            pcmModelFilesItemProvider.dispose();
         if (polynomialValueProviderItemProvider != null)
             polynomialValueProviderItemProvider.dispose();
         if (exponentialValueProviderItemProvider != null)
@@ -603,6 +626,10 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
             linearValueProviderItemProvider.dispose();
         if (modificationItemProvider != null)
             modificationItemProvider.dispose();
+        if (initialModelItemProvider != null)
+            initialModelItemProvider.dispose();
+        if (reconfigurationRulesFolderItemProvider != null)
+            reconfigurationRulesFolderItemProvider.dispose();
     }
 
 }

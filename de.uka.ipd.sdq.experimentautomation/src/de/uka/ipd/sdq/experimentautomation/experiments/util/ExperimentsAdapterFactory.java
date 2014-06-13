@@ -18,14 +18,15 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
 import de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider;
 import de.uka.ipd.sdq.experimentautomation.experiments.FractionalFactorialDesign;
 import de.uka.ipd.sdq.experimentautomation.experiments.FullFactorialDesign;
+import de.uka.ipd.sdq.experimentautomation.experiments.InitialModel;
 import de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement;
 import de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider;
 import de.uka.ipd.sdq.experimentautomation.experiments.Modification;
 import de.uka.ipd.sdq.experimentautomation.experiments.OneFactorAtATime;
-import de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles;
 import de.uka.ipd.sdq.experimentautomation.experiments.PlacketBurmanDesign;
 import de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider;
 import de.uka.ipd.sdq.experimentautomation.experiments.ProfilingMeasurement;
+import de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder;
 import de.uka.ipd.sdq.experimentautomation.experiments.ResponseMeasurement;
 import de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider;
 import de.uka.ipd.sdq.experimentautomation.experiments.SimulationDurationMeasurement;
@@ -68,7 +69,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     @Override
-    public boolean isFactoryForType(final Object object) {
+    public boolean isFactoryForType(Object object) {
         if (object == modelPackage) {
             return true;
         }
@@ -86,108 +87,113 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      */
     protected ExperimentsSwitch<Adapter> modelSwitch = new ExperimentsSwitch<Adapter>() {
         @Override
-        public Adapter caseExperimentRepository(final ExperimentRepository object) {
-            return ExperimentsAdapterFactory.this.createExperimentRepositoryAdapter();
+        public Adapter caseExperimentRepository(ExperimentRepository object) {
+            return createExperimentRepositoryAdapter();
         }
 
         @Override
-        public Adapter caseExperiment(final Experiment object) {
-            return ExperimentsAdapterFactory.this.createExperimentAdapter();
+        public Adapter caseExperiment(Experiment object) {
+            return createExperimentAdapter();
         }
 
         @Override
-        public Adapter caseVariation(final Variation object) {
-            return ExperimentsAdapterFactory.this.createVariationAdapter();
+        public Adapter caseVariation(Variation object) {
+            return createVariationAdapter();
         }
 
         @Override
-        public Adapter caseValueProvider(final ValueProvider object) {
-            return ExperimentsAdapterFactory.this.createValueProviderAdapter();
+        public Adapter caseValueProvider(ValueProvider object) {
+            return createValueProviderAdapter();
         }
 
         @Override
-        public Adapter casePCMModelFiles(final PCMModelFiles object) {
-            return ExperimentsAdapterFactory.this.createPCMModelFilesAdapter();
+        public Adapter caseToolConfiguration(ToolConfiguration object) {
+            return createToolConfigurationAdapter();
         }
 
         @Override
-        public Adapter caseToolConfiguration(final ToolConfiguration object) {
-            return ExperimentsAdapterFactory.this.createToolConfigurationAdapter();
+        public Adapter caseExperimentDesign(ExperimentDesign object) {
+            return createExperimentDesignAdapter();
         }
 
         @Override
-        public Adapter caseExperimentDesign(final ExperimentDesign object) {
-            return ExperimentsAdapterFactory.this.createExperimentDesignAdapter();
+        public Adapter caseResponseMeasurement(ResponseMeasurement object) {
+            return createResponseMeasurementAdapter();
         }
 
         @Override
-        public Adapter caseResponseMeasurement(final ResponseMeasurement object) {
-            return ExperimentsAdapterFactory.this.createResponseMeasurementAdapter();
+        public Adapter casePolynomialValueProvider(PolynomialValueProvider object) {
+            return createPolynomialValueProviderAdapter();
         }
 
         @Override
-        public Adapter casePolynomialValueProvider(final PolynomialValueProvider object) {
-            return ExperimentsAdapterFactory.this.createPolynomialValueProviderAdapter();
+        public Adapter caseExponentialValueProvider(ExponentialValueProvider object) {
+            return createExponentialValueProviderAdapter();
         }
 
         @Override
-        public Adapter caseExponentialValueProvider(final ExponentialValueProvider object) {
-            return ExperimentsAdapterFactory.this.createExponentialValueProviderAdapter();
+        public Adapter caseSetValueProvider(SetValueProvider object) {
+            return createSetValueProviderAdapter();
         }
 
         @Override
-        public Adapter caseSetValueProvider(final SetValueProvider object) {
-            return ExperimentsAdapterFactory.this.createSetValueProviderAdapter();
+        public Adapter casePlacketBurmanDesign(PlacketBurmanDesign object) {
+            return createPlacketBurmanDesignAdapter();
         }
 
         @Override
-        public Adapter casePlacketBurmanDesign(final PlacketBurmanDesign object) {
-            return ExperimentsAdapterFactory.this.createPlacketBurmanDesignAdapter();
+        public Adapter caseFullFactorialDesign(FullFactorialDesign object) {
+            return createFullFactorialDesignAdapter();
         }
 
         @Override
-        public Adapter caseFullFactorialDesign(final FullFactorialDesign object) {
-            return ExperimentsAdapterFactory.this.createFullFactorialDesignAdapter();
+        public Adapter caseFractionalFactorialDesign(FractionalFactorialDesign object) {
+            return createFractionalFactorialDesignAdapter();
         }
 
         @Override
-        public Adapter caseFractionalFactorialDesign(final FractionalFactorialDesign object) {
-            return ExperimentsAdapterFactory.this.createFractionalFactorialDesignAdapter();
+        public Adapter caseOneFactorAtATime(OneFactorAtATime object) {
+            return createOneFactorAtATimeAdapter();
         }
 
         @Override
-        public Adapter caseOneFactorAtATime(final OneFactorAtATime object) {
-            return ExperimentsAdapterFactory.this.createOneFactorAtATimeAdapter();
+        public Adapter caseSimulationDurationMeasurement(SimulationDurationMeasurement object) {
+            return createSimulationDurationMeasurementAdapter();
         }
 
         @Override
-        public Adapter caseSimulationDurationMeasurement(final SimulationDurationMeasurement object) {
-            return ExperimentsAdapterFactory.this.createSimulationDurationMeasurementAdapter();
+        public Adapter caseProfilingMeasurement(ProfilingMeasurement object) {
+            return createProfilingMeasurementAdapter();
         }
 
         @Override
-        public Adapter caseProfilingMeasurement(final ProfilingMeasurement object) {
-            return ExperimentsAdapterFactory.this.createProfilingMeasurementAdapter();
+        public Adapter caseJMXMeasurement(JMXMeasurement object) {
+            return createJMXMeasurementAdapter();
         }
 
         @Override
-        public Adapter caseJMXMeasurement(final JMXMeasurement object) {
-            return ExperimentsAdapterFactory.this.createJMXMeasurementAdapter();
+        public Adapter caseLinearValueProvider(LinearValueProvider object) {
+            return createLinearValueProviderAdapter();
         }
 
         @Override
-        public Adapter caseLinearValueProvider(final LinearValueProvider object) {
-            return ExperimentsAdapterFactory.this.createLinearValueProviderAdapter();
+        public Adapter caseModification(Modification object) {
+            return createModificationAdapter();
         }
 
         @Override
-        public Adapter caseModification(final Modification object) {
-            return ExperimentsAdapterFactory.this.createModificationAdapter();
+        public Adapter caseInitialModel(InitialModel object) {
+            return createInitialModelAdapter();
         }
 
         @Override
-        public Adapter defaultCase(final EObject object) {
-            return ExperimentsAdapterFactory.this.createEObjectAdapter();
+        public Adapter caseReconfigurationRulesFolder(ReconfigurationRulesFolder object) {
+            return createReconfigurationRulesFolderAdapter();
+        }
+
+        @Override
+        public Adapter defaultCase(EObject object) {
+            return createEObjectAdapter();
         }
     };
 
@@ -200,8 +206,8 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     @Override
-    public Adapter createAdapter(final Notifier target) {
-        return this.modelSwitch.doSwitch((EObject) target);
+    public Adapter createAdapter(Notifier target) {
+        return modelSwitch.doSwitch((EObject) target);
     }
 
     /**
@@ -261,21 +267,6 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createValueProviderAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles
-     * <em>PCM Model Files</em>}'. <!-- begin-user-doc --> This default implementation returns null
-     * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
-     * all the cases anyway. <!-- end-user-doc -->
-     * 
-     * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.PCMModelFiles
-     * @generated
-     */
-    public Adapter createPCMModelFilesAdapter() {
         return null;
     }
 
@@ -501,6 +492,36 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createModificationAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel <em>Initial Model</em>}'.
+     * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
+     * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
+     * end-user-doc -->
+     * 
+     * @return the new adapter.
+     * @see de.uka.ipd.sdq.experimentautomation.experiments.InitialModel
+     * @generated
+     */
+    public Adapter createInitialModelAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder
+     * <em>Reconfiguration Rules Folder</em>}'. <!-- begin-user-doc --> This default implementation
+     * returns null so that we can easily ignore cases; it's useful to ignore a case when
+     * inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     * 
+     * @return the new adapter.
+     * @see de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder
+     * @generated
+     */
+    public Adapter createReconfigurationRulesFolderAdapter() {
         return null;
     }
 

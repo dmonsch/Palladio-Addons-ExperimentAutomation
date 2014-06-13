@@ -70,7 +70,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
      */
     @Override
     public int getMeasurementCount() {
-        return this.measurementCount;
+        return measurementCount;
     }
 
     /**
@@ -79,14 +79,13 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
      * @generated
      */
     @Override
-    public void setMeasurementCount(final int newMeasurementCount) {
-        final int oldMeasurementCount = this.measurementCount;
-        this.measurementCount = newMeasurementCount;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
+    public void setMeasurementCount(int newMeasurementCount) {
+        int oldMeasurementCount = measurementCount;
+        measurementCount = newMeasurementCount;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
                     AbstractsimulationPackage.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT, oldMeasurementCount,
-                    this.measurementCount));
-        }
+                    measurementCount));
     }
 
     /**
@@ -95,10 +94,10 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
      * @generated
      */
     @Override
-    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case AbstractsimulationPackage.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT:
-            return this.getMeasurementCount();
+            return getMeasurementCount();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -109,10 +108,10 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
      * @generated
      */
     @Override
-    public void eSet(final int featureID, final Object newValue) {
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
         case AbstractsimulationPackage.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT:
-            this.setMeasurementCount((Integer) newValue);
+            setMeasurementCount((Integer) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -124,10 +123,10 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
      * @generated
      */
     @Override
-    public void eUnset(final int featureID) {
+    public void eUnset(int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT:
-            this.setMeasurementCount(MEASUREMENT_COUNT_EDEFAULT);
+            setMeasurementCount(MEASUREMENT_COUNT_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -139,10 +138,10 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
      * @generated
      */
     @Override
-    public boolean eIsSet(final int featureID) {
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT:
-            return this.measurementCount != MEASUREMENT_COUNT_EDEFAULT;
+            return measurementCount != MEASUREMENT_COUNT_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -154,13 +153,12 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
      */
     @Override
     public String toString() {
-        if (this.eIsProxy()) {
+        if (eIsProxy())
             return super.toString();
-        }
 
-        final StringBuffer result = new StringBuffer(super.toString());
+        StringBuffer result = new StringBuffer(super.toString());
         result.append(" (measurementCount: ");
-        result.append(this.measurementCount);
+        result.append(measurementCount);
         result.append(')');
         return result.toString();
     }

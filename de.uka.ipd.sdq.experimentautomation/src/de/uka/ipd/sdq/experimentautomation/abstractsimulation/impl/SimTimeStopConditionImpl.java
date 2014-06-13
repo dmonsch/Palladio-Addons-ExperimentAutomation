@@ -70,7 +70,7 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
      */
     @Override
     public int getSimulationTime() {
-        return this.simulationTime;
+        return simulationTime;
     }
 
     /**
@@ -79,14 +79,13 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
      * @generated
      */
     @Override
-    public void setSimulationTime(final int newSimulationTime) {
-        final int oldSimulationTime = this.simulationTime;
-        this.simulationTime = newSimulationTime;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
+    public void setSimulationTime(int newSimulationTime) {
+        int oldSimulationTime = simulationTime;
+        simulationTime = newSimulationTime;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
                     AbstractsimulationPackage.SIM_TIME_STOP_CONDITION__SIMULATION_TIME, oldSimulationTime,
-                    this.simulationTime));
-        }
+                    simulationTime));
     }
 
     /**
@@ -95,10 +94,10 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
      * @generated
      */
     @Override
-    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case AbstractsimulationPackage.SIM_TIME_STOP_CONDITION__SIMULATION_TIME:
-            return this.getSimulationTime();
+            return getSimulationTime();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -109,10 +108,10 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
      * @generated
      */
     @Override
-    public void eSet(final int featureID, final Object newValue) {
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
         case AbstractsimulationPackage.SIM_TIME_STOP_CONDITION__SIMULATION_TIME:
-            this.setSimulationTime((Integer) newValue);
+            setSimulationTime((Integer) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -124,10 +123,10 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
      * @generated
      */
     @Override
-    public void eUnset(final int featureID) {
+    public void eUnset(int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.SIM_TIME_STOP_CONDITION__SIMULATION_TIME:
-            this.setSimulationTime(SIMULATION_TIME_EDEFAULT);
+            setSimulationTime(SIMULATION_TIME_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -139,10 +138,10 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
      * @generated
      */
     @Override
-    public boolean eIsSet(final int featureID) {
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.SIM_TIME_STOP_CONDITION__SIMULATION_TIME:
-            return this.simulationTime != SIMULATION_TIME_EDEFAULT;
+            return simulationTime != SIMULATION_TIME_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -154,13 +153,12 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
      */
     @Override
     public String toString() {
-        if (this.eIsProxy()) {
+        if (eIsProxy())
             return super.toString();
-        }
 
-        final StringBuffer result = new StringBuffer(super.toString());
+        StringBuffer result = new StringBuffer(super.toString());
         result.append(" (simulationTime: ");
-        result.append(this.simulationTime);
+        result.append(simulationTime);
         result.append(')');
         return result.toString();
     }

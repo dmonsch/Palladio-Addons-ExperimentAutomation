@@ -129,17 +129,16 @@ public class ModificationImpl extends EObjectImpl implements Modification {
      */
     @Override
     public VariationType getType() {
-        if (this.type != null && this.type.eIsProxy()) {
-            final InternalEObject oldType = (InternalEObject) this.type;
-            this.type = (VariationType) this.eResolveProxy(oldType);
-            if (this.type != oldType) {
-                if (this.eNotificationRequired()) {
-                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.MODIFICATION__TYPE, oldType, this.type));
-                }
+        if (type != null && type.eIsProxy()) {
+            InternalEObject oldType = (InternalEObject) type;
+            type = (VariationType) eResolveProxy(oldType);
+            if (type != oldType) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExperimentsPackage.MODIFICATION__TYPE,
+                            oldType, type));
             }
         }
-        return this.type;
+        return type;
     }
 
     /**
@@ -148,7 +147,7 @@ public class ModificationImpl extends EObjectImpl implements Modification {
      * @generated
      */
     public VariationType basicGetType() {
-        return this.type;
+        return type;
     }
 
     /**
@@ -157,13 +156,11 @@ public class ModificationImpl extends EObjectImpl implements Modification {
      * @generated
      */
     @Override
-    public void setType(final VariationType newType) {
-        final VariationType oldType = this.type;
-        this.type = newType;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.MODIFICATION__TYPE, oldType,
-                    this.type));
-        }
+    public void setType(VariationType newType) {
+        VariationType oldType = type;
+        type = newType;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.MODIFICATION__TYPE, oldType, type));
     }
 
     /**
@@ -173,7 +170,7 @@ public class ModificationImpl extends EObjectImpl implements Modification {
      */
     @Override
     public String getName() {
-        return this.name;
+        return name;
     }
 
     /**
@@ -182,13 +179,11 @@ public class ModificationImpl extends EObjectImpl implements Modification {
      * @generated
      */
     @Override
-    public void setName(final String newName) {
-        final String oldName = this.name;
-        this.name = newName;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.MODIFICATION__NAME, oldName,
-                    this.name));
-        }
+    public void setName(String newName) {
+        String oldName = name;
+        name = newName;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.MODIFICATION__NAME, oldName, name));
     }
 
     /**
@@ -198,7 +193,7 @@ public class ModificationImpl extends EObjectImpl implements Modification {
      */
     @Override
     public String getVariedObjectId() {
-        return this.variedObjectId;
+        return variedObjectId;
     }
 
     /**
@@ -207,13 +202,12 @@ public class ModificationImpl extends EObjectImpl implements Modification {
      * @generated
      */
     @Override
-    public void setVariedObjectId(final String newVariedObjectId) {
-        final String oldVariedObjectId = this.variedObjectId;
-        this.variedObjectId = newVariedObjectId;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.MODIFICATION__VARIED_OBJECT_ID, oldVariedObjectId, this.variedObjectId));
-        }
+    public void setVariedObjectId(String newVariedObjectId) {
+        String oldVariedObjectId = variedObjectId;
+        variedObjectId = newVariedObjectId;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.MODIFICATION__VARIED_OBJECT_ID,
+                    oldVariedObjectId, variedObjectId));
     }
 
     /**
@@ -223,7 +217,7 @@ public class ModificationImpl extends EObjectImpl implements Modification {
      */
     @Override
     public long getValue() {
-        return this.value;
+        return value;
     }
 
     /**
@@ -232,13 +226,12 @@ public class ModificationImpl extends EObjectImpl implements Modification {
      * @generated
      */
     @Override
-    public void setValue(final long newValue) {
-        final long oldValue = this.value;
-        this.value = newValue;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.MODIFICATION__VALUE,
-                    oldValue, this.value));
-        }
+    public void setValue(long newValue) {
+        long oldValue = value;
+        value = newValue;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.MODIFICATION__VALUE, oldValue,
+                    value));
     }
 
     /**
@@ -247,19 +240,18 @@ public class ModificationImpl extends EObjectImpl implements Modification {
      * @generated
      */
     @Override
-    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case ExperimentsPackage.MODIFICATION__TYPE:
-            if (resolve) {
-                return this.getType();
-            }
-            return this.basicGetType();
+            if (resolve)
+                return getType();
+            return basicGetType();
         case ExperimentsPackage.MODIFICATION__NAME:
-            return this.getName();
+            return getName();
         case ExperimentsPackage.MODIFICATION__VARIED_OBJECT_ID:
-            return this.getVariedObjectId();
+            return getVariedObjectId();
         case ExperimentsPackage.MODIFICATION__VALUE:
-            return this.getValue();
+            return getValue();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -270,19 +262,19 @@ public class ModificationImpl extends EObjectImpl implements Modification {
      * @generated
      */
     @Override
-    public void eSet(final int featureID, final Object newValue) {
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
         case ExperimentsPackage.MODIFICATION__TYPE:
-            this.setType((VariationType) newValue);
+            setType((VariationType) newValue);
             return;
         case ExperimentsPackage.MODIFICATION__NAME:
-            this.setName((String) newValue);
+            setName((String) newValue);
             return;
         case ExperimentsPackage.MODIFICATION__VARIED_OBJECT_ID:
-            this.setVariedObjectId((String) newValue);
+            setVariedObjectId((String) newValue);
             return;
         case ExperimentsPackage.MODIFICATION__VALUE:
-            this.setValue((Long) newValue);
+            setValue((Long) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -294,19 +286,19 @@ public class ModificationImpl extends EObjectImpl implements Modification {
      * @generated
      */
     @Override
-    public void eUnset(final int featureID) {
+    public void eUnset(int featureID) {
         switch (featureID) {
         case ExperimentsPackage.MODIFICATION__TYPE:
-            this.setType((VariationType) null);
+            setType((VariationType) null);
             return;
         case ExperimentsPackage.MODIFICATION__NAME:
-            this.setName(NAME_EDEFAULT);
+            setName(NAME_EDEFAULT);
             return;
         case ExperimentsPackage.MODIFICATION__VARIED_OBJECT_ID:
-            this.setVariedObjectId(VARIED_OBJECT_ID_EDEFAULT);
+            setVariedObjectId(VARIED_OBJECT_ID_EDEFAULT);
             return;
         case ExperimentsPackage.MODIFICATION__VALUE:
-            this.setValue(VALUE_EDEFAULT);
+            setValue(VALUE_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -318,17 +310,17 @@ public class ModificationImpl extends EObjectImpl implements Modification {
      * @generated
      */
     @Override
-    public boolean eIsSet(final int featureID) {
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
         case ExperimentsPackage.MODIFICATION__TYPE:
-            return this.type != null;
+            return type != null;
         case ExperimentsPackage.MODIFICATION__NAME:
-            return NAME_EDEFAULT == null ? this.name != null : !NAME_EDEFAULT.equals(this.name);
+            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
         case ExperimentsPackage.MODIFICATION__VARIED_OBJECT_ID:
-            return VARIED_OBJECT_ID_EDEFAULT == null ? this.variedObjectId != null : !VARIED_OBJECT_ID_EDEFAULT
-                    .equals(this.variedObjectId);
+            return VARIED_OBJECT_ID_EDEFAULT == null ? variedObjectId != null : !VARIED_OBJECT_ID_EDEFAULT
+                    .equals(variedObjectId);
         case ExperimentsPackage.MODIFICATION__VALUE:
-            return this.value != VALUE_EDEFAULT;
+            return value != VALUE_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -340,17 +332,16 @@ public class ModificationImpl extends EObjectImpl implements Modification {
      */
     @Override
     public String toString() {
-        if (this.eIsProxy()) {
+        if (eIsProxy())
             return super.toString();
-        }
 
-        final StringBuffer result = new StringBuffer(super.toString());
+        StringBuffer result = new StringBuffer(super.toString());
         result.append(" (name: ");
-        result.append(this.name);
+        result.append(name);
         result.append(", variedObjectId: ");
-        result.append(this.variedObjectId);
+        result.append(variedObjectId);
         result.append(", value: ");
-        result.append(this.value);
+        result.append(value);
         result.append(')');
         return result.toString();
     }

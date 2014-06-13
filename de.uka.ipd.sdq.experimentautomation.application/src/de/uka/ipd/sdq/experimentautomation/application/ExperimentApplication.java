@@ -8,13 +8,11 @@ import org.eclipse.equinox.app.IApplication;
 import org.eclipse.equinox.app.IApplicationContext;
 import org.osgi.framework.Bundle;
 
+import de.uka.ipd.sdq.experimentautomation.application.config.ExperimentAutomationConfiguration;
 import de.uka.ipd.sdq.experimentautomation.application.controller.ExperimentController;
-import de.uka.ipd.sdq.experimentautomation.experiments.Experiment;
 
 public class ExperimentApplication implements IApplication {
-
-    private ConfigurationModel config;
-
+    
     @Override
     public Object start(final IApplicationContext context) throws Exception {
         // obtain command line arguments
@@ -39,32 +37,10 @@ public class ExperimentApplication implements IApplication {
         final Bundle bundle = Activator.getDefault().getBundle();
         final Path experimentsLocation = new Path(args[0]);
         final Path variationsLocation = new Path(args[1]);
-        this.config = ConfigurationModel.loadFromBundle(bundle, experimentsLocation, variationsLocation);
-
-        final List<Experiment> experiments;
-        if (experimentIds.isEmpty()) {
-            // experiments as in config
-            experiments = this.config.getExperiments().getExperiments();
-        } else {
-            // filter experiment list
-            experiments = new ArrayList<Experiment>();
-            for (final Experiment e : this.config.getExperiments().getExperiments()) {
-                for (final String id : experimentIds) {
-                    if (e.getId().equalsIgnoreCase(id)) {
-                        experiments.add(e);
-                        break;
-                    }
-                }
-            }
-        }
-
-        final int repetitions = this.config.getExperiments().getRepetitions();
+        final ExperimentAutomationConfiguration config = new ExperimentAutomationConfiguration(bundle, experimentsLocation, variationsLocation, experimentIds);
 
         // run experiments
-        final ExperimentController controller = new ExperimentController(experiments, repetitions, experimentsLocation,
-                variationsLocation, args);
-
-        
+        final ExperimentController controller = new ExperimentController(config);
         controller.runExperiments();
         
         return IApplication.EXIT_OK;

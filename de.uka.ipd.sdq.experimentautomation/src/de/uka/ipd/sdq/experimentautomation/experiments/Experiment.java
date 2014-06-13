@@ -24,8 +24,6 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition;
  * Modifications</em>}</li>
  * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getId <em>Id</em>}</li>
  * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getName <em>Name</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getInitialModel <em>Initial
- * Model</em>}</li>
  * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getToolConfiguration <em>
  * Tool Configuration</em>}</li>
  * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getStopConditions <em>Stop
@@ -36,6 +34,8 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition;
  * Experiment Design</em>}</li>
  * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getResponseMeasurement <em>
  * Response Measurement</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getInitialModel <em>Initial
+ * Model</em>}</li>
  * </ul>
  * </p>
  * 
@@ -149,7 +149,7 @@ public interface Experiment extends EObject {
      * @model containment="true" required="true" ordered="false"
      * @generated
      */
-    PCMModelFiles getInitialModel();
+    InitialModel getInitialModel();
 
     /**
      * Sets the value of the '
@@ -161,7 +161,7 @@ public interface Experiment extends EObject {
      * @see #getInitialModel()
      * @generated
      */
-    void setInitialModel(PCMModelFiles value);
+    void setInitialModel(InitialModel value);
 
     /**
      * Returns the value of the '<em><b>Tool Configuration</b></em>' reference list. The list

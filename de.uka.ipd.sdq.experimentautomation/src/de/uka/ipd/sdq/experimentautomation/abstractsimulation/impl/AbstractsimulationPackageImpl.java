@@ -8,9 +8,8 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.palladiosimulator.edp2.models.ExperimentData.ExperimentDataPackage;
 import org.palladiosimulator.edp2.models.Repository.RepositoryPackage;
-import org.palladiosimulator.edp2.models.measuringpoint.MeasuringpointPackage;
+import org.palladiosimulator.simulizar.pms.PmsPackage;
 
 import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
 import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationFactory;
@@ -168,28 +167,25 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      * @generated
      */
     public static AbstractsimulationPackage init() {
-        if (isInited) {
+        if (isInited)
             return (AbstractsimulationPackage) EPackage.Registry.INSTANCE
                     .getEPackage(AbstractsimulationPackage.eNS_URI);
-        }
 
         // Obtain or create and register package
-        final AbstractsimulationPackageImpl theAbstractsimulationPackage = (AbstractsimulationPackageImpl) (EPackage.Registry.INSTANCE
+        AbstractsimulationPackageImpl theAbstractsimulationPackage = (AbstractsimulationPackageImpl) (EPackage.Registry.INSTANCE
                 .get(eNS_URI) instanceof AbstractsimulationPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
                 : new AbstractsimulationPackageImpl());
 
         isInited = true;
 
         // Initialize simple dependencies
-        ExperimentDataPackage.eINSTANCE.eClass();
-        RepositoryPackage.eINSTANCE.eClass();
-        MeasuringpointPackage.eINSTANCE.eClass();
+        PmsPackage.eINSTANCE.eClass();
 
         // Obtain or create and register interdependencies
-        final VariationPackageImpl theVariationPackage = (VariationPackageImpl) (EPackage.Registry.INSTANCE
+        VariationPackageImpl theVariationPackage = (VariationPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(VariationPackage.eNS_URI) instanceof VariationPackageImpl ? EPackage.Registry.INSTANCE
                 .getEPackage(VariationPackage.eNS_URI) : VariationPackage.eINSTANCE);
-        final ExperimentsPackageImpl theExperimentsPackage = (ExperimentsPackageImpl) (EPackage.Registry.INSTANCE
+        ExperimentsPackageImpl theExperimentsPackage = (ExperimentsPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(ExperimentsPackage.eNS_URI) instanceof ExperimentsPackageImpl ? EPackage.Registry.INSTANCE
                 .getEPackage(ExperimentsPackage.eNS_URI) : ExperimentsPackage.eINSTANCE);
 
@@ -218,7 +214,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EClass getAbstractSimulationConfiguration() {
-        return this.abstractSimulationConfigurationEClass;
+        return abstractSimulationConfigurationEClass;
     }
 
     /**
@@ -228,7 +224,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EReference getAbstractSimulationConfiguration_PersistenceFramework() {
-        return (EReference) this.abstractSimulationConfigurationEClass.getEStructuralFeatures().get(0);
+        return (EReference) abstractSimulationConfigurationEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -238,7 +234,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EReference getAbstractSimulationConfiguration_StopConditions() {
-        return (EReference) this.abstractSimulationConfigurationEClass.getEStructuralFeatures().get(1);
+        return (EReference) abstractSimulationConfigurationEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -248,7 +244,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EReference getAbstractSimulationConfiguration_RandomNumberGeneratorSeed() {
-        return (EReference) this.abstractSimulationConfigurationEClass.getEStructuralFeatures().get(2);
+        return (EReference) abstractSimulationConfigurationEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -258,7 +254,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EAttribute getAbstractSimulationConfiguration_SimulateLinkingResources() {
-        return (EAttribute) this.abstractSimulationConfigurationEClass.getEStructuralFeatures().get(3);
+        return (EAttribute) abstractSimulationConfigurationEClass.getEStructuralFeatures().get(3);
     }
 
     /**
@@ -268,7 +264,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EAttribute getAbstractSimulationConfiguration_SimulateFailures() {
-        return (EAttribute) this.abstractSimulationConfigurationEClass.getEStructuralFeatures().get(4);
+        return (EAttribute) abstractSimulationConfigurationEClass.getEStructuralFeatures().get(4);
     }
 
     /**
@@ -278,7 +274,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EReference getAbstractSimulationConfiguration_ProbeSpecConfiguration() {
-        return (EReference) this.abstractSimulationConfigurationEClass.getEStructuralFeatures().get(5);
+        return (EReference) abstractSimulationConfigurationEClass.getEStructuralFeatures().get(5);
     }
 
     /**
@@ -288,7 +284,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EClass getPersistenceFramework() {
-        return this.persistenceFrameworkEClass;
+        return persistenceFrameworkEClass;
     }
 
     /**
@@ -298,7 +294,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EClass getRandomNumberGeneratorSeed() {
-        return this.randomNumberGeneratorSeedEClass;
+        return randomNumberGeneratorSeedEClass;
     }
 
     /**
@@ -308,7 +304,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EAttribute getRandomNumberGeneratorSeed_Seed0() {
-        return (EAttribute) this.randomNumberGeneratorSeedEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) randomNumberGeneratorSeedEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -318,7 +314,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EAttribute getRandomNumberGeneratorSeed_Seed1() {
-        return (EAttribute) this.randomNumberGeneratorSeedEClass.getEStructuralFeatures().get(1);
+        return (EAttribute) randomNumberGeneratorSeedEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -328,7 +324,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EAttribute getRandomNumberGeneratorSeed_Seed2() {
-        return (EAttribute) this.randomNumberGeneratorSeedEClass.getEStructuralFeatures().get(2);
+        return (EAttribute) randomNumberGeneratorSeedEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -338,7 +334,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EAttribute getRandomNumberGeneratorSeed_Seed3() {
-        return (EAttribute) this.randomNumberGeneratorSeedEClass.getEStructuralFeatures().get(3);
+        return (EAttribute) randomNumberGeneratorSeedEClass.getEStructuralFeatures().get(3);
     }
 
     /**
@@ -348,7 +344,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EAttribute getRandomNumberGeneratorSeed_Seed4() {
-        return (EAttribute) this.randomNumberGeneratorSeedEClass.getEStructuralFeatures().get(4);
+        return (EAttribute) randomNumberGeneratorSeedEClass.getEStructuralFeatures().get(4);
     }
 
     /**
@@ -358,7 +354,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EAttribute getRandomNumberGeneratorSeed_Seed5() {
-        return (EAttribute) this.randomNumberGeneratorSeedEClass.getEStructuralFeatures().get(5);
+        return (EAttribute) randomNumberGeneratorSeedEClass.getEStructuralFeatures().get(5);
     }
 
     /**
@@ -368,7 +364,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EClass getProbeSpecConfiguration() {
-        return this.probeSpecConfigurationEClass;
+        return probeSpecConfigurationEClass;
     }
 
     /**
@@ -378,7 +374,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EAttribute getProbeSpecConfiguration_BlackboardType() {
-        return (EAttribute) this.probeSpecConfigurationEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) probeSpecConfigurationEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -388,7 +384,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EClass getSensorFramework() {
-        return this.sensorFrameworkEClass;
+        return sensorFrameworkEClass;
     }
 
     /**
@@ -398,7 +394,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EReference getSensorFramework_Datasource() {
-        return (EReference) this.sensorFrameworkEClass.getEStructuralFeatures().get(0);
+        return (EReference) sensorFrameworkEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -408,7 +404,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EClass getSensorFrameworkDatasource() {
-        return this.sensorFrameworkDatasourceEClass;
+        return sensorFrameworkDatasourceEClass;
     }
 
     /**
@@ -418,7 +414,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EClass getMemoryDatasource() {
-        return this.memoryDatasourceEClass;
+        return memoryDatasourceEClass;
     }
 
     /**
@@ -428,7 +424,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EClass getFileDatasource() {
-        return this.fileDatasourceEClass;
+        return fileDatasourceEClass;
     }
 
     /**
@@ -438,7 +434,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EAttribute getFileDatasource_Location() {
-        return (EAttribute) this.fileDatasourceEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) fileDatasourceEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -448,7 +444,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EClass getMeasurementCountStopCondition() {
-        return this.measurementCountStopConditionEClass;
+        return measurementCountStopConditionEClass;
     }
 
     /**
@@ -458,7 +454,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EAttribute getMeasurementCountStopCondition_MeasurementCount() {
-        return (EAttribute) this.measurementCountStopConditionEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) measurementCountStopConditionEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -468,7 +464,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EClass getSimTimeStopCondition() {
-        return this.simTimeStopConditionEClass;
+        return simTimeStopConditionEClass;
     }
 
     /**
@@ -478,7 +474,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EAttribute getSimTimeStopCondition_SimulationTime() {
-        return (EAttribute) this.simTimeStopConditionEClass.getEStructuralFeatures().get(0);
+        return (EAttribute) simTimeStopConditionEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -488,7 +484,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EClass getStopCondition() {
-        return this.stopConditionEClass;
+        return stopConditionEClass;
     }
 
     /**
@@ -498,7 +494,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EClass getEDP2() {
-        return this.edp2EClass;
+        return edp2EClass;
     }
 
     /**
@@ -508,7 +504,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EReference getEDP2_Repository() {
-        return (EReference) this.edp2EClass.getEStructuralFeatures().get(0);
+        return (EReference) edp2EClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -518,7 +514,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public EEnum getBlackboardType() {
-        return this.blackboardTypeEEnum;
+        return blackboardTypeEEnum;
     }
 
     /**
@@ -528,7 +524,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      */
     @Override
     public AbstractsimulationFactory getAbstractsimulationFactory() {
-        return (AbstractsimulationFactory) this.getEFactoryInstance();
+        return (AbstractsimulationFactory) getEFactoryInstance();
     }
 
     /**
@@ -545,63 +541,59 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      * @generated
      */
     public void createPackageContents() {
-        if (this.isCreated) {
+        if (isCreated)
             return;
-        }
-        this.isCreated = true;
+        isCreated = true;
 
         // Create classes and their features
-        this.abstractSimulationConfigurationEClass = this.createEClass(ABSTRACT_SIMULATION_CONFIGURATION);
-        this.createEReference(this.abstractSimulationConfigurationEClass,
+        abstractSimulationConfigurationEClass = createEClass(ABSTRACT_SIMULATION_CONFIGURATION);
+        createEReference(abstractSimulationConfigurationEClass,
                 ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK);
-        this.createEReference(this.abstractSimulationConfigurationEClass,
-                ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS);
-        this.createEReference(this.abstractSimulationConfigurationEClass,
+        createEReference(abstractSimulationConfigurationEClass, ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS);
+        createEReference(abstractSimulationConfigurationEClass,
                 ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED);
-        this.createEAttribute(this.abstractSimulationConfigurationEClass,
+        createEAttribute(abstractSimulationConfigurationEClass,
                 ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES);
-        this.createEAttribute(this.abstractSimulationConfigurationEClass,
-                ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES);
-        this.createEReference(this.abstractSimulationConfigurationEClass,
+        createEAttribute(abstractSimulationConfigurationEClass, ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES);
+        createEReference(abstractSimulationConfigurationEClass,
                 ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION);
 
-        this.persistenceFrameworkEClass = this.createEClass(PERSISTENCE_FRAMEWORK);
+        persistenceFrameworkEClass = createEClass(PERSISTENCE_FRAMEWORK);
 
-        this.randomNumberGeneratorSeedEClass = this.createEClass(RANDOM_NUMBER_GENERATOR_SEED);
-        this.createEAttribute(this.randomNumberGeneratorSeedEClass, RANDOM_NUMBER_GENERATOR_SEED__SEED0);
-        this.createEAttribute(this.randomNumberGeneratorSeedEClass, RANDOM_NUMBER_GENERATOR_SEED__SEED1);
-        this.createEAttribute(this.randomNumberGeneratorSeedEClass, RANDOM_NUMBER_GENERATOR_SEED__SEED2);
-        this.createEAttribute(this.randomNumberGeneratorSeedEClass, RANDOM_NUMBER_GENERATOR_SEED__SEED3);
-        this.createEAttribute(this.randomNumberGeneratorSeedEClass, RANDOM_NUMBER_GENERATOR_SEED__SEED4);
-        this.createEAttribute(this.randomNumberGeneratorSeedEClass, RANDOM_NUMBER_GENERATOR_SEED__SEED5);
+        randomNumberGeneratorSeedEClass = createEClass(RANDOM_NUMBER_GENERATOR_SEED);
+        createEAttribute(randomNumberGeneratorSeedEClass, RANDOM_NUMBER_GENERATOR_SEED__SEED0);
+        createEAttribute(randomNumberGeneratorSeedEClass, RANDOM_NUMBER_GENERATOR_SEED__SEED1);
+        createEAttribute(randomNumberGeneratorSeedEClass, RANDOM_NUMBER_GENERATOR_SEED__SEED2);
+        createEAttribute(randomNumberGeneratorSeedEClass, RANDOM_NUMBER_GENERATOR_SEED__SEED3);
+        createEAttribute(randomNumberGeneratorSeedEClass, RANDOM_NUMBER_GENERATOR_SEED__SEED4);
+        createEAttribute(randomNumberGeneratorSeedEClass, RANDOM_NUMBER_GENERATOR_SEED__SEED5);
 
-        this.probeSpecConfigurationEClass = this.createEClass(PROBE_SPEC_CONFIGURATION);
-        this.createEAttribute(this.probeSpecConfigurationEClass, PROBE_SPEC_CONFIGURATION__BLACKBOARD_TYPE);
+        probeSpecConfigurationEClass = createEClass(PROBE_SPEC_CONFIGURATION);
+        createEAttribute(probeSpecConfigurationEClass, PROBE_SPEC_CONFIGURATION__BLACKBOARD_TYPE);
 
-        this.sensorFrameworkEClass = this.createEClass(SENSOR_FRAMEWORK);
-        this.createEReference(this.sensorFrameworkEClass, SENSOR_FRAMEWORK__DATASOURCE);
+        sensorFrameworkEClass = createEClass(SENSOR_FRAMEWORK);
+        createEReference(sensorFrameworkEClass, SENSOR_FRAMEWORK__DATASOURCE);
 
-        this.sensorFrameworkDatasourceEClass = this.createEClass(SENSOR_FRAMEWORK_DATASOURCE);
+        sensorFrameworkDatasourceEClass = createEClass(SENSOR_FRAMEWORK_DATASOURCE);
 
-        this.memoryDatasourceEClass = this.createEClass(MEMORY_DATASOURCE);
+        memoryDatasourceEClass = createEClass(MEMORY_DATASOURCE);
 
-        this.fileDatasourceEClass = this.createEClass(FILE_DATASOURCE);
-        this.createEAttribute(this.fileDatasourceEClass, FILE_DATASOURCE__LOCATION);
+        fileDatasourceEClass = createEClass(FILE_DATASOURCE);
+        createEAttribute(fileDatasourceEClass, FILE_DATASOURCE__LOCATION);
 
-        this.measurementCountStopConditionEClass = this.createEClass(MEASUREMENT_COUNT_STOP_CONDITION);
-        this.createEAttribute(this.measurementCountStopConditionEClass,
-                MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT);
+        measurementCountStopConditionEClass = createEClass(MEASUREMENT_COUNT_STOP_CONDITION);
+        createEAttribute(measurementCountStopConditionEClass, MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT);
 
-        this.simTimeStopConditionEClass = this.createEClass(SIM_TIME_STOP_CONDITION);
-        this.createEAttribute(this.simTimeStopConditionEClass, SIM_TIME_STOP_CONDITION__SIMULATION_TIME);
+        simTimeStopConditionEClass = createEClass(SIM_TIME_STOP_CONDITION);
+        createEAttribute(simTimeStopConditionEClass, SIM_TIME_STOP_CONDITION__SIMULATION_TIME);
 
-        this.stopConditionEClass = this.createEClass(STOP_CONDITION);
+        stopConditionEClass = createEClass(STOP_CONDITION);
 
-        this.edp2EClass = this.createEClass(EDP2);
-        this.createEReference(this.edp2EClass, EDP2__REPOSITORY);
+        edp2EClass = createEClass(EDP2);
+        createEReference(edp2EClass, EDP2__REPOSITORY);
 
         // Create enums
-        this.blackboardTypeEEnum = this.createEEnum(BLACKBOARD_TYPE);
+        blackboardTypeEEnum = createEEnum(BLACKBOARD_TYPE);
     }
 
     /**
@@ -618,20 +610,19 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      * @generated
      */
     public void initializePackageContents() {
-        if (this.isInitialized) {
+        if (isInitialized)
             return;
-        }
-        this.isInitialized = true;
+        isInitialized = true;
 
         // Initialize package
-        this.setName(eNAME);
-        this.setNsPrefix(eNS_PREFIX);
-        this.setNsURI(eNS_URI);
+        setName(eNAME);
+        setNsPrefix(eNS_PREFIX);
+        setNsURI(eNS_URI);
 
         // Obtain other dependent packages
-        final ExperimentsPackage theExperimentsPackage = (ExperimentsPackage) EPackage.Registry.INSTANCE
+        ExperimentsPackage theExperimentsPackage = (ExperimentsPackage) EPackage.Registry.INSTANCE
                 .getEPackage(ExperimentsPackage.eNS_URI);
-        final RepositoryPackage theRepositoryPackage = (RepositoryPackage) EPackage.Registry.INSTANCE
+        RepositoryPackage theRepositoryPackage = (RepositoryPackage) EPackage.Registry.INSTANCE
                 .getEPackage(RepositoryPackage.eNS_URI);
 
         // Create type parameters
@@ -639,117 +630,115 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
         // Set bounds for type parameters
 
         // Add supertypes to classes
-        this.abstractSimulationConfigurationEClass.getESuperTypes().add(theExperimentsPackage.getToolConfiguration());
-        this.sensorFrameworkEClass.getESuperTypes().add(this.getPersistenceFramework());
-        this.memoryDatasourceEClass.getESuperTypes().add(this.getSensorFrameworkDatasource());
-        this.fileDatasourceEClass.getESuperTypes().add(this.getSensorFrameworkDatasource());
-        this.measurementCountStopConditionEClass.getESuperTypes().add(this.getStopCondition());
-        this.simTimeStopConditionEClass.getESuperTypes().add(this.getStopCondition());
-        this.edp2EClass.getESuperTypes().add(this.getPersistenceFramework());
+        abstractSimulationConfigurationEClass.getESuperTypes().add(theExperimentsPackage.getToolConfiguration());
+        sensorFrameworkEClass.getESuperTypes().add(this.getPersistenceFramework());
+        memoryDatasourceEClass.getESuperTypes().add(this.getSensorFrameworkDatasource());
+        fileDatasourceEClass.getESuperTypes().add(this.getSensorFrameworkDatasource());
+        measurementCountStopConditionEClass.getESuperTypes().add(this.getStopCondition());
+        simTimeStopConditionEClass.getESuperTypes().add(this.getStopCondition());
+        edp2EClass.getESuperTypes().add(this.getPersistenceFramework());
 
         // Initialize classes and features; add operations and parameters
-        this.initEClass(this.abstractSimulationConfigurationEClass, AbstractSimulationConfiguration.class,
+        initEClass(abstractSimulationConfigurationEClass, AbstractSimulationConfiguration.class,
                 "AbstractSimulationConfiguration", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getAbstractSimulationConfiguration_PersistenceFramework(),
-                this.getPersistenceFramework(), null, "persistenceFramework", null, 1, 1,
-                AbstractSimulationConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEReference(this.getAbstractSimulationConfiguration_StopConditions(), this.getStopCondition(), null,
+        initEReference(getAbstractSimulationConfiguration_PersistenceFramework(), this.getPersistenceFramework(), null,
+                "persistenceFramework", null, 1, 1, AbstractSimulationConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEReference(getAbstractSimulationConfiguration_StopConditions(), this.getStopCondition(), null,
                 "stopConditions", null, 1, -1, AbstractSimulationConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEReference(this.getAbstractSimulationConfiguration_RandomNumberGeneratorSeed(),
+        initEReference(getAbstractSimulationConfiguration_RandomNumberGeneratorSeed(),
                 this.getRandomNumberGeneratorSeed(), null, "randomNumberGeneratorSeed", null, 0, 1,
                 AbstractSimulationConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
                 !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEAttribute(this.getAbstractSimulationConfiguration_SimulateLinkingResources(),
-                this.ecorePackage.getEBoolean(), "simulateLinkingResources", null, 1, 1,
-                AbstractSimulationConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
-                !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEAttribute(this.getAbstractSimulationConfiguration_SimulateFailures(),
-                this.ecorePackage.getEBoolean(), "simulateFailures", null, 1, 1, AbstractSimulationConfiguration.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEReference(this.getAbstractSimulationConfiguration_ProbeSpecConfiguration(),
-                this.getProbeSpecConfiguration(), null, "probeSpecConfiguration", null, 1, 1,
-                AbstractSimulationConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+        initEAttribute(getAbstractSimulationConfiguration_SimulateLinkingResources(), ecorePackage.getEBoolean(),
+                "simulateLinkingResources", null, 1, 1, AbstractSimulationConfiguration.class, !IS_TRANSIENT,
+                !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getAbstractSimulationConfiguration_SimulateFailures(), ecorePackage.getEBoolean(),
+                "simulateFailures", null, 1, 1, AbstractSimulationConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEReference(getAbstractSimulationConfiguration_ProbeSpecConfiguration(), this.getProbeSpecConfiguration(),
+                null, "probeSpecConfiguration", null, 1, 1, AbstractSimulationConfiguration.class, !IS_TRANSIENT,
+                !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+                !IS_ORDERED);
+
+        initEClass(persistenceFrameworkEClass, PersistenceFramework.class, "PersistenceFramework", IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(randomNumberGeneratorSeedEClass, RandomNumberGeneratorSeed.class, "RandomNumberGeneratorSeed",
+                !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getRandomNumberGeneratorSeed_Seed0(), ecorePackage.getEInt(), "seed0", null, 1, 1,
+                RandomNumberGeneratorSeed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getRandomNumberGeneratorSeed_Seed1(), ecorePackage.getEInt(), "seed1", null, 1, 1,
+                RandomNumberGeneratorSeed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getRandomNumberGeneratorSeed_Seed2(), ecorePackage.getEInt(), "seed2", null, 1, 1,
+                RandomNumberGeneratorSeed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getRandomNumberGeneratorSeed_Seed3(), ecorePackage.getEInt(), "seed3", null, 1, 1,
+                RandomNumberGeneratorSeed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getRandomNumberGeneratorSeed_Seed4(), ecorePackage.getEInt(), "seed4", null, 1, 1,
+                RandomNumberGeneratorSeed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        initEAttribute(getRandomNumberGeneratorSeed_Seed5(), ecorePackage.getEInt(), "seed5", null, 1, 1,
+                RandomNumberGeneratorSeed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+        initEClass(probeSpecConfigurationEClass, ProbeSpecConfiguration.class, "ProbeSpecConfiguration", !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getProbeSpecConfiguration_BlackboardType(), this.getBlackboardType(), "blackboardType", null, 1,
+                1, ProbeSpecConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+        initEClass(sensorFrameworkEClass, SensorFramework.class, "SensorFramework", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getSensorFramework_Datasource(), this.getSensorFrameworkDatasource(), null, "datasource", null,
+                1, 1, SensorFramework.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
                 !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        this.initEClass(this.persistenceFrameworkEClass, PersistenceFramework.class, "PersistenceFramework",
+        initEClass(sensorFrameworkDatasourceEClass, SensorFrameworkDatasource.class, "SensorFrameworkDatasource",
                 IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-        this.initEClass(this.randomNumberGeneratorSeedEClass, RandomNumberGeneratorSeed.class,
-                "RandomNumberGeneratorSeed", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEAttribute(this.getRandomNumberGeneratorSeed_Seed0(), this.ecorePackage.getEInt(), "seed0", null, 1,
-                1, RandomNumberGeneratorSeed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEAttribute(this.getRandomNumberGeneratorSeed_Seed1(), this.ecorePackage.getEInt(), "seed1", null, 1,
-                1, RandomNumberGeneratorSeed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEAttribute(this.getRandomNumberGeneratorSeed_Seed2(), this.ecorePackage.getEInt(), "seed2", null, 1,
-                1, RandomNumberGeneratorSeed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEAttribute(this.getRandomNumberGeneratorSeed_Seed3(), this.ecorePackage.getEInt(), "seed3", null, 1,
-                1, RandomNumberGeneratorSeed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEAttribute(this.getRandomNumberGeneratorSeed_Seed4(), this.ecorePackage.getEInt(), "seed4", null, 1,
-                1, RandomNumberGeneratorSeed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEAttribute(this.getRandomNumberGeneratorSeed_Seed5(), this.ecorePackage.getEInt(), "seed5", null, 1,
-                1, RandomNumberGeneratorSeed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-        this.initEClass(this.probeSpecConfigurationEClass, ProbeSpecConfiguration.class, "ProbeSpecConfiguration",
-                !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEAttribute(this.getProbeSpecConfiguration_BlackboardType(), this.getBlackboardType(),
-                "blackboardType", null, 1, 1, ProbeSpecConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-        this.initEClass(this.sensorFrameworkEClass, SensorFramework.class, "SensorFramework", !IS_ABSTRACT,
-                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getSensorFramework_Datasource(), this.getSensorFrameworkDatasource(), null,
-                "datasource", null, 1, 1, SensorFramework.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-        this.initEClass(this.sensorFrameworkDatasourceEClass, SensorFrameworkDatasource.class,
-                "SensorFrameworkDatasource", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-        this.initEClass(this.memoryDatasourceEClass, MemoryDatasource.class, "MemoryDatasource", !IS_ABSTRACT,
-                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-        this.initEClass(this.fileDatasourceEClass, FileDatasource.class, "FileDatasource", !IS_ABSTRACT, !IS_INTERFACE,
+        initEClass(memoryDatasourceEClass, MemoryDatasource.class, "MemoryDatasource", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        this.initEAttribute(this.getFileDatasource_Location(), this.ecorePackage.getEString(), "location", null, 1, 1,
+
+        initEClass(fileDatasourceEClass, FileDatasource.class, "FileDatasource", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getFileDatasource_Location(), ecorePackage.getEString(), "location", null, 1, 1,
                 FileDatasource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, !IS_ORDERED);
 
-        this.initEClass(this.measurementCountStopConditionEClass, MeasurementCountStopCondition.class,
+        initEClass(measurementCountStopConditionEClass, MeasurementCountStopCondition.class,
                 "MeasurementCountStopCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEAttribute(this.getMeasurementCountStopCondition_MeasurementCount(), this.ecorePackage.getEInt(),
-                "measurementCount", null, 1, 1, MeasurementCountStopCondition.class, !IS_TRANSIENT, !IS_VOLATILE,
-                IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-        this.initEClass(this.simTimeStopConditionEClass, SimTimeStopCondition.class, "SimTimeStopCondition",
-                !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEAttribute(this.getSimTimeStopCondition_SimulationTime(), this.ecorePackage.getEInt(),
-                "simulationTime", null, 1, 1, SimTimeStopCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+        initEAttribute(getMeasurementCountStopCondition_MeasurementCount(), ecorePackage.getEInt(), "measurementCount",
+                null, 1, 1, MeasurementCountStopCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        this.initEClass(this.stopConditionEClass, StopCondition.class, "StopCondition", IS_ABSTRACT, !IS_INTERFACE,
+        initEClass(simTimeStopConditionEClass, SimTimeStopCondition.class, "SimTimeStopCondition", !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getSimTimeStopCondition_SimulationTime(), ecorePackage.getEInt(), "simulationTime", null, 1, 1,
+                SimTimeStopCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+        initEClass(stopConditionEClass, StopCondition.class, "StopCondition", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
 
-        this.initEClass(this.edp2EClass, de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2.class, "EDP2",
-                !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getEDP2_Repository(), theRepositoryPackage.getRepository(), null, "repository", null,
-                1, 1, de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2.class, !IS_TRANSIENT, !IS_VOLATILE,
+        initEClass(edp2EClass, de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2.class, "EDP2", !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getEDP2_Repository(), theRepositoryPackage.getRepository(), null, "repository", null, 1, 1,
+                de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2.class, !IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
-        this.initEEnum(this.blackboardTypeEEnum, BlackboardType.class, "BlackboardType");
-        this.addEEnumLiteral(this.blackboardTypeEEnum, BlackboardType.SIMPLE);
-        this.addEEnumLiteral(this.blackboardTypeEEnum, BlackboardType.CONCURRENT);
-        this.addEEnumLiteral(this.blackboardTypeEEnum, BlackboardType.NONE);
+        initEEnum(blackboardTypeEEnum, BlackboardType.class, "BlackboardType");
+        addEEnumLiteral(blackboardTypeEEnum, BlackboardType.SIMPLE);
+        addEEnumLiteral(blackboardTypeEEnum, BlackboardType.CONCURRENT);
+        addEEnumLiteral(blackboardTypeEEnum, BlackboardType.NONE);
 
         // Create resource
-        this.createResource(eNS_URI);
+        createResource(eNS_URI);
     }
 
 } // AbstractsimulationPackageImpl

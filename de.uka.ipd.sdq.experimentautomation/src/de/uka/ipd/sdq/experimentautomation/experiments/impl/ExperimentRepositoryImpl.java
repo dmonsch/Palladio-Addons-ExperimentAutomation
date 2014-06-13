@@ -110,11 +110,11 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
      */
     @Override
     public EList<Experiment> getExperiments() {
-        if (this.experiments == null) {
-            this.experiments = new EObjectContainmentEList<Experiment>(Experiment.class, this,
+        if (experiments == null) {
+            experiments = new EObjectContainmentEList<Experiment>(Experiment.class, this,
                     ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS);
         }
-        return this.experiments;
+        return experiments;
     }
 
     /**
@@ -124,11 +124,11 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
      */
     @Override
     public EList<ToolConfiguration> getToolConfiguration() {
-        if (this.toolConfiguration == null) {
-            this.toolConfiguration = new EObjectContainmentEList<ToolConfiguration>(ToolConfiguration.class, this,
+        if (toolConfiguration == null) {
+            toolConfiguration = new EObjectContainmentEList<ToolConfiguration>(ToolConfiguration.class, this,
                     ExperimentsPackage.EXPERIMENT_REPOSITORY__TOOL_CONFIGURATION);
         }
-        return this.toolConfiguration;
+        return toolConfiguration;
     }
 
     /**
@@ -138,7 +138,7 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
      */
     @Override
     public int getRepetitions() {
-        return this.repetitions;
+        return repetitions;
     }
 
     /**
@@ -147,13 +147,12 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
      * @generated
      */
     @Override
-    public void setRepetitions(final int newRepetitions) {
-        final int oldRepetitions = this.repetitions;
-        this.repetitions = newRepetitions;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.EXPERIMENT_REPOSITORY__REPETITIONS, oldRepetitions, this.repetitions));
-        }
+    public void setRepetitions(int newRepetitions) {
+        int oldRepetitions = repetitions;
+        repetitions = newRepetitions;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                    ExperimentsPackage.EXPERIMENT_REPOSITORY__REPETITIONS, oldRepetitions, repetitions));
     }
 
     /**
@@ -162,13 +161,12 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
-            final NotificationChain msgs) {
+    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS:
-            return ((InternalEList<?>) this.getExperiments()).basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) getExperiments()).basicRemove(otherEnd, msgs);
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__TOOL_CONFIGURATION:
-            return ((InternalEList<?>) this.getToolConfiguration()).basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) getToolConfiguration()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -179,14 +177,14 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
      * @generated
      */
     @Override
-    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS:
-            return this.getExperiments();
+            return getExperiments();
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__TOOL_CONFIGURATION:
-            return this.getToolConfiguration();
+            return getToolConfiguration();
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__REPETITIONS:
-            return this.getRepetitions();
+            return getRepetitions();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -198,18 +196,18 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
      */
     @SuppressWarnings("unchecked")
     @Override
-    public void eSet(final int featureID, final Object newValue) {
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS:
-            this.getExperiments().clear();
-            this.getExperiments().addAll((Collection<? extends Experiment>) newValue);
+            getExperiments().clear();
+            getExperiments().addAll((Collection<? extends Experiment>) newValue);
             return;
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__TOOL_CONFIGURATION:
-            this.getToolConfiguration().clear();
-            this.getToolConfiguration().addAll((Collection<? extends ToolConfiguration>) newValue);
+            getToolConfiguration().clear();
+            getToolConfiguration().addAll((Collection<? extends ToolConfiguration>) newValue);
             return;
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__REPETITIONS:
-            this.setRepetitions((Integer) newValue);
+            setRepetitions((Integer) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -221,16 +219,16 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
      * @generated
      */
     @Override
-    public void eUnset(final int featureID) {
+    public void eUnset(int featureID) {
         switch (featureID) {
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS:
-            this.getExperiments().clear();
+            getExperiments().clear();
             return;
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__TOOL_CONFIGURATION:
-            this.getToolConfiguration().clear();
+            getToolConfiguration().clear();
             return;
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__REPETITIONS:
-            this.setRepetitions(REPETITIONS_EDEFAULT);
+            setRepetitions(REPETITIONS_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -242,14 +240,14 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
      * @generated
      */
     @Override
-    public boolean eIsSet(final int featureID) {
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS:
-            return this.experiments != null && !this.experiments.isEmpty();
+            return experiments != null && !experiments.isEmpty();
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__TOOL_CONFIGURATION:
-            return this.toolConfiguration != null && !this.toolConfiguration.isEmpty();
+            return toolConfiguration != null && !toolConfiguration.isEmpty();
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__REPETITIONS:
-            return this.repetitions != REPETITIONS_EDEFAULT;
+            return repetitions != REPETITIONS_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -261,13 +259,12 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
      */
     @Override
     public String toString() {
-        if (this.eIsProxy()) {
+        if (eIsProxy())
             return super.toString();
-        }
 
-        final StringBuffer result = new StringBuffer(super.toString());
+        StringBuffer result = new StringBuffer(super.toString());
         result.append(" (repetitions: ");
-        result.append(this.repetitions);
+        result.append(repetitions);
         result.append(')');
         return result.toString();
     }

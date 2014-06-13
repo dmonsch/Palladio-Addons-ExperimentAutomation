@@ -11,8 +11,13 @@ import org.eclipse.emf.common.ui.EclipseUIPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.palladiosimulator.edp2.models.ExperimentData.provider.EDP2EditPlugin;
 import org.palladiosimulator.metricspec.provider.MetricSpecEditPlugin;
+import org.palladiosimulator.simulizar.pms.provider.PmsEditPlugin;
 
 import de.uka.ipd.sdq.identifier.provider.IdentifierEditPlugin;
+import de.uka.ipd.sdq.pcm.core.provider.PalladioComponentModelEditPlugin;
+import de.uka.ipd.sdq.probfunction.provider.ProbabilityFunctionEditPlugin;
+import de.uka.ipd.sdq.stoex.provider.StoexEditPlugin;
+import de.uka.ipd.sdq.units.provider.UnitsEditPlugin;
 
 /**
  * This is the central singleton for the ExperimentAutomation editor plugin. <!-- begin-user-doc -->
@@ -42,7 +47,8 @@ public final class ExperimentAutomationEditorPlugin extends EMFPlugin {
      */
     public ExperimentAutomationEditorPlugin() {
         super(new ResourceLocator[] { EDP2EditPlugin.INSTANCE, IdentifierEditPlugin.INSTANCE,
-                MetricSpecEditPlugin.INSTANCE, });
+                MetricSpecEditPlugin.INSTANCE, PalladioComponentModelEditPlugin.INSTANCE, PmsEditPlugin.INSTANCE,
+                ProbabilityFunctionEditPlugin.INSTANCE, StoexEditPlugin.INSTANCE, UnitsEditPlugin.INSTANCE, });
     }
 
     /**

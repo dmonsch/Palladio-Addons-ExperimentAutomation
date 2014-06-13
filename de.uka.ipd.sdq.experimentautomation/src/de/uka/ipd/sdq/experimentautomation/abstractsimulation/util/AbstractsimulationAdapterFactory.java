@@ -57,7 +57,7 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     @Override
-    public boolean isFactoryForType(final Object object) {
+    public boolean isFactoryForType(Object object) {
         if (object == modelPackage) {
             return true;
         }
@@ -75,73 +75,73 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
      */
     protected AbstractsimulationSwitch<Adapter> modelSwitch = new AbstractsimulationSwitch<Adapter>() {
         @Override
-        public Adapter caseAbstractSimulationConfiguration(final AbstractSimulationConfiguration object) {
-            return AbstractsimulationAdapterFactory.this.createAbstractSimulationConfigurationAdapter();
+        public Adapter caseAbstractSimulationConfiguration(AbstractSimulationConfiguration object) {
+            return createAbstractSimulationConfigurationAdapter();
         }
 
         @Override
-        public Adapter casePersistenceFramework(final PersistenceFramework object) {
-            return AbstractsimulationAdapterFactory.this.createPersistenceFrameworkAdapter();
+        public Adapter casePersistenceFramework(PersistenceFramework object) {
+            return createPersistenceFrameworkAdapter();
         }
 
         @Override
-        public Adapter caseRandomNumberGeneratorSeed(final RandomNumberGeneratorSeed object) {
-            return AbstractsimulationAdapterFactory.this.createRandomNumberGeneratorSeedAdapter();
+        public Adapter caseRandomNumberGeneratorSeed(RandomNumberGeneratorSeed object) {
+            return createRandomNumberGeneratorSeedAdapter();
         }
 
         @Override
-        public Adapter caseProbeSpecConfiguration(final ProbeSpecConfiguration object) {
-            return AbstractsimulationAdapterFactory.this.createProbeSpecConfigurationAdapter();
+        public Adapter caseProbeSpecConfiguration(ProbeSpecConfiguration object) {
+            return createProbeSpecConfigurationAdapter();
         }
 
         @Override
-        public Adapter caseSensorFramework(final SensorFramework object) {
-            return AbstractsimulationAdapterFactory.this.createSensorFrameworkAdapter();
+        public Adapter caseSensorFramework(SensorFramework object) {
+            return createSensorFrameworkAdapter();
         }
 
         @Override
-        public Adapter caseSensorFrameworkDatasource(final SensorFrameworkDatasource object) {
-            return AbstractsimulationAdapterFactory.this.createSensorFrameworkDatasourceAdapter();
+        public Adapter caseSensorFrameworkDatasource(SensorFrameworkDatasource object) {
+            return createSensorFrameworkDatasourceAdapter();
         }
 
         @Override
-        public Adapter caseMemoryDatasource(final MemoryDatasource object) {
-            return AbstractsimulationAdapterFactory.this.createMemoryDatasourceAdapter();
+        public Adapter caseMemoryDatasource(MemoryDatasource object) {
+            return createMemoryDatasourceAdapter();
         }
 
         @Override
-        public Adapter caseFileDatasource(final FileDatasource object) {
-            return AbstractsimulationAdapterFactory.this.createFileDatasourceAdapter();
+        public Adapter caseFileDatasource(FileDatasource object) {
+            return createFileDatasourceAdapter();
         }
 
         @Override
-        public Adapter caseMeasurementCountStopCondition(final MeasurementCountStopCondition object) {
-            return AbstractsimulationAdapterFactory.this.createMeasurementCountStopConditionAdapter();
+        public Adapter caseMeasurementCountStopCondition(MeasurementCountStopCondition object) {
+            return createMeasurementCountStopConditionAdapter();
         }
 
         @Override
-        public Adapter caseSimTimeStopCondition(final SimTimeStopCondition object) {
-            return AbstractsimulationAdapterFactory.this.createSimTimeStopConditionAdapter();
+        public Adapter caseSimTimeStopCondition(SimTimeStopCondition object) {
+            return createSimTimeStopConditionAdapter();
         }
 
         @Override
-        public Adapter caseStopCondition(final StopCondition object) {
-            return AbstractsimulationAdapterFactory.this.createStopConditionAdapter();
+        public Adapter caseStopCondition(StopCondition object) {
+            return createStopConditionAdapter();
         }
 
         @Override
-        public Adapter caseEDP2(final EDP2 object) {
-            return AbstractsimulationAdapterFactory.this.createEDP2Adapter();
+        public Adapter caseEDP2(EDP2 object) {
+            return createEDP2Adapter();
         }
 
         @Override
-        public Adapter caseToolConfiguration(final ToolConfiguration object) {
-            return AbstractsimulationAdapterFactory.this.createToolConfigurationAdapter();
+        public Adapter caseToolConfiguration(ToolConfiguration object) {
+            return createToolConfigurationAdapter();
         }
 
         @Override
-        public Adapter defaultCase(final EObject object) {
-            return AbstractsimulationAdapterFactory.this.createEObjectAdapter();
+        public Adapter defaultCase(EObject object) {
+            return createEObjectAdapter();
         }
     };
 
@@ -154,8 +154,8 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     @Override
-    public Adapter createAdapter(final Notifier target) {
-        return this.modelSwitch.doSwitch((EObject) target);
+    public Adapter createAdapter(Notifier target) {
+        return modelSwitch.doSwitch((EObject) target);
     }
 
     /**

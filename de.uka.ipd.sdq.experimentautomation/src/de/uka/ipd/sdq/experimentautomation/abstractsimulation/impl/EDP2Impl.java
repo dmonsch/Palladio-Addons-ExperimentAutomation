@@ -61,17 +61,16 @@ public class EDP2Impl extends PersistenceFrameworkImpl implements EDP2 {
      */
     @Override
     public Repository getRepository() {
-        if (this.repository != null && this.repository.eIsProxy()) {
-            final InternalEObject oldRepository = (InternalEObject) this.repository;
-            this.repository = (Repository) this.eResolveProxy(oldRepository);
-            if (this.repository != oldRepository) {
-                if (this.eNotificationRequired()) {
-                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            AbstractsimulationPackage.EDP2__REPOSITORY, oldRepository, this.repository));
-                }
+        if (repository != null && repository.eIsProxy()) {
+            InternalEObject oldRepository = (InternalEObject) repository;
+            repository = (Repository) eResolveProxy(oldRepository);
+            if (repository != oldRepository) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            AbstractsimulationPackage.EDP2__REPOSITORY, oldRepository, repository));
             }
         }
-        return this.repository;
+        return repository;
     }
 
     /**
@@ -80,7 +79,7 @@ public class EDP2Impl extends PersistenceFrameworkImpl implements EDP2 {
      * @generated
      */
     public Repository basicGetRepository() {
-        return this.repository;
+        return repository;
     }
 
     /**
@@ -89,13 +88,12 @@ public class EDP2Impl extends PersistenceFrameworkImpl implements EDP2 {
      * @generated
      */
     @Override
-    public void setRepository(final Repository newRepository) {
-        final Repository oldRepository = this.repository;
-        this.repository = newRepository;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, AbstractsimulationPackage.EDP2__REPOSITORY,
-                    oldRepository, this.repository));
-        }
+    public void setRepository(Repository newRepository) {
+        Repository oldRepository = repository;
+        repository = newRepository;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, AbstractsimulationPackage.EDP2__REPOSITORY,
+                    oldRepository, repository));
     }
 
     /**
@@ -104,13 +102,12 @@ public class EDP2Impl extends PersistenceFrameworkImpl implements EDP2 {
      * @generated
      */
     @Override
-    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case AbstractsimulationPackage.EDP2__REPOSITORY:
-            if (resolve) {
-                return this.getRepository();
-            }
-            return this.basicGetRepository();
+            if (resolve)
+                return getRepository();
+            return basicGetRepository();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -121,10 +118,10 @@ public class EDP2Impl extends PersistenceFrameworkImpl implements EDP2 {
      * @generated
      */
     @Override
-    public void eSet(final int featureID, final Object newValue) {
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
         case AbstractsimulationPackage.EDP2__REPOSITORY:
-            this.setRepository((Repository) newValue);
+            setRepository((Repository) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -136,10 +133,10 @@ public class EDP2Impl extends PersistenceFrameworkImpl implements EDP2 {
      * @generated
      */
     @Override
-    public void eUnset(final int featureID) {
+    public void eUnset(int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.EDP2__REPOSITORY:
-            this.setRepository((Repository) null);
+            setRepository((Repository) null);
             return;
         }
         super.eUnset(featureID);
@@ -151,10 +148,10 @@ public class EDP2Impl extends PersistenceFrameworkImpl implements EDP2 {
      * @generated
      */
     @Override
-    public boolean eIsSet(final int featureID) {
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.EDP2__REPOSITORY:
-            return this.repository != null;
+            return repository != null;
         }
         return super.eIsSet(featureID);
     }

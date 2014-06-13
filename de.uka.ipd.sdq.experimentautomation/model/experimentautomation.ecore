@@ -38,8 +38,6 @@
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="initialModel" ordered="false"
-          lowerBound="1" eType="#//experiments/PCMModelFiles" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="toolConfiguration" ordered="false"
           lowerBound="1" upperBound="-1" eType="#//experiments/ToolConfiguration"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="stopConditions" ordered="false"
@@ -51,6 +49,8 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="responseMeasurement"
           ordered="false" lowerBound="1" eType="#//experiments/ResponseMeasurement"
           containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="initialModel" lowerBound="1"
+          eType="#//experiments/InitialModel" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Variation">
       <eStructuralFeatures xsi:type="ecore:EReference" name="type" ordered="false"
@@ -69,22 +69,6 @@
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ValueProvider" abstract="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="PCMModelFiles">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="allocationFile" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="usagemodelFile" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemFile" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="repositoryFile" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="resourceenvironmentFile"
-          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="middlewareRepositoryFile"
-          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventMiddlewareRepositoryFile"
-          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ToolConfiguration" abstract="true">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -129,6 +113,24 @@
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InitialModel">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="usageModel" lowerBound="1"
+          eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//usagemodel/UsageModel"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allocation" lowerBound="1"
+          eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="middlewareRepository"
+          lowerBound="1" eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Repository"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eventMiddleWareRepository"
+          lowerBound="1" eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Repository"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="reconfigurationRules"
+          eType="#//experiments/ReconfigurationRulesFolder"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="platformMonitoringSpecification"
+          eType="ecore:EClass ../../org.palladiosimulator.simulizar.pms/model/pms.ecore#//PMSModel"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ReconfigurationRulesFolder">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="folderUri" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="abstractsimulation" nsURI="http://sdq.ipd.uka.de/ExperimentAutomation/AbstractSimulation/1.0"
@@ -197,7 +199,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="StopCondition" abstract="true"/>
     <eClassifiers xsi:type="ecore:EClass" name="EDP2" eSuperTypes="#//abstractsimulation/PersistenceFramework">
       <eStructuralFeatures xsi:type="ecore:EReference" name="repository" lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.edp2/model/EDP2.ecore#//Repository/Repository"/>
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//Repository/Repository"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

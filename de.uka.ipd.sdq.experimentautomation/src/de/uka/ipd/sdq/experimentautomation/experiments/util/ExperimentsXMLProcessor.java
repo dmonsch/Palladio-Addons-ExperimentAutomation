@@ -40,12 +40,12 @@ public class ExperimentsXMLProcessor extends XMLProcessor {
      */
     @Override
     protected Map<String, Resource.Factory> getRegistrations() {
-        if (this.registrations == null) {
+        if (registrations == null) {
             super.getRegistrations();
-            this.registrations.put(XML_EXTENSION, new ExperimentsResourceFactoryImpl());
-            this.registrations.put(STAR_EXTENSION, new ExperimentsResourceFactoryImpl());
+            registrations.put(XML_EXTENSION, new ExperimentsResourceFactoryImpl());
+            registrations.put(STAR_EXTENSION, new ExperimentsResourceFactoryImpl());
         }
-        return this.registrations;
+        return registrations;
     }
 
 } // ExperimentsXMLProcessor

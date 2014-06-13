@@ -23,7 +23,7 @@ public class ExperimentsResourceImpl extends XMLResourceImpl {
      *            the URI of the new resource.
      * @generated
      */
-    public ExperimentsResourceImpl(final URI uri) {
+    public ExperimentsResourceImpl(URI uri) {
         super(uri);
     }
 
