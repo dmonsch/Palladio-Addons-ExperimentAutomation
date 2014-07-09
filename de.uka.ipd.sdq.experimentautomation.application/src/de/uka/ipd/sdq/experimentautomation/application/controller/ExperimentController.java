@@ -42,8 +42,8 @@ public class ExperimentController {
         private final ToolConfiguration toolConfiguration;
         private final Experiment experiment;
 
-        public ExperimentContext(final String experimentName,
-                final ToolConfiguration toolConfiguration, final Experiment experiment) {
+        public ExperimentContext(final String experimentName, final ToolConfiguration toolConfiguration,
+                final Experiment experiment) {
             super();
             this.experimentName = experimentName;
             this.toolConfiguration = toolConfiguration;
@@ -91,8 +91,7 @@ public class ExperimentController {
     private void runExperiment(final Experiment experiment, final ToolConfiguration toolConfiguration) {
         final String experimentName = "(" + experiment.getId() + ", " + toolConfiguration.getName() + ") "
                 + experiment.getName();
-        final ExperimentContext settings = new ExperimentContext(experimentName, toolConfiguration,
-                experiment);
+        final ExperimentContext settings = new ExperimentContext(experimentName, toolConfiguration, experiment);
         final ExperimentMetadata metadata = new ExperimentMetadata();
 
         metadata.setExperimentName(experimentName);
@@ -159,7 +158,8 @@ public class ExperimentController {
         for (int i = 0; i < variations.size(); i++) {
             final Variation variation = variations.get(i);
             final long currentValue = factorLevels.get(i);
-            final IVariationStrategy variationStrategy = this.initialiseVariations(variation, clonedConfiguration.getResourceSet());
+            final IVariationStrategy variationStrategy = this.initialiseVariations(variation,
+                    clonedConfiguration.getResourceSet());
             final String desc = variationStrategy.vary(currentValue);
             if (LOGGER.isDebugEnabled()) {
                 LOGGER.debug("Varyied: " + desc);
@@ -172,8 +172,8 @@ public class ExperimentController {
                 final IToolAdapter analysisTool = AnalysisToolFactory.createToolAdapater(settings
                         .getToolConfiguration());
                 analysisTool.runExperiment(settings.getExperimentname() + " "
-                        + settings.getToolConfiguration().getName(), experiment.getInitialModel(), settings.getToolConfiguration(),
-                        settings.getExperiment().getStopConditions());
+                        + settings.getToolConfiguration().getName(), experiment.getInitialModel(),
+                        settings.getToolConfiguration(), settings.getExperiment().getStopConditions());
             } catch (final Exception ex) {
                 throw new RuntimeException("The simulation failed", ex);
             }
@@ -182,6 +182,10 @@ public class ExperimentController {
 
     private IVariationStrategy initialiseVariations(final Variation variation, final ResourceSet resourceSet) {
         final EObject variedObject = EcoreHelper.findModelElementById(resourceSet, variation.getVariedObjectId());
+        if (variedObject == null) {
+            throw new RuntimeException("Unable to find model element with ID " + variation.getVariedObjectId()
+                    + " in resource set");
+        }
         final IVariationStrategy variationStrategy = VariationStrategyFactory.createStrategy(variation.getType());
         variationStrategy.setVariedObject(variedObject);
         return variationStrategy;

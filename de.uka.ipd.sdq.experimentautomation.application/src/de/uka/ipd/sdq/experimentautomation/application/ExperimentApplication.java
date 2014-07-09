@@ -11,8 +11,17 @@ import org.osgi.framework.Bundle;
 import de.uka.ipd.sdq.experimentautomation.application.config.ExperimentAutomationConfiguration;
 import de.uka.ipd.sdq.experimentautomation.application.controller.ExperimentController;
 
+/**
+ * Main entry point to the experiment automation application. By implementing the
+ * {@link IApplication} interface, this class can serve as a stand-alone application.
+ * 
+ * @author Sebastian Lehrig
+ */
 public class ExperimentApplication implements IApplication {
-    
+
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Object start(final IApplicationContext context) throws Exception {
         // obtain command line arguments
@@ -37,15 +46,19 @@ public class ExperimentApplication implements IApplication {
         final Bundle bundle = Activator.getDefault().getBundle();
         final Path experimentsLocation = new Path(args[0]);
         final Path variationsLocation = new Path(args[1]);
-        final ExperimentAutomationConfiguration config = new ExperimentAutomationConfiguration(bundle, experimentsLocation, variationsLocation, experimentIds);
+        final ExperimentAutomationConfiguration config = new ExperimentAutomationConfiguration(bundle,
+                experimentsLocation, variationsLocation, experimentIds);
 
         // run experiments
         final ExperimentController controller = new ExperimentController(config);
         controller.runExperiments();
-        
+
         return IApplication.EXIT_OK;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void stop() {
         // nothing to do
