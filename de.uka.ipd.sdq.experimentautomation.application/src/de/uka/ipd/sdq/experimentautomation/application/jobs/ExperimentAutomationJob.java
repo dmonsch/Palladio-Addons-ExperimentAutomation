@@ -28,7 +28,7 @@ import de.uka.ipd.sdq.workflow.jobs.UserCanceledException;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 
 /**
- * This job is conducts a given experiment. The job assumes that involved models are already loaded
+ * This job conducts a given experiment. The job assumes that involved models are already loaded
  * to the blackboard.
  * 
  * @author Sebastian Lehrig

@@ -9,14 +9,9 @@ import org.eclipse.equinox.app.IApplicationContext;
 import org.osgi.framework.Bundle;
 
 import de.uka.ipd.sdq.experimentautomation.application.config.ExperimentAutomationConfiguration;
-import de.uka.ipd.sdq.experimentautomation.application.jobs.ExperimentAutomationJob;
-import de.uka.ipd.sdq.experimentautomation.application.jobs.LoadPCMModelsForExperimentAutomationJob;
-import de.uka.ipd.sdq.experimentautomation.experiments.Experiment;
+import de.uka.ipd.sdq.experimentautomation.application.jobs.ExperimentsAutomationJob;
 import de.uka.ipd.sdq.workflow.BlackboardBasedWorkflow;
-import de.uka.ipd.sdq.workflow.jobs.IJob;
-import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
-import de.uka.ipd.sdq.workflow.pcm.jobs.PreparePCMBlackboardPartionJob;
 
 /**
  * Main entry point to the experiment automation application. By implementing the
@@ -56,21 +51,10 @@ public class ExperimentApplication implements IApplication {
         final ExperimentAutomationConfiguration config = new ExperimentAutomationConfiguration(bundle,
                 experimentsLocation, variationsLocation, experimentIds);
 
-        // prepare experiment automation jobs
-        final SequentialBlackboardInteractingJob<MDSDBlackboard> runAllExperimentsJob = new SequentialBlackboardInteractingJob<MDSDBlackboard>();
-        final IJob preparePCMBlackboardPartionJob = new PreparePCMBlackboardPartionJob();
-        runAllExperimentsJob.add(preparePCMBlackboardPartionJob);
-        for (final Experiment experiment : config.getFilteredExperiments()) {
-            final IJob loadPCMModelsJob = new LoadPCMModelsForExperimentAutomationJob(experiment.getInitialModel());
-            final IJob experimentAutomationJob = new ExperimentAutomationJob(config, experiment);
-            runAllExperimentsJob.add(loadPCMModelsJob);
-            runAllExperimentsJob.add(experimentAutomationJob);
-        }
-
-        // run experiment automation jobs via blackboard-based workflow
+        // run experiments via blackboard-based workflow
         final MDSDBlackboard blackboard = new MDSDBlackboard();
         final BlackboardBasedWorkflow<MDSDBlackboard> workflow = new BlackboardBasedWorkflow<MDSDBlackboard>(
-                runAllExperimentsJob, blackboard);
+                new ExperimentsAutomationJob(config), blackboard);
         workflow.run();
 
         return IApplication.EXIT_OK;
