@@ -27,7 +27,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider;
  * <em>Factor</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class PolynomialValueProviderImpl extends ValueProviderImpl implements PolynomialValueProvider {

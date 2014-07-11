@@ -16,7 +16,7 @@ import de.uka.ipd.sdq.experimentautomation.variation.VariationPackage;
  * <em><b>Structural Variation</b></em>'. <!-- end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public class StructuralVariationImpl extends VariationTypeImpl implements StructuralVariation {

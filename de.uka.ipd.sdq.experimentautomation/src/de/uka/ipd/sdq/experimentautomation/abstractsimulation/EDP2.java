@@ -7,7 +7,7 @@ import org.palladiosimulator.edp2.models.Repository.Repository;
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>EDP2</b></em>'. <!--
  * end-user-doc -->
- * 
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -15,7 +15,7 @@ import org.palladiosimulator.edp2.models.Repository.Repository;
  * Repository</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getEDP2()
  * @model
  * @generated

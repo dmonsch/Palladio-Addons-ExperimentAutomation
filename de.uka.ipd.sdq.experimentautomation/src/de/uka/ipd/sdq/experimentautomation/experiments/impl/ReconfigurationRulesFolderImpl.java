@@ -21,7 +21,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolde
  * <em>Folder Uri</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class ReconfigurationRulesFolderImpl extends EObjectImpl implements ReconfigurationRulesFolder {

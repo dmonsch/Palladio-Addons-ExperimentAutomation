@@ -17,7 +17,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ValueProvider;
  * <!-- end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public abstract class ValueProviderImpl extends EObjectImpl implements ValueProvider {

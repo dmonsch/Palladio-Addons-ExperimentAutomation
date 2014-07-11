@@ -36,7 +36,7 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGenera
  * <em>Seed5</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements RandomNumberGeneratorSeed {

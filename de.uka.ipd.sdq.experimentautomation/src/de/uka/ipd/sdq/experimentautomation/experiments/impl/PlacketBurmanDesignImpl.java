@@ -17,7 +17,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.PlacketBurmanDesign;
  * <em><b>Placket Burman Design</b></em>'. <!-- end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public class PlacketBurmanDesignImpl extends EObjectImpl implements PlacketBurmanDesign {

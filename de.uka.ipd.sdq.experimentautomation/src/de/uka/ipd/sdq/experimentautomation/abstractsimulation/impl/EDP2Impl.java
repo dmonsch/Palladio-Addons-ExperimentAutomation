@@ -21,7 +21,7 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2;
  * <em>Repository</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class EDP2Impl extends PersistenceFrameworkImpl implements EDP2 {

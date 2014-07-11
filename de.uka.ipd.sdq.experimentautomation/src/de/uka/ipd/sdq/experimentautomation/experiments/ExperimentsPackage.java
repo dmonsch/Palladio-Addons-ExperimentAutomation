@@ -76,31 +76,13 @@ public interface ExperimentsPackage extends EPackage {
     int EXPERIMENT_REPOSITORY__EXPERIMENTS = 0;
 
     /**
-     * The feature id for the '<em><b>Tool Configuration</b></em>' containment reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     * @ordered
-     */
-    int EXPERIMENT_REPOSITORY__TOOL_CONFIGURATION = 1;
-
-    /**
-     * The feature id for the '<em><b>Repetitions</b></em>' attribute. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     * 
-     * @generated
-     * @ordered
-     */
-    int EXPERIMENT_REPOSITORY__REPETITIONS = 2;
-
-    /**
      * The number of structural features of the '<em>Experiment Repository</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
      * @ordered
      */
-    int EXPERIMENT_REPOSITORY_FEATURE_COUNT = 3;
+    int EXPERIMENT_REPOSITORY_FEATURE_COUNT = 1;
 
     /**
      * The meta object id for the '
@@ -204,13 +186,22 @@ public interface ExperimentsPackage extends EPackage {
     int EXPERIMENT__INITIAL_MODEL = 9;
 
     /**
+     * The feature id for the '<em><b>Repetitions</b></em>' attribute. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int EXPERIMENT__REPETITIONS = 10;
+
+    /**
      * The number of structural features of the '<em>Experiment</em>' class. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
      * @generated
      * @ordered
      */
-    int EXPERIMENT_FEATURE_COUNT = 10;
+    int EXPERIMENT_FEATURE_COUNT = 11;
 
     /**
      * The meta object id for the '
@@ -851,30 +842,6 @@ public interface ExperimentsPackage extends EPackage {
     EReference getExperimentRepository_Experiments();
 
     /**
-     * Returns the meta object for the containment reference list '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository#getToolConfiguration
-     * <em>Tool Configuration</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for the containment reference list '<em>Tool Configuration</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository#getToolConfiguration()
-     * @see #getExperimentRepository()
-     * @generated
-     */
-    EReference getExperimentRepository_ToolConfiguration();
-
-    /**
-     * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository#getRepetitions
-     * <em>Repetitions</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for the attribute '<em>Repetitions</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository#getRepetitions()
-     * @see #getExperimentRepository()
-     * @generated
-     */
-    EAttribute getExperimentRepository_Repetitions();
-
-    /**
      * Returns the meta object for class '
      * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment <em>Experiment</em>}'. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -946,11 +913,23 @@ public interface ExperimentsPackage extends EPackage {
     EReference getExperiment_InitialModel();
 
     /**
-     * Returns the meta object for the reference list '
+     * Returns the meta object for the attribute '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getRepetitions
+     * <em>Repetitions</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for the attribute '<em>Repetitions</em>'.
+     * @see de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getRepetitions()
+     * @see #getExperiment()
+     * @generated
+     */
+    EAttribute getExperiment_Repetitions();
+
+    /**
+     * Returns the meta object for the containment reference list '
      * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getToolConfiguration
      * <em>Tool Configuration</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @return the meta object for the reference list '<em>Tool Configuration</em>'.
+     * @return the meta object for the containment reference list '<em>Tool Configuration</em>'.
      * @see de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getToolConfiguration()
      * @see #getExperiment()
      * @generated
@@ -1568,22 +1547,6 @@ public interface ExperimentsPackage extends EPackage {
         EReference EXPERIMENT_REPOSITORY__EXPERIMENTS = eINSTANCE.getExperimentRepository_Experiments();
 
         /**
-         * The meta object literal for the '<em><b>Tool Configuration</b></em>' containment
-         * reference list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @generated
-         */
-        EReference EXPERIMENT_REPOSITORY__TOOL_CONFIGURATION = eINSTANCE.getExperimentRepository_ToolConfiguration();
-
-        /**
-         * The meta object literal for the '<em><b>Repetitions</b></em>' attribute feature. <!--
-         * begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @generated
-         */
-        EAttribute EXPERIMENT_REPOSITORY__REPETITIONS = eINSTANCE.getExperimentRepository_Repetitions();
-
-        /**
          * The meta object literal for the '
          * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl
          * <em>Experiment</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1635,8 +1598,16 @@ public interface ExperimentsPackage extends EPackage {
         EReference EXPERIMENT__INITIAL_MODEL = eINSTANCE.getExperiment_InitialModel();
 
         /**
-         * The meta object literal for the '<em><b>Tool Configuration</b></em>' reference list
-         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '<em><b>Repetitions</b></em>' attribute feature. <!--
+         * begin-user-doc --> <!-- end-user-doc -->
+         * 
+         * @generated
+         */
+        EAttribute EXPERIMENT__REPETITIONS = eINSTANCE.getExperiment_Repetitions();
+
+        /**
+         * The meta object literal for the '<em><b>Tool Configuration</b></em>' containment
+         * reference list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @generated
          */

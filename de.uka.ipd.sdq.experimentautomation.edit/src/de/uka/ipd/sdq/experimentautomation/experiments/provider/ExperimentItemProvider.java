@@ -64,6 +64,7 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
             addNamePropertyDescriptor(object);
             addToolConfigurationPropertyDescriptor(object);
             addDescriptionPropertyDescriptor(object);
+            addRepetitionsPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -128,6 +129,22 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
                 getString("_UI_PropertyDescriptor_description", "_UI_Experiment_description_feature",
                         "_UI_Experiment_type"), ExperimentsPackage.Literals.EXPERIMENT__DESCRIPTION, true, false,
                 false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+    }
+
+    /**
+     * This adds a property descriptor for the Repetitions feature. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
+     * @generated
+     */
+    protected void addRepetitionsPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_Experiment_repetitions_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Experiment_repetitions_feature",
+                        "_UI_Experiment_type"), ExperimentsPackage.Literals.EXPERIMENT__REPETITIONS, true, false,
+                false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -204,6 +221,7 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
         case ExperimentsPackage.EXPERIMENT__ID:
         case ExperimentsPackage.EXPERIMENT__NAME:
         case ExperimentsPackage.EXPERIMENT__DESCRIPTION:
+        case ExperimentsPackage.EXPERIMENT__REPETITIONS:
             fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         case ExperimentsPackage.EXPERIMENT__VARIATIONS:

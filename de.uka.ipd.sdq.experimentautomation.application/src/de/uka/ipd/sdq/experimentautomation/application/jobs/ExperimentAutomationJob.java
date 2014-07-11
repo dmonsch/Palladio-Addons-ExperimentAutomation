@@ -1,14 +1,16 @@
-package de.uka.ipd.sdq.experimentautomation.application.controller;
+package de.uka.ipd.sdq.experimentautomation.application.jobs;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
 import de.uka.ipd.sdq.experimentautomation.application.config.ExperimentAutomationConfiguration;
+import de.uka.ipd.sdq.experimentautomation.application.controller.ExperimentMetadata;
 import de.uka.ipd.sdq.experimentautomation.application.tooladapter.AnalysisToolFactory;
 import de.uka.ipd.sdq.experimentautomation.application.tooladapter.IToolAdapter;
 import de.uka.ipd.sdq.experimentautomation.application.utils.EcoreHelper;
@@ -19,101 +21,88 @@ import de.uka.ipd.sdq.experimentautomation.application.variation.valueprovider.V
 import de.uka.ipd.sdq.experimentautomation.experiments.Experiment;
 import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
 import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
+import de.uka.ipd.sdq.workflow.jobs.CleanupFailedException;
+import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
+import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
+import de.uka.ipd.sdq.workflow.jobs.UserCanceledException;
+import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 
 /**
- * This class is responsible for executing a given experiment configuration. Such a configuration
- * includes the list of experiments to conduct and the tools to use for these experiments (e.g.,
- * SimuCom). A single experiment includes a list of variations, each analyzed according to a
- * configurable number of repetitions.
+ * This job is conducts a given experiment. The job assumes that involved models are already loaded
+ * to the blackboard.
  * 
- * Objects of this class are completely configured via their constructor. Afterwards, experiments
- * can be conducted by invoking their <code>runExperiments()</code> method.
- * 
- * @author Merkle, Sebastian Lehrig
+ * @author Sebastian Lehrig
  */
-public class ExperimentController {
+public class ExperimentAutomationJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
 
-    private static final Logger LOGGER = Logger.getLogger(ExperimentController.class);
+    private static final Logger LOGGER = Logger.getLogger(ExperimentAutomationJob.class);
 
-    private final ExperimentAutomationConfiguration config;
+    private final ExperimentAutomationConfiguration configuration;
+    private final Experiment experiment;
 
-    private class ExperimentContext {
-        private final String experimentName;
-        private final ToolConfiguration toolConfiguration;
-        private final Experiment experiment;
-
-        public ExperimentContext(final String experimentName, final ToolConfiguration toolConfiguration,
-                final Experiment experiment) {
-            super();
-            this.experimentName = experimentName;
-            this.toolConfiguration = toolConfiguration;
-            this.experiment = experiment;
-        }
-
-        public String getExperimentname() {
-            return this.experimentName;
-        }
-
-        public ToolConfiguration getToolConfiguration() {
-            return this.toolConfiguration;
-        }
-
-        public Experiment getExperiment() {
-            return this.experiment;
-        }
-    }
-
-    public ExperimentController(final ExperimentAutomationConfiguration config) {
-        this.config = config;
-    }
+    private MDSDBlackboard blackboard;
 
     /**
-     * Runs the list of experiments as registered and configured at this controller.
-     */
-    public void runExperiments() {
-        for (final Experiment experiment : config.getFilteredExperiments()) {
-            for (final ToolConfiguration toolConfiguration : experiment.getToolConfiguration()) {
-                this.runExperiment(experiment, toolConfiguration);
-            }
-        }
-    }
-
-    /**
-     * Runs a single experiment for a given tool. Note that a single experiment comes with
-     * variations, each potentially repeated according the configuration of this experiment
-     * controller.
+     * Default Constructor.
      * 
+     * @param configuration
+     *            Configuration of the experiment.
      * @param experiment
-     *            The experiment to run.
+     *            The experiment to be conducted.
+     */
+    public ExperimentAutomationJob(ExperimentAutomationConfiguration configuration, Experiment experiment) {
+        super(false);
+        this.configuration = configuration;
+        this.experiment = experiment;
+    }
+
+    /**
+     * Runs an experiment as registered and configured for this job.
+     */
+    @Override
+    public void execute(IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
+        LOGGER.info("Experiment Automation Job started");
+
+        for (final ToolConfiguration toolConfiguration : experiment.getToolConfiguration()) {
+            this.runExperiment(toolConfiguration);
+        }
+
+        LOGGER.info("Experiment Automation Job finished");
+    }
+
+    /**
+     * Runs an experiment for a given tool. Note that the experiment comes with variations, each
+     * potentially repeated as specified by the experiment.
+     * 
      * @param toolConfiguration
      *            The given tool, e.g., SimuCom.
      */
-    private void runExperiment(final Experiment experiment, final ToolConfiguration toolConfiguration) {
-        final String experimentName = "(" + experiment.getId() + ", " + toolConfiguration.getName() + ") "
-                + experiment.getName();
-        final ExperimentContext settings = new ExperimentContext(experimentName, toolConfiguration, experiment);
+    private void runExperiment(final ToolConfiguration toolConfiguration) {
+        final String experimentName = "(" + this.experiment.getId() + ", " + toolConfiguration.getName() + ") "
+                + this.experiment.getName();
         final ExperimentMetadata metadata = new ExperimentMetadata();
 
         metadata.setExperimentName(experimentName);
         metadata.setStartTime(new Date());
         metadata.setVirtualMachineArguments("TODO");
-        this.runExperimentVariations(experiment.getVariations(), settings, new ArrayList<Variation>(),
-                new ArrayList<Long>());
+        this.runExperimentVariations(this.experiment.getVariations(), new ArrayList<Variation>(),
+                new ArrayList<Long>(), experimentName, toolConfiguration);
         metadata.setEndTime(new Date());
         LOGGER.info(metadata);
     }
 
     /**
-     * TODO There should really be an explanation here describing variations vs. variants! [Lehrig]
+     * TODO There should really be an explanation here describing variations vs. variants! I guess,
+     * Philipp has some clue? [Lehrig]
      * 
      * Recursive call, each time reducing variations by 1. Initially, variants and
      * currentFactorLevels are empty. Seems to be something statistical done here like trying out
      * each pair-wise combination...
      */
-    private void runExperimentVariations(final List<Variation> variations, final ExperimentContext settings,
-            final List<Variation> variants, final List<Long> currentFactorLevels) {
+    private void runExperimentVariations(final List<Variation> variations, final List<Variation> variants,
+            final List<Long> currentFactorLevels, String experimentName, ToolConfiguration toolConfiguration) {
         if (variations.isEmpty()) {
-            this.variateModelAndSimulate(settings, variants, currentFactorLevels);
+            this.variateModelAndSimulate(variants, currentFactorLevels, experimentName, toolConfiguration);
         } else {
             // obtain variation description
             final List<Variation> copy = new ArrayList<Variation>();
@@ -136,7 +125,7 @@ public class ExperimentController {
                     variants.add(variation);
                     currentFactorLevels.add(factorLevel);
 
-                    this.runExperimentVariations(copy, settings, variants, currentFactorLevels);
+                    this.runExperimentVariations(copy, variants, currentFactorLevels, experimentName, toolConfiguration);
 
                     variants.remove(variants.size() - 1);
                     currentFactorLevels.remove(currentFactorLevels.size() - 1);
@@ -147,12 +136,10 @@ public class ExperimentController {
         }
     }
 
-    private void variateModelAndSimulate(final ExperimentContext settings, final List<Variation> variations,
-            final List<Long> factorLevels) {
-        final Experiment experiment = settings.getExperiment();
-
+    private void variateModelAndSimulate(final List<Variation> variations, final List<Long> factorLevels,
+            String experimentName, ToolConfiguration toolConfiguration) {
         // copy initial PCM model
-        ExperimentAutomationConfiguration clonedConfiguration = this.config.clone();
+        ExperimentAutomationConfiguration clonedConfiguration = this.configuration.clone();
 
         // modify the copied PCM model according to the variation descriptions
         for (int i = 0; i < variations.size(); i++) {
@@ -167,13 +154,11 @@ public class ExperimentController {
         }
 
         // simulate the varied PCM model one or more times as specified by the replication count
-        for (int i = 1; i <= settings.getExperiment().getRepetitions(); i++) {
-            final IToolAdapter analysisTool = AnalysisToolFactory.createToolAdapater(settings
-                    .getToolConfiguration());
-            try {                
-                analysisTool.runExperiment(settings.getExperimentname() + " "
-                        + settings.getToolConfiguration().getName(), experiment.getInitialModel(),
-                        settings.getToolConfiguration(), settings.getExperiment().getStopConditions());
+        for (int i = 1; i <= this.experiment.getRepetitions(); i++) {
+            final IToolAdapter analysisTool = AnalysisToolFactory.createToolAdapater(toolConfiguration);
+            try {
+                analysisTool.runExperiment(experimentName + " " + toolConfiguration.getName(),
+                        this.experiment.getInitialModel(), toolConfiguration, this.experiment.getStopConditions());
             } catch (final Exception ex) {
                 throw new RuntimeException("The simulation failed", ex);
             }
@@ -191,4 +176,26 @@ public class ExperimentController {
         return variationStrategy;
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void setBlackboard(MDSDBlackboard blackboard) {
+        this.blackboard = blackboard;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String getName() {
+        return "Perform Experiment Automation";
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void cleanup(IProgressMonitor monitor) throws CleanupFailedException {
+    }
 }

@@ -9,7 +9,7 @@ import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Modification</b></em>'. <!--
  * end-user-doc -->
- * 
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -20,7 +20,7 @@ import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
  * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Modification#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getModification()
  * @model
  * @generated

@@ -29,7 +29,7 @@ import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
  * <em>Varied Entity Interface</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public abstract class VariationTypeImpl extends IdentifierImpl implements VariationType {

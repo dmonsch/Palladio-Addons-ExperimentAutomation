@@ -20,7 +20,7 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource;
  * <em>Location</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class FileDatasourceImpl extends SensorFrameworkDatasourceImpl implements FileDatasource {

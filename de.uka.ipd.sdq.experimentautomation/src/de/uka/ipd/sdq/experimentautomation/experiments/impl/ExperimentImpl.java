@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition;
@@ -58,9 +57,11 @@ import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
  * <em>Response Measurement</em>}</li>
  * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl#getInitialModel
  * <em>Initial Model</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl#getRepetitions
+ * <em>Repetitions</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class ExperimentImpl extends EObjectImpl implements Experiment {
@@ -126,7 +127,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * The cached value of the '{@link #getToolConfiguration() <em>Tool Configuration</em>}'
-     * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * containment reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see #getToolConfiguration()
      * @generated
@@ -193,6 +194,26 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
      * @ordered
      */
     protected InitialModel initialModel;
+
+    /**
+     * The default value of the '{@link #getRepetitions() <em>Repetitions</em>}' attribute. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @see #getRepetitions()
+     * @generated
+     * @ordered
+     */
+    protected static final int REPETITIONS_EDEFAULT = 0;
+
+    /**
+     * The cached value of the '{@link #getRepetitions() <em>Repetitions</em>}' attribute. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @see #getRepetitions()
+     * @generated
+     * @ordered
+     */
+    protected int repetitions = REPETITIONS_EDEFAULT;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -343,10 +364,32 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
      * 
      * @generated
      */
+    public int getRepetitions() {
+        return repetitions;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    public void setRepetitions(int newRepetitions) {
+        int oldRepetitions = repetitions;
+        repetitions = newRepetitions;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.EXPERIMENT__REPETITIONS,
+                    oldRepetitions, repetitions));
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
     @Override
     public EList<ToolConfiguration> getToolConfiguration() {
         if (toolConfiguration == null) {
-            toolConfiguration = new EObjectResolvingEList<ToolConfiguration>(ToolConfiguration.class, this,
+            toolConfiguration = new EObjectContainmentEList<ToolConfiguration>(ToolConfiguration.class, this,
                     ExperimentsPackage.EXPERIMENT__TOOL_CONFIGURATION);
         }
         return toolConfiguration;
@@ -507,6 +550,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
             return ((InternalEList<?>) getVariations()).basicRemove(otherEnd, msgs);
         case ExperimentsPackage.EXPERIMENT__MODIFICATIONS:
             return ((InternalEList<?>) getModifications()).basicRemove(otherEnd, msgs);
+        case ExperimentsPackage.EXPERIMENT__TOOL_CONFIGURATION:
+            return ((InternalEList<?>) getToolConfiguration()).basicRemove(otherEnd, msgs);
         case ExperimentsPackage.EXPERIMENT__STOP_CONDITIONS:
             return ((InternalEList<?>) getStopConditions()).basicRemove(otherEnd, msgs);
         case ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN:
@@ -547,6 +592,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
             return getResponseMeasurement();
         case ExperimentsPackage.EXPERIMENT__INITIAL_MODEL:
             return getInitialModel();
+        case ExperimentsPackage.EXPERIMENT__REPETITIONS:
+            return getRepetitions();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -594,6 +641,9 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
         case ExperimentsPackage.EXPERIMENT__INITIAL_MODEL:
             setInitialModel((InitialModel) newValue);
             return;
+        case ExperimentsPackage.EXPERIMENT__REPETITIONS:
+            setRepetitions((Integer) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -636,6 +686,9 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
         case ExperimentsPackage.EXPERIMENT__INITIAL_MODEL:
             setInitialModel((InitialModel) null);
             return;
+        case ExperimentsPackage.EXPERIMENT__REPETITIONS:
+            setRepetitions(REPETITIONS_EDEFAULT);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -668,6 +721,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
             return responseMeasurement != null;
         case ExperimentsPackage.EXPERIMENT__INITIAL_MODEL:
             return initialModel != null;
+        case ExperimentsPackage.EXPERIMENT__REPETITIONS:
+            return repetitions != REPETITIONS_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
@@ -689,6 +744,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
         result.append(name);
         result.append(", description: ");
         result.append(description);
+        result.append(", repetitions: ");
+        result.append(repetitions);
         result.append(')');
         return result.toString();
     }

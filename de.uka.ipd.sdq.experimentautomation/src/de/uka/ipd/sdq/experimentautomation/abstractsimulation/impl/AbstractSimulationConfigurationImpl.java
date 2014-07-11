@@ -47,7 +47,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.impl.ToolConfigurationImp
  * <em>Probe Spec Configuration</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurationImpl implements

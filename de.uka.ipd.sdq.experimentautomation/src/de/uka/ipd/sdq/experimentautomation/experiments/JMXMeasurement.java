@@ -9,7 +9,7 @@ package de.uka.ipd.sdq.experimentautomation.experiments;
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>JMX Measurement</b></em>'.
  * <!-- end-user-doc -->
- * 
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -17,7 +17,7 @@ package de.uka.ipd.sdq.experimentautomation.experiments;
  * Polling Period</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getJMXMeasurement()
  * @model
  * @generated

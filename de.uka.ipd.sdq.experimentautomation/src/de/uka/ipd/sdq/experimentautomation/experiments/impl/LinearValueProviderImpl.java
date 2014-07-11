@@ -23,7 +23,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider;
  * <em>Factor</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class LinearValueProviderImpl extends ValueProviderImpl implements LinearValueProvider {

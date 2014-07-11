@@ -17,7 +17,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.FractionalFactorialDesign
  * <em><b>Fractional Factorial Design</b></em>'. <!-- end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public class FractionalFactorialDesignImpl extends EObjectImpl implements FractionalFactorialDesign {

@@ -8,12 +8,10 @@ package de.uka.ipd.sdq.experimentautomation.experiments.impl;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -21,7 +19,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import de.uka.ipd.sdq.experimentautomation.experiments.Experiment;
 import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository;
 import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -32,15 +29,9 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
  * <li>
  * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentRepositoryImpl#getExperiments
  * <em>Experiments</em>}</li>
- * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentRepositoryImpl#getToolConfiguration
- * <em>Tool Configuration</em>}</li>
- * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentRepositoryImpl#getRepetitions
- * <em>Repetitions</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentRepository {
@@ -53,36 +44,6 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
      * @ordered
      */
     protected EList<Experiment> experiments;
-
-    /**
-     * The cached value of the '{@link #getToolConfiguration() <em>Tool Configuration</em>}'
-     * containment reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see #getToolConfiguration()
-     * @generated
-     * @ordered
-     */
-    protected EList<ToolConfiguration> toolConfiguration;
-
-    /**
-     * The default value of the '{@link #getRepetitions() <em>Repetitions</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see #getRepetitions()
-     * @generated
-     * @ordered
-     */
-    protected static final int REPETITIONS_EDEFAULT = 0;
-
-    /**
-     * The cached value of the '{@link #getRepetitions() <em>Repetitions</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see #getRepetitions()
-     * @generated
-     * @ordered
-     */
-    protected int repetitions = REPETITIONS_EDEFAULT;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -123,50 +84,10 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
      * @generated
      */
     @Override
-    public EList<ToolConfiguration> getToolConfiguration() {
-        if (toolConfiguration == null) {
-            toolConfiguration = new EObjectContainmentEList<ToolConfiguration>(ToolConfiguration.class, this,
-                    ExperimentsPackage.EXPERIMENT_REPOSITORY__TOOL_CONFIGURATION);
-        }
-        return toolConfiguration;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public int getRepetitions() {
-        return repetitions;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public void setRepetitions(int newRepetitions) {
-        int oldRepetitions = repetitions;
-        repetitions = newRepetitions;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.EXPERIMENT_REPOSITORY__REPETITIONS, oldRepetitions, repetitions));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS:
             return ((InternalEList<?>) getExperiments()).basicRemove(otherEnd, msgs);
-        case ExperimentsPackage.EXPERIMENT_REPOSITORY__TOOL_CONFIGURATION:
-            return ((InternalEList<?>) getToolConfiguration()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -181,10 +102,6 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
         switch (featureID) {
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS:
             return getExperiments();
-        case ExperimentsPackage.EXPERIMENT_REPOSITORY__TOOL_CONFIGURATION:
-            return getToolConfiguration();
-        case ExperimentsPackage.EXPERIMENT_REPOSITORY__REPETITIONS:
-            return getRepetitions();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -202,13 +119,6 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
             getExperiments().clear();
             getExperiments().addAll((Collection<? extends Experiment>) newValue);
             return;
-        case ExperimentsPackage.EXPERIMENT_REPOSITORY__TOOL_CONFIGURATION:
-            getToolConfiguration().clear();
-            getToolConfiguration().addAll((Collection<? extends ToolConfiguration>) newValue);
-            return;
-        case ExperimentsPackage.EXPERIMENT_REPOSITORY__REPETITIONS:
-            setRepetitions((Integer) newValue);
-            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -224,12 +134,6 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS:
             getExperiments().clear();
             return;
-        case ExperimentsPackage.EXPERIMENT_REPOSITORY__TOOL_CONFIGURATION:
-            getToolConfiguration().clear();
-            return;
-        case ExperimentsPackage.EXPERIMENT_REPOSITORY__REPETITIONS:
-            setRepetitions(REPETITIONS_EDEFAULT);
-            return;
         }
         super.eUnset(featureID);
     }
@@ -244,29 +148,8 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
         switch (featureID) {
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS:
             return experiments != null && !experiments.isEmpty();
-        case ExperimentsPackage.EXPERIMENT_REPOSITORY__TOOL_CONFIGURATION:
-            return toolConfiguration != null && !toolConfiguration.isEmpty();
-        case ExperimentsPackage.EXPERIMENT_REPOSITORY__REPETITIONS:
-            return repetitions != REPETITIONS_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (eIsProxy())
-            return super.toString();
-
-        StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (repetitions: ");
-        result.append(repetitions);
-        result.append(')');
-        return result.toString();
     }
 
 } // ExperimentRepositoryImpl

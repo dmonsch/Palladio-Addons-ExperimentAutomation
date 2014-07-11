@@ -13,7 +13,7 @@ import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Variation</b></em>'. <!--
  * end-user-doc -->
- * 
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -31,7 +31,7 @@ import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
  * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getName <em>Name</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getVariation()
  * @model
  * @generated

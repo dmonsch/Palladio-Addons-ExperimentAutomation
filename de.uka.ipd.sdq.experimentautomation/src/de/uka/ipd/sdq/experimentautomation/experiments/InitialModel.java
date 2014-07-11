@@ -12,7 +12,7 @@ import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Initial Model</b></em>'.
  * <!-- end-user-doc -->
- * 
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -32,7 +32,7 @@ import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
  * <em>Platform Monitoring Specification</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getInitialModel()
  * @model
  * @generated

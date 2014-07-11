@@ -41,7 +41,7 @@ import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
  * <em>Platform Monitoring Specification</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class InitialModelImpl extends EObjectImpl implements InitialModel {

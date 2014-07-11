@@ -5,7 +5,7 @@ package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
 /**
  * <!-- begin-user-doc --> A representation of the model object '
  * <em><b>Measurement Count Stop Condition</b></em>'. <!-- end-user-doc -->
- * 
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -14,7 +14,7 @@ package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
  * <em>Measurement Count</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getMeasurementCountStopCondition()
  * @model
  * @generated

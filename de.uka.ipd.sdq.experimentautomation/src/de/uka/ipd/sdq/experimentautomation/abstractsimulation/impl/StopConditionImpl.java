@@ -13,7 +13,7 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition;
  * <!-- end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public abstract class StopConditionImpl extends EObjectImpl implements StopCondition {

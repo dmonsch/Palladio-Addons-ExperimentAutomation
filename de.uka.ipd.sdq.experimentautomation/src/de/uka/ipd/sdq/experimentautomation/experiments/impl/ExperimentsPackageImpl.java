@@ -302,26 +302,6 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      * @generated
      */
     @Override
-    public EReference getExperimentRepository_ToolConfiguration() {
-        return (EReference) experimentRepositoryEClass.getEStructuralFeatures().get(1);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public EAttribute getExperimentRepository_Repetitions() {
-        return (EAttribute) experimentRepositoryEClass.getEStructuralFeatures().get(2);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
     public EClass getExperiment() {
         return experimentEClass;
     }
@@ -374,6 +354,15 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
     @Override
     public EReference getExperiment_InitialModel() {
         return (EReference) experimentEClass.getEStructuralFeatures().get(9);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    public EAttribute getExperiment_Repetitions() {
+        return (EAttribute) experimentEClass.getEStructuralFeatures().get(10);
     }
 
     /**
@@ -898,8 +887,6 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         // Create classes and their features
         experimentRepositoryEClass = createEClass(EXPERIMENT_REPOSITORY);
         createEReference(experimentRepositoryEClass, EXPERIMENT_REPOSITORY__EXPERIMENTS);
-        createEReference(experimentRepositoryEClass, EXPERIMENT_REPOSITORY__TOOL_CONFIGURATION);
-        createEAttribute(experimentRepositoryEClass, EXPERIMENT_REPOSITORY__REPETITIONS);
 
         experimentEClass = createEClass(EXPERIMENT);
         createEReference(experimentEClass, EXPERIMENT__VARIATIONS);
@@ -912,6 +899,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         createEReference(experimentEClass, EXPERIMENT__EXPERIMENT_DESIGN);
         createEReference(experimentEClass, EXPERIMENT__RESPONSE_MEASUREMENT);
         createEReference(experimentEClass, EXPERIMENT__INITIAL_MODEL);
+        createEAttribute(experimentEClass, EXPERIMENT__REPETITIONS);
 
         variationEClass = createEClass(VARIATION);
         createEReference(variationEClass, VARIATION__TYPE);
@@ -1035,12 +1023,6 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         initEReference(getExperimentRepository_Experiments(), this.getExperiment(), null, "experiments", null, 0, -1,
                 ExperimentRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
                 !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEReference(getExperimentRepository_ToolConfiguration(), this.getToolConfiguration(), null,
-                "toolConfiguration", null, 0, -1, ExperimentRepository.class, !IS_TRANSIENT, !IS_VOLATILE,
-                IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        initEAttribute(getExperimentRepository_Repetitions(), ecorePackage.getEInt(), "repetitions", null, 1, 1,
-                ExperimentRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         initEClass(experimentEClass, Experiment.class, "Experiment", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
@@ -1055,7 +1037,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         initEAttribute(getExperiment_Name(), ecorePackage.getEString(), "name", null, 1, 1, Experiment.class,
                 !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
         initEReference(getExperiment_ToolConfiguration(), this.getToolConfiguration(), null, "toolConfiguration", null,
-                1, -1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+                1, -1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
         initEReference(getExperiment_StopConditions(), theAbstractsimulationPackage.getStopCondition(), null,
                 "stopConditions", null, 0, -1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
@@ -1072,6 +1054,9 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         initEReference(getExperiment_InitialModel(), this.getInitialModel(), null, "initialModel", null, 1, 1,
                 Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getExperiment_Repetitions(), ecorePackage.getEInt(), "repetitions", null, 1, 1,
+                Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
 
         initEClass(variationEClass, Variation.class, "Variation", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);

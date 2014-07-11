@@ -29,7 +29,7 @@ import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
  * Value</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class ModificationImpl extends EObjectImpl implements Modification {

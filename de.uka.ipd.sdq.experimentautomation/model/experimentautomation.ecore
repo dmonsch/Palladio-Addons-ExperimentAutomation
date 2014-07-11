@@ -24,10 +24,6 @@
     <eClassifiers xsi:type="ecore:EClass" name="ExperimentRepository">
       <eStructuralFeatures xsi:type="ecore:EReference" name="experiments" ordered="false"
           upperBound="-1" eType="#//experiments/Experiment" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="toolConfiguration" ordered="false"
-          upperBound="-1" eType="#//experiments/ToolConfiguration" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="repetitions" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Experiment">
       <eStructuralFeatures xsi:type="ecore:EReference" name="variations" ordered="false"
@@ -39,7 +35,8 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="toolConfiguration" ordered="false"
-          lowerBound="1" upperBound="-1" eType="#//experiments/ToolConfiguration"/>
+          lowerBound="1" upperBound="-1" eType="#//experiments/ToolConfiguration"
+          containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="stopConditions" ordered="false"
           upperBound="-1" eType="#//abstractsimulation/StopCondition" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"
@@ -51,6 +48,8 @@
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="initialModel" lowerBound="1"
           eType="#//experiments/InitialModel" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="repetitions" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Variation">
       <eStructuralFeatures xsi:type="ecore:EReference" name="type" ordered="false"

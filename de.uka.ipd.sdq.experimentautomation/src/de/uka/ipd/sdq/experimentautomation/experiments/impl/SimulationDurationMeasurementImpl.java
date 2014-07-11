@@ -16,7 +16,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.SimulationDurationMeasure
  * <em><b>Simulation Duration Measurement</b></em>'. <!-- end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public class SimulationDurationMeasurementImpl extends ResponseMeasurementImpl implements SimulationDurationMeasurement {

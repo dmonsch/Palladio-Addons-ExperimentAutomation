@@ -16,7 +16,7 @@ import de.uka.ipd.sdq.experimentautomation.variation.VariationPackage;
  * <!-- end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public class ValueVariationImpl extends VariationTypeImpl implements ValueVariation {

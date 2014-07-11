@@ -24,7 +24,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
  * <em>Name</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public abstract class ToolConfigurationImpl extends EObjectImpl implements ToolConfiguration {

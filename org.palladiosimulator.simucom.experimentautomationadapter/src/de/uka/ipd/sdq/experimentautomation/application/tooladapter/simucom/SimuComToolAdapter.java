@@ -32,31 +32,31 @@ import de.uka.ipd.sdq.workflow.pcm.jobs.PreparePCMBlackboardPartionJob;
 public class SimuComToolAdapter implements IToolAdapter {
 
     @Override
-    public void runExperiment(final String experimentName, final InitialModel model,
+    public void runExperiment(final String experimentName, final InitialModel initialModel,
             final ToolConfiguration configuration, final List<StopCondition> stopConditions) throws CoreException {
         final SimuComConfiguration simuComConfiguration = (SimuComConfiguration) configuration;
 
         // create simulation configuration
         final SimuComConfig simuComConfig = SimuComConfigFactory.createConfig(simuComConfiguration, stopConditions,
-                model, experimentName);
+                experimentName);
 
         // create workflow configuration
         final SimuComWorkflowConfiguration workflowConfig = SimuComWorkflowConfigurationFactory
-                .createWorkflowConfiguration(simuComConfiguration, model, simuComConfig);
+                .createWorkflowConfiguration(simuComConfiguration, simuComConfig);
 
-        // run simulation
-        SequentialBlackboardInteractingJob<MDSDBlackboard> loadPCMResourcesToBlackboardJob = new SequentialBlackboardInteractingJob<MDSDBlackboard>();
+        // run simulation FIXME use blackboard
+        final SequentialBlackboardInteractingJob<MDSDBlackboard> loadPCMResourcesToBlackboardJob = new SequentialBlackboardInteractingJob<MDSDBlackboard>();
         final PreparePCMBlackboardPartionJob preparePCMBlackboardPartionJob = new PreparePCMBlackboardPartionJob();
         final LoadPCMModelsJob loadPCMModelsJob = new LoadPCMModelsJob(workflowConfig);
         final SimuComJob simuComJob = new SimuComJob(workflowConfig, null, false);
-        
+
         loadPCMResourcesToBlackboardJob.add(preparePCMBlackboardPartionJob);
         loadPCMResourcesToBlackboardJob.add(loadPCMModelsJob);
         loadPCMResourcesToBlackboardJob.add(simuComJob);
-        
+
         final MDSDBlackboard blackboard = new MDSDBlackboard();
-        final BlackboardBasedWorkflow<MDSDBlackboard> workflow = new BlackboardBasedWorkflow<MDSDBlackboard>(loadPCMResourcesToBlackboardJob,
-                blackboard);
+        final BlackboardBasedWorkflow<MDSDBlackboard> workflow = new BlackboardBasedWorkflow<MDSDBlackboard>(
+                loadPCMResourcesToBlackboardJob, blackboard);
         workflow.run();
 
         // clean up

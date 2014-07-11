@@ -22,7 +22,7 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfigura
  * <em>Blackboard Type</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class ProbeSpecConfigurationImpl extends EObjectImpl implements ProbeSpecConfiguration {

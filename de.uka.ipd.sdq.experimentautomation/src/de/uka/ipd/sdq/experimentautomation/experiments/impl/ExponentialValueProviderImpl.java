@@ -24,7 +24,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider;
  * <em>Base</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class ExponentialValueProviderImpl extends ValueProviderImpl implements ExponentialValueProvider {

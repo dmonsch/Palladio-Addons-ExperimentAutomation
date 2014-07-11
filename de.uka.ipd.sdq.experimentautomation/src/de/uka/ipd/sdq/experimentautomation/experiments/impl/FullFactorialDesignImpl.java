@@ -16,7 +16,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.FullFactorialDesign;
  * <em><b>Full Factorial Design</b></em>'. <!-- end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public class FullFactorialDesignImpl extends ExperimentDesignImpl implements FullFactorialDesign {

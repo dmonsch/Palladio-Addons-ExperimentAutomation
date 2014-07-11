@@ -20,7 +20,7 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountSt
  * <em>Measurement Count</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class MeasurementCountStopConditionImpl extends StopConditionImpl implements MeasurementCountStopCondition {

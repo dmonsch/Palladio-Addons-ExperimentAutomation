@@ -16,7 +16,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.OneFactorAtATime;
  * <em><b>One Factor At ATime</b></em>'. <!-- end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public class OneFactorAtATimeImpl extends ExperimentDesignImpl implements OneFactorAtATime {

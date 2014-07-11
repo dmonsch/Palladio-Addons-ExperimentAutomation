@@ -5,7 +5,7 @@ package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>File Datasource</b></em>'.
  * <!-- end-user-doc -->
- * 
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -13,7 +13,7 @@ package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
  * Location</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getFileDatasource()
  * @model
  * @generated

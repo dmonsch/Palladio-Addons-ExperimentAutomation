@@ -45,10 +45,6 @@
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//experiments/ExperimentRepository">
         <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
             createChild="true" ecoreFeature="ecore:EReference experimentautomation.ecore#//experiments/ExperimentRepository/experiments"/>
-        <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
-            createChild="true" ecoreFeature="ecore:EReference experimentautomation.ecore#//experiments/ExperimentRepository/toolConfiguration"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" propertyDescription=""
-            ecoreFeature="ecore:EAttribute experimentautomation.ecore#//experiments/ExperimentRepository/repetitions"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//experiments/Experiment">
         <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
@@ -68,6 +64,7 @@
             createChild="true" ecoreFeature="ecore:EReference experimentautomation.ecore#//experiments/Experiment/responseMeasurement"/>
         <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
             createChild="true" ecoreFeature="ecore:EReference experimentautomation.ecore#//experiments/Experiment/initialModel"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//experiments/Experiment/repetitions"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//experiments/Variation">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

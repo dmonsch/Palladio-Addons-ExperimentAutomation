@@ -12,7 +12,7 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.MemoryDatasource;
  * '. <!-- end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public class MemoryDatasourceImpl extends SensorFrameworkDatasourceImpl implements MemoryDatasource {

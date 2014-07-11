@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EObject;
 /**
  * <!-- begin-user-doc --> A representation of the model object '
  * <em><b>Probe Spec Configuration</b></em>'. <!-- end-user-doc -->
- * 
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <em>Blackboard Type</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getProbeSpecConfiguration()
  * @model
  * @generated

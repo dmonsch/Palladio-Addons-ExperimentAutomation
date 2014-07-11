@@ -13,14 +13,12 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -59,26 +57,8 @@ public class ExperimentRepositoryItemProvider extends ItemProviderAdapter implem
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addRepetitionsPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
-    }
-
-    /**
-     * This adds a property descriptor for the Repetitions feature. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     * 
-     * @generated
-     */
-    protected void addRepetitionsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_ExperimentRepository_repetitions_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_ExperimentRepository_repetitions_feature",
-                        "_UI_ExperimentRepository_type"),
-                ExperimentsPackage.Literals.EXPERIMENT_REPOSITORY__REPETITIONS, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -95,7 +75,6 @@ public class ExperimentRepositoryItemProvider extends ItemProviderAdapter implem
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
             childrenFeatures.add(ExperimentsPackage.Literals.EXPERIMENT_REPOSITORY__EXPERIMENTS);
-            childrenFeatures.add(ExperimentsPackage.Literals.EXPERIMENT_REPOSITORY__TOOL_CONFIGURATION);
         }
         return childrenFeatures;
     }
@@ -131,8 +110,7 @@ public class ExperimentRepositoryItemProvider extends ItemProviderAdapter implem
      */
     @Override
     public String getText(Object object) {
-        ExperimentRepository experimentRepository = (ExperimentRepository) object;
-        return getString("_UI_ExperimentRepository_type") + " " + experimentRepository.getRepetitions();
+        return getString("_UI_ExperimentRepository_type");
     }
 
     /**
@@ -147,11 +125,7 @@ public class ExperimentRepositoryItemProvider extends ItemProviderAdapter implem
         updateChildren(notification);
 
         switch (notification.getFeatureID(ExperimentRepository.class)) {
-        case ExperimentsPackage.EXPERIMENT_REPOSITORY__REPETITIONS:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-            return;
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS:
-        case ExperimentsPackage.EXPERIMENT_REPOSITORY__TOOL_CONFIGURATION:
             fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }

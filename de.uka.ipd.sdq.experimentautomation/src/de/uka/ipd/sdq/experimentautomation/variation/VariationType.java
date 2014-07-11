@@ -13,7 +13,7 @@ import de.uka.ipd.sdq.identifier.Identifier;
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Type</b></em>'. <!--
  * end-user-doc -->
- * 
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -24,7 +24,7 @@ import de.uka.ipd.sdq.identifier.Identifier;
  * <em>Varied Entity Interface</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see de.uka.ipd.sdq.experimentautomation.variation.VariationPackage#getVariationType()
  * @model abstract="true"
  * @generated

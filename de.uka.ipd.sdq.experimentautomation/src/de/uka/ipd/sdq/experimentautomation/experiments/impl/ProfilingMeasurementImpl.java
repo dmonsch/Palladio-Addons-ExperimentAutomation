@@ -16,7 +16,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ProfilingMeasurement;
  * <em><b>Profiling Measurement</b></em>'. <!-- end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public class ProfilingMeasurementImpl extends ResponseMeasurementImpl implements ProfilingMeasurement {

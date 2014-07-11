@@ -24,7 +24,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement;
  * <em>Polling Period</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMeasurement {

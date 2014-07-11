@@ -23,7 +23,7 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFrameworkDat
  * <em>Datasource</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class SensorFrameworkImpl extends PersistenceFrameworkImpl implements SensorFramework {

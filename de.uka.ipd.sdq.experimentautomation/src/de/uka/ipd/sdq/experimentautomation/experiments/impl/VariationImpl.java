@@ -40,7 +40,7 @@ import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
  * </em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class VariationImpl extends EObjectImpl implements Variation {

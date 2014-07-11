@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Repository</b></em>'. <!--
  * end-user-doc -->
- * 
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * Variation</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see de.uka.ipd.sdq.experimentautomation.variation.VariationPackage#getVariationRepository()
  * @model
  * @generated

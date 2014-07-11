@@ -13,7 +13,7 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.PersistenceFramewo
  * <em><b>Persistence Framework</b></em>'. <!-- end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public abstract class PersistenceFrameworkImpl extends EObjectImpl implements PersistenceFramework {

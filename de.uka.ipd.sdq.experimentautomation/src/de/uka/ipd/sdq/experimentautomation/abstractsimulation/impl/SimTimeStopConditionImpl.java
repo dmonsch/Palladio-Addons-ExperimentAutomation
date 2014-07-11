@@ -20,7 +20,7 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopConditi
  * <em>Simulation Time</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTimeStopCondition {

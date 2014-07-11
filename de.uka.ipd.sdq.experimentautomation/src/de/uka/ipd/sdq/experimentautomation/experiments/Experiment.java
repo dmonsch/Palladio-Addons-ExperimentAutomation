@@ -14,7 +14,7 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition;
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Experiment</b></em>'. <!--
  * end-user-doc -->
- * 
+ *
  * <p>
  * The following features are supported:
  * <ul>
@@ -36,9 +36,11 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition;
  * Response Measurement</em>}</li>
  * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getInitialModel <em>Initial
  * Model</em>}</li>
+ * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getRepetitions <em>
+ * Repetitions</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment()
  * @model
  * @generated
@@ -162,6 +164,34 @@ public interface Experiment extends EObject {
      * @generated
      */
     void setInitialModel(InitialModel value);
+
+    /**
+     * Returns the value of the '<em><b>Repetitions</b></em>' attribute. <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Repetitions</em>' attribute isn't clear, there really should be
+     * more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * 
+     * @return the value of the '<em>Repetitions</em>' attribute.
+     * @see #setRepetitions(int)
+     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment_Repetitions()
+     * @model required="true" ordered="false"
+     * @generated
+     */
+    int getRepetitions();
+
+    /**
+     * Sets the value of the '
+     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getRepetitions
+     * <em>Repetitions</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @param value
+     *            the new value of the '<em>Repetitions</em>' attribute.
+     * @see #getRepetitions()
+     * @generated
+     */
+    void setRepetitions(int value);
 
     /**
      * Returns the value of the '<em><b>Tool Configuration</b></em>' reference list. The list

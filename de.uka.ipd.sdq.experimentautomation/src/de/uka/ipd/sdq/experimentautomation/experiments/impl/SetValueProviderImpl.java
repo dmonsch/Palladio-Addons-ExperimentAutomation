@@ -23,7 +23,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider;
  * <em>Values</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class SetValueProviderImpl extends ValueProviderImpl implements SetValueProvider {
