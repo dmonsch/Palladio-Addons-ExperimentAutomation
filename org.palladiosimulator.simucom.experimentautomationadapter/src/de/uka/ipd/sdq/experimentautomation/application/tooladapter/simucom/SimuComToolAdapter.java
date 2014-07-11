@@ -19,10 +19,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.InitialModel;
 import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
 import de.uka.ipd.sdq.simucomframework.SimuComConfig;
 import de.uka.ipd.sdq.workflow.BlackboardBasedWorkflow;
-import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
-import de.uka.ipd.sdq.workflow.pcm.jobs.LoadPCMModelsJob;
-import de.uka.ipd.sdq.workflow.pcm.jobs.PreparePCMBlackboardPartionJob;
 
 /**
  * TODO Extract this class (and potentially also calling classes) into separate workflow jobs.
@@ -33,7 +30,7 @@ public class SimuComToolAdapter implements IToolAdapter {
 
     @Override
     public void runExperiment(final String experimentName, final InitialModel initialModel,
-            final ToolConfiguration configuration, final List<StopCondition> stopConditions) throws CoreException {
+            final ToolConfiguration configuration, final List<StopCondition> stopConditions, MDSDBlackboard blackboard) throws CoreException {
         final SimuComConfiguration simuComConfiguration = (SimuComConfiguration) configuration;
 
         // create simulation configuration
@@ -45,18 +42,8 @@ public class SimuComToolAdapter implements IToolAdapter {
                 .createWorkflowConfiguration(simuComConfiguration, simuComConfig);
 
         // run simulation FIXME use blackboard
-        final SequentialBlackboardInteractingJob<MDSDBlackboard> loadPCMResourcesToBlackboardJob = new SequentialBlackboardInteractingJob<MDSDBlackboard>();
-        final PreparePCMBlackboardPartionJob preparePCMBlackboardPartionJob = new PreparePCMBlackboardPartionJob();
-        final LoadPCMModelsJob loadPCMModelsJob = new LoadPCMModelsJob(workflowConfig);
-        final SimuComJob simuComJob = new SimuComJob(workflowConfig, null, false);
-
-        loadPCMResourcesToBlackboardJob.add(preparePCMBlackboardPartionJob);
-        loadPCMResourcesToBlackboardJob.add(loadPCMModelsJob);
-        loadPCMResourcesToBlackboardJob.add(simuComJob);
-
-        final MDSDBlackboard blackboard = new MDSDBlackboard();
         final BlackboardBasedWorkflow<MDSDBlackboard> workflow = new BlackboardBasedWorkflow<MDSDBlackboard>(
-                loadPCMResourcesToBlackboardJob, blackboard);
+                new SimuComJob(workflowConfig, null, false), blackboard);
         workflow.run();
 
         // clean up
@@ -68,15 +55,6 @@ public class SimuComToolAdapter implements IToolAdapter {
             SensorFrameworkFactory.closeDatasource(datasource);
         } else if (AbstractsimulationPackage.eINSTANCE.getEDP2().isInstance(persistenceFramework)) {
             // For EDP2, nothing to do!
-
-            // final EDP2 edp2 = (EDP2) persistenceFramework;
-            // final Repository repository = edp2.getRepository();
-            //
-            // try {
-            // MeasurementsUtility.ensureClosedRepository(repository);
-            // } catch (DataNotAccessibleException e) {
-            // throw new RuntimeException("Unable to write to EDP2 repository: " + e);
-            // }
         } else {
             throw new IllegalArgumentException("Tried to clean up unknown persistency framework");
         }

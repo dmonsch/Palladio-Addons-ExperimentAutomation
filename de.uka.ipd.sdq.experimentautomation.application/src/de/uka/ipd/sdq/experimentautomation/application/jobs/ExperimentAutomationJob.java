@@ -146,7 +146,7 @@ public class ExperimentAutomationJob extends SequentialBlackboardInteractingJob<
             final Variation variation = variations.get(i);
             final long currentValue = factorLevels.get(i);
             final IVariationStrategy variationStrategy = this.initialiseVariations(variation,
-                    clonedConfiguration.getResourceSet());
+                    clonedConfiguration.getResourceSet()); // FIXME Modify in blackboard?
             final String desc = variationStrategy.vary(currentValue);
             if (LOGGER.isDebugEnabled()) {
                 LOGGER.debug("Varyied: " + desc);
@@ -158,7 +158,7 @@ public class ExperimentAutomationJob extends SequentialBlackboardInteractingJob<
             final IToolAdapter analysisTool = AnalysisToolFactory.createToolAdapater(toolConfiguration);
             try {
                 analysisTool.runExperiment(experimentName + " " + toolConfiguration.getName(),
-                        this.experiment.getInitialModel(), toolConfiguration, this.experiment.getStopConditions());
+                        this.experiment.getInitialModel(), toolConfiguration, this.experiment.getStopConditions(), this.blackboard);
             } catch (final Exception ex) {
                 throw new RuntimeException("The simulation failed", ex);
             }
