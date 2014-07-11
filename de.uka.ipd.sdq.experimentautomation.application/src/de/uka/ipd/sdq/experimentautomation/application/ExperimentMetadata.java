@@ -1,4 +1,4 @@
-package de.uka.ipd.sdq.experimentautomation.application.controller;
+package de.uka.ipd.sdq.experimentautomation.application;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.OperatingSystemMXBean;

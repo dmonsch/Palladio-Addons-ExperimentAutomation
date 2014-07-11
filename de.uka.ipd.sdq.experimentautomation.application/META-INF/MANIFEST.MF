@@ -27,7 +27,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.edp2.util;bundle-version="1.0.0",
  org.palladiosimulator.commons
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: de.uka.ipd.sdq.experimentautomation.application.controller,
+Export-Package: de.uka.ipd.sdq.experimentautomation.application.jobs,
  de.uka.ipd.sdq.experimentautomation.application.tooladapter,
  de.uka.ipd.sdq.experimentautomation.application.tooladapter.abstractsimulation,
  de.uka.ipd.sdq.experimentautomation.application.tooladapter.abstractsimulation.sensorframework,
