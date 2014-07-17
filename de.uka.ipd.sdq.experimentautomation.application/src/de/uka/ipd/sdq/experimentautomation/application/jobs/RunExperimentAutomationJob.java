@@ -33,9 +33,9 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
  * 
  * @author Sebastian Lehrig
  */
-public class ExperimentAutomationJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
+public class RunExperimentAutomationJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
 
-    private static final Logger LOGGER = Logger.getLogger(ExperimentAutomationJob.class);
+    private static final Logger LOGGER = Logger.getLogger(RunExperimentAutomationJob.class);
 
     private final ExperimentAutomationConfiguration configuration;
     private final Experiment experiment;
@@ -50,7 +50,7 @@ public class ExperimentAutomationJob extends SequentialBlackboardInteractingJob<
      * @param experiment
      *            The experiment to be conducted.
      */
-    public ExperimentAutomationJob(ExperimentAutomationConfiguration configuration, Experiment experiment) {
+    public RunExperimentAutomationJob(ExperimentAutomationConfiguration configuration, Experiment experiment) {
         super(false);
         this.configuration = configuration;
         this.experiment = experiment;

@@ -9,7 +9,7 @@ import org.eclipse.equinox.app.IApplicationContext;
 import org.osgi.framework.Bundle;
 
 import de.uka.ipd.sdq.experimentautomation.application.config.ExperimentAutomationConfiguration;
-import de.uka.ipd.sdq.experimentautomation.application.jobs.ExperimentsAutomationJob;
+import de.uka.ipd.sdq.experimentautomation.application.jobs.RunExperimentsAutomationJob;
 import de.uka.ipd.sdq.workflow.BlackboardBasedWorkflow;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 
@@ -54,7 +54,7 @@ public class ExperimentApplication implements IApplication {
         // run experiments via blackboard-based workflow
         final MDSDBlackboard blackboard = new MDSDBlackboard();
         final BlackboardBasedWorkflow<MDSDBlackboard> workflow = new BlackboardBasedWorkflow<MDSDBlackboard>(
-                new ExperimentsAutomationJob(config), blackboard);
+                new RunExperimentsAutomationJob(config), blackboard);
         workflow.run();
 
         return IApplication.EXIT_OK;
