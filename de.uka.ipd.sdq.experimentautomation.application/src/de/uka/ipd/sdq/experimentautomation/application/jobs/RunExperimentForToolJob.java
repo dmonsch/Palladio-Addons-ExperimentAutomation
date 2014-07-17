@@ -1,15 +1,11 @@
 package de.uka.ipd.sdq.experimentautomation.application.jobs;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-import org.apache.log4j.Logger;
-import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
-import de.uka.ipd.sdq.experimentautomation.application.ExperimentMetadata;
 import de.uka.ipd.sdq.experimentautomation.application.config.ExperimentAutomationConfiguration;
 import de.uka.ipd.sdq.experimentautomation.application.tooladapter.AnalysisToolFactory;
 import de.uka.ipd.sdq.experimentautomation.application.tooladapter.IToolAdapter;
@@ -21,9 +17,8 @@ import de.uka.ipd.sdq.experimentautomation.application.variation.valueprovider.V
 import de.uka.ipd.sdq.experimentautomation.experiments.Experiment;
 import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
 import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
-import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
+import de.uka.ipd.sdq.workflow.jobs.IJob;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
-import de.uka.ipd.sdq.workflow.jobs.UserCanceledException;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 
 /**
@@ -34,12 +29,6 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
  */
 public class RunExperimentForToolJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
 
-    private static final Logger LOGGER = Logger.getLogger(RunExperimentForToolJob.class);
-
-    private final ExperimentAutomationConfiguration configuration;
-    private final Experiment experiment;
-    private final ToolConfiguration toolConfiguration;
-
     /**
      * Default Constructor.
      * 
@@ -48,41 +37,15 @@ public class RunExperimentForToolJob extends SequentialBlackboardInteractingJob<
      * @param experiment
      *            The experiment to be conducted.
      * @param toolConfiguration
-     *            The given tool, e.g., SimuCom.
+     *            The given analysis tool, e.g., SimuCom.
      */
     public RunExperimentForToolJob(ExperimentAutomationConfiguration configuration, Experiment experiment,
             ToolConfiguration toolConfiguration) {
         super(false);
-        this.configuration = configuration;
-        this.experiment = experiment;
-        this.toolConfiguration = toolConfiguration;
-    }
-    
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public String getName() {
-        return "Perform Experiment Automation for "+this.toolConfiguration.getName();
-    }
 
-    /**
-     * Runs an experiment for a given tool. Note that the experiment comes with variations, each
-     * potentially repeated as specified by the experiment.
-     */
-    @Override
-    public void execute(IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
-        final String experimentName = "(" + this.experiment.getId() + ", " + toolConfiguration.getName() + ") "
-                + this.experiment.getName();
-        final ExperimentMetadata metadata = new ExperimentMetadata();
-
-        metadata.setExperimentName(experimentName);
-        metadata.setStartTime(new Date());
-        metadata.setVirtualMachineArguments("TODO");
-        this.runExperimentVariations(this.experiment.getVariations(), new ArrayList<Variation>(),
-                new ArrayList<Long>(), experimentName, toolConfiguration);
-        metadata.setEndTime(new Date());
-        LOGGER.info(metadata);
+        // Note: Calling recursive method
+        this.computeVariationsAndAddVariationJob(configuration, experiment, experiment.getVariations(),
+                new ArrayList<Variation>(), new ArrayList<Long>(), toolConfiguration);
     }
 
     /**
@@ -91,12 +54,15 @@ public class RunExperimentForToolJob extends SequentialBlackboardInteractingJob<
      * 
      * Recursive call, each time reducing variations by 1. Initially, variants and
      * currentFactorLevels are empty. Seems to be something statistical done here like trying out
-     * each pair-wise combination...
+     * each pair-wise combination... Related to
+     * http://en.wikipedia.org/wiki/Fractional_factorial_design ?
      */
-    private void runExperimentVariations(final List<Variation> variations, final List<Variation> variants,
-            final List<Long> currentFactorLevels, String experimentName, ToolConfiguration toolConfiguration) {
+    private void computeVariationsAndAddVariationJob(ExperimentAutomationConfiguration configuration,
+            Experiment experiment, final List<Variation> variations, final List<Variation> variants,
+            final List<Long> currentFactorLevels, ToolConfiguration toolConfiguration) {
         if (variations.isEmpty()) {
-            this.variateModelAndSimulate(variants, currentFactorLevels, experimentName, toolConfiguration);
+            this.variateModelAndAddVariationJob(configuration, experiment, variants, currentFactorLevels,
+                    toolConfiguration);
         } else {
             // obtain variation description
             final List<Variation> copy = new ArrayList<Variation>();
@@ -119,7 +85,8 @@ public class RunExperimentForToolJob extends SequentialBlackboardInteractingJob<
                     variants.add(variation);
                     currentFactorLevels.add(factorLevel);
 
-                    this.runExperimentVariations(copy, variants, currentFactorLevels, experimentName, toolConfiguration);
+                    this.computeVariationsAndAddVariationJob(configuration, experiment, copy, variants,
+                            currentFactorLevels, toolConfiguration);
 
                     variants.remove(variants.size() - 1);
                     currentFactorLevels.remove(currentFactorLevels.size() - 1);
@@ -130,10 +97,10 @@ public class RunExperimentForToolJob extends SequentialBlackboardInteractingJob<
         }
     }
 
-    private void variateModelAndSimulate(final List<Variation> variations, final List<Long> factorLevels,
-            String experimentName, ToolConfiguration toolConfiguration) {
+    private void variateModelAndAddVariationJob(ExperimentAutomationConfiguration configuration, Experiment experiment,
+            final List<Variation> variations, final List<Long> factorLevels, ToolConfiguration toolConfiguration) {
         // copy initial PCM model
-        ExperimentAutomationConfiguration clonedConfiguration = this.configuration.clone();
+        ExperimentAutomationConfiguration clonedConfiguration = configuration.clone();
 
         // modify the copied PCM model according to the variation descriptions
         for (int i = 0; i < variations.size(); i++) {
@@ -141,22 +108,20 @@ public class RunExperimentForToolJob extends SequentialBlackboardInteractingJob<
             final long currentValue = factorLevels.get(i);
             final IVariationStrategy variationStrategy = this.initialiseVariations(variation,
                     clonedConfiguration.getResourceSet()); // FIXME Modify in blackboard?
-            final String desc = variationStrategy.vary(currentValue);
-            if (LOGGER.isDebugEnabled()) {
-                LOGGER.debug("Varyied: " + desc);
-            }
+            variationStrategy.vary(currentValue);
         }
 
-        // simulate the varied PCM model one or more times as specified by the replication count
-        for (int i = 1; i <= this.experiment.getRepetitions(); i++) {
+        // add simulation jobs of the varied PCM model (one or more times as specified by the
+        // replication count)
+        for (int i = 1; i <= experiment.getRepetitions(); i++) {
             final IToolAdapter analysisTool = AnalysisToolFactory.createToolAdapater(toolConfiguration);
-            try {
-                analysisTool.runExperiment(experimentName + " " + toolConfiguration.getName(),
-                        this.experiment.getInitialModel(), toolConfiguration, this.experiment.getStopConditions(),
-                        this.getBlackboard());
-            } catch (final Exception ex) {
-                throw new RuntimeException("The simulation failed", ex);
-            }
+
+            final String experimentName = "(" + experiment.getId() + ", " + toolConfiguration.getName() + ") "
+                    + experiment.getName();
+            final IJob runAnalysisJob = analysisTool.createRunAnalysisJob(experimentName, experiment.getInitialModel(),
+                    toolConfiguration, experiment.getStopConditions(), this.getBlackboard());
+
+            this.add(runAnalysisJob);
         }
     }
 
