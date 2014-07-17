@@ -21,7 +21,6 @@ import de.uka.ipd.sdq.experimentautomation.application.variation.valueprovider.V
 import de.uka.ipd.sdq.experimentautomation.experiments.Experiment;
 import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
 import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
-import de.uka.ipd.sdq.workflow.jobs.CleanupFailedException;
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.jobs.UserCanceledException;
@@ -41,8 +40,6 @@ public class RunExperimentForToolJob extends SequentialBlackboardInteractingJob<
     private final Experiment experiment;
     private final ToolConfiguration toolConfiguration;
 
-    private MDSDBlackboard blackboard;
-
     /**
      * Default Constructor.
      * 
@@ -59,6 +56,14 @@ public class RunExperimentForToolJob extends SequentialBlackboardInteractingJob<
         this.configuration = configuration;
         this.experiment = experiment;
         this.toolConfiguration = toolConfiguration;
+    }
+    
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String getName() {
+        return "Perform Experiment Automation for "+this.toolConfiguration.getName();
     }
 
     /**
@@ -148,7 +153,7 @@ public class RunExperimentForToolJob extends SequentialBlackboardInteractingJob<
             try {
                 analysisTool.runExperiment(experimentName + " " + toolConfiguration.getName(),
                         this.experiment.getInitialModel(), toolConfiguration, this.experiment.getStopConditions(),
-                        this.blackboard);
+                        this.getBlackboard());
             } catch (final Exception ex) {
                 throw new RuntimeException("The simulation failed", ex);
             }
@@ -164,28 +169,5 @@ public class RunExperimentForToolJob extends SequentialBlackboardInteractingJob<
         final IVariationStrategy variationStrategy = VariationStrategyFactory.createStrategy(variation.getType());
         variationStrategy.setVariedObject(variedObject);
         return variationStrategy;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void setBlackboard(MDSDBlackboard blackboard) {
-        this.blackboard = blackboard;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public String getName() {
-        return "Perform Experiment Automation";
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void cleanup(IProgressMonitor monitor) throws CleanupFailedException {
     }
 }
