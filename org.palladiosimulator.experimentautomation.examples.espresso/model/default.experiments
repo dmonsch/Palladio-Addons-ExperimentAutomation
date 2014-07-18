@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExperimentAutomation.Experiments:ExperimentRepository xmlns:ExperimentAutomation.Experiments="http://sdq.ipd.uka.de/ExperimentAutomation/Experiments/1.0" repetitions="10">
+  <experiments id="CloudScaleMetricCapacity" name="CloudScale Metric: Capacity" description="CloudScale Metric: Capacity"/>
+</ExperimentAutomation.Experiments:ExperimentRepository>
