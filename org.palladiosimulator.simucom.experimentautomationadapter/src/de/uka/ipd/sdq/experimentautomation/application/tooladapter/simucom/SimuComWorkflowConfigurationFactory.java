@@ -12,10 +12,10 @@ import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
 public class SimuComWorkflowConfigurationFactory {
 
     public static SimuComWorkflowConfiguration createWorkflowConfiguration(
-            final AbstractSimulationConfiguration configuration,
-            final AbstractSimulationConfig simConfig) {
+            final AbstractSimulationConfiguration configuration, final AbstractSimulationConfig simConfig) {
         final Map<String, Object> attributesMap = new HashMap<String, Object>();
         final SimuComWorkflowConfiguration workflowConfig = new SimuComWorkflowConfiguration(attributesMap);
+
         workflowConfig.setSimulateFailures(configuration.isSimulateFailures());
         workflowConfig.setSimulateLinkingResources(configuration.isSimulateLinkingResources());
         workflowConfig.setSimuComConfiguration((SimuComConfig) simConfig);
