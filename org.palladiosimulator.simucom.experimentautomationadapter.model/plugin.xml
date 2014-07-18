@@ -9,8 +9,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated simucomtooladapter -->
       <package
-            uri="http://palladiosimulator.org/SimuCom/ToolAdapter/1.0"
-            class="org.palladiosimulator.simucom.simucomtooladapter.SimucomtooladapterPackage"
+            uri="http://palladiosimulator.org/ExperimentAutomation/ToolAdapter/SimuCom/1.0"
+            class="org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.SimucomtooladapterPackage"
             genModel="model/simucomtooladapter.genmodel"/>
    </extension>
 
@@ -18,19 +18,19 @@
       <!-- @generated simucomtooladapter -->
       <parser
             type="simucomtooladapter"
-            class="org.palladiosimulator.simucom.simucomtooladapter.util.SimucomtooladapterResourceFactoryImpl"/>
+            class="org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.util.SimucomtooladapterResourceFactoryImpl"/>
    </extension>
    
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://palladiosimulator.org/ExperimentAutomation/SimuCom/1.0"
-            class="org.palladiosimulator.simucom.simucomtooladapter.SimucomtooladapterPackage"
+            class="org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.SimucomtooladapterPackage"
             genModel="model/ExperimentAutomation.genmodel"/>
    </extension>
    
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <parser
             type="simucom"
-            class="org.palladiosimulator.simucom.simucomtooladapter.util.SimucomtooladapterResourceFactoryImpl"/>
+            class="org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.util.SimucomtooladapterResourceFactoryImpl"/>
    </extension>
 </plugin>

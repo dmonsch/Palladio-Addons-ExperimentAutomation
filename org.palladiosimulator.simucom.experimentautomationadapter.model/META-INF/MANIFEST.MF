@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.palladiosimulator.simucom.experimentautomationadapter.model;singleton:=true
+Bundle-SymbolicName: org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: org.palladiosimulator.simucom.simucomtooladapter,
- org.palladiosimulator.simucom.simucomtooladapter.impl,
- org.palladiosimulator.simucom.simucomtooladapter.util
+Export-Package: org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model,
+ org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.impl,
+ org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,

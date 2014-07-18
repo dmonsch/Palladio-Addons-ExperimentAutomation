@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Experimentautomationadapter
-Bundle-SymbolicName: org.palladiosimulator.simulizar.experimentautomationadapter
+Bundle-SymbolicName: org.palladiosimulator.experimentautomation.application.tooladapter.simulizar
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: palladiosimulator.org
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
