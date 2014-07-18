@@ -8,7 +8,7 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="http://palladiosimulator.org/ExperimentAutomation/SimuCom/1.0"
+            uri="http://palladiosimulator.org/ExperimentAutomation/ToolAdapter/SimuCom/1.0"
             class="org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.SimucomtooladapterPackage"
             genModel="model/simucomtooladapter.genmodel"/>
    </extension>
