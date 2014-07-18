@@ -16,7 +16,7 @@
 <stringAttribute key="location" value="${workspace_loc}/../runtime-ExperimentAutomation"/>
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
 <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog C:\Users\lehrig\Uni\Workspaces\Kepler-ModelingTools\org.palladiosimulator.experimentautomation.example.espresso\model\example.experiments C:\Users\lehrig\Uni\Workspaces\Kepler-ModelingTools\org.palladiosimulator.experimentautomation.example.espresso\model\pcm.variation C:\data\experimentAutomation"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog C:\Users\lehrig\Uni\Workspaces\Kepler-ModelingTools\org.palladiosimulator.experimentautomation.examples.espresso\model\example.experiments C:\Users\lehrig\Uni\Workspaces\Kepler-ModelingTools\org.palladiosimulator.experimentautomation.examples.espresso\model\pcm.variation C:\data\experimentAutomation"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
 <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dosgi.requiredJavaVersion=1.6 -Xms40m -Xmx512m"/>
 <stringAttribute key="pde.version" value="3.3"/>
