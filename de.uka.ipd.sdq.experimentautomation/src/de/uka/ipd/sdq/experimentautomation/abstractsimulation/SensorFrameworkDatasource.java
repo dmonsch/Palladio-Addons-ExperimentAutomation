@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
+package org.palladiosimulator.experimentautomation.abstractsimulation;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EObject;
  * <em><b>Sensor Framework Datasource</b></em>'. <!-- end-user-doc -->
  *
  *
- * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getSensorFrameworkDatasource()
+ * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getSensorFrameworkDatasource()
  * @model abstract="true"
  * @generated
  */

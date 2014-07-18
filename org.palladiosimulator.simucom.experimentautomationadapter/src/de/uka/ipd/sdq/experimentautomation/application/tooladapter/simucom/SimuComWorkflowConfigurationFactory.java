@@ -1,11 +1,11 @@
-package de.uka.ipd.sdq.experimentautomation.application.tooladapter.simucom;
+package org.palladiosimulator.experimentautomation.application.tooladapter.simucom;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import de.uka.ipd.sdq.codegen.simucontroller.runconfig.SimuComWorkflowConfiguration;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
-import de.uka.ipd.sdq.experimentautomation.application.tooladapter.abstractsimulation.AbstractSimulationWorkflowConfigurationFactory;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
+import org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.AbstractSimulationWorkflowConfigurationFactory;
 import de.uka.ipd.sdq.simucomframework.SimuComConfig;
 import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
 

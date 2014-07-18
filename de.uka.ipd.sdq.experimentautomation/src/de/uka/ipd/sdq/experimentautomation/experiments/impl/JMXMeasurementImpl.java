@@ -4,14 +4,14 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.impl;
+package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>JMX Measurement</b></em>'.
@@ -20,7 +20,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement;
  * The following features are implemented:
  * <ul>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.JMXMeasurementImpl#getPollingPeriod
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.JMXMeasurementImpl#getPollingPeriod
  * <em>Polling Period</em>}</li>
  * </ul>
  * </p>

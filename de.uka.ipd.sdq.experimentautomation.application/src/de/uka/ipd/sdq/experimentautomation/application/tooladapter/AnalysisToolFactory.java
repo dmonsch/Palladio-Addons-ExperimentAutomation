@@ -1,10 +1,10 @@
-package de.uka.ipd.sdq.experimentautomation.application.tooladapter;
+package org.palladiosimulator.experimentautomation.application.tooladapter;
 
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.Platform;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
+import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 
 public class AnalysisToolFactory {
 
@@ -14,7 +14,7 @@ public class AnalysisToolFactory {
         if (Platform.getExtensionRegistry() != null) {
             try {
                 final IConfigurationElement[] adapterExtensions = Platform.getExtensionRegistry()
-                        .getConfigurationElementsFor("de.uka.ipd.sdq.experimentautomation.application.tooladapter");
+                        .getConfigurationElementsFor("org.palladiosimulator.experimentautomation.application.tooladapter");
                 for (final IConfigurationElement e : adapterExtensions) {
                     try {
                         IToolAdapter toolAdapter = (IToolAdapter) e.createExecutableExtension("class");

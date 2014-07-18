@@ -2,9 +2,9 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="de.uka.ipd.sdq.experimentautomation.application.tooladapter">
+         point="org.palladiosimulator.experimentautomation.application.tooladapter">
       <tooladapter
-            class="de.uka.ipd.sdq.experimentautomation.application.tooladapter.simucom.SimuComToolAdapter">
+            class="org.palladiosimulator.experimentautomation.application.tooladapter.simucom.SimuComToolAdapter">
       </tooladapter>
    </extension>
 

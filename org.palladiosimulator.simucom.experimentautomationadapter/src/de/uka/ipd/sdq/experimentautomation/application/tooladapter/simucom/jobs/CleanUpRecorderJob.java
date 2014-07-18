@@ -1,13 +1,13 @@
-package de.uka.ipd.sdq.experimentautomation.application.tooladapter.simucom.jobs;
+package org.palladiosimulator.experimentautomation.application.tooladapter.simucom.jobs;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.palladiosimulator.simucom.simucomtooladapter.SimuComConfiguration;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.PersistenceFramework;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFrameworkDatasource;
-import de.uka.ipd.sdq.experimentautomation.application.tooladapter.abstractsimulation.sensorframework.SensorFrameworkFactory;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.PersistenceFramework;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFrameworkDatasource;
+import org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.sensorframework.SensorFrameworkFactory;
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.jobs.UserCanceledException;

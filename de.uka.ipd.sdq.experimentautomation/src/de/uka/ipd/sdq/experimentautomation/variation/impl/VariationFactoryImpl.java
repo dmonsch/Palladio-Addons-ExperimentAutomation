@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.variation.impl;
+package org.palladiosimulator.experimentautomation.variation.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -12,11 +12,11 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import de.uka.ipd.sdq.experimentautomation.variation.StructuralVariation;
-import de.uka.ipd.sdq.experimentautomation.variation.ValueVariation;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationFactory;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationPackage;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationRepository;
+import org.palladiosimulator.experimentautomation.variation.StructuralVariation;
+import org.palladiosimulator.experimentautomation.variation.ValueVariation;
+import org.palladiosimulator.experimentautomation.variation.VariationFactory;
+import org.palladiosimulator.experimentautomation.variation.VariationPackage;
+import org.palladiosimulator.experimentautomation.variation.VariationRepository;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->

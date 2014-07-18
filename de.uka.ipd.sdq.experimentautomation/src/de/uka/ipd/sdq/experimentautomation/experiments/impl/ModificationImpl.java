@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.impl;
+package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -8,9 +8,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.Modification;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.Modification;
+import org.palladiosimulator.experimentautomation.variation.VariationType;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Modification</b></em>'.
@@ -18,14 +18,14 @@ import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl#getType <em>Type
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ModificationImpl#getType <em>Type
  * </em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl#getName <em>Name
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ModificationImpl#getName <em>Name
  * </em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl#getVariedObjectId
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.ModificationImpl#getVariedObjectId
  * <em>Varied Object Id</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl#getValue <em>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ModificationImpl#getValue <em>
  * Value</em>}</li>
  * </ul>
  * </p>

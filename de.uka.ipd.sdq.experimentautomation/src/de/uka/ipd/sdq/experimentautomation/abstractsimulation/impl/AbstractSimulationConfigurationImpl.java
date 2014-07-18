@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl;
+package org.palladiosimulator.experimentautomation.abstractsimulation.impl;
 
 import java.util.Collection;
 
@@ -13,13 +13,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.PersistenceFramework;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition;
-import de.uka.ipd.sdq.experimentautomation.experiments.impl.ToolConfigurationImpl;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.PersistenceFramework;
+import org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration;
+import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
+import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
+import org.palladiosimulator.experimentautomation.experiments.impl.ToolConfigurationImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -28,22 +28,22 @@ import de.uka.ipd.sdq.experimentautomation.experiments.impl.ToolConfigurationImp
  * The following features are implemented:
  * <ul>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#getPersistenceFramework
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#getPersistenceFramework
  * <em>Persistence Framework</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#getStopConditions
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#getStopConditions
  * <em>Stop Conditions</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#getRandomNumberGeneratorSeed
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#getRandomNumberGeneratorSeed
  * <em>Random Number Generator Seed</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#isSimulateLinkingResources
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#isSimulateLinkingResources
  * <em>Simulate Linking Resources</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#isSimulateFailures
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#isSimulateFailures
  * <em>Simulate Failures</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#getProbeSpecConfiguration
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#getProbeSpecConfiguration
  * <em>Probe Spec Configuration</em>}</li>
  * </ul>
  * </p>

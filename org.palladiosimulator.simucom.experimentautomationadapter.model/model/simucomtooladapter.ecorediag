@@ -32,7 +32,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_RPjF2-2zEeOvzbhkIlkJ3g"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_RPjF0e2zEeOvzbhkIlkJ3g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="platform:/resource/de.uka.ipd.sdq.experimentautomation/model/experimentautomation.ecore#//abstractsimulation/AbstractSimulationConfiguration"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/org.palladiosimulator.experimentautomation/model/experimentautomation.ecore#//abstractsimulation/AbstractSimulationConfiguration"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RPjF0u2zEeOvzbhkIlkJ3g" x="185" y="45"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_ocsXUe2yEeOvzbhkIlkJ3g"/>

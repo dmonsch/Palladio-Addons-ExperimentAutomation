@@ -4,12 +4,12 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments;
+package org.palladiosimulator.experimentautomation.experiments;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition;
+import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Experiment</b></em>'. <!--
@@ -18,37 +18,37 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition;
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getVariations <em>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Experiment#getVariations <em>
  * Variations</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getModifications <em>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Experiment#getModifications <em>
  * Modifications</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getId <em>Id</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getName <em>Name</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getToolConfiguration <em>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Experiment#getId <em>Id</em>}</li>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Experiment#getName <em>Name</em>}</li>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Experiment#getToolConfiguration <em>
  * Tool Configuration</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getStopConditions <em>Stop
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Experiment#getStopConditions <em>Stop
  * Conditions</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getDescription <em>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Experiment#getDescription <em>
  * Description</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getExperimentDesign <em>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Experiment#getExperimentDesign <em>
  * Experiment Design</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getResponseMeasurement <em>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Experiment#getResponseMeasurement <em>
  * Response Measurement</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getInitialModel <em>Initial
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Experiment#getInitialModel <em>Initial
  * Model</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getRepetitions <em>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Experiment#getRepetitions <em>
  * Repetitions</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment()
+ * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperiment()
  * @model
  * @generated
  */
 public interface Experiment extends EObject {
     /**
      * Returns the value of the '<em><b>Variations</b></em>' containment reference list. The list
-     * contents are of type {@link de.uka.ipd.sdq.experimentautomation.experiments.Variation}. <!--
+     * contents are of type {@link org.palladiosimulator.experimentautomation.experiments.Variation}. <!--
      * begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Variations</em>' containment reference list isn't clear, there
@@ -57,7 +57,7 @@ public interface Experiment extends EObject {
      * <!-- end-user-doc -->
      * 
      * @return the value of the '<em>Variations</em>' containment reference list.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment_Variations()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperiment_Variations()
      * @model containment="true" ordered="false"
      * @generated
      */
@@ -65,7 +65,7 @@ public interface Experiment extends EObject {
 
     /**
      * Returns the value of the '<em><b>Modifications</b></em>' containment reference list. The list
-     * contents are of type {@link de.uka.ipd.sdq.experimentautomation.experiments.Modification}.
+     * contents are of type {@link org.palladiosimulator.experimentautomation.experiments.Modification}.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Modifications</em>' containment reference list isn't clear, there
@@ -74,7 +74,7 @@ public interface Experiment extends EObject {
      * <!-- end-user-doc -->
      * 
      * @return the value of the '<em>Modifications</em>' containment reference list.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment_Modifications()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperiment_Modifications()
      * @model containment="true"
      * @generated
      */
@@ -90,7 +90,7 @@ public interface Experiment extends EObject {
      * 
      * @return the value of the '<em>Id</em>' attribute.
      * @see #setId(String)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment_Id()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperiment_Id()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -98,7 +98,7 @@ public interface Experiment extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getId <em>Id</em>}'
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getId <em>Id</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -118,7 +118,7 @@ public interface Experiment extends EObject {
      * 
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment_Name()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperiment_Name()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -126,7 +126,7 @@ public interface Experiment extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getName <em>Name</em>}'
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getName <em>Name</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -147,7 +147,7 @@ public interface Experiment extends EObject {
      * 
      * @return the value of the '<em>Initial Model</em>' containment reference.
      * @see #setInitialModel(PCMModelFiles)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment_InitialModel()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperiment_InitialModel()
      * @model containment="true" required="true" ordered="false"
      * @generated
      */
@@ -155,7 +155,7 @@ public interface Experiment extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getInitialModel
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getInitialModel
      * <em>Initial Model</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -175,7 +175,7 @@ public interface Experiment extends EObject {
      * 
      * @return the value of the '<em>Repetitions</em>' attribute.
      * @see #setRepetitions(int)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment_Repetitions()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperiment_Repetitions()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -183,7 +183,7 @@ public interface Experiment extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getRepetitions
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getRepetitions
      * <em>Repetitions</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -196,7 +196,7 @@ public interface Experiment extends EObject {
     /**
      * Returns the value of the '<em><b>Tool Configuration</b></em>' reference list. The list
      * contents are of type
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration}. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.ToolConfiguration}. <!--
      * begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Tool Configuration</em>' reference list isn't clear, there really
@@ -205,7 +205,7 @@ public interface Experiment extends EObject {
      * <!-- end-user-doc -->
      * 
      * @return the value of the '<em>Tool Configuration</em>' reference list.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment_ToolConfiguration()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperiment_ToolConfiguration()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -214,7 +214,7 @@ public interface Experiment extends EObject {
     /**
      * Returns the value of the '<em><b>Stop Conditions</b></em>' containment reference list. The
      * list contents are of type
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition}. <!--
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition}. <!--
      * begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Stop Conditions</em>' containment reference list isn't clear,
@@ -223,7 +223,7 @@ public interface Experiment extends EObject {
      * <!-- end-user-doc -->
      * 
      * @return the value of the '<em>Stop Conditions</em>' containment reference list.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment_StopConditions()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperiment_StopConditions()
      * @model containment="true" ordered="false"
      * @generated
      */
@@ -239,7 +239,7 @@ public interface Experiment extends EObject {
      * 
      * @return the value of the '<em>Description</em>' attribute.
      * @see #setDescription(String)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment_Description()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperiment_Description()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -247,7 +247,7 @@ public interface Experiment extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getDescription
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getDescription
      * <em>Description</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -268,7 +268,7 @@ public interface Experiment extends EObject {
      * 
      * @return the value of the '<em>Experiment Design</em>' containment reference.
      * @see #setExperimentDesign(ExperimentDesign)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment_ExperimentDesign()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperiment_ExperimentDesign()
      * @model containment="true" required="true" ordered="false"
      * @generated
      */
@@ -276,7 +276,7 @@ public interface Experiment extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getExperimentDesign
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getExperimentDesign
      * <em>Experiment Design</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
      * 
@@ -298,7 +298,7 @@ public interface Experiment extends EObject {
      * 
      * @return the value of the '<em>Response Measurement</em>' containment reference.
      * @see #setResponseMeasurement(ResponseMeasurement)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperiment_ResponseMeasurement()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperiment_ResponseMeasurement()
      * @model containment="true" required="true" ordered="false"
      * @generated
      */
@@ -306,7 +306,7 @@ public interface Experiment extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getResponseMeasurement
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getResponseMeasurement
      * <em>Response Measurement</em>}' containment reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      * 

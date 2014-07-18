@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation.provider;
+package org.palladiosimulator.experimentautomation.abstractsimulation.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.util.AbstractsimulationAdapterFactory;
+import org.palladiosimulator.experimentautomation.abstractsimulation.util.AbstractsimulationAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers. The
@@ -72,7 +72,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed}
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -81,7 +81,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed}.
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -97,7 +97,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration}
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -106,7 +106,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration}. <!--
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -122,7 +122,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework} instances.
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -131,7 +131,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework}. <!--
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -147,7 +147,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.MemoryDatasource} instances.
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -156,7 +156,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.MemoryDatasource}. <!--
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -172,7 +172,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource} instances. <!--
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -181,7 +181,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource}. <!--
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -197,7 +197,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition}
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -206,7 +206,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition}.
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -222,7 +222,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition}
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -231,7 +231,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition}. <!--
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -247,7 +247,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2} instances. <!--
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.EDP2} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -256,7 +256,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2}. <!-- begin-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.EDP2}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
      * @generated

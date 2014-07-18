@@ -1,15 +1,15 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl;
+package org.palladiosimulator.experimentautomation.abstractsimulation.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType;
+import org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -18,7 +18,7 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfigura
  * The following features are implemented:
  * <ul>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl#getBlackboardType
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl#getBlackboardType
  * <em>Blackboard Type</em>}</li>
  * </ul>
  * </p>

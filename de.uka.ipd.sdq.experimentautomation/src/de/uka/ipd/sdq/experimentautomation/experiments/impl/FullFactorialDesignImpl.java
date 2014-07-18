@@ -4,12 +4,12 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.impl;
+package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.FullFactorialDesign;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

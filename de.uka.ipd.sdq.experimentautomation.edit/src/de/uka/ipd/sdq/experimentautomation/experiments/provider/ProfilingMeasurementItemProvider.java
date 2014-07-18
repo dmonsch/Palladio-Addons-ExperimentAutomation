@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.provider;
+package org.palladiosimulator.experimentautomation.experiments.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
  * This is the item provider adapter for a
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.ProfilingMeasurement} object. <!--
+ * {@link org.palladiosimulator.experimentautomation.experiments.ProfilingMeasurement} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated

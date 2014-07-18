@@ -4,13 +4,13 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.impl;
+package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentDesign;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentDesign;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Experiment Design</b></em>

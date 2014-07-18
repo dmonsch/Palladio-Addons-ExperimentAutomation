@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation.presentation;
+package org.palladiosimulator.experimentautomation.abstractsimulation.presentation;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -55,10 +55,10 @@ import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationFactory;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.variation.presentation.ExperimentAutomationEditorPlugin;
-import de.uka.ipd.sdq.experimentautomation.variation.provider.ExperimentAutomationEditPlugin;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationFactory;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.variation.presentation.ExperimentAutomationEditorPlugin;
+import org.palladiosimulator.experimentautomation.variation.provider.ExperimentAutomationEditPlugin;
 
 /**
  * This is a simple wizard for creating a new model file. <!-- begin-user-doc --> <!-- end-user-doc

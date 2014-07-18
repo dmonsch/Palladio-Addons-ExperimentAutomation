@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation.provider;
+package org.palladiosimulator.experimentautomation.abstractsimulation.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -10,11 +10,11 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
 
 /**
  * This is the item provider adapter for a
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2} object. <!-- begin-user-doc
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.EDP2} object. <!-- begin-user-doc
  * --> <!-- end-user-doc -->
  * 
  * @generated

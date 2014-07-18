@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.impl;
+package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import java.util.Collection;
 
@@ -18,15 +18,15 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition;
-import de.uka.ipd.sdq.experimentautomation.experiments.Experiment;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentDesign;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.InitialModel;
-import de.uka.ipd.sdq.experimentautomation.experiments.Modification;
-import de.uka.ipd.sdq.experimentautomation.experiments.ResponseMeasurement;
-import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
-import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
+import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
+import org.palladiosimulator.experimentautomation.experiments.Experiment;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentDesign;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.InitialModel;
+import org.palladiosimulator.experimentautomation.experiments.Modification;
+import org.palladiosimulator.experimentautomation.experiments.ResponseMeasurement;
+import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
+import org.palladiosimulator.experimentautomation.experiments.Variation;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Experiment</b></em>'. <!--
@@ -34,30 +34,30 @@ import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl#getVariations <em>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getVariations <em>
  * Variations</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl#getModifications
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getModifications
  * <em>Modifications</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl#getId <em>Id</em>}
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getId <em>Id</em>}
  * </li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl#getName <em>Name
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getName <em>Name
  * </em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl#getToolConfiguration
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getToolConfiguration
  * <em>Tool Configuration</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl#getStopConditions
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getStopConditions
  * <em>Stop Conditions</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl#getDescription
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getDescription
  * <em>Description</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl#getExperimentDesign
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getExperimentDesign
  * <em>Experiment Design</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl#getResponseMeasurement
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getResponseMeasurement
  * <em>Response Measurement</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl#getInitialModel
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getInitialModel
  * <em>Initial Model</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl#getRepetitions
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getRepetitions
  * <em>Repetitions</em>}</li>
  * </ul>
  * </p>

@@ -1,11 +1,11 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl;
+package org.palladiosimulator.experimentautomation.abstractsimulation.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.MemoryDatasource;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Memory Datasource</b></em>

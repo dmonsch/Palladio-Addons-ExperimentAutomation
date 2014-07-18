@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
+package org.palladiosimulator.experimentautomation.abstractsimulation;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Sensor Framework</b></em>'.
@@ -9,12 +9,12 @@ package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework#getDatasource
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework#getDatasource
  * <em>Datasource</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getSensorFramework()
+ * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getSensorFramework()
  * @model
  * @generated
  */
@@ -30,7 +30,7 @@ public interface SensorFramework extends PersistenceFramework {
      * 
      * @return the value of the '<em>Datasource</em>' containment reference.
      * @see #setDatasource(SensorFrameworkDatasource)
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getSensorFramework_Datasource()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getSensorFramework_Datasource()
      * @model containment="true" required="true" ordered="false"
      * @generated
      */
@@ -38,7 +38,7 @@ public interface SensorFramework extends PersistenceFramework {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework#getDatasource
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework#getDatasource
      * <em>Datasource</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value

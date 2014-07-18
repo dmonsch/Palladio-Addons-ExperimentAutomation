@@ -1,6 +1,6 @@
-package de.uka.ipd.sdq.experimentautomation.application.tooladapter.abstractsimulation;
+package org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
+import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 import de.uka.ipd.sdq.workflow.blackboard.Blackboard;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;

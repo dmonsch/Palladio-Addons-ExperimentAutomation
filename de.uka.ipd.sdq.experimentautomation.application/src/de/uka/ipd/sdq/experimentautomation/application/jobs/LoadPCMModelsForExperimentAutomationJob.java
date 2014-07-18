@@ -1,10 +1,10 @@
-package de.uka.ipd.sdq.experimentautomation.application.jobs;
+package org.palladiosimulator.experimentautomation.application.jobs;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.IProgressMonitor;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.InitialModel;
+import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import de.uka.ipd.sdq.workflow.jobs.CleanupFailedException;
 import de.uka.ipd.sdq.workflow.jobs.IBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.jobs.IJob;

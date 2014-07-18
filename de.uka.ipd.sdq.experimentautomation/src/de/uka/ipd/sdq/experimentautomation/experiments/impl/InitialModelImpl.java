@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.impl;
+package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -10,9 +10,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.palladiosimulator.simulizar.pms.PMSModel;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.InitialModel;
-import de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.InitialModel;
+import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
 import de.uka.ipd.sdq.pcm.allocation.Allocation;
 import de.uka.ipd.sdq.pcm.repository.Repository;
 import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
@@ -23,21 +23,21 @@ import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.InitialModelImpl#getUsageModel
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getUsageModel
  * <em>Usage Model</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.InitialModelImpl#getAllocation
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getAllocation
  * <em>Allocation</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.InitialModelImpl#getMiddlewareRepository
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getMiddlewareRepository
  * <em>Middleware Repository</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.InitialModelImpl#getEventMiddleWareRepository
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getEventMiddleWareRepository
  * <em>Event Middle Ware Repository</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.InitialModelImpl#getReconfigurationRules
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getReconfigurationRules
  * <em>Reconfiguration Rules</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.InitialModelImpl#getPlatformMonitoringSpecification
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getPlatformMonitoringSpecification
  * <em>Platform Monitoring Specification</em>}</li>
  * </ul>
  * </p>

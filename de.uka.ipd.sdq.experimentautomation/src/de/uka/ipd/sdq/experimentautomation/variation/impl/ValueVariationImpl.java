@@ -4,12 +4,12 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.variation.impl;
+package org.palladiosimulator.experimentautomation.variation.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import de.uka.ipd.sdq.experimentautomation.variation.ValueVariation;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationPackage;
+import org.palladiosimulator.experimentautomation.variation.ValueVariation;
+import org.palladiosimulator.experimentautomation.variation.VariationPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Value Variation</b></em>'.

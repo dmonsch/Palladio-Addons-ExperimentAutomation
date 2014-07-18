@@ -6,7 +6,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.palladiosimulator.simucom.simucomtooladapter.SimuComConfiguration;
 import org.palladiosimulator.simucom.simucomtooladapter.SimucomtooladapterPackage;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl;
+import org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

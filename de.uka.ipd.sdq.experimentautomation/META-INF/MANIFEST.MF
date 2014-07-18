@@ -1,21 +1,21 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: de.uka.ipd.sdq.experimentautomation;singleton:=true
+Bundle-SymbolicName: org.palladiosimulator.experimentautomation;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: de.uka.ipd.sdq.experimentautomation.abstractsimulation,
- de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl,
- de.uka.ipd.sdq.experimentautomation.abstractsimulation.util,
- de.uka.ipd.sdq.experimentautomation.experiments,
- de.uka.ipd.sdq.experimentautomation.experiments.impl,
- de.uka.ipd.sdq.experimentautomation.experiments.util,
- de.uka.ipd.sdq.experimentautomation.variation,
- de.uka.ipd.sdq.experimentautomation.variation.impl,
- de.uka.ipd.sdq.experimentautomation.variation.util
+Export-Package: org.palladiosimulator.experimentautomation.abstractsimulation,
+ org.palladiosimulator.experimentautomation.abstractsimulation.impl,
+ org.palladiosimulator.experimentautomation.abstractsimulation.util,
+ org.palladiosimulator.experimentautomation.experiments,
+ org.palladiosimulator.experimentautomation.experiments.impl,
+ org.palladiosimulator.experimentautomation.experiments.util,
+ org.palladiosimulator.experimentautomation.variation,
+ org.palladiosimulator.experimentautomation.variation.impl,
+ org.palladiosimulator.experimentautomation.variation.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,

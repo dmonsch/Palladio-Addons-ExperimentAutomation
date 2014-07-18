@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
-   <extension-point id="de.uka.ipd.sdq.experimentautomation.application.tooladapter" name="de.uka.ipd.sdq.experimentautomation.application.tooladapter" schema="schema/de.uka.ipd.sdq.experimentautomation.application.tooladapter.exsd"/>
+   <extension-point id="org.palladiosimulator.experimentautomation.application.tooladapter" name="org.palladiosimulator.experimentautomation.application.tooladapter" schema="schema/org.palladiosimulator.experimentautomation.application.tooladapter.exsd"/>
 	<extension
-         id="de.uka.ipd.sdq.experimentautomation.application"
+         id="org.palladiosimulator.experimentautomation.application"
          name="Palladio Experiment Automation"
          point="org.eclipse.core.runtime.applications">
       <application
@@ -11,7 +11,7 @@
             thread="main"
             visible="true">
          <run
-               class="de.uka.ipd.sdq.experimentautomation.application.ExperimentApplication">
+               class="org.palladiosimulator.experimentautomation.application.ExperimentApplication">
          </run>
       </application>
    </extension>

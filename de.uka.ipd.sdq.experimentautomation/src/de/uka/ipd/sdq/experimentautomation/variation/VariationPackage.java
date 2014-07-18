@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.variation;
+package org.palladiosimulator.experimentautomation.variation;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -24,7 +24,7 @@ import de.uka.ipd.sdq.identifier.IdentifierPackage;
  * </ul>
  * <!-- end-user-doc -->
  * 
- * @see de.uka.ipd.sdq.experimentautomation.variation.VariationFactory
+ * @see org.palladiosimulator.experimentautomation.variation.VariationFactory
  * @model kind="package"
  * @generated
  */
@@ -41,7 +41,7 @@ public interface VariationPackage extends EPackage {
      * 
      * @generated
      */
-    String eNS_URI = "http://sdq.ipd.uka.de/ExperimentAutomation/Variation/1.0";
+    String eNS_URI = "http://palladiosimulator.org/ExperimentAutomation/Variation/1.0";
 
     /**
      * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -55,15 +55,15 @@ public interface VariationPackage extends EPackage {
      * 
      * @generated
      */
-    VariationPackage eINSTANCE = de.uka.ipd.sdq.experimentautomation.variation.impl.VariationPackageImpl.init();
+    VariationPackage eINSTANCE = org.palladiosimulator.experimentautomation.variation.impl.VariationPackageImpl.init();
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.impl.VariationTypeImpl <em>Type</em>}'
+     * {@link org.palladiosimulator.experimentautomation.variation.impl.VariationTypeImpl <em>Type</em>}'
      * class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.variation.impl.VariationTypeImpl
-     * @see de.uka.ipd.sdq.experimentautomation.variation.impl.VariationPackageImpl#getVariationType()
+     * @see org.palladiosimulator.experimentautomation.variation.impl.VariationTypeImpl
+     * @see org.palladiosimulator.experimentautomation.variation.impl.VariationPackageImpl#getVariationType()
      * @generated
      */
     int VARIATION_TYPE = 0;
@@ -115,11 +115,11 @@ public interface VariationPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.impl.ValueVariationImpl
+     * {@link org.palladiosimulator.experimentautomation.variation.impl.ValueVariationImpl
      * <em>Value Variation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.variation.impl.ValueVariationImpl
-     * @see de.uka.ipd.sdq.experimentautomation.variation.impl.VariationPackageImpl#getValueVariation()
+     * @see org.palladiosimulator.experimentautomation.variation.impl.ValueVariationImpl
+     * @see org.palladiosimulator.experimentautomation.variation.impl.VariationPackageImpl#getValueVariation()
      * @generated
      */
     int VALUE_VARIATION = 1;
@@ -171,11 +171,11 @@ public interface VariationPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.impl.StructuralVariationImpl
+     * {@link org.palladiosimulator.experimentautomation.variation.impl.StructuralVariationImpl
      * <em>Structural Variation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.variation.impl.StructuralVariationImpl
-     * @see de.uka.ipd.sdq.experimentautomation.variation.impl.VariationPackageImpl#getStructuralVariation()
+     * @see org.palladiosimulator.experimentautomation.variation.impl.StructuralVariationImpl
+     * @see org.palladiosimulator.experimentautomation.variation.impl.VariationPackageImpl#getStructuralVariation()
      * @generated
      */
     int STRUCTURAL_VARIATION = 2;
@@ -227,11 +227,11 @@ public interface VariationPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.impl.VariationRepositoryImpl
+     * {@link org.palladiosimulator.experimentautomation.variation.impl.VariationRepositoryImpl
      * <em>Repository</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.variation.impl.VariationRepositoryImpl
-     * @see de.uka.ipd.sdq.experimentautomation.variation.impl.VariationPackageImpl#getVariationRepository()
+     * @see org.palladiosimulator.experimentautomation.variation.impl.VariationRepositoryImpl
+     * @see org.palladiosimulator.experimentautomation.variation.impl.VariationPackageImpl#getVariationRepository()
      * @generated
      */
     int VARIATION_REPOSITORY = 3;
@@ -256,22 +256,22 @@ public interface VariationPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.VariationType <em>Type</em>}'. <!--
+     * {@link org.palladiosimulator.experimentautomation.variation.VariationType <em>Type</em>}'. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Type</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.variation.VariationType
+     * @see org.palladiosimulator.experimentautomation.variation.VariationType
      * @generated
      */
     EClass getVariationType();
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.VariationType#getName <em>Name</em>}'.
+     * {@link org.palladiosimulator.experimentautomation.variation.VariationType#getName <em>Name</em>}'.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Name</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.variation.VariationType#getName()
+     * @see org.palladiosimulator.experimentautomation.variation.VariationType#getName()
      * @see #getVariationType()
      * @generated
      */
@@ -279,11 +279,11 @@ public interface VariationPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.VariationType#getStrategyClass
+     * {@link org.palladiosimulator.experimentautomation.variation.VariationType#getStrategyClass
      * <em>Strategy Class</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Strategy Class</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.variation.VariationType#getStrategyClass()
+     * @see org.palladiosimulator.experimentautomation.variation.VariationType#getStrategyClass()
      * @see #getVariationType()
      * @generated
      */
@@ -291,11 +291,11 @@ public interface VariationPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.VariationType#getVariedEntityInterface
+     * {@link org.palladiosimulator.experimentautomation.variation.VariationType#getVariedEntityInterface
      * <em>Varied Entity Interface</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Varied Entity Interface</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.variation.VariationType#getVariedEntityInterface()
+     * @see org.palladiosimulator.experimentautomation.variation.VariationType#getVariedEntityInterface()
      * @see #getVariationType()
      * @generated
      */
@@ -303,44 +303,44 @@ public interface VariationPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.ValueVariation <em>Value Variation</em>}
+     * {@link org.palladiosimulator.experimentautomation.variation.ValueVariation <em>Value Variation</em>}
      * '. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Value Variation</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.variation.ValueVariation
+     * @see org.palladiosimulator.experimentautomation.variation.ValueVariation
      * @generated
      */
     EClass getValueVariation();
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.StructuralVariation
+     * {@link org.palladiosimulator.experimentautomation.variation.StructuralVariation
      * <em>Structural Variation</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Structural Variation</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.variation.StructuralVariation
+     * @see org.palladiosimulator.experimentautomation.variation.StructuralVariation
      * @generated
      */
     EClass getStructuralVariation();
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.VariationRepository <em>Repository</em>}
+     * {@link org.palladiosimulator.experimentautomation.variation.VariationRepository <em>Repository</em>}
      * '. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Repository</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.variation.VariationRepository
+     * @see org.palladiosimulator.experimentautomation.variation.VariationRepository
      * @generated
      */
     EClass getVariationRepository();
 
     /**
      * Returns the meta object for the containment reference list '
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.VariationRepository#getVariation
+     * {@link org.palladiosimulator.experimentautomation.variation.VariationRepository#getVariation
      * <em>Variation</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference list '<em>Variation</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.variation.VariationRepository#getVariation()
+     * @see org.palladiosimulator.experimentautomation.variation.VariationRepository#getVariation()
      * @see #getVariationRepository()
      * @generated
      */
@@ -370,11 +370,11 @@ public interface VariationPackage extends EPackage {
     interface Literals {
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.variation.impl.VariationTypeImpl
+         * {@link org.palladiosimulator.experimentautomation.variation.impl.VariationTypeImpl
          * <em>Type</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.variation.impl.VariationTypeImpl
-         * @see de.uka.ipd.sdq.experimentautomation.variation.impl.VariationPackageImpl#getVariationType()
+         * @see org.palladiosimulator.experimentautomation.variation.impl.VariationTypeImpl
+         * @see org.palladiosimulator.experimentautomation.variation.impl.VariationPackageImpl#getVariationType()
          * @generated
          */
         EClass VARIATION_TYPE = eINSTANCE.getVariationType();
@@ -405,33 +405,33 @@ public interface VariationPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.variation.impl.ValueVariationImpl
+         * {@link org.palladiosimulator.experimentautomation.variation.impl.ValueVariationImpl
          * <em>Value Variation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.variation.impl.ValueVariationImpl
-         * @see de.uka.ipd.sdq.experimentautomation.variation.impl.VariationPackageImpl#getValueVariation()
+         * @see org.palladiosimulator.experimentautomation.variation.impl.ValueVariationImpl
+         * @see org.palladiosimulator.experimentautomation.variation.impl.VariationPackageImpl#getValueVariation()
          * @generated
          */
         EClass VALUE_VARIATION = eINSTANCE.getValueVariation();
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.variation.impl.StructuralVariationImpl
+         * {@link org.palladiosimulator.experimentautomation.variation.impl.StructuralVariationImpl
          * <em>Structural Variation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.variation.impl.StructuralVariationImpl
-         * @see de.uka.ipd.sdq.experimentautomation.variation.impl.VariationPackageImpl#getStructuralVariation()
+         * @see org.palladiosimulator.experimentautomation.variation.impl.StructuralVariationImpl
+         * @see org.palladiosimulator.experimentautomation.variation.impl.VariationPackageImpl#getStructuralVariation()
          * @generated
          */
         EClass STRUCTURAL_VARIATION = eINSTANCE.getStructuralVariation();
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.variation.impl.VariationRepositoryImpl
+         * {@link org.palladiosimulator.experimentautomation.variation.impl.VariationRepositoryImpl
          * <em>Repository</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.variation.impl.VariationRepositoryImpl
-         * @see de.uka.ipd.sdq.experimentautomation.variation.impl.VariationPackageImpl#getVariationRepository()
+         * @see org.palladiosimulator.experimentautomation.variation.impl.VariationRepositoryImpl
+         * @see org.palladiosimulator.experimentautomation.variation.impl.VariationPackageImpl#getVariationRepository()
          * @generated
          */
         EClass VARIATION_REPOSITORY = eINSTANCE.getVariationRepository();

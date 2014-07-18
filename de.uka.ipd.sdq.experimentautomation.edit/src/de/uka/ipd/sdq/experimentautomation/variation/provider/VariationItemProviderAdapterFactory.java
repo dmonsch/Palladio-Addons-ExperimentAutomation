@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.variation.provider;
+package org.palladiosimulator.experimentautomation.variation.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import de.uka.ipd.sdq.experimentautomation.variation.util.VariationAdapterFactory;
+import org.palladiosimulator.experimentautomation.variation.util.VariationAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers. The
@@ -76,7 +76,7 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.ValueVariation} instances. <!--
+     * {@link org.palladiosimulator.experimentautomation.variation.ValueVariation} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -85,7 +85,7 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.ValueVariation}. <!-- begin-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.variation.ValueVariation}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
      * @generated
@@ -101,7 +101,7 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.StructuralVariation} instances. <!--
+     * {@link org.palladiosimulator.experimentautomation.variation.StructuralVariation} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -110,7 +110,7 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.StructuralVariation}. <!--
+     * {@link org.palladiosimulator.experimentautomation.variation.StructuralVariation}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -126,7 +126,7 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.VariationRepository} instances. <!--
+     * {@link org.palladiosimulator.experimentautomation.variation.VariationRepository} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -135,7 +135,7 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.VariationRepository}. <!--
+     * {@link org.palladiosimulator.experimentautomation.variation.VariationRepository}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated

@@ -1,9 +1,9 @@
-package de.uka.ipd.sdq.experimentautomation.application.variation;
+package org.palladiosimulator.experimentautomation.application.variation;
 
 import org.eclipse.emf.ecore.EObject;
 
-import de.uka.ipd.sdq.experimentautomation.application.utils.EcoreHelper;
-import de.uka.ipd.sdq.experimentautomation.application.utils.PCMModelHelper;
+import org.palladiosimulator.experimentautomation.application.utils.EcoreHelper;
+import org.palladiosimulator.experimentautomation.application.utils.PCMModelHelper;
 import de.uka.ipd.sdq.pcm.seff.ForkAction;
 import de.uka.ipd.sdq.pcm.seff.ForkedBehaviour;
 

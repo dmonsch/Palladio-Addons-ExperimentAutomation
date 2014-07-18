@@ -4,14 +4,14 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments;
+package org.palladiosimulator.experimentautomation.experiments;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
  * <em><b>Full Factorial Design</b></em>'. <!-- end-user-doc -->
  *
  *
- * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getFullFactorialDesign()
+ * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getFullFactorialDesign()
  * @model
  * @generated
  */

@@ -1,7 +1,7 @@
-package de.uka.ipd.sdq.experimentautomation.application.jobs;
+package org.palladiosimulator.experimentautomation.application.jobs;
 
-import de.uka.ipd.sdq.experimentautomation.application.config.ExperimentAutomationConfiguration;
-import de.uka.ipd.sdq.experimentautomation.experiments.Experiment;
+import org.palladiosimulator.experimentautomation.application.config.ExperimentAutomationConfiguration;
+import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 import de.uka.ipd.sdq.workflow.pcm.jobs.PreparePCMBlackboardPartionJob;

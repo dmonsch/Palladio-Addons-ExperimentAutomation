@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl;
+package org.palladiosimulator.experimentautomation.abstractsimulation.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -8,8 +8,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.palladiosimulator.edp2.models.Repository.Repository;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>EDP2</b></em>'. <!--
@@ -17,7 +17,7 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.EDP2Impl#getRepository
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.EDP2Impl#getRepository
  * <em>Repository</em>}</li>
  * </ul>
  * </p>

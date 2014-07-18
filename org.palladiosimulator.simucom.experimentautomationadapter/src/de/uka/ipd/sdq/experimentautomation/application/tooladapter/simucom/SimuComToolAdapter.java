@@ -1,4 +1,4 @@
-package de.uka.ipd.sdq.experimentautomation.application.tooladapter.simucom;
+package org.palladiosimulator.experimentautomation.application.tooladapter.simucom;
 
 import java.util.List;
 
@@ -9,11 +9,11 @@ import org.palladiosimulator.simucom.simucomtooladapter.SimucomtooladapterPackag
 
 import de.uka.ipd.sdq.codegen.simucontroller.runconfig.SimuComWorkflowConfiguration;
 import de.uka.ipd.sdq.codegen.simucontroller.workflow.jobs.SimuComJob;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition;
-import de.uka.ipd.sdq.experimentautomation.application.tooladapter.IToolAdapter;
-import de.uka.ipd.sdq.experimentautomation.application.tooladapter.simucom.jobs.CleanUpRecorderJob;
-import de.uka.ipd.sdq.experimentautomation.experiments.InitialModel;
-import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
+import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
+import org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter;
+import org.palladiosimulator.experimentautomation.application.tooladapter.simucom.jobs.CleanUpRecorderJob;
+import org.palladiosimulator.experimentautomation.experiments.InitialModel;
+import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 import de.uka.ipd.sdq.simucomframework.SimuComConfig;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;

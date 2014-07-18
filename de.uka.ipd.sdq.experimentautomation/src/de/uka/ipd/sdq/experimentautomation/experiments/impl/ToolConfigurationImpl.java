@@ -4,15 +4,15 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.impl;
+package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Tool Configuration</b></em>
@@ -20,7 +20,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ToolConfigurationImpl#getName
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ToolConfigurationImpl#getName
  * <em>Name</em>}</li>
  * </ul>
  * </p>

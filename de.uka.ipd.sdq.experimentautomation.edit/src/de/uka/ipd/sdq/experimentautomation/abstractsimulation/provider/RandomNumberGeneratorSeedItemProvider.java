@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation.provider;
+package org.palladiosimulator.experimentautomation.abstractsimulation.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -19,13 +19,13 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
-import de.uka.ipd.sdq.experimentautomation.variation.provider.ExperimentAutomationEditPlugin;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
+import org.palladiosimulator.experimentautomation.variation.provider.ExperimentAutomationEditPlugin;
 
 /**
  * This is the item provider adapter for a
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed} object.
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed} object.
  * <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated

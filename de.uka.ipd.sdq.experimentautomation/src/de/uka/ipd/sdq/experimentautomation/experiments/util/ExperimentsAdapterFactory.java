@@ -4,41 +4,41 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.util;
+package org.palladiosimulator.experimentautomation.experiments.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.Experiment;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentDesign;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider;
-import de.uka.ipd.sdq.experimentautomation.experiments.FractionalFactorialDesign;
-import de.uka.ipd.sdq.experimentautomation.experiments.FullFactorialDesign;
-import de.uka.ipd.sdq.experimentautomation.experiments.InitialModel;
-import de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement;
-import de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider;
-import de.uka.ipd.sdq.experimentautomation.experiments.Modification;
-import de.uka.ipd.sdq.experimentautomation.experiments.OneFactorAtATime;
-import de.uka.ipd.sdq.experimentautomation.experiments.PlacketBurmanDesign;
-import de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider;
-import de.uka.ipd.sdq.experimentautomation.experiments.ProfilingMeasurement;
-import de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder;
-import de.uka.ipd.sdq.experimentautomation.experiments.ResponseMeasurement;
-import de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider;
-import de.uka.ipd.sdq.experimentautomation.experiments.SimulationDurationMeasurement;
-import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
-import de.uka.ipd.sdq.experimentautomation.experiments.ValueProvider;
-import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
+import org.palladiosimulator.experimentautomation.experiments.Experiment;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentDesign;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentRepository;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.FractionalFactorialDesign;
+import org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign;
+import org.palladiosimulator.experimentautomation.experiments.InitialModel;
+import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
+import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.Modification;
+import org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime;
+import org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign;
+import org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.ProfilingMeasurement;
+import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
+import org.palladiosimulator.experimentautomation.experiments.ResponseMeasurement;
+import org.palladiosimulator.experimentautomation.experiments.SetValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.SimulationDurationMeasurement;
+import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
+import org.palladiosimulator.experimentautomation.experiments.ValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.Variation;
 
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
  * <code>createXXX</code> method for each class of the model. <!-- end-user-doc -->
  * 
- * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage
+ * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
  * @generated
  */
 public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
@@ -212,13 +212,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository
+     * {@link org.palladiosimulator.experimentautomation.experiments.ExperimentRepository
      * <em>Experiment Repository</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentRepository
      * @generated
      */
     public Adapter createExperimentRepositoryAdapter() {
@@ -227,13 +227,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment <em>Experiment</em>}'. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment <em>Experiment</em>}'. <!--
      * begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Experiment
+     * @see org.palladiosimulator.experimentautomation.experiments.Experiment
      * @generated
      */
     public Adapter createExperimentAdapter() {
@@ -242,13 +242,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Variation <em>Variation</em>}'. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.Variation <em>Variation</em>}'. <!--
      * begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Variation
+     * @see org.palladiosimulator.experimentautomation.experiments.Variation
      * @generated
      */
     public Adapter createVariationAdapter() {
@@ -257,13 +257,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ValueProvider <em>Value Provider</em>}
+     * {@link org.palladiosimulator.experimentautomation.experiments.ValueProvider <em>Value Provider</em>}
      * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
      * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ValueProvider
+     * @see org.palladiosimulator.experimentautomation.experiments.ValueProvider
      * @generated
      */
     public Adapter createValueProviderAdapter() {
@@ -272,13 +272,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration
+     * {@link org.palladiosimulator.experimentautomation.experiments.ToolConfiguration
      * <em>Tool Configuration</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration
+     * @see org.palladiosimulator.experimentautomation.experiments.ToolConfiguration
      * @generated
      */
     public Adapter createToolConfigurationAdapter() {
@@ -287,13 +287,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ExperimentDesign
+     * {@link org.palladiosimulator.experimentautomation.experiments.ExperimentDesign
      * <em>Experiment Design</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentDesign
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentDesign
      * @generated
      */
     public Adapter createExperimentDesignAdapter() {
@@ -302,13 +302,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ResponseMeasurement
+     * {@link org.palladiosimulator.experimentautomation.experiments.ResponseMeasurement
      * <em>Response Measurement</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ResponseMeasurement
+     * @see org.palladiosimulator.experimentautomation.experiments.ResponseMeasurement
      * @generated
      */
     public Adapter createResponseMeasurementAdapter() {
@@ -317,13 +317,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider
+     * {@link org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider
      * <em>Polynomial Value Provider</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider
+     * @see org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider
      * @generated
      */
     public Adapter createPolynomialValueProviderAdapter() {
@@ -332,13 +332,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider
+     * {@link org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider
      * <em>Exponential Value Provider</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider
+     * @see org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider
      * @generated
      */
     public Adapter createExponentialValueProviderAdapter() {
@@ -347,13 +347,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider
+     * {@link org.palladiosimulator.experimentautomation.experiments.SetValueProvider
      * <em>Set Value Provider</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider
+     * @see org.palladiosimulator.experimentautomation.experiments.SetValueProvider
      * @generated
      */
     public Adapter createSetValueProviderAdapter() {
@@ -362,13 +362,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PlacketBurmanDesign
+     * {@link org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign
      * <em>Placket Burman Design</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.PlacketBurmanDesign
+     * @see org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign
      * @generated
      */
     public Adapter createPlacketBurmanDesignAdapter() {
@@ -377,13 +377,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.FullFactorialDesign
+     * {@link org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign
      * <em>Full Factorial Design</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.FullFactorialDesign
+     * @see org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign
      * @generated
      */
     public Adapter createFullFactorialDesignAdapter() {
@@ -392,13 +392,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.FractionalFactorialDesign
+     * {@link org.palladiosimulator.experimentautomation.experiments.FractionalFactorialDesign
      * <em>Fractional Factorial Design</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.FractionalFactorialDesign
+     * @see org.palladiosimulator.experimentautomation.experiments.FractionalFactorialDesign
      * @generated
      */
     public Adapter createFractionalFactorialDesignAdapter() {
@@ -407,13 +407,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.OneFactorAtATime
+     * {@link org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime
      * <em>One Factor At ATime</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.OneFactorAtATime
+     * @see org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime
      * @generated
      */
     public Adapter createOneFactorAtATimeAdapter() {
@@ -422,13 +422,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.SimulationDurationMeasurement
+     * {@link org.palladiosimulator.experimentautomation.experiments.SimulationDurationMeasurement
      * <em>Simulation Duration Measurement</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.SimulationDurationMeasurement
+     * @see org.palladiosimulator.experimentautomation.experiments.SimulationDurationMeasurement
      * @generated
      */
     public Adapter createSimulationDurationMeasurementAdapter() {
@@ -437,13 +437,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ProfilingMeasurement
+     * {@link org.palladiosimulator.experimentautomation.experiments.ProfilingMeasurement
      * <em>Profiling Measurement</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ProfilingMeasurement
+     * @see org.palladiosimulator.experimentautomation.experiments.ProfilingMeasurement
      * @generated
      */
     public Adapter createProfilingMeasurementAdapter() {
@@ -452,13 +452,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement
+     * {@link org.palladiosimulator.experimentautomation.experiments.JMXMeasurement
      * <em>JMX Measurement</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement
+     * @see org.palladiosimulator.experimentautomation.experiments.JMXMeasurement
      * @generated
      */
     public Adapter createJMXMeasurementAdapter() {
@@ -467,13 +467,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider
+     * {@link org.palladiosimulator.experimentautomation.experiments.LinearValueProvider
      * <em>Linear Value Provider</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider
+     * @see org.palladiosimulator.experimentautomation.experiments.LinearValueProvider
      * @generated
      */
     public Adapter createLinearValueProviderAdapter() {
@@ -482,13 +482,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Modification <em>Modification</em>}'.
+     * {@link org.palladiosimulator.experimentautomation.experiments.Modification <em>Modification</em>}'.
      * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Modification
+     * @see org.palladiosimulator.experimentautomation.experiments.Modification
      * @generated
      */
     public Adapter createModificationAdapter() {
@@ -497,13 +497,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel <em>Initial Model</em>}'.
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel <em>Initial Model</em>}'.
      * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.InitialModel
+     * @see org.palladiosimulator.experimentautomation.experiments.InitialModel
      * @generated
      */
     public Adapter createInitialModelAdapter() {
@@ -512,13 +512,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder
+     * {@link org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder
      * <em>Reconfiguration Rules Folder</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder
+     * @see org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder
      * @generated
      */
     public Adapter createReconfigurationRulesFolderAdapter() {

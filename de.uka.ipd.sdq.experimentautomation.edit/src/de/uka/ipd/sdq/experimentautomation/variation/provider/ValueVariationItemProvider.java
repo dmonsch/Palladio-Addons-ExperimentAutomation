@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.variation.provider;
+package org.palladiosimulator.experimentautomation.variation.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -13,11 +13,11 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
-import de.uka.ipd.sdq.experimentautomation.variation.ValueVariation;
+import org.palladiosimulator.experimentautomation.variation.ValueVariation;
 
 /**
  * This is the item provider adapter for a
- * {@link de.uka.ipd.sdq.experimentautomation.variation.ValueVariation} object. <!-- begin-user-doc
+ * {@link org.palladiosimulator.experimentautomation.variation.ValueVariation} object. <!-- begin-user-doc
  * --> <!-- end-user-doc -->
  * 
  * @generated

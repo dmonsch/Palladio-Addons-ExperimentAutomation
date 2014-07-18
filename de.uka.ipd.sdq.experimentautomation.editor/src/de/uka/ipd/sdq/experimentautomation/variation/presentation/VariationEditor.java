@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.variation.presentation;
+package org.palladiosimulator.experimentautomation.variation.presentation;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -126,9 +126,9 @@ import org.palladiosimulator.edp2.models.measuringpoint.provider.MeasuringpointI
 import org.palladiosimulator.metricspec.provider.MetricSpecItemProviderAdapterFactory;
 import org.palladiosimulator.simulizar.pms.provider.PmsItemProviderAdapterFactory;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.provider.AbstractsimulationItemProviderAdapterFactory;
-import de.uka.ipd.sdq.experimentautomation.experiments.provider.ExperimentsItemProviderAdapterFactory;
-import de.uka.ipd.sdq.experimentautomation.variation.provider.VariationItemProviderAdapterFactory;
+import org.palladiosimulator.experimentautomation.abstractsimulation.provider.AbstractsimulationItemProviderAdapterFactory;
+import org.palladiosimulator.experimentautomation.experiments.provider.ExperimentsItemProviderAdapterFactory;
+import org.palladiosimulator.experimentautomation.variation.provider.VariationItemProviderAdapterFactory;
 import de.uka.ipd.sdq.identifier.provider.IdentifierItemProviderAdapterFactory;
 import de.uka.ipd.sdq.pcm.allocation.provider.AllocationItemProviderAdapterFactory;
 import de.uka.ipd.sdq.pcm.core.composition.provider.CompositionItemProviderAdapterFactory;
@@ -584,7 +584,7 @@ public class VariationEditor extends MultiPageEditorPart implements IEditingDoma
     protected void updateProblemIndication() {
         if (updateProblemIndication) {
             BasicDiagnostic diagnostic = new BasicDiagnostic(Diagnostic.OK,
-                    "de.uka.ipd.sdq.experimentautomation.editor", 0, null,
+                    "org.palladiosimulator.experimentautomation.editor", 0, null,
                     new Object[] { editingDomain.getResourceSet() });
             for (Diagnostic childDiagnostic : resourceToDiagnosticMap.values()) {
                 if (childDiagnostic.getSeverity() != Diagnostic.OK) {
@@ -962,12 +962,12 @@ public class VariationEditor extends MultiPageEditorPart implements IEditingDoma
     public Diagnostic analyzeResourceProblems(Resource resource, Exception exception) {
         if (!resource.getErrors().isEmpty() || !resource.getWarnings().isEmpty()) {
             BasicDiagnostic basicDiagnostic = new BasicDiagnostic(Diagnostic.ERROR,
-                    "de.uka.ipd.sdq.experimentautomation.editor", 0, getString("_UI_CreateModelError_message",
+                    "org.palladiosimulator.experimentautomation.editor", 0, getString("_UI_CreateModelError_message",
                             resource.getURI()), new Object[] { exception == null ? (Object) resource : exception });
             basicDiagnostic.merge(EcoreUtil.computeDiagnostic(resource, true));
             return basicDiagnostic;
         } else if (exception != null) {
-            return new BasicDiagnostic(Diagnostic.ERROR, "de.uka.ipd.sdq.experimentautomation.editor", 0, getString(
+            return new BasicDiagnostic(Diagnostic.ERROR, "org.palladiosimulator.experimentautomation.editor", 0, getString(
                     "_UI_CreateModelError_message", resource.getURI()), new Object[] { exception });
         } else {
             return Diagnostic.OK_INSTANCE;

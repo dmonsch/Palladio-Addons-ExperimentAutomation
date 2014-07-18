@@ -1,10 +1,10 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
+package org.palladiosimulator.experimentautomation.abstractsimulation;
 
 import org.eclipse.emf.common.util.EList;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
+import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
@@ -14,27 +14,27 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
  * The following features are supported:
  * <ul>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getPersistenceFramework
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getPersistenceFramework
  * <em>Persistence Framework</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getStopConditions
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getStopConditions
  * <em>Stop Conditions</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed
  * <em>Random Number Generator Seed</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateLinkingResources
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateLinkingResources
  * <em>Simulate Linking Resources</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
  * <em>Simulate Failures</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration
  * <em>Probe Spec Configuration</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration()
+ * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration()
  * @model abstract="true"
  * @generated
  */
@@ -50,7 +50,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * 
      * @return the value of the '<em>Persistence Framework</em>' containment reference.
      * @see #setPersistenceFramework(PersistenceFramework)
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_PersistenceFramework()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_PersistenceFramework()
      * @model containment="true" required="true" ordered="false"
      * @generated
      */
@@ -58,7 +58,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getPersistenceFramework
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getPersistenceFramework
      * <em>Persistence Framework</em>}' containment reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      * 
@@ -72,7 +72,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
     /**
      * Returns the value of the '<em><b>Stop Conditions</b></em>' containment reference list. The
      * list contents are of type
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition}. <!--
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition}. <!--
      * begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Stop Conditions</em>' containment reference list isn't clear,
@@ -81,7 +81,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * <!-- end-user-doc -->
      * 
      * @return the value of the '<em>Stop Conditions</em>' containment reference list.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_StopConditions()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_StopConditions()
      * @model containment="true" required="true" ordered="false"
      * @generated
      */
@@ -98,7 +98,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * 
      * @return the value of the '<em>Random Number Generator Seed</em>' containment reference.
      * @see #setRandomNumberGeneratorSeed(RandomNumberGeneratorSeed)
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_RandomNumberGeneratorSeed()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_RandomNumberGeneratorSeed()
      * @model containment="true" ordered="false"
      * @generated
      */
@@ -106,7 +106,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed
      * <em>Random Number Generator Seed</em>}' containment reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      * 
@@ -129,7 +129,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * 
      * @return the value of the '<em>Simulate Linking Resources</em>' attribute.
      * @see #setSimulateLinkingResources(boolean)
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_SimulateLinkingResources()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_SimulateLinkingResources()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -137,7 +137,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateLinkingResources
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateLinkingResources
      * <em>Simulate Linking Resources</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
      * 
@@ -159,7 +159,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * 
      * @return the value of the '<em>Simulate Failures</em>' attribute.
      * @see #setSimulateFailures(boolean)
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_SimulateFailures()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_SimulateFailures()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -167,7 +167,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
      * <em>Simulate Failures</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -188,7 +188,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * 
      * @return the value of the '<em>Probe Spec Configuration</em>' containment reference.
      * @see #setProbeSpecConfiguration(ProbeSpecConfiguration)
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_ProbeSpecConfiguration()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_ProbeSpecConfiguration()
      * @model containment="true" required="true" ordered="false"
      * @generated
      */
@@ -196,7 +196,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration
      * <em>Probe Spec Configuration</em>}' containment reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      * 

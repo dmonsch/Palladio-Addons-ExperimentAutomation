@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation.provider;
+package org.palladiosimulator.experimentautomation.abstractsimulation.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -12,12 +12,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition;
 
 /**
  * This is the item provider adapter for a
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition} object. <!--
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated

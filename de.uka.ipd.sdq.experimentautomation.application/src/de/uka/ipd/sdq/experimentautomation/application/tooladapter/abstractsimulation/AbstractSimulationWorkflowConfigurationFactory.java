@@ -1,7 +1,7 @@
-package de.uka.ipd.sdq.experimentautomation.application.tooladapter.abstractsimulation;
+package org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation;
 
 import de.uka.ipd.sdq.codegen.simucontroller.runconfig.AbstractSimulationWorkflowConfiguration;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
 import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
 import de.uka.ipd.sdq.workflow.pcm.ConstantsContainer;
 import de.uka.ipd.sdq.workflow.pcm.configurations.AbstractCodeGenerationWorkflowRunConfiguration.CodeGenerationAdvice;

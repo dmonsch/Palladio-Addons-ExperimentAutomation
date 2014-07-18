@@ -1,18 +1,18 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: de.uka.ipd.sdq.experimentautomation.edit;singleton:=true
+Bundle-SymbolicName: org.palladiosimulator.experimentautomation.edit;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: de.uka.ipd.sdq.experimentautomation.variation.provider.ExperimentAutomationEditPlugin$Implementation
+Bundle-Activator: org.palladiosimulator.experimentautomation.variation.provider.ExperimentAutomationEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: de.uka.ipd.sdq.experimentautomation.abstractsimulation.provider,
- de.uka.ipd.sdq.experimentautomation.experiments.provider,
- de.uka.ipd.sdq.experimentautomation.variation.provider
+Export-Package: org.palladiosimulator.experimentautomation.abstractsimulation.provider,
+ org.palladiosimulator.experimentautomation.experiments.provider,
+ org.palladiosimulator.experimentautomation.variation.provider
 Require-Bundle: org.eclipse.core.runtime,
- de.uka.ipd.sdq.experimentautomation;visibility:=reexport,
+ org.palladiosimulator.experimentautomation;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  org.palladiosimulator.edp2;visibility:=reexport,
  org.palladiosimulator.edp2.edit;visibility:=reexport,

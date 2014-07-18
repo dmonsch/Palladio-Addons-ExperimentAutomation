@@ -1,4 +1,4 @@
-package de.uka.ipd.sdq.experimentautomation.application;
+package org.palladiosimulator.experimentautomation.application;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,8 +8,8 @@ import org.eclipse.equinox.app.IApplication;
 import org.eclipse.equinox.app.IApplicationContext;
 import org.osgi.framework.Bundle;
 
-import de.uka.ipd.sdq.experimentautomation.application.config.ExperimentAutomationConfiguration;
-import de.uka.ipd.sdq.experimentautomation.application.jobs.RunExperimentsAutomationJob;
+import org.palladiosimulator.experimentautomation.application.config.ExperimentAutomationConfiguration;
+import org.palladiosimulator.experimentautomation.application.jobs.RunExperimentsAutomationJob;
 import de.uka.ipd.sdq.workflow.BlackboardBasedWorkflow;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 

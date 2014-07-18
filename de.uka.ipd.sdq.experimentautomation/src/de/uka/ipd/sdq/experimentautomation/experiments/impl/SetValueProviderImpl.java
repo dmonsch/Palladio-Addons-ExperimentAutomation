@@ -4,14 +4,14 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.impl;
+package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.SetValueProvider;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Set Value Provider</b></em>
@@ -19,7 +19,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.SetValueProviderImpl#getValues
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.SetValueProviderImpl#getValues
  * <em>Values</em>}</li>
  * </ul>
  * </p>

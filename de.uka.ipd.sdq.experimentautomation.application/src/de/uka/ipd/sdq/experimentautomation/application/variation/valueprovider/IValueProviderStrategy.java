@@ -1,4 +1,4 @@
-package de.uka.ipd.sdq.experimentautomation.application.variation.valueprovider;
+package org.palladiosimulator.experimentautomation.application.variation.valueprovider;
 
 public interface IValueProviderStrategy {
 

@@ -1,11 +1,11 @@
-package de.uka.ipd.sdq.experimentautomation.application.variation.valueprovider;
+package org.palladiosimulator.experimentautomation.application.variation.valueprovider;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider;
-import de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider;
-import de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider;
-import de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider;
-import de.uka.ipd.sdq.experimentautomation.experiments.ValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.SetValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.ValueProvider;
 
 public class ValueProviderFactory {
 

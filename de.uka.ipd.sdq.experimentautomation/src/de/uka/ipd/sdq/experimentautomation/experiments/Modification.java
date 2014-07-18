@@ -1,10 +1,10 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.experiments;
+package org.palladiosimulator.experimentautomation.experiments;
 
 import org.eclipse.emf.ecore.EObject;
 
-import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
+import org.palladiosimulator.experimentautomation.variation.VariationType;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Modification</b></em>'. <!--
@@ -13,15 +13,15 @@ import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Modification#getType <em>Type</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Modification#getName <em>Name</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Modification#getVariedObjectId <em>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Modification#getType <em>Type</em>}</li>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Modification#getName <em>Name</em>}</li>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Modification#getVariedObjectId <em>
  * Varied Object Id</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Modification#getValue <em>Value</em>}</li>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Modification#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getModification()
+ * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getModification()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface Modification extends EObject {
      * 
      * @return the value of the '<em>Type</em>' reference.
      * @see #setType(VariationType)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getModification_Type()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getModification_Type()
      * @model
      * @generated
      */
@@ -44,7 +44,7 @@ public interface Modification extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Modification#getType <em>Type</em>}'
+     * {@link org.palladiosimulator.experimentautomation.experiments.Modification#getType <em>Type</em>}'
      * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -64,7 +64,7 @@ public interface Modification extends EObject {
      * 
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getModification_Name()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getModification_Name()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -72,7 +72,7 @@ public interface Modification extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Modification#getName <em>Name</em>}'
+     * {@link org.palladiosimulator.experimentautomation.experiments.Modification#getName <em>Name</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -93,7 +93,7 @@ public interface Modification extends EObject {
      * 
      * @return the value of the '<em>Varied Object Id</em>' attribute.
      * @see #setVariedObjectId(String)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getModification_VariedObjectId()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getModification_VariedObjectId()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -101,7 +101,7 @@ public interface Modification extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Modification#getVariedObjectId
+     * {@link org.palladiosimulator.experimentautomation.experiments.Modification#getVariedObjectId
      * <em>Varied Object Id</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -121,7 +121,7 @@ public interface Modification extends EObject {
      * 
      * @return the value of the '<em>Value</em>' attribute.
      * @see #setValue(long)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getModification_Value()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getModification_Value()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -129,7 +129,7 @@ public interface Modification extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Modification#getValue <em>Value</em>}'
+     * {@link org.palladiosimulator.experimentautomation.experiments.Modification#getValue <em>Value</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value

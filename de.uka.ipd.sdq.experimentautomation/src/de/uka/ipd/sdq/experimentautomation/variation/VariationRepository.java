@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.variation;
+package org.palladiosimulator.experimentautomation.variation;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -16,19 +16,19 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.variation.VariationRepository#getVariation <em>
+ * <li>{@link org.palladiosimulator.experimentautomation.variation.VariationRepository#getVariation <em>
  * Variation</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.variation.VariationPackage#getVariationRepository()
+ * @see org.palladiosimulator.experimentautomation.variation.VariationPackage#getVariationRepository()
  * @model
  * @generated
  */
 public interface VariationRepository extends EObject {
     /**
      * Returns the value of the '<em><b>Variation</b></em>' containment reference list. The list
-     * contents are of type {@link de.uka.ipd.sdq.experimentautomation.variation.VariationType}.
+     * contents are of type {@link org.palladiosimulator.experimentautomation.variation.VariationType}.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Variation</em>' containment reference list isn't clear, there
@@ -37,7 +37,7 @@ public interface VariationRepository extends EObject {
      * <!-- end-user-doc -->
      * 
      * @return the value of the '<em>Variation</em>' containment reference list.
-     * @see de.uka.ipd.sdq.experimentautomation.variation.VariationPackage#getVariationRepository_Variation()
+     * @see org.palladiosimulator.experimentautomation.variation.VariationPackage#getVariationRepository_Variation()
      * @model containment="true" ordered="false"
      * @generated
      */

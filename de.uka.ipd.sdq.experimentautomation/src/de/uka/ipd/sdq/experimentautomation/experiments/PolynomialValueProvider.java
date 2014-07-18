@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments;
+package org.palladiosimulator.experimentautomation.experiments;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
@@ -13,14 +13,14 @@ package de.uka.ipd.sdq.experimentautomation.experiments;
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider#getExponent
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider#getExponent
  * <em>Exponent</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider#getFactor <em>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider#getFactor <em>
  * Factor</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getPolynomialValueProvider()
+ * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getPolynomialValueProvider()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface PolynomialValueProvider extends ValueProvider {
      * 
      * @return the value of the '<em>Exponent</em>' attribute.
      * @see #setExponent(double)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getPolynomialValueProvider_Exponent()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getPolynomialValueProvider_Exponent()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -43,7 +43,7 @@ public interface PolynomialValueProvider extends ValueProvider {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider#getExponent
+     * {@link org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider#getExponent
      * <em>Exponent</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -63,7 +63,7 @@ public interface PolynomialValueProvider extends ValueProvider {
      * 
      * @return the value of the '<em>Factor</em>' attribute.
      * @see #setFactor(double)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getPolynomialValueProvider_Factor()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getPolynomialValueProvider_Factor()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -71,7 +71,7 @@ public interface PolynomialValueProvider extends ValueProvider {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider#getFactor
+     * {@link org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider#getFactor
      * <em>Factor</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value

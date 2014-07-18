@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments;
+package org.palladiosimulator.experimentautomation.experiments;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Set Value Provider</b></em>
@@ -13,12 +13,12 @@ package de.uka.ipd.sdq.experimentautomation.experiments;
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider#getValues <em>Values
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.SetValueProvider#getValues <em>Values
  * </em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getSetValueProvider()
+ * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getSetValueProvider()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface SetValueProvider extends ValueProvider {
      * 
      * @return the value of the '<em>Values</em>' attribute.
      * @see #setValues(String)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getSetValueProvider_Values()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getSetValueProvider_Values()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -41,7 +41,7 @@ public interface SetValueProvider extends ValueProvider {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider#getValues
+     * {@link org.palladiosimulator.experimentautomation.experiments.SetValueProvider#getValues
      * <em>Values</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value

@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Application
-Bundle-SymbolicName: de.uka.ipd.sdq.experimentautomation.application;singleton:=true
+Bundle-SymbolicName: org.palladiosimulator.experimentautomation.application;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: de.uka.ipd.sdq.experimentautomation.application.Activator
+Bundle-Activator: org.palladiosimulator.experimentautomation.application.Activator
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
@@ -19,7 +19,7 @@ Require-Bundle: org.eclipse.core.runtime,
  de.uka.ipd.sdq.workflow.pcm;bundle-version="1.0.0",
  de.uka.ipd.sdq.simulation;bundle-version="1.0.0",
  de.uka.ipd.sdq.simucomframework.simucomstatus;bundle-version="1.0.0",
- de.uka.ipd.sdq.experimentautomation;bundle-version="1.0.0",
+ org.palladiosimulator.experimentautomation;bundle-version="1.0.0",
  org.palladiosimulator.recorderframework.sensorframework;bundle-version="2.0.1",
  org.palladiosimulator.edp2;bundle-version="2.0.0",
  org.palladiosimulator.recorderframework.edp2;bundle-version="2.0.1",
@@ -27,11 +27,11 @@ Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.edp2.util;bundle-version="1.0.0",
  org.palladiosimulator.commons
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: de.uka.ipd.sdq.experimentautomation.application.jobs,
- de.uka.ipd.sdq.experimentautomation.application.tooladapter,
- de.uka.ipd.sdq.experimentautomation.application.tooladapter.abstractsimulation,
- de.uka.ipd.sdq.experimentautomation.application.tooladapter.abstractsimulation.sensorframework,
- de.uka.ipd.sdq.experimentautomation.application.utils,
- de.uka.ipd.sdq.experimentautomation.application.variation
+Export-Package: org.palladiosimulator.experimentautomation.application.jobs,
+ org.palladiosimulator.experimentautomation.application.tooladapter,
+ org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation,
+ org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.sensorframework,
+ org.palladiosimulator.experimentautomation.application.utils,
+ org.palladiosimulator.experimentautomation.application.variation
 Bundle-ClassPath: .
 Bundle-ActivationPolicy: lazy

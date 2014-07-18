@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
+package org.palladiosimulator.experimentautomation.abstractsimulation;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>File Datasource</b></em>'.
@@ -9,12 +9,12 @@ package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource#getLocation <em>
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource#getLocation <em>
  * Location</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getFileDatasource()
+ * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getFileDatasource()
  * @model
  * @generated
  */
@@ -29,7 +29,7 @@ public interface FileDatasource extends SensorFrameworkDatasource {
      * 
      * @return the value of the '<em>Location</em>' attribute.
      * @see #setLocation(String)
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getFileDatasource_Location()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getFileDatasource_Location()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -37,7 +37,7 @@ public interface FileDatasource extends SensorFrameworkDatasource {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource#getLocation
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource#getLocation
      * <em>Location</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value

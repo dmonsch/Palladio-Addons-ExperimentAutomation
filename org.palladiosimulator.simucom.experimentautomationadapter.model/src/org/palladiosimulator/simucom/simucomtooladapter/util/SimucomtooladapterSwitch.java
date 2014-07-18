@@ -8,8 +8,8 @@ import org.eclipse.emf.ecore.util.Switch;
 import org.palladiosimulator.simucom.simucomtooladapter.SimuComConfiguration;
 import org.palladiosimulator.simucom.simucomtooladapter.SimucomtooladapterPackage;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
-import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
+import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 
 /**
  * <!-- begin-user-doc --> The <b>Switch</b> for the model's inheritance hierarchy. It supports the

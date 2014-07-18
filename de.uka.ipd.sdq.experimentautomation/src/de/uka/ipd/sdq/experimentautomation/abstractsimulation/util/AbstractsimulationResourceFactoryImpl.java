@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation.util;
+package org.palladiosimulator.experimentautomation.abstractsimulation.util;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.xmi.XMLResource;
  * <!-- begin-user-doc --> The <b>Resource Factory</b> associated with the package. <!--
  * end-user-doc -->
  * 
- * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.util.AbstractsimulationResourceImpl
+ * @see org.palladiosimulator.experimentautomation.abstractsimulation.util.AbstractsimulationResourceImpl
  * @generated
  */
 public class AbstractsimulationResourceFactoryImpl extends ResourceFactoryImpl {

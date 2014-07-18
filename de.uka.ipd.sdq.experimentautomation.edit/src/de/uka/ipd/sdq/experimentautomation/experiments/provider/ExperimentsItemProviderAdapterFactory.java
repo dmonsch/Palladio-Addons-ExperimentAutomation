@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.provider;
+package org.palladiosimulator.experimentautomation.experiments.provider;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.util.ExperimentsAdapterFactory;
+import org.palladiosimulator.experimentautomation.experiments.util.ExperimentsAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers. The
@@ -76,7 +76,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository} instances. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.ExperimentRepository} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -85,7 +85,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository}. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.ExperimentRepository}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -101,7 +101,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment} instances. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -110,7 +110,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment}. <!-- begin-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
      * @generated
@@ -126,7 +126,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Variation} instances. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.Variation} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -135,7 +135,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Variation}. <!-- begin-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.experiments.Variation}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
      * @generated
@@ -151,7 +151,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider} instances.
+     * {@link org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -160,7 +160,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider}. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -176,7 +176,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider} instances.
+     * {@link org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -185,7 +185,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider}. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -201,7 +201,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider} instances. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.SetValueProvider} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -210,7 +210,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider}. <!-- begin-user-doc
+     * {@link org.palladiosimulator.experimentautomation.experiments.SetValueProvider}. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      * 
      * @generated
@@ -226,7 +226,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PlacketBurmanDesign} instances. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -235,7 +235,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PlacketBurmanDesign}. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -251,7 +251,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.FullFactorialDesign} instances. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -260,7 +260,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.FullFactorialDesign}. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -276,7 +276,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.FractionalFactorialDesign} instances.
+     * {@link org.palladiosimulator.experimentautomation.experiments.FractionalFactorialDesign} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -285,7 +285,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.FractionalFactorialDesign}. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.FractionalFactorialDesign}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -301,7 +301,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.OneFactorAtATime} instances. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -310,7 +310,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.OneFactorAtATime}. <!-- begin-user-doc
+     * {@link org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime}. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      * 
      * @generated
@@ -326,7 +326,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.SimulationDurationMeasurement}
+     * {@link org.palladiosimulator.experimentautomation.experiments.SimulationDurationMeasurement}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -335,7 +335,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.SimulationDurationMeasurement}. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.SimulationDurationMeasurement}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -351,7 +351,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ProfilingMeasurement} instances. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.ProfilingMeasurement} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -360,7 +360,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ProfilingMeasurement}. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.ProfilingMeasurement}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -376,7 +376,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement} instances. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.JMXMeasurement} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -385,7 +385,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement}. <!-- begin-user-doc
+     * {@link org.palladiosimulator.experimentautomation.experiments.JMXMeasurement}. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      * 
      * @generated
@@ -401,7 +401,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider} instances. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.LinearValueProvider} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -410,7 +410,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider}. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.LinearValueProvider}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -426,7 +426,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Modification} instances. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.Modification} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -435,7 +435,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Modification}. <!-- begin-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.experiments.Modification}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
      * @generated
@@ -451,7 +451,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel} instances. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -460,7 +460,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel}. <!-- begin-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
      * @generated
@@ -476,7 +476,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder} instances.
+     * {@link org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
@@ -485,7 +485,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder}. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated

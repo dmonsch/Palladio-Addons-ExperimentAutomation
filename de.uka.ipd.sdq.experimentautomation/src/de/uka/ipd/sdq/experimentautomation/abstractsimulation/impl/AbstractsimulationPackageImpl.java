@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl;
+package org.palladiosimulator.experimentautomation.abstractsimulation.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -11,24 +11,24 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.palladiosimulator.edp2.models.Repository.RepositoryPackage;
 import org.palladiosimulator.simulizar.pms.PmsPackage;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationFactory;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.MemoryDatasource;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.PersistenceFramework;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFrameworkDatasource;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationPackage;
-import de.uka.ipd.sdq.experimentautomation.variation.impl.VariationPackageImpl;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationFactory;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType;
+import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource;
+import org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
+import org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource;
+import org.palladiosimulator.experimentautomation.abstractsimulation.PersistenceFramework;
+import org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration;
+import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFrameworkDatasource;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition;
+import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl;
+import org.palladiosimulator.experimentautomation.variation.VariationPackage;
+import org.palladiosimulator.experimentautomation.variation.impl.VariationPackageImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!-- end-user-doc -->
@@ -137,7 +137,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      * package, if one already exists. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see org.eclipse.emf.ecore.EPackage.Registry
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#eNS_URI
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#eNS_URI
      * @see #init()
      * @generated
      */
@@ -725,10 +725,10 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
         initEClass(stopConditionEClass, StopCondition.class, "StopCondition", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
 
-        initEClass(edp2EClass, de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2.class, "EDP2", !IS_ABSTRACT,
+        initEClass(edp2EClass, org.palladiosimulator.experimentautomation.abstractsimulation.EDP2.class, "EDP2", !IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getEDP2_Repository(), theRepositoryPackage.getRepository(), null, "repository", null, 1, 1,
-                de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2.class, !IS_TRANSIENT, !IS_VOLATILE,
+                org.palladiosimulator.experimentautomation.abstractsimulation.EDP2.class, !IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals

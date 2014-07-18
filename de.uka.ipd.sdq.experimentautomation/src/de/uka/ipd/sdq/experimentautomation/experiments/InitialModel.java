@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.experiments;
+package org.palladiosimulator.experimentautomation.experiments;
 
 import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.simulizar.pms.PMSModel;
@@ -16,24 +16,24 @@ import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getUsageModel <em>Usage
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getUsageModel <em>Usage
  * Model</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getAllocation <em>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getAllocation <em>
  * Allocation</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getMiddlewareRepository
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getMiddlewareRepository
  * <em>Middleware Repository</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getEventMiddleWareRepository
+ * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getEventMiddleWareRepository
  * <em>Event Middle Ware Repository</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getReconfigurationRules
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getReconfigurationRules
  * <em>Reconfiguration Rules</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getPlatformMonitoringSpecification
+ * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getPlatformMonitoringSpecification
  * <em>Platform Monitoring Specification</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getInitialModel()
+ * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel()
  * @model
  * @generated
  */
@@ -48,7 +48,7 @@ public interface InitialModel extends EObject {
      * 
      * @return the value of the '<em>Usage Model</em>' reference.
      * @see #setUsageModel(UsageModel)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getInitialModel_UsageModel()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_UsageModel()
      * @model required="true"
      * @generated
      */
@@ -56,7 +56,7 @@ public interface InitialModel extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getUsageModel
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getUsageModel
      * <em>Usage Model</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -76,7 +76,7 @@ public interface InitialModel extends EObject {
      * 
      * @return the value of the '<em>Allocation</em>' reference.
      * @see #setAllocation(Allocation)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getInitialModel_Allocation()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_Allocation()
      * @model required="true"
      * @generated
      */
@@ -84,7 +84,7 @@ public interface InitialModel extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getAllocation
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getAllocation
      * <em>Allocation</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -105,7 +105,7 @@ public interface InitialModel extends EObject {
      * 
      * @return the value of the '<em>Middleware Repository</em>' reference.
      * @see #setMiddlewareRepository(Repository)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getInitialModel_MiddlewareRepository()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_MiddlewareRepository()
      * @model required="true"
      * @generated
      */
@@ -113,7 +113,7 @@ public interface InitialModel extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getMiddlewareRepository
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getMiddlewareRepository
      * <em>Middleware Repository</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -134,7 +134,7 @@ public interface InitialModel extends EObject {
      * 
      * @return the value of the '<em>Event Middle Ware Repository</em>' reference.
      * @see #setEventMiddleWareRepository(Repository)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getInitialModel_EventMiddleWareRepository()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_EventMiddleWareRepository()
      * @model required="true"
      * @generated
      */
@@ -142,7 +142,7 @@ public interface InitialModel extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getEventMiddleWareRepository
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getEventMiddleWareRepository
      * <em>Event Middle Ware Repository</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
      * 
@@ -164,7 +164,7 @@ public interface InitialModel extends EObject {
      * 
      * @return the value of the '<em>Reconfiguration Rules</em>' reference.
      * @see #setReconfigurationRules(ReconfigurationRulesFolder)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getInitialModel_ReconfigurationRules()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_ReconfigurationRules()
      * @model
      * @generated
      */
@@ -172,7 +172,7 @@ public interface InitialModel extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getReconfigurationRules
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getReconfigurationRules
      * <em>Reconfiguration Rules</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -193,7 +193,7 @@ public interface InitialModel extends EObject {
      * 
      * @return the value of the '<em>Platform Monitoring Specification</em>' reference.
      * @see #setPlatformMonitoringSpecification(PMSModel)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getInitialModel_PlatformMonitoringSpecification()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_PlatformMonitoringSpecification()
      * @model
      * @generated
      */
@@ -201,7 +201,7 @@ public interface InitialModel extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getPlatformMonitoringSpecification
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getPlatformMonitoringSpecification
      * <em>Platform Monitoring Specification</em>}' reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      * 

@@ -8,35 +8,35 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="http://sdq.ipd.uka.de/ExperimentAutomation/Variation/1.0"
-            class="de.uka.ipd.sdq.experimentautomation.variation.VariationPackage"
+            uri="http://palladiosimulator.org/ExperimentAutomation/Variation/1.0"
+            class="org.palladiosimulator.experimentautomation.variation.VariationPackage"
             genModel="model/ExperimentAutomation.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <parser
             type="variation"
-            class="de.uka.ipd.sdq.experimentautomation.variation.util.VariationResourceFactoryImpl"/>
+            class="org.palladiosimulator.experimentautomation.variation.util.VariationResourceFactoryImpl"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="http://sdq.ipd.uka.de/ExperimentAutomation/Experiments/1.0"
-            class="de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage"
+            uri="http://palladiosimulator.org/ExperimentAutomation/Experiments/1.0"
+            class="org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage"
             genModel="model/ExperimentAutomation.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <parser
             type="experiments"
-            class="de.uka.ipd.sdq.experimentautomation.experiments.util.ExperimentsResourceFactoryImpl"/>
+            class="org.palladiosimulator.experimentautomation.experiments.util.ExperimentsResourceFactoryImpl"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated ExperimentAutomation -->
       <package
-            uri="http://sdq.ipd.uka.de/ExperimentAutomation/AbstractSimulation/1.0"
-            class="de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage"
+            uri="http://palladiosimulator.org/ExperimentAutomation/AbstractSimulation/1.0"
+            class="org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage"
             genModel="model/ExperimentAutomation.genmodel"/>
    </extension>
 
@@ -44,20 +44,20 @@
       <!-- @generated ExperimentAutomation -->
       <parser
             type="abstractsimulation"
-            class="de.uka.ipd.sdq.experimentautomation.abstractsimulation.util.AbstractsimulationResourceFactoryImpl"/>
+            class="org.palladiosimulator.experimentautomation.abstractsimulation.util.AbstractsimulationResourceFactoryImpl"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="http://sdq.ipd.uka.de/ExperimentAutomation/AbstractSimulation/1.0"
-            class="de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage"
+            uri="http://palladiosimulator.org/ExperimentAutomation/AbstractSimulation/1.0"
+            class="org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage"
             genModel="model/ExperimentAutomation.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <parser
             type="abstractsimulation"
-            class="de.uka.ipd.sdq.experimentautomation.abstractsimulation.util.AbstractsimulationResourceFactoryImpl"/>
+            class="org.palladiosimulator.experimentautomation.abstractsimulation.util.AbstractsimulationResourceFactoryImpl"/>
    </extension>
 
 </plugin>

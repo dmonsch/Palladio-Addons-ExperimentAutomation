@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl;
+package org.palladiosimulator.experimentautomation.abstractsimulation.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -9,17 +9,17 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationFactory;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.MemoryDatasource;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationFactory;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType;
+import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2;
+import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource;
+import org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
+import org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource;
+import org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration;
+import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->

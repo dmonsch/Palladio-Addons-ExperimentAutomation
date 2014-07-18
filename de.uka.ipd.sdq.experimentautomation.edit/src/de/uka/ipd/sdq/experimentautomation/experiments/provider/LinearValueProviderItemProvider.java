@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.provider;
+package org.palladiosimulator.experimentautomation.experiments.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -12,12 +12,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
 
 /**
  * This is the item provider adapter for a
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider} object. <!--
+ * {@link org.palladiosimulator.experimentautomation.experiments.LinearValueProvider} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated

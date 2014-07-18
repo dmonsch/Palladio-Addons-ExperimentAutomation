@@ -1,13 +1,13 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl;
+package org.palladiosimulator.experimentautomation.abstractsimulation.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>File Datasource</b></em>'.
@@ -16,7 +16,7 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource;
  * The following features are implemented:
  * <ul>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.FileDatasourceImpl#getLocation
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.FileDatasourceImpl#getLocation
  * <em>Location</em>}</li>
  * </ul>
  * </p>

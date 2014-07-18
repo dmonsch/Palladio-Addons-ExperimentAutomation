@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments;
+package org.palladiosimulator.experimentautomation.experiments;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -16,19 +16,19 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository#getExperiments
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.ExperimentRepository#getExperiments
  * <em>Experiments</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperimentRepository()
+ * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperimentRepository()
  * @model
  * @generated
  */
 public interface ExperimentRepository extends EObject {
     /**
      * Returns the value of the '<em><b>Experiments</b></em>' containment reference list. The list
-     * contents are of type {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment}. <!--
+     * contents are of type {@link org.palladiosimulator.experimentautomation.experiments.Experiment}. <!--
      * begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Experiments</em>' containment reference list isn't clear, there
@@ -37,7 +37,7 @@ public interface ExperimentRepository extends EObject {
      * <!-- end-user-doc -->
      * 
      * @return the value of the '<em>Experiments</em>' containment reference list.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperimentRepository_Experiments()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperimentRepository_Experiments()
      * @model containment="true" ordered="false"
      * @generated
      */

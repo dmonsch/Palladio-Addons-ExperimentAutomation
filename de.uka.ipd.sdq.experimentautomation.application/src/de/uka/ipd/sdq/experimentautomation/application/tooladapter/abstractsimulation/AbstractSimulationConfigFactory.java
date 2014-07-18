@@ -1,4 +1,4 @@
-package de.uka.ipd.sdq.experimentautomation.application.tooladapter.abstractsimulation;
+package org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation;
 
 import java.util.HashMap;
 import java.util.List;
@@ -9,16 +9,16 @@ import org.palladiosimulator.edp2.models.Repository.Repository;
 import org.palladiosimulator.recorderframework.edp2.EDP2RecorderConfigurationFactory;
 import org.palladiosimulator.recorderframework.sensorframework.SensorFrameworkRecorderConfigurationFactory;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFrameworkDatasource;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition;
-import de.uka.ipd.sdq.experimentautomation.application.tooladapter.abstractsimulation.sensorframework.SensorFrameworkFactory;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2;
+import org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
+import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFrameworkDatasource;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition;
+import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
+import org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.sensorframework.SensorFrameworkFactory;
 import de.uka.ipd.sdq.sensorframework.entities.dao.IDAOFactory;
 import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
 

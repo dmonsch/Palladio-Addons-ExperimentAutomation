@@ -1,4 +1,4 @@
-package de.uka.ipd.sdq.experimentautomation.application.config;
+package org.palladiosimulator.experimentautomation.application.config;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,11 +14,11 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.osgi.framework.Bundle;
 import org.palladiosimulator.commons.emfutils.EMFCopyHelper;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.Experiment;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationPackage;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationRepository;
+import org.palladiosimulator.experimentautomation.experiments.Experiment;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentRepository;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.variation.VariationPackage;
+import org.palladiosimulator.experimentautomation.variation.VariationRepository;
 
 public class ExperimentAutomationConfiguration {
 

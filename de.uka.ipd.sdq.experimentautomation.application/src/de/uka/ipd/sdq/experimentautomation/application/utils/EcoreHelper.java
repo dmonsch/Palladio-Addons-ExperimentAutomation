@@ -1,4 +1,4 @@
-package de.uka.ipd.sdq.experimentautomation.application.utils;
+package org.palladiosimulator.experimentautomation.application.utils;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;

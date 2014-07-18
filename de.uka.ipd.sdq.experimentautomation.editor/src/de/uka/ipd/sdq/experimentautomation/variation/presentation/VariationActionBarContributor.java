@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.variation.presentation;
+package org.palladiosimulator.experimentautomation.variation.presentation;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -173,7 +173,7 @@ public class VariationActionBarContributor extends EditingDomainActionBarContrib
 
         IMenuManager submenuManager = new MenuManager(
                 ExperimentAutomationEditorPlugin.INSTANCE.getString("_UI_VariationEditor_menu"),
-                "de.uka.ipd.sdq.experimentautomation.variationMenuID");
+                "org.palladiosimulator.experimentautomation.variationMenuID");
         menuManager.insertAfter("additions", submenuManager);
         submenuManager.add(new Separator("settings"));
         submenuManager.add(new Separator("actions"));

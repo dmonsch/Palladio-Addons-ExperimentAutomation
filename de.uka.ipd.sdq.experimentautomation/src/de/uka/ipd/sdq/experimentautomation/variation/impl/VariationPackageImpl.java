@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.variation.impl;
+package org.palladiosimulator.experimentautomation.variation.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -13,16 +13,16 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.palladiosimulator.simulizar.pms.PmsPackage;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl;
-import de.uka.ipd.sdq.experimentautomation.variation.StructuralVariation;
-import de.uka.ipd.sdq.experimentautomation.variation.ValueVariation;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationFactory;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationPackage;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationRepository;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl;
+import org.palladiosimulator.experimentautomation.variation.StructuralVariation;
+import org.palladiosimulator.experimentautomation.variation.ValueVariation;
+import org.palladiosimulator.experimentautomation.variation.VariationFactory;
+import org.palladiosimulator.experimentautomation.variation.VariationPackage;
+import org.palladiosimulator.experimentautomation.variation.VariationRepository;
+import org.palladiosimulator.experimentautomation.variation.VariationType;
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
 
 /**
@@ -69,7 +69,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
      * package, if one already exists. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @see org.eclipse.emf.ecore.EPackage.Registry
-     * @see de.uka.ipd.sdq.experimentautomation.variation.VariationPackage#eNS_URI
+     * @see org.palladiosimulator.experimentautomation.variation.VariationPackage#eNS_URI
      * @see #init()
      * @generated
      */

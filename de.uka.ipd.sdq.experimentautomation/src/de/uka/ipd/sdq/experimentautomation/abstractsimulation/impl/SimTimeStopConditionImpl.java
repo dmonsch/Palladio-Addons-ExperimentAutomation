@@ -1,13 +1,13 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl;
+package org.palladiosimulator.experimentautomation.abstractsimulation.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -16,7 +16,7 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopConditi
  * The following features are implemented:
  * <ul>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl#getSimulationTime
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl#getSimulationTime
  * <em>Simulation Time</em>}</li>
  * </ul>
  * </p>

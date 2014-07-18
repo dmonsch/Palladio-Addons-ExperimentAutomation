@@ -1,4 +1,4 @@
-package de.uka.ipd.sdq.experimentautomation.application.jobs;
+package org.palladiosimulator.experimentautomation.application.jobs;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,17 +6,17 @@ import java.util.List;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
-import de.uka.ipd.sdq.experimentautomation.application.config.ExperimentAutomationConfiguration;
-import de.uka.ipd.sdq.experimentautomation.application.tooladapter.AnalysisToolFactory;
-import de.uka.ipd.sdq.experimentautomation.application.tooladapter.IToolAdapter;
-import de.uka.ipd.sdq.experimentautomation.application.utils.EcoreHelper;
-import de.uka.ipd.sdq.experimentautomation.application.variation.IVariationStrategy;
-import de.uka.ipd.sdq.experimentautomation.application.variation.VariationStrategyFactory;
-import de.uka.ipd.sdq.experimentautomation.application.variation.valueprovider.IValueProviderStrategy;
-import de.uka.ipd.sdq.experimentautomation.application.variation.valueprovider.ValueProviderFactory;
-import de.uka.ipd.sdq.experimentautomation.experiments.Experiment;
-import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
-import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
+import org.palladiosimulator.experimentautomation.application.config.ExperimentAutomationConfiguration;
+import org.palladiosimulator.experimentautomation.application.tooladapter.AnalysisToolFactory;
+import org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter;
+import org.palladiosimulator.experimentautomation.application.utils.EcoreHelper;
+import org.palladiosimulator.experimentautomation.application.variation.IVariationStrategy;
+import org.palladiosimulator.experimentautomation.application.variation.VariationStrategyFactory;
+import org.palladiosimulator.experimentautomation.application.variation.valueprovider.IValueProviderStrategy;
+import org.palladiosimulator.experimentautomation.application.variation.valueprovider.ValueProviderFactory;
+import org.palladiosimulator.experimentautomation.experiments.Experiment;
+import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
+import org.palladiosimulator.experimentautomation.experiments.Variation;
 import de.uka.ipd.sdq.workflow.jobs.IJob;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;

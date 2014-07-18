@@ -1,32 +1,32 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation.util;
+package org.palladiosimulator.experimentautomation.abstractsimulation.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.MemoryDatasource;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.PersistenceFramework;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFrameworkDatasource;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition;
-import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2;
+import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource;
+import org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
+import org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource;
+import org.palladiosimulator.experimentautomation.abstractsimulation.PersistenceFramework;
+import org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration;
+import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFrameworkDatasource;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition;
+import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
+import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
  * <code>createXXX</code> method for each class of the model. <!-- end-user-doc -->
  * 
- * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage
+ * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage
  * @generated
  */
 public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
@@ -160,13 +160,13 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
      * <em>Abstract Simulation Configuration</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
      * @generated
      */
     public Adapter createAbstractSimulationConfigurationAdapter() {
@@ -175,13 +175,13 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.PersistenceFramework
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.PersistenceFramework
      * <em>Persistence Framework</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.PersistenceFramework
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.PersistenceFramework
      * @generated
      */
     public Adapter createPersistenceFrameworkAdapter() {
@@ -190,13 +190,13 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed
      * <em>Random Number Generator Seed</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed
      * @generated
      */
     public Adapter createRandomNumberGeneratorSeedAdapter() {
@@ -205,13 +205,13 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration
      * <em>Probe Spec Configuration</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration
      * @generated
      */
     public Adapter createProbeSpecConfigurationAdapter() {
@@ -220,13 +220,13 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework
      * <em>Sensor Framework</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework
      * @generated
      */
     public Adapter createSensorFrameworkAdapter() {
@@ -235,13 +235,13 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFrameworkDatasource
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SensorFrameworkDatasource
      * <em>Sensor Framework Datasource</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFrameworkDatasource
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.SensorFrameworkDatasource
      * @generated
      */
     public Adapter createSensorFrameworkDatasourceAdapter() {
@@ -250,13 +250,13 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.MemoryDatasource
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource
      * <em>Memory Datasource</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.MemoryDatasource
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource
      * @generated
      */
     public Adapter createMemoryDatasourceAdapter() {
@@ -265,13 +265,13 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource
      * <em>File Datasource</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource
      * @generated
      */
     public Adapter createFileDatasourceAdapter() {
@@ -280,13 +280,13 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition
      * <em>Measurement Count Stop Condition</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition
      * @generated
      */
     public Adapter createMeasurementCountStopConditionAdapter() {
@@ -295,13 +295,13 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition
      * <em>Sim Time Stop Condition</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition
      * @generated
      */
     public Adapter createSimTimeStopConditionAdapter() {
@@ -310,13 +310,13 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition
      * <em>Stop Condition</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition
      * @generated
      */
     public Adapter createStopConditionAdapter() {
@@ -325,13 +325,13 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2 <em>EDP2</em>}'. <!--
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.EDP2 <em>EDP2</em>}'. <!--
      * begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.EDP2
      * @generated
      */
     public Adapter createEDP2Adapter() {
@@ -340,13 +340,13 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration
+     * {@link org.palladiosimulator.experimentautomation.experiments.ToolConfiguration
      * <em>Tool Configuration</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration
+     * @see org.palladiosimulator.experimentautomation.experiments.ToolConfiguration
      * @generated
      */
     public Adapter createToolConfigurationAdapter() {

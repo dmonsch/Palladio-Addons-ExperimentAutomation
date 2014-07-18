@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments;
+package org.palladiosimulator.experimentautomation.experiments;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
@@ -13,12 +13,12 @@ package de.uka.ipd.sdq.experimentautomation.experiments;
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider#getBase <em>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider#getBase <em>
  * Base</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExponentialValueProvider()
+ * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExponentialValueProvider()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface ExponentialValueProvider extends ValueProvider {
      * 
      * @return the value of the '<em>Base</em>' attribute.
      * @see #setBase(double)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExponentialValueProvider_Base()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExponentialValueProvider_Base()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -41,7 +41,7 @@ public interface ExponentialValueProvider extends ValueProvider {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider#getBase
+     * {@link org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider#getBase
      * <em>Base</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value

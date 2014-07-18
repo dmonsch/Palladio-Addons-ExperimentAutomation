@@ -4,25 +4,25 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.variation.util;
+package org.palladiosimulator.experimentautomation.variation.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 
-import de.uka.ipd.sdq.experimentautomation.variation.StructuralVariation;
-import de.uka.ipd.sdq.experimentautomation.variation.ValueVariation;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationPackage;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationRepository;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
+import org.palladiosimulator.experimentautomation.variation.StructuralVariation;
+import org.palladiosimulator.experimentautomation.variation.ValueVariation;
+import org.palladiosimulator.experimentautomation.variation.VariationPackage;
+import org.palladiosimulator.experimentautomation.variation.VariationRepository;
+import org.palladiosimulator.experimentautomation.variation.VariationType;
 import de.uka.ipd.sdq.identifier.Identifier;
 
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
  * <code>createXXX</code> method for each class of the model. <!-- end-user-doc -->
  * 
- * @see de.uka.ipd.sdq.experimentautomation.variation.VariationPackage
+ * @see org.palladiosimulator.experimentautomation.variation.VariationPackage
  * @generated
  */
 public class VariationAdapterFactory extends AdapterFactoryImpl {
@@ -116,13 +116,13 @@ public class VariationAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.VariationType <em>Type</em>}'. <!--
+     * {@link org.palladiosimulator.experimentautomation.variation.VariationType <em>Type</em>}'. <!--
      * begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.variation.VariationType
+     * @see org.palladiosimulator.experimentautomation.variation.VariationType
      * @generated
      */
     public Adapter createVariationTypeAdapter() {
@@ -131,13 +131,13 @@ public class VariationAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.ValueVariation <em>Value Variation</em>}
+     * {@link org.palladiosimulator.experimentautomation.variation.ValueVariation <em>Value Variation</em>}
      * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
      * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.variation.ValueVariation
+     * @see org.palladiosimulator.experimentautomation.variation.ValueVariation
      * @generated
      */
     public Adapter createValueVariationAdapter() {
@@ -146,13 +146,13 @@ public class VariationAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.StructuralVariation
+     * {@link org.palladiosimulator.experimentautomation.variation.StructuralVariation
      * <em>Structural Variation</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.variation.StructuralVariation
+     * @see org.palladiosimulator.experimentautomation.variation.StructuralVariation
      * @generated
      */
     public Adapter createStructuralVariationAdapter() {
@@ -161,13 +161,13 @@ public class VariationAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.VariationRepository <em>Repository</em>}
+     * {@link org.palladiosimulator.experimentautomation.variation.VariationRepository <em>Repository</em>}
      * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
      * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.variation.VariationRepository
+     * @see org.palladiosimulator.experimentautomation.variation.VariationRepository
      * @generated
      */
     public Adapter createVariationRepositoryAdapter() {

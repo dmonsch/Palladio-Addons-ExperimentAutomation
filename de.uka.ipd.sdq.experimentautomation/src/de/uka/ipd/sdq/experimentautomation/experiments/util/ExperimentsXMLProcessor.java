@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.util;
+package org.palladiosimulator.experimentautomation.experiments.util;
 
 import java.util.Map;
 
@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.util.XMLProcessor;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 
 /**
  * This class contains helper methods to serialize and deserialize XML documents <!-- begin-user-doc

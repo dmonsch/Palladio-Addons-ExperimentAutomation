@@ -1,6 +1,6 @@
-package de.uka.ipd.sdq.experimentautomation.application.variation;
+package org.palladiosimulator.experimentautomation.application.variation;
 
-//package de.uka.ipd.sdq.experimentautomation.variation;
+//package org.palladiosimulator.experimentautomation.variation;
 //
 //import org.eclipse.emf.ecore.EObject;
 //

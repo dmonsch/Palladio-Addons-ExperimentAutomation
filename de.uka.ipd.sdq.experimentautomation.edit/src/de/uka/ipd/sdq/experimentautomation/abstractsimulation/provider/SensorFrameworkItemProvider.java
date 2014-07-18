@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation.provider;
+package org.palladiosimulator.experimentautomation.abstractsimulation.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -11,13 +11,13 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationFactory;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationFactory;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework;
 
 /**
  * This is the item provider adapter for a
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework} object. <!--
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated

@@ -1,4 +1,4 @@
 /**
  * @author Sebastian Lehrig
  */
-package de.uka.ipd.sdq.experimentautomation.application.config;
+package org.palladiosimulator.experimentautomation.application.config;

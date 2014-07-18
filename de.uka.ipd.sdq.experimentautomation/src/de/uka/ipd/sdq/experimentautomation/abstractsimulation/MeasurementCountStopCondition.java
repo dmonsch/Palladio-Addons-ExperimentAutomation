@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
+package org.palladiosimulator.experimentautomation.abstractsimulation;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
@@ -10,12 +10,12 @@ package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
  * The following features are supported:
  * <ul>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition#getMeasurementCount
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition#getMeasurementCount
  * <em>Measurement Count</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getMeasurementCountStopCondition()
+ * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getMeasurementCountStopCondition()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface MeasurementCountStopCondition extends StopCondition {
      * 
      * @return the value of the '<em>Measurement Count</em>' attribute.
      * @see #setMeasurementCount(int)
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getMeasurementCountStopCondition_MeasurementCount()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getMeasurementCountStopCondition_MeasurementCount()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -39,7 +39,7 @@ public interface MeasurementCountStopCondition extends StopCondition {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition#getMeasurementCount
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition#getMeasurementCount
      * <em>Measurement Count</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value

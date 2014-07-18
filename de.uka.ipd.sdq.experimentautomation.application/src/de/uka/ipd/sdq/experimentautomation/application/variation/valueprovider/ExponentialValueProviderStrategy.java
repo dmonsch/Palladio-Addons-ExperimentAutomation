@@ -1,6 +1,6 @@
-package de.uka.ipd.sdq.experimentautomation.application.variation.valueprovider;
+package org.palladiosimulator.experimentautomation.application.variation.valueprovider;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider;
 
 public class ExponentialValueProviderStrategy implements IValueProviderStrategy {
 

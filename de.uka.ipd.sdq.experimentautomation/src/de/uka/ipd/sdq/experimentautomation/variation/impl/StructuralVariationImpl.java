@@ -4,12 +4,12 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.variation.impl;
+package org.palladiosimulator.experimentautomation.variation.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import de.uka.ipd.sdq.experimentautomation.variation.StructuralVariation;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationPackage;
+import org.palladiosimulator.experimentautomation.variation.StructuralVariation;
+import org.palladiosimulator.experimentautomation.variation.VariationPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

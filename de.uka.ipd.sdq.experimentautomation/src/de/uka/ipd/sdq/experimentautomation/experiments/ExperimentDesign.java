@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments;
+package org.palladiosimulator.experimentautomation.experiments;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getExperimentDesign()
+ * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperimentDesign()
  * @model abstract="true"
  * @generated
  */

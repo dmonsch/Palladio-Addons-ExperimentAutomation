@@ -1,4 +1,4 @@
-//package de.uka.ipd.sdq.experimentautomation.application.variation;
+//package org.palladiosimulator.experimentautomation.application.variation;
 //
 //import de.uka.ipd.sdq.pcm.core.CoreFactory;
 //import de.uka.ipd.sdq.pcm.core.PCMRandomVariable;

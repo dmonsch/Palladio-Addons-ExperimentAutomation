@@ -4,34 +4,34 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.util;
+package org.palladiosimulator.experimentautomation.experiments.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.Experiment;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentDesign;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider;
-import de.uka.ipd.sdq.experimentautomation.experiments.FractionalFactorialDesign;
-import de.uka.ipd.sdq.experimentautomation.experiments.FullFactorialDesign;
-import de.uka.ipd.sdq.experimentautomation.experiments.InitialModel;
-import de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement;
-import de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider;
-import de.uka.ipd.sdq.experimentautomation.experiments.Modification;
-import de.uka.ipd.sdq.experimentautomation.experiments.OneFactorAtATime;
-import de.uka.ipd.sdq.experimentautomation.experiments.PlacketBurmanDesign;
-import de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider;
-import de.uka.ipd.sdq.experimentautomation.experiments.ProfilingMeasurement;
-import de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder;
-import de.uka.ipd.sdq.experimentautomation.experiments.ResponseMeasurement;
-import de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider;
-import de.uka.ipd.sdq.experimentautomation.experiments.SimulationDurationMeasurement;
-import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
-import de.uka.ipd.sdq.experimentautomation.experiments.ValueProvider;
-import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
+import org.palladiosimulator.experimentautomation.experiments.Experiment;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentDesign;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentRepository;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.FractionalFactorialDesign;
+import org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign;
+import org.palladiosimulator.experimentautomation.experiments.InitialModel;
+import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
+import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.Modification;
+import org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime;
+import org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign;
+import org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.ProfilingMeasurement;
+import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
+import org.palladiosimulator.experimentautomation.experiments.ResponseMeasurement;
+import org.palladiosimulator.experimentautomation.experiments.SetValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.SimulationDurationMeasurement;
+import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
+import org.palladiosimulator.experimentautomation.experiments.ValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.Variation;
 
 /**
  * <!-- begin-user-doc --> The <b>Switch</b> for the model's inheritance hierarchy. It supports the
@@ -40,7 +40,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
  * inheritance hierarchy until a non-null result is returned, which is the result of the switch.
  * <!-- end-user-doc -->
  * 
- * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage
+ * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
  * @generated
  */
 public class ExperimentsSwitch<T> extends Switch<T> {

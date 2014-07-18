@@ -4,14 +4,14 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.impl;
+package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -20,10 +20,10 @@ import de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider;
  * The following features are implemented:
  * <ul>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.PolynomialValueProviderImpl#getExponent
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.PolynomialValueProviderImpl#getExponent
  * <em>Exponent</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.PolynomialValueProviderImpl#getFactor
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.PolynomialValueProviderImpl#getFactor
  * <em>Factor</em>}</li>
  * </ul>
  * </p>

@@ -1,10 +1,10 @@
-package de.uka.ipd.sdq.experimentautomation.application.tooladapter.abstractsimulation.sensorframework;
+package org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.sensorframework;
 
 import org.eclipse.core.runtime.Path;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFrameworkDatasource;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFrameworkDatasource;
 import de.uka.ipd.sdq.sensorframework.SensorFrameworkDataset;
 import de.uka.ipd.sdq.sensorframework.dao.file.FileDAOFactory;
 import de.uka.ipd.sdq.sensorframework.dao.memory.MemoryDAOFactory;

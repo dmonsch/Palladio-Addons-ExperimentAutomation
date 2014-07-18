@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
-    modelDirectory="/de.uka.ipd.sdq.experimentautomation/src" modelPluginID="de.uka.ipd.sdq.experimentautomation"
-    modelName="ExperimentAutomation" testsDirectory="/de.uka.ipd.sdq.experimentautomation.tests/src"
-    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
-    testsPluginID="de.uka.ipd.sdq.experimentautomation.tests" usedGenPackages="platform:/plugin/org.palladiosimulator.edp2/model/EDP2.genmodel#//models platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.genmodel#//metricspec platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.genmodel#//pcm ../../org.palladiosimulator.simulizar.pms/model/pms.genmodel#//pms platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel#//units">
+    modelDirectory="/org.palladiosimulator.experimentautomation/src"
+    modelPluginID="org.palladiosimulator.experimentautomation" modelName="ExperimentAutomation"
+    testsDirectory="/org.palladiosimulator.experimentautomation.tests/src" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" testsPluginID="org.palladiosimulator.experimentautomation.tests"
+    usedGenPackages="platform:/plugin/org.palladiosimulator.edp2/model/EDP2.genmodel#//models platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.genmodel#//metricspec platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.genmodel#//pcm ../../org.palladiosimulator.simulizar.pms/model/pms.genmodel#//pms platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel#//units">
   <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
     <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
     <details key="UNION_PROPERTIES" value="REPORT"/>
@@ -24,9 +25,9 @@
     <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
   </genAnnotations>
   <foreignModel>experimentautomation.ecore</foreignModel>
-  <genPackages xsi:type="genmodel:GenPackage" prefix="ExperimentAutomation" basePackage="de.uka.ipd.sdq"
+  <genPackages xsi:type="genmodel:GenPackage" prefix="ExperimentAutomation" basePackage="org.palladiosimulator"
       disposableProviderFactory="true" ecorePackage="experimentautomation.ecore#/">
-    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Variation" basePackage="de.uka.ipd.sdq.experimentautomation"
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Variation" basePackage="org.palladiosimulator.experimentautomation"
         resource="XML" disposableProviderFactory="true" ecorePackage="experimentautomation.ecore#//variation">
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="experimentautomation.ecore#//variation/VariationType">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//variation/VariationType/name"/>
@@ -40,7 +41,7 @@
             createChild="true" ecoreFeature="ecore:EReference experimentautomation.ecore#//variation/VariationRepository/variation"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Experiments" basePackage="de.uka.ipd.sdq.experimentautomation"
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Experiments" basePackage="org.palladiosimulator.experimentautomation"
         resource="XML" disposableProviderFactory="true" ecorePackage="experimentautomation.ecore#//experiments">
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//experiments/ExperimentRepository">
         <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
@@ -132,7 +133,7 @@
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Abstractsimulation"
-        basePackage="de.uka.ipd.sdq.experimentautomation" resource="XML" disposableProviderFactory="true"
+        basePackage="org.palladiosimulator.experimentautomation" resource="XML" disposableProviderFactory="true"
         ecorePackage="experimentautomation.ecore#//abstractsimulation">
       <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="experimentautomation.ecore#//abstractsimulation/BlackboardType">
         <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="experimentautomation.ecore#//abstractsimulation/BlackboardType/SIMPLE"/>

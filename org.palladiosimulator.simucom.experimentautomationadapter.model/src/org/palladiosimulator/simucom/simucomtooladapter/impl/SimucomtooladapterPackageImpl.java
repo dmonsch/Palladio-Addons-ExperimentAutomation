@@ -9,9 +9,9 @@ import org.palladiosimulator.simucom.simucomtooladapter.SimuComConfiguration;
 import org.palladiosimulator.simucom.simucomtooladapter.SimucomtooladapterFactory;
 import org.palladiosimulator.simucom.simucomtooladapter.SimucomtooladapterPackage;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.variation.VariationPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!-- end-user-doc -->

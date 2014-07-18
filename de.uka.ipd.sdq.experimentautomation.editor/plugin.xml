@@ -15,9 +15,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="de.uka.ipd.sdq.experimentautomation.variation.presentation.VariationModelWizardID"
+            id="org.palladiosimulator.experimentautomation.variation.presentation.VariationModelWizardID"
             name="%_UI_VariationModelWizard_label"
-            class="de.uka.ipd.sdq.experimentautomation.variation.presentation.VariationModelWizard"
+            class="org.palladiosimulator.experimentautomation.variation.presentation.VariationModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/VariationModelFile.gif">
          <description>%_UI_VariationModelWizard_description</description>
@@ -30,12 +30,12 @@ null
    <extension point="org.eclipse.ui.editors">
       <!-- @generated ExperimentAutomation -->
       <editor
-            id="de.uka.ipd.sdq.experimentautomation.abstractsimulation.presentation.AbstractsimulationEditorID"
+            id="org.palladiosimulator.experimentautomation.abstractsimulation.presentation.AbstractsimulationEditorID"
             name="%_UI_AbstractsimulationEditor_label"
             icon="icons/full/obj16/AbstractsimulationModelFile.gif"
             extensions="abstractsimulation"
-            class="de.uka.ipd.sdq.experimentautomation.abstractsimulation.presentation.AbstractsimulationEditor"
-            contributorClass="de.uka.ipd.sdq.experimentautomation.abstractsimulation.presentation.AbstractsimulationActionBarContributor">
+            class="org.palladiosimulator.experimentautomation.abstractsimulation.presentation.AbstractsimulationEditor"
+            contributorClass="org.palladiosimulator.experimentautomation.abstractsimulation.presentation.AbstractsimulationActionBarContributor">
       </editor>
    </extension>
 
@@ -43,12 +43,12 @@ null
 null
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="de.uka.ipd.sdq.experimentautomation.variation.presentation.VariationEditorID"
+            id="org.palladiosimulator.experimentautomation.variation.presentation.VariationEditorID"
             name="%_UI_VariationEditor_label"
             icon="icons/full/obj16/VariationModelFile.gif"
             extensions="variation"
-            class="de.uka.ipd.sdq.experimentautomation.variation.presentation.VariationEditor"
-            contributorClass="de.uka.ipd.sdq.experimentautomation.variation.presentation.VariationActionBarContributor">
+            class="org.palladiosimulator.experimentautomation.variation.presentation.VariationEditor"
+            contributorClass="org.palladiosimulator.experimentautomation.variation.presentation.VariationActionBarContributor">
       </editor>
    </extension>
 
@@ -58,9 +58,9 @@ null
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="de.uka.ipd.sdq.experimentautomation.experiments.presentation.ExperimentsModelWizardID"
+            id="org.palladiosimulator.experimentautomation.experiments.presentation.ExperimentsModelWizardID"
             name="%_UI_ExperimentsModelWizard_label"
-            class="de.uka.ipd.sdq.experimentautomation.experiments.presentation.ExperimentsModelWizard"
+            class="org.palladiosimulator.experimentautomation.experiments.presentation.ExperimentsModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/ExperimentsModelFile.gif">
          <description>%_UI_ExperimentsModelWizard_description</description>
@@ -79,9 +79,9 @@ null
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="de.uka.ipd.sdq.experimentautomation.experiments.presentation.ExperimentsModelWizardID"
+            id="org.palladiosimulator.experimentautomation.experiments.presentation.ExperimentsModelWizardID"
             name="%_UI_ExperimentsModelWizard_label"
-            class="de.uka.ipd.sdq.experimentautomation.experiments.presentation.ExperimentsModelWizard"
+            class="org.palladiosimulator.experimentautomation.experiments.presentation.ExperimentsModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/ExperimentsModelFile.gif">
          <description>%_UI_ExperimentsModelWizard_description</description>
@@ -91,12 +91,12 @@ null
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="de.uka.ipd.sdq.experimentautomation.experiments.presentation.ExperimentsEditorID"
+            id="org.palladiosimulator.experimentautomation.experiments.presentation.ExperimentsEditorID"
             name="%_UI_ExperimentsEditor_label"
             icon="icons/full/obj16/ExperimentsModelFile.gif"
             extensions="experiments"
-            class="de.uka.ipd.sdq.experimentautomation.experiments.presentation.ExperimentsEditor"
-            contributorClass="de.uka.ipd.sdq.experimentautomation.experiments.presentation.ExperimentsActionBarContributor">
+            class="org.palladiosimulator.experimentautomation.experiments.presentation.ExperimentsEditor"
+            contributorClass="org.palladiosimulator.experimentautomation.experiments.presentation.ExperimentsActionBarContributor">
       </editor>
    </extension>
 
@@ -106,9 +106,9 @@ null
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="de.uka.ipd.sdq.experimentautomation.abstractsimulation.presentation.AbstractsimulationModelWizardID"
+            id="org.palladiosimulator.experimentautomation.abstractsimulation.presentation.AbstractsimulationModelWizardID"
             name="%_UI_AbstractsimulationModelWizard_label"
-            class="de.uka.ipd.sdq.experimentautomation.abstractsimulation.presentation.AbstractsimulationModelWizard"
+            class="org.palladiosimulator.experimentautomation.abstractsimulation.presentation.AbstractsimulationModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/AbstractsimulationModelFile.gif">
          <description>%_UI_AbstractsimulationModelWizard_description</description>
@@ -127,9 +127,9 @@ null
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="de.uka.ipd.sdq.experimentautomation.abstractsimulation.presentation.AbstractSimulationModelWizardID"
+            id="org.palladiosimulator.experimentautomation.abstractsimulation.presentation.AbstractSimulationModelWizardID"
             name="%_UI_AbstractSimulationModelWizard_label"
-            class="de.uka.ipd.sdq.experimentautomation.abstractsimulation.presentation.AbstractsimulationModelWizard"
+            class="org.palladiosimulator.experimentautomation.abstractsimulation.presentation.AbstractsimulationModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/AbstractsimulationModelFile.gif">
          <description>%_UI_AbstractSimulationModelWizard_description</description>
@@ -139,12 +139,12 @@ null
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="de.uka.ipd.sdq.experimentautomation.abstractsimulation.presentation.AbstractSimulationEditorID"
+            id="org.palladiosimulator.experimentautomation.abstractsimulation.presentation.AbstractSimulationEditorID"
             name="%_UI_AbstractSimulationEditor_label"
             icon="icons/full/obj16/AbstractsimulationModelFile.gif"
             extensions="abstractsimulation"
-            class="de.uka.ipd.sdq.experimentautomation.abstractsimulation.presentation.AbstractsimulationEditor"
-            contributorClass="de.uka.ipd.sdq.experimentautomation.abstractsimulation.presentation.AbstractsimulationActionBarContributor">
+            class="org.palladiosimulator.experimentautomation.abstractsimulation.presentation.AbstractsimulationEditor"
+            contributorClass="org.palladiosimulator.experimentautomation.abstractsimulation.presentation.AbstractsimulationActionBarContributor">
       </editor>
    </extension>
 

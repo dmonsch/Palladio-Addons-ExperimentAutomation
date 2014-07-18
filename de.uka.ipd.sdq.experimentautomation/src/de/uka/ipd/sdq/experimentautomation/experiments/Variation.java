@@ -4,11 +4,11 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments;
+package org.palladiosimulator.experimentautomation.experiments;
 
 import org.eclipse.emf.ecore.EObject;
 
-import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
+import org.palladiosimulator.experimentautomation.variation.VariationType;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Variation</b></em>'. <!--
@@ -17,22 +17,22 @@ import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getType <em>Type</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getValueProvider <em>Value
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Variation#getType <em>Type</em>}</li>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Variation#getValueProvider <em>Value
  * Provider</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getMinValue <em>Min Value
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Variation#getMinValue <em>Min Value
  * </em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getMaxValue <em>Max Value
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Variation#getMaxValue <em>Max Value
  * </em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getMaxVariations <em>Max
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Variation#getMaxVariations <em>Max
  * Variations</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getVariedObjectId <em>Varied
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Variation#getVariedObjectId <em>Varied
  * Object Id</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getName <em>Name</em>}</li>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.Variation#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getVariation()
+ * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getVariation()
  * @model
  * @generated
  */
@@ -47,7 +47,7 @@ public interface Variation extends EObject {
      * 
      * @return the value of the '<em>Type</em>' reference.
      * @see #setType(VariationType)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getVariation_Type()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getVariation_Type()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -55,7 +55,7 @@ public interface Variation extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getType <em>Type</em>}'
+     * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getType <em>Type</em>}'
      * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -76,7 +76,7 @@ public interface Variation extends EObject {
      * 
      * @return the value of the '<em>Value Provider</em>' containment reference.
      * @see #setValueProvider(ValueProvider)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getVariation_ValueProvider()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getVariation_ValueProvider()
      * @model containment="true" required="true" ordered="false"
      * @generated
      */
@@ -84,7 +84,7 @@ public interface Variation extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getValueProvider
+     * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getValueProvider
      * <em>Value Provider</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
      * 
@@ -105,7 +105,7 @@ public interface Variation extends EObject {
      * 
      * @return the value of the '<em>Min Value</em>' attribute.
      * @see #setMinValue(long)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getVariation_MinValue()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getVariation_MinValue()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -113,7 +113,7 @@ public interface Variation extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getMinValue
+     * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getMinValue
      * <em>Min Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -133,7 +133,7 @@ public interface Variation extends EObject {
      * 
      * @return the value of the '<em>Max Value</em>' attribute.
      * @see #setMaxValue(long)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getVariation_MaxValue()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getVariation_MaxValue()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -141,7 +141,7 @@ public interface Variation extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getMaxValue
+     * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getMaxValue
      * <em>Max Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -161,7 +161,7 @@ public interface Variation extends EObject {
      * 
      * @return the value of the '<em>Max Variations</em>' attribute.
      * @see #setMaxVariations(long)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getVariation_MaxVariations()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getVariation_MaxVariations()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -169,7 +169,7 @@ public interface Variation extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getMaxVariations
+     * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getMaxVariations
      * <em>Max Variations</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -190,7 +190,7 @@ public interface Variation extends EObject {
      * 
      * @return the value of the '<em>Varied Object Id</em>' attribute.
      * @see #setVariedObjectId(String)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getVariation_VariedObjectId()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getVariation_VariedObjectId()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -198,7 +198,7 @@ public interface Variation extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getVariedObjectId
+     * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getVariedObjectId
      * <em>Varied Object Id</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -218,7 +218,7 @@ public interface Variation extends EObject {
      * 
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getVariation_Name()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getVariation_Name()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -226,7 +226,7 @@ public interface Variation extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getName <em>Name</em>}'
+     * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getName <em>Name</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value

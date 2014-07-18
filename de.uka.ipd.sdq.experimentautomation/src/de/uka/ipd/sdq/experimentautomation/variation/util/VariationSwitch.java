@@ -4,17 +4,17 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.variation.util;
+package org.palladiosimulator.experimentautomation.variation.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 
-import de.uka.ipd.sdq.experimentautomation.variation.StructuralVariation;
-import de.uka.ipd.sdq.experimentautomation.variation.ValueVariation;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationPackage;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationRepository;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
+import org.palladiosimulator.experimentautomation.variation.StructuralVariation;
+import org.palladiosimulator.experimentautomation.variation.ValueVariation;
+import org.palladiosimulator.experimentautomation.variation.VariationPackage;
+import org.palladiosimulator.experimentautomation.variation.VariationRepository;
+import org.palladiosimulator.experimentautomation.variation.VariationType;
 import de.uka.ipd.sdq.identifier.Identifier;
 
 /**
@@ -24,7 +24,7 @@ import de.uka.ipd.sdq.identifier.Identifier;
  * inheritance hierarchy until a non-null result is returned, which is the result of the switch.
  * <!-- end-user-doc -->
  * 
- * @see de.uka.ipd.sdq.experimentautomation.variation.VariationPackage
+ * @see org.palladiosimulator.experimentautomation.variation.VariationPackage
  * @generated
  */
 public class VariationSwitch<T> extends Switch<T> {

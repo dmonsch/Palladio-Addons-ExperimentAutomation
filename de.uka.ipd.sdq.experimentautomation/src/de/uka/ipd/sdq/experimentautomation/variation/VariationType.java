@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.variation;
+package org.palladiosimulator.experimentautomation.variation;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -17,15 +17,15 @@ import de.uka.ipd.sdq.identifier.Identifier;
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.variation.VariationType#getName <em>Name</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.variation.VariationType#getStrategyClass <em>
+ * <li>{@link org.palladiosimulator.experimentautomation.variation.VariationType#getName <em>Name</em>}</li>
+ * <li>{@link org.palladiosimulator.experimentautomation.variation.VariationType#getStrategyClass <em>
  * Strategy Class</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.variation.VariationType#getVariedEntityInterface
+ * <li>{@link org.palladiosimulator.experimentautomation.variation.VariationType#getVariedEntityInterface
  * <em>Varied Entity Interface</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.variation.VariationPackage#getVariationType()
+ * @see org.palladiosimulator.experimentautomation.variation.VariationPackage#getVariationType()
  * @model abstract="true"
  * @generated
  */
@@ -40,7 +40,7 @@ public interface VariationType extends EObject, Identifier {
      * 
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see de.uka.ipd.sdq.experimentautomation.variation.VariationPackage#getVariationType_Name()
+     * @see org.palladiosimulator.experimentautomation.variation.VariationPackage#getVariationType_Name()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -48,7 +48,7 @@ public interface VariationType extends EObject, Identifier {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.VariationType#getName <em>Name</em>}'
+     * {@link org.palladiosimulator.experimentautomation.variation.VariationType#getName <em>Name</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -68,7 +68,7 @@ public interface VariationType extends EObject, Identifier {
      * 
      * @return the value of the '<em>Strategy Class</em>' attribute.
      * @see #setStrategyClass(String)
-     * @see de.uka.ipd.sdq.experimentautomation.variation.VariationPackage#getVariationType_StrategyClass()
+     * @see org.palladiosimulator.experimentautomation.variation.VariationPackage#getVariationType_StrategyClass()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -76,7 +76,7 @@ public interface VariationType extends EObject, Identifier {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.VariationType#getStrategyClass
+     * {@link org.palladiosimulator.experimentautomation.variation.VariationType#getStrategyClass
      * <em>Strategy Class</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -97,7 +97,7 @@ public interface VariationType extends EObject, Identifier {
      * 
      * @return the value of the '<em>Varied Entity Interface</em>' attribute.
      * @see #setVariedEntityInterface(String)
-     * @see de.uka.ipd.sdq.experimentautomation.variation.VariationPackage#getVariationType_VariedEntityInterface()
+     * @see org.palladiosimulator.experimentautomation.variation.VariationPackage#getVariationType_VariedEntityInterface()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -105,7 +105,7 @@ public interface VariationType extends EObject, Identifier {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.variation.VariationType#getVariedEntityInterface
+     * {@link org.palladiosimulator.experimentautomation.variation.VariationType#getVariedEntityInterface
      * <em>Varied Entity Interface</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value

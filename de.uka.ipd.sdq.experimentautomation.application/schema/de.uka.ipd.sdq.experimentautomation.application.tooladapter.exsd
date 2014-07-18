@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="de.uka.ipd.sdq.experimentautomation.application" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="org.palladiosimulator.experimentautomation.application" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="de.uka.ipd.sdq.experimentautomation.application" id="de.uka.ipd.sdq.experimentautomation.application.tooladapter" name="de.uka.ipd.sdq.experimentautomation.application.tooladapter"/>
+         <meta.schema plugin="org.palladiosimulator.experimentautomation.application" id="org.palladiosimulator.experimentautomation.application.tooladapter" name="org.palladiosimulator.experimentautomation.application.tooladapter"/>
       </appinfo>
       <documentation>
          [Enter description of this extension point.]
@@ -55,7 +55,7 @@
                   
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn=":de.uka.ipd.sdq.experimentautomation.application.tooladapter.IToolAdapter"/>
+                  <meta.attribute kind="java" basedOn=":org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter"/>
                </appinfo>
             </annotation>
          </attribute>

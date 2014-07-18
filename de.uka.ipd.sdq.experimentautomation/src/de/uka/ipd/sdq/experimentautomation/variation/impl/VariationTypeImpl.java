@@ -4,14 +4,14 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.variation.impl;
+package org.palladiosimulator.experimentautomation.variation.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import de.uka.ipd.sdq.experimentautomation.variation.VariationPackage;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
+import org.palladiosimulator.experimentautomation.variation.VariationPackage;
+import org.palladiosimulator.experimentautomation.variation.VariationType;
 import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
 
 /**
@@ -20,12 +20,12 @@ import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.variation.impl.VariationTypeImpl#getName <em>Name
+ * <li>{@link org.palladiosimulator.experimentautomation.variation.impl.VariationTypeImpl#getName <em>Name
  * </em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.variation.impl.VariationTypeImpl#getStrategyClass
+ * <li>{@link org.palladiosimulator.experimentautomation.variation.impl.VariationTypeImpl#getStrategyClass
  * <em>Strategy Class</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.variation.impl.VariationTypeImpl#getVariedEntityInterface
+ * {@link org.palladiosimulator.experimentautomation.variation.impl.VariationTypeImpl#getVariedEntityInterface
  * <em>Varied Entity Interface</em>}</li>
  * </ul>
  * </p>

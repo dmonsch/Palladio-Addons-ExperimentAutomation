@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.presentation;
+package org.palladiosimulator.experimentautomation.experiments.presentation;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -38,7 +38,7 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
-import de.uka.ipd.sdq.experimentautomation.variation.presentation.ExperimentAutomationEditorPlugin;
+import org.palladiosimulator.experimentautomation.variation.presentation.ExperimentAutomationEditorPlugin;
 
 /**
  * This is the action bar contributor for the Experiments model editor. <!-- begin-user-doc --> <!--
@@ -175,7 +175,7 @@ public class ExperimentsActionBarContributor extends EditingDomainActionBarContr
 
         IMenuManager submenuManager = new MenuManager(
                 ExperimentAutomationEditorPlugin.INSTANCE.getString("_UI_ExperimentsEditor_menu"),
-                "de.uka.ipd.sdq.experimentautomation.experimentsMenuID");
+                "org.palladiosimulator.experimentautomation.experimentsMenuID");
         menuManager.insertAfter("additions", submenuManager);
         submenuManager.add(new Separator("settings"));
         submenuManager.add(new Separator("actions"));

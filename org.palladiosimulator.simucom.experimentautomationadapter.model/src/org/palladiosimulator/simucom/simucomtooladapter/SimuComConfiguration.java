@@ -2,7 +2,7 @@
  */
 package org.palladiosimulator.simucom.simucomtooladapter;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '

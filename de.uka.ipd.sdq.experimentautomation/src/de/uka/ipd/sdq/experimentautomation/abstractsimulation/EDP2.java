@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
+package org.palladiosimulator.experimentautomation.abstractsimulation;
 
 import org.palladiosimulator.edp2.models.Repository.Repository;
 
@@ -11,12 +11,12 @@ import org.palladiosimulator.edp2.models.Repository.Repository;
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2#getRepository <em>
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.EDP2#getRepository <em>
  * Repository</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getEDP2()
+ * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getEDP2()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface EDP2 extends PersistenceFramework {
      * 
      * @return the value of the '<em>Repository</em>' reference.
      * @see #setRepository(Repository)
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getEDP2_Repository()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getEDP2_Repository()
      * @model required="true"
      * @generated
      */
@@ -39,7 +39,7 @@ public interface EDP2 extends PersistenceFramework {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2#getRepository
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.EDP2#getRepository
      * <em>Repository</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value

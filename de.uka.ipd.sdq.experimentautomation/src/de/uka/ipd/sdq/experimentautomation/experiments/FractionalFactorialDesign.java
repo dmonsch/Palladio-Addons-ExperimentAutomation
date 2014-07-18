@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments;
+package org.palladiosimulator.experimentautomation.experiments;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * <em><b>Fractional Factorial Design</b></em>'. <!-- end-user-doc -->
  *
  *
- * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getFractionalFactorialDesign()
+ * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getFractionalFactorialDesign()
  * @model
  * @generated
  */

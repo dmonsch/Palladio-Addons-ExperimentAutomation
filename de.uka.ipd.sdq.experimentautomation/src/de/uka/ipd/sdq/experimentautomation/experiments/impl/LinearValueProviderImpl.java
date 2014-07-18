@@ -1,13 +1,13 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.impl;
+package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -16,10 +16,10 @@ import de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider;
  * The following features are implemented:
  * <ul>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.LinearValueProviderImpl#getSummand
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.LinearValueProviderImpl#getSummand
  * <em>Summand</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.LinearValueProviderImpl#getFactor
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.LinearValueProviderImpl#getFactor
  * <em>Factor</em>}</li>
  * </ul>
  * </p>

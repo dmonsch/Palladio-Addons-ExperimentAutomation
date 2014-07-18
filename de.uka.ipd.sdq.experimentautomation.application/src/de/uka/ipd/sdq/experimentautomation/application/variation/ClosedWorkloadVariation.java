@@ -1,9 +1,9 @@
-package de.uka.ipd.sdq.experimentautomation.application.variation;
+package org.palladiosimulator.experimentautomation.application.variation;
 
 import org.apache.log4j.Logger;
 import org.eclipse.emf.ecore.EObject;
 
-import de.uka.ipd.sdq.experimentautomation.application.utils.PCMModelHelper;
+import org.palladiosimulator.experimentautomation.application.utils.PCMModelHelper;
 import de.uka.ipd.sdq.pcm.usagemodel.ClosedWorkload;
 import de.uka.ipd.sdq.pcm.usagemodel.UsageScenario;
 

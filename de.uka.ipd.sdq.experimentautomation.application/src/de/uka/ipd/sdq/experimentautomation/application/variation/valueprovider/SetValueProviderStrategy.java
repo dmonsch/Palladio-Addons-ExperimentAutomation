@@ -1,10 +1,10 @@
-package de.uka.ipd.sdq.experimentautomation.application.variation.valueprovider;
+package org.palladiosimulator.experimentautomation.application.variation.valueprovider;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.SetValueProvider;
 
 public class SetValueProviderStrategy implements IValueProviderStrategy {
 

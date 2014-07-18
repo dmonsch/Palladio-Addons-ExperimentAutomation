@@ -1,6 +1,6 @@
-package de.uka.ipd.sdq.experimentautomation.application.variation;
+package org.palladiosimulator.experimentautomation.application.variation;
 
-import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
+import org.palladiosimulator.experimentautomation.variation.VariationType;
 
 public class VariationStrategyFactory {
 

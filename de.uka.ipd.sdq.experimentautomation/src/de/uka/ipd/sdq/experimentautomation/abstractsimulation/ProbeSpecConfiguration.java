@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
+package org.palladiosimulator.experimentautomation.abstractsimulation;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -12,19 +12,19 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration#getBlackboardType
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration#getBlackboardType
  * <em>Blackboard Type</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getProbeSpecConfiguration()
+ * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getProbeSpecConfiguration()
  * @model
  * @generated
  */
 public interface ProbeSpecConfiguration extends EObject {
     /**
      * Returns the value of the '<em><b>Blackboard Type</b></em>' attribute. The literals are from
-     * the enumeration {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType}
+     * the enumeration {@link org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType}
      * . <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Blackboard Type</em>' attribute isn't clear, there really should
@@ -33,9 +33,9 @@ public interface ProbeSpecConfiguration extends EObject {
      * <!-- end-user-doc -->
      * 
      * @return the value of the '<em>Blackboard Type</em>' attribute.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType
      * @see #setBlackboardType(BlackboardType)
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getProbeSpecConfiguration_BlackboardType()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getProbeSpecConfiguration_BlackboardType()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -43,12 +43,12 @@ public interface ProbeSpecConfiguration extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration#getBlackboardType
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration#getBlackboardType
      * <em>Blackboard Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
      *            the new value of the '<em>Blackboard Type</em>' attribute.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType
      * @see #getBlackboardType()
      * @generated
      */

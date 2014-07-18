@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.impl;
+package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import java.util.Collection;
 
@@ -16,9 +16,9 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.Experiment;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.Experiment;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentRepository;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -27,7 +27,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
  * The following features are implemented:
  * <ul>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentRepositoryImpl#getExperiments
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentRepositoryImpl#getExperiments
  * <em>Experiments</em>}</li>
  * </ul>
  * </p>

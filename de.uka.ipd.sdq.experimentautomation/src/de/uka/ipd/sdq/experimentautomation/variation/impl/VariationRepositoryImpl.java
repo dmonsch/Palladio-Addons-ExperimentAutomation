@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.variation.impl;
+package org.palladiosimulator.experimentautomation.variation.impl;
 
 import java.util.Collection;
 
@@ -16,9 +16,9 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import de.uka.ipd.sdq.experimentautomation.variation.VariationPackage;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationRepository;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
+import org.palladiosimulator.experimentautomation.variation.VariationPackage;
+import org.palladiosimulator.experimentautomation.variation.VariationRepository;
+import org.palladiosimulator.experimentautomation.variation.VariationType;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Repository</b></em>'. <!--
@@ -27,7 +27,7 @@ import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
  * The following features are implemented:
  * <ul>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.variation.impl.VariationRepositoryImpl#getVariation
+ * {@link org.palladiosimulator.experimentautomation.variation.impl.VariationRepositoryImpl#getVariation
  * <em>Variation</em>}</li>
  * </ul>
  * </p>

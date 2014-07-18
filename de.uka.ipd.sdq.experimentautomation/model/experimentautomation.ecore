@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="experimentautomation" nsURI="http://sdq.ipd.uka.de/ExperimentAutomation/1.0"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="experimentautomation" nsURI="http://palladiosimulator.org/ExperimentAutomation/1.0"
     nsPrefix="exa">
-  <eSubpackages name="variation" nsURI="http://sdq.ipd.uka.de/ExperimentAutomation/Variation/1.0"
+  <eSubpackages name="variation" nsURI="http://palladiosimulator.org/ExperimentAutomation/Variation/1.0"
       nsPrefix="ExperimentAutomation.Variation">
     <eClassifiers xsi:type="ecore:EClass" name="VariationType" abstract="true" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
@@ -19,7 +19,7 @@
           upperBound="-1" eType="#//variation/VariationType" containment="true"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="experiments" nsURI="http://sdq.ipd.uka.de/ExperimentAutomation/Experiments/1.0"
+  <eSubpackages name="experiments" nsURI="http://palladiosimulator.org/ExperimentAutomation/Experiments/1.0"
       nsPrefix="ExperimentAutomation.Experiments">
     <eClassifiers xsi:type="ecore:EClass" name="ExperimentRepository">
       <eStructuralFeatures xsi:type="ecore:EReference" name="experiments" ordered="false"
@@ -132,7 +132,7 @@
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="abstractsimulation" nsURI="http://sdq.ipd.uka.de/ExperimentAutomation/AbstractSimulation/1.0"
+  <eSubpackages name="abstractsimulation" nsURI="http://palladiosimulator.org/ExperimentAutomation/AbstractSimulation/1.0"
       nsPrefix="ExperimentAutomation.Experiments.AbstractSimulation">
     <eClassifiers xsi:type="ecore:EClass" name="AbstractSimulationConfiguration" abstract="true"
         eSuperTypes="#//experiments/ToolConfiguration">

@@ -1,25 +1,25 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation.util;
+package org.palladiosimulator.experimentautomation.abstractsimulation.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.MemoryDatasource;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.PersistenceFramework;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFrameworkDatasource;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition;
-import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2;
+import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource;
+import org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
+import org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource;
+import org.palladiosimulator.experimentautomation.abstractsimulation.PersistenceFramework;
+import org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration;
+import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFrameworkDatasource;
+import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition;
+import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
+import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 
 /**
  * <!-- begin-user-doc --> The <b>Switch</b> for the model's inheritance hierarchy. It supports the
@@ -28,7 +28,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
  * inheritance hierarchy until a non-null result is returned, which is the result of the switch.
  * <!-- end-user-doc -->
  * 
- * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage
+ * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage
  * @generated
  */
 public class AbstractsimulationSwitch<T> extends Switch<T> {

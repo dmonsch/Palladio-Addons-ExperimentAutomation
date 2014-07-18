@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.experiments;
+package org.palladiosimulator.experimentautomation.experiments;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
@@ -9,14 +9,14 @@ package de.uka.ipd.sdq.experimentautomation.experiments;
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider#getSummand <em>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.LinearValueProvider#getSummand <em>
  * Summand</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider#getFactor <em>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.LinearValueProvider#getFactor <em>
  * Factor</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getLinearValueProvider()
+ * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getLinearValueProvider()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface LinearValueProvider extends ValueProvider {
      * 
      * @return the value of the '<em>Summand</em>' attribute.
      * @see #setSummand(double)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getLinearValueProvider_Summand()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getLinearValueProvider_Summand()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -39,7 +39,7 @@ public interface LinearValueProvider extends ValueProvider {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider#getSummand
+     * {@link org.palladiosimulator.experimentautomation.experiments.LinearValueProvider#getSummand
      * <em>Summand</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -59,7 +59,7 @@ public interface LinearValueProvider extends ValueProvider {
      * 
      * @return the value of the '<em>Factor</em>' attribute.
      * @see #setFactor(double)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getLinearValueProvider_Factor()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getLinearValueProvider_Factor()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -67,7 +67,7 @@ public interface LinearValueProvider extends ValueProvider {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider#getFactor
+     * {@link org.palladiosimulator.experimentautomation.experiments.LinearValueProvider#getFactor
      * <em>Factor</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value

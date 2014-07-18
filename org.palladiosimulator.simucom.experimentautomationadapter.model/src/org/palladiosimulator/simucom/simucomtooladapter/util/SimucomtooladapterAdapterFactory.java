@@ -9,8 +9,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.simucom.simucomtooladapter.SimuComConfiguration;
 import org.palladiosimulator.simucom.simucomtooladapter.SimucomtooladapterPackage;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
-import de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
+import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
@@ -115,13 +115,13 @@ public class SimucomtooladapterAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration
+     * {@link org.palladiosimulator.experimentautomation.experiments.ToolConfiguration
      * <em>Tool Configuration</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration
+     * @see org.palladiosimulator.experimentautomation.experiments.ToolConfiguration
      * @generated
      */
     public Adapter createToolConfigurationAdapter() {
@@ -130,13 +130,13 @@ public class SimucomtooladapterAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
      * <em>Abstract Simulation Configuration</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
      * @generated
      */
     public Adapter createAbstractSimulationConfigurationAdapter() {

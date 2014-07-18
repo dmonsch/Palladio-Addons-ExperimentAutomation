@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.provider;
+package org.palladiosimulator.experimentautomation.experiments.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -24,15 +24,15 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationFactory;
-import de.uka.ipd.sdq.experimentautomation.experiments.Experiment;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsFactory;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.variation.provider.ExperimentAutomationEditPlugin;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationFactory;
+import org.palladiosimulator.experimentautomation.experiments.Experiment;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsFactory;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.variation.provider.ExperimentAutomationEditPlugin;
 
 /**
  * This is the item provider adapter for a
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment} object. <!-- begin-user-doc
+ * {@link org.palladiosimulator.experimentautomation.experiments.Experiment} object. <!-- begin-user-doc
  * --> <!-- end-user-doc -->
  * 
  * @generated

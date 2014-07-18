@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.experiments;
+package org.palladiosimulator.experimentautomation.experiments;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -12,12 +12,12 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder#getFolderUri
+ * {@link org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder#getFolderUri
  * <em>Folder Uri</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getReconfigurationRulesFolder()
+ * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getReconfigurationRulesFolder()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface ReconfigurationRulesFolder extends EObject {
      * 
      * @return the value of the '<em>Folder Uri</em>' attribute.
      * @see #setFolderUri(String)
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage#getReconfigurationRulesFolder_FolderUri()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getReconfigurationRulesFolder_FolderUri()
      * @model required="true"
      * @generated
      */
@@ -40,7 +40,7 @@ public interface ReconfigurationRulesFolder extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder#getFolderUri
+     * {@link org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder#getFolderUri
      * <em>Folder Uri</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value

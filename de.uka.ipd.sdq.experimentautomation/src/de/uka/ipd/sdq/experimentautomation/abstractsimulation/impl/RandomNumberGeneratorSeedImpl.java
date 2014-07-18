@@ -1,14 +1,14 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl;
+package org.palladiosimulator.experimentautomation.abstractsimulation.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -17,22 +17,22 @@ import de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGenera
  * The following features are implemented:
  * <ul>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed0
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed0
  * <em>Seed0</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed1
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed1
  * <em>Seed1</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed2
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed2
  * <em>Seed2</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed3
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed3
  * <em>Seed3</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed4
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed4
  * <em>Seed4</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed5
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed5
  * <em>Seed5</em>}</li>
  * </ul>
  * </p>

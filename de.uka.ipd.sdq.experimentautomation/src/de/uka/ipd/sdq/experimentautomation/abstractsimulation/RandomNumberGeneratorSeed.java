@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
+package org.palladiosimulator.experimentautomation.abstractsimulation;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -12,27 +12,27 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed0
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed0
  * <em>Seed0</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed1
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed1
  * <em>Seed1</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed2
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed2
  * <em>Seed2</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed3
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed3
  * <em>Seed3</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed4
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed4
  * <em>Seed4</em>}</li>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed5
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed5
  * <em>Seed5</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed()
+ * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed()
  * @model
  * @generated
  */
@@ -47,7 +47,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
      * 
      * @return the value of the '<em>Seed0</em>' attribute.
      * @see #setSeed0(int)
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed0()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed0()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -55,7 +55,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed0
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed0
      * <em>Seed0</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -75,7 +75,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
      * 
      * @return the value of the '<em>Seed1</em>' attribute.
      * @see #setSeed1(int)
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed1()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed1()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -83,7 +83,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed1
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed1
      * <em>Seed1</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -103,7 +103,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
      * 
      * @return the value of the '<em>Seed2</em>' attribute.
      * @see #setSeed2(int)
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed2()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed2()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -111,7 +111,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed2
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed2
      * <em>Seed2</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -131,7 +131,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
      * 
      * @return the value of the '<em>Seed3</em>' attribute.
      * @see #setSeed3(int)
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed3()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed3()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -139,7 +139,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed3
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed3
      * <em>Seed3</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -159,7 +159,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
      * 
      * @return the value of the '<em>Seed4</em>' attribute.
      * @see #setSeed4(int)
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed4()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed4()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -167,7 +167,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed4
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed4
      * <em>Seed4</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -187,7 +187,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
      * 
      * @return the value of the '<em>Seed5</em>' attribute.
      * @see #setSeed5(int)
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed5()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed5()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -195,7 +195,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed5
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed5
      * <em>Seed5</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value

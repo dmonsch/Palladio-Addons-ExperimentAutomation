@@ -23,7 +23,7 @@
    
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="http://sdq.ipd.uka.de/ExperimentAutomation/SimuCom/1.0"
+            uri="http://palladiosimulator.org/ExperimentAutomation/SimuCom/1.0"
             class="org.palladiosimulator.simucom.simucomtooladapter.SimucomtooladapterPackage"
             genModel="model/ExperimentAutomation.genmodel"/>
    </extension>

@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments;
+package org.palladiosimulator.experimentautomation.experiments;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EReference;
  * </ul>
  * <!-- end-user-doc -->
  * 
- * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsFactory
+ * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsFactory
  * @model kind="package"
  * @generated
  */
@@ -39,7 +39,7 @@ public interface ExperimentsPackage extends EPackage {
      * 
      * @generated
      */
-    String eNS_URI = "http://sdq.ipd.uka.de/ExperimentAutomation/Experiments/1.0";
+    String eNS_URI = "http://palladiosimulator.org/ExperimentAutomation/Experiments/1.0";
 
     /**
      * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -53,15 +53,15 @@ public interface ExperimentsPackage extends EPackage {
      * 
      * @generated
      */
-    ExperimentsPackage eINSTANCE = de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl.init();
+    ExperimentsPackage eINSTANCE = org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl.init();
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentRepositoryImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentRepositoryImpl
      * <em>Experiment Repository</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentRepositoryImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getExperimentRepository()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentRepositoryImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getExperimentRepository()
      * @generated
      */
     int EXPERIMENT_REPOSITORY = 0;
@@ -86,11 +86,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl
      * <em>Experiment</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getExperiment()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getExperiment()
      * @generated
      */
     int EXPERIMENT = 1;
@@ -205,11 +205,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.VariationImpl <em>Variation</em>}
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl <em>Variation</em>}
      * ' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.VariationImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getVariation()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getVariation()
      * @generated
      */
     int VARIATION = 2;
@@ -288,11 +288,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ValueProviderImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.ValueProviderImpl
      * <em>Value Provider</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ValueProviderImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getValueProvider()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ValueProviderImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getValueProvider()
      * @generated
      */
     int VALUE_PROVIDER = 3;
@@ -308,11 +308,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ToolConfigurationImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.ToolConfigurationImpl
      * <em>Tool Configuration</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ToolConfigurationImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getToolConfiguration()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ToolConfigurationImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getToolConfiguration()
      * @generated
      */
     int TOOL_CONFIGURATION = 4;
@@ -337,11 +337,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentDesignImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentDesignImpl
      * <em>Experiment Design</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentDesignImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getExperimentDesign()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentDesignImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getExperimentDesign()
      * @generated
      */
     int EXPERIMENT_DESIGN = 5;
@@ -357,11 +357,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ResponseMeasurementImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.ResponseMeasurementImpl
      * <em>Response Measurement</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ResponseMeasurementImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getResponseMeasurement()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ResponseMeasurementImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getResponseMeasurement()
      * @generated
      */
     int RESPONSE_MEASUREMENT = 6;
@@ -377,11 +377,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.PolynomialValueProviderImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.PolynomialValueProviderImpl
      * <em>Polynomial Value Provider</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.PolynomialValueProviderImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getPolynomialValueProvider()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.PolynomialValueProviderImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getPolynomialValueProvider()
      * @generated
      */
     int POLYNOMIAL_VALUE_PROVIDER = 7;
@@ -415,11 +415,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExponentialValueProviderImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExponentialValueProviderImpl
      * <em>Exponential Value Provider</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExponentialValueProviderImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getExponentialValueProvider()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExponentialValueProviderImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getExponentialValueProvider()
      * @generated
      */
     int EXPONENTIAL_VALUE_PROVIDER = 8;
@@ -444,11 +444,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.SetValueProviderImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.SetValueProviderImpl
      * <em>Set Value Provider</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.SetValueProviderImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getSetValueProvider()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.SetValueProviderImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getSetValueProvider()
      * @generated
      */
     int SET_VALUE_PROVIDER = 9;
@@ -473,11 +473,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.PlacketBurmanDesignImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.PlacketBurmanDesignImpl
      * <em>Placket Burman Design</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.PlacketBurmanDesignImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getPlacketBurmanDesign()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.PlacketBurmanDesignImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getPlacketBurmanDesign()
      * @generated
      */
     int PLACKET_BURMAN_DESIGN = 10;
@@ -493,11 +493,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.FullFactorialDesignImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.FullFactorialDesignImpl
      * <em>Full Factorial Design</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.FullFactorialDesignImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getFullFactorialDesign()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.FullFactorialDesignImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getFullFactorialDesign()
      * @generated
      */
     int FULL_FACTORIAL_DESIGN = 11;
@@ -513,11 +513,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.FractionalFactorialDesignImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.FractionalFactorialDesignImpl
      * <em>Fractional Factorial Design</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.FractionalFactorialDesignImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getFractionalFactorialDesign()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.FractionalFactorialDesignImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getFractionalFactorialDesign()
      * @generated
      */
     int FRACTIONAL_FACTORIAL_DESIGN = 12;
@@ -533,11 +533,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.OneFactorAtATimeImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.OneFactorAtATimeImpl
      * <em>One Factor At ATime</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.OneFactorAtATimeImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getOneFactorAtATime()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.OneFactorAtATimeImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getOneFactorAtATime()
      * @generated
      */
     int ONE_FACTOR_AT_ATIME = 13;
@@ -553,12 +553,12 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.SimulationDurationMeasurementImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.SimulationDurationMeasurementImpl
      * <em>Simulation Duration Measurement</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.SimulationDurationMeasurementImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getSimulationDurationMeasurement()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.SimulationDurationMeasurementImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getSimulationDurationMeasurement()
      * @generated
      */
     int SIMULATION_DURATION_MEASUREMENT = 14;
@@ -574,11 +574,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ProfilingMeasurementImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.ProfilingMeasurementImpl
      * <em>Profiling Measurement</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ProfilingMeasurementImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getProfilingMeasurement()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ProfilingMeasurementImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getProfilingMeasurement()
      * @generated
      */
     int PROFILING_MEASUREMENT = 15;
@@ -594,11 +594,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.JMXMeasurementImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.JMXMeasurementImpl
      * <em>JMX Measurement</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.JMXMeasurementImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getJMXMeasurement()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.JMXMeasurementImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getJMXMeasurement()
      * @generated
      */
     int JMX_MEASUREMENT = 16;
@@ -623,11 +623,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.LinearValueProviderImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.LinearValueProviderImpl
      * <em>Linear Value Provider</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.LinearValueProviderImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getLinearValueProvider()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.LinearValueProviderImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getLinearValueProvider()
      * @generated
      */
     int LINEAR_VALUE_PROVIDER = 17;
@@ -661,11 +661,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.ModificationImpl
      * <em>Modification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getModification()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ModificationImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getModification()
      * @generated
      */
     int MODIFICATION = 18;
@@ -717,11 +717,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.InitialModelImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl
      * <em>Initial Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.InitialModelImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getInitialModel()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getInitialModel()
      * @generated
      */
     int INITIAL_MODEL = 19;
@@ -791,11 +791,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ReconfigurationRulesFolderImpl
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.ReconfigurationRulesFolderImpl
      * <em>Reconfiguration Rules Folder</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ReconfigurationRulesFolderImpl
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getReconfigurationRulesFolder()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ReconfigurationRulesFolderImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getReconfigurationRulesFolder()
      * @generated
      */
     int RECONFIGURATION_RULES_FOLDER = 20;
@@ -820,22 +820,22 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository
+     * {@link org.palladiosimulator.experimentautomation.experiments.ExperimentRepository
      * <em>Experiment Repository</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Experiment Repository</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentRepository
      * @generated
      */
     EClass getExperimentRepository();
 
     /**
      * Returns the meta object for the containment reference list '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository#getExperiments
+     * {@link org.palladiosimulator.experimentautomation.experiments.ExperimentRepository#getExperiments
      * <em>Experiments</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference list '<em>Experiments</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentRepository#getExperiments()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentRepository#getExperiments()
      * @see #getExperimentRepository()
      * @generated
      */
@@ -843,22 +843,22 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment <em>Experiment</em>}'. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment <em>Experiment</em>}'. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Experiment</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Experiment
+     * @see org.palladiosimulator.experimentautomation.experiments.Experiment
      * @generated
      */
     EClass getExperiment();
 
     /**
      * Returns the meta object for the containment reference list '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getVariations
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getVariations
      * <em>Variations</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference list '<em>Variations</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getVariations()
+     * @see org.palladiosimulator.experimentautomation.experiments.Experiment#getVariations()
      * @see #getExperiment()
      * @generated
      */
@@ -866,11 +866,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the containment reference list '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getModifications
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getModifications
      * <em>Modifications</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference list '<em>Modifications</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getModifications()
+     * @see org.palladiosimulator.experimentautomation.experiments.Experiment#getModifications()
      * @see #getExperiment()
      * @generated
      */
@@ -878,11 +878,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getId <em>Id</em>}'. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getId <em>Id</em>}'. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Id</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getId()
+     * @see org.palladiosimulator.experimentautomation.experiments.Experiment#getId()
      * @see #getExperiment()
      * @generated
      */
@@ -890,11 +890,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getName <em>Name</em>}'.
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getName <em>Name</em>}'.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Name</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getName()
+     * @see org.palladiosimulator.experimentautomation.experiments.Experiment#getName()
      * @see #getExperiment()
      * @generated
      */
@@ -902,11 +902,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the containment reference '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getInitialModel
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getInitialModel
      * <em>Initial Model</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference '<em>Initial Model</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getInitialModel()
+     * @see org.palladiosimulator.experimentautomation.experiments.Experiment#getInitialModel()
      * @see #getExperiment()
      * @generated
      */
@@ -914,11 +914,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getRepetitions
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getRepetitions
      * <em>Repetitions</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Repetitions</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getRepetitions()
+     * @see org.palladiosimulator.experimentautomation.experiments.Experiment#getRepetitions()
      * @see #getExperiment()
      * @generated
      */
@@ -926,11 +926,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the containment reference list '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getToolConfiguration
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getToolConfiguration
      * <em>Tool Configuration</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference list '<em>Tool Configuration</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getToolConfiguration()
+     * @see org.palladiosimulator.experimentautomation.experiments.Experiment#getToolConfiguration()
      * @see #getExperiment()
      * @generated
      */
@@ -938,11 +938,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the containment reference list '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getStopConditions
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getStopConditions
      * <em>Stop Conditions</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference list '<em>Stop Conditions</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getStopConditions()
+     * @see org.palladiosimulator.experimentautomation.experiments.Experiment#getStopConditions()
      * @see #getExperiment()
      * @generated
      */
@@ -950,11 +950,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getDescription
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getDescription
      * <em>Description</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Description</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getDescription()
+     * @see org.palladiosimulator.experimentautomation.experiments.Experiment#getDescription()
      * @see #getExperiment()
      * @generated
      */
@@ -962,11 +962,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the containment reference '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getExperimentDesign
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getExperimentDesign
      * <em>Experiment Design</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference '<em>Experiment Design</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getExperimentDesign()
+     * @see org.palladiosimulator.experimentautomation.experiments.Experiment#getExperimentDesign()
      * @see #getExperiment()
      * @generated
      */
@@ -974,11 +974,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the containment reference '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getResponseMeasurement
+     * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getResponseMeasurement
      * <em>Response Measurement</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference '<em>Response Measurement</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Experiment#getResponseMeasurement()
+     * @see org.palladiosimulator.experimentautomation.experiments.Experiment#getResponseMeasurement()
      * @see #getExperiment()
      * @generated
      */
@@ -986,22 +986,22 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Variation <em>Variation</em>}'. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.Variation <em>Variation</em>}'. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Variation</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Variation
+     * @see org.palladiosimulator.experimentautomation.experiments.Variation
      * @generated
      */
     EClass getVariation();
 
     /**
      * Returns the meta object for the reference '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getType <em>Type</em>}'.
+     * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getType <em>Type</em>}'.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the reference '<em>Type</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Variation#getType()
+     * @see org.palladiosimulator.experimentautomation.experiments.Variation#getType()
      * @see #getVariation()
      * @generated
      */
@@ -1009,11 +1009,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the containment reference '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getValueProvider
+     * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getValueProvider
      * <em>Value Provider</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference '<em>Value Provider</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Variation#getValueProvider()
+     * @see org.palladiosimulator.experimentautomation.experiments.Variation#getValueProvider()
      * @see #getVariation()
      * @generated
      */
@@ -1021,11 +1021,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getMinValue
+     * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getMinValue
      * <em>Min Value</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Min Value</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Variation#getMinValue()
+     * @see org.palladiosimulator.experimentautomation.experiments.Variation#getMinValue()
      * @see #getVariation()
      * @generated
      */
@@ -1033,11 +1033,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getMaxValue
+     * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getMaxValue
      * <em>Max Value</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Max Value</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Variation#getMaxValue()
+     * @see org.palladiosimulator.experimentautomation.experiments.Variation#getMaxValue()
      * @see #getVariation()
      * @generated
      */
@@ -1045,11 +1045,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getMaxVariations
+     * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getMaxVariations
      * <em>Max Variations</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Max Variations</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Variation#getMaxVariations()
+     * @see org.palladiosimulator.experimentautomation.experiments.Variation#getMaxVariations()
      * @see #getVariation()
      * @generated
      */
@@ -1057,11 +1057,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getVariedObjectId
+     * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getVariedObjectId
      * <em>Varied Object Id</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Varied Object Id</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Variation#getVariedObjectId()
+     * @see org.palladiosimulator.experimentautomation.experiments.Variation#getVariedObjectId()
      * @see #getVariation()
      * @generated
      */
@@ -1069,11 +1069,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Variation#getName <em>Name</em>}'.
+     * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getName <em>Name</em>}'.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Name</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Variation#getName()
+     * @see org.palladiosimulator.experimentautomation.experiments.Variation#getName()
      * @see #getVariation()
      * @generated
      */
@@ -1081,33 +1081,33 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ValueProvider <em>Value Provider</em>}
+     * {@link org.palladiosimulator.experimentautomation.experiments.ValueProvider <em>Value Provider</em>}
      * '. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Value Provider</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ValueProvider
+     * @see org.palladiosimulator.experimentautomation.experiments.ValueProvider
      * @generated
      */
     EClass getValueProvider();
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration
+     * {@link org.palladiosimulator.experimentautomation.experiments.ToolConfiguration
      * <em>Tool Configuration</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Tool Configuration</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration
+     * @see org.palladiosimulator.experimentautomation.experiments.ToolConfiguration
      * @generated
      */
     EClass getToolConfiguration();
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration#getName
+     * {@link org.palladiosimulator.experimentautomation.experiments.ToolConfiguration#getName
      * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Name</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ToolConfiguration#getName()
+     * @see org.palladiosimulator.experimentautomation.experiments.ToolConfiguration#getName()
      * @see #getToolConfiguration()
      * @generated
      */
@@ -1115,44 +1115,44 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ExperimentDesign
+     * {@link org.palladiosimulator.experimentautomation.experiments.ExperimentDesign
      * <em>Experiment Design</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Experiment Design</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExperimentDesign
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentDesign
      * @generated
      */
     EClass getExperimentDesign();
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ResponseMeasurement
+     * {@link org.palladiosimulator.experimentautomation.experiments.ResponseMeasurement
      * <em>Response Measurement</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Response Measurement</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ResponseMeasurement
+     * @see org.palladiosimulator.experimentautomation.experiments.ResponseMeasurement
      * @generated
      */
     EClass getResponseMeasurement();
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider
+     * {@link org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider
      * <em>Polynomial Value Provider</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Polynomial Value Provider</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider
+     * @see org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider
      * @generated
      */
     EClass getPolynomialValueProvider();
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider#getExponent
+     * {@link org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider#getExponent
      * <em>Exponent</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Exponent</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider#getExponent()
+     * @see org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider#getExponent()
      * @see #getPolynomialValueProvider()
      * @generated
      */
@@ -1160,11 +1160,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider#getFactor
+     * {@link org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider#getFactor
      * <em>Factor</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Factor</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.PolynomialValueProvider#getFactor()
+     * @see org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider#getFactor()
      * @see #getPolynomialValueProvider()
      * @generated
      */
@@ -1172,22 +1172,22 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider
+     * {@link org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider
      * <em>Exponential Value Provider</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Exponential Value Provider</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider
+     * @see org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider
      * @generated
      */
     EClass getExponentialValueProvider();
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider#getBase
+     * {@link org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider#getBase
      * <em>Base</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Base</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider#getBase()
+     * @see org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider#getBase()
      * @see #getExponentialValueProvider()
      * @generated
      */
@@ -1195,22 +1195,22 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider
+     * {@link org.palladiosimulator.experimentautomation.experiments.SetValueProvider
      * <em>Set Value Provider</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Set Value Provider</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider
+     * @see org.palladiosimulator.experimentautomation.experiments.SetValueProvider
      * @generated
      */
     EClass getSetValueProvider();
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider#getValues
+     * {@link org.palladiosimulator.experimentautomation.experiments.SetValueProvider#getValues
      * <em>Values</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Values</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.SetValueProvider#getValues()
+     * @see org.palladiosimulator.experimentautomation.experiments.SetValueProvider#getValues()
      * @see #getSetValueProvider()
      * @generated
      */
@@ -1218,88 +1218,88 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.PlacketBurmanDesign
+     * {@link org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign
      * <em>Placket Burman Design</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Placket Burman Design</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.PlacketBurmanDesign
+     * @see org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign
      * @generated
      */
     EClass getPlacketBurmanDesign();
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.FullFactorialDesign
+     * {@link org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign
      * <em>Full Factorial Design</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Full Factorial Design</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.FullFactorialDesign
+     * @see org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign
      * @generated
      */
     EClass getFullFactorialDesign();
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.FractionalFactorialDesign
+     * {@link org.palladiosimulator.experimentautomation.experiments.FractionalFactorialDesign
      * <em>Fractional Factorial Design</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Fractional Factorial Design</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.FractionalFactorialDesign
+     * @see org.palladiosimulator.experimentautomation.experiments.FractionalFactorialDesign
      * @generated
      */
     EClass getFractionalFactorialDesign();
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.OneFactorAtATime
+     * {@link org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime
      * <em>One Factor At ATime</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>One Factor At ATime</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.OneFactorAtATime
+     * @see org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime
      * @generated
      */
     EClass getOneFactorAtATime();
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.SimulationDurationMeasurement
+     * {@link org.palladiosimulator.experimentautomation.experiments.SimulationDurationMeasurement
      * <em>Simulation Duration Measurement</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Simulation Duration Measurement</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.SimulationDurationMeasurement
+     * @see org.palladiosimulator.experimentautomation.experiments.SimulationDurationMeasurement
      * @generated
      */
     EClass getSimulationDurationMeasurement();
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ProfilingMeasurement
+     * {@link org.palladiosimulator.experimentautomation.experiments.ProfilingMeasurement
      * <em>Profiling Measurement</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Profiling Measurement</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ProfilingMeasurement
+     * @see org.palladiosimulator.experimentautomation.experiments.ProfilingMeasurement
      * @generated
      */
     EClass getProfilingMeasurement();
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement
+     * {@link org.palladiosimulator.experimentautomation.experiments.JMXMeasurement
      * <em>JMX Measurement</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>JMX Measurement</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement
+     * @see org.palladiosimulator.experimentautomation.experiments.JMXMeasurement
      * @generated
      */
     EClass getJMXMeasurement();
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement#getPollingPeriod
+     * {@link org.palladiosimulator.experimentautomation.experiments.JMXMeasurement#getPollingPeriod
      * <em>Polling Period</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Polling Period</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.JMXMeasurement#getPollingPeriod()
+     * @see org.palladiosimulator.experimentautomation.experiments.JMXMeasurement#getPollingPeriod()
      * @see #getJMXMeasurement()
      * @generated
      */
@@ -1307,22 +1307,22 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider
+     * {@link org.palladiosimulator.experimentautomation.experiments.LinearValueProvider
      * <em>Linear Value Provider</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Linear Value Provider</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider
+     * @see org.palladiosimulator.experimentautomation.experiments.LinearValueProvider
      * @generated
      */
     EClass getLinearValueProvider();
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider#getSummand
+     * {@link org.palladiosimulator.experimentautomation.experiments.LinearValueProvider#getSummand
      * <em>Summand</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Summand</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider#getSummand()
+     * @see org.palladiosimulator.experimentautomation.experiments.LinearValueProvider#getSummand()
      * @see #getLinearValueProvider()
      * @generated
      */
@@ -1330,11 +1330,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider#getFactor
+     * {@link org.palladiosimulator.experimentautomation.experiments.LinearValueProvider#getFactor
      * <em>Factor</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Factor</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.LinearValueProvider#getFactor()
+     * @see org.palladiosimulator.experimentautomation.experiments.LinearValueProvider#getFactor()
      * @see #getLinearValueProvider()
      * @generated
      */
@@ -1342,22 +1342,22 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Modification <em>Modification</em>}'.
+     * {@link org.palladiosimulator.experimentautomation.experiments.Modification <em>Modification</em>}'.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Modification</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Modification
+     * @see org.palladiosimulator.experimentautomation.experiments.Modification
      * @generated
      */
     EClass getModification();
 
     /**
      * Returns the meta object for the reference '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Modification#getType <em>Type</em>}'.
+     * {@link org.palladiosimulator.experimentautomation.experiments.Modification#getType <em>Type</em>}'.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the reference '<em>Type</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Modification#getType()
+     * @see org.palladiosimulator.experimentautomation.experiments.Modification#getType()
      * @see #getModification()
      * @generated
      */
@@ -1365,11 +1365,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Modification#getName <em>Name</em>}'.
+     * {@link org.palladiosimulator.experimentautomation.experiments.Modification#getName <em>Name</em>}'.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Name</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Modification#getName()
+     * @see org.palladiosimulator.experimentautomation.experiments.Modification#getName()
      * @see #getModification()
      * @generated
      */
@@ -1377,11 +1377,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Modification#getVariedObjectId
+     * {@link org.palladiosimulator.experimentautomation.experiments.Modification#getVariedObjectId
      * <em>Varied Object Id</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Varied Object Id</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Modification#getVariedObjectId()
+     * @see org.palladiosimulator.experimentautomation.experiments.Modification#getVariedObjectId()
      * @see #getModification()
      * @generated
      */
@@ -1389,11 +1389,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.Modification#getValue <em>Value</em>}
+     * {@link org.palladiosimulator.experimentautomation.experiments.Modification#getValue <em>Value</em>}
      * '. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Value</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.Modification#getValue()
+     * @see org.palladiosimulator.experimentautomation.experiments.Modification#getValue()
      * @see #getModification()
      * @generated
      */
@@ -1401,22 +1401,22 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel <em>Initial Model</em>}'.
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel <em>Initial Model</em>}'.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Initial Model</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.InitialModel
+     * @see org.palladiosimulator.experimentautomation.experiments.InitialModel
      * @generated
      */
     EClass getInitialModel();
 
     /**
      * Returns the meta object for the reference '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getUsageModel
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getUsageModel
      * <em>Usage Model</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the reference '<em>Usage Model</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getUsageModel()
+     * @see org.palladiosimulator.experimentautomation.experiments.InitialModel#getUsageModel()
      * @see #getInitialModel()
      * @generated
      */
@@ -1424,11 +1424,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the reference '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getAllocation
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getAllocation
      * <em>Allocation</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the reference '<em>Allocation</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getAllocation()
+     * @see org.palladiosimulator.experimentautomation.experiments.InitialModel#getAllocation()
      * @see #getInitialModel()
      * @generated
      */
@@ -1436,11 +1436,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the reference '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getMiddlewareRepository
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getMiddlewareRepository
      * <em>Middleware Repository</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the reference '<em>Middleware Repository</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getMiddlewareRepository()
+     * @see org.palladiosimulator.experimentautomation.experiments.InitialModel#getMiddlewareRepository()
      * @see #getInitialModel()
      * @generated
      */
@@ -1448,11 +1448,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the reference '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getEventMiddleWareRepository
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getEventMiddleWareRepository
      * <em>Event Middle Ware Repository</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the reference '<em>Event Middle Ware Repository</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getEventMiddleWareRepository()
+     * @see org.palladiosimulator.experimentautomation.experiments.InitialModel#getEventMiddleWareRepository()
      * @see #getInitialModel()
      * @generated
      */
@@ -1460,11 +1460,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the reference '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getReconfigurationRules
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getReconfigurationRules
      * <em>Reconfiguration Rules</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the reference '<em>Reconfiguration Rules</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getReconfigurationRules()
+     * @see org.palladiosimulator.experimentautomation.experiments.InitialModel#getReconfigurationRules()
      * @see #getInitialModel()
      * @generated
      */
@@ -1472,11 +1472,11 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the reference '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getPlatformMonitoringSpecification
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getPlatformMonitoringSpecification
      * <em>Platform Monitoring Specification</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the reference '<em>Platform Monitoring Specification</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.InitialModel#getPlatformMonitoringSpecification()
+     * @see org.palladiosimulator.experimentautomation.experiments.InitialModel#getPlatformMonitoringSpecification()
      * @see #getInitialModel()
      * @generated
      */
@@ -1484,22 +1484,22 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder
+     * {@link org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder
      * <em>Reconfiguration Rules Folder</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Reconfiguration Rules Folder</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder
+     * @see org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder
      * @generated
      */
     EClass getReconfigurationRulesFolder();
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder#getFolderUri
+     * {@link org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder#getFolderUri
      * <em>Folder Uri</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Folder Uri</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.experiments.ReconfigurationRulesFolder#getFolderUri()
+     * @see org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder#getFolderUri()
      * @see #getReconfigurationRulesFolder()
      * @generated
      */
@@ -1529,11 +1529,11 @@ public interface ExperimentsPackage extends EPackage {
     interface Literals {
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentRepositoryImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentRepositoryImpl
          * <em>Experiment Repository</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentRepositoryImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getExperimentRepository()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentRepositoryImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getExperimentRepository()
          * @generated
          */
         EClass EXPERIMENT_REPOSITORY = eINSTANCE.getExperimentRepository();
@@ -1548,11 +1548,11 @@ public interface ExperimentsPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl
          * <em>Experiment</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getExperiment()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getExperiment()
          * @generated
          */
         EClass EXPERIMENT = eINSTANCE.getExperiment();
@@ -1647,11 +1647,11 @@ public interface ExperimentsPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.VariationImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl
          * <em>Variation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.VariationImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getVariation()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getVariation()
          * @generated
          */
         EClass VARIATION = eINSTANCE.getVariation();
@@ -1714,22 +1714,22 @@ public interface ExperimentsPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ValueProviderImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.ValueProviderImpl
          * <em>Value Provider</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ValueProviderImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getValueProvider()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ValueProviderImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getValueProvider()
          * @generated
          */
         EClass VALUE_PROVIDER = eINSTANCE.getValueProvider();
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ToolConfigurationImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.ToolConfigurationImpl
          * <em>Tool Configuration</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ToolConfigurationImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getToolConfiguration()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ToolConfigurationImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getToolConfiguration()
          * @generated
          */
         EClass TOOL_CONFIGURATION = eINSTANCE.getToolConfiguration();
@@ -1744,33 +1744,33 @@ public interface ExperimentsPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentDesignImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentDesignImpl
          * <em>Experiment Design</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentDesignImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getExperimentDesign()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentDesignImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getExperimentDesign()
          * @generated
          */
         EClass EXPERIMENT_DESIGN = eINSTANCE.getExperimentDesign();
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ResponseMeasurementImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.ResponseMeasurementImpl
          * <em>Response Measurement</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ResponseMeasurementImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getResponseMeasurement()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ResponseMeasurementImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getResponseMeasurement()
          * @generated
          */
         EClass RESPONSE_MEASUREMENT = eINSTANCE.getResponseMeasurement();
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.PolynomialValueProviderImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.PolynomialValueProviderImpl
          * <em>Polynomial Value Provider</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.PolynomialValueProviderImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getPolynomialValueProvider()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.PolynomialValueProviderImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getPolynomialValueProvider()
          * @generated
          */
         EClass POLYNOMIAL_VALUE_PROVIDER = eINSTANCE.getPolynomialValueProvider();
@@ -1793,12 +1793,12 @@ public interface ExperimentsPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExponentialValueProviderImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExponentialValueProviderImpl
          * <em>Exponential Value Provider</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
          * -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExponentialValueProviderImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getExponentialValueProvider()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExponentialValueProviderImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getExponentialValueProvider()
          * @generated
          */
         EClass EXPONENTIAL_VALUE_PROVIDER = eINSTANCE.getExponentialValueProvider();
@@ -1813,11 +1813,11 @@ public interface ExperimentsPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.SetValueProviderImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.SetValueProviderImpl
          * <em>Set Value Provider</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.SetValueProviderImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getSetValueProvider()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.SetValueProviderImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getSetValueProvider()
          * @generated
          */
         EClass SET_VALUE_PROVIDER = eINSTANCE.getSetValueProvider();
@@ -1832,79 +1832,79 @@ public interface ExperimentsPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.PlacketBurmanDesignImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.PlacketBurmanDesignImpl
          * <em>Placket Burman Design</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.PlacketBurmanDesignImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getPlacketBurmanDesign()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.PlacketBurmanDesignImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getPlacketBurmanDesign()
          * @generated
          */
         EClass PLACKET_BURMAN_DESIGN = eINSTANCE.getPlacketBurmanDesign();
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.FullFactorialDesignImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.FullFactorialDesignImpl
          * <em>Full Factorial Design</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.FullFactorialDesignImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getFullFactorialDesign()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.FullFactorialDesignImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getFullFactorialDesign()
          * @generated
          */
         EClass FULL_FACTORIAL_DESIGN = eINSTANCE.getFullFactorialDesign();
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.FractionalFactorialDesignImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.FractionalFactorialDesignImpl
          * <em>Fractional Factorial Design</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
          * -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.FractionalFactorialDesignImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getFractionalFactorialDesign()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.FractionalFactorialDesignImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getFractionalFactorialDesign()
          * @generated
          */
         EClass FRACTIONAL_FACTORIAL_DESIGN = eINSTANCE.getFractionalFactorialDesign();
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.OneFactorAtATimeImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.OneFactorAtATimeImpl
          * <em>One Factor At ATime</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.OneFactorAtATimeImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getOneFactorAtATime()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.OneFactorAtATimeImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getOneFactorAtATime()
          * @generated
          */
         EClass ONE_FACTOR_AT_ATIME = eINSTANCE.getOneFactorAtATime();
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.SimulationDurationMeasurementImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.SimulationDurationMeasurementImpl
          * <em>Simulation Duration Measurement</em>}' class. <!-- begin-user-doc --> <!--
          * end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.SimulationDurationMeasurementImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getSimulationDurationMeasurement()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.SimulationDurationMeasurementImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getSimulationDurationMeasurement()
          * @generated
          */
         EClass SIMULATION_DURATION_MEASUREMENT = eINSTANCE.getSimulationDurationMeasurement();
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ProfilingMeasurementImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.ProfilingMeasurementImpl
          * <em>Profiling Measurement</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ProfilingMeasurementImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getProfilingMeasurement()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ProfilingMeasurementImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getProfilingMeasurement()
          * @generated
          */
         EClass PROFILING_MEASUREMENT = eINSTANCE.getProfilingMeasurement();
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.JMXMeasurementImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.JMXMeasurementImpl
          * <em>JMX Measurement</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.JMXMeasurementImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getJMXMeasurement()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.JMXMeasurementImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getJMXMeasurement()
          * @generated
          */
         EClass JMX_MEASUREMENT = eINSTANCE.getJMXMeasurement();
@@ -1919,11 +1919,11 @@ public interface ExperimentsPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.LinearValueProviderImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.LinearValueProviderImpl
          * <em>Linear Value Provider</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.LinearValueProviderImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getLinearValueProvider()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.LinearValueProviderImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getLinearValueProvider()
          * @generated
          */
         EClass LINEAR_VALUE_PROVIDER = eINSTANCE.getLinearValueProvider();
@@ -1946,11 +1946,11 @@ public interface ExperimentsPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.ModificationImpl
          * <em>Modification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ModificationImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getModification()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ModificationImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getModification()
          * @generated
          */
         EClass MODIFICATION = eINSTANCE.getModification();
@@ -1989,11 +1989,11 @@ public interface ExperimentsPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.InitialModelImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl
          * <em>Initial Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.InitialModelImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getInitialModel()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getInitialModel()
          * @generated
          */
         EClass INITIAL_MODEL = eINSTANCE.getInitialModel();
@@ -2049,12 +2049,12 @@ public interface ExperimentsPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ReconfigurationRulesFolderImpl
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.ReconfigurationRulesFolderImpl
          * <em>Reconfiguration Rules Folder</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
          * -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ReconfigurationRulesFolderImpl
-         * @see de.uka.ipd.sdq.experimentautomation.experiments.impl.ExperimentsPackageImpl#getReconfigurationRulesFolder()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ReconfigurationRulesFolderImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getReconfigurationRulesFolder()
          * @generated
          */
         EClass RECONFIGURATION_RULES_FOLDER = eINSTANCE.getReconfigurationRulesFolder();

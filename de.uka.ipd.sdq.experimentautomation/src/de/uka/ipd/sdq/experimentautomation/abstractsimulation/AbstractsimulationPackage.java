@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
+package org.palladiosimulator.experimentautomation.abstractsimulation;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 
 /**
  * <!-- begin-user-doc --> The <b>Package</b> for the model. It contains accessors for the meta
@@ -21,7 +21,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
  * </ul>
  * <!-- end-user-doc -->
  * 
- * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationFactory
+ * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationFactory
  * @model kind="package"
  * @generated
  */
@@ -38,7 +38,7 @@ public interface AbstractsimulationPackage extends EPackage {
      * 
      * @generated
      */
-    String eNS_URI = "http://sdq.ipd.uka.de/ExperimentAutomation/AbstractSimulation/1.0";
+    String eNS_URI = "http://palladiosimulator.org/ExperimentAutomation/AbstractSimulation/1.0";
 
     /**
      * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -52,17 +52,17 @@ public interface AbstractsimulationPackage extends EPackage {
      * 
      * @generated
      */
-    AbstractsimulationPackage eINSTANCE = de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl
+    AbstractsimulationPackage eINSTANCE = org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl
             .init();
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl
      * <em>Abstract Simulation Configuration</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getAbstractSimulationConfiguration()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getAbstractSimulationConfiguration()
      * @generated
      */
     int ABSTRACT_SIMULATION_CONFIGURATION = 0;
@@ -141,11 +141,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.PersistenceFrameworkImpl
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.PersistenceFrameworkImpl
      * <em>Persistence Framework</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.PersistenceFrameworkImpl
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getPersistenceFramework()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.PersistenceFrameworkImpl
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getPersistenceFramework()
      * @generated
      */
     int PERSISTENCE_FRAMEWORK = 1;
@@ -161,11 +161,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl
      * <em>Random Number Generator Seed</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getRandomNumberGeneratorSeed()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getRandomNumberGeneratorSeed()
      * @generated
      */
     int RANDOM_NUMBER_GENERATOR_SEED = 2;
@@ -235,11 +235,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl
      * <em>Probe Spec Configuration</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getProbeSpecConfiguration()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getProbeSpecConfiguration()
      * @generated
      */
     int PROBE_SPEC_CONFIGURATION = 3;
@@ -264,11 +264,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SensorFrameworkImpl
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.SensorFrameworkImpl
      * <em>Sensor Framework</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SensorFrameworkImpl
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSensorFramework()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.SensorFrameworkImpl
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSensorFramework()
      * @generated
      */
     int SENSOR_FRAMEWORK = 4;
@@ -293,11 +293,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SensorFrameworkDatasourceImpl
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.SensorFrameworkDatasourceImpl
      * <em>Sensor Framework Datasource</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SensorFrameworkDatasourceImpl
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSensorFrameworkDatasource()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.SensorFrameworkDatasourceImpl
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSensorFrameworkDatasource()
      * @generated
      */
     int SENSOR_FRAMEWORK_DATASOURCE = 5;
@@ -313,11 +313,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl
      * <em>Memory Datasource</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getMemoryDatasource()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getMemoryDatasource()
      * @generated
      */
     int MEMORY_DATASOURCE = 6;
@@ -333,11 +333,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.FileDatasourceImpl
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.FileDatasourceImpl
      * <em>File Datasource</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.FileDatasourceImpl
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getFileDatasource()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.FileDatasourceImpl
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getFileDatasource()
      * @generated
      */
     int FILE_DATASOURCE = 7;
@@ -362,11 +362,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.StopConditionImpl
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.StopConditionImpl
      * <em>Stop Condition</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.StopConditionImpl
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getStopCondition()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.StopConditionImpl
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getStopCondition()
      * @generated
      */
     int STOP_CONDITION = 10;
@@ -382,12 +382,12 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.MeasurementCountStopConditionImpl
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.MeasurementCountStopConditionImpl
      * <em>Measurement Count Stop Condition</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.MeasurementCountStopConditionImpl
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getMeasurementCountStopCondition()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.MeasurementCountStopConditionImpl
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getMeasurementCountStopCondition()
      * @generated
      */
     int MEASUREMENT_COUNT_STOP_CONDITION = 8;
@@ -412,11 +412,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl
      * <em>Sim Time Stop Condition</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSimTimeStopCondition()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSimTimeStopCondition()
      * @generated
      */
     int SIM_TIME_STOP_CONDITION = 9;
@@ -441,11 +441,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.EDP2Impl <em>EDP2</em>}'
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.EDP2Impl <em>EDP2</em>}'
      * class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.EDP2Impl
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getEDP2()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.EDP2Impl
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getEDP2()
      * @generated
      */
     int EDP2 = 11;
@@ -470,33 +470,33 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType
      * <em>Blackboard Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getBlackboardType()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getBlackboardType()
      * @generated
      */
     int BLACKBOARD_TYPE = 12;
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
      * <em>Abstract Simulation Configuration</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Abstract Simulation Configuration</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
      * @generated
      */
     EClass getAbstractSimulationConfiguration();
 
     /**
      * Returns the meta object for the containment reference '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getPersistenceFramework
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getPersistenceFramework
      * <em>Persistence Framework</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference '<em>Persistence Framework</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getPersistenceFramework()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getPersistenceFramework()
      * @see #getAbstractSimulationConfiguration()
      * @generated
      */
@@ -504,11 +504,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * Returns the meta object for the containment reference list '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getStopConditions
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getStopConditions
      * <em>Stop Conditions</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference list '<em>Stop Conditions</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getStopConditions()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getStopConditions()
      * @see #getAbstractSimulationConfiguration()
      * @generated
      */
@@ -516,12 +516,12 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * Returns the meta object for the containment reference '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed
      * <em>Random Number Generator Seed</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference '<em>Random Number Generator Seed</em>
      *         '.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed()
      * @see #getAbstractSimulationConfiguration()
      * @generated
      */
@@ -529,11 +529,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateLinkingResources
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateLinkingResources
      * <em>Simulate Linking Resources</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Simulate Linking Resources</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateLinkingResources()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateLinkingResources()
      * @see #getAbstractSimulationConfiguration()
      * @generated
      */
@@ -541,11 +541,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
      * <em>Simulate Failures</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Simulate Failures</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures()
      * @see #getAbstractSimulationConfiguration()
      * @generated
      */
@@ -553,11 +553,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * Returns the meta object for the containment reference '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration
      * <em>Probe Spec Configuration</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference '<em>Probe Spec Configuration</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration()
      * @see #getAbstractSimulationConfiguration()
      * @generated
      */
@@ -565,33 +565,33 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.PersistenceFramework
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.PersistenceFramework
      * <em>Persistence Framework</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Persistence Framework</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.PersistenceFramework
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.PersistenceFramework
      * @generated
      */
     EClass getPersistenceFramework();
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed
      * <em>Random Number Generator Seed</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Random Number Generator Seed</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed
      * @generated
      */
     EClass getRandomNumberGeneratorSeed();
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed0
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed0
      * <em>Seed0</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Seed0</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed0()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed0()
      * @see #getRandomNumberGeneratorSeed()
      * @generated
      */
@@ -599,11 +599,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed1
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed1
      * <em>Seed1</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Seed1</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed1()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed1()
      * @see #getRandomNumberGeneratorSeed()
      * @generated
      */
@@ -611,11 +611,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed2
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed2
      * <em>Seed2</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Seed2</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed2()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed2()
      * @see #getRandomNumberGeneratorSeed()
      * @generated
      */
@@ -623,11 +623,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed3
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed3
      * <em>Seed3</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Seed3</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed3()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed3()
      * @see #getRandomNumberGeneratorSeed()
      * @generated
      */
@@ -635,11 +635,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed4
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed4
      * <em>Seed4</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Seed4</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed4()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed4()
      * @see #getRandomNumberGeneratorSeed()
      * @generated
      */
@@ -647,11 +647,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed5
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed5
      * <em>Seed5</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Seed5</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed5()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed5()
      * @see #getRandomNumberGeneratorSeed()
      * @generated
      */
@@ -659,22 +659,22 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration
      * <em>Probe Spec Configuration</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Probe Spec Configuration</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration
      * @generated
      */
     EClass getProbeSpecConfiguration();
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration#getBlackboardType
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration#getBlackboardType
      * <em>Blackboard Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Blackboard Type</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.ProbeSpecConfiguration#getBlackboardType()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration#getBlackboardType()
      * @see #getProbeSpecConfiguration()
      * @generated
      */
@@ -682,22 +682,22 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework
      * <em>Sensor Framework</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Sensor Framework</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework
      * @generated
      */
     EClass getSensorFramework();
 
     /**
      * Returns the meta object for the containment reference '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework#getDatasource
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework#getDatasource
      * <em>Datasource</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference '<em>Datasource</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFramework#getDatasource()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework#getDatasource()
      * @see #getSensorFramework()
      * @generated
      */
@@ -705,44 +705,44 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFrameworkDatasource
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SensorFrameworkDatasource
      * <em>Sensor Framework Datasource</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Sensor Framework Datasource</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.SensorFrameworkDatasource
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.SensorFrameworkDatasource
      * @generated
      */
     EClass getSensorFrameworkDatasource();
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.MemoryDatasource
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource
      * <em>Memory Datasource</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Memory Datasource</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.MemoryDatasource
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource
      * @generated
      */
     EClass getMemoryDatasource();
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource
      * <em>File Datasource</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>File Datasource</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource
      * @generated
      */
     EClass getFileDatasource();
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource#getLocation
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource#getLocation
      * <em>Location</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Location</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.FileDatasource#getLocation()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource#getLocation()
      * @see #getFileDatasource()
      * @generated
      */
@@ -750,22 +750,22 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition
      * <em>Measurement Count Stop Condition</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Measurement Count Stop Condition</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition
      * @generated
      */
     EClass getMeasurementCountStopCondition();
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition#getMeasurementCount
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition#getMeasurementCount
      * <em>Measurement Count</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Measurement Count</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.MeasurementCountStopCondition#getMeasurementCount()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition#getMeasurementCount()
      * @see #getMeasurementCountStopCondition()
      * @generated
      */
@@ -773,22 +773,22 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition
      * <em>Sim Time Stop Condition</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Sim Time Stop Condition</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition
      * @generated
      */
     EClass getSimTimeStopCondition();
 
     /**
      * Returns the meta object for the attribute '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition#getSimulationTime
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition#getSimulationTime
      * <em>Simulation Time</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Simulation Time</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition#getSimulationTime()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition#getSimulationTime()
      * @see #getSimTimeStopCondition()
      * @generated
      */
@@ -796,33 +796,33 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition
      * <em>Stop Condition</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>Stop Condition</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.StopCondition
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition
      * @generated
      */
     EClass getStopCondition();
 
     /**
      * Returns the meta object for class '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2 <em>EDP2</em>}'. <!--
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.EDP2 <em>EDP2</em>}'. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for class '<em>EDP2</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.EDP2
      * @generated
      */
     EClass getEDP2();
 
     /**
      * Returns the meta object for the reference '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2#getRepository
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.EDP2#getRepository
      * <em>Repository</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the reference '<em>Repository</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.EDP2#getRepository()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.EDP2#getRepository()
      * @see #getEDP2()
      * @generated
      */
@@ -830,11 +830,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * Returns the meta object for enum '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType
      * <em>Blackboard Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for enum '<em>Blackboard Type</em>'.
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType
      * @generated
      */
     EEnum getBlackboardType();
@@ -863,12 +863,12 @@ public interface AbstractsimulationPackage extends EPackage {
     interface Literals {
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl
+         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl
          * <em>Abstract Simulation Configuration</em>}' class. <!-- begin-user-doc --> <!--
          * end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getAbstractSimulationConfiguration()
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getAbstractSimulationConfiguration()
          * @generated
          */
         EClass ABSTRACT_SIMULATION_CONFIGURATION = eINSTANCE.getAbstractSimulationConfiguration();
@@ -929,23 +929,23 @@ public interface AbstractsimulationPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.PersistenceFrameworkImpl
+         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.PersistenceFrameworkImpl
          * <em>Persistence Framework</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.PersistenceFrameworkImpl
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getPersistenceFramework()
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.PersistenceFrameworkImpl
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getPersistenceFramework()
          * @generated
          */
         EClass PERSISTENCE_FRAMEWORK = eINSTANCE.getPersistenceFramework();
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl
+         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl
          * <em>Random Number Generator Seed</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
          * -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getRandomNumberGeneratorSeed()
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getRandomNumberGeneratorSeed()
          * @generated
          */
         EClass RANDOM_NUMBER_GENERATOR_SEED = eINSTANCE.getRandomNumberGeneratorSeed();
@@ -1000,11 +1000,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl
+         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl
          * <em>Probe Spec Configuration</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getProbeSpecConfiguration()
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getProbeSpecConfiguration()
          * @generated
          */
         EClass PROBE_SPEC_CONFIGURATION = eINSTANCE.getProbeSpecConfiguration();
@@ -1019,11 +1019,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SensorFrameworkImpl
+         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.SensorFrameworkImpl
          * <em>Sensor Framework</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SensorFrameworkImpl
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSensorFramework()
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.SensorFrameworkImpl
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSensorFramework()
          * @generated
          */
         EClass SENSOR_FRAMEWORK = eINSTANCE.getSensorFramework();
@@ -1038,34 +1038,34 @@ public interface AbstractsimulationPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SensorFrameworkDatasourceImpl
+         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.SensorFrameworkDatasourceImpl
          * <em>Sensor Framework Datasource</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
          * -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SensorFrameworkDatasourceImpl
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSensorFrameworkDatasource()
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.SensorFrameworkDatasourceImpl
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSensorFrameworkDatasource()
          * @generated
          */
         EClass SENSOR_FRAMEWORK_DATASOURCE = eINSTANCE.getSensorFrameworkDatasource();
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl
+         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl
          * <em>Memory Datasource</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getMemoryDatasource()
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getMemoryDatasource()
          * @generated
          */
         EClass MEMORY_DATASOURCE = eINSTANCE.getMemoryDatasource();
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.FileDatasourceImpl
+         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.FileDatasourceImpl
          * <em>File Datasource</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.FileDatasourceImpl
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getFileDatasource()
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.FileDatasourceImpl
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getFileDatasource()
          * @generated
          */
         EClass FILE_DATASOURCE = eINSTANCE.getFileDatasource();
@@ -1080,12 +1080,12 @@ public interface AbstractsimulationPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.MeasurementCountStopConditionImpl
+         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.MeasurementCountStopConditionImpl
          * <em>Measurement Count Stop Condition</em>}' class. <!-- begin-user-doc --> <!--
          * end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.MeasurementCountStopConditionImpl
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getMeasurementCountStopCondition()
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.MeasurementCountStopConditionImpl
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getMeasurementCountStopCondition()
          * @generated
          */
         EClass MEASUREMENT_COUNT_STOP_CONDITION = eINSTANCE.getMeasurementCountStopCondition();
@@ -1101,11 +1101,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl
+         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl
          * <em>Sim Time Stop Condition</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSimTimeStopCondition()
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSimTimeStopCondition()
          * @generated
          */
         EClass SIM_TIME_STOP_CONDITION = eINSTANCE.getSimTimeStopCondition();
@@ -1120,22 +1120,22 @@ public interface AbstractsimulationPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.StopConditionImpl
+         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.StopConditionImpl
          * <em>Stop Condition</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.StopConditionImpl
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getStopCondition()
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.StopConditionImpl
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getStopCondition()
          * @generated
          */
         EClass STOP_CONDITION = eINSTANCE.getStopCondition();
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.EDP2Impl
+         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.EDP2Impl
          * <em>EDP2</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.EDP2Impl
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getEDP2()
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.EDP2Impl
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getEDP2()
          * @generated
          */
         EClass EDP2 = eINSTANCE.getEDP2();
@@ -1150,11 +1150,11 @@ public interface AbstractsimulationPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType
+         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType
          * <em>Blackboard Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.BlackboardType
-         * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getBlackboardType()
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType
+         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getBlackboardType()
          * @generated
          */
         EEnum BLACKBOARD_TYPE = eINSTANCE.getBlackboardType();

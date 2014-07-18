@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.util;
+package org.palladiosimulator.experimentautomation.experiments.util;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
 /**
  * <!-- begin-user-doc --> The <b>Resource </b> associated with the package. <!-- end-user-doc -->
  * 
- * @see de.uka.ipd.sdq.experimentautomation.experiments.util.ExperimentsResourceFactoryImpl
+ * @see org.palladiosimulator.experimentautomation.experiments.util.ExperimentsResourceFactoryImpl
  * @generated
  */
 public class ExperimentsResourceImpl extends XMLResourceImpl {

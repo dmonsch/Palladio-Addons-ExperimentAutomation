@@ -4,7 +4,7 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.impl;
+package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -13,10 +13,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.ValueProvider;
-import de.uka.ipd.sdq.experimentautomation.experiments.Variation;
-import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.ValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.Variation;
+import org.palladiosimulator.experimentautomation.variation.VariationType;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Variation</b></em>'. <!--
@@ -24,19 +24,19 @@ import de.uka.ipd.sdq.experimentautomation.variation.VariationType;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.VariationImpl#getType <em>Type
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl#getType <em>Type
  * </em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.VariationImpl#getValueProvider
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl#getValueProvider
  * <em>Value Provider</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.VariationImpl#getMinValue <em>Min
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl#getMinValue <em>Min
  * Value</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.VariationImpl#getMaxValue <em>Max
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl#getMaxValue <em>Max
  * Value</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.VariationImpl#getMaxVariations
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl#getMaxVariations
  * <em>Max Variations</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.VariationImpl#getVariedObjectId
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl#getVariedObjectId
  * <em>Varied Object Id</em>}</li>
- * <li>{@link de.uka.ipd.sdq.experimentautomation.experiments.impl.VariationImpl#getName <em>Name
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl#getName <em>Name
  * </em>}</li>
  * </ul>
  * </p>

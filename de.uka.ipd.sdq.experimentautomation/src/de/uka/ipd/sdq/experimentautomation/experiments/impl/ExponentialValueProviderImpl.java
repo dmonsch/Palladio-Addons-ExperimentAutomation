@@ -4,14 +4,14 @@
  *
  * $Id$
  */
-package de.uka.ipd.sdq.experimentautomation.experiments.impl;
+package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import de.uka.ipd.sdq.experimentautomation.experiments.ExperimentsPackage;
-import de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
+import org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -20,7 +20,7 @@ import de.uka.ipd.sdq.experimentautomation.experiments.ExponentialValueProvider;
  * The following features are implemented:
  * <ul>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.experiments.impl.ExponentialValueProviderImpl#getBase
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExponentialValueProviderImpl#getBase
  * <em>Base</em>}</li>
  * </ul>
  * </p>

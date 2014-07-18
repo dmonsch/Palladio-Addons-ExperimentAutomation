@@ -1,6 +1,6 @@
 /**
  */
-package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
+package org.palladiosimulator.experimentautomation.abstractsimulation;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
@@ -10,12 +10,12 @@ package de.uka.ipd.sdq.experimentautomation.abstractsimulation;
  * The following features are supported:
  * <ul>
  * <li>
- * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition#getSimulationTime
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition#getSimulationTime
  * <em>Simulation Time</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getSimTimeStopCondition()
+ * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getSimTimeStopCondition()
  * @model
  * @generated
  */
@@ -30,7 +30,7 @@ public interface SimTimeStopCondition extends StopCondition {
      * 
      * @return the value of the '<em>Simulation Time</em>' attribute.
      * @see #setSimulationTime(int)
-     * @see de.uka.ipd.sdq.experimentautomation.abstractsimulation.AbstractsimulationPackage#getSimTimeStopCondition_SimulationTime()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getSimTimeStopCondition_SimulationTime()
      * @model required="true" ordered="false"
      * @generated
      */
@@ -38,7 +38,7 @@ public interface SimTimeStopCondition extends StopCondition {
 
     /**
      * Sets the value of the '
-     * {@link de.uka.ipd.sdq.experimentautomation.abstractsimulation.SimTimeStopCondition#getSimulationTime
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition#getSimulationTime
      * <em>Simulation Time</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
