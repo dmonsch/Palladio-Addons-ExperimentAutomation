@@ -2,15 +2,12 @@
 <?eclipse version="3.0"?>
 
 <!--
- <copyright>
- </copyright>
-
- $Id$
 -->
 
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated ExperimentAutomation -->
       <factory
             uri="http://palladiosimulator.org/ExperimentAutomation/Variation/1.0"
             class="org.palladiosimulator.experimentautomation.variation.provider.VariationItemProviderAdapterFactory"
@@ -23,6 +20,7 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated ExperimentAutomation -->
       <factory
             uri="http://palladiosimulator.org/ExperimentAutomation/Experiments/1.0"
             class="org.palladiosimulator.experimentautomation.experiments.provider.ExperimentsItemProviderAdapterFactory"
@@ -36,18 +34,6 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated ExperimentAutomation -->
-      <factory
-            uri="http://palladiosimulator.org/ExperimentAutomation/AbstractSimulation/1.0"
-            class="org.palladiosimulator.experimentautomation.abstractsimulation.provider.AbstractsimulationItemProviderAdapterFactory"
-            supportedTypes=
-              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
-               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
-               org.eclipse.emf.edit.provider.ITreeItemContentProvider
-               org.eclipse.emf.edit.provider.IItemLabelProvider
-               org.eclipse.emf.edit.provider.IItemPropertySource"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="http://palladiosimulator.org/ExperimentAutomation/AbstractSimulation/1.0"
             class="org.palladiosimulator.experimentautomation.abstractsimulation.provider.AbstractsimulationItemProviderAdapterFactory"

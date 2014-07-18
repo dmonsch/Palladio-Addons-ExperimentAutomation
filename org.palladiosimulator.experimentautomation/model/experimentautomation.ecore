@@ -4,7 +4,7 @@
     nsPrefix="exa">
   <eSubpackages name="variation" nsURI="http://palladiosimulator.org/ExperimentAutomation/Variation/1.0"
       nsPrefix="ExperimentAutomation.Variation">
-    <eClassifiers xsi:type="ecore:EClass" name="VariationType" abstract="true" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+    <eClassifiers xsi:type="ecore:EClass" name="VariationType" abstract="true" eSuperTypes="../../de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="strategyClass" ordered="false"
@@ -115,13 +115,13 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="InitialModel">
       <eStructuralFeatures xsi:type="ecore:EReference" name="usageModel" lowerBound="1"
-          eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//usagemodel/UsageModel"/>
+          eType="ecore:EClass ../../de.uka.ipd.sdq.pcm/model/pcm.ecore#//usagemodel/UsageModel"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="allocation" lowerBound="1"
-          eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation"/>
+          eType="ecore:EClass ../../de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="middlewareRepository"
-          lowerBound="1" eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Repository"/>
+          lowerBound="1" eType="ecore:EClass ../../de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Repository"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="eventMiddleWareRepository"
-          lowerBound="1" eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Repository"/>
+          lowerBound="1" eType="ecore:EClass ../../de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Repository"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="reconfigurationRules"
           eType="#//experiments/ReconfigurationRulesFolder"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="platformMonitoringSpecification"
@@ -198,7 +198,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="StopCondition" abstract="true"/>
     <eClassifiers xsi:type="ecore:EClass" name="EDP2" eSuperTypes="#//abstractsimulation/PersistenceFramework">
       <eStructuralFeatures xsi:type="ecore:EReference" name="repository" lowerBound="1"
-          eType="ecore:EClass platform:/plugin/org.palladiosimulator.edp2/model/EDP2.ecore#//Repository/Repository"/>
+          eType="ecore:EClass ../../org.palladiosimulator.edp2/model/EDP2.ecore#//Repository/Repository"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

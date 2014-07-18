@@ -7,6 +7,7 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ExperimentAutomation -->
       <package
             uri="http://palladiosimulator.org/ExperimentAutomation/Variation/1.0"
             class="org.palladiosimulator.experimentautomation.variation.VariationPackage"
@@ -14,12 +15,14 @@
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ExperimentAutomation -->
       <parser
             type="variation"
             class="org.palladiosimulator.experimentautomation.variation.util.VariationResourceFactoryImpl"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ExperimentAutomation -->
       <package
             uri="http://palladiosimulator.org/ExperimentAutomation/Experiments/1.0"
             class="org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage"
@@ -27,6 +30,7 @@
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ExperimentAutomation -->
       <parser
             type="experiments"
             class="org.palladiosimulator.experimentautomation.experiments.util.ExperimentsResourceFactoryImpl"/>
@@ -42,19 +46,6 @@
 
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <!-- @generated ExperimentAutomation -->
-      <parser
-            type="abstractsimulation"
-            class="org.palladiosimulator.experimentautomation.abstractsimulation.util.AbstractsimulationResourceFactoryImpl"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <package
-            uri="http://palladiosimulator.org/ExperimentAutomation/AbstractSimulation/1.0"
-            class="org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage"
-            genModel="model/ExperimentAutomation.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.extension_parser">
       <parser
             type="abstractsimulation"
             class="org.palladiosimulator.experimentautomation.abstractsimulation.util.AbstractsimulationResourceFactoryImpl"/>

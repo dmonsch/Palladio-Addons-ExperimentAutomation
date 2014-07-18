@@ -2,15 +2,12 @@
 <?eclipse version="3.0"?>
 
 <!--
- <copyright>
- </copyright>
-
- $Id$
 -->
 
 <plugin>
 
    <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ExperimentAutomation -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
@@ -25,23 +22,8 @@
       </wizard>
    </extension>
 
-null
-null
    <extension point="org.eclipse.ui.editors">
       <!-- @generated ExperimentAutomation -->
-      <editor
-            id="org.palladiosimulator.experimentautomation.abstractsimulation.presentation.AbstractsimulationEditorID"
-            name="%_UI_AbstractsimulationEditor_label"
-            icon="icons/full/obj16/AbstractsimulationModelFile.gif"
-            extensions="abstractsimulation"
-            class="org.palladiosimulator.experimentautomation.abstractsimulation.presentation.AbstractsimulationEditor"
-            contributorClass="org.palladiosimulator.experimentautomation.abstractsimulation.presentation.AbstractsimulationActionBarContributor">
-      </editor>
-   </extension>
-
-null
-null
-   <extension point="org.eclipse.ui.editors">
       <editor
             id="org.palladiosimulator.experimentautomation.variation.presentation.VariationEditorID"
             name="%_UI_VariationEditor_label"
@@ -68,29 +50,8 @@ null
       </wizard>
    </extension>
 
-null
-null
-null
-null
-null
-null
-null
-   <extension point="org.eclipse.ui.newWizards">
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="org.palladiosimulator.experimentautomation.experiments.presentation.ExperimentsModelWizardID"
-            name="%_UI_ExperimentsModelWizard_label"
-            class="org.palladiosimulator.experimentautomation.experiments.presentation.ExperimentsModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/ExperimentsModelFile.gif">
-         <description>%_UI_ExperimentsModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
-
    <extension point="org.eclipse.ui.editors">
+      <!-- @generated ExperimentAutomation -->
       <editor
             id="org.palladiosimulator.experimentautomation.experiments.presentation.ExperimentsEditorID"
             name="%_UI_ExperimentsEditor_label"
@@ -117,32 +78,11 @@ null
       </wizard>
    </extension>
 
-null
-null
-null
-null
-null
-null
-null
-   <extension point="org.eclipse.ui.newWizards">
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="org.palladiosimulator.experimentautomation.abstractsimulation.presentation.AbstractSimulationModelWizardID"
-            name="%_UI_AbstractSimulationModelWizard_label"
-            class="org.palladiosimulator.experimentautomation.abstractsimulation.presentation.AbstractsimulationModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/AbstractsimulationModelFile.gif">
-         <description>%_UI_AbstractSimulationModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
-
    <extension point="org.eclipse.ui.editors">
+      <!-- @generated ExperimentAutomation -->
       <editor
-            id="org.palladiosimulator.experimentautomation.abstractsimulation.presentation.AbstractSimulationEditorID"
-            name="%_UI_AbstractSimulationEditor_label"
+            id="org.palladiosimulator.experimentautomation.abstractsimulation.presentation.AbstractsimulationEditorID"
+            name="%_UI_AbstractsimulationEditor_label"
             icon="icons/full/obj16/AbstractsimulationModelFile.gif"
             extensions="abstractsimulation"
             class="org.palladiosimulator.experimentautomation.abstractsimulation.presentation.AbstractsimulationEditor"

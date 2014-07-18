@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<simucomtooladapter:SimuComConfiguration
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ExperimentAutomation.Experiments.AbstractSimulation="http://palladiosimulator.org/ExperimentAutomation/AbstractSimulation/1.0"
+    xmlns:simucomtooladapter="http://palladiosimulator.org/ExperimentAutomation/ToolAdapter/SimuCom/1.0"
+    xsi:schemaLocation="http://palladiosimulator.org/ExperimentAutomation/AbstractSimulation/1.0 ../../../plugin/org.palladiosimulator.experimentautomation/model/experimentautomation.ecore#//abstractsimulation http://palladiosimulator.org/ExperimentAutomation/ToolAdapter/SimuCom/1.0 simucomtooladapter.ecore">
+  <persistenceFramework
+      xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:EDP2"/>
+  <stopConditions
+      xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:MeasurementCountStopCondition"
+      measurementCount="1000"/>
+  <stopConditions
+      xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:SimTimeStopCondition"
+      simulationTime="-1"/>
+  <probeSpecConfiguration
+      blackboardType="CONCURRENT"/>
+</simucomtooladapter:SimuComConfiguration>

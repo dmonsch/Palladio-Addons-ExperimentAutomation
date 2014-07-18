@@ -6,7 +6,9 @@
     </variations>
     <toolConfiguration xsi:type="simucomtooladapter:SimuComConfiguration" name="SIMUCOM_1000MEASUREM">
       <persistenceFramework xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:SensorFramework">
-        <datasource xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:MemoryDatasource"/>
+        <datasource
+          xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:FileDatasource"
+          location="C:/data/experimentAutomation"/>
       </persistenceFramework>
       <stopConditions xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:MeasurementCountStopCondition" measurementCount="1000"/>
       <stopConditions xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:SimTimeStopCondition" simulationTime="-1"/>
