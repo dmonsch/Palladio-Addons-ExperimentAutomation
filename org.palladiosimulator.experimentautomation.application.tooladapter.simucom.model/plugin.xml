@@ -10,7 +10,7 @@
       <package
             uri="http://palladiosimulator.org/ExperimentAutomation/SimuCom/1.0"
             class="org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.SimucomtooladapterPackage"
-            genModel="model/ExperimentAutomation.genmodel"/>
+            genModel="model/simucomtooladapter.genmodel"/>
    </extension>
    
    <extension point="org.eclipse.emf.ecore.extension_parser">
