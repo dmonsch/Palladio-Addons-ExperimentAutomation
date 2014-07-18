@@ -4,7 +4,6 @@ package org.palladiosimulator.experimentautomation.application.tooladapter.simuc
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
 
 /**
@@ -29,7 +28,7 @@ public interface SimucomtooladapterPackage extends EPackage {
      * 
      * @generated
      */
-    String eNAME = "simucomtooladapter";
+    String eNAME = "model";
 
     /**
      * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->

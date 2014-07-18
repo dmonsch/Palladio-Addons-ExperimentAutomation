@@ -7,21 +7,6 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated simucomtooladapter -->
-      <package
-            uri="http://palladiosimulator.org/ExperimentAutomation/ToolAdapter/SimuCom/1.0"
-            class="org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.SimucomtooladapterPackage"
-            genModel="model/simucomtooladapter.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.extension_parser">
-      <!-- @generated simucomtooladapter -->
-      <parser
-            type="simucomtooladapter"
-            class="org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.util.SimucomtooladapterResourceFactoryImpl"/>
-   </extension>
-   
-   <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://palladiosimulator.org/ExperimentAutomation/SimuCom/1.0"
             class="org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.SimucomtooladapterPackage"

@@ -14,7 +14,12 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.palladiosimulator.edp2;visibility:=reexport,
- org.palladiosimulator.experimentautomation;bundle-version="1.0.0";visibility:=reexport,
- de.uka.ipd.sdq.identifier;bundle-version="2.1.0";visibility:=reexport,
- org.palladiosimulator.metricspec;visibility:=reexport
+ org.palladiosimulator.experimentautomation;visibility:=reexport,
+ de.uka.ipd.sdq.identifier;visibility:=reexport,
+ org.palladiosimulator.metricspec;visibility:=reexport,
+ de.uka.ipd.sdq.pcm;visibility:=reexport,
+ org.palladiosimulator.simulizar.pms;visibility:=reexport,
+ de.uka.ipd.sdq.probfunction;visibility:=reexport,
+ de.uka.ipd.sdq.stoex;visibility:=reexport,
+ de.uka.ipd.sdq.units;visibility:=reexport
 Bundle-ActivationPolicy: lazy

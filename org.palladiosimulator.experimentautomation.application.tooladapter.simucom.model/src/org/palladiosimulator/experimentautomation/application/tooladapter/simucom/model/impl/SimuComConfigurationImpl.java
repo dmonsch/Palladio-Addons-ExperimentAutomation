@@ -12,7 +12,7 @@ import org.palladiosimulator.experimentautomation.application.tooladapter.simuco
  * <em><b>Simu Com Configuration</b></em>'. <!-- end-user-doc -->
  * <p>
  * </p>
- * 
+ *
  * @generated
  */
 public class SimuComConfigurationImpl extends AbstractSimulationConfigurationImpl implements SimuComConfiguration {
