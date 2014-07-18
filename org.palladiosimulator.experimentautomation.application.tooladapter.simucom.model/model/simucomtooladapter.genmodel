@@ -7,7 +7,7 @@
     usedGenPackages="platform:/plugin/org.palladiosimulator.edp2/model/EDP2.genmodel#//models platform:/plugin/org.palladiosimulator.experimentautomation/model/ExperimentAutomation.genmodel#//experimentautomation platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.genmodel#//metricspec platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.genmodel#//pcm platform:/plugin/org.palladiosimulator.simulizar.pms/model/pms.genmodel#//pms platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel#//units"
     importOrganizing="true">
   <foreignModel>simucomtooladapter.ecore</foreignModel>
-  <genPackages prefix="Simucomtooladapter" basePackage="org.palladiosimulator.simucom"
+  <genPackages prefix="Simucomtooladapter" basePackage="org.palladiosimulator.experimentautomation.application.tooladapter.simucom"
       resource="XML" disposableProviderFactory="true" ecorePackage="simucomtooladapter.ecore#/">
     <genClasses ecoreClass="simucomtooladapter.ecore#//SimuComConfiguration"/>
   </genPackages>
