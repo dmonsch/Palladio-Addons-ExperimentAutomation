@@ -46,7 +46,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Persistence Framework</em>' containment reference.
      * @see #setPersistenceFramework(PersistenceFramework)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_PersistenceFramework()
@@ -60,7 +60,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getPersistenceFramework
      * <em>Persistence Framework</em>}' containment reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Persistence Framework</em>' containment reference.
      * @see #getPersistenceFramework()
@@ -78,7 +78,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Stop Conditions</em>' containment reference list.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_StopConditions()
      * @model containment="true" required="true" ordered="false"
@@ -94,7 +94,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * clear, there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Random Number Generator Seed</em>' containment reference.
      * @see #setRandomNumberGeneratorSeed(RandomNumberGeneratorSeed)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_RandomNumberGeneratorSeed()
@@ -108,7 +108,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed
      * <em>Random Number Generator Seed</em>}' containment reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Random Number Generator Seed</em>' containment
      *            reference.
@@ -125,7 +125,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Simulate Linking Resources</em>' attribute.
      * @see #setSimulateLinkingResources(boolean)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_SimulateLinkingResources()
@@ -139,7 +139,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateLinkingResources
      * <em>Simulate Linking Resources</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Simulate Linking Resources</em>' attribute.
      * @see #isSimulateLinkingResources()
@@ -155,7 +155,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Simulate Failures</em>' attribute.
      * @see #setSimulateFailures(boolean)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_SimulateFailures()
@@ -168,7 +168,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
      * <em>Simulate Failures</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Simulate Failures</em>' attribute.
      * @see #isSimulateFailures()
@@ -184,7 +184,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Probe Spec Configuration</em>' containment reference.
      * @see #setProbeSpecConfiguration(ProbeSpecConfiguration)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_ProbeSpecConfiguration()
@@ -198,7 +198,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration
      * <em>Probe Spec Configuration</em>}' containment reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Probe Spec Configuration</em>' containment reference.
      * @see #getProbeSpecConfiguration()

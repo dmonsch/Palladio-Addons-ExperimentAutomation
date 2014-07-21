@@ -2,9 +2,9 @@ package org.palladiosimulator.experimentautomation.application.tooladapter.simuc
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.Datasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.PersistenceFramework;
 import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework;
-import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFrameworkDatasource;
 import org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.sensorframework.SensorFrameworkFactory;
 import org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.SimuComConfiguration;
 
@@ -27,7 +27,7 @@ public class CleanUpRecorderJob extends SequentialBlackboardInteractingJob<MDSDB
 
         if (AbstractsimulationPackage.eINSTANCE.getSensorFramework().isInstance(persistenceFramework)) {
             final SensorFramework sensorFramework = (SensorFramework) persistenceFramework;
-            final SensorFrameworkDatasource datasource = sensorFramework.getDatasource();
+            final Datasource datasource = sensorFramework.getDatasource();
 
             SensorFrameworkFactory.closeDatasource(datasource);
         } else if (AbstractsimulationPackage.eINSTANCE.getEDP2().isInstance(persistenceFramework)) {

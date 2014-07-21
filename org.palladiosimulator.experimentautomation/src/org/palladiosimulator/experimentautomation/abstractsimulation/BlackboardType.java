@@ -12,7 +12,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * <!-- begin-user-doc --> A representation of the literals of the enumeration '
  * <em><b>Blackboard Type</b></em>', and utility methods for working with them. <!-- end-user-doc
  * -->
- * 
+ *
  * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getBlackboardType()
  * @model
  * @generated
@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.Enumerator;
 public enum BlackboardType implements Enumerator {
     /**
      * The '<em><b>SIMPLE</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #SIMPLE_VALUE
      * @generated
      * @ordered
@@ -30,7 +30,7 @@ public enum BlackboardType implements Enumerator {
     /**
      * The '<em><b>CONCURRENT</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @see #CONCURRENT_VALUE
      * @generated
      * @ordered
@@ -39,7 +39,7 @@ public enum BlackboardType implements Enumerator {
 
     /**
      * The '<em><b>NONE</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #NONE_VALUE
      * @generated
      * @ordered
@@ -53,7 +53,7 @@ public enum BlackboardType implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #SIMPLE
      * @model
      * @generated
@@ -68,7 +68,7 @@ public enum BlackboardType implements Enumerator {
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #CONCURRENT
      * @model
      * @generated
@@ -83,7 +83,7 @@ public enum BlackboardType implements Enumerator {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #NONE
      * @model
      * @generated
@@ -94,7 +94,7 @@ public enum BlackboardType implements Enumerator {
     /**
      * An array of all the '<em><b>Blackboard Type</b></em>' enumerators. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private static final BlackboardType[] VALUES_ARRAY = new BlackboardType[] { SIMPLE, CONCURRENT, NONE, };
@@ -102,7 +102,7 @@ public enum BlackboardType implements Enumerator {
     /**
      * A public read-only list of all the '<em><b>Blackboard Type</b></em>' enumerators. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static final List<BlackboardType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
@@ -110,12 +110,11 @@ public enum BlackboardType implements Enumerator {
     /**
      * Returns the '<em><b>Blackboard Type</b></em>' literal with the specified literal value. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static BlackboardType get(String literal) {
-        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-            BlackboardType result = VALUES_ARRAY[i];
+    public static BlackboardType get(final String literal) {
+        for (final BlackboardType result : VALUES_ARRAY) {
             if (result.toString().equals(literal)) {
                 return result;
             }
@@ -126,12 +125,11 @@ public enum BlackboardType implements Enumerator {
     /**
      * Returns the '<em><b>Blackboard Type</b></em>' literal with the specified name. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static BlackboardType getByName(String name) {
-        for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-            BlackboardType result = VALUES_ARRAY[i];
+    public static BlackboardType getByName(final String name) {
+        for (final BlackboardType result : VALUES_ARRAY) {
             if (result.getName().equals(name)) {
                 return result;
             }
@@ -142,10 +140,10 @@ public enum BlackboardType implements Enumerator {
     /**
      * Returns the '<em><b>Blackboard Type</b></em>' literal with the specified integer value. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public static BlackboardType get(int value) {
+    public static BlackboardType get(final int value) {
         switch (value) {
         case SIMPLE_VALUE:
             return SIMPLE;
@@ -159,31 +157,31 @@ public enum BlackboardType implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final int value;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final String name;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private final String literal;
 
     /**
      * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    private BlackboardType(int value, String name, String literal) {
+    private BlackboardType(final int value, final String name, final String literal) {
         this.value = value;
         this.name = name;
         this.literal = literal;
@@ -191,40 +189,43 @@ public enum BlackboardType implements Enumerator {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public int getValue() {
-        return value;
+        return this.value;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public String getName() {
-        return name;
+        return this.name;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public String getLiteral() {
-        return literal;
+        return this.literal;
     }
 
     /**
      * Returns the literal value of the enumerator, which is its string representation. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        return literal;
+        return this.literal;
     }
 
 } // BlackboardType

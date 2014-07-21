@@ -5,10 +5,11 @@
       <valueProvider xsi:type="ExperimentAutomation.Experiments:SetValueProvider" values="1,3,7,10"/>
     </variations>
     <toolConfiguration xsi:type="simucomtooladapter:SimuComConfiguration" name="SIMUCOM_1000MEASUREM">
-      <persistenceFramework xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:SensorFramework">
+      <persistenceFramework
+          xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:EDP2">
         <datasource
-          xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:FileDatasource"
-          location="C:/data/experimentAutomation"/>
+            xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:FileDatasource"
+            location="C:/data/experimentAutomation"/>
       </persistenceFramework>
       <stopConditions xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:MeasurementCountStopCondition" measurementCount="1000"/>
       <stopConditions xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:SimTimeStopCondition" simulationTime="-1"/>

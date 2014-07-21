@@ -27,7 +27,7 @@ public interface ExponentialValueProvider extends ValueProvider {
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Base</em>' attribute.
      * @see #setBase(double)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExponentialValueProvider_Base()
@@ -40,7 +40,7 @@ public interface ExponentialValueProvider extends ValueProvider {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider#getBase
      * <em>Base</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Base</em>' attribute.
      * @see #getBase()

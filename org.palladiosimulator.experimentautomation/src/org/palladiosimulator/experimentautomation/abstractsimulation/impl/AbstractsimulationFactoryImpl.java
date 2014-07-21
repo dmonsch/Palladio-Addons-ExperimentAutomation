@@ -22,23 +22,23 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStop
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class AbstractsimulationFactoryImpl extends EFactoryImpl implements AbstractsimulationFactory {
     /**
      * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static AbstractsimulationFactory init() {
         try {
-            AbstractsimulationFactory theAbstractsimulationFactory = (AbstractsimulationFactory) EPackage.Registry.INSTANCE
+            final AbstractsimulationFactory theAbstractsimulationFactory = (AbstractsimulationFactory) EPackage.Registry.INSTANCE
                     .getEFactory(AbstractsimulationPackage.eNS_URI);
             if (theAbstractsimulationFactory != null) {
                 return theAbstractsimulationFactory;
             }
-        } catch (Exception exception) {
+        } catch (final Exception exception) {
             EcorePlugin.INSTANCE.log(exception);
         }
         return new AbstractsimulationFactoryImpl();
@@ -46,7 +46,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public AbstractsimulationFactoryImpl() {
@@ -55,28 +55,28 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public EObject create(EClass eClass) {
+    public EObject create(final EClass eClass) {
         switch (eClass.getClassifierID()) {
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED:
-            return createRandomNumberGeneratorSeed();
+            return this.createRandomNumberGeneratorSeed();
         case AbstractsimulationPackage.PROBE_SPEC_CONFIGURATION:
-            return createProbeSpecConfiguration();
+            return this.createProbeSpecConfiguration();
         case AbstractsimulationPackage.SENSOR_FRAMEWORK:
-            return createSensorFramework();
+            return this.createSensorFramework();
         case AbstractsimulationPackage.MEMORY_DATASOURCE:
-            return createMemoryDatasource();
+            return this.createMemoryDatasource();
         case AbstractsimulationPackage.FILE_DATASOURCE:
-            return createFileDatasource();
+            return this.createFileDatasource();
         case AbstractsimulationPackage.MEASUREMENT_COUNT_STOP_CONDITION:
-            return createMeasurementCountStopCondition();
+            return this.createMeasurementCountStopCondition();
         case AbstractsimulationPackage.SIM_TIME_STOP_CONDITION:
-            return createSimTimeStopCondition();
+            return this.createSimTimeStopCondition();
         case AbstractsimulationPackage.EDP2:
-            return createEDP2();
+            return this.createEDP2();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -84,14 +84,14 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object createFromString(EDataType eDataType, String initialValue) {
+    public Object createFromString(final EDataType eDataType, final String initialValue) {
         switch (eDataType.getClassifierID()) {
         case AbstractsimulationPackage.BLACKBOARD_TYPE:
-            return createBlackboardTypeFromString(eDataType, initialValue);
+            return this.createBlackboardTypeFromString(eDataType, initialValue);
         default:
             throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -99,14 +99,14 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String convertToString(EDataType eDataType, Object instanceValue) {
+    public String convertToString(final EDataType eDataType, final Object instanceValue) {
         switch (eDataType.getClassifierID()) {
         case AbstractsimulationPackage.BLACKBOARD_TYPE:
-            return convertBlackboardTypeToString(eDataType, instanceValue);
+            return this.convertBlackboardTypeToString(eDataType, instanceValue);
         default:
             throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
         }
@@ -114,118 +114,128 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public RandomNumberGeneratorSeed createRandomNumberGeneratorSeed() {
-        RandomNumberGeneratorSeedImpl randomNumberGeneratorSeed = new RandomNumberGeneratorSeedImpl();
+        final RandomNumberGeneratorSeedImpl randomNumberGeneratorSeed = new RandomNumberGeneratorSeedImpl();
         return randomNumberGeneratorSeed;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public ProbeSpecConfiguration createProbeSpecConfiguration() {
-        ProbeSpecConfigurationImpl probeSpecConfiguration = new ProbeSpecConfigurationImpl();
+        final ProbeSpecConfigurationImpl probeSpecConfiguration = new ProbeSpecConfigurationImpl();
         return probeSpecConfiguration;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public SensorFramework createSensorFramework() {
-        SensorFrameworkImpl sensorFramework = new SensorFrameworkImpl();
+        final SensorFrameworkImpl sensorFramework = new SensorFrameworkImpl();
         return sensorFramework;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public MemoryDatasource createMemoryDatasource() {
-        MemoryDatasourceImpl memoryDatasource = new MemoryDatasourceImpl();
+        final MemoryDatasourceImpl memoryDatasource = new MemoryDatasourceImpl();
         return memoryDatasource;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public FileDatasource createFileDatasource() {
-        FileDatasourceImpl fileDatasource = new FileDatasourceImpl();
+        final FileDatasourceImpl fileDatasource = new FileDatasourceImpl();
         return fileDatasource;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public MeasurementCountStopCondition createMeasurementCountStopCondition() {
-        MeasurementCountStopConditionImpl measurementCountStopCondition = new MeasurementCountStopConditionImpl();
+        final MeasurementCountStopConditionImpl measurementCountStopCondition = new MeasurementCountStopConditionImpl();
         return measurementCountStopCondition;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public SimTimeStopCondition createSimTimeStopCondition() {
-        SimTimeStopConditionImpl simTimeStopCondition = new SimTimeStopConditionImpl();
+        final SimTimeStopConditionImpl simTimeStopCondition = new SimTimeStopConditionImpl();
         return simTimeStopCondition;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EDP2 createEDP2() {
-        EDP2Impl edp2 = new EDP2Impl();
+        final EDP2Impl edp2 = new EDP2Impl();
         return edp2;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public BlackboardType createBlackboardTypeFromString(EDataType eDataType, String initialValue) {
-        BlackboardType result = BlackboardType.get(initialValue);
-        if (result == null)
+    public BlackboardType createBlackboardTypeFromString(final EDataType eDataType, final String initialValue) {
+        final BlackboardType result = BlackboardType.get(initialValue);
+        if (result == null) {
             throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '"
                     + eDataType.getName() + "'");
+        }
         return result;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public String convertBlackboardTypeToString(EDataType eDataType, Object instanceValue) {
+    public String convertBlackboardTypeToString(final EDataType eDataType, final Object instanceValue) {
         return instanceValue == null ? null : instanceValue.toString();
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public AbstractsimulationPackage getAbstractsimulationPackage() {
-        return (AbstractsimulationPackage) getEPackage();
+        return (AbstractsimulationPackage) this.getEPackage();
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @deprecated
      * @generated
      */

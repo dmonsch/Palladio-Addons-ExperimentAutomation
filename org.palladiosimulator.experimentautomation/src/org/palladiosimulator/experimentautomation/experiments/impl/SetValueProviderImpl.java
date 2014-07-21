@@ -26,7 +26,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
     /**
      * The default value of the '{@link #getValues() <em>Values</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getValues()
      * @generated
      * @ordered
@@ -36,7 +36,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
     /**
      * The cached value of the '{@link #getValues() <em>Values</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getValues()
      * @generated
      * @ordered
@@ -45,7 +45,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected SetValueProviderImpl() {
@@ -54,7 +54,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -64,50 +64,53 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public String getValues() {
-        return values;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setValues(String newValues) {
-        String oldValues = values;
-        values = newValues;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.SET_VALUE_PROVIDER__VALUES,
-                    oldValues, values));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public String getValues() {
+        return this.values;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setValues(final String newValues) {
+        final String oldValues = this.values;
+        this.values = newValues;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.SET_VALUE_PROVIDER__VALUES,
+                    oldValues, this.values));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case ExperimentsPackage.SET_VALUE_PROVIDER__VALUES:
-            return getValues();
+            return this.getValues();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case ExperimentsPackage.SET_VALUE_PROVIDER__VALUES:
-            setValues((String) newValue);
+            this.setValues((String) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -115,14 +118,14 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.SET_VALUE_PROVIDER__VALUES:
-            setValues(VALUES_EDEFAULT);
+            this.setValues(VALUES_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -130,31 +133,32 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.SET_VALUE_PROVIDER__VALUES:
-            return VALUES_EDEFAULT == null ? values != null : !VALUES_EDEFAULT.equals(values);
+            return VALUES_EDEFAULT == null ? this.values != null : !VALUES_EDEFAULT.equals(this.values);
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (this.eIsProxy()) {
             return super.toString();
+        }
 
-        StringBuffer result = new StringBuffer(super.toString());
+        final StringBuffer result = new StringBuffer(super.toString());
         result.append(" (values: ");
-        result.append(values);
+        result.append(this.values);
         result.append(')');
         return result.toString();
     }

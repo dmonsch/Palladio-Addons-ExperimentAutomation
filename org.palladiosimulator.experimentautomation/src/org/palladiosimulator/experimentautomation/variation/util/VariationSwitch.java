@@ -19,21 +19,21 @@ import de.uka.ipd.sdq.identifier.Identifier;
  * each class of the model, starting with the actual class of the object and proceeding up the
  * inheritance hierarchy until a non-null result is returned, which is the result of the switch.
  * <!-- end-user-doc -->
- * 
+ *
  * @see org.palladiosimulator.experimentautomation.variation.VariationPackage
  * @generated
  */
 public class VariationSwitch<T> extends Switch<T> {
     /**
      * The cached model package <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected static VariationPackage modelPackage;
 
     /**
      * Creates an instance of the switch. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public VariationSwitch() {
@@ -45,66 +45,75 @@ public class VariationSwitch<T> extends Switch<T> {
     /**
      * Checks whether this is a switch for the given package. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @parameter ePackage the package in question.
      * @return whether this is a switch for the given package.
      * @generated
      */
     @Override
-    protected boolean isSwitchFor(EPackage ePackage) {
+    protected boolean isSwitchFor(final EPackage ePackage) {
         return ePackage == modelPackage;
     }
 
     /**
      * Calls <code>caseXXX</code> for each class of the model until one returns a non null result;
      * it yields that result. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the first non-null result returned by a <code>caseXXX</code> call.
      * @generated
      */
     @Override
-    protected T doSwitch(int classifierID, EObject theEObject) {
+    protected T doSwitch(final int classifierID, final EObject theEObject) {
         switch (classifierID) {
         case VariationPackage.VARIATION_TYPE: {
-            VariationType variationType = (VariationType) theEObject;
-            T result = caseVariationType(variationType);
-            if (result == null)
-                result = caseIdentifier(variationType);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final VariationType variationType = (VariationType) theEObject;
+            T result = this.caseVariationType(variationType);
+            if (result == null) {
+                result = this.caseIdentifier(variationType);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case VariationPackage.VALUE_VARIATION: {
-            ValueVariation valueVariation = (ValueVariation) theEObject;
-            T result = caseValueVariation(valueVariation);
-            if (result == null)
-                result = caseVariationType(valueVariation);
-            if (result == null)
-                result = caseIdentifier(valueVariation);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final ValueVariation valueVariation = (ValueVariation) theEObject;
+            T result = this.caseValueVariation(valueVariation);
+            if (result == null) {
+                result = this.caseVariationType(valueVariation);
+            }
+            if (result == null) {
+                result = this.caseIdentifier(valueVariation);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case VariationPackage.STRUCTURAL_VARIATION: {
-            StructuralVariation structuralVariation = (StructuralVariation) theEObject;
-            T result = caseStructuralVariation(structuralVariation);
-            if (result == null)
-                result = caseVariationType(structuralVariation);
-            if (result == null)
-                result = caseIdentifier(structuralVariation);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final StructuralVariation structuralVariation = (StructuralVariation) theEObject;
+            T result = this.caseStructuralVariation(structuralVariation);
+            if (result == null) {
+                result = this.caseVariationType(structuralVariation);
+            }
+            if (result == null) {
+                result = this.caseIdentifier(structuralVariation);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case VariationPackage.VARIATION_REPOSITORY: {
-            VariationRepository variationRepository = (VariationRepository) theEObject;
-            T result = caseVariationRepository(variationRepository);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final VariationRepository variationRepository = (VariationRepository) theEObject;
+            T result = this.caseVariationRepository(variationRepository);
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         default:
-            return defaultCase(theEObject);
+            return this.defaultCase(theEObject);
         }
     }
 
@@ -112,14 +121,14 @@ public class VariationSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Type</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Type</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseVariationType(VariationType object) {
+    public T caseVariationType(final VariationType object) {
         return null;
     }
 
@@ -127,14 +136,14 @@ public class VariationSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Value Variation</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Value Variation</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseValueVariation(ValueVariation object) {
+    public T caseValueVariation(final ValueVariation object) {
         return null;
     }
 
@@ -142,7 +151,7 @@ public class VariationSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Structural Variation</em>'. <!-- begin-user-doc --> This implementation returns null;
      * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -150,7 +159,7 @@ public class VariationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseStructuralVariation(StructuralVariation object) {
+    public T caseStructuralVariation(final StructuralVariation object) {
         return null;
     }
 
@@ -158,14 +167,14 @@ public class VariationSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Repository</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Repository</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseVariationRepository(VariationRepository object) {
+    public T caseVariationRepository(final VariationRepository object) {
         return null;
     }
 
@@ -173,14 +182,14 @@ public class VariationSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Identifier</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Identifier</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseIdentifier(Identifier object) {
+    public T caseIdentifier(final Identifier object) {
         return null;
     }
 
@@ -188,7 +197,7 @@ public class VariationSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>EObject</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch, but this is the last case anyway. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>EObject</em>'.
@@ -196,7 +205,7 @@ public class VariationSwitch<T> extends Switch<T> {
      * @generated
      */
     @Override
-    public T defaultCase(EObject object) {
+    public T defaultCase(final EObject object) {
         return null;
     }
 

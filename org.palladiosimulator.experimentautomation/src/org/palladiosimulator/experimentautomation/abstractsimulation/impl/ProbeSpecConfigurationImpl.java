@@ -28,7 +28,7 @@ public class ProbeSpecConfigurationImpl extends EObjectImpl implements ProbeSpec
     /**
      * The default value of the '{@link #getBlackboardType() <em>Blackboard Type</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getBlackboardType()
      * @generated
      * @ordered
@@ -38,7 +38,7 @@ public class ProbeSpecConfigurationImpl extends EObjectImpl implements ProbeSpec
     /**
      * The cached value of the '{@link #getBlackboardType() <em>Blackboard Type</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getBlackboardType()
      * @generated
      * @ordered
@@ -47,7 +47,7 @@ public class ProbeSpecConfigurationImpl extends EObjectImpl implements ProbeSpec
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ProbeSpecConfigurationImpl() {
@@ -56,7 +56,7 @@ public class ProbeSpecConfigurationImpl extends EObjectImpl implements ProbeSpec
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -66,51 +66,54 @@ public class ProbeSpecConfigurationImpl extends EObjectImpl implements ProbeSpec
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public BlackboardType getBlackboardType() {
-        return blackboardType;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setBlackboardType(BlackboardType newBlackboardType) {
-        BlackboardType oldBlackboardType = blackboardType;
-        blackboardType = newBlackboardType == null ? BLACKBOARD_TYPE_EDEFAULT : newBlackboardType;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    AbstractsimulationPackage.PROBE_SPEC_CONFIGURATION__BLACKBOARD_TYPE, oldBlackboardType,
-                    blackboardType));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public BlackboardType getBlackboardType() {
+        return this.blackboardType;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setBlackboardType(final BlackboardType newBlackboardType) {
+        final BlackboardType oldBlackboardType = this.blackboardType;
+        this.blackboardType = newBlackboardType == null ? BLACKBOARD_TYPE_EDEFAULT : newBlackboardType;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    AbstractsimulationPackage.PROBE_SPEC_CONFIGURATION__BLACKBOARD_TYPE, oldBlackboardType,
+                    this.blackboardType));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case AbstractsimulationPackage.PROBE_SPEC_CONFIGURATION__BLACKBOARD_TYPE:
-            return getBlackboardType();
+            return this.getBlackboardType();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case AbstractsimulationPackage.PROBE_SPEC_CONFIGURATION__BLACKBOARD_TYPE:
-            setBlackboardType((BlackboardType) newValue);
+            this.setBlackboardType((BlackboardType) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -118,14 +121,14 @@ public class ProbeSpecConfigurationImpl extends EObjectImpl implements ProbeSpec
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.PROBE_SPEC_CONFIGURATION__BLACKBOARD_TYPE:
-            setBlackboardType(BLACKBOARD_TYPE_EDEFAULT);
+            this.setBlackboardType(BLACKBOARD_TYPE_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -133,31 +136,32 @@ public class ProbeSpecConfigurationImpl extends EObjectImpl implements ProbeSpec
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.PROBE_SPEC_CONFIGURATION__BLACKBOARD_TYPE:
-            return blackboardType != BLACKBOARD_TYPE_EDEFAULT;
+            return this.blackboardType != BLACKBOARD_TYPE_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (this.eIsProxy()) {
             return super.toString();
+        }
 
-        StringBuffer result = new StringBuffer(super.toString());
+        final StringBuffer result = new StringBuffer(super.toString());
         result.append(" (blackboardType: ");
-        result.append(blackboardType);
+        result.append(this.blackboardType);
         result.append(')');
         return result.toString();
     }

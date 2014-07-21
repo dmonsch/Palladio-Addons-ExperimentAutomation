@@ -27,7 +27,7 @@ import org.palladiosimulator.experimentautomation.variation.util.VariationAdapte
  * {@link #fireNotifyChanged fireNotifyChanged}. The adapters also support Eclipse property sheets.
  * Note that most of the adapters are shared among multiple instances. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * 
+ *
  * @generated
  */
 public class VariationItemProviderAdapterFactory extends VariationAdapterFactory implements ComposeableAdapterFactory,
@@ -35,7 +35,7 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ComposedAdapterFactory parentAdapterFactory;
@@ -43,7 +43,7 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
     /**
      * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected IChangeNotifier changeNotifier = new ChangeNotifier();
@@ -51,29 +51,29 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
     /**
      * This keeps track of all the supported types checked by {@link #isFactoryForType
      * isFactoryForType}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
     /**
      * This constructs an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public VariationItemProviderAdapterFactory() {
-        supportedTypes.add(IEditingDomainItemProvider.class);
-        supportedTypes.add(IStructuredItemContentProvider.class);
-        supportedTypes.add(ITreeItemContentProvider.class);
-        supportedTypes.add(IItemLabelProvider.class);
-        supportedTypes.add(IItemPropertySource.class);
+        this.supportedTypes.add(IEditingDomainItemProvider.class);
+        this.supportedTypes.add(IStructuredItemContentProvider.class);
+        this.supportedTypes.add(ITreeItemContentProvider.class);
+        this.supportedTypes.add(IItemLabelProvider.class);
+        this.supportedTypes.add(IItemPropertySource.class);
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.variation.ValueVariation} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ValueVariationItemProvider valueVariationItemProvider;
@@ -82,23 +82,23 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.variation.ValueVariation}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createValueVariationAdapter() {
-        if (valueVariationItemProvider == null) {
-            valueVariationItemProvider = new ValueVariationItemProvider(this);
+        if (this.valueVariationItemProvider == null) {
+            this.valueVariationItemProvider = new ValueVariationItemProvider(this);
         }
 
-        return valueVariationItemProvider;
+        return this.valueVariationItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.variation.StructuralVariation} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected StructuralVariationItemProvider structuralVariationItemProvider;
@@ -107,23 +107,23 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.variation.StructuralVariation}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createStructuralVariationAdapter() {
-        if (structuralVariationItemProvider == null) {
-            structuralVariationItemProvider = new StructuralVariationItemProvider(this);
+        if (this.structuralVariationItemProvider == null) {
+            this.structuralVariationItemProvider = new StructuralVariationItemProvider(this);
         }
 
-        return structuralVariationItemProvider;
+        return this.structuralVariationItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.variation.VariationRepository} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected VariationRepositoryItemProvider variationRepositoryItemProvider;
@@ -132,68 +132,70 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.variation.VariationRepository}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createVariationRepositoryAdapter() {
-        if (variationRepositoryItemProvider == null) {
-            variationRepositoryItemProvider = new VariationRepositoryItemProvider(this);
+        if (this.variationRepositoryItemProvider == null) {
+            this.variationRepositoryItemProvider = new VariationRepositoryItemProvider(this);
         }
 
-        return variationRepositoryItemProvider;
+        return this.variationRepositoryItemProvider;
     }
 
     /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public ComposeableAdapterFactory getRootAdapterFactory() {
-        return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
+        return this.parentAdapterFactory == null ? this : this.parentAdapterFactory.getRootAdapterFactory();
     }
 
     /**
      * This sets the composed adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
+    @Override
+    public void setParentAdapterFactory(final ComposedAdapterFactory parentAdapterFactory) {
         this.parentAdapterFactory = parentAdapterFactory;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean isFactoryForType(Object type) {
-        return supportedTypes.contains(type) || super.isFactoryForType(type);
+    public boolean isFactoryForType(final Object type) {
+        return this.supportedTypes.contains(type) || super.isFactoryForType(type);
     }
 
     /**
      * This implementation substitutes the factory itself as the key for the adapter. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Adapter adapt(Notifier notifier, Object type) {
+    public Adapter adapt(final Notifier notifier, final Object type) {
         return super.adapt(notifier, this);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object adapt(Object object, Object type) {
-        if (isFactoryForType(type)) {
-            Object adapter = super.adapt(object, type);
+    public Object adapt(final Object object, final Object type) {
+        if (this.isFactoryForType(type)) {
+            final Object adapter = super.adapt(object, type);
             if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
                 return adapter;
             }
@@ -204,49 +206,56 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
 
     /**
      * This adds a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public void addListener(INotifyChangedListener notifyChangedListener) {
-        changeNotifier.addListener(notifyChangedListener);
+    @Override
+    public void addListener(final INotifyChangedListener notifyChangedListener) {
+        this.changeNotifier.addListener(notifyChangedListener);
     }
 
     /**
      * This removes a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public void removeListener(INotifyChangedListener notifyChangedListener) {
-        changeNotifier.removeListener(notifyChangedListener);
+    @Override
+    public void removeListener(final INotifyChangedListener notifyChangedListener) {
+        this.changeNotifier.removeListener(notifyChangedListener);
     }
 
     /**
      * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public void fireNotifyChanged(Notification notification) {
-        changeNotifier.fireNotifyChanged(notification);
+    @Override
+    public void fireNotifyChanged(final Notification notification) {
+        this.changeNotifier.fireNotifyChanged(notification);
 
-        if (parentAdapterFactory != null) {
-            parentAdapterFactory.fireNotifyChanged(notification);
+        if (this.parentAdapterFactory != null) {
+            this.parentAdapterFactory.fireNotifyChanged(notification);
         }
     }
 
     /**
      * This disposes all of the item providers created by this factory. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public void dispose() {
-        if (valueVariationItemProvider != null)
-            valueVariationItemProvider.dispose();
-        if (structuralVariationItemProvider != null)
-            structuralVariationItemProvider.dispose();
-        if (variationRepositoryItemProvider != null)
-            variationRepositoryItemProvider.dispose();
+        if (this.valueVariationItemProvider != null) {
+            this.valueVariationItemProvider.dispose();
+        }
+        if (this.structuralVariationItemProvider != null) {
+            this.structuralVariationItemProvider.dispose();
+        }
+        if (this.variationRepositoryItemProvider != null) {
+            this.variationRepositoryItemProvider.dispose();
+        }
     }
 
 }

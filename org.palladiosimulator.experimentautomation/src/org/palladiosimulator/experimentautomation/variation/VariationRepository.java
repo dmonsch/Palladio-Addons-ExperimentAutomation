@@ -32,7 +32,7 @@ public interface VariationRepository extends EObject {
      * really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Variation</em>' containment reference list.
      * @see org.palladiosimulator.experimentautomation.variation.VariationPackage#getVariationRepository_Variation()
      * @model containment="true" ordered="false"

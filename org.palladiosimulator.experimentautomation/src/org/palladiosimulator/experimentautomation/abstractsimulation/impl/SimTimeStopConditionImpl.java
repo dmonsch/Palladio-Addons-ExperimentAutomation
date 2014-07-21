@@ -26,7 +26,7 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
     /**
      * The default value of the '{@link #getSimulationTime() <em>Simulation Time</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSimulationTime()
      * @generated
      * @ordered
@@ -36,7 +36,7 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
     /**
      * The cached value of the '{@link #getSimulationTime() <em>Simulation Time</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSimulationTime()
      * @generated
      * @ordered
@@ -45,7 +45,7 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected SimTimeStopConditionImpl() {
@@ -54,7 +54,7 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -64,51 +64,54 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public int getSimulationTime() {
-        return simulationTime;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setSimulationTime(int newSimulationTime) {
-        int oldSimulationTime = simulationTime;
-        simulationTime = newSimulationTime;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    AbstractsimulationPackage.SIM_TIME_STOP_CONDITION__SIMULATION_TIME, oldSimulationTime,
-                    simulationTime));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public int getSimulationTime() {
+        return this.simulationTime;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setSimulationTime(final int newSimulationTime) {
+        final int oldSimulationTime = this.simulationTime;
+        this.simulationTime = newSimulationTime;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    AbstractsimulationPackage.SIM_TIME_STOP_CONDITION__SIMULATION_TIME, oldSimulationTime,
+                    this.simulationTime));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case AbstractsimulationPackage.SIM_TIME_STOP_CONDITION__SIMULATION_TIME:
-            return getSimulationTime();
+            return this.getSimulationTime();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case AbstractsimulationPackage.SIM_TIME_STOP_CONDITION__SIMULATION_TIME:
-            setSimulationTime((Integer) newValue);
+            this.setSimulationTime((Integer) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -116,14 +119,14 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.SIM_TIME_STOP_CONDITION__SIMULATION_TIME:
-            setSimulationTime(SIMULATION_TIME_EDEFAULT);
+            this.setSimulationTime(SIMULATION_TIME_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -131,31 +134,32 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.SIM_TIME_STOP_CONDITION__SIMULATION_TIME:
-            return simulationTime != SIMULATION_TIME_EDEFAULT;
+            return this.simulationTime != SIMULATION_TIME_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (this.eIsProxy()) {
             return super.toString();
+        }
 
-        StringBuffer result = new StringBuffer(super.toString());
+        final StringBuffer result = new StringBuffer(super.toString());
         result.append(" (simulationTime: ");
-        result.append(simulationTime);
+        result.append(this.simulationTime);
         result.append(')');
         return result.toString();
     }

@@ -14,10 +14,10 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatas
  *
  * @generated
  */
-public class MemoryDatasourceImpl extends SensorFrameworkDatasourceImpl implements MemoryDatasource {
+public class MemoryDatasourceImpl extends DatasourceImpl implements MemoryDatasource {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MemoryDatasourceImpl() {
@@ -26,7 +26,7 @@ public class MemoryDatasourceImpl extends SensorFrameworkDatasourceImpl implemen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

@@ -27,7 +27,7 @@ import org.palladiosimulator.experimentautomation.experiments.util.ExperimentsAd
  * {@link #fireNotifyChanged fireNotifyChanged}. The adapters also support Eclipse property sheets.
  * Note that most of the adapters are shared among multiple instances. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * 
+ *
  * @generated
  */
 public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFactory implements
@@ -35,7 +35,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ComposedAdapterFactory parentAdapterFactory;
@@ -43,7 +43,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
     /**
      * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected IChangeNotifier changeNotifier = new ChangeNotifier();
@@ -51,29 +51,29 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
     /**
      * This keeps track of all the supported types checked by {@link #isFactoryForType
      * isFactoryForType}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
     /**
      * This constructs an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ExperimentsItemProviderAdapterFactory() {
-        supportedTypes.add(IEditingDomainItemProvider.class);
-        supportedTypes.add(IStructuredItemContentProvider.class);
-        supportedTypes.add(ITreeItemContentProvider.class);
-        supportedTypes.add(IItemLabelProvider.class);
-        supportedTypes.add(IItemPropertySource.class);
+        this.supportedTypes.add(IEditingDomainItemProvider.class);
+        this.supportedTypes.add(IStructuredItemContentProvider.class);
+        this.supportedTypes.add(ITreeItemContentProvider.class);
+        this.supportedTypes.add(IItemLabelProvider.class);
+        this.supportedTypes.add(IItemPropertySource.class);
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.ExperimentRepository}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ExperimentRepositoryItemProvider experimentRepositoryItemProvider;
@@ -82,23 +82,23 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.ExperimentRepository}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createExperimentRepositoryAdapter() {
-        if (experimentRepositoryItemProvider == null) {
-            experimentRepositoryItemProvider = new ExperimentRepositoryItemProvider(this);
+        if (this.experimentRepositoryItemProvider == null) {
+            this.experimentRepositoryItemProvider = new ExperimentRepositoryItemProvider(this);
         }
 
-        return experimentRepositoryItemProvider;
+        return this.experimentRepositoryItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.Experiment} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ExperimentItemProvider experimentItemProvider;
@@ -107,23 +107,23 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.Experiment}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createExperimentAdapter() {
-        if (experimentItemProvider == null) {
-            experimentItemProvider = new ExperimentItemProvider(this);
+        if (this.experimentItemProvider == null) {
+            this.experimentItemProvider = new ExperimentItemProvider(this);
         }
 
-        return experimentItemProvider;
+        return this.experimentItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.Variation} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected VariationItemProvider variationItemProvider;
@@ -132,23 +132,23 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.Variation}. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createVariationAdapter() {
-        if (variationItemProvider == null) {
-            variationItemProvider = new VariationItemProvider(this);
+        if (this.variationItemProvider == null) {
+            this.variationItemProvider = new VariationItemProvider(this);
         }
 
-        return variationItemProvider;
+        return this.variationItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected PolynomialValueProviderItemProvider polynomialValueProviderItemProvider;
@@ -157,23 +157,23 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createPolynomialValueProviderAdapter() {
-        if (polynomialValueProviderItemProvider == null) {
-            polynomialValueProviderItemProvider = new PolynomialValueProviderItemProvider(this);
+        if (this.polynomialValueProviderItemProvider == null) {
+            this.polynomialValueProviderItemProvider = new PolynomialValueProviderItemProvider(this);
         }
 
-        return polynomialValueProviderItemProvider;
+        return this.polynomialValueProviderItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ExponentialValueProviderItemProvider exponentialValueProviderItemProvider;
@@ -182,23 +182,23 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createExponentialValueProviderAdapter() {
-        if (exponentialValueProviderItemProvider == null) {
-            exponentialValueProviderItemProvider = new ExponentialValueProviderItemProvider(this);
+        if (this.exponentialValueProviderItemProvider == null) {
+            this.exponentialValueProviderItemProvider = new ExponentialValueProviderItemProvider(this);
         }
 
-        return exponentialValueProviderItemProvider;
+        return this.exponentialValueProviderItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.SetValueProvider} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected SetValueProviderItemProvider setValueProviderItemProvider;
@@ -207,23 +207,23 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.SetValueProvider}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createSetValueProviderAdapter() {
-        if (setValueProviderItemProvider == null) {
-            setValueProviderItemProvider = new SetValueProviderItemProvider(this);
+        if (this.setValueProviderItemProvider == null) {
+            this.setValueProviderItemProvider = new SetValueProviderItemProvider(this);
         }
 
-        return setValueProviderItemProvider;
+        return this.setValueProviderItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected PlacketBurmanDesignItemProvider placketBurmanDesignItemProvider;
@@ -232,23 +232,23 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createPlacketBurmanDesignAdapter() {
-        if (placketBurmanDesignItemProvider == null) {
-            placketBurmanDesignItemProvider = new PlacketBurmanDesignItemProvider(this);
+        if (this.placketBurmanDesignItemProvider == null) {
+            this.placketBurmanDesignItemProvider = new PlacketBurmanDesignItemProvider(this);
         }
 
-        return placketBurmanDesignItemProvider;
+        return this.placketBurmanDesignItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected FullFactorialDesignItemProvider fullFactorialDesignItemProvider;
@@ -257,23 +257,23 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createFullFactorialDesignAdapter() {
-        if (fullFactorialDesignItemProvider == null) {
-            fullFactorialDesignItemProvider = new FullFactorialDesignItemProvider(this);
+        if (this.fullFactorialDesignItemProvider == null) {
+            this.fullFactorialDesignItemProvider = new FullFactorialDesignItemProvider(this);
         }
 
-        return fullFactorialDesignItemProvider;
+        return this.fullFactorialDesignItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.FractionalFactorialDesign}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected FractionalFactorialDesignItemProvider fractionalFactorialDesignItemProvider;
@@ -282,23 +282,23 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.FractionalFactorialDesign}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createFractionalFactorialDesignAdapter() {
-        if (fractionalFactorialDesignItemProvider == null) {
-            fractionalFactorialDesignItemProvider = new FractionalFactorialDesignItemProvider(this);
+        if (this.fractionalFactorialDesignItemProvider == null) {
+            this.fractionalFactorialDesignItemProvider = new FractionalFactorialDesignItemProvider(this);
         }
 
-        return fractionalFactorialDesignItemProvider;
+        return this.fractionalFactorialDesignItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected OneFactorAtATimeItemProvider oneFactorAtATimeItemProvider;
@@ -307,23 +307,23 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createOneFactorAtATimeAdapter() {
-        if (oneFactorAtATimeItemProvider == null) {
-            oneFactorAtATimeItemProvider = new OneFactorAtATimeItemProvider(this);
+        if (this.oneFactorAtATimeItemProvider == null) {
+            this.oneFactorAtATimeItemProvider = new OneFactorAtATimeItemProvider(this);
         }
 
-        return oneFactorAtATimeItemProvider;
+        return this.oneFactorAtATimeItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.SimulationDurationMeasurement}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected SimulationDurationMeasurementItemProvider simulationDurationMeasurementItemProvider;
@@ -332,23 +332,23 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.SimulationDurationMeasurement}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createSimulationDurationMeasurementAdapter() {
-        if (simulationDurationMeasurementItemProvider == null) {
-            simulationDurationMeasurementItemProvider = new SimulationDurationMeasurementItemProvider(this);
+        if (this.simulationDurationMeasurementItemProvider == null) {
+            this.simulationDurationMeasurementItemProvider = new SimulationDurationMeasurementItemProvider(this);
         }
 
-        return simulationDurationMeasurementItemProvider;
+        return this.simulationDurationMeasurementItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.ProfilingMeasurement}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ProfilingMeasurementItemProvider profilingMeasurementItemProvider;
@@ -357,23 +357,23 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.ProfilingMeasurement}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createProfilingMeasurementAdapter() {
-        if (profilingMeasurementItemProvider == null) {
-            profilingMeasurementItemProvider = new ProfilingMeasurementItemProvider(this);
+        if (this.profilingMeasurementItemProvider == null) {
+            this.profilingMeasurementItemProvider = new ProfilingMeasurementItemProvider(this);
         }
 
-        return profilingMeasurementItemProvider;
+        return this.profilingMeasurementItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.JMXMeasurement} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected JMXMeasurementItemProvider jmxMeasurementItemProvider;
@@ -382,23 +382,23 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.JMXMeasurement}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createJMXMeasurementAdapter() {
-        if (jmxMeasurementItemProvider == null) {
-            jmxMeasurementItemProvider = new JMXMeasurementItemProvider(this);
+        if (this.jmxMeasurementItemProvider == null) {
+            this.jmxMeasurementItemProvider = new JMXMeasurementItemProvider(this);
         }
 
-        return jmxMeasurementItemProvider;
+        return this.jmxMeasurementItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.LinearValueProvider} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected LinearValueProviderItemProvider linearValueProviderItemProvider;
@@ -407,23 +407,23 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.LinearValueProvider}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createLinearValueProviderAdapter() {
-        if (linearValueProviderItemProvider == null) {
-            linearValueProviderItemProvider = new LinearValueProviderItemProvider(this);
+        if (this.linearValueProviderItemProvider == null) {
+            this.linearValueProviderItemProvider = new LinearValueProviderItemProvider(this);
         }
 
-        return linearValueProviderItemProvider;
+        return this.linearValueProviderItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.Modification} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ModificationItemProvider modificationItemProvider;
@@ -432,23 +432,23 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.Modification}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createModificationAdapter() {
-        if (modificationItemProvider == null) {
-            modificationItemProvider = new ModificationItemProvider(this);
+        if (this.modificationItemProvider == null) {
+            this.modificationItemProvider = new ModificationItemProvider(this);
         }
 
-        return modificationItemProvider;
+        return this.modificationItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected InitialModelItemProvider initialModelItemProvider;
@@ -457,23 +457,23 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createInitialModelAdapter() {
-        if (initialModelItemProvider == null) {
-            initialModelItemProvider = new InitialModelItemProvider(this);
+        if (this.initialModelItemProvider == null) {
+            this.initialModelItemProvider = new InitialModelItemProvider(this);
         }
 
-        return initialModelItemProvider;
+        return this.initialModelItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ReconfigurationRulesFolderItemProvider reconfigurationRulesFolderItemProvider;
@@ -482,68 +482,70 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createReconfigurationRulesFolderAdapter() {
-        if (reconfigurationRulesFolderItemProvider == null) {
-            reconfigurationRulesFolderItemProvider = new ReconfigurationRulesFolderItemProvider(this);
+        if (this.reconfigurationRulesFolderItemProvider == null) {
+            this.reconfigurationRulesFolderItemProvider = new ReconfigurationRulesFolderItemProvider(this);
         }
 
-        return reconfigurationRulesFolderItemProvider;
+        return this.reconfigurationRulesFolderItemProvider;
     }
 
     /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public ComposeableAdapterFactory getRootAdapterFactory() {
-        return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
+        return this.parentAdapterFactory == null ? this : this.parentAdapterFactory.getRootAdapterFactory();
     }
 
     /**
      * This sets the composed adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
+    @Override
+    public void setParentAdapterFactory(final ComposedAdapterFactory parentAdapterFactory) {
         this.parentAdapterFactory = parentAdapterFactory;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean isFactoryForType(Object type) {
-        return supportedTypes.contains(type) || super.isFactoryForType(type);
+    public boolean isFactoryForType(final Object type) {
+        return this.supportedTypes.contains(type) || super.isFactoryForType(type);
     }
 
     /**
      * This implementation substitutes the factory itself as the key for the adapter. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Adapter adapt(Notifier notifier, Object type) {
+    public Adapter adapt(final Notifier notifier, final Object type) {
         return super.adapt(notifier, this);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object adapt(Object object, Object type) {
-        if (isFactoryForType(type)) {
-            Object adapter = super.adapt(object, type);
+    public Object adapt(final Object object, final Object type) {
+        if (this.isFactoryForType(type)) {
+            final Object adapter = super.adapt(object, type);
             if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
                 return adapter;
             }
@@ -554,77 +556,98 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This adds a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public void addListener(INotifyChangedListener notifyChangedListener) {
-        changeNotifier.addListener(notifyChangedListener);
+    @Override
+    public void addListener(final INotifyChangedListener notifyChangedListener) {
+        this.changeNotifier.addListener(notifyChangedListener);
     }
 
     /**
      * This removes a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public void removeListener(INotifyChangedListener notifyChangedListener) {
-        changeNotifier.removeListener(notifyChangedListener);
+    @Override
+    public void removeListener(final INotifyChangedListener notifyChangedListener) {
+        this.changeNotifier.removeListener(notifyChangedListener);
     }
 
     /**
      * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public void fireNotifyChanged(Notification notification) {
-        changeNotifier.fireNotifyChanged(notification);
+    @Override
+    public void fireNotifyChanged(final Notification notification) {
+        this.changeNotifier.fireNotifyChanged(notification);
 
-        if (parentAdapterFactory != null) {
-            parentAdapterFactory.fireNotifyChanged(notification);
+        if (this.parentAdapterFactory != null) {
+            this.parentAdapterFactory.fireNotifyChanged(notification);
         }
     }
 
     /**
      * This disposes all of the item providers created by this factory. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public void dispose() {
-        if (experimentRepositoryItemProvider != null)
-            experimentRepositoryItemProvider.dispose();
-        if (experimentItemProvider != null)
-            experimentItemProvider.dispose();
-        if (variationItemProvider != null)
-            variationItemProvider.dispose();
-        if (polynomialValueProviderItemProvider != null)
-            polynomialValueProviderItemProvider.dispose();
-        if (exponentialValueProviderItemProvider != null)
-            exponentialValueProviderItemProvider.dispose();
-        if (setValueProviderItemProvider != null)
-            setValueProviderItemProvider.dispose();
-        if (placketBurmanDesignItemProvider != null)
-            placketBurmanDesignItemProvider.dispose();
-        if (fullFactorialDesignItemProvider != null)
-            fullFactorialDesignItemProvider.dispose();
-        if (fractionalFactorialDesignItemProvider != null)
-            fractionalFactorialDesignItemProvider.dispose();
-        if (oneFactorAtATimeItemProvider != null)
-            oneFactorAtATimeItemProvider.dispose();
-        if (simulationDurationMeasurementItemProvider != null)
-            simulationDurationMeasurementItemProvider.dispose();
-        if (profilingMeasurementItemProvider != null)
-            profilingMeasurementItemProvider.dispose();
-        if (jmxMeasurementItemProvider != null)
-            jmxMeasurementItemProvider.dispose();
-        if (linearValueProviderItemProvider != null)
-            linearValueProviderItemProvider.dispose();
-        if (modificationItemProvider != null)
-            modificationItemProvider.dispose();
-        if (initialModelItemProvider != null)
-            initialModelItemProvider.dispose();
-        if (reconfigurationRulesFolderItemProvider != null)
-            reconfigurationRulesFolderItemProvider.dispose();
+        if (this.experimentRepositoryItemProvider != null) {
+            this.experimentRepositoryItemProvider.dispose();
+        }
+        if (this.experimentItemProvider != null) {
+            this.experimentItemProvider.dispose();
+        }
+        if (this.variationItemProvider != null) {
+            this.variationItemProvider.dispose();
+        }
+        if (this.polynomialValueProviderItemProvider != null) {
+            this.polynomialValueProviderItemProvider.dispose();
+        }
+        if (this.exponentialValueProviderItemProvider != null) {
+            this.exponentialValueProviderItemProvider.dispose();
+        }
+        if (this.setValueProviderItemProvider != null) {
+            this.setValueProviderItemProvider.dispose();
+        }
+        if (this.placketBurmanDesignItemProvider != null) {
+            this.placketBurmanDesignItemProvider.dispose();
+        }
+        if (this.fullFactorialDesignItemProvider != null) {
+            this.fullFactorialDesignItemProvider.dispose();
+        }
+        if (this.fractionalFactorialDesignItemProvider != null) {
+            this.fractionalFactorialDesignItemProvider.dispose();
+        }
+        if (this.oneFactorAtATimeItemProvider != null) {
+            this.oneFactorAtATimeItemProvider.dispose();
+        }
+        if (this.simulationDurationMeasurementItemProvider != null) {
+            this.simulationDurationMeasurementItemProvider.dispose();
+        }
+        if (this.profilingMeasurementItemProvider != null) {
+            this.profilingMeasurementItemProvider.dispose();
+        }
+        if (this.jmxMeasurementItemProvider != null) {
+            this.jmxMeasurementItemProvider.dispose();
+        }
+        if (this.linearValueProviderItemProvider != null) {
+            this.linearValueProviderItemProvider.dispose();
+        }
+        if (this.modificationItemProvider != null) {
+            this.modificationItemProvider.dispose();
+        }
+        if (this.initialModelItemProvider != null) {
+            this.initialModelItemProvider.dispose();
+        }
+        if (this.reconfigurationRulesFolderItemProvider != null) {
+            this.reconfigurationRulesFolderItemProvider.dispose();
+        }
     }
 
 }

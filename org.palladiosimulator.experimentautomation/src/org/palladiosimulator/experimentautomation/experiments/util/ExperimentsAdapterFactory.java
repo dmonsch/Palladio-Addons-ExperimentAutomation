@@ -32,21 +32,21 @@ import org.palladiosimulator.experimentautomation.experiments.Variation;
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
  * <code>createXXX</code> method for each class of the model. <!-- end-user-doc -->
- * 
+ *
  * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
  * @generated
  */
 public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     /**
      * The cached model package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected static ExperimentsPackage modelPackage;
 
     /**
      * Creates an instance of the adapter factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ExperimentsAdapterFactory() {
@@ -59,12 +59,12 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * Returns whether this factory is applicable for the type of the object. <!-- begin-user-doc
      * --> This implementation returns <code>true</code> if the object is either the model's package
      * or is an instance object of the model. <!-- end-user-doc -->
-     * 
+     *
      * @return whether this factory is applicable for the type of the object.
      * @generated
      */
     @Override
-    public boolean isFactoryForType(Object object) {
+    public boolean isFactoryForType(final Object object) {
         if (object == modelPackage) {
             return true;
         }
@@ -77,132 +77,132 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     /**
      * The switch that delegates to the <code>createXXX</code> methods. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ExperimentsSwitch<Adapter> modelSwitch = new ExperimentsSwitch<Adapter>() {
         @Override
-        public Adapter caseExperimentRepository(ExperimentRepository object) {
-            return createExperimentRepositoryAdapter();
+        public Adapter caseExperimentRepository(final ExperimentRepository object) {
+            return ExperimentsAdapterFactory.this.createExperimentRepositoryAdapter();
         }
 
         @Override
-        public Adapter caseExperiment(Experiment object) {
-            return createExperimentAdapter();
+        public Adapter caseExperiment(final Experiment object) {
+            return ExperimentsAdapterFactory.this.createExperimentAdapter();
         }
 
         @Override
-        public Adapter caseVariation(Variation object) {
-            return createVariationAdapter();
+        public Adapter caseVariation(final Variation object) {
+            return ExperimentsAdapterFactory.this.createVariationAdapter();
         }
 
         @Override
-        public Adapter caseValueProvider(ValueProvider object) {
-            return createValueProviderAdapter();
+        public Adapter caseValueProvider(final ValueProvider object) {
+            return ExperimentsAdapterFactory.this.createValueProviderAdapter();
         }
 
         @Override
-        public Adapter caseToolConfiguration(ToolConfiguration object) {
-            return createToolConfigurationAdapter();
+        public Adapter caseToolConfiguration(final ToolConfiguration object) {
+            return ExperimentsAdapterFactory.this.createToolConfigurationAdapter();
         }
 
         @Override
-        public Adapter caseExperimentDesign(ExperimentDesign object) {
-            return createExperimentDesignAdapter();
+        public Adapter caseExperimentDesign(final ExperimentDesign object) {
+            return ExperimentsAdapterFactory.this.createExperimentDesignAdapter();
         }
 
         @Override
-        public Adapter caseResponseMeasurement(ResponseMeasurement object) {
-            return createResponseMeasurementAdapter();
+        public Adapter caseResponseMeasurement(final ResponseMeasurement object) {
+            return ExperimentsAdapterFactory.this.createResponseMeasurementAdapter();
         }
 
         @Override
-        public Adapter casePolynomialValueProvider(PolynomialValueProvider object) {
-            return createPolynomialValueProviderAdapter();
+        public Adapter casePolynomialValueProvider(final PolynomialValueProvider object) {
+            return ExperimentsAdapterFactory.this.createPolynomialValueProviderAdapter();
         }
 
         @Override
-        public Adapter caseExponentialValueProvider(ExponentialValueProvider object) {
-            return createExponentialValueProviderAdapter();
+        public Adapter caseExponentialValueProvider(final ExponentialValueProvider object) {
+            return ExperimentsAdapterFactory.this.createExponentialValueProviderAdapter();
         }
 
         @Override
-        public Adapter caseSetValueProvider(SetValueProvider object) {
-            return createSetValueProviderAdapter();
+        public Adapter caseSetValueProvider(final SetValueProvider object) {
+            return ExperimentsAdapterFactory.this.createSetValueProviderAdapter();
         }
 
         @Override
-        public Adapter casePlacketBurmanDesign(PlacketBurmanDesign object) {
-            return createPlacketBurmanDesignAdapter();
+        public Adapter casePlacketBurmanDesign(final PlacketBurmanDesign object) {
+            return ExperimentsAdapterFactory.this.createPlacketBurmanDesignAdapter();
         }
 
         @Override
-        public Adapter caseFullFactorialDesign(FullFactorialDesign object) {
-            return createFullFactorialDesignAdapter();
+        public Adapter caseFullFactorialDesign(final FullFactorialDesign object) {
+            return ExperimentsAdapterFactory.this.createFullFactorialDesignAdapter();
         }
 
         @Override
-        public Adapter caseFractionalFactorialDesign(FractionalFactorialDesign object) {
-            return createFractionalFactorialDesignAdapter();
+        public Adapter caseFractionalFactorialDesign(final FractionalFactorialDesign object) {
+            return ExperimentsAdapterFactory.this.createFractionalFactorialDesignAdapter();
         }
 
         @Override
-        public Adapter caseOneFactorAtATime(OneFactorAtATime object) {
-            return createOneFactorAtATimeAdapter();
+        public Adapter caseOneFactorAtATime(final OneFactorAtATime object) {
+            return ExperimentsAdapterFactory.this.createOneFactorAtATimeAdapter();
         }
 
         @Override
-        public Adapter caseSimulationDurationMeasurement(SimulationDurationMeasurement object) {
-            return createSimulationDurationMeasurementAdapter();
+        public Adapter caseSimulationDurationMeasurement(final SimulationDurationMeasurement object) {
+            return ExperimentsAdapterFactory.this.createSimulationDurationMeasurementAdapter();
         }
 
         @Override
-        public Adapter caseProfilingMeasurement(ProfilingMeasurement object) {
-            return createProfilingMeasurementAdapter();
+        public Adapter caseProfilingMeasurement(final ProfilingMeasurement object) {
+            return ExperimentsAdapterFactory.this.createProfilingMeasurementAdapter();
         }
 
         @Override
-        public Adapter caseJMXMeasurement(JMXMeasurement object) {
-            return createJMXMeasurementAdapter();
+        public Adapter caseJMXMeasurement(final JMXMeasurement object) {
+            return ExperimentsAdapterFactory.this.createJMXMeasurementAdapter();
         }
 
         @Override
-        public Adapter caseLinearValueProvider(LinearValueProvider object) {
-            return createLinearValueProviderAdapter();
+        public Adapter caseLinearValueProvider(final LinearValueProvider object) {
+            return ExperimentsAdapterFactory.this.createLinearValueProviderAdapter();
         }
 
         @Override
-        public Adapter caseModification(Modification object) {
-            return createModificationAdapter();
+        public Adapter caseModification(final Modification object) {
+            return ExperimentsAdapterFactory.this.createModificationAdapter();
         }
 
         @Override
-        public Adapter caseInitialModel(InitialModel object) {
-            return createInitialModelAdapter();
+        public Adapter caseInitialModel(final InitialModel object) {
+            return ExperimentsAdapterFactory.this.createInitialModelAdapter();
         }
 
         @Override
-        public Adapter caseReconfigurationRulesFolder(ReconfigurationRulesFolder object) {
-            return createReconfigurationRulesFolderAdapter();
+        public Adapter caseReconfigurationRulesFolder(final ReconfigurationRulesFolder object) {
+            return ExperimentsAdapterFactory.this.createReconfigurationRulesFolderAdapter();
         }
 
         @Override
-        public Adapter defaultCase(EObject object) {
-            return createEObjectAdapter();
+        public Adapter defaultCase(final EObject object) {
+            return ExperimentsAdapterFactory.this.createEObjectAdapter();
         }
     };
 
     /**
      * Creates an adapter for the <code>target</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param target
      *            the object to adapt.
      * @return the adapter for the <code>target</code>.
      * @generated
      */
     @Override
-    public Adapter createAdapter(Notifier target) {
-        return modelSwitch.doSwitch((EObject) target);
+    public Adapter createAdapter(final Notifier target) {
+        return this.modelSwitch.doSwitch((EObject) target);
     }
 
     /**
@@ -211,7 +211,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Experiment Repository</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentRepository
      * @generated
@@ -226,7 +226,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
      * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.Experiment
      * @generated
@@ -241,7 +241,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.Variation
      * @generated
@@ -256,7 +256,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Value Provider</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.ValueProvider
      * @generated
@@ -271,7 +271,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Tool Configuration</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.ToolConfiguration
      * @generated
@@ -286,7 +286,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Experiment Design</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentDesign
      * @generated
@@ -301,7 +301,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Response Measurement</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.ResponseMeasurement
      * @generated
@@ -316,7 +316,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Polynomial Value Provider</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider
      * @generated
@@ -331,7 +331,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Exponential Value Provider</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider
      * @generated
@@ -346,7 +346,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Set Value Provider</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.SetValueProvider
      * @generated
@@ -361,7 +361,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Placket Burman Design</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign
      * @generated
@@ -376,7 +376,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Full Factorial Design</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign
      * @generated
@@ -391,7 +391,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Fractional Factorial Design</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.FractionalFactorialDesign
      * @generated
@@ -406,7 +406,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>One Factor At ATime</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime
      * @generated
@@ -421,7 +421,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Simulation Duration Measurement</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.SimulationDurationMeasurement
      * @generated
@@ -436,7 +436,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Profiling Measurement</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.ProfilingMeasurement
      * @generated
@@ -451,7 +451,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>JMX Measurement</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.JMXMeasurement
      * @generated
@@ -466,7 +466,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Linear Value Provider</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.LinearValueProvider
      * @generated
@@ -481,7 +481,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Modification</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.Modification
      * @generated
@@ -496,7 +496,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Initial Model</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.InitialModel
      * @generated
@@ -511,7 +511,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Reconfiguration Rules Folder</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder
      * @generated
@@ -523,7 +523,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     /**
      * Creates a new adapter for the default case. <!-- begin-user-doc --> This default
      * implementation returns null. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @generated
      */

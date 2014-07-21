@@ -33,7 +33,7 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
     /**
      * The cached value of the '{@link #getExperiments() <em>Experiments</em>}' containment
      * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getExperiments()
      * @generated
      * @ordered
@@ -42,7 +42,7 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ExperimentRepositoryImpl() {
@@ -51,7 +51,7 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -61,57 +61,59 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public EList<Experiment> getExperiments() {
-        if (experiments == null) {
-            experiments = new EObjectContainmentEList<Experiment>(Experiment.class, this,
+        if (this.experiments == null) {
+            this.experiments = new EObjectContainmentEList<Experiment>(Experiment.class, this,
                     ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS);
         }
-        return experiments;
+        return this.experiments;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
+            final NotificationChain msgs) {
         switch (featureID) {
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS:
-            return ((InternalEList<?>) getExperiments()).basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) this.getExperiments()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS:
-            return getExperiments();
+            return this.getExperiments();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS:
-            getExperiments().clear();
-            getExperiments().addAll((Collection<? extends Experiment>) newValue);
+            this.getExperiments().clear();
+            this.getExperiments().addAll((Collection<? extends Experiment>) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -119,14 +121,14 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS:
-            getExperiments().clear();
+            this.getExperiments().clear();
             return;
         }
         super.eUnset(featureID);
@@ -134,14 +136,14 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS:
-            return experiments != null && !experiments.isEmpty();
+            return this.experiments != null && !this.experiments.isEmpty();
         }
         return super.eIsSet(featureID);
     }

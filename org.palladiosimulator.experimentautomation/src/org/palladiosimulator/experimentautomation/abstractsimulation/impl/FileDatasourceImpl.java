@@ -22,11 +22,11 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasou
  *
  * @generated
  */
-public class FileDatasourceImpl extends SensorFrameworkDatasourceImpl implements FileDatasource {
+public class FileDatasourceImpl extends DatasourceImpl implements FileDatasource {
     /**
      * The default value of the '{@link #getLocation() <em>Location</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getLocation()
      * @generated
      * @ordered
@@ -36,7 +36,7 @@ public class FileDatasourceImpl extends SensorFrameworkDatasourceImpl implements
     /**
      * The cached value of the '{@link #getLocation() <em>Location</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getLocation()
      * @generated
      * @ordered
@@ -45,7 +45,7 @@ public class FileDatasourceImpl extends SensorFrameworkDatasourceImpl implements
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected FileDatasourceImpl() {
@@ -54,7 +54,7 @@ public class FileDatasourceImpl extends SensorFrameworkDatasourceImpl implements
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -64,50 +64,53 @@ public class FileDatasourceImpl extends SensorFrameworkDatasourceImpl implements
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public String getLocation() {
-        return location;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setLocation(String newLocation) {
-        String oldLocation = location;
-        location = newLocation;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, AbstractsimulationPackage.FILE_DATASOURCE__LOCATION,
-                    oldLocation, location));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public String getLocation() {
+        return this.location;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setLocation(final String newLocation) {
+        final String oldLocation = this.location;
+        this.location = newLocation;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    AbstractsimulationPackage.FILE_DATASOURCE__LOCATION, oldLocation, this.location));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case AbstractsimulationPackage.FILE_DATASOURCE__LOCATION:
-            return getLocation();
+            return this.getLocation();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case AbstractsimulationPackage.FILE_DATASOURCE__LOCATION:
-            setLocation((String) newValue);
+            this.setLocation((String) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -115,14 +118,14 @@ public class FileDatasourceImpl extends SensorFrameworkDatasourceImpl implements
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.FILE_DATASOURCE__LOCATION:
-            setLocation(LOCATION_EDEFAULT);
+            this.setLocation(LOCATION_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -130,31 +133,32 @@ public class FileDatasourceImpl extends SensorFrameworkDatasourceImpl implements
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.FILE_DATASOURCE__LOCATION:
-            return LOCATION_EDEFAULT == null ? location != null : !LOCATION_EDEFAULT.equals(location);
+            return LOCATION_EDEFAULT == null ? this.location != null : !LOCATION_EDEFAULT.equals(this.location);
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (this.eIsProxy()) {
             return super.toString();
+        }
 
-        StringBuffer result = new StringBuffer(super.toString());
+        final StringBuffer result = new StringBuffer(super.toString());
         result.append(" (location: ");
-        result.append(location);
+        result.append(this.location);
         result.append(')');
         return result.toString();
     }

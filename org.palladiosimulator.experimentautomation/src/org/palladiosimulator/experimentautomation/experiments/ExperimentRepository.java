@@ -33,7 +33,7 @@ public interface ExperimentRepository extends EObject {
      * really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Experiments</em>' containment reference list.
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperimentRepository_Experiments()
      * @model containment="true" ordered="false"

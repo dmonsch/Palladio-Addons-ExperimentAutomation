@@ -18,91 +18,91 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.Measurement
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition}
  * object. <!-- begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class MeasurementCountStopConditionItemProvider extends StopConditionItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public MeasurementCountStopConditionItemProvider(AdapterFactory adapterFactory) {
+    public MeasurementCountStopConditionItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-        if (itemPropertyDescriptors == null) {
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addMeasurementCountPropertyDescriptor(object);
+            this.addMeasurementCountPropertyDescriptor(object);
         }
-        return itemPropertyDescriptors;
+        return this.itemPropertyDescriptors;
     }
 
     /**
      * This adds a property descriptor for the Measurement Count feature. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    protected void addMeasurementCountPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_MeasurementCountStopCondition_measurementCount_feature"),
-                getString("_UI_PropertyDescriptor_description",
+    protected void addMeasurementCountPropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_MeasurementCountStopCondition_measurementCount_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description",
                         "_UI_MeasurementCountStopCondition_measurementCount_feature",
                         "_UI_MeasurementCountStopCondition_type"),
-                AbstractsimulationPackage.Literals.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT, true, false,
-                false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                        AbstractsimulationPackage.Literals.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT, true, false,
+                        false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
      * This returns MeasurementCountStopCondition.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/MeasurementCountStopCondition"));
+    public Object getImage(final Object object) {
+        return this
+                .overlayImage(object, this.getResourceLocator().getImage("full/obj16/MeasurementCountStopCondition"));
     }
 
     /**
      * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String getText(Object object) {
-        MeasurementCountStopCondition measurementCountStopCondition = (MeasurementCountStopCondition) object;
-        return getString("_UI_MeasurementCountStopCondition_type") + " "
-                + measurementCountStopCondition.getMeasurementCount();
+    public String getText(final Object object) {
+        final MeasurementCountStopCondition measurementCountStopCondition = (MeasurementCountStopCondition) object;
+        return this.getString("_UI_MeasurementCountStopCondition_type") + " "
+        + measurementCountStopCondition.getMeasurementCount();
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void notifyChanged(Notification notification) {
-        updateChildren(notification);
+    public void notifyChanged(final Notification notification) {
+        this.updateChildren(notification);
 
         switch (notification.getFeatureID(MeasurementCountStopCondition.class)) {
         case AbstractsimulationPackage.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+            this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);
@@ -111,11 +111,11 @@ public class MeasurementCountStopConditionItemProvider extends StopConditionItem
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

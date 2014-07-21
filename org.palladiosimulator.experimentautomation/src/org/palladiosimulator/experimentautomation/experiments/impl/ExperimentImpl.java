@@ -69,7 +69,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getVariations() <em>Variations</em>}' containment reference
      * list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getVariations()
      * @generated
      * @ordered
@@ -79,7 +79,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getModifications() <em>Modifications</em>}' containment
      * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getModifications()
      * @generated
      * @ordered
@@ -89,7 +89,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getId()
      * @generated
      * @ordered
@@ -99,7 +99,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getId()
      * @generated
      * @ordered
@@ -109,7 +109,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getName()
      * @generated
      * @ordered
@@ -119,7 +119,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getName()
      * @generated
      * @ordered
@@ -129,7 +129,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getToolConfiguration() <em>Tool Configuration</em>}'
      * containment reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getToolConfiguration()
      * @generated
      * @ordered
@@ -139,7 +139,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getStopConditions() <em>Stop Conditions</em>}' containment
      * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getStopConditions()
      * @generated
      * @ordered
@@ -149,7 +149,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The default value of the '{@link #getDescription() <em>Description</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getDescription()
      * @generated
      * @ordered
@@ -159,7 +159,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getDescription()
      * @generated
      * @ordered
@@ -169,7 +169,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getExperimentDesign() <em>Experiment Design</em>}'
      * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getExperimentDesign()
      * @generated
      * @ordered
@@ -179,7 +179,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getResponseMeasurement() <em>Response Measurement</em>}'
      * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getResponseMeasurement()
      * @generated
      * @ordered
@@ -189,7 +189,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getInitialModel() <em>Initial Model</em>}' containment
      * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getInitialModel()
      * @generated
      * @ordered
@@ -199,7 +199,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The default value of the '{@link #getRepetitions() <em>Repetitions</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getRepetitions()
      * @generated
      * @ordered
@@ -209,7 +209,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getRepetitions() <em>Repetitions</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getRepetitions()
      * @generated
      * @ordered
@@ -218,7 +218,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ExperimentImpl() {
@@ -227,7 +227,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -237,398 +237,438 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public EList<Variation> getVariations() {
-        if (variations == null) {
-            variations = new EObjectContainmentEList<Variation>(Variation.class, this,
-                    ExperimentsPackage.EXPERIMENT__VARIATIONS);
-        }
-        return variations;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public EList<Modification> getModifications() {
-        if (modifications == null) {
-            modifications = new EObjectContainmentEList<Modification>(Modification.class, this,
-                    ExperimentsPackage.EXPERIMENT__MODIFICATIONS);
-        }
-        return modifications;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public String getId() {
-        return id;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setId(String newId) {
-        String oldId = id;
-        id = newId;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.EXPERIMENT__ID, oldId, id));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setName(String newName) {
-        String oldName = name;
-        name = newName;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.EXPERIMENT__NAME, oldName, name));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public EList<ToolConfiguration> getToolConfiguration() {
-        if (toolConfiguration == null) {
-            toolConfiguration = new EObjectContainmentEList<ToolConfiguration>(ToolConfiguration.class, this,
-                    ExperimentsPackage.EXPERIMENT__TOOL_CONFIGURATION);
-        }
-        return toolConfiguration;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public EList<StopCondition> getStopConditions() {
-        if (stopConditions == null) {
-            stopConditions = new EObjectContainmentEList<StopCondition>(StopCondition.class, this,
-                    ExperimentsPackage.EXPERIMENT__STOP_CONDITIONS);
-        }
-        return stopConditions;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public String getDescription() {
-        return description;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setDescription(String newDescription) {
-        String oldDescription = description;
-        description = newDescription;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.EXPERIMENT__DESCRIPTION,
-                    oldDescription, description));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public ExperimentDesign getExperimentDesign() {
-        return experimentDesign;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public NotificationChain basicSetExperimentDesign(ExperimentDesign newExperimentDesign, NotificationChain msgs) {
-        ExperimentDesign oldExperimentDesign = experimentDesign;
-        experimentDesign = newExperimentDesign;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN, oldExperimentDesign, newExperimentDesign);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
-        }
-        return msgs;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setExperimentDesign(ExperimentDesign newExperimentDesign) {
-        if (newExperimentDesign != experimentDesign) {
-            NotificationChain msgs = null;
-            if (experimentDesign != null)
-                msgs = ((InternalEObject) experimentDesign).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN, null, msgs);
-            if (newExperimentDesign != null)
-                msgs = ((InternalEObject) newExperimentDesign).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN, null, msgs);
-            msgs = basicSetExperimentDesign(newExperimentDesign, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN,
-                    newExperimentDesign, newExperimentDesign));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public ResponseMeasurement getResponseMeasurement() {
-        return responseMeasurement;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public NotificationChain basicSetResponseMeasurement(ResponseMeasurement newResponseMeasurement,
-            NotificationChain msgs) {
-        ResponseMeasurement oldResponseMeasurement = responseMeasurement;
-        responseMeasurement = newResponseMeasurement;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT, oldResponseMeasurement, newResponseMeasurement);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
-        }
-        return msgs;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setResponseMeasurement(ResponseMeasurement newResponseMeasurement) {
-        if (newResponseMeasurement != responseMeasurement) {
-            NotificationChain msgs = null;
-            if (responseMeasurement != null)
-                msgs = ((InternalEObject) responseMeasurement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT, null, msgs);
-            if (newResponseMeasurement != null)
-                msgs = ((InternalEObject) newResponseMeasurement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT, null, msgs);
-            msgs = basicSetResponseMeasurement(newResponseMeasurement, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT,
-                    newResponseMeasurement, newResponseMeasurement));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public InitialModel getInitialModel() {
-        return initialModel;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public NotificationChain basicSetInitialModel(InitialModel newInitialModel, NotificationChain msgs) {
-        InitialModel oldInitialModel = initialModel;
-        initialModel = newInitialModel;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.EXPERIMENT__INITIAL_MODEL, oldInitialModel, newInitialModel);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
-        }
-        return msgs;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setInitialModel(InitialModel newInitialModel) {
-        if (newInitialModel != initialModel) {
-            NotificationChain msgs = null;
-            if (initialModel != null)
-                msgs = ((InternalEObject) initialModel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - ExperimentsPackage.EXPERIMENT__INITIAL_MODEL, null, msgs);
-            if (newInitialModel != null)
-                msgs = ((InternalEObject) newInitialModel).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - ExperimentsPackage.EXPERIMENT__INITIAL_MODEL, null, msgs);
-            msgs = basicSetInitialModel(newInitialModel, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.EXPERIMENT__INITIAL_MODEL,
-                    newInitialModel, newInitialModel));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public int getRepetitions() {
-        return repetitions;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setRepetitions(int newRepetitions) {
-        int oldRepetitions = repetitions;
-        repetitions = newRepetitions;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.EXPERIMENT__REPETITIONS,
-                    oldRepetitions, repetitions));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    public EList<Variation> getVariations() {
+        if (this.variations == null) {
+            this.variations = new EObjectContainmentEList<Variation>(Variation.class, this,
+                    ExperimentsPackage.EXPERIMENT__VARIATIONS);
+        }
+        return this.variations;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EList<Modification> getModifications() {
+        if (this.modifications == null) {
+            this.modifications = new EObjectContainmentEList<Modification>(Modification.class, this,
+                    ExperimentsPackage.EXPERIMENT__MODIFICATIONS);
+        }
+        return this.modifications;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public String getId() {
+        return this.id;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setId(final String newId) {
+        final String oldId = this.id;
+        this.id = newId;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.EXPERIMENT__ID, oldId,
+                    this.id));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setName(final String newName) {
+        final String oldName = this.name;
+        this.name = newName;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.EXPERIMENT__NAME, oldName,
+                    this.name));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EList<ToolConfiguration> getToolConfiguration() {
+        if (this.toolConfiguration == null) {
+            this.toolConfiguration = new EObjectContainmentEList<ToolConfiguration>(ToolConfiguration.class, this,
+                    ExperimentsPackage.EXPERIMENT__TOOL_CONFIGURATION);
+        }
+        return this.toolConfiguration;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EList<StopCondition> getStopConditions() {
+        if (this.stopConditions == null) {
+            this.stopConditions = new EObjectContainmentEList<StopCondition>(StopCondition.class, this,
+                    ExperimentsPackage.EXPERIMENT__STOP_CONDITIONS);
+        }
+        return this.stopConditions;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setDescription(final String newDescription) {
+        final String oldDescription = this.description;
+        this.description = newDescription;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.EXPERIMENT__DESCRIPTION,
+                    oldDescription, this.description));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public ExperimentDesign getExperimentDesign() {
+        return this.experimentDesign;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public NotificationChain basicSetExperimentDesign(final ExperimentDesign newExperimentDesign, NotificationChain msgs) {
+        final ExperimentDesign oldExperimentDesign = this.experimentDesign;
+        this.experimentDesign = newExperimentDesign;
+        if (this.eNotificationRequired()) {
+            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN, oldExperimentDesign, newExperimentDesign);
+            if (msgs == null) {
+                msgs = notification;
+            } else {
+                msgs.add(notification);
+            }
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setExperimentDesign(final ExperimentDesign newExperimentDesign) {
+        if (newExperimentDesign != this.experimentDesign) {
+            NotificationChain msgs = null;
+            if (this.experimentDesign != null) {
+                msgs = ((InternalEObject) this.experimentDesign).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN, null, msgs);
+            }
+            if (newExperimentDesign != null) {
+                msgs = ((InternalEObject) newExperimentDesign).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN, null, msgs);
+            }
+            msgs = this.basicSetExperimentDesign(newExperimentDesign, msgs);
+            if (msgs != null) {
+                msgs.dispatch();
+            }
+        } else if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN, newExperimentDesign, newExperimentDesign));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public ResponseMeasurement getResponseMeasurement() {
+        return this.responseMeasurement;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public NotificationChain basicSetResponseMeasurement(final ResponseMeasurement newResponseMeasurement,
+            NotificationChain msgs) {
+        final ResponseMeasurement oldResponseMeasurement = this.responseMeasurement;
+        this.responseMeasurement = newResponseMeasurement;
+        if (this.eNotificationRequired()) {
+            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT, oldResponseMeasurement, newResponseMeasurement);
+            if (msgs == null) {
+                msgs = notification;
+            } else {
+                msgs.add(notification);
+            }
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setResponseMeasurement(final ResponseMeasurement newResponseMeasurement) {
+        if (newResponseMeasurement != this.responseMeasurement) {
+            NotificationChain msgs = null;
+            if (this.responseMeasurement != null) {
+                msgs = ((InternalEObject) this.responseMeasurement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT, null, msgs);
+            }
+            if (newResponseMeasurement != null) {
+                msgs = ((InternalEObject) newResponseMeasurement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT, null, msgs);
+            }
+            msgs = this.basicSetResponseMeasurement(newResponseMeasurement, msgs);
+            if (msgs != null) {
+                msgs.dispatch();
+            }
+        } else if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT, newResponseMeasurement, newResponseMeasurement));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public InitialModel getInitialModel() {
+        return this.initialModel;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public NotificationChain basicSetInitialModel(final InitialModel newInitialModel, NotificationChain msgs) {
+        final InitialModel oldInitialModel = this.initialModel;
+        this.initialModel = newInitialModel;
+        if (this.eNotificationRequired()) {
+            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    ExperimentsPackage.EXPERIMENT__INITIAL_MODEL, oldInitialModel, newInitialModel);
+            if (msgs == null) {
+                msgs = notification;
+            } else {
+                msgs.add(notification);
+            }
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setInitialModel(final InitialModel newInitialModel) {
+        if (newInitialModel != this.initialModel) {
+            NotificationChain msgs = null;
+            if (this.initialModel != null) {
+                msgs = ((InternalEObject) this.initialModel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - ExperimentsPackage.EXPERIMENT__INITIAL_MODEL, null, msgs);
+            }
+            if (newInitialModel != null) {
+                msgs = ((InternalEObject) newInitialModel).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - ExperimentsPackage.EXPERIMENT__INITIAL_MODEL, null, msgs);
+            }
+            msgs = this.basicSetInitialModel(newInitialModel, msgs);
+            if (msgs != null) {
+                msgs.dispatch();
+            }
+        } else if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.EXPERIMENT__INITIAL_MODEL,
+                    newInitialModel, newInitialModel));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public int getRepetitions() {
+        return this.repetitions;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setRepetitions(final int newRepetitions) {
+        final int oldRepetitions = this.repetitions;
+        this.repetitions = newRepetitions;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.EXPERIMENT__REPETITIONS,
+                    oldRepetitions, this.repetitions));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
+            final NotificationChain msgs) {
         switch (featureID) {
         case ExperimentsPackage.EXPERIMENT__VARIATIONS:
-            return ((InternalEList<?>) getVariations()).basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) this.getVariations()).basicRemove(otherEnd, msgs);
         case ExperimentsPackage.EXPERIMENT__MODIFICATIONS:
-            return ((InternalEList<?>) getModifications()).basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) this.getModifications()).basicRemove(otherEnd, msgs);
         case ExperimentsPackage.EXPERIMENT__TOOL_CONFIGURATION:
-            return ((InternalEList<?>) getToolConfiguration()).basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) this.getToolConfiguration()).basicRemove(otherEnd, msgs);
         case ExperimentsPackage.EXPERIMENT__STOP_CONDITIONS:
-            return ((InternalEList<?>) getStopConditions()).basicRemove(otherEnd, msgs);
+            return ((InternalEList<?>) this.getStopConditions()).basicRemove(otherEnd, msgs);
         case ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN:
-            return basicSetExperimentDesign(null, msgs);
+            return this.basicSetExperimentDesign(null, msgs);
         case ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT:
-            return basicSetResponseMeasurement(null, msgs);
+            return this.basicSetResponseMeasurement(null, msgs);
         case ExperimentsPackage.EXPERIMENT__INITIAL_MODEL:
-            return basicSetInitialModel(null, msgs);
+            return this.basicSetInitialModel(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case ExperimentsPackage.EXPERIMENT__VARIATIONS:
-            return getVariations();
+            return this.getVariations();
         case ExperimentsPackage.EXPERIMENT__MODIFICATIONS:
-            return getModifications();
+            return this.getModifications();
         case ExperimentsPackage.EXPERIMENT__ID:
-            return getId();
+            return this.getId();
         case ExperimentsPackage.EXPERIMENT__NAME:
-            return getName();
+            return this.getName();
         case ExperimentsPackage.EXPERIMENT__TOOL_CONFIGURATION:
-            return getToolConfiguration();
+            return this.getToolConfiguration();
         case ExperimentsPackage.EXPERIMENT__STOP_CONDITIONS:
-            return getStopConditions();
+            return this.getStopConditions();
         case ExperimentsPackage.EXPERIMENT__DESCRIPTION:
-            return getDescription();
+            return this.getDescription();
         case ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN:
-            return getExperimentDesign();
+            return this.getExperimentDesign();
         case ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT:
-            return getResponseMeasurement();
+            return this.getResponseMeasurement();
         case ExperimentsPackage.EXPERIMENT__INITIAL_MODEL:
-            return getInitialModel();
+            return this.getInitialModel();
         case ExperimentsPackage.EXPERIMENT__REPETITIONS:
-            return getRepetitions();
+            return this.getRepetitions();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case ExperimentsPackage.EXPERIMENT__VARIATIONS:
-            getVariations().clear();
-            getVariations().addAll((Collection<? extends Variation>) newValue);
+            this.getVariations().clear();
+            this.getVariations().addAll((Collection<? extends Variation>) newValue);
             return;
         case ExperimentsPackage.EXPERIMENT__MODIFICATIONS:
-            getModifications().clear();
-            getModifications().addAll((Collection<? extends Modification>) newValue);
+            this.getModifications().clear();
+            this.getModifications().addAll((Collection<? extends Modification>) newValue);
             return;
         case ExperimentsPackage.EXPERIMENT__ID:
-            setId((String) newValue);
+            this.setId((String) newValue);
             return;
         case ExperimentsPackage.EXPERIMENT__NAME:
-            setName((String) newValue);
+            this.setName((String) newValue);
             return;
         case ExperimentsPackage.EXPERIMENT__TOOL_CONFIGURATION:
-            getToolConfiguration().clear();
-            getToolConfiguration().addAll((Collection<? extends ToolConfiguration>) newValue);
+            this.getToolConfiguration().clear();
+            this.getToolConfiguration().addAll((Collection<? extends ToolConfiguration>) newValue);
             return;
         case ExperimentsPackage.EXPERIMENT__STOP_CONDITIONS:
-            getStopConditions().clear();
-            getStopConditions().addAll((Collection<? extends StopCondition>) newValue);
+            this.getStopConditions().clear();
+            this.getStopConditions().addAll((Collection<? extends StopCondition>) newValue);
             return;
         case ExperimentsPackage.EXPERIMENT__DESCRIPTION:
-            setDescription((String) newValue);
+            this.setDescription((String) newValue);
             return;
         case ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN:
-            setExperimentDesign((ExperimentDesign) newValue);
+            this.setExperimentDesign((ExperimentDesign) newValue);
             return;
         case ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT:
-            setResponseMeasurement((ResponseMeasurement) newValue);
+            this.setResponseMeasurement((ResponseMeasurement) newValue);
             return;
         case ExperimentsPackage.EXPERIMENT__INITIAL_MODEL:
-            setInitialModel((InitialModel) newValue);
+            this.setInitialModel((InitialModel) newValue);
             return;
         case ExperimentsPackage.EXPERIMENT__REPETITIONS:
-            setRepetitions((Integer) newValue);
+            this.setRepetitions((Integer) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -636,44 +676,44 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.EXPERIMENT__VARIATIONS:
-            getVariations().clear();
+            this.getVariations().clear();
             return;
         case ExperimentsPackage.EXPERIMENT__MODIFICATIONS:
-            getModifications().clear();
+            this.getModifications().clear();
             return;
         case ExperimentsPackage.EXPERIMENT__ID:
-            setId(ID_EDEFAULT);
+            this.setId(ID_EDEFAULT);
             return;
         case ExperimentsPackage.EXPERIMENT__NAME:
-            setName(NAME_EDEFAULT);
+            this.setName(NAME_EDEFAULT);
             return;
         case ExperimentsPackage.EXPERIMENT__TOOL_CONFIGURATION:
-            getToolConfiguration().clear();
+            this.getToolConfiguration().clear();
             return;
         case ExperimentsPackage.EXPERIMENT__STOP_CONDITIONS:
-            getStopConditions().clear();
+            this.getStopConditions().clear();
             return;
         case ExperimentsPackage.EXPERIMENT__DESCRIPTION:
-            setDescription(DESCRIPTION_EDEFAULT);
+            this.setDescription(DESCRIPTION_EDEFAULT);
             return;
         case ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN:
-            setExperimentDesign((ExperimentDesign) null);
+            this.setExperimentDesign((ExperimentDesign) null);
             return;
         case ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT:
-            setResponseMeasurement((ResponseMeasurement) null);
+            this.setResponseMeasurement((ResponseMeasurement) null);
             return;
         case ExperimentsPackage.EXPERIMENT__INITIAL_MODEL:
-            setInitialModel((InitialModel) null);
+            this.setInitialModel((InitialModel) null);
             return;
         case ExperimentsPackage.EXPERIMENT__REPETITIONS:
-            setRepetitions(REPETITIONS_EDEFAULT);
+            this.setRepetitions(REPETITIONS_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -681,57 +721,59 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.EXPERIMENT__VARIATIONS:
-            return variations != null && !variations.isEmpty();
+            return this.variations != null && !this.variations.isEmpty();
         case ExperimentsPackage.EXPERIMENT__MODIFICATIONS:
-            return modifications != null && !modifications.isEmpty();
+            return this.modifications != null && !this.modifications.isEmpty();
         case ExperimentsPackage.EXPERIMENT__ID:
-            return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+            return ID_EDEFAULT == null ? this.id != null : !ID_EDEFAULT.equals(this.id);
         case ExperimentsPackage.EXPERIMENT__NAME:
-            return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+            return NAME_EDEFAULT == null ? this.name != null : !NAME_EDEFAULT.equals(this.name);
         case ExperimentsPackage.EXPERIMENT__TOOL_CONFIGURATION:
-            return toolConfiguration != null && !toolConfiguration.isEmpty();
+            return this.toolConfiguration != null && !this.toolConfiguration.isEmpty();
         case ExperimentsPackage.EXPERIMENT__STOP_CONDITIONS:
-            return stopConditions != null && !stopConditions.isEmpty();
+            return this.stopConditions != null && !this.stopConditions.isEmpty();
         case ExperimentsPackage.EXPERIMENT__DESCRIPTION:
-            return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+            return DESCRIPTION_EDEFAULT == null ? this.description != null : !DESCRIPTION_EDEFAULT
+                    .equals(this.description);
         case ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN:
-            return experimentDesign != null;
+            return this.experimentDesign != null;
         case ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT:
-            return responseMeasurement != null;
+            return this.responseMeasurement != null;
         case ExperimentsPackage.EXPERIMENT__INITIAL_MODEL:
-            return initialModel != null;
+            return this.initialModel != null;
         case ExperimentsPackage.EXPERIMENT__REPETITIONS:
-            return repetitions != REPETITIONS_EDEFAULT;
+            return this.repetitions != REPETITIONS_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (this.eIsProxy()) {
             return super.toString();
+        }
 
-        StringBuffer result = new StringBuffer(super.toString());
+        final StringBuffer result = new StringBuffer(super.toString());
         result.append(" (id: ");
-        result.append(id);
+        result.append(this.id);
         result.append(", name: ");
-        result.append(name);
+        result.append(this.name);
         result.append(", description: ");
-        result.append(description);
+        result.append(this.description);
         result.append(", repetitions: ");
-        result.append(repetitions);
+        result.append(this.repetitions);
         result.append(')');
         return result.toString();
     }

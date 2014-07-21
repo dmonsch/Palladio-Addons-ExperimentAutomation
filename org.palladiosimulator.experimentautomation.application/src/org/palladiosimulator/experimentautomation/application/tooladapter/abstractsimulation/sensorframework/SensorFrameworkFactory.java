@@ -1,10 +1,10 @@
 package org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.sensorframework;
 
 import org.eclipse.core.runtime.Path;
-
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.Datasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource;
-import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFrameworkDatasource;
+
 import de.uka.ipd.sdq.sensorframework.SensorFrameworkDataset;
 import de.uka.ipd.sdq.sensorframework.dao.file.FileDAOFactory;
 import de.uka.ipd.sdq.sensorframework.dao.memory.MemoryDAOFactory;
@@ -12,7 +12,7 @@ import de.uka.ipd.sdq.sensorframework.entities.dao.IDAOFactory;
 
 public class SensorFrameworkFactory {
 
-    public static IDAOFactory createOrOpenDatasource(final SensorFrameworkDatasource datasource) {
+    public static IDAOFactory createOrOpenDatasource(final Datasource datasource) {
         IDAOFactory daoFactory = null;
         if (AbstractsimulationPackage.eINSTANCE.getMemoryDatasource().isInstance(datasource)) {
             // create MemoryDatasource
@@ -30,7 +30,7 @@ public class SensorFrameworkFactory {
         return daoFactory;
     }
 
-    public static void closeDatasource(final SensorFrameworkDatasource datasource) {
+    public static void closeDatasource(final Datasource datasource) {
         IDAOFactory daoFactory = null;
         if (AbstractsimulationPackage.eINSTANCE.getMemoryDatasource().isInstance(datasource)) {
             // create MemoryDatasource

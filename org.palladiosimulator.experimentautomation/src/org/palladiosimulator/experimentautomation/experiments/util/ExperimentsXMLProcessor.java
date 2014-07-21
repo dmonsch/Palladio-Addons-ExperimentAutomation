@@ -12,14 +12,14 @@ import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
 /**
  * This class contains helper methods to serialize and deserialize XML documents <!-- begin-user-doc
  * --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class ExperimentsXMLProcessor extends XMLProcessor {
 
     /**
      * Public constructor to instantiate the helper. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ExperimentsXMLProcessor() {
@@ -30,17 +30,17 @@ public class ExperimentsXMLProcessor extends XMLProcessor {
     /**
      * Register for "*" and "xml" file extensions the ExperimentsResourceFactoryImpl factory. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     protected Map<String, Resource.Factory> getRegistrations() {
-        if (registrations == null) {
+        if (this.registrations == null) {
             super.getRegistrations();
-            registrations.put(XML_EXTENSION, new ExperimentsResourceFactoryImpl());
-            registrations.put(STAR_EXTENSION, new ExperimentsResourceFactoryImpl());
+            this.registrations.put(XML_EXTENSION, new ExperimentsResourceFactoryImpl());
+            this.registrations.put(STAR_EXTENSION, new ExperimentsResourceFactoryImpl());
         }
-        return registrations;
+        return this.registrations;
     }
 
 } // ExperimentsXMLProcessor

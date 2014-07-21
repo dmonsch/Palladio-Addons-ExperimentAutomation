@@ -6,19 +6,20 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.palladiosimulator.edp2.models.Repository.Repository;
-import org.palladiosimulator.recorderframework.edp2.EDP2RecorderConfigurationFactory;
-import org.palladiosimulator.recorderframework.sensorframework.SensorFrameworkRecorderConfigurationFactory;
-
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.Datasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2;
 import org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
 import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
 import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework;
-import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFrameworkDatasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition;
 import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
+import org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.edp2.EDP2Factory;
 import org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.sensorframework.SensorFrameworkFactory;
+import org.palladiosimulator.recorderframework.edp2.EDP2RecorderConfigurationFactory;
+import org.palladiosimulator.recorderframework.sensorframework.SensorFrameworkRecorderConfigurationFactory;
+
 import de.uka.ipd.sdq.sensorframework.entities.dao.IDAOFactory;
 import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
 
@@ -39,10 +40,10 @@ public class AbstractSimulationConfigFactory {
         map.put(AbstractSimulationConfig.VERBOSE_LOGGING, false);
         map.put(AbstractSimulationConfig.BLACKBOARD_TYPE, config.getProbeSpecConfiguration().getBlackboardType());
 
-// FIXME Remove next few lines if done with replacement. [Lehrig]
-// Lehrig: Remove configuration via files. To be replaced by direct access to blackboard.
-//        map.put(ConstantsContainer.ALLOCATION_FILE, model.getAllocationFile());
-//        map.put(ConstantsContainer.USAGE_FILE, model.getUsagemodelFile());
+        // FIXME Remove next few lines if done with replacement. [Lehrig]
+        // Lehrig: Remove configuration via files. To be replaced by direct access to blackboard.
+        // map.put(ConstantsContainer.ALLOCATION_FILE, model.getAllocationFile());
+        // map.put(ConstantsContainer.USAGE_FILE, model.getUsagemodelFile());
 
         fillRandomNumberGeneratorSeed(config, map);
         // fillConfidenceStopCondition(config, map);
@@ -80,22 +81,26 @@ public class AbstractSimulationConfigFactory {
             final Map<String, Object> map) {
         if (AbstractsimulationPackage.eINSTANCE.getSensorFramework().isInstance(config.getPersistenceFramework())) {
             final SensorFramework sensorFramework = (SensorFramework) config.getPersistenceFramework();
-            final SensorFrameworkDatasource datasource = sensorFramework.getDatasource();
+            final Datasource datasource = sensorFramework.getDatasource();
             final IDAOFactory daoFactory = SensorFrameworkFactory.createOrOpenDatasource(datasource);
 
             map.put(AbstractSimulationConfig.PERSISTENCE_RECORDER_NAME, "SensorFramework");
             map.put(SensorFrameworkRecorderConfigurationFactory.DATASOURCE_ID, daoFactory.getID());
         } else if (AbstractsimulationPackage.eINSTANCE.getEDP2().isInstance(config.getPersistenceFramework())) {
             final EDP2 edp2 = (EDP2) config.getPersistenceFramework();
-            final Repository repository = edp2.getRepository();
-
+            final Datasource datasource = edp2.getDatasource();
+            final Repository repository = EDP2Factory.createOrOpenDatasource(datasource);
+            
+            //final Repository repository = RepositoryManager.getRepositoryFromUUID(edp2.getRepositoryUUID());
+//            
 //            try {
-//                MeasurementsUtility.ensureOpenRepository(repository);
+//                MeasurementsUtility.ensureOpenRepository(RepositoryManager.getRepositoryFromUUID(edp2.getRepositoryUUID()));
 //            } catch (DataNotAccessibleException e) {
-//                throw new RuntimeException("Unable to open EDP2 Repository: " + e);
-//            }
-
-            map.put(AbstractSimulationConfig.PERSISTENCE_RECORDER_NAME, "EDP2");
+//                // TODO Auto-generated catch block
+//                e.printStackTrace();
+//            }            
+            
+            map.put(AbstractSimulationConfig.PERSISTENCE_RECORDER_NAME, "Experiment Data Persistency & Presentation (EDP2)");
             map.put(EDP2RecorderConfigurationFactory.REPOSITORY_ID, repository.getId());
         } else {
             throw new IllegalArgumentException("Tried to load unknown persistency framework");

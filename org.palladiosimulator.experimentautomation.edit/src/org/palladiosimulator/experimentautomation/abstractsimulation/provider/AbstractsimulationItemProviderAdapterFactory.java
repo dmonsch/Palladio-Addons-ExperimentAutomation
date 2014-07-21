@@ -27,15 +27,15 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.util.Abstra
  * {@link #fireNotifyChanged fireNotifyChanged}. The adapters also support Eclipse property sheets.
  * Note that most of the adapters are shared among multiple instances. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * 
+ *
  * @generated
  */
 public class AbstractsimulationItemProviderAdapterFactory extends AbstractsimulationAdapterFactory implements
-        ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ComposedAdapterFactory parentAdapterFactory;
@@ -43,7 +43,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
     /**
      * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected IChangeNotifier changeNotifier = new ChangeNotifier();
@@ -51,29 +51,29 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
     /**
      * This keeps track of all the supported types checked by {@link #isFactoryForType
      * isFactoryForType}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
     /**
      * This constructs an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public AbstractsimulationItemProviderAdapterFactory() {
-        supportedTypes.add(IEditingDomainItemProvider.class);
-        supportedTypes.add(IStructuredItemContentProvider.class);
-        supportedTypes.add(ITreeItemContentProvider.class);
-        supportedTypes.add(IItemLabelProvider.class);
-        supportedTypes.add(IItemPropertySource.class);
+        this.supportedTypes.add(IEditingDomainItemProvider.class);
+        this.supportedTypes.add(IStructuredItemContentProvider.class);
+        this.supportedTypes.add(ITreeItemContentProvider.class);
+        this.supportedTypes.add(IItemLabelProvider.class);
+        this.supportedTypes.add(IItemPropertySource.class);
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected RandomNumberGeneratorSeedItemProvider randomNumberGeneratorSeedItemProvider;
@@ -82,23 +82,23 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createRandomNumberGeneratorSeedAdapter() {
-        if (randomNumberGeneratorSeedItemProvider == null) {
-            randomNumberGeneratorSeedItemProvider = new RandomNumberGeneratorSeedItemProvider(this);
+        if (this.randomNumberGeneratorSeedItemProvider == null) {
+            this.randomNumberGeneratorSeedItemProvider = new RandomNumberGeneratorSeedItemProvider(this);
         }
 
-        return randomNumberGeneratorSeedItemProvider;
+        return this.randomNumberGeneratorSeedItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ProbeSpecConfigurationItemProvider probeSpecConfigurationItemProvider;
@@ -107,23 +107,23 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createProbeSpecConfigurationAdapter() {
-        if (probeSpecConfigurationItemProvider == null) {
-            probeSpecConfigurationItemProvider = new ProbeSpecConfigurationItemProvider(this);
+        if (this.probeSpecConfigurationItemProvider == null) {
+            this.probeSpecConfigurationItemProvider = new ProbeSpecConfigurationItemProvider(this);
         }
 
-        return probeSpecConfigurationItemProvider;
+        return this.probeSpecConfigurationItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected SensorFrameworkItemProvider sensorFrameworkItemProvider;
@@ -132,23 +132,23 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createSensorFrameworkAdapter() {
-        if (sensorFrameworkItemProvider == null) {
-            sensorFrameworkItemProvider = new SensorFrameworkItemProvider(this);
+        if (this.sensorFrameworkItemProvider == null) {
+            this.sensorFrameworkItemProvider = new SensorFrameworkItemProvider(this);
         }
 
-        return sensorFrameworkItemProvider;
+        return this.sensorFrameworkItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MemoryDatasourceItemProvider memoryDatasourceItemProvider;
@@ -157,23 +157,23 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createMemoryDatasourceAdapter() {
-        if (memoryDatasourceItemProvider == null) {
-            memoryDatasourceItemProvider = new MemoryDatasourceItemProvider(this);
+        if (this.memoryDatasourceItemProvider == null) {
+            this.memoryDatasourceItemProvider = new MemoryDatasourceItemProvider(this);
         }
 
-        return memoryDatasourceItemProvider;
+        return this.memoryDatasourceItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected FileDatasourceItemProvider fileDatasourceItemProvider;
@@ -182,23 +182,23 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createFileDatasourceAdapter() {
-        if (fileDatasourceItemProvider == null) {
-            fileDatasourceItemProvider = new FileDatasourceItemProvider(this);
+        if (this.fileDatasourceItemProvider == null) {
+            this.fileDatasourceItemProvider = new FileDatasourceItemProvider(this);
         }
 
-        return fileDatasourceItemProvider;
+        return this.fileDatasourceItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MeasurementCountStopConditionItemProvider measurementCountStopConditionItemProvider;
@@ -207,23 +207,23 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createMeasurementCountStopConditionAdapter() {
-        if (measurementCountStopConditionItemProvider == null) {
-            measurementCountStopConditionItemProvider = new MeasurementCountStopConditionItemProvider(this);
+        if (this.measurementCountStopConditionItemProvider == null) {
+            this.measurementCountStopConditionItemProvider = new MeasurementCountStopConditionItemProvider(this);
         }
 
-        return measurementCountStopConditionItemProvider;
+        return this.measurementCountStopConditionItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected SimTimeStopConditionItemProvider simTimeStopConditionItemProvider;
@@ -232,23 +232,23 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createSimTimeStopConditionAdapter() {
-        if (simTimeStopConditionItemProvider == null) {
-            simTimeStopConditionItemProvider = new SimTimeStopConditionItemProvider(this);
+        if (this.simTimeStopConditionItemProvider == null) {
+            this.simTimeStopConditionItemProvider = new SimTimeStopConditionItemProvider(this);
         }
 
-        return simTimeStopConditionItemProvider;
+        return this.simTimeStopConditionItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.EDP2} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected EDP2ItemProvider edp2ItemProvider;
@@ -257,68 +257,70 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.EDP2}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Adapter createEDP2Adapter() {
-        if (edp2ItemProvider == null) {
-            edp2ItemProvider = new EDP2ItemProvider(this);
+        if (this.edp2ItemProvider == null) {
+            this.edp2ItemProvider = new EDP2ItemProvider(this);
         }
 
-        return edp2ItemProvider;
+        return this.edp2ItemProvider;
     }
 
     /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public ComposeableAdapterFactory getRootAdapterFactory() {
-        return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
+        return this.parentAdapterFactory == null ? this : this.parentAdapterFactory.getRootAdapterFactory();
     }
 
     /**
      * This sets the composed adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
+    @Override
+    public void setParentAdapterFactory(final ComposedAdapterFactory parentAdapterFactory) {
         this.parentAdapterFactory = parentAdapterFactory;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean isFactoryForType(Object type) {
-        return supportedTypes.contains(type) || super.isFactoryForType(type);
+    public boolean isFactoryForType(final Object type) {
+        return this.supportedTypes.contains(type) || super.isFactoryForType(type);
     }
 
     /**
      * This implementation substitutes the factory itself as the key for the adapter. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Adapter adapt(Notifier notifier, Object type) {
+    public Adapter adapt(final Notifier notifier, final Object type) {
         return super.adapt(notifier, this);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object adapt(Object object, Object type) {
-        if (isFactoryForType(type)) {
-            Object adapter = super.adapt(object, type);
+    public Object adapt(final Object object, final Object type) {
+        if (this.isFactoryForType(type)) {
+            final Object adapter = super.adapt(object, type);
             if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
                 return adapter;
             }
@@ -329,59 +331,71 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
 
     /**
      * This adds a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public void addListener(INotifyChangedListener notifyChangedListener) {
-        changeNotifier.addListener(notifyChangedListener);
+    @Override
+    public void addListener(final INotifyChangedListener notifyChangedListener) {
+        this.changeNotifier.addListener(notifyChangedListener);
     }
 
     /**
      * This removes a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public void removeListener(INotifyChangedListener notifyChangedListener) {
-        changeNotifier.removeListener(notifyChangedListener);
+    @Override
+    public void removeListener(final INotifyChangedListener notifyChangedListener) {
+        this.changeNotifier.removeListener(notifyChangedListener);
     }
 
     /**
      * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public void fireNotifyChanged(Notification notification) {
-        changeNotifier.fireNotifyChanged(notification);
+    @Override
+    public void fireNotifyChanged(final Notification notification) {
+        this.changeNotifier.fireNotifyChanged(notification);
 
-        if (parentAdapterFactory != null) {
-            parentAdapterFactory.fireNotifyChanged(notification);
+        if (this.parentAdapterFactory != null) {
+            this.parentAdapterFactory.fireNotifyChanged(notification);
         }
     }
 
     /**
      * This disposes all of the item providers created by this factory. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public void dispose() {
-        if (randomNumberGeneratorSeedItemProvider != null)
-            randomNumberGeneratorSeedItemProvider.dispose();
-        if (probeSpecConfigurationItemProvider != null)
-            probeSpecConfigurationItemProvider.dispose();
-        if (sensorFrameworkItemProvider != null)
-            sensorFrameworkItemProvider.dispose();
-        if (memoryDatasourceItemProvider != null)
-            memoryDatasourceItemProvider.dispose();
-        if (fileDatasourceItemProvider != null)
-            fileDatasourceItemProvider.dispose();
-        if (measurementCountStopConditionItemProvider != null)
-            measurementCountStopConditionItemProvider.dispose();
-        if (simTimeStopConditionItemProvider != null)
-            simTimeStopConditionItemProvider.dispose();
-        if (edp2ItemProvider != null)
-            edp2ItemProvider.dispose();
+        if (this.randomNumberGeneratorSeedItemProvider != null) {
+            this.randomNumberGeneratorSeedItemProvider.dispose();
+        }
+        if (this.probeSpecConfigurationItemProvider != null) {
+            this.probeSpecConfigurationItemProvider.dispose();
+        }
+        if (this.sensorFrameworkItemProvider != null) {
+            this.sensorFrameworkItemProvider.dispose();
+        }
+        if (this.memoryDatasourceItemProvider != null) {
+            this.memoryDatasourceItemProvider.dispose();
+        }
+        if (this.fileDatasourceItemProvider != null) {
+            this.fileDatasourceItemProvider.dispose();
+        }
+        if (this.measurementCountStopConditionItemProvider != null) {
+            this.measurementCountStopConditionItemProvider.dispose();
+        }
+        if (this.simTimeStopConditionItemProvider != null) {
+            this.simTimeStopConditionItemProvider.dispose();
+        }
+        if (this.edp2ItemProvider != null) {
+            this.edp2ItemProvider.dispose();
+        }
     }
 
 }

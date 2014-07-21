@@ -42,7 +42,7 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
     /**
      * The default value of the '{@link #getSeed0() <em>Seed0</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSeed0()
      * @generated
      * @ordered
@@ -52,7 +52,7 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
     /**
      * The cached value of the '{@link #getSeed0() <em>Seed0</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSeed0()
      * @generated
      * @ordered
@@ -62,7 +62,7 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
     /**
      * The default value of the '{@link #getSeed1() <em>Seed1</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSeed1()
      * @generated
      * @ordered
@@ -72,7 +72,7 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
     /**
      * The cached value of the '{@link #getSeed1() <em>Seed1</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSeed1()
      * @generated
      * @ordered
@@ -82,7 +82,7 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
     /**
      * The default value of the '{@link #getSeed2() <em>Seed2</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSeed2()
      * @generated
      * @ordered
@@ -92,7 +92,7 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
     /**
      * The cached value of the '{@link #getSeed2() <em>Seed2</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSeed2()
      * @generated
      * @ordered
@@ -102,7 +102,7 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
     /**
      * The default value of the '{@link #getSeed3() <em>Seed3</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSeed3()
      * @generated
      * @ordered
@@ -112,7 +112,7 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
     /**
      * The cached value of the '{@link #getSeed3() <em>Seed3</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSeed3()
      * @generated
      * @ordered
@@ -122,7 +122,7 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
     /**
      * The default value of the '{@link #getSeed4() <em>Seed4</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSeed4()
      * @generated
      * @ordered
@@ -132,7 +132,7 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
     /**
      * The cached value of the '{@link #getSeed4() <em>Seed4</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSeed4()
      * @generated
      * @ordered
@@ -142,7 +142,7 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
     /**
      * The default value of the '{@link #getSeed5() <em>Seed5</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSeed5()
      * @generated
      * @ordered
@@ -152,7 +152,7 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
     /**
      * The cached value of the '{@link #getSeed5() <em>Seed5</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSeed5()
      * @generated
      * @ordered
@@ -161,7 +161,7 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected RandomNumberGeneratorSeedImpl() {
@@ -170,7 +170,7 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -180,185 +180,203 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public int getSeed0() {
-        return seed0;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setSeed0(int newSeed0) {
-        int oldSeed0 = seed0;
-        seed0 = newSeed0;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED0, oldSeed0, seed0));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public int getSeed1() {
-        return seed1;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setSeed1(int newSeed1) {
-        int oldSeed1 = seed1;
-        seed1 = newSeed1;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED1, oldSeed1, seed1));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public int getSeed2() {
-        return seed2;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setSeed2(int newSeed2) {
-        int oldSeed2 = seed2;
-        seed2 = newSeed2;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED2, oldSeed2, seed2));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public int getSeed3() {
-        return seed3;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setSeed3(int newSeed3) {
-        int oldSeed3 = seed3;
-        seed3 = newSeed3;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED3, oldSeed3, seed3));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public int getSeed4() {
-        return seed4;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setSeed4(int newSeed4) {
-        int oldSeed4 = seed4;
-        seed4 = newSeed4;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED4, oldSeed4, seed4));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public int getSeed5() {
-        return seed5;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setSeed5(int newSeed5) {
-        int oldSeed5 = seed5;
-        seed5 = newSeed5;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED5, oldSeed5, seed5));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public int getSeed0() {
+        return this.seed0;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setSeed0(final int newSeed0) {
+        final int oldSeed0 = this.seed0;
+        this.seed0 = newSeed0;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED0, oldSeed0, this.seed0));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public int getSeed1() {
+        return this.seed1;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setSeed1(final int newSeed1) {
+        final int oldSeed1 = this.seed1;
+        this.seed1 = newSeed1;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED1, oldSeed1, this.seed1));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public int getSeed2() {
+        return this.seed2;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setSeed2(final int newSeed2) {
+        final int oldSeed2 = this.seed2;
+        this.seed2 = newSeed2;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED2, oldSeed2, this.seed2));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public int getSeed3() {
+        return this.seed3;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setSeed3(final int newSeed3) {
+        final int oldSeed3 = this.seed3;
+        this.seed3 = newSeed3;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED3, oldSeed3, this.seed3));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public int getSeed4() {
+        return this.seed4;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setSeed4(final int newSeed4) {
+        final int oldSeed4 = this.seed4;
+        this.seed4 = newSeed4;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED4, oldSeed4, this.seed4));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public int getSeed5() {
+        return this.seed5;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setSeed5(final int newSeed5) {
+        final int oldSeed5 = this.seed5;
+        this.seed5 = newSeed5;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED5, oldSeed5, this.seed5));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED0:
-            return getSeed0();
+            return this.getSeed0();
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED1:
-            return getSeed1();
+            return this.getSeed1();
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED2:
-            return getSeed2();
+            return this.getSeed2();
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED3:
-            return getSeed3();
+            return this.getSeed3();
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED4:
-            return getSeed4();
+            return this.getSeed4();
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED5:
-            return getSeed5();
+            return this.getSeed5();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED0:
-            setSeed0((Integer) newValue);
+            this.setSeed0((Integer) newValue);
             return;
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED1:
-            setSeed1((Integer) newValue);
+            this.setSeed1((Integer) newValue);
             return;
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED2:
-            setSeed2((Integer) newValue);
+            this.setSeed2((Integer) newValue);
             return;
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED3:
-            setSeed3((Integer) newValue);
+            this.setSeed3((Integer) newValue);
             return;
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED4:
-            setSeed4((Integer) newValue);
+            this.setSeed4((Integer) newValue);
             return;
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED5:
-            setSeed5((Integer) newValue);
+            this.setSeed5((Integer) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -366,29 +384,29 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED0:
-            setSeed0(SEED0_EDEFAULT);
+            this.setSeed0(SEED0_EDEFAULT);
             return;
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED1:
-            setSeed1(SEED1_EDEFAULT);
+            this.setSeed1(SEED1_EDEFAULT);
             return;
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED2:
-            setSeed2(SEED2_EDEFAULT);
+            this.setSeed2(SEED2_EDEFAULT);
             return;
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED3:
-            setSeed3(SEED3_EDEFAULT);
+            this.setSeed3(SEED3_EDEFAULT);
             return;
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED4:
-            setSeed4(SEED4_EDEFAULT);
+            this.setSeed4(SEED4_EDEFAULT);
             return;
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED5:
-            setSeed5(SEED5_EDEFAULT);
+            this.setSeed5(SEED5_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -396,51 +414,52 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED0:
-            return seed0 != SEED0_EDEFAULT;
+            return this.seed0 != SEED0_EDEFAULT;
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED1:
-            return seed1 != SEED1_EDEFAULT;
+            return this.seed1 != SEED1_EDEFAULT;
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED2:
-            return seed2 != SEED2_EDEFAULT;
+            return this.seed2 != SEED2_EDEFAULT;
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED3:
-            return seed3 != SEED3_EDEFAULT;
+            return this.seed3 != SEED3_EDEFAULT;
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED4:
-            return seed4 != SEED4_EDEFAULT;
+            return this.seed4 != SEED4_EDEFAULT;
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED5:
-            return seed5 != SEED5_EDEFAULT;
+            return this.seed5 != SEED5_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (this.eIsProxy()) {
             return super.toString();
+        }
 
-        StringBuffer result = new StringBuffer(super.toString());
+        final StringBuffer result = new StringBuffer(super.toString());
         result.append(" (seed0: ");
-        result.append(seed0);
+        result.append(this.seed0);
         result.append(", seed1: ");
-        result.append(seed1);
+        result.append(this.seed1);
         result.append(", seed2: ");
-        result.append(seed2);
+        result.append(this.seed2);
         result.append(", seed3: ");
-        result.append(seed3);
+        result.append(this.seed3);
         result.append(", seed4: ");
-        result.append(seed4);
+        result.append(this.seed4);
         result.append(", seed5: ");
-        result.append(seed5);
+        result.append(this.seed5);
         result.append(')');
         return result.toString();
     }

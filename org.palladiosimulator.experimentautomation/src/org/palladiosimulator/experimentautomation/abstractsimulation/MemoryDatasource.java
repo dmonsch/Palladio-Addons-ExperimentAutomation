@@ -11,5 +11,5 @@ package org.palladiosimulator.experimentautomation.abstractsimulation;
  * @model
  * @generated
  */
-public interface MemoryDatasource extends SensorFrameworkDatasource {
+public interface MemoryDatasource extends Datasource {
 } // MemoryDatasource

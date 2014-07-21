@@ -23,71 +23,69 @@ import org.palladiosimulator.experimentautomation.variation.provider.ExperimentA
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration}
  * object. <!-- begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class AbstractSimulationConfigurationItemProvider extends ToolConfigurationItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public AbstractSimulationConfigurationItemProvider(AdapterFactory adapterFactory) {
+    public AbstractSimulationConfigurationItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-        if (itemPropertyDescriptors == null) {
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addSimulateLinkingResourcesPropertyDescriptor(object);
-            addSimulateFailuresPropertyDescriptor(object);
+            this.addSimulateLinkingResourcesPropertyDescriptor(object);
+            this.addSimulateFailuresPropertyDescriptor(object);
         }
-        return itemPropertyDescriptors;
+        return this.itemPropertyDescriptors;
     }
 
     /**
      * This adds a property descriptor for the Simulate Linking Resources feature. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    protected void addSimulateLinkingResourcesPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_AbstractSimulationConfiguration_simulateLinkingResources_feature"),
-                getString("_UI_PropertyDescriptor_description",
+    protected void addSimulateLinkingResourcesPropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AbstractSimulationConfiguration_simulateLinkingResources_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description",
                         "_UI_AbstractSimulationConfiguration_simulateLinkingResources_feature",
                         "_UI_AbstractSimulationConfiguration_type"),
-                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES, true,
-                false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+                        AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES, true,
+                        false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Simulate Failures feature. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    protected void addSimulateFailuresPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_AbstractSimulationConfiguration_simulateFailures_feature"),
-                getString("_UI_PropertyDescriptor_description",
+    protected void addSimulateFailuresPropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_AbstractSimulationConfiguration_simulateFailures_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description",
                         "_UI_AbstractSimulationConfiguration_simulateFailures_feature",
                         "_UI_AbstractSimulationConfiguration_type"),
-                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES, true, false,
-                false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+                        AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES, true, false,
+                        false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -96,31 +94,32 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
      * {@link org.eclipse.emf.edit.command.RemoveCommand} or
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-        if (childrenFeatures == null) {
+    public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures
-                    .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK);
-            childrenFeatures.add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS);
-            childrenFeatures
-                    .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED);
-            childrenFeatures
-                    .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION);
+            this.childrenFeatures
+            .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK);
+            this.childrenFeatures
+            .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS);
+            this.childrenFeatures
+            .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED);
+            this.childrenFeatures
+            .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION);
         }
-        return childrenFeatures;
+        return this.childrenFeatures;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    protected EStructuralFeature getChildFeature(Object object, Object child) {
+    protected EStructuralFeature getChildFeature(final Object object, final Object child) {
         // Check the type of the specified child object and return the proper feature to use for
         // adding (see {@link AddCommand}) it as a child.
 
@@ -130,37 +129,37 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
     /**
      * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String getText(Object object) {
-        String label = ((AbstractSimulationConfiguration) object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_AbstractSimulationConfiguration_type")
-                : getString("_UI_AbstractSimulationConfiguration_type") + " " + label;
+    public String getText(final Object object) {
+        final String label = ((AbstractSimulationConfiguration) object).getName();
+        return label == null || label.length() == 0 ? this.getString("_UI_AbstractSimulationConfiguration_type") : this
+                .getString("_UI_AbstractSimulationConfiguration_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void notifyChanged(Notification notification) {
-        updateChildren(notification);
+    public void notifyChanged(final Notification notification) {
+        this.updateChildren(notification);
 
         switch (notification.getFeatureID(AbstractSimulationConfiguration.class)) {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES:
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+            this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK:
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS:
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED:
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+            this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -169,34 +168,34 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK,
                 AbstractsimulationFactory.eINSTANCE.createSensorFramework()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK,
                 AbstractsimulationFactory.eINSTANCE.createEDP2()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS,
                 AbstractsimulationFactory.eINSTANCE.createMeasurementCountStopCondition()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS,
                 AbstractsimulationFactory.eINSTANCE.createSimTimeStopCondition()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED,
                 AbstractsimulationFactory.eINSTANCE.createRandomNumberGeneratorSeed()));
 
-        newChildDescriptors.add(createChildParameter(
+        newChildDescriptors.add(this.createChildParameter(
                 AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION,
                 AbstractsimulationFactory.eINSTANCE.createProbeSpecConfiguration()));
     }
@@ -204,7 +203,7 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

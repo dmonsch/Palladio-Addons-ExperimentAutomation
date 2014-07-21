@@ -12,14 +12,14 @@ import org.palladiosimulator.experimentautomation.variation.VariationPackage;
 /**
  * This class contains helper methods to serialize and deserialize XML documents <!-- begin-user-doc
  * --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class VariationXMLProcessor extends XMLProcessor {
 
     /**
      * Public constructor to instantiate the helper. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public VariationXMLProcessor() {
@@ -30,17 +30,17 @@ public class VariationXMLProcessor extends XMLProcessor {
     /**
      * Register for "*" and "xml" file extensions the VariationResourceFactoryImpl factory. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     protected Map<String, Resource.Factory> getRegistrations() {
-        if (registrations == null) {
+        if (this.registrations == null) {
             super.getRegistrations();
-            registrations.put(XML_EXTENSION, new VariationResourceFactoryImpl());
-            registrations.put(STAR_EXTENSION, new VariationResourceFactoryImpl());
+            this.registrations.put(XML_EXTENSION, new VariationResourceFactoryImpl());
+            this.registrations.put(STAR_EXTENSION, new VariationResourceFactoryImpl());
         }
-        return registrations;
+        return this.registrations;
     }
 
 } // VariationXMLProcessor

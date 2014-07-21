@@ -3,9 +3,10 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
     modelDirectory="/org.palladiosimulator.experimentautomation/src"
     modelPluginID="org.palladiosimulator.experimentautomation" modelName="ExperimentAutomation"
-    testsDirectory="/org.palladiosimulator.experimentautomation.tests/src" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="6.0" copyrightFields="false" testsPluginID="org.palladiosimulator.experimentautomation.tests"
-    usedGenPackages="platform:/plugin/org.palladiosimulator.edp2/model/EDP2.genmodel#//models platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.genmodel#//metricspec platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.genmodel#//pcm ../../org.palladiosimulator.simulizar.pms/model/pms.genmodel#//pms platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel#//units">
+    codeFormatting="true" testsDirectory="/org.palladiosimulator.experimentautomation.tests/src"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    testsPluginID="org.palladiosimulator.experimentautomation.tests" usedGenPackages="platform:/plugin/org.palladiosimulator.edp2/model/EDP2.genmodel#//models platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.genmodel#//metricspec platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.genmodel#//pcm ../../org.palladiosimulator.simulizar.pms/model/pms.genmodel#//pms platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel#//units"
+    importOrganizing="true" cleanup="true">
   <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
     <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
     <details key="UNION_PROPERTIES" value="REPORT"/>
@@ -152,7 +153,10 @@
         <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
             createChild="true" ecoreFeature="ecore:EReference experimentautomation.ecore#//abstractsimulation/AbstractSimulationConfiguration/probeSpecConfiguration"/>
       </genClasses>
-      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="experimentautomation.ecore#//abstractsimulation/PersistenceFramework"/>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="experimentautomation.ecore#//abstractsimulation/PersistenceFramework">
+        <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+            createChild="true" ecoreFeature="ecore:EReference experimentautomation.ecore#//abstractsimulation/PersistenceFramework/datasource"/>
+      </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//abstractsimulation/RandomNumberGeneratorSeed">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//abstractsimulation/RandomNumberGeneratorSeed/seed0"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//abstractsimulation/RandomNumberGeneratorSeed/seed1"/>
@@ -164,11 +168,8 @@
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//abstractsimulation/ProbeSpecConfiguration">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//abstractsimulation/ProbeSpecConfiguration/blackboardType"/>
       </genClasses>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//abstractsimulation/SensorFramework">
-        <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
-            createChild="true" ecoreFeature="ecore:EReference experimentautomation.ecore#//abstractsimulation/SensorFramework/datasource"/>
-      </genClasses>
-      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="experimentautomation.ecore#//abstractsimulation/SensorFrameworkDatasource"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//abstractsimulation/SensorFramework"/>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="experimentautomation.ecore#//abstractsimulation/Datasource"/>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//abstractsimulation/MemoryDatasource"/>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//abstractsimulation/FileDatasource">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//abstractsimulation/FileDatasource/location"/>
@@ -180,10 +181,7 @@
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//abstractsimulation/SimTimeStopCondition/simulationTime"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="experimentautomation.ecore#//abstractsimulation/StopCondition"/>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//abstractsimulation/EDP2">
-        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference experimentautomation.ecore#//abstractsimulation/EDP2/repository"/>
-      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//abstractsimulation/EDP2"/>
     </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>

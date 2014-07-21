@@ -50,7 +50,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
     /**
      * The cached value of the '{@link #getUsageModel() <em>Usage Model</em>}' reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getUsageModel()
      * @generated
      * @ordered
@@ -60,7 +60,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
     /**
      * The cached value of the '{@link #getAllocation() <em>Allocation</em>}' reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getAllocation()
      * @generated
      * @ordered
@@ -70,7 +70,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
     /**
      * The cached value of the '{@link #getMiddlewareRepository() <em>Middleware Repository</em>}'
      * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getMiddlewareRepository()
      * @generated
      * @ordered
@@ -81,7 +81,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      * The cached value of the '{@link #getEventMiddleWareRepository()
      * <em>Event Middle Ware Repository</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @see #getEventMiddleWareRepository()
      * @generated
      * @ordered
@@ -91,7 +91,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
     /**
      * The cached value of the '{@link #getReconfigurationRules() <em>Reconfiguration Rules</em>}'
      * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getReconfigurationRules()
      * @generated
      * @ordered
@@ -102,7 +102,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      * The cached value of the '{@link #getPlatformMonitoringSpecification()
      * <em>Platform Monitoring Specification</em>}' reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @see #getPlatformMonitoringSpecification()
      * @generated
      * @ordered
@@ -111,7 +111,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected InitialModelImpl() {
@@ -120,7 +120,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -130,313 +130,343 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public UsageModel getUsageModel() {
-        if (usageModel != null && ((EObject) usageModel).eIsProxy()) {
-            InternalEObject oldUsageModel = (InternalEObject) usageModel;
-            usageModel = (UsageModel) eResolveProxy(oldUsageModel);
-            if (usageModel != oldUsageModel) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL, oldUsageModel, usageModel));
-            }
-        }
-        return usageModel;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public UsageModel basicGetUsageModel() {
-        return usageModel;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setUsageModel(UsageModel newUsageModel) {
-        UsageModel oldUsageModel = usageModel;
-        usageModel = newUsageModel;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL,
-                    oldUsageModel, usageModel));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public Allocation getAllocation() {
-        if (allocation != null && ((EObject) allocation).eIsProxy()) {
-            InternalEObject oldAllocation = (InternalEObject) allocation;
-            allocation = (Allocation) eResolveProxy(oldAllocation);
-            if (allocation != oldAllocation) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.INITIAL_MODEL__ALLOCATION, oldAllocation, allocation));
-            }
-        }
-        return allocation;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public Allocation basicGetAllocation() {
-        return allocation;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setAllocation(Allocation newAllocation) {
-        Allocation oldAllocation = allocation;
-        allocation = newAllocation;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.INITIAL_MODEL__ALLOCATION,
-                    oldAllocation, allocation));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public Repository getMiddlewareRepository() {
-        if (middlewareRepository != null && ((EObject) middlewareRepository).eIsProxy()) {
-            InternalEObject oldMiddlewareRepository = (InternalEObject) middlewareRepository;
-            middlewareRepository = (Repository) eResolveProxy(oldMiddlewareRepository);
-            if (middlewareRepository != oldMiddlewareRepository) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.INITIAL_MODEL__MIDDLEWARE_REPOSITORY, oldMiddlewareRepository,
-                            middlewareRepository));
-            }
-        }
-        return middlewareRepository;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public Repository basicGetMiddlewareRepository() {
-        return middlewareRepository;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setMiddlewareRepository(Repository newMiddlewareRepository) {
-        Repository oldMiddlewareRepository = middlewareRepository;
-        middlewareRepository = newMiddlewareRepository;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.INITIAL_MODEL__MIDDLEWARE_REPOSITORY, oldMiddlewareRepository,
-                    middlewareRepository));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public Repository getEventMiddleWareRepository() {
-        if (eventMiddleWareRepository != null && ((EObject) eventMiddleWareRepository).eIsProxy()) {
-            InternalEObject oldEventMiddleWareRepository = (InternalEObject) eventMiddleWareRepository;
-            eventMiddleWareRepository = (Repository) eResolveProxy(oldEventMiddleWareRepository);
-            if (eventMiddleWareRepository != oldEventMiddleWareRepository) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY,
-                            oldEventMiddleWareRepository, eventMiddleWareRepository));
-            }
-        }
-        return eventMiddleWareRepository;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public Repository basicGetEventMiddleWareRepository() {
-        return eventMiddleWareRepository;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setEventMiddleWareRepository(Repository newEventMiddleWareRepository) {
-        Repository oldEventMiddleWareRepository = eventMiddleWareRepository;
-        eventMiddleWareRepository = newEventMiddleWareRepository;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY, oldEventMiddleWareRepository,
-                    eventMiddleWareRepository));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public ReconfigurationRulesFolder getReconfigurationRules() {
-        if (reconfigurationRules != null && reconfigurationRules.eIsProxy()) {
-            InternalEObject oldReconfigurationRules = (InternalEObject) reconfigurationRules;
-            reconfigurationRules = (ReconfigurationRulesFolder) eResolveProxy(oldReconfigurationRules);
-            if (reconfigurationRules != oldReconfigurationRules) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.INITIAL_MODEL__RECONFIGURATION_RULES, oldReconfigurationRules,
-                            reconfigurationRules));
-            }
-        }
-        return reconfigurationRules;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public ReconfigurationRulesFolder basicGetReconfigurationRules() {
-        return reconfigurationRules;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setReconfigurationRules(ReconfigurationRulesFolder newReconfigurationRules) {
-        ReconfigurationRulesFolder oldReconfigurationRules = reconfigurationRules;
-        reconfigurationRules = newReconfigurationRules;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.INITIAL_MODEL__RECONFIGURATION_RULES, oldReconfigurationRules,
-                    reconfigurationRules));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public PMSModel getPlatformMonitoringSpecification() {
-        if (platformMonitoringSpecification != null && platformMonitoringSpecification.eIsProxy()) {
-            InternalEObject oldPlatformMonitoringSpecification = (InternalEObject) platformMonitoringSpecification;
-            platformMonitoringSpecification = (PMSModel) eResolveProxy(oldPlatformMonitoringSpecification);
-            if (platformMonitoringSpecification != oldPlatformMonitoringSpecification) {
-                if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION,
-                            oldPlatformMonitoringSpecification, platformMonitoringSpecification));
-            }
-        }
-        return platformMonitoringSpecification;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public PMSModel basicGetPlatformMonitoringSpecification() {
-        return platformMonitoringSpecification;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setPlatformMonitoringSpecification(PMSModel newPlatformMonitoringSpecification) {
-        PMSModel oldPlatformMonitoringSpecification = platformMonitoringSpecification;
-        platformMonitoringSpecification = newPlatformMonitoringSpecification;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION,
-                    oldPlatformMonitoringSpecification, platformMonitoringSpecification));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public UsageModel getUsageModel() {
+        if (this.usageModel != null && ((EObject) this.usageModel).eIsProxy()) {
+            final InternalEObject oldUsageModel = (InternalEObject) this.usageModel;
+            this.usageModel = (UsageModel) this.eResolveProxy(oldUsageModel);
+            if (this.usageModel != oldUsageModel) {
+                if (this.eNotificationRequired()) {
+                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL, oldUsageModel, this.usageModel));
+                }
+            }
+        }
+        return this.usageModel;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public UsageModel basicGetUsageModel() {
+        return this.usageModel;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setUsageModel(final UsageModel newUsageModel) {
+        final UsageModel oldUsageModel = this.usageModel;
+        this.usageModel = newUsageModel;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL,
+                    oldUsageModel, this.usageModel));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Allocation getAllocation() {
+        if (this.allocation != null && ((EObject) this.allocation).eIsProxy()) {
+            final InternalEObject oldAllocation = (InternalEObject) this.allocation;
+            this.allocation = (Allocation) this.eResolveProxy(oldAllocation);
+            if (this.allocation != oldAllocation) {
+                if (this.eNotificationRequired()) {
+                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            ExperimentsPackage.INITIAL_MODEL__ALLOCATION, oldAllocation, this.allocation));
+                }
+            }
+        }
+        return this.allocation;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public Allocation basicGetAllocation() {
+        return this.allocation;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setAllocation(final Allocation newAllocation) {
+        final Allocation oldAllocation = this.allocation;
+        this.allocation = newAllocation;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.INITIAL_MODEL__ALLOCATION,
+                    oldAllocation, this.allocation));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Repository getMiddlewareRepository() {
+        if (this.middlewareRepository != null && ((EObject) this.middlewareRepository).eIsProxy()) {
+            final InternalEObject oldMiddlewareRepository = (InternalEObject) this.middlewareRepository;
+            this.middlewareRepository = (Repository) this.eResolveProxy(oldMiddlewareRepository);
+            if (this.middlewareRepository != oldMiddlewareRepository) {
+                if (this.eNotificationRequired()) {
+                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            ExperimentsPackage.INITIAL_MODEL__MIDDLEWARE_REPOSITORY, oldMiddlewareRepository,
+                            this.middlewareRepository));
+                }
+            }
+        }
+        return this.middlewareRepository;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public Repository basicGetMiddlewareRepository() {
+        return this.middlewareRepository;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setMiddlewareRepository(final Repository newMiddlewareRepository) {
+        final Repository oldMiddlewareRepository = this.middlewareRepository;
+        this.middlewareRepository = newMiddlewareRepository;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    ExperimentsPackage.INITIAL_MODEL__MIDDLEWARE_REPOSITORY, oldMiddlewareRepository,
+                    this.middlewareRepository));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Repository getEventMiddleWareRepository() {
+        if (this.eventMiddleWareRepository != null && ((EObject) this.eventMiddleWareRepository).eIsProxy()) {
+            final InternalEObject oldEventMiddleWareRepository = (InternalEObject) this.eventMiddleWareRepository;
+            this.eventMiddleWareRepository = (Repository) this.eResolveProxy(oldEventMiddleWareRepository);
+            if (this.eventMiddleWareRepository != oldEventMiddleWareRepository) {
+                if (this.eNotificationRequired()) {
+                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            ExperimentsPackage.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY,
+                            oldEventMiddleWareRepository, this.eventMiddleWareRepository));
+                }
+            }
+        }
+        return this.eventMiddleWareRepository;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public Repository basicGetEventMiddleWareRepository() {
+        return this.eventMiddleWareRepository;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setEventMiddleWareRepository(final Repository newEventMiddleWareRepository) {
+        final Repository oldEventMiddleWareRepository = this.eventMiddleWareRepository;
+        this.eventMiddleWareRepository = newEventMiddleWareRepository;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    ExperimentsPackage.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY, oldEventMiddleWareRepository,
+                    this.eventMiddleWareRepository));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public ReconfigurationRulesFolder getReconfigurationRules() {
+        if (this.reconfigurationRules != null && this.reconfigurationRules.eIsProxy()) {
+            final InternalEObject oldReconfigurationRules = (InternalEObject) this.reconfigurationRules;
+            this.reconfigurationRules = (ReconfigurationRulesFolder) this.eResolveProxy(oldReconfigurationRules);
+            if (this.reconfigurationRules != oldReconfigurationRules) {
+                if (this.eNotificationRequired()) {
+                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            ExperimentsPackage.INITIAL_MODEL__RECONFIGURATION_RULES, oldReconfigurationRules,
+                            this.reconfigurationRules));
+                }
+            }
+        }
+        return this.reconfigurationRules;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public ReconfigurationRulesFolder basicGetReconfigurationRules() {
+        return this.reconfigurationRules;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setReconfigurationRules(final ReconfigurationRulesFolder newReconfigurationRules) {
+        final ReconfigurationRulesFolder oldReconfigurationRules = this.reconfigurationRules;
+        this.reconfigurationRules = newReconfigurationRules;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    ExperimentsPackage.INITIAL_MODEL__RECONFIGURATION_RULES, oldReconfigurationRules,
+                    this.reconfigurationRules));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public PMSModel getPlatformMonitoringSpecification() {
+        if (this.platformMonitoringSpecification != null && this.platformMonitoringSpecification.eIsProxy()) {
+            final InternalEObject oldPlatformMonitoringSpecification = (InternalEObject) this.platformMonitoringSpecification;
+            this.platformMonitoringSpecification = (PMSModel) this.eResolveProxy(oldPlatformMonitoringSpecification);
+            if (this.platformMonitoringSpecification != oldPlatformMonitoringSpecification) {
+                if (this.eNotificationRequired()) {
+                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            ExperimentsPackage.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION,
+                            oldPlatformMonitoringSpecification, this.platformMonitoringSpecification));
+                }
+            }
+        }
+        return this.platformMonitoringSpecification;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public PMSModel basicGetPlatformMonitoringSpecification() {
+        return this.platformMonitoringSpecification;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setPlatformMonitoringSpecification(final PMSModel newPlatformMonitoringSpecification) {
+        final PMSModel oldPlatformMonitoringSpecification = this.platformMonitoringSpecification;
+        this.platformMonitoringSpecification = newPlatformMonitoringSpecification;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    ExperimentsPackage.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION,
+                    oldPlatformMonitoringSpecification, this.platformMonitoringSpecification));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL:
-            if (resolve)
-                return getUsageModel();
-            return basicGetUsageModel();
+            if (resolve) {
+                return this.getUsageModel();
+            }
+            return this.basicGetUsageModel();
         case ExperimentsPackage.INITIAL_MODEL__ALLOCATION:
-            if (resolve)
-                return getAllocation();
-            return basicGetAllocation();
+            if (resolve) {
+                return this.getAllocation();
+            }
+            return this.basicGetAllocation();
         case ExperimentsPackage.INITIAL_MODEL__MIDDLEWARE_REPOSITORY:
-            if (resolve)
-                return getMiddlewareRepository();
-            return basicGetMiddlewareRepository();
+            if (resolve) {
+                return this.getMiddlewareRepository();
+            }
+            return this.basicGetMiddlewareRepository();
         case ExperimentsPackage.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY:
-            if (resolve)
-                return getEventMiddleWareRepository();
-            return basicGetEventMiddleWareRepository();
+            if (resolve) {
+                return this.getEventMiddleWareRepository();
+            }
+            return this.basicGetEventMiddleWareRepository();
         case ExperimentsPackage.INITIAL_MODEL__RECONFIGURATION_RULES:
-            if (resolve)
-                return getReconfigurationRules();
-            return basicGetReconfigurationRules();
+            if (resolve) {
+                return this.getReconfigurationRules();
+            }
+            return this.basicGetReconfigurationRules();
         case ExperimentsPackage.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION:
-            if (resolve)
-                return getPlatformMonitoringSpecification();
-            return basicGetPlatformMonitoringSpecification();
+            if (resolve) {
+                return this.getPlatformMonitoringSpecification();
+            }
+            return this.basicGetPlatformMonitoringSpecification();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL:
-            setUsageModel((UsageModel) newValue);
+            this.setUsageModel((UsageModel) newValue);
             return;
         case ExperimentsPackage.INITIAL_MODEL__ALLOCATION:
-            setAllocation((Allocation) newValue);
+            this.setAllocation((Allocation) newValue);
             return;
         case ExperimentsPackage.INITIAL_MODEL__MIDDLEWARE_REPOSITORY:
-            setMiddlewareRepository((Repository) newValue);
+            this.setMiddlewareRepository((Repository) newValue);
             return;
         case ExperimentsPackage.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY:
-            setEventMiddleWareRepository((Repository) newValue);
+            this.setEventMiddleWareRepository((Repository) newValue);
             return;
         case ExperimentsPackage.INITIAL_MODEL__RECONFIGURATION_RULES:
-            setReconfigurationRules((ReconfigurationRulesFolder) newValue);
+            this.setReconfigurationRules((ReconfigurationRulesFolder) newValue);
             return;
         case ExperimentsPackage.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION:
-            setPlatformMonitoringSpecification((PMSModel) newValue);
+            this.setPlatformMonitoringSpecification((PMSModel) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -444,29 +474,29 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL:
-            setUsageModel((UsageModel) null);
+            this.setUsageModel((UsageModel) null);
             return;
         case ExperimentsPackage.INITIAL_MODEL__ALLOCATION:
-            setAllocation((Allocation) null);
+            this.setAllocation((Allocation) null);
             return;
         case ExperimentsPackage.INITIAL_MODEL__MIDDLEWARE_REPOSITORY:
-            setMiddlewareRepository((Repository) null);
+            this.setMiddlewareRepository((Repository) null);
             return;
         case ExperimentsPackage.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY:
-            setEventMiddleWareRepository((Repository) null);
+            this.setEventMiddleWareRepository((Repository) null);
             return;
         case ExperimentsPackage.INITIAL_MODEL__RECONFIGURATION_RULES:
-            setReconfigurationRules((ReconfigurationRulesFolder) null);
+            this.setReconfigurationRules((ReconfigurationRulesFolder) null);
             return;
         case ExperimentsPackage.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION:
-            setPlatformMonitoringSpecification((PMSModel) null);
+            this.setPlatformMonitoringSpecification((PMSModel) null);
             return;
         }
         super.eUnset(featureID);
@@ -474,24 +504,24 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL:
-            return usageModel != null;
+            return this.usageModel != null;
         case ExperimentsPackage.INITIAL_MODEL__ALLOCATION:
-            return allocation != null;
+            return this.allocation != null;
         case ExperimentsPackage.INITIAL_MODEL__MIDDLEWARE_REPOSITORY:
-            return middlewareRepository != null;
+            return this.middlewareRepository != null;
         case ExperimentsPackage.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY:
-            return eventMiddleWareRepository != null;
+            return this.eventMiddleWareRepository != null;
         case ExperimentsPackage.INITIAL_MODEL__RECONFIGURATION_RULES:
-            return reconfigurationRules != null;
+            return this.reconfigurationRules != null;
         case ExperimentsPackage.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION:
-            return platformMonitoringSpecification != null;
+            return this.platformMonitoringSpecification != null;
         }
         return super.eIsSet(featureID);
     }

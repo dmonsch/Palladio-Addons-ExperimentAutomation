@@ -32,7 +32,7 @@ public interface ProbeSpecConfiguration extends EObject {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Blackboard Type</em>' attribute.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType
      * @see #setBlackboardType(BlackboardType)
@@ -46,7 +46,7 @@ public interface ProbeSpecConfiguration extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration#getBlackboardType
      * <em>Blackboard Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Blackboard Type</em>' attribute.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType

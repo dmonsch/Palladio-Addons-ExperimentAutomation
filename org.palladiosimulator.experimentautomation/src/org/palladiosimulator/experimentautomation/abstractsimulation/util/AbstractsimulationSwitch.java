@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
+import org.palladiosimulator.experimentautomation.abstractsimulation.Datasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2;
 import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
@@ -15,7 +16,6 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.Persistence
 import org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration;
 import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
 import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework;
-import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFrameworkDatasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition;
 import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
@@ -26,21 +26,21 @@ import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
  * each class of the model, starting with the actual class of the object and proceeding up the
  * inheritance hierarchy until a non-null result is returned, which is the result of the switch.
  * <!-- end-user-doc -->
- * 
+ *
  * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage
  * @generated
  */
 public class AbstractsimulationSwitch<T> extends Switch<T> {
     /**
      * The cached model package <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected static AbstractsimulationPackage modelPackage;
 
     /**
      * Creates an instance of the switch. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public AbstractsimulationSwitch() {
@@ -52,126 +52,145 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
     /**
      * Checks whether this is a switch for the given package. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @parameter ePackage the package in question.
      * @return whether this is a switch for the given package.
      * @generated
      */
     @Override
-    protected boolean isSwitchFor(EPackage ePackage) {
+    protected boolean isSwitchFor(final EPackage ePackage) {
         return ePackage == modelPackage;
     }
 
     /**
      * Calls <code>caseXXX</code> for each class of the model until one returns a non null result;
      * it yields that result. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the first non-null result returned by a <code>caseXXX</code> call.
      * @generated
      */
     @Override
-    protected T doSwitch(int classifierID, EObject theEObject) {
+    protected T doSwitch(final int classifierID, final EObject theEObject) {
         switch (classifierID) {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION: {
-            AbstractSimulationConfiguration abstractSimulationConfiguration = (AbstractSimulationConfiguration) theEObject;
-            T result = caseAbstractSimulationConfiguration(abstractSimulationConfiguration);
-            if (result == null)
-                result = caseToolConfiguration(abstractSimulationConfiguration);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final AbstractSimulationConfiguration abstractSimulationConfiguration = (AbstractSimulationConfiguration) theEObject;
+            T result = this.caseAbstractSimulationConfiguration(abstractSimulationConfiguration);
+            if (result == null) {
+                result = this.caseToolConfiguration(abstractSimulationConfiguration);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case AbstractsimulationPackage.PERSISTENCE_FRAMEWORK: {
-            PersistenceFramework persistenceFramework = (PersistenceFramework) theEObject;
-            T result = casePersistenceFramework(persistenceFramework);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final PersistenceFramework persistenceFramework = (PersistenceFramework) theEObject;
+            T result = this.casePersistenceFramework(persistenceFramework);
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED: {
-            RandomNumberGeneratorSeed randomNumberGeneratorSeed = (RandomNumberGeneratorSeed) theEObject;
-            T result = caseRandomNumberGeneratorSeed(randomNumberGeneratorSeed);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final RandomNumberGeneratorSeed randomNumberGeneratorSeed = (RandomNumberGeneratorSeed) theEObject;
+            T result = this.caseRandomNumberGeneratorSeed(randomNumberGeneratorSeed);
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case AbstractsimulationPackage.PROBE_SPEC_CONFIGURATION: {
-            ProbeSpecConfiguration probeSpecConfiguration = (ProbeSpecConfiguration) theEObject;
-            T result = caseProbeSpecConfiguration(probeSpecConfiguration);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final ProbeSpecConfiguration probeSpecConfiguration = (ProbeSpecConfiguration) theEObject;
+            T result = this.caseProbeSpecConfiguration(probeSpecConfiguration);
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case AbstractsimulationPackage.SENSOR_FRAMEWORK: {
-            SensorFramework sensorFramework = (SensorFramework) theEObject;
-            T result = caseSensorFramework(sensorFramework);
-            if (result == null)
-                result = casePersistenceFramework(sensorFramework);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final SensorFramework sensorFramework = (SensorFramework) theEObject;
+            T result = this.caseSensorFramework(sensorFramework);
+            if (result == null) {
+                result = this.casePersistenceFramework(sensorFramework);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
-        case AbstractsimulationPackage.SENSOR_FRAMEWORK_DATASOURCE: {
-            SensorFrameworkDatasource sensorFrameworkDatasource = (SensorFrameworkDatasource) theEObject;
-            T result = caseSensorFrameworkDatasource(sensorFrameworkDatasource);
-            if (result == null)
-                result = defaultCase(theEObject);
+        case AbstractsimulationPackage.DATASOURCE: {
+            final Datasource datasource = (Datasource) theEObject;
+            T result = this.caseDatasource(datasource);
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case AbstractsimulationPackage.MEMORY_DATASOURCE: {
-            MemoryDatasource memoryDatasource = (MemoryDatasource) theEObject;
-            T result = caseMemoryDatasource(memoryDatasource);
-            if (result == null)
-                result = caseSensorFrameworkDatasource(memoryDatasource);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final MemoryDatasource memoryDatasource = (MemoryDatasource) theEObject;
+            T result = this.caseMemoryDatasource(memoryDatasource);
+            if (result == null) {
+                result = this.caseDatasource(memoryDatasource);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case AbstractsimulationPackage.FILE_DATASOURCE: {
-            FileDatasource fileDatasource = (FileDatasource) theEObject;
-            T result = caseFileDatasource(fileDatasource);
-            if (result == null)
-                result = caseSensorFrameworkDatasource(fileDatasource);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final FileDatasource fileDatasource = (FileDatasource) theEObject;
+            T result = this.caseFileDatasource(fileDatasource);
+            if (result == null) {
+                result = this.caseDatasource(fileDatasource);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case AbstractsimulationPackage.MEASUREMENT_COUNT_STOP_CONDITION: {
-            MeasurementCountStopCondition measurementCountStopCondition = (MeasurementCountStopCondition) theEObject;
-            T result = caseMeasurementCountStopCondition(measurementCountStopCondition);
-            if (result == null)
-                result = caseStopCondition(measurementCountStopCondition);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final MeasurementCountStopCondition measurementCountStopCondition = (MeasurementCountStopCondition) theEObject;
+            T result = this.caseMeasurementCountStopCondition(measurementCountStopCondition);
+            if (result == null) {
+                result = this.caseStopCondition(measurementCountStopCondition);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case AbstractsimulationPackage.SIM_TIME_STOP_CONDITION: {
-            SimTimeStopCondition simTimeStopCondition = (SimTimeStopCondition) theEObject;
-            T result = caseSimTimeStopCondition(simTimeStopCondition);
-            if (result == null)
-                result = caseStopCondition(simTimeStopCondition);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final SimTimeStopCondition simTimeStopCondition = (SimTimeStopCondition) theEObject;
+            T result = this.caseSimTimeStopCondition(simTimeStopCondition);
+            if (result == null) {
+                result = this.caseStopCondition(simTimeStopCondition);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case AbstractsimulationPackage.STOP_CONDITION: {
-            StopCondition stopCondition = (StopCondition) theEObject;
-            T result = caseStopCondition(stopCondition);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final StopCondition stopCondition = (StopCondition) theEObject;
+            T result = this.caseStopCondition(stopCondition);
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         case AbstractsimulationPackage.EDP2: {
-            EDP2 edp2 = (EDP2) theEObject;
-            T result = caseEDP2(edp2);
-            if (result == null)
-                result = casePersistenceFramework(edp2);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final EDP2 edp2 = (EDP2) theEObject;
+            T result = this.caseEDP2(edp2);
+            if (result == null) {
+                result = this.casePersistenceFramework(edp2);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         default:
-            return defaultCase(theEObject);
+            return this.defaultCase(theEObject);
         }
     }
 
@@ -179,7 +198,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Abstract Simulation Configuration</em>'. <!-- begin-user-doc --> This implementation
      * returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -187,7 +206,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseAbstractSimulationConfiguration(AbstractSimulationConfiguration object) {
+    public T caseAbstractSimulationConfiguration(final AbstractSimulationConfiguration object) {
         return null;
     }
 
@@ -195,7 +214,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Persistence Framework</em>'. <!-- begin-user-doc --> This implementation returns null;
      * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -203,7 +222,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T casePersistenceFramework(PersistenceFramework object) {
+    public T casePersistenceFramework(final PersistenceFramework object) {
         return null;
     }
 
@@ -211,7 +230,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Random Number Generator Seed</em>'. <!-- begin-user-doc --> This implementation returns
      * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -219,7 +238,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseRandomNumberGeneratorSeed(RandomNumberGeneratorSeed object) {
+    public T caseRandomNumberGeneratorSeed(final RandomNumberGeneratorSeed object) {
         return null;
     }
 
@@ -227,7 +246,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Probe Spec Configuration</em>'. <!-- begin-user-doc --> This implementation returns null;
      * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -235,7 +254,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseProbeSpecConfiguration(ProbeSpecConfiguration object) {
+    public T caseProbeSpecConfiguration(final ProbeSpecConfiguration object) {
         return null;
     }
 
@@ -243,30 +262,29 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Sensor Framework</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Sensor Framework</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseSensorFramework(SensorFramework object) {
+    public T caseSensorFramework(final SensorFramework object) {
         return null;
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Sensor Framework Datasource</em>'. <!-- begin-user-doc --> This implementation returns
-     * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     * Returns the result of interpreting the object as an instance of '<em>Datasource</em>'. <!--
+     * begin-user-doc --> This implementation returns null; returning a non-null result will
+     * terminate the switch. <!-- end-user-doc -->
+     *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Sensor Framework Datasource</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Datasource</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseSensorFrameworkDatasource(SensorFrameworkDatasource object) {
+    public T caseDatasource(final Datasource object) {
         return null;
     }
 
@@ -274,14 +292,14 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Memory Datasource</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Memory Datasource</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseMemoryDatasource(MemoryDatasource object) {
+    public T caseMemoryDatasource(final MemoryDatasource object) {
         return null;
     }
 
@@ -289,14 +307,14 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>File Datasource</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>File Datasource</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseFileDatasource(FileDatasource object) {
+    public T caseFileDatasource(final FileDatasource object) {
         return null;
     }
 
@@ -304,7 +322,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Measurement Count Stop Condition</em>'. <!-- begin-user-doc --> This implementation
      * returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -312,7 +330,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseMeasurementCountStopCondition(MeasurementCountStopCondition object) {
+    public T caseMeasurementCountStopCondition(final MeasurementCountStopCondition object) {
         return null;
     }
 
@@ -320,7 +338,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '
      * <em>Sim Time Stop Condition</em>'. <!-- begin-user-doc --> This implementation returns null;
      * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
@@ -328,7 +346,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseSimTimeStopCondition(SimTimeStopCondition object) {
+    public T caseSimTimeStopCondition(final SimTimeStopCondition object) {
         return null;
     }
 
@@ -336,14 +354,14 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Stop Condition</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Stop Condition</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseStopCondition(StopCondition object) {
+    public T caseStopCondition(final StopCondition object) {
         return null;
     }
 
@@ -351,14 +369,14 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>EDP2</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>EDP2</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseEDP2(EDP2 object) {
+    public T caseEDP2(final EDP2 object) {
         return null;
     }
 
@@ -366,7 +384,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Tool Configuration</em>
      * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Tool Configuration</em>
@@ -374,7 +392,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseToolConfiguration(ToolConfiguration object) {
+    public T caseToolConfiguration(final ToolConfiguration object) {
         return null;
     }
 
@@ -382,7 +400,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>EObject</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch, but this is the last case anyway. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>EObject</em>'.
@@ -390,7 +408,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @generated
      */
     @Override
-    public T defaultCase(EObject object) {
+    public T defaultCase(final EObject object) {
         return null;
     }
 

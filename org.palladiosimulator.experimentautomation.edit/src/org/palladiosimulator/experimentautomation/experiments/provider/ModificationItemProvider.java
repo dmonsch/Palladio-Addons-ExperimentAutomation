@@ -26,7 +26,7 @@ import org.palladiosimulator.experimentautomation.variation.provider.ExperimentA
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.experimentautomation.experiments.Modification} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class ModificationItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
@@ -34,76 +34,72 @@ public class ModificationItemProvider extends ItemProviderAdapter implements IEd
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public ModificationItemProvider(AdapterFactory adapterFactory) {
+    public ModificationItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-        if (itemPropertyDescriptors == null) {
+    public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            addTypePropertyDescriptor(object);
-            addNamePropertyDescriptor(object);
-            addVariedObjectIdPropertyDescriptor(object);
-            addValuePropertyDescriptor(object);
+            this.addTypePropertyDescriptor(object);
+            this.addNamePropertyDescriptor(object);
+            this.addVariedObjectIdPropertyDescriptor(object);
+            this.addValuePropertyDescriptor(object);
         }
-        return itemPropertyDescriptors;
+        return this.itemPropertyDescriptors;
     }
 
     /**
      * This adds a property descriptor for the Type feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
-    protected void addTypePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Modification_type_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Modification_type_feature",
-                        "_UI_Modification_type"), ExperimentsPackage.Literals.MODIFICATION__TYPE, true, false, true,
-                null, null, null));
+    protected void addTypePropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_Modification_type_feature"), this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_Modification_type_feature", "_UI_Modification_type"),
+                        ExperimentsPackage.Literals.MODIFICATION__TYPE, true, false, true, null, null, null));
     }
 
     /**
      * This adds a property descriptor for the Name feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
-    protected void addNamePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Modification_name_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Modification_name_feature",
-                        "_UI_Modification_type"), ExperimentsPackage.Literals.MODIFICATION__NAME, true, false, false,
+    protected void addNamePropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_Modification_name_feature"), this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_Modification_name_feature", "_UI_Modification_type"),
+                        ExperimentsPackage.Literals.MODIFICATION__NAME, true, false, false,
                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Varied Object Id feature. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    protected void addVariedObjectIdPropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Modification_variedObjectId_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Modification_variedObjectId_feature",
+    protected void addVariedObjectIdPropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_Modification_variedObjectId_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_Modification_variedObjectId_feature",
                         "_UI_Modification_type"), ExperimentsPackage.Literals.MODIFICATION__VARIED_OBJECT_ID, true,
                 false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -111,58 +107,57 @@ public class ModificationItemProvider extends ItemProviderAdapter implements IEd
     /**
      * This adds a property descriptor for the Value feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
-    protected void addValuePropertyDescriptor(Object object) {
-        itemPropertyDescriptors.add(createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Modification_value_feature"),
-                getString("_UI_PropertyDescriptor_description", "_UI_Modification_value_feature",
-                        "_UI_Modification_type"), ExperimentsPackage.Literals.MODIFICATION__VALUE, true, false, false,
+    protected void addValuePropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_Modification_value_feature"), this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_Modification_value_feature", "_UI_Modification_type"),
+                        ExperimentsPackage.Literals.MODIFICATION__VALUE, true, false, false,
                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
      * This returns Modification.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object getImage(Object object) {
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/Modification"));
+    public Object getImage(final Object object) {
+        return this.overlayImage(object, this.getResourceLocator().getImage("full/obj16/Modification"));
     }
 
     /**
      * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     * 
+     *
      * @generated
      */
     @Override
-    public String getText(Object object) {
-        String label = ((Modification) object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_Modification_type")
-                : getString("_UI_Modification_type") + " " + label;
+    public String getText(final Object object) {
+        final String label = ((Modification) object).getName();
+        return label == null || label.length() == 0 ? this.getString("_UI_Modification_type") : this
+                .getString("_UI_Modification_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void notifyChanged(Notification notification) {
-        updateChildren(notification);
+    public void notifyChanged(final Notification notification) {
+        this.updateChildren(notification);
 
         switch (notification.getFeatureID(Modification.class)) {
         case ExperimentsPackage.MODIFICATION__NAME:
         case ExperimentsPackage.MODIFICATION__VARIED_OBJECT_ID:
         case ExperimentsPackage.MODIFICATION__VALUE:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+            this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);
@@ -171,18 +166,18 @@ public class ModificationItemProvider extends ItemProviderAdapter implements IEd
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

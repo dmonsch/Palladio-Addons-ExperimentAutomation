@@ -27,7 +27,7 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
     /**
      * The default value of the '{@link #getFolderUri() <em>Folder Uri</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getFolderUri()
      * @generated
      * @ordered
@@ -37,7 +37,7 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
     /**
      * The cached value of the '{@link #getFolderUri() <em>Folder Uri</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getFolderUri()
      * @generated
      * @ordered
@@ -46,7 +46,7 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ReconfigurationRulesFolderImpl() {
@@ -55,7 +55,7 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -65,50 +65,53 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public String getFolderUri() {
-        return folderUri;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    public void setFolderUri(String newFolderUri) {
-        String oldFolderUri = folderUri;
-        folderUri = newFolderUri;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.RECONFIGURATION_RULES_FOLDER__FOLDER_URI, oldFolderUri, folderUri));
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
+    public String getFolderUri() {
+        return this.folderUri;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setFolderUri(final String newFolderUri) {
+        final String oldFolderUri = this.folderUri;
+        this.folderUri = newFolderUri;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    ExperimentsPackage.RECONFIGURATION_RULES_FOLDER__FOLDER_URI, oldFolderUri, this.folderUri));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case ExperimentsPackage.RECONFIGURATION_RULES_FOLDER__FOLDER_URI:
-            return getFolderUri();
+            return this.getFolderUri();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eSet(int featureID, Object newValue) {
+    public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case ExperimentsPackage.RECONFIGURATION_RULES_FOLDER__FOLDER_URI:
-            setFolderUri((String) newValue);
+            this.setFolderUri((String) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -116,14 +119,14 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public void eUnset(int featureID) {
+    public void eUnset(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.RECONFIGURATION_RULES_FOLDER__FOLDER_URI:
-            setFolderUri(FOLDER_URI_EDEFAULT);
+            this.setFolderUri(FOLDER_URI_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -131,31 +134,32 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    public boolean eIsSet(int featureID) {
+    public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.RECONFIGURATION_RULES_FOLDER__FOLDER_URI:
-            return FOLDER_URI_EDEFAULT == null ? folderUri != null : !FOLDER_URI_EDEFAULT.equals(folderUri);
+            return FOLDER_URI_EDEFAULT == null ? this.folderUri != null : !FOLDER_URI_EDEFAULT.equals(this.folderUri);
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (this.eIsProxy()) {
             return super.toString();
+        }
 
-        StringBuffer result = new StringBuffer(super.toString());
+        final StringBuffer result = new StringBuffer(super.toString());
         result.append(" (folderUri: ");
-        result.append(folderUri);
+        result.append(this.folderUri);
         result.append(')');
         return result.toString();
     }
