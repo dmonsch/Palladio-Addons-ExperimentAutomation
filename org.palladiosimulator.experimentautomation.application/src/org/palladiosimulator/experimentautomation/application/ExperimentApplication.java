@@ -7,9 +7,9 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.equinox.app.IApplication;
 import org.eclipse.equinox.app.IApplicationContext;
 import org.osgi.framework.Bundle;
-
 import org.palladiosimulator.experimentautomation.application.config.ExperimentAutomationConfiguration;
 import org.palladiosimulator.experimentautomation.application.jobs.RunExperimentsAutomationJob;
+
 import de.uka.ipd.sdq.workflow.BlackboardBasedWorkflow;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 
@@ -30,15 +30,15 @@ public class ExperimentApplication implements IApplication {
         final String[] args = (String[]) context.getArguments().get("application.args");
 
         // check arguments
-        if (args.length < 3) {
+        if (args.length < 2) {
             System.out.println("The mandatory parameters have not been specified.");
             return IApplication.EXIT_OK;
         }
 
         // prepare experiment list, if parameter has been specified
         final List<String> experimentIds = new ArrayList<String>();
-        if (args.length >= 4) {
-            final String[] ids = args[3].split(";");
+        if (args.length >= 3) {
+            final String[] ids = args[2].split(";");
             for (final String id : ids) {
                 experimentIds.add(id);
             }
