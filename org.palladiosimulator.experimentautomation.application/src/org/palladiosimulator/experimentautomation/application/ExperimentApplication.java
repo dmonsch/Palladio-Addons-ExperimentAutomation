@@ -17,7 +17,18 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
  * Main entry point to the experiment automation application. By implementing the
  * {@link IApplication} interface, this class can serve as a stand-alone application.
  * 
- * @author Sebastian Lehrig
+ * In the field "Program arguments", provide two additional arguments as shown in the example:
+ * <code>-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl}
+ * -consoleLog D:\models\my.experiments D:\models\pcm.variation</code>
+ * 
+ * The first is the path to your configuration model (.experiments extension). The second is the
+ * path to the predefined pcm.variation file
+ * 
+ * An optional third parameter allows to list experiment IDs (separated by ";"). This list serves as
+ * a filter; only listed experiments are conducted (instead of all experiments of the experiment
+ * repository).
+ * 
+ * @author Merkle, Sebastian Lehrig
  */
 public class ExperimentApplication implements IApplication {
 
