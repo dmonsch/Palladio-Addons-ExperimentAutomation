@@ -17,8 +17,9 @@ public class LogExperimentInformationJob extends SequentialBlackboardInteracting
     final private SimuComConfig simuComConfig;
     final private String appliedVariations;
     final private int repetition;
-    
-    public LogExperimentInformationJob(Experiment experiment, final SimuComConfig simuComConfig, final String appliedVariations, final int repetition) {
+
+    public LogExperimentInformationJob(Experiment experiment, final SimuComConfig simuComConfig,
+            final String appliedVariations, final int repetition) {
         this.experiment = experiment;
         this.simuComConfig = simuComConfig;
         this.appliedVariations = appliedVariations;
@@ -39,7 +40,7 @@ public class LogExperimentInformationJob extends SequentialBlackboardInteracting
         stringBuilder.append("NAME: \"");
         stringBuilder.append(this.simuComConfig.getNameBase());
         stringBuilder.append("\"\n");
-        
+
         stringBuilder.append(this.appliedVariations);
 
         stringBuilder.append("REPETITION: ");

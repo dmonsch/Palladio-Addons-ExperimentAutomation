@@ -1,5 +1,6 @@
 package org.palladiosimulator.experimentautomation.application.tooladapter.simucom;
 
+import java.util.List;
 import java.util.Map;
 
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
@@ -23,9 +24,9 @@ public class SimuComConfigFactory {
     public static final String SIMULATOR_ID = "simulatorId";
 
     public static SimuComConfig createConfig(final Experiment experiment, final SimuComConfiguration simuComConfig,
-            final int repetition) {
+            final List<Long> factorLevels, final int repetition) {
         final Map<String, Object> configMap = AbstractSimulationConfigFactory.createConfigMap(experiment,
-                simuComConfig, repetition);
+                simuComConfig, factorLevels, repetition);
         configMap.put(AbstractSimulationConfig.SIMULATOR_ID, "de.uka.ipd.sdq.codegen.simucontroller.simucom");
         return new SimuComConfig(configMap, false);
     }

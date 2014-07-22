@@ -1,5 +1,7 @@
 package org.palladiosimulator.experimentautomation.application.tooladapter.simucom;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.CoreException;
 import org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter;
@@ -25,12 +27,13 @@ public class SimuComToolAdapter implements IToolAdapter {
 
     @Override
     public SequentialBlackboardInteractingJob<MDSDBlackboard> createRunAnalysisJob(final Experiment experiment,
-            final ToolConfiguration toolConfig, final String appliedVariations, final int repetition, MDSDBlackboard blackboard) {
+            final ToolConfiguration toolConfig, final List<Long> factorLevels, final String appliedVariations,
+            final int repetition, MDSDBlackboard blackboard) {
         final SimuComConfiguration simuComConfiguration = (SimuComConfiguration) toolConfig;
 
         // create simulation configuration
         final SimuComConfig simuComConfig = SimuComConfigFactory.createConfig(experiment, simuComConfiguration,
-                repetition);
+                factorLevels, repetition);
 
         // create workflow configuration
         final SimuComWorkflowConfiguration workflowConfig = SimuComWorkflowConfigurationFactory
