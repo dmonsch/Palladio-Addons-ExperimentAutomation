@@ -21,10 +21,10 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
  * <code>-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl}
  * -consoleLog D:\models\my.experiments D:\models\pcm.variation</code>
  * 
- * The first is the path to your configuration model (.experiments extension). The second is the
- * path to the predefined pcm.variation file
+ * The first argument is the path to your configuration model (.experiments extension). The second
+ * argument is the path to the predefined pcm.variation file.
  * 
- * An optional third parameter allows to list experiment IDs (separated by ";"). This list serves as
+ * An optional third argument allows to list experiment IDs (separated by ";"). This list serves as
  * a filter; only listed experiments are conducted (instead of all experiments of the experiment
  * repository).
  * 
