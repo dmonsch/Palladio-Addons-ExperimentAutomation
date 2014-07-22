@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-
 import org.palladiosimulator.experimentautomation.application.config.ExperimentAutomationConfiguration;
 import org.palladiosimulator.experimentautomation.application.tooladapter.AnalysisToolFactory;
 import org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter;
@@ -17,6 +16,7 @@ import org.palladiosimulator.experimentautomation.application.variation.valuepro
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 import org.palladiosimulator.experimentautomation.experiments.Variation;
+
 import de.uka.ipd.sdq.workflow.jobs.IJob;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
@@ -113,13 +113,10 @@ public class RunExperimentForToolJob extends SequentialBlackboardInteractingJob<
 
         // add simulation jobs of the varied PCM model (one or more times as specified by the
         // replication count)
-        for (int i = 1; i <= experiment.getRepetitions(); i++) {
+        for (int repetition = 1; repetition <= experiment.getRepetitions(); repetition++) {
             final IToolAdapter analysisTool = AnalysisToolFactory.createToolAdapater(toolConfiguration);
-
-            final String experimentName = "(" + experiment.getId() + ", " + toolConfiguration.getName() + ") "
-                    + experiment.getName();
-            final IJob runAnalysisJob = analysisTool.createRunAnalysisJob(experimentName, experiment.getInitialModel(),
-                    toolConfiguration, experiment.getStopConditions(), this.getBlackboard());
+            final IJob runAnalysisJob = analysisTool.createRunAnalysisJob(experiment, toolConfiguration, repetition, 
+                    this.getBlackboard());
 
             this.add(runAnalysisJob);
         }

@@ -1,7 +1,6 @@
 package org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -17,6 +16,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStop
 import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
 import org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.edp2.EDP2Factory;
 import org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.sensorframework.SensorFrameworkFactory;
+import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import org.palladiosimulator.recorderframework.edp2.EDP2RecorderConfigurationFactory;
 import org.palladiosimulator.recorderframework.sensorframework.SensorFrameworkRecorderConfigurationFactory;
 
@@ -30,29 +30,43 @@ import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
  */
 public class AbstractSimulationConfigFactory {
 
-    public static Map<String, Object> createConfigMap(final AbstractSimulationConfiguration config,
-            final List<StopCondition> stopConditions, final String experimentName) {
+    public static Map<String, Object> createConfigMap(final Experiment experiment, final AbstractSimulationConfiguration simConfig, final int repetition) {
         final Map<String, Object> map = new HashMap<String, Object>();
-
+        
+        final String experimentName = computeExperimentName(experiment, simConfig, repetition);
+        
         map.put(AbstractSimulationConfig.EXPERIMENT_RUN, experimentName);
-        map.put(AbstractSimulationConfig.SIMULATION_TIME, getMaximumSimulationTime(config, stopConditions));
-        map.put(AbstractSimulationConfig.MAXIMUM_MEASUREMENT_COUNT, getMaximumMeasurementCount(config, stopConditions));
+        map.put(AbstractSimulationConfig.SIMULATION_TIME, getMaximumSimulationTime(experiment, simConfig));
+        map.put(AbstractSimulationConfig.MAXIMUM_MEASUREMENT_COUNT, getMaximumMeasurementCount(experiment, simConfig));
         map.put(AbstractSimulationConfig.VERBOSE_LOGGING, false);
-        map.put(AbstractSimulationConfig.BLACKBOARD_TYPE, config.getProbeSpecConfiguration().getBlackboardType());
+        map.put(AbstractSimulationConfig.BLACKBOARD_TYPE, simConfig.getProbeSpecConfiguration().getBlackboardType());
 
-        // FIXME Remove next few lines if done with replacement. [Lehrig]
-        // Lehrig: Remove configuration via files. To be replaced by direct access to blackboard.
-        // map.put(ConstantsContainer.ALLOCATION_FILE, model.getAllocationFile());
-        // map.put(ConstantsContainer.USAGE_FILE, model.getUsagemodelFile());
-
-        fillRandomNumberGeneratorSeed(config, map);
+        fillRandomNumberGeneratorSeed(simConfig, map);
         // fillConfidenceStopCondition(config, map);
-        fillAndConfigurePersistenceFramework(config, map);
+        fillAndConfigurePersistenceFramework(simConfig, map);
 
         // the class SimuComConfig expects map entries to have a value of type String
         adjustMapValueTypes(map);
 
         return map;
+    }
+
+    private static String computeExperimentName(final Experiment experiment,
+            final AbstractSimulationConfiguration simConfig, final int repetition) {
+        final StringBuilder stringBuilder = new StringBuilder();
+        
+        stringBuilder.append(experiment.getName());        
+        stringBuilder.append(" (REPETITION ");
+        stringBuilder.append(repetition);
+        stringBuilder.append(" of ");
+        stringBuilder.append(experiment.getRepetitions());
+        stringBuilder.append("; ID ");
+        stringBuilder.append(experiment.getId());
+        stringBuilder.append("; SIM ");
+        stringBuilder.append(simConfig.getName());
+        stringBuilder.append(")");
+        
+        return stringBuilder.toString();
     }
 
     /**
@@ -90,17 +104,19 @@ public class AbstractSimulationConfigFactory {
             final EDP2 edp2 = (EDP2) config.getPersistenceFramework();
             final Datasource datasource = edp2.getDatasource();
             final Repository repository = EDP2Factory.createOrOpenDatasource(datasource);
-            
-            //final Repository repository = RepositoryManager.getRepositoryFromUUID(edp2.getRepositoryUUID());
-//            
-//            try {
-//                MeasurementsUtility.ensureOpenRepository(RepositoryManager.getRepositoryFromUUID(edp2.getRepositoryUUID()));
-//            } catch (DataNotAccessibleException e) {
-//                // TODO Auto-generated catch block
-//                e.printStackTrace();
-//            }            
-            
-            map.put(AbstractSimulationConfig.PERSISTENCE_RECORDER_NAME, "Experiment Data Persistency & Presentation (EDP2)");
+
+            // final Repository repository =
+            // RepositoryManager.getRepositoryFromUUID(edp2.getRepositoryUUID());
+            //
+            // try {
+            // MeasurementsUtility.ensureOpenRepository(RepositoryManager.getRepositoryFromUUID(edp2.getRepositoryUUID()));
+            // } catch (DataNotAccessibleException e) {
+            // // TODO Auto-generated catch block
+            // e.printStackTrace();
+            // }
+
+            map.put(AbstractSimulationConfig.PERSISTENCE_RECORDER_NAME,
+                    "Experiment Data Persistency & Presentation (EDP2)");
             map.put(EDP2RecorderConfigurationFactory.REPOSITORY_ID, repository.getId());
         } else {
             throw new IllegalArgumentException("Tried to load unknown persistency framework");
@@ -143,16 +159,15 @@ public class AbstractSimulationConfigFactory {
         }
     }
 
-    private static int getMaximumSimulationTime(final AbstractSimulationConfiguration config,
-            final List<StopCondition> stopConditions) {
-        for (final StopCondition s : stopConditions) {
+    private static int getMaximumSimulationTime(final Experiment experiment, final AbstractSimulationConfiguration simConfig) {
+        for (final StopCondition s : experiment.getStopConditions()) {
             if (AbstractsimulationPackage.eINSTANCE.getSimTimeStopCondition().isInstance(s)) {
                 return ((SimTimeStopCondition) s).getSimulationTime();
             }
         }
 
-        final List<StopCondition> defaultConditions = config.getStopConditions();
-        for (final StopCondition s : defaultConditions) {
+        // Stick to defaults
+        for (final StopCondition s : simConfig.getStopConditions()) {
             if (AbstractsimulationPackage.eINSTANCE.getSimTimeStopCondition().isInstance(s)) {
                 return ((SimTimeStopCondition) s).getSimulationTime();
             }
@@ -162,16 +177,15 @@ public class AbstractSimulationConfigFactory {
         return -1;
     }
 
-    private static int getMaximumMeasurementCount(final AbstractSimulationConfiguration config,
-            final List<StopCondition> stopConditions) {
-        for (final StopCondition s : stopConditions) {
+    private static int getMaximumMeasurementCount(final Experiment experiment, final AbstractSimulationConfiguration simConfig) {
+        for (final StopCondition s : experiment.getStopConditions()) {
             if (AbstractsimulationPackage.eINSTANCE.getMeasurementCountStopCondition().isInstance(s)) {
                 return ((MeasurementCountStopCondition) s).getMeasurementCount();
             }
         }
 
-        final List<StopCondition> defaultConditions = config.getStopConditions();
-        for (final StopCondition s : defaultConditions) {
+        // Stick to defaults
+        for (final StopCondition s : simConfig.getStopConditions()) {
             if (AbstractsimulationPackage.eINSTANCE.getMeasurementCountStopCondition().isInstance(s)) {
                 return ((MeasurementCountStopCondition) s).getMeasurementCount();
             }

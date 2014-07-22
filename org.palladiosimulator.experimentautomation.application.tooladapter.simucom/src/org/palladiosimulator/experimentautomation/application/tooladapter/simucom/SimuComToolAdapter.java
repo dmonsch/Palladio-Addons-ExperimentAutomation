@@ -1,16 +1,13 @@
 package org.palladiosimulator.experimentautomation.application.tooladapter.simucom;
 
-import java.util.List;
-
 import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.CoreException;
-import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
 import org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter;
 import org.palladiosimulator.experimentautomation.application.tooladapter.simucom.jobs.CleanUpRecorderJob;
 import org.palladiosimulator.experimentautomation.application.tooladapter.simucom.jobs.LogExperimentInformationJob;
 import org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.SimuComConfiguration;
 import org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.SimucomtooladapterPackage;
-import org.palladiosimulator.experimentautomation.experiments.InitialModel;
+import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 
 import de.uka.ipd.sdq.codegen.simucontroller.runconfig.SimuComWorkflowConfiguration;
@@ -27,14 +24,13 @@ public class SimuComToolAdapter implements IToolAdapter {
     private static final Logger LOGGER = Logger.getLogger(SimuComToolAdapter.class);
 
     @Override
-    public SequentialBlackboardInteractingJob<MDSDBlackboard> createRunAnalysisJob(final String experimentName,
-            final InitialModel initialModel, final ToolConfiguration configuration,
-            final List<StopCondition> stopConditions, MDSDBlackboard blackboard) {
-        final SimuComConfiguration simuComConfiguration = (SimuComConfiguration) configuration;
+    public SequentialBlackboardInteractingJob<MDSDBlackboard> createRunAnalysisJob(final Experiment experiment,
+            final ToolConfiguration toolConfig, final int repetition, MDSDBlackboard blackboard) {
+        final SimuComConfiguration simuComConfiguration = (SimuComConfiguration) toolConfig;
 
         // create simulation configuration
-        final SimuComConfig simuComConfig = SimuComConfigFactory.createConfig(simuComConfiguration, stopConditions,
-                experimentName);
+        final SimuComConfig simuComConfig = SimuComConfigFactory.createConfig(experiment, simuComConfiguration,
+                repetition);
 
         // create workflow configuration
         final SimuComWorkflowConfiguration workflowConfig = SimuComWorkflowConfigurationFactory
