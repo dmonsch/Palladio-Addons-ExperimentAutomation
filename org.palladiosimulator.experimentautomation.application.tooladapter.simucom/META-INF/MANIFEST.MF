@@ -10,7 +10,7 @@ Require-Bundle: de.uka.ipd.sdq.simulation;bundle-version="1.0.0",
  de.uka.ipd.sdq.codegen.simucontroller;bundle-version="1.0.0",
  org.palladiosimulator.experimentautomation;bundle-version="1.0.0",
  org.palladiosimulator.experimentautomation.application;bundle-version="1.0.0",
- org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model,
- org.palladiosimulator.edp2.util,
+ org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model;bundle-version="1.0.0",
+ org.palladiosimulator.edp2.util;bundle-version="1.0.0",
  org.palladiosimulator.edp2.dao;bundle-version="1.0.0",
- de.uka.ipd.sdq.workflow.pcm
+ de.uka.ipd.sdq.workflow.pcm;bundle-version="1.0.0"

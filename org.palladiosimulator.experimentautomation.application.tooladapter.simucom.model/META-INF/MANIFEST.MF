@@ -10,16 +10,16 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model,
  org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.impl,
  org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.util
-Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.emf.ecore.xmi;visibility:=reexport,
- org.palladiosimulator.edp2;visibility:=reexport,
- org.palladiosimulator.experimentautomation;visibility:=reexport,
- de.uka.ipd.sdq.identifier;visibility:=reexport,
- org.palladiosimulator.metricspec;visibility:=reexport,
- de.uka.ipd.sdq.pcm;visibility:=reexport,
- org.palladiosimulator.simulizar.pms;visibility:=reexport,
- de.uka.ipd.sdq.probfunction;visibility:=reexport,
- de.uka.ipd.sdq.stoex;visibility:=reexport,
- de.uka.ipd.sdq.units;visibility:=reexport
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.10.0",
+ org.eclipse.emf.ecore;bundle-version="2.10.0";visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;bundle-version="2.10.0";visibility:=reexport,
+ org.palladiosimulator.edp2;bundle-version="2.0.0";visibility:=reexport,
+ org.palladiosimulator.experimentautomation;bundle-version="1.0.0";visibility:=reexport,
+ de.uka.ipd.sdq.identifier;bundle-version="2.1.0";visibility:=reexport,
+ org.palladiosimulator.metricspec;bundle-version="1.0.0";visibility:=reexport,
+ de.uka.ipd.sdq.pcm;bundle-version="3.6.0";visibility:=reexport,
+ org.palladiosimulator.simulizar.pms;bundle-version="2.0.0";visibility:=reexport,
+ de.uka.ipd.sdq.probfunction;bundle-version="2.1.0";visibility:=reexport,
+ de.uka.ipd.sdq.stoex;bundle-version="2.2.0";visibility:=reexport,
+ de.uka.ipd.sdq.units;bundle-version="2.1.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy
