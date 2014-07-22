@@ -15,7 +15,7 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 
 public class CleanUpRecorderJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
 
-    final SimuComConfiguration simuComConfiguration;
+    final private SimuComConfiguration simuComConfiguration;
 
     public CleanUpRecorderJob(final SimuComConfiguration simuComConfiguration) {
         this.simuComConfiguration = simuComConfiguration;

@@ -4,18 +4,17 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.CoreException;
-
-import de.uka.ipd.sdq.codegen.simucontroller.runconfig.SimuComWorkflowConfiguration;
-import de.uka.ipd.sdq.codegen.simucontroller.workflow.jobs.SimuComJob;
-
 import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
 import org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter;
 import org.palladiosimulator.experimentautomation.application.tooladapter.simucom.jobs.CleanUpRecorderJob;
+import org.palladiosimulator.experimentautomation.application.tooladapter.simucom.jobs.LogExperimentInformationJob;
 import org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.SimuComConfiguration;
 import org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.SimucomtooladapterPackage;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 
+import de.uka.ipd.sdq.codegen.simucontroller.runconfig.SimuComWorkflowConfiguration;
+import de.uka.ipd.sdq.codegen.simucontroller.workflow.jobs.SimuComJob;
 import de.uka.ipd.sdq.simucomframework.SimuComConfig;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
@@ -43,6 +42,7 @@ public class SimuComToolAdapter implements IToolAdapter {
 
         SequentialBlackboardInteractingJob<MDSDBlackboard> result = new SequentialBlackboardInteractingJob<MDSDBlackboard>();
         try {
+            result.add(new LogExperimentInformationJob(simuComConfig));
             result.add(new SimuComJob(workflowConfig, null, false));
             result.add(new CleanUpRecorderJob(simuComConfiguration));
         } catch (CoreException e) {
