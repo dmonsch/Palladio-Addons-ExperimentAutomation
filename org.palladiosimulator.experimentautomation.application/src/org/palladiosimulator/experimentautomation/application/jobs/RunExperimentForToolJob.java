@@ -109,7 +109,9 @@ public class RunExperimentForToolJob extends SequentialBlackboardInteractingJob<
             final long currentValue = factorLevels.get(i);
             final IVariationStrategy variationStrategy = this.initialiseVariations(variation,
                     clonedConfiguration.getResourceSet()); // FIXME Modify in blackboard?
+            
             final String variationName = variationStrategy.vary(currentValue);
+            
             appliedVariations.append("VARIATION: ");
             appliedVariations.append(variationName);
             appliedVariations.append("\n");
@@ -119,7 +121,7 @@ public class RunExperimentForToolJob extends SequentialBlackboardInteractingJob<
         // repetition count)
         for (int repetition = 1; repetition <= experiment.getRepetitions(); repetition++) {
             final IToolAdapter analysisTool = AnalysisToolFactory.createToolAdapater(toolConfiguration);
-            final IJob runAnalysisJob = analysisTool.createRunAnalysisJob(experiment, toolConfiguration, appliedVariations.toString(), repetition, 
+            final IJob runAnalysisJob = analysisTool.createRunAnalysisJob(experiment, toolConfiguration, factorLevels, appliedVariations.toString(), repetition, 
                     this.getBlackboard());
 
             this.add(runAnalysisJob);

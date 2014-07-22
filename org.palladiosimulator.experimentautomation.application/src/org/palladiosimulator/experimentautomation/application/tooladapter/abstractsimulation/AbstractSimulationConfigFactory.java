@@ -1,6 +1,7 @@
 package org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -30,11 +31,12 @@ import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
  */
 public class AbstractSimulationConfigFactory {
 
-    public static Map<String, Object> createConfigMap(final Experiment experiment, final AbstractSimulationConfiguration simConfig, final int repetition) {
+    public static Map<String, Object> createConfigMap(final Experiment experiment,
+            final AbstractSimulationConfiguration simConfig, final List<Long> factorLevels, final int repetition) {
         final Map<String, Object> map = new HashMap<String, Object>();
-        
-        final String experimentName = computeExperimentName(experiment, simConfig, repetition);
-        
+
+        final String experimentName = computeExperimentName(experiment, simConfig, factorLevels, repetition);
+
         map.put(AbstractSimulationConfig.EXPERIMENT_RUN, experimentName);
         map.put(AbstractSimulationConfig.SIMULATION_TIME, getMaximumSimulationTime(experiment, simConfig));
         map.put(AbstractSimulationConfig.MAXIMUM_MEASUREMENT_COUNT, getMaximumMeasurementCount(experiment, simConfig));
@@ -52,18 +54,20 @@ public class AbstractSimulationConfigFactory {
     }
 
     private static String computeExperimentName(final Experiment experiment,
-            final AbstractSimulationConfiguration simConfig, final int repetition) {
+            final AbstractSimulationConfiguration simConfig, final List<Long> factorLevels, final int repetition) {
         final StringBuilder stringBuilder = new StringBuilder();
-        
-        stringBuilder.append(experiment.getName());        
+
+        stringBuilder.append(experiment.getName());
         stringBuilder.append(" ");
+        stringBuilder.append(factorLevels.toString());
+        stringBuilder.append("-");
         stringBuilder.append(repetition);
         stringBuilder.append(" (");
         stringBuilder.append(experiment.getId());
         stringBuilder.append("; ");
         stringBuilder.append(simConfig.getName());
         stringBuilder.append(")");
-        
+
         return stringBuilder.toString();
     }
 
@@ -157,7 +161,8 @@ public class AbstractSimulationConfigFactory {
         }
     }
 
-    private static int getMaximumSimulationTime(final Experiment experiment, final AbstractSimulationConfiguration simConfig) {
+    private static int getMaximumSimulationTime(final Experiment experiment,
+            final AbstractSimulationConfiguration simConfig) {
         for (final StopCondition s : experiment.getStopConditions()) {
             if (AbstractsimulationPackage.eINSTANCE.getSimTimeStopCondition().isInstance(s)) {
                 return ((SimTimeStopCondition) s).getSimulationTime();
@@ -175,7 +180,8 @@ public class AbstractSimulationConfigFactory {
         return -1;
     }
 
-    private static int getMaximumMeasurementCount(final Experiment experiment, final AbstractSimulationConfiguration simConfig) {
+    private static int getMaximumMeasurementCount(final Experiment experiment,
+            final AbstractSimulationConfiguration simConfig) {
         for (final StopCondition s : experiment.getStopConditions()) {
             if (AbstractsimulationPackage.eINSTANCE.getMeasurementCountStopCondition().isInstance(s)) {
                 return ((MeasurementCountStopCondition) s).getMeasurementCount();
