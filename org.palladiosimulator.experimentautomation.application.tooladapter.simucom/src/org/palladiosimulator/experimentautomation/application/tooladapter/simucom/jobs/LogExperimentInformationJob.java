@@ -27,15 +27,22 @@ public class LogExperimentInformationJob extends SequentialBlackboardInteracting
         //if(LOGGER.isInfoEnabled()) {
             final StringBuilder stringBuilder = new StringBuilder(); 
             
-            stringBuilder.append("Conducting Experiment: \"");
-            stringBuilder.append(this.simuComConfig.getNameBase()); // Experiment name
-            stringBuilder.append("\" [");
-            stringBuilder.append(this.simuComConfig.getSimulatorId());
-            stringBuilder.append("; ");
-            stringBuilder.append(this.simuComConfig.getRecorderName());
-            stringBuilder.append("]");
+            stringBuilder.append("\n");
+            stringBuilder.append("============= Experiment Automation: Experiment Run =============\n");
             
-            System.out.println(stringBuilder.toString());
+            stringBuilder.append("NAME: \"");
+            stringBuilder.append(this.simuComConfig.getNameBase());
+            stringBuilder.append("\"\n");
+            
+            stringBuilder.append("ID: \"");
+            stringBuilder.append(this.simuComConfig.getSimulatorId());
+            stringBuilder.append("\"\n");
+            
+            stringBuilder.append("RECORDER: \"");
+            stringBuilder.append(this.simuComConfig.getRecorderName());
+            stringBuilder.append("\"\n");
+            
+            System.out.print(stringBuilder.toString());
             
             //LOGGER.info(stringBuilder.toString());
         //}
