@@ -56,13 +56,11 @@ public class AbstractSimulationConfigFactory {
         final StringBuilder stringBuilder = new StringBuilder();
         
         stringBuilder.append(experiment.getName());        
-        stringBuilder.append(" (REPETITION ");
+        stringBuilder.append(" ");
         stringBuilder.append(repetition);
-        stringBuilder.append(" of ");
-        stringBuilder.append(experiment.getRepetitions());
-        stringBuilder.append("; ID ");
+        stringBuilder.append(" (");
         stringBuilder.append(experiment.getId());
-        stringBuilder.append("; SIM ");
+        stringBuilder.append("; ");
         stringBuilder.append(simConfig.getName());
         stringBuilder.append(")");
         

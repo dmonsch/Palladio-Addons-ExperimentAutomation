@@ -38,7 +38,7 @@ public class SimuComToolAdapter implements IToolAdapter {
 
         SequentialBlackboardInteractingJob<MDSDBlackboard> result = new SequentialBlackboardInteractingJob<MDSDBlackboard>();
         try {
-            result.add(new LogExperimentInformationJob(simuComConfig));
+            result.add(new LogExperimentInformationJob(experiment, simuComConfig, repetition));
             result.add(new SimuComJob(workflowConfig, null, false));
             result.add(new CleanUpRecorderJob(simuComConfiguration));
         } catch (CoreException e) {
