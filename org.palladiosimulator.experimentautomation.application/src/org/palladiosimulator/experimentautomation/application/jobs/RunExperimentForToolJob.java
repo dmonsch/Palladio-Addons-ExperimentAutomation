@@ -110,9 +110,7 @@ public class RunExperimentForToolJob extends SequentialBlackboardInteractingJob<
             final IVariationStrategy variationStrategy = this.initialiseVariations(variation,
                     clonedConfiguration.getResourceSet()); // FIXME Modify in blackboard?
             final String variationName = variationStrategy.vary(currentValue);
-            appliedVariations.append("VARIATION ");
-            appliedVariations.append(i);
-            appliedVariations.append(": ");
+            appliedVariations.append("VARIATION: ");
             appliedVariations.append(variationName);
             appliedVariations.append("\n");
         }
