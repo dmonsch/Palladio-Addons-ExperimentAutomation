@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.palladiosimulator.experimentautomation.buckminster"
+      label="Experiment Automation"
+      version="1.0.0.qualifier"
+      provider-name="palladiosimulator.org">
+
+   <includes
+         id="org.palladiosimulator.experimentautomation.application.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.palladiosimulator.experimentautomation.application.tooladapter.simucom.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.palladiosimulator.experimentautomation.examples.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.palladiosimulator.experimentautomation.feature"
+         version="0.0.0"/>
+
+   <url>
+      <discovery label="Palladio" url="https://sdqweb.ipd.kit.edu/eclipse/palladio/nightly"/>
+      <discovery label="Palladio Commons" url="http://sdqweb.ipd.kit.edu/eclipse/commons/nightly/"/>
+      <discovery label="Palladio Third Party Wrapper" url="http://sdqweb.ipd.kit.edu/eclipse/thirdpartywrapper/nightly/"/>
+      <discovery label="EDP2" url="http://sdqweb.ipd.kit.edu/eclipse/edp2/nightly/"/>
+      <discovery label="Metric Specification Framework" url="http://sdqweb.ipd.kit.edu/eclipse/metricspec/nightly/"/>
+      <discovery label="Measurement Framework Update Site" url="http://sdqweb.ipd.kit.edu/eclipse/measurementframework/nightly/"/>
+      <discovery label="Eclipse Release" url="http://download.eclipse.org/releases/luna/"/>
+      <discovery label="Eclipse Orbit" url="http://download.eclipse.org/tools/orbit/downloads/drops/R20130827064939/repository/"/>
+   </url>
+   
+   <requires>
+      <import plugin="org.junit" version="4.11.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="org.palladiosimulator.experimentautomation.application.tests"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
