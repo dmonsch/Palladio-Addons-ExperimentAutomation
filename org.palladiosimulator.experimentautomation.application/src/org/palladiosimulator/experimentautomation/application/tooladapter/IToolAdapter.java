@@ -9,7 +9,7 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 public interface IToolAdapter {
 
     public SequentialBlackboardInteractingJob<MDSDBlackboard> createRunAnalysisJob(final Experiment experiment,
-            final ToolConfiguration configuration, int repetition, final MDSDBlackboard blackboard);
+            final ToolConfiguration configuration, final String appliedVariations, final int repetition, final MDSDBlackboard blackboard);
 
     public boolean hasSupportFor(final ToolConfiguration configuration);
     

@@ -103,19 +103,25 @@ public class RunExperimentForToolJob extends SequentialBlackboardInteractingJob<
         ExperimentAutomationConfiguration clonedConfiguration = configuration.clone();
 
         // modify the copied PCM model according to the variation descriptions
+        StringBuilder appliedVariations = new StringBuilder();        
         for (int i = 0; i < variations.size(); i++) {
             final Variation variation = variations.get(i);
             final long currentValue = factorLevels.get(i);
             final IVariationStrategy variationStrategy = this.initialiseVariations(variation,
                     clonedConfiguration.getResourceSet()); // FIXME Modify in blackboard?
-            variationStrategy.vary(currentValue);
+            final String variationName = variationStrategy.vary(currentValue);
+            appliedVariations.append("VARIATION ");
+            appliedVariations.append(i);
+            appliedVariations.append(": ");
+            appliedVariations.append(variationName);
+            appliedVariations.append("\n");
         }
 
         // add simulation jobs of the varied PCM model (one or more times as specified by the
-        // replication count)
+        // repetition count)
         for (int repetition = 1; repetition <= experiment.getRepetitions(); repetition++) {
             final IToolAdapter analysisTool = AnalysisToolFactory.createToolAdapater(toolConfiguration);
-            final IJob runAnalysisJob = analysisTool.createRunAnalysisJob(experiment, toolConfiguration, repetition, 
+            final IJob runAnalysisJob = analysisTool.createRunAnalysisJob(experiment, toolConfiguration, appliedVariations.toString(), repetition, 
                     this.getBlackboard());
 
             this.add(runAnalysisJob);
