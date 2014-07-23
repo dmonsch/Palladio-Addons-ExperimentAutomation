@@ -21,7 +21,7 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
  * 
  * @author Sebastian Lehrig
  */
-public class VariateJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
+public class VaryJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
 
     private final List<Variation> variations;
     private final List<Long> factorLevels;
@@ -34,7 +34,7 @@ public class VariateJob extends SequentialBlackboardInteractingJob<MDSDBlackboar
      * @param factorLevels
      *            Factor levels considered for the experiment.
      */
-    public VariateJob(final List<Variation> variations,
+    public VaryJob(final List<Variation> variations,
             final List<Long> factorLevels) {
         super(false);
 

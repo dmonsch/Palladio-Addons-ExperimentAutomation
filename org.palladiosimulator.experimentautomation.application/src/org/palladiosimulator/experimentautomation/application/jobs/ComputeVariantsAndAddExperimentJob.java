@@ -14,7 +14,7 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 
 /**
  * This job computes all variation variants that should be executed in an experiment run.
- * Furthermore, it adds an experiment run job for each considered variant.
+ * Furthermore, it adds vary and run experiment jobs for each considered variant.
  * 
  * @author Sebastian Lehrig
  */
@@ -47,7 +47,7 @@ public class ComputeVariantsAndAddExperimentJob extends SequentialBlackboardInte
     private void computeVariantsAndAddJob(final Experiment experiment, final ToolConfiguration toolConfiguration,
             final List<Variation> variations, final List<Variation> variants, final List<Long> currentFactorLevels) {
         if (variations.isEmpty()) {
-            this.add(new VariateJob(variants, currentFactorLevels));
+            this.add(new VaryJob(variants, currentFactorLevels));
             this.add(new RepeatExperimentJob(experiment, toolConfiguration, variants, currentFactorLevels));
         } else {
             // obtain variation description
