@@ -18,7 +18,7 @@ public class LogExperimentInformationJob extends SequentialBlackboardInteracting
     final private String appliedVariations;
     final private int repetition;
 
-    public LogExperimentInformationJob(Experiment experiment, final SimuComConfig simuComConfig,
+    public LogExperimentInformationJob(final Experiment experiment, final SimuComConfig simuComConfig,
             final String appliedVariations, final int repetition) {
         this.experiment = experiment;
         this.simuComConfig = simuComConfig;
@@ -30,7 +30,7 @@ public class LogExperimentInformationJob extends SequentialBlackboardInteracting
      * TODO How to enable logging? [Lehrig]
      */
     @Override
-    public void execute(IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
+    public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
         // if(LOGGER.isInfoEnabled()) {
         final StringBuilder stringBuilder = new StringBuilder();
 

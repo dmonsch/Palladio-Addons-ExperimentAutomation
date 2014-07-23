@@ -22,7 +22,7 @@ public class CleanUpRecorderJob extends SequentialBlackboardInteractingJob<MDSDB
     }
 
     @Override
-    public void execute(IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
+    public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
         final PersistenceFramework persistenceFramework = this.simuComConfiguration.getPersistenceFramework();
 
         if (AbstractsimulationPackage.eINSTANCE.getSensorFramework().isInstance(persistenceFramework)) {
