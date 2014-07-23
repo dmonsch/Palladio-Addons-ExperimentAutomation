@@ -53,7 +53,7 @@ public class ComputeVariantsAndAddExperimentJob extends SequentialBlackboardInte
             final List<Long> factorsCopy = new ArrayList<Long>();
             factorsCopy.addAll(currentFactorLevels);
             
-            this.add(new VaryJob(variantsCopy, currentFactorLevels));
+            this.add(new VaryJob(variantsCopy, factorsCopy));
             this.add(new RepeatExperimentJob(experiment, toolConfiguration, variantsCopy, factorsCopy));
         } else {
             // obtain variation description
