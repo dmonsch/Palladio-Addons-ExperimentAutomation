@@ -19,13 +19,15 @@ public class LogExperimentInformationJob extends SequentialBlackboardInteracting
     final private Experiment experiment;
     final private SimuComConfig simuComConfig;
     final private List<Variation> variations;
+    final private List<Long> factorLevels;
     final private int repetition;
 
     public LogExperimentInformationJob(final Experiment experiment, final SimuComConfig simuComConfig,
-            final List<Variation> variations, final int repetition) {
+            final List<Variation> variations, final List<Long> factorLevels, final int repetition) {
         this.experiment = experiment;
         this.simuComConfig = simuComConfig;
         this.variations = variations;
+        this.factorLevels = factorLevels;
         this.repetition = repetition;
     }
 
@@ -44,10 +46,17 @@ public class LogExperimentInformationJob extends SequentialBlackboardInteracting
         stringBuilder.append(this.simuComConfig.getNameBase());
         stringBuilder.append("\"\n");
 
-        for (Variation variation : this.variations) {
+        for (int i=0; i<this.variations.size(); i++) {
+            final Variation variation = this.variations.get(i);
+            final Long factor = this.factorLevels.get(i);
+            
             stringBuilder.append("VARIATION: ");
             stringBuilder.append(variation.getName());
-            stringBuilder.append("\n");
+            stringBuilder.append("[");
+            stringBuilder.append(factor);
+            stringBuilder.append("](");
+            stringBuilder.append(variation.getVariedObjectId());
+            stringBuilder.append(")\n");
         }
 
         stringBuilder.append("REPETITION: ");

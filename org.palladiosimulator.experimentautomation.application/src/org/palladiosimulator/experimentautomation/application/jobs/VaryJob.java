@@ -51,7 +51,7 @@ public class VaryJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> 
         // modify the copied PCM model according to the variation descriptions
         for (int i = 0; i < this.variations.size(); i++) {
             final Variation variation = this.variations.get(i);
-            final long currentValue = this.factorLevels.get(i);
+//          final long currentValue = this.factorLevels.get(i);
 //            final IVariationStrategy variationStrategy = this.initialiseVariations(variation,
 //                    clonedConfiguration.getResourceSet()); // FIXME Modify in blackboard?
 //

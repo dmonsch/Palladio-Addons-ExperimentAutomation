@@ -47,8 +47,14 @@ public class ComputeVariantsAndAddExperimentJob extends SequentialBlackboardInte
     private void computeVariantsAndAddJob(final Experiment experiment, final ToolConfiguration toolConfiguration,
             final List<Variation> variations, final List<Variation> variants, final List<Long> currentFactorLevels) {
         if (variations.isEmpty()) {
-            this.add(new VaryJob(variants, currentFactorLevels));
-            this.add(new RepeatExperimentJob(experiment, toolConfiguration, variants, currentFactorLevels));
+            final List<Variation> variantsCopy = new ArrayList<Variation>();
+            variantsCopy.addAll(variants);
+            
+            final List<Long> factorsCopy = new ArrayList<Long>();
+            factorsCopy.addAll(currentFactorLevels);
+            
+            this.add(new VaryJob(variantsCopy, currentFactorLevels));
+            this.add(new RepeatExperimentJob(experiment, toolConfiguration, variantsCopy, factorsCopy));
         } else {
             // obtain variation description
             final List<Variation> copy = new ArrayList<Variation>();
