@@ -12,7 +12,7 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
  * 
  * @author Sebastian Lehrig
  */
-public class RunExperimentAutomationJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
+public class RunExperimentForEachToolJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
 
     /**
      * Default Constructor.
@@ -20,7 +20,7 @@ public class RunExperimentAutomationJob extends SequentialBlackboardInteractingJ
      * @param experiment
      *            The experiment to be conducted.
      */
-    public RunExperimentAutomationJob(final Experiment experiment) {
+    public RunExperimentForEachToolJob(final Experiment experiment) {
         super(false);
 
         for (final ToolConfiguration toolConfiguration : experiment.getToolConfiguration()) {

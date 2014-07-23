@@ -8,7 +8,7 @@ import org.eclipse.equinox.app.IApplication;
 import org.eclipse.equinox.app.IApplicationContext;
 import org.osgi.framework.Bundle;
 import org.palladiosimulator.experimentautomation.application.config.ExperimentAutomationConfiguration;
-import org.palladiosimulator.experimentautomation.application.jobs.RunExperimentsAutomationJob;
+import org.palladiosimulator.experimentautomation.application.jobs.RunEachExperimentJob;
 
 import de.uka.ipd.sdq.workflow.BlackboardBasedWorkflow;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
@@ -65,7 +65,7 @@ public class ExperimentApplication implements IApplication {
         // run experiments via blackboard-based workflow
         final MDSDBlackboard blackboard = new MDSDBlackboard();
         final BlackboardBasedWorkflow<MDSDBlackboard> workflow = new BlackboardBasedWorkflow<MDSDBlackboard>(
-                new RunExperimentsAutomationJob(config), blackboard);
+                new RunEachExperimentJob(config), blackboard);
         workflow.run();
 
         return IApplication.EXIT_OK;
