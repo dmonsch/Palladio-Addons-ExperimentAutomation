@@ -44,10 +44,11 @@ public class LogExperimentInformationJob extends SequentialBlackboardInteracting
         stringBuilder.append(this.simuComConfig.getNameBase());
         stringBuilder.append("\"\n");
 
-        for(Variation variation : this.variations) {
+        for (Variation variation : this.variations) {
             stringBuilder.append("VARIATION: ");
             stringBuilder.append(variation.getName());
-        }       
+            stringBuilder.append("\n");
+        }
 
         stringBuilder.append("REPETITION: ");
         stringBuilder.append(this.repetition);
