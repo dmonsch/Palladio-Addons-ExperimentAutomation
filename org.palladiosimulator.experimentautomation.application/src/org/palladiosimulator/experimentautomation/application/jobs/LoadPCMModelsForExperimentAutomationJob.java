@@ -3,8 +3,8 @@ package org.palladiosimulator.experimentautomation.application.jobs;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.IProgressMonitor;
-
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
+
 import de.uka.ipd.sdq.workflow.jobs.CleanupFailedException;
 import de.uka.ipd.sdq.workflow.jobs.IBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.jobs.IJob;
@@ -33,7 +33,7 @@ public class LoadPCMModelsForExperimentAutomationJob extends SequentialBlackboar
     }
 
     @Override
-    public void execute(IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
+    public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
         ResourceSetPartition pcmPartition = this.blackboard
                 .getPartition(LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID);
         ResourceSetPartition middlewarePartition = this.blackboard
@@ -48,7 +48,7 @@ public class LoadPCMModelsForExperimentAutomationJob extends SequentialBlackboar
         pcmPartition.loadModel(this.initialModel.getAllocation().eResource().getURI());
         pcmPartition.loadModel(this.initialModel.getUsageModel().eResource().getURI());
         pcmPartition.resolveAllProxies();
-        
+
         // load the middleware completion
         if (LOGGER.isEnabledFor(Level.INFO)) {
             LOGGER.info("Loading middleware completion models");
@@ -84,6 +84,6 @@ public class LoadPCMModelsForExperimentAutomationJob extends SequentialBlackboar
      * {@inheritDoc}
      */
     @Override
-    public void cleanup(IProgressMonitor monitor) throws CleanupFailedException {
+    public void cleanup(final IProgressMonitor monitor) throws CleanupFailedException {
     }
 }

@@ -2,6 +2,7 @@ package org.palladiosimulator.experimentautomation.application.jobs;
 
 import org.palladiosimulator.experimentautomation.application.config.ExperimentAutomationConfiguration;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
+
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 import de.uka.ipd.sdq.workflow.pcm.jobs.PreparePCMBlackboardPartionJob;
@@ -20,7 +21,7 @@ public class RunExperimentsAutomationJob extends SequentialBlackboardInteracting
      * @param configuration
      *            Configuration of the experiment.
      */
-    public RunExperimentsAutomationJob(ExperimentAutomationConfiguration configuration) {
+    public RunExperimentsAutomationJob(final ExperimentAutomationConfiguration configuration) {
         super(false);
 
         this.add(new PreparePCMBlackboardPartionJob());

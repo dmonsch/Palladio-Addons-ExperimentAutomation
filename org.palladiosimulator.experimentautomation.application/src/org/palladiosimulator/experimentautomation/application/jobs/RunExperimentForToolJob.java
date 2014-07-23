@@ -39,8 +39,8 @@ public class RunExperimentForToolJob extends SequentialBlackboardInteractingJob<
      * @param toolConfiguration
      *            The given analysis tool, e.g., SimuCom.
      */
-    public RunExperimentForToolJob(ExperimentAutomationConfiguration configuration, Experiment experiment,
-            ToolConfiguration toolConfiguration) {
+    public RunExperimentForToolJob(final ExperimentAutomationConfiguration configuration, final Experiment experiment,
+            final ToolConfiguration toolConfiguration) {
         super(false);
 
         // Note: Calling recursive method
@@ -103,15 +103,15 @@ public class RunExperimentForToolJob extends SequentialBlackboardInteractingJob<
         ExperimentAutomationConfiguration clonedConfiguration = configuration.clone();
 
         // modify the copied PCM model according to the variation descriptions
-        StringBuilder appliedVariations = new StringBuilder();        
+        StringBuilder appliedVariations = new StringBuilder();
         for (int i = 0; i < variations.size(); i++) {
             final Variation variation = variations.get(i);
             final long currentValue = factorLevels.get(i);
             final IVariationStrategy variationStrategy = this.initialiseVariations(variation,
                     clonedConfiguration.getResourceSet()); // FIXME Modify in blackboard?
-            
+
             final String variationName = variationStrategy.vary(currentValue);
-            
+
             appliedVariations.append("VARIATION: ");
             appliedVariations.append(variationName);
             appliedVariations.append("\n");
@@ -121,8 +121,8 @@ public class RunExperimentForToolJob extends SequentialBlackboardInteractingJob<
         // repetition count)
         for (int repetition = 1; repetition <= experiment.getRepetitions(); repetition++) {
             final IToolAdapter analysisTool = AnalysisToolFactory.createToolAdapater(toolConfiguration);
-            final IJob runAnalysisJob = analysisTool.createRunAnalysisJob(experiment, toolConfiguration, factorLevels, appliedVariations.toString(), repetition, 
-                    this.getBlackboard());
+            final IJob runAnalysisJob = analysisTool.createRunAnalysisJob(experiment, toolConfiguration, factorLevels,
+                    appliedVariations.toString(), repetition, this.getBlackboard());
 
             this.add(runAnalysisJob);
         }
