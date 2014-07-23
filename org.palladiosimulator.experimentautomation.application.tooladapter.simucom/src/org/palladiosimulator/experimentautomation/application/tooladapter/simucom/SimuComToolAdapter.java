@@ -11,6 +11,7 @@ import org.palladiosimulator.experimentautomation.application.tooladapter.simuco
 import org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.SimucomtooladapterPackage;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
+import org.palladiosimulator.experimentautomation.experiments.Variation;
 
 import de.uka.ipd.sdq.codegen.simucontroller.runconfig.SimuComWorkflowConfiguration;
 import de.uka.ipd.sdq.codegen.simucontroller.workflow.jobs.SimuComJob;
@@ -27,7 +28,7 @@ public class SimuComToolAdapter implements IToolAdapter {
 
     @Override
     public SequentialBlackboardInteractingJob<MDSDBlackboard> createRunAnalysisJob(final Experiment experiment,
-            final ToolConfiguration toolConfig, final List<Long> factorLevels, final String appliedVariations,
+            final ToolConfiguration toolConfig, final List<Variation> variations, final List<Long> factorLevels,
             final int repetition, MDSDBlackboard blackboard) {
         final SimuComConfiguration simuComConfiguration = (SimuComConfiguration) toolConfig;
 
@@ -41,7 +42,7 @@ public class SimuComToolAdapter implements IToolAdapter {
 
         SequentialBlackboardInteractingJob<MDSDBlackboard> result = new SequentialBlackboardInteractingJob<MDSDBlackboard>();
         try {
-            result.add(new LogExperimentInformationJob(experiment, simuComConfig, appliedVariations, repetition));
+            result.add(new LogExperimentInformationJob(experiment, simuComConfig, variations, repetition));
             result.add(new SimuComJob(workflowConfig, null, false));
             result.add(new CleanUpRecorderJob(simuComConfiguration));
         } catch (CoreException e) {

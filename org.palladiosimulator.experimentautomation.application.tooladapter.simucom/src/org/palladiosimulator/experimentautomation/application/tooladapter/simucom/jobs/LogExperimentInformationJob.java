@@ -1,7 +1,10 @@
 package org.palladiosimulator.experimentautomation.application.tooladapter.simucom.jobs;
 
+import java.util.List;
+
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
+import org.palladiosimulator.experimentautomation.experiments.Variation;
 
 import de.uka.ipd.sdq.simucomframework.SimuComConfig;
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
@@ -15,14 +18,14 @@ public class LogExperimentInformationJob extends SequentialBlackboardInteracting
 
     final private Experiment experiment;
     final private SimuComConfig simuComConfig;
-    final private String appliedVariations;
+    final private List<Variation> variations;
     final private int repetition;
 
     public LogExperimentInformationJob(final Experiment experiment, final SimuComConfig simuComConfig,
-            final String appliedVariations, final int repetition) {
+            final List<Variation> variations, final int repetition) {
         this.experiment = experiment;
         this.simuComConfig = simuComConfig;
-        this.appliedVariations = appliedVariations;
+        this.variations = variations;
         this.repetition = repetition;
     }
 
@@ -41,7 +44,10 @@ public class LogExperimentInformationJob extends SequentialBlackboardInteracting
         stringBuilder.append(this.simuComConfig.getNameBase());
         stringBuilder.append("\"\n");
 
-        stringBuilder.append(this.appliedVariations);
+        for(Variation variation : this.variations) {
+            stringBuilder.append("VARIATION: ");
+            stringBuilder.append(variation.getName());
+        }       
 
         stringBuilder.append("REPETITION: ");
         stringBuilder.append(this.repetition);

@@ -17,7 +17,6 @@ import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 import org.palladiosimulator.experimentautomation.experiments.Variation;
 
-import de.uka.ipd.sdq.workflow.jobs.IJob;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 
@@ -121,10 +120,10 @@ public class RunExperimentForToolJob extends SequentialBlackboardInteractingJob<
         // repetition count)
         for (int repetition = 1; repetition <= experiment.getRepetitions(); repetition++) {
             final IToolAdapter analysisTool = AnalysisToolFactory.createToolAdapater(toolConfiguration);
-            final IJob runAnalysisJob = analysisTool.createRunAnalysisJob(experiment, toolConfiguration, factorLevels,
-                    appliedVariations.toString(), repetition, this.getBlackboard());
+//            final IJob runAnalysisJob = analysisTool.createRunAnalysisJob(experiment, toolConfiguration, factorLevels,
+//                    appliedVariations.toString(), repetition, this.getBlackboard());
 
-            this.add(runAnalysisJob);
+//            this.add(runAnalysisJob);
         }
     }
 

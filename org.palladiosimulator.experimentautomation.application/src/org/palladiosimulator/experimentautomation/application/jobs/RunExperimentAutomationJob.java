@@ -1,6 +1,5 @@
 package org.palladiosimulator.experimentautomation.application.jobs;
 
-import org.palladiosimulator.experimentautomation.application.config.ExperimentAutomationConfiguration;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 
@@ -18,16 +17,14 @@ public class RunExperimentAutomationJob extends SequentialBlackboardInteractingJ
     /**
      * Default Constructor.
      * 
-     * @param configuration
-     *            Configuration of the experiment.
      * @param experiment
      *            The experiment to be conducted.
      */
-    public RunExperimentAutomationJob(final ExperimentAutomationConfiguration configuration, final Experiment experiment) {
+    public RunExperimentAutomationJob(final Experiment experiment) {
         super(false);
 
         for (final ToolConfiguration toolConfiguration : experiment.getToolConfiguration()) {
-            this.add(new RunExperimentForToolJob(configuration, experiment, toolConfiguration));
+            this.add(new ComputeVariantsAndAddExperimentJob(experiment, toolConfiguration, experiment.getVariations()));
         }
     }
 }

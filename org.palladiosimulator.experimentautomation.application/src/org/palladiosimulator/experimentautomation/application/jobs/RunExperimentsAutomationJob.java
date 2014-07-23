@@ -27,7 +27,7 @@ public class RunExperimentsAutomationJob extends SequentialBlackboardInteracting
         this.add(new PreparePCMBlackboardPartionJob());
         for (final Experiment experiment : configuration.getFilteredExperiments()) {
             this.add(new LoadPCMModelsForExperimentAutomationJob(experiment.getInitialModel()));
-            this.add(new RunExperimentAutomationJob(configuration, experiment));
+            this.add(new RunExperimentAutomationJob(experiment));
         }
     }
 
