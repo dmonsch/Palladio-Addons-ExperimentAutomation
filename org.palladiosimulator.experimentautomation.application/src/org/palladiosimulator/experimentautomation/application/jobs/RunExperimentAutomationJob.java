@@ -13,7 +13,7 @@ import de.uka.ipd.sdq.workflow.pcm.jobs.PreparePCMBlackboardPartionJob;
  * 
  * @author Sebastian Lehrig
  */
-public class RunEachExperimentJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
+public class RunExperimentAutomationJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
 
     /**
      * Default Constructor.
@@ -21,7 +21,7 @@ public class RunEachExperimentJob extends SequentialBlackboardInteractingJob<MDS
      * @param configuration
      *            Configuration of the experiment.
      */
-    public RunEachExperimentJob(final ExperimentAutomationConfiguration configuration) {
+    public RunExperimentAutomationJob(final ExperimentAutomationConfiguration configuration) {
         super(false);
 
         this.add(new PreparePCMBlackboardPartionJob());
