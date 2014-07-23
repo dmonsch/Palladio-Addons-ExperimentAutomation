@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.osgi.framework.Bundle;
+import org.palladiosimulator.commons.emfutils.EMFCopyHelper;
+
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentRepository;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
@@ -37,6 +39,14 @@ public class ExperimentAutomationConfiguration {
         this.filteredExperimentIDs = filteredExperimentIDs;
     }
 
+    private ExperimentAutomationConfiguration(final ResourceSet resourceSet, final ExperimentRepository experimentRepository,
+            final VariationRepository variations, final List<String> filteredExperimentIDs) {
+        this.resourceSet = resourceSet;
+        this.experimentRepository = experimentRepository;
+        this.variations = variations;
+        this.filteredExperimentIDs = filteredExperimentIDs;
+    }
+
     public ExperimentRepository getExperiments() {
         return this.experimentRepository;
     }
@@ -47,6 +57,13 @@ public class ExperimentAutomationConfiguration {
     
     public ResourceSet getResourceSet() {
         return this.resourceSet;
+    }
+
+    @Override
+    public ExperimentAutomationConfiguration clone() {
+        final List<EObject> copy = EMFCopyHelper.deepCopyToEObjectList(this.resourceSet);
+        return new ExperimentAutomationConfiguration(this.resourceSet, (ExperimentRepository) copy.get(0),
+                (VariationRepository) copy.get(1), this.filteredExperimentIDs);
     }
 
     private static <T extends EClass> EObject loadResourceFromBundle(final ResourceSet resourceSet,

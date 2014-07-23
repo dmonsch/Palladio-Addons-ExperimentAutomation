@@ -1,8 +1,6 @@
 package org.palladiosimulator.experimentautomation.application.jobs;
 
-import java.util.List;
-
-import org.eclipse.core.runtime.IPath;
+import org.palladiosimulator.experimentautomation.application.config.ExperimentAutomationConfiguration;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
 
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
@@ -23,15 +21,11 @@ public class RunExperimentAutomationJob extends SequentialBlackboardInteractingJ
      * @param configuration
      *            Configuration of the experiment.
      */
-    public RunExperimentAutomationJob(final IPath experimentRepositoryPath, final IPath variationRepositoryPath,
-            final List<Experiment> experiments) {
+    public RunExperimentAutomationJob(final ExperimentAutomationConfiguration configuration) {
         super(false);
 
-        this.add(new PrepareExperimentAutomationBlackboardPartionJob());
-        this.add(new LoadExperimentAutomationModelsJob(experimentRepositoryPath, variationRepositoryPath));
-        
         this.add(new PreparePCMBlackboardPartionJob());
-        for (final Experiment experiment : experiments) {
+        for (final Experiment experiment : configuration.getFilteredExperiments()) {
             this.add(new LoadPCMModelsForExperimentAutomationJob(experiment.getInitialModel()));
             this.add(new RunExperimentForEachToolJob(experiment));
         }

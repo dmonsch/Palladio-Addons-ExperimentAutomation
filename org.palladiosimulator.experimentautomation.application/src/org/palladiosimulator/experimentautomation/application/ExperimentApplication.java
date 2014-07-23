@@ -65,8 +65,7 @@ public class ExperimentApplication implements IApplication {
         // run experiments via blackboard-based workflow
         final MDSDBlackboard blackboard = new MDSDBlackboard();
         final BlackboardBasedWorkflow<MDSDBlackboard> workflow = new BlackboardBasedWorkflow<MDSDBlackboard>(
-                new RunExperimentAutomationJob(experimentsLocation, variationsLocation, config.getFilteredExperiments()),
-                blackboard);
+                new RunExperimentAutomationJob(config), blackboard);
         workflow.run();
 
         return IApplication.EXIT_OK;
