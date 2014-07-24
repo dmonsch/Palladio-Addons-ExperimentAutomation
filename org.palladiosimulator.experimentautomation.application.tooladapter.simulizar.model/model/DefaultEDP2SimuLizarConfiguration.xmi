@@ -6,9 +6,9 @@
     xmlns:ExperimentAutomation.Experiments.AbstractSimulation="http://palladiosimulator.org/ExperimentAutomation/AbstractSimulation/1.0"
     xmlns:simulizartooladapter="http://palladiosimulator.org/ExperimentAutomation/ToolAdapter/SimuLizar/1.0"    
     xsi:schemaLocation="http://palladiosimulator.org/ExperimentAutomation/AbstractSimulation/1.0 ../../../plugin/org.palladiosimulator.experimentautomation/model/experimentautomation.ecore#//abstractsimulation http://palladiosimulator.org/ExperimentAutomation/ToolAdapter/SimuLizar/1.0 simulizartooladapter.ecore"
-    name="Default SensorFramework SimuLizar Configuration">
+    name="Default EDP2 SimuLizar Configuration">
   <persistenceFramework
-      xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:SensorFramework">
+      xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:EDP2">
     <datasource
         xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:FileDatasource"
         location="C:/data/experimentAutomation"/>
