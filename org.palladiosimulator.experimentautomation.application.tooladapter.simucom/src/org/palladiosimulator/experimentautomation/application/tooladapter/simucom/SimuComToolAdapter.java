@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.CoreException;
+import org.palladiosimulator.experimentautomation.application.jobs.CleanUpRecorderJob;
+import org.palladiosimulator.experimentautomation.application.jobs.LogExperimentInformationJob;
 import org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter;
-import org.palladiosimulator.experimentautomation.application.tooladapter.simucom.jobs.CleanUpRecorderJob;
-import org.palladiosimulator.experimentautomation.application.tooladapter.simucom.jobs.LogExperimentInformationJob;
 import org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.SimuComConfiguration;
 import org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.SimucomtooladapterPackage;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
@@ -44,7 +44,7 @@ public class SimuComToolAdapter implements IToolAdapter {
         try {
             result.add(new LogExperimentInformationJob(experiment, simuComConfig, variations, factorLevels, repetition));
             result.add(new SimuComJob(workflowConfig, null, false));
-            result.add(new CleanUpRecorderJob(simuComConfiguration));
+            result.add(new CleanUpRecorderJob(simuComConfiguration.getPersistenceFramework()));
         } catch (CoreException e) {
             LOGGER.error("SimuCom execution failed: " + e);
         }

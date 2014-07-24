@@ -1,4 +1,4 @@
-package org.palladiosimulator.experimentautomation.application.tooladapter.simucom.jobs;
+package org.palladiosimulator.experimentautomation.application.jobs;
 
 import java.util.List;
 

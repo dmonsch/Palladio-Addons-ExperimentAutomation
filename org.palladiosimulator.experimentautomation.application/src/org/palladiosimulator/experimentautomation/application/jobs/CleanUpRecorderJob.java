@@ -1,4 +1,4 @@
-package org.palladiosimulator.experimentautomation.application.tooladapter.simucom.jobs;
+package org.palladiosimulator.experimentautomation.application.jobs;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
@@ -6,7 +6,6 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.Datasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.PersistenceFramework;
 import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework;
 import org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.sensorframework.SensorFrameworkFactory;
-import org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.SimuComConfiguration;
 
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
@@ -15,22 +14,20 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 
 public class CleanUpRecorderJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
 
-    final private SimuComConfiguration simuComConfiguration;
+    final private PersistenceFramework persistenceFramework;
 
-    public CleanUpRecorderJob(final SimuComConfiguration simuComConfiguration) {
-        this.simuComConfiguration = simuComConfiguration;
+    public CleanUpRecorderJob(final PersistenceFramework persistenceFramework) {
+        this.persistenceFramework = persistenceFramework;
     }
 
     @Override
     public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
-        final PersistenceFramework persistenceFramework = this.simuComConfiguration.getPersistenceFramework();
-
-        if (AbstractsimulationPackage.eINSTANCE.getSensorFramework().isInstance(persistenceFramework)) {
-            final SensorFramework sensorFramework = (SensorFramework) persistenceFramework;
+        if (AbstractsimulationPackage.eINSTANCE.getSensorFramework().isInstance(this.persistenceFramework)) {
+            final SensorFramework sensorFramework = (SensorFramework) this.persistenceFramework;
             final Datasource datasource = sensorFramework.getDatasource();
 
             SensorFrameworkFactory.closeDatasource(datasource);
-        } else if (AbstractsimulationPackage.eINSTANCE.getEDP2().isInstance(persistenceFramework)) {
+        } else if (AbstractsimulationPackage.eINSTANCE.getEDP2().isInstance(this.persistenceFramework)) {
             // For EDP2, nothing to do!
         } else {
             throw new IllegalArgumentException("Tried to clean up unknown persistency framework");
