@@ -13,7 +13,7 @@ public interface IToolAdapter {
 
     public SequentialBlackboardInteractingJob<MDSDBlackboard> createRunAnalysisJob(final Experiment experiment,
             final ToolConfiguration toolConfiguration, final List<Variation> variations, final List<Long> factorLevels,
-            final int repetition, final MDSDBlackboard blackboard);
+            final int repetition);
 
     public boolean hasSupportFor(final ToolConfiguration toolConfiguration);
 

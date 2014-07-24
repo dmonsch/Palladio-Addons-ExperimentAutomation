@@ -17,8 +17,8 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.ResourceSetPartition;
 import de.uka.ipd.sdq.workflow.pcm.jobs.LoadPCMModelsIntoBlackboardJob;
 
 /**
- * This job conducts a given experiment for a given analysis tool. The job assumes that involved
- * models are already loaded to the blackboard.
+ * This job varies the PCM models located in the MDSDBlackboard according to the given variations
+ * and factor levels.
  * 
  * @author Sebastian Lehrig
  */
@@ -58,7 +58,7 @@ public class VaryJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> 
                 LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID);
         final EObject variedObject = EcoreHelper.findModelElementById(pcmPartition.getResourceSet(),
                 variation.getVariedObjectId());
-        
+
         if (variedObject == null) {
             throw new RuntimeException("Unable to find model element with ID " + variation.getVariedObjectId()
                     + " in resource set");

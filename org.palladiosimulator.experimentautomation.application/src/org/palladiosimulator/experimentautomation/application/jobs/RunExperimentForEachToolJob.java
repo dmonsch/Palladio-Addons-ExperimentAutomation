@@ -24,7 +24,7 @@ public class RunExperimentForEachToolJob extends SequentialBlackboardInteracting
         super(false);
 
         for (final ToolConfiguration toolConfiguration : experiment.getToolConfiguration()) {
-            this.add(new ComputeVariantsAndAddExperimentJob(experiment, toolConfiguration, experiment.getVariations()));
+            this.add(new ComputeVariantsAndAddExperimentJob(experiment, toolConfiguration));
         }
     }
 }

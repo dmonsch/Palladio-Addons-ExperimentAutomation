@@ -23,16 +23,17 @@ public class ComputeVariantsAndAddExperimentJob extends SequentialBlackboardInte
     /**
      * Default Constructor.
      * 
-     * @param variations
-     *            The the variations to be considered.
+     * @param experiment
+     *            The experiment to be conducted.
+     * @param toolConfiguration
+     *            The given analysis tool, e.g., SimuCom.
      */
-    public ComputeVariantsAndAddExperimentJob(final Experiment experiment, final ToolConfiguration toolConfiguration,
-            final List<Variation> variations) {
+    public ComputeVariantsAndAddExperimentJob(final Experiment experiment, final ToolConfiguration toolConfiguration) {
         super(false);
 
         // Note: Calling recursive method
-        this.computeVariantsAndAddJob(experiment, toolConfiguration, variations, new ArrayList<Variation>(),
-                new ArrayList<Long>());
+        this.computeVariantsAndAddJob(experiment, toolConfiguration, experiment.getVariations(),
+                new ArrayList<Variation>(), new ArrayList<Long>());
     }
 
     /**
@@ -49,10 +50,10 @@ public class ComputeVariantsAndAddExperimentJob extends SequentialBlackboardInte
         if (variations.isEmpty()) {
             final List<Variation> variantsCopy = new ArrayList<Variation>();
             variantsCopy.addAll(variants);
-            
+
             final List<Long> factorsCopy = new ArrayList<Long>();
             factorsCopy.addAll(currentFactorLevels);
-            
+
             this.add(new VaryJob(variantsCopy, factorsCopy));
             this.add(new RepeatExperimentJob(experiment, toolConfiguration, variantsCopy, factorsCopy));
         } else {

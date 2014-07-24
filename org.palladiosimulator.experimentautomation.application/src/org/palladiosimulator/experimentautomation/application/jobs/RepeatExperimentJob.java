@@ -23,6 +23,10 @@ public class RepeatExperimentJob extends SequentialBlackboardInteractingJob<MDSD
      *            The experiment to be conducted.
      * @param toolConfiguration
      *            The given analysis tool, e.g., SimuCom.
+     * @param variations
+     *            Variations considered for the experiment.
+     * @param factorLevels
+     *            Factor levels considered for the experiment.
      */
     public RepeatExperimentJob(final Experiment experiment, final ToolConfiguration toolConfiguration,
             final List<Variation> variations, final List<Long> factorLevels) {

@@ -29,7 +29,7 @@ public class SimuComToolAdapter implements IToolAdapter {
     @Override
     public SequentialBlackboardInteractingJob<MDSDBlackboard> createRunAnalysisJob(final Experiment experiment,
             final ToolConfiguration toolConfig, final List<Variation> variations, final List<Long> factorLevels,
-            final int repetition, MDSDBlackboard blackboard) {
+            final int repetition) {
         final SimuComConfiguration simuComConfiguration = (SimuComConfiguration) toolConfig;
 
         // create simulation configuration
