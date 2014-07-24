@@ -8,11 +8,12 @@ import org.palladiosimulator.experimentautomation.application.tooladapter.IToolA
 import org.palladiosimulator.experimentautomation.application.tooladapter.simulizar.model.SimuLizarConfiguration;
 import org.palladiosimulator.experimentautomation.application.tooladapter.simulizar.model.SimulizartooladapterPackage;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
+import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 import org.palladiosimulator.experimentautomation.experiments.Variation;
 import org.palladiosimulator.simulizar.launcher.jobs.PCMStartInterpretationJob;
+import org.palladiosimulator.simulizar.runconfig.SimuLizarWorkflowConfiguration;
 
-import de.uka.ipd.sdq.codegen.simucontroller.runconfig.SimuComWorkflowConfiguration;
 import de.uka.ipd.sdq.simucomframework.SimuComConfig;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
@@ -33,9 +34,23 @@ public class SimuLizarToolAdapter implements IToolAdapter {
                 factorLevels, repetition);
 
         // create workflow configuration
-        final SimuComWorkflowConfiguration workflowConfig = SimuComWorkflowConfigurationFactory
+        final SimuLizarWorkflowConfiguration workflowConfig = SimuLizarWorkflowConfigurationFactory
                 .createWorkflowConfiguration(simuLizarConfiguration, simucomConfig);
 
+//        final PMSModel pmsModel = experiment.getInitialModel().getPlatformMonitoringSpecification();
+//        if(pmsModel == null) {
+//            workflowConfig.setPmsFile("");
+//        } else {
+//            workflowConfig.setPmsFile(pmsModel.eResource().getURI().toString());
+//        }
+        
+        final ReconfigurationRulesFolder reconfigurationRulesFolder = experiment.getInitialModel().getReconfigurationRules();
+        if(reconfigurationRulesFolder == null) {
+            workflowConfig.setReconfigurationRulesFolder("");
+        } else {
+            workflowConfig.setReconfigurationRulesFolder(reconfigurationRulesFolder.getFolderUri());
+        }
+        
         SequentialBlackboardInteractingJob<MDSDBlackboard> result = new SequentialBlackboardInteractingJob<MDSDBlackboard>();
         result.addJob(new LogExperimentInformationJob(experiment, simucomConfig, variations, factorLevels,
                 repetition));            

@@ -5,16 +5,16 @@ import java.util.Map;
 
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
 import org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.AbstractSimulationWorkflowConfigurationFactory;
+import org.palladiosimulator.simulizar.runconfig.SimuLizarWorkflowConfiguration;
 
-import de.uka.ipd.sdq.codegen.simucontroller.runconfig.SimuComWorkflowConfiguration;
 import de.uka.ipd.sdq.simucomframework.SimuComConfig;
 
-public class SimuComWorkflowConfigurationFactory {
+public class SimuLizarWorkflowConfigurationFactory {
 
-    public static SimuComWorkflowConfiguration createWorkflowConfiguration(
+    public static SimuLizarWorkflowConfiguration createWorkflowConfiguration(
             final AbstractSimulationConfiguration configuration, final SimuComConfig simConfig) {
         final Map<String, Object> attributesMap = new HashMap<String, Object>();
-        final SimuComWorkflowConfiguration workflowConfig = new SimuComWorkflowConfiguration(attributesMap);
+        final SimuLizarWorkflowConfiguration workflowConfig = new SimuLizarWorkflowConfiguration(attributesMap);
 
         workflowConfig.setSimulateFailures(configuration.isSimulateFailures());
         workflowConfig.setSimulateLinkingResources(configuration.isSimulateLinkingResources());
