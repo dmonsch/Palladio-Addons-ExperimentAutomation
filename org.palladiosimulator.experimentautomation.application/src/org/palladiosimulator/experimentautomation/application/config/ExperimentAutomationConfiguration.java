@@ -20,13 +20,12 @@ public class ExperimentAutomationConfiguration {
 
     private static final Logger LOGGER = Logger.getLogger(ExperimentAutomationConfiguration.class);
 
-    private final ResourceSet resourceSet;
     private final ExperimentRepository experimentRepository;
     private final List<String> filteredExperimentIDs;
 
-    public ExperimentAutomationConfiguration(final Bundle bundle, final IPath experimentsLocation, final IPath variationsLocation,
+    public ExperimentAutomationConfiguration(final Bundle bundle, final IPath experimentsLocation,
             final List<String> filteredExperimentIDs) {
-        this.resourceSet = new ResourceSetImpl();
+        final ResourceSet resourceSet = new ResourceSetImpl();
         this.experimentRepository = (ExperimentRepository) loadResourceFromBundle(resourceSet, bundle,
                 experimentsLocation, ExperimentsPackage.eINSTANCE.getExperimentRepository());
         this.filteredExperimentIDs = filteredExperimentIDs;
@@ -47,7 +46,7 @@ public class ExperimentAutomationConfiguration {
                     + expectedType.getName());
         }
     }
-    
+
     public List<Experiment> getFilteredExperiments() {
         final List<Experiment> experiments;
         if (filteredExperimentIDs.isEmpty()) {

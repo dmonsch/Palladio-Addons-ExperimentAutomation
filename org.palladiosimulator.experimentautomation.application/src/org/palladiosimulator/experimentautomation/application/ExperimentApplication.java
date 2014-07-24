@@ -17,16 +17,18 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
  * Main entry point to the experiment automation application. By implementing the
  * {@link IApplication} interface, this class can serve as a stand-alone application.
  * 
- * In the field "Program arguments", provide two additional arguments as shown in the example:
+ * In the field "Program arguments", provide an additional argument as shown in this example:
  * <code>-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl}
- * -consoleLog D:\models\my.experiments D:\models\pcm.variation</code>
+ * -consoleLog D:\models\my.experiments</code>
  * 
- * The first argument is the path to your configuration model (.experiments extension). The second
- * argument is the path to the predefined pcm.variation file.
+ * This argument is the path to your configuration model (.experiments extension).
  * 
- * An optional third argument allows to list experiment IDs (separated by ";"). This list serves as
+ * An optional second argument allows to list experiment IDs (separated by ";"). This list serves as
  * a filter; only listed experiments are conducted (instead of all experiments of the experiment
  * repository).
+ * 
+ * Once the experiments are finished, you will find all data in the recorder (e.g., EDP2 or
+ * SensorFramework) you configured.
  * 
  * @author Merkle, Sebastian Lehrig
  */
@@ -41,15 +43,15 @@ public class ExperimentApplication implements IApplication {
         final String[] args = (String[]) context.getArguments().get("application.args");
 
         // check arguments
-        if (args.length < 2) {
+        if (args.length < 1) {
             System.out.println("The mandatory parameters have not been specified.");
             return IApplication.EXIT_OK;
         }
 
         // prepare experiment list, if parameter has been specified
         final List<String> experimentIds = new ArrayList<String>();
-        if (args.length >= 3) {
-            final String[] ids = args[2].split(";");
+        if (args.length >= 2) {
+            final String[] ids = args[1].split(";");
             for (final String id : ids) {
                 experimentIds.add(id);
             }
@@ -58,9 +60,8 @@ public class ExperimentApplication implements IApplication {
         // load configuration
         final Bundle bundle = Activator.getDefault().getBundle();
         final Path experimentsLocation = new Path(args[0]);
-        final Path variationsLocation = new Path(args[1]);
         final ExperimentAutomationConfiguration config = new ExperimentAutomationConfiguration(bundle,
-                experimentsLocation, variationsLocation, experimentIds);
+                experimentsLocation, experimentIds);
 
         // run experiments via blackboard-based workflow
         final MDSDBlackboard blackboard = new MDSDBlackboard();
