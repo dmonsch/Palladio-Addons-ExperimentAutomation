@@ -55,18 +55,20 @@ public class ExperimentApplication implements IApplication {
             return IApplication.EXIT_OK;
         }
 
-        // prepare experiment list, if parameter has been specified
-        final List<String> experimentIds = new ArrayList<String>();
+        // get location of experiments file
+        final Path experimentsLocation = new Path(args[0]);
+
+        // prepare filtered experiment list, if parameter has been specified
+        final List<String> filteredExperimentIDs = new ArrayList<String>();
         if (args.length >= 2) {
             final String[] ids = args[1].split(";");
             for (final String id : ids) {
-                experimentIds.add(id);
+                filteredExperimentIDs.add(id);
             }
         }
 
-        // load experiments repository
-        final Path experimentsLocation = new Path(args[0]);
-        final List<Experiment> experiments = getExperiments(experimentsLocation, experimentIds);
+        // load experiments
+        final List<Experiment> experiments = getExperiments(experimentsLocation, filteredExperimentIDs);
 
         // run experiments via blackboard-based workflow
         final MDSDBlackboard blackboard = new MDSDBlackboard();
