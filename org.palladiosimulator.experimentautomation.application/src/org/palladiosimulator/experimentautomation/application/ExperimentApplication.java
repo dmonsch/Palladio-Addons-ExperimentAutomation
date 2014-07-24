@@ -3,12 +3,19 @@ package org.palladiosimulator.experimentautomation.application;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.equinox.app.IApplication;
 import org.eclipse.equinox.app.IApplicationContext;
 import org.osgi.framework.Bundle;
-import org.palladiosimulator.experimentautomation.application.config.ExperimentAutomationConfiguration;
 import org.palladiosimulator.experimentautomation.application.jobs.RunExperimentAutomationJob;
+import org.palladiosimulator.experimentautomation.application.utils.EcoreHelper;
+import org.palladiosimulator.experimentautomation.experiments.Experiment;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentRepository;
+import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 
 import de.uka.ipd.sdq.workflow.BlackboardBasedWorkflow;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
@@ -57,19 +64,45 @@ public class ExperimentApplication implements IApplication {
             }
         }
 
-        // load configuration
-        final Bundle bundle = Activator.getDefault().getBundle();
+        // load experiments repository
         final Path experimentsLocation = new Path(args[0]);
-        final ExperimentAutomationConfiguration config = new ExperimentAutomationConfiguration(bundle,
-                experimentsLocation, experimentIds);
+        final List<Experiment> experiments = getExperiments(experimentsLocation, experimentIds);
 
         // run experiments via blackboard-based workflow
         final MDSDBlackboard blackboard = new MDSDBlackboard();
         final BlackboardBasedWorkflow<MDSDBlackboard> workflow = new BlackboardBasedWorkflow<MDSDBlackboard>(
-                new RunExperimentAutomationJob(config.getFilteredExperiments()), blackboard);
+                new RunExperimentAutomationJob(experiments), blackboard);
         workflow.run();
 
         return IApplication.EXIT_OK;
+    }
+
+    private static List<Experiment> getExperiments(final IPath experimentsLocation,
+            final List<String> filteredExperimentIDs) {
+        final Bundle bundle = Activator.getDefault().getBundle();
+        final ResourceSet resourceSet = new ResourceSetImpl();
+        final EClass expectedType = ExperimentsPackage.eINSTANCE.getExperimentRepository();
+        final ExperimentRepository experimentRepository = (ExperimentRepository) EcoreHelper.loadResourceFromBundle(
+                resourceSet, bundle, experimentsLocation, expectedType);
+
+        final List<Experiment> experiments;
+        if (filteredExperimentIDs == null || filteredExperimentIDs.isEmpty()) {
+            // experiments as in config
+            experiments = experimentRepository.getExperiments();
+        } else {
+            // filter experiment list
+            experiments = new ArrayList<Experiment>();
+            for (final Experiment e : experimentRepository.getExperiments()) {
+                for (final String id : filteredExperimentIDs) {
+                    if (e.getId().equalsIgnoreCase(id)) {
+                        experiments.add(e);
+                        break;
+                    }
+                }
+            }
+        }
+
+        return experiments;
     }
 
     /**
