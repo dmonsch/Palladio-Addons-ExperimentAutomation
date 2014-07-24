@@ -48,7 +48,7 @@ public class SimucomtooladapterSwitch<T> extends Switch<T> {
      * @generated
      */
     @Override
-    protected boolean isSwitchFor(EPackage ePackage) {
+    protected boolean isSwitchFor(final EPackage ePackage) {
         return ePackage == modelPackage;
     }
 
@@ -60,21 +60,24 @@ public class SimucomtooladapterSwitch<T> extends Switch<T> {
      * @generated
      */
     @Override
-    protected T doSwitch(int classifierID, EObject theEObject) {
+    protected T doSwitch(final int classifierID, final EObject theEObject) {
         switch (classifierID) {
         case SimucomtooladapterPackage.SIMU_COM_CONFIGURATION: {
-            SimuComConfiguration simuComConfiguration = (SimuComConfiguration) theEObject;
-            T result = caseSimuComConfiguration(simuComConfiguration);
-            if (result == null)
-                result = caseAbstractSimulationConfiguration(simuComConfiguration);
-            if (result == null)
-                result = caseToolConfiguration(simuComConfiguration);
-            if (result == null)
-                result = defaultCase(theEObject);
+            final SimuComConfiguration simuComConfiguration = (SimuComConfiguration) theEObject;
+            T result = this.caseSimuComConfiguration(simuComConfiguration);
+            if (result == null) {
+                result = this.caseAbstractSimulationConfiguration(simuComConfiguration);
+            }
+            if (result == null) {
+                result = this.caseToolConfiguration(simuComConfiguration);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
             return result;
         }
         default:
-            return defaultCase(theEObject);
+            return this.defaultCase(theEObject);
         }
     }
 
@@ -90,7 +93,7 @@ public class SimucomtooladapterSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseSimuComConfiguration(SimuComConfiguration object) {
+    public T caseSimuComConfiguration(final SimuComConfiguration object) {
         return null;
     }
 
@@ -106,7 +109,7 @@ public class SimucomtooladapterSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseToolConfiguration(ToolConfiguration object) {
+    public T caseToolConfiguration(final ToolConfiguration object) {
         return null;
     }
 
@@ -122,7 +125,7 @@ public class SimucomtooladapterSwitch<T> extends Switch<T> {
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseAbstractSimulationConfiguration(AbstractSimulationConfiguration object) {
+    public T caseAbstractSimulationConfiguration(final AbstractSimulationConfiguration object) {
         return null;
     }
 
@@ -130,7 +133,7 @@ public class SimucomtooladapterSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>EObject</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch, but this is the last case anyway. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>EObject</em>'.
@@ -138,7 +141,7 @@ public class SimucomtooladapterSwitch<T> extends Switch<T> {
      * @generated
      */
     @Override
-    public T defaultCase(EObject object) {
+    public T defaultCase(final EObject object) {
         return null;
     }
 

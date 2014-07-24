@@ -53,7 +53,7 @@ public class SimucomtooladapterPackageImpl extends EPackageImpl implements Simuc
     /**
      * Creates, registers, and initializes the <b>Package</b> for this model, and for any others
      * upon which it depends.
-     * 
+     *
      * <p>
      * This method is used to initialize {@link SimucomtooladapterPackage#eINSTANCE} when that field
      * is accessed. Clients should not invoke it directly. Instead, they should simply access that
@@ -65,14 +65,15 @@ public class SimucomtooladapterPackageImpl extends EPackageImpl implements Simuc
      * @generated
      */
     public static SimucomtooladapterPackage init() {
-        if (isInited)
+        if (isInited) {
             return (SimucomtooladapterPackage) EPackage.Registry.INSTANCE
                     .getEPackage(SimucomtooladapterPackage.eNS_URI);
+        }
 
         // Obtain or create and register package
-        SimucomtooladapterPackageImpl theSimucomtooladapterPackage = (SimucomtooladapterPackageImpl) (EPackage.Registry.INSTANCE
+        final SimucomtooladapterPackageImpl theSimucomtooladapterPackage = (SimucomtooladapterPackageImpl) (EPackage.Registry.INSTANCE
                 .get(eNS_URI) instanceof SimucomtooladapterPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
-                : new SimucomtooladapterPackageImpl());
+                        : new SimucomtooladapterPackageImpl());
 
         isInited = true;
 
@@ -100,8 +101,9 @@ public class SimucomtooladapterPackageImpl extends EPackageImpl implements Simuc
      * 
      * @generated
      */
+    @Override
     public EClass getSimuComConfiguration() {
-        return simuComConfigurationEClass;
+        return this.simuComConfigurationEClass;
     }
 
     /**
@@ -109,8 +111,9 @@ public class SimucomtooladapterPackageImpl extends EPackageImpl implements Simuc
      * 
      * @generated
      */
+    @Override
     public SimucomtooladapterFactory getSimucomtooladapterFactory() {
-        return (SimucomtooladapterFactory) getEFactoryInstance();
+        return (SimucomtooladapterFactory) this.getEFactoryInstance();
     }
 
     /**
@@ -127,12 +130,13 @@ public class SimucomtooladapterPackageImpl extends EPackageImpl implements Simuc
      * @generated
      */
     public void createPackageContents() {
-        if (isCreated)
+        if (this.isCreated) {
             return;
-        isCreated = true;
+        }
+        this.isCreated = true;
 
         // Create classes and their features
-        simuComConfigurationEClass = createEClass(SIMU_COM_CONFIGURATION);
+        this.simuComConfigurationEClass = this.createEClass(SIMU_COM_CONFIGURATION);
     }
 
     /**
@@ -149,17 +153,18 @@ public class SimucomtooladapterPackageImpl extends EPackageImpl implements Simuc
      * @generated
      */
     public void initializePackageContents() {
-        if (isInitialized)
+        if (this.isInitialized) {
             return;
-        isInitialized = true;
+        }
+        this.isInitialized = true;
 
         // Initialize package
-        setName(eNAME);
-        setNsPrefix(eNS_PREFIX);
-        setNsURI(eNS_URI);
+        this.setName(eNAME);
+        this.setNsPrefix(eNS_PREFIX);
+        this.setNsURI(eNS_URI);
 
         // Obtain other dependent packages
-        AbstractsimulationPackage theAbstractsimulationPackage = (AbstractsimulationPackage) EPackage.Registry.INSTANCE
+        final AbstractsimulationPackage theAbstractsimulationPackage = (AbstractsimulationPackage) EPackage.Registry.INSTANCE
                 .getEPackage(AbstractsimulationPackage.eNS_URI);
 
         // Create type parameters
@@ -167,15 +172,15 @@ public class SimucomtooladapterPackageImpl extends EPackageImpl implements Simuc
         // Set bounds for type parameters
 
         // Add supertypes to classes
-        simuComConfigurationEClass.getESuperTypes().add(
+        this.simuComConfigurationEClass.getESuperTypes().add(
                 theAbstractsimulationPackage.getAbstractSimulationConfiguration());
 
         // Initialize classes and features; add operations and parameters
-        initEClass(simuComConfigurationEClass, SimuComConfiguration.class, "SimuComConfiguration", !IS_ABSTRACT,
-                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEClass(this.simuComConfigurationEClass, SimuComConfiguration.class, "SimuComConfiguration",
+                !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         // Create resource
-        createResource(eNS_URI);
+        this.createResource(eNS_URI);
     }
 
 } // SimucomtooladapterPackageImpl

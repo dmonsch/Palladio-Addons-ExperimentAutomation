@@ -30,8 +30,8 @@ public class SimucomtooladapterResourceFactoryImpl extends ResourceFactoryImpl {
      * @generated
      */
     @Override
-    public Resource createResource(URI uri) {
-        XMLResource result = new SimucomtooladapterResourceImpl(uri);
+    public Resource createResource(final URI uri) {
+        final XMLResource result = new SimucomtooladapterResourceImpl(uri);
         result.getDefaultSaveOptions().put(XMLResource.OPTION_EXTENDED_META_DATA, Boolean.TRUE);
         result.getDefaultLoadOptions().put(XMLResource.OPTION_EXTENDED_META_DATA, Boolean.TRUE);
 

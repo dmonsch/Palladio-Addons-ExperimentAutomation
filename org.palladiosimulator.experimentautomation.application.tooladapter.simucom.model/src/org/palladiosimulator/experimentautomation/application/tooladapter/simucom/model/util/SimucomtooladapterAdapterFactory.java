@@ -46,7 +46,7 @@ public class SimucomtooladapterAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     @Override
-    public boolean isFactoryForType(Object object) {
+    public boolean isFactoryForType(final Object object) {
         if (object == modelPackage) {
             return true;
         }
@@ -64,23 +64,23 @@ public class SimucomtooladapterAdapterFactory extends AdapterFactoryImpl {
      */
     protected SimucomtooladapterSwitch<Adapter> modelSwitch = new SimucomtooladapterSwitch<Adapter>() {
         @Override
-        public Adapter caseSimuComConfiguration(SimuComConfiguration object) {
-            return createSimuComConfigurationAdapter();
+        public Adapter caseSimuComConfiguration(final SimuComConfiguration object) {
+            return SimucomtooladapterAdapterFactory.this.createSimuComConfigurationAdapter();
         }
 
         @Override
-        public Adapter caseToolConfiguration(ToolConfiguration object) {
-            return createToolConfigurationAdapter();
+        public Adapter caseToolConfiguration(final ToolConfiguration object) {
+            return SimucomtooladapterAdapterFactory.this.createToolConfigurationAdapter();
         }
 
         @Override
-        public Adapter caseAbstractSimulationConfiguration(AbstractSimulationConfiguration object) {
-            return createAbstractSimulationConfigurationAdapter();
+        public Adapter caseAbstractSimulationConfiguration(final AbstractSimulationConfiguration object) {
+            return SimucomtooladapterAdapterFactory.this.createAbstractSimulationConfigurationAdapter();
         }
 
         @Override
-        public Adapter defaultCase(EObject object) {
-            return createEObjectAdapter();
+        public Adapter defaultCase(final EObject object) {
+            return SimucomtooladapterAdapterFactory.this.createEObjectAdapter();
         }
     };
 
@@ -93,8 +93,8 @@ public class SimucomtooladapterAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     @Override
-    public Adapter createAdapter(Notifier target) {
-        return modelSwitch.doSwitch((EObject) target);
+    public Adapter createAdapter(final Notifier target) {
+        return this.modelSwitch.doSwitch((EObject) target);
     }
 
     /**

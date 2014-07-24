@@ -19,7 +19,7 @@ public class SimucomtooladapterResourceImpl extends XMLResourceImpl {
      *            the URI of the new resource.
      * @generated
      */
-    public SimucomtooladapterResourceImpl(URI uri) {
+    public SimucomtooladapterResourceImpl(final URI uri) {
         super(uri);
     }
 

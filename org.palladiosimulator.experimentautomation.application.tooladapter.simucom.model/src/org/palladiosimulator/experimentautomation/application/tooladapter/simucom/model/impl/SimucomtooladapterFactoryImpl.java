@@ -24,12 +24,12 @@ public class SimucomtooladapterFactoryImpl extends EFactoryImpl implements Simuc
      */
     public static SimucomtooladapterFactory init() {
         try {
-            SimucomtooladapterFactory theSimucomtooladapterFactory = (SimucomtooladapterFactory) EPackage.Registry.INSTANCE
+            final SimucomtooladapterFactory theSimucomtooladapterFactory = (SimucomtooladapterFactory) EPackage.Registry.INSTANCE
                     .getEFactory(SimucomtooladapterPackage.eNS_URI);
             if (theSimucomtooladapterFactory != null) {
                 return theSimucomtooladapterFactory;
             }
-        } catch (Exception exception) {
+        } catch (final Exception exception) {
             EcorePlugin.INSTANCE.log(exception);
         }
         return new SimucomtooladapterFactoryImpl();
@@ -50,10 +50,10 @@ public class SimucomtooladapterFactoryImpl extends EFactoryImpl implements Simuc
      * @generated
      */
     @Override
-    public EObject create(EClass eClass) {
+    public EObject create(final EClass eClass) {
         switch (eClass.getClassifierID()) {
         case SimucomtooladapterPackage.SIMU_COM_CONFIGURATION:
-            return createSimuComConfiguration();
+            return this.createSimuComConfiguration();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -64,8 +64,9 @@ public class SimucomtooladapterFactoryImpl extends EFactoryImpl implements Simuc
      * 
      * @generated
      */
+    @Override
     public SimuComConfiguration createSimuComConfiguration() {
-        SimuComConfigurationImpl simuComConfiguration = new SimuComConfigurationImpl();
+        final SimuComConfigurationImpl simuComConfiguration = new SimuComConfigurationImpl();
         return simuComConfiguration;
     }
 
@@ -74,8 +75,9 @@ public class SimucomtooladapterFactoryImpl extends EFactoryImpl implements Simuc
      * 
      * @generated
      */
+    @Override
     public SimucomtooladapterPackage getSimucomtooladapterPackage() {
-        return (SimucomtooladapterPackage) getEPackage();
+        return (SimucomtooladapterPackage) this.getEPackage();
     }
 
     /**

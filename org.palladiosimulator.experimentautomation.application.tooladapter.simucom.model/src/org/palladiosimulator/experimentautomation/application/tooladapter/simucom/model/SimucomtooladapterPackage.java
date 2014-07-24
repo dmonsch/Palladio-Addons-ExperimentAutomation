@@ -75,7 +75,7 @@ public interface SimucomtooladapterPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Persistence Framework</b></em>' containment reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -84,7 +84,7 @@ public interface SimucomtooladapterPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Stop Conditions</b></em>' containment reference list. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -102,7 +102,7 @@ public interface SimucomtooladapterPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Simulate Linking Resources</b></em>' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -120,7 +120,7 @@ public interface SimucomtooladapterPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Probe Spec Configuration</b></em>' containment reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -129,7 +129,7 @@ public interface SimucomtooladapterPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Simu Com Configuration</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -138,7 +138,7 @@ public interface SimucomtooladapterPackage extends EPackage {
     /**
      * The number of operations of the '<em>Simu Com Configuration</em>' class. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -148,7 +148,7 @@ public interface SimucomtooladapterPackage extends EPackage {
     /**
      * The number of operations of the '<em>Simu Com Configuration</em>' class. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
