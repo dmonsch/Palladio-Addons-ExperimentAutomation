@@ -19,6 +19,8 @@ import de.uka.ipd.sdq.workflow.pcm.jobs.LoadPCMModelsIntoBlackboardJob;
  * Loads the PCM models given in the configuration into an MDSD blackboard. Uses the initial model
  * of Experiment Automation to receive the referred PCM models.
  * 
+ * TODO Copy model before putting it into blackboard [Lehrig]
+ * 
  * @author Sebastian Lehrig
  */
 public class LoadPCMModelsForExperimentAutomationJob extends SequentialBlackboardInteractingJob<MDSDBlackboard>
