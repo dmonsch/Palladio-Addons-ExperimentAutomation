@@ -12,13 +12,9 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.osgi.framework.Bundle;
-import org.palladiosimulator.commons.emfutils.EMFCopyHelper;
-
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentRepository;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
-import org.palladiosimulator.experimentautomation.variation.VariationPackage;
-import org.palladiosimulator.experimentautomation.variation.VariationRepository;
 
 public class ExperimentAutomationConfiguration {
 
@@ -26,7 +22,6 @@ public class ExperimentAutomationConfiguration {
 
     private final ResourceSet resourceSet;
     private final ExperimentRepository experimentRepository;
-    private final VariationRepository variations;
     private final List<String> filteredExperimentIDs;
 
     public ExperimentAutomationConfiguration(final Bundle bundle, final IPath experimentsLocation, final IPath variationsLocation,
@@ -34,36 +29,7 @@ public class ExperimentAutomationConfiguration {
         this.resourceSet = new ResourceSetImpl();
         this.experimentRepository = (ExperimentRepository) loadResourceFromBundle(resourceSet, bundle,
                 experimentsLocation, ExperimentsPackage.eINSTANCE.getExperimentRepository());
-        this.variations = (VariationRepository) loadResourceFromBundle(resourceSet, bundle, variationsLocation,
-                VariationPackage.eINSTANCE.getVariationRepository());
         this.filteredExperimentIDs = filteredExperimentIDs;
-    }
-
-    private ExperimentAutomationConfiguration(final ResourceSet resourceSet, final ExperimentRepository experimentRepository,
-            final VariationRepository variations, final List<String> filteredExperimentIDs) {
-        this.resourceSet = resourceSet;
-        this.experimentRepository = experimentRepository;
-        this.variations = variations;
-        this.filteredExperimentIDs = filteredExperimentIDs;
-    }
-
-    public ExperimentRepository getExperiments() {
-        return this.experimentRepository;
-    }
-
-    public VariationRepository getVariations() {
-        return this.variations;
-    }
-    
-    public ResourceSet getResourceSet() {
-        return this.resourceSet;
-    }
-
-    @Override
-    public ExperimentAutomationConfiguration clone() {
-        final List<EObject> copy = EMFCopyHelper.deepCopyToEObjectList(this.resourceSet);
-        return new ExperimentAutomationConfiguration(this.resourceSet, (ExperimentRepository) copy.get(0),
-                (VariationRepository) copy.get(1), this.filteredExperimentIDs);
     }
 
     private static <T extends EClass> EObject loadResourceFromBundle(final ResourceSet resourceSet,
