@@ -19,8 +19,8 @@ public class RunExperimentAutomationJob extends SequentialBlackboardInteractingJ
     /**
      * Default Constructor.
      * 
-     * @param configuration
-     *            Configuration of the experiment.
+     * @param experiments
+     *            Experiments that should be conducted.
      */
     public RunExperimentAutomationJob(final List<Experiment> experiments) {
         super(false);
