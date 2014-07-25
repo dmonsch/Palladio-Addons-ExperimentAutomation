@@ -1,10 +1,14 @@
 package org.palladiosimulator.experimentautomation.application.tooladapter.simulizar;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.palladiosimulator.experimentautomation.application.jobs.CleanUpRecorderJob;
 import org.palladiosimulator.experimentautomation.application.jobs.LogExperimentInformationJob;
 import org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter;
+import org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.AbstractSimulationConfigFactory;
+import org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.AbstractSimulationWorkflowConfigurationFactory;
 import org.palladiosimulator.experimentautomation.application.tooladapter.simulizar.model.SimuLizarConfiguration;
 import org.palladiosimulator.experimentautomation.application.tooladapter.simulizar.model.SimulizartooladapterPackage;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
@@ -23,39 +27,22 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
  */
 public class SimuLizarToolAdapter implements IToolAdapter {
 
+    private static final String SIMULATOR_ID_SIMULIZAR = "de.uka.ipd.sdq.codegen.simucontroller.simucom";
+
     @Override
     public SequentialBlackboardInteractingJob<MDSDBlackboard> createRunAnalysisJob(final Experiment experiment,
             final ToolConfiguration toolConfig, final List<Variation> variations, final List<Long> factorLevels,
             final int repetition) {
-        final SimuLizarConfiguration simuLizarConfiguration = (SimuLizarConfiguration) toolConfig;
+        final SimuLizarConfiguration simuLizarToolConfig = (SimuLizarConfiguration) toolConfig;
+        final SimuComConfig simuComConfig = createSimuComConfig(simuLizarToolConfig, experiment, factorLevels,
+                repetition);
+        final SimuLizarWorkflowConfiguration workflowConfig = createSimuLizarWorkflowConfiguration(simuComConfig,
+                experiment.getInitialModel().getReconfigurationRules());
 
-        // create simulation configuration
-        final SimuComConfig simucomConfig = SimuComConfigFactory.createConfig(experiment, simuLizarConfiguration,
-                factorLevels, repetition);
-
-        // create workflow configuration
-        final SimuLizarWorkflowConfiguration workflowConfig = SimuLizarWorkflowConfigurationFactory
-                .createWorkflowConfiguration(simuLizarConfiguration, simucomConfig);
-
-//        final PMSModel pmsModel = experiment.getInitialModel().getPlatformMonitoringSpecification();
-//        if(pmsModel == null) {
-//            workflowConfig.setPmsFile("");
-//        } else {
-//            workflowConfig.setPmsFile(pmsModel.eResource().getURI().toString());
-//        }
-        
-        final ReconfigurationRulesFolder reconfigurationRulesFolder = experiment.getInitialModel().getReconfigurationRules();
-        if(reconfigurationRulesFolder == null) {
-            workflowConfig.setReconfigurationRulesFolder("");
-        } else {
-            workflowConfig.setReconfigurationRulesFolder(reconfigurationRulesFolder.getFolderUri());
-        }
-        
-        SequentialBlackboardInteractingJob<MDSDBlackboard> result = new SequentialBlackboardInteractingJob<MDSDBlackboard>();
-        result.addJob(new LogExperimentInformationJob(experiment, simucomConfig, variations, factorLevels,
-                repetition));            
+        final SequentialBlackboardInteractingJob<MDSDBlackboard> result = new SequentialBlackboardInteractingJob<MDSDBlackboard>();
+        result.addJob(new LogExperimentInformationJob(experiment, simuComConfig, variations, factorLevels, repetition));
         result.addJob(new PCMStartInterpretationJob(workflowConfig));
-        result.addJob(new CleanUpRecorderJob(simuLizarConfiguration.getPersistenceFramework()));
+        result.addJob(new CleanUpRecorderJob(simuLizarToolConfig.getPersistenceFramework()));
 
         return result;
     }
@@ -63,5 +50,32 @@ public class SimuLizarToolAdapter implements IToolAdapter {
     @Override
     public boolean hasSupportFor(ToolConfiguration configuration) {
         return SimulizartooladapterPackage.eINSTANCE.getSimuLizarConfiguration().isInstance(configuration);
+    }
+
+    private SimuComConfig createSimuComConfig(final SimuLizarConfiguration simuComConfiguration,
+            final Experiment experiment, final List<Long> factorLevels, final int repetition) {
+        final Map<String, Object> configMap = AbstractSimulationConfigFactory.createConfigMap(experiment,
+                simuComConfiguration, SIMULATOR_ID_SIMULIZAR, factorLevels, repetition);
+
+        configMap.put(SimuComConfig.SIMULATE_LINKING_RESOURCES, false);
+        configMap.put(SimuComConfig.SIMULATE_FAILURES, false);
+
+        return new SimuComConfig(configMap, false);
+    }
+
+    private SimuLizarWorkflowConfiguration createSimuLizarWorkflowConfiguration(final SimuComConfig simuComConfig,
+            final ReconfigurationRulesFolder reconfigurationRulesFolder) {
+        final SimuLizarWorkflowConfiguration workflowConfig = new SimuLizarWorkflowConfiguration(
+                new HashMap<String, Object>());
+        AbstractSimulationWorkflowConfigurationFactory.fillWorkflowConfiguration(workflowConfig);
+        workflowConfig.setSimuComConfiguration(simuComConfig);
+
+        if (reconfigurationRulesFolder == null) {
+            workflowConfig.setReconfigurationRulesFolder("");
+        } else {
+            workflowConfig.setReconfigurationRulesFolder(reconfigurationRulesFolder.getFolderUri());
+        }
+
+        return workflowConfig;
     }
 }
