@@ -12,6 +12,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.Abstractsim
 import org.palladiosimulator.experimentautomation.abstractsimulation.Datasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2;
 import org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
+import org.palladiosimulator.experimentautomation.abstractsimulation.PersistenceFramework;
 import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
 import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework;
 import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition;
@@ -32,6 +33,10 @@ import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
  * @author Sebastian Lehrig
  */
 public class AbstractSimulationConfigFactory {
+
+    private static final String EDP2_ID = "Experiment Data Persistency & Presentation (EDP2)";
+
+    private static final String SENSOR_FRAMEWORK_ID = "SensorFramework";
 
     /**
      * Fills out the run configuration features of an {@link AbstractSimulationConfig}.
@@ -66,8 +71,9 @@ public class AbstractSimulationConfigFactory {
                 computeExperimentName(experiment, simConfig, factorLevels, repetition));
 
         /** Simulation Results */
-        map.put(AbstractSimulationConfig.PERSISTENCE_RECORDER_NAME, getPersistenceRecorderName(simConfig));
-        map.put(getPersistenceRecorderID(simConfig), getPersistenceRecorder(simConfig));
+        final PersistenceFramework persistenceFramework = simConfig.getPersistenceFramework();
+        map.put(AbstractSimulationConfig.PERSISTENCE_RECORDER_NAME, getPersistenceRecorderName(persistenceFramework));
+        map.put(getPersistenceRecorderID(persistenceFramework), getPersistenceRecorder(persistenceFramework));
 
         /** Stop Conditions */
         map.put(AbstractSimulationConfig.SIMULATION_TIME, getMaximumSimulationTime(experiment, simConfig));
@@ -161,35 +167,35 @@ public class AbstractSimulationConfigFactory {
         return -1;
     }
 
-    private static String getPersistenceRecorderName(final AbstractSimulationConfiguration config) {
-        if (AbstractsimulationPackage.eINSTANCE.getSensorFramework().isInstance(config.getPersistenceFramework())) {
-            return "SensorFramework";
-        } else if (AbstractsimulationPackage.eINSTANCE.getEDP2().isInstance(config.getPersistenceFramework())) {
-            return "Experiment Data Persistency & Presentation (EDP2)";
+    private static String getPersistenceRecorderName(final PersistenceFramework persistenceFramework) {
+        if (AbstractsimulationPackage.eINSTANCE.getSensorFramework().isInstance(persistenceFramework)) {
+            return SENSOR_FRAMEWORK_ID;
+        } else if (AbstractsimulationPackage.eINSTANCE.getEDP2().isInstance(persistenceFramework)) {
+            return EDP2_ID;
         } else {
             throw new IllegalArgumentException("Tried to load unknown persistency framework");
         }
     }
 
-    private static String getPersistenceRecorderID(final AbstractSimulationConfiguration config) {
-        if (AbstractsimulationPackage.eINSTANCE.getSensorFramework().isInstance(config.getPersistenceFramework())) {
+    private static String getPersistenceRecorderID(final PersistenceFramework persistenceFramework) {
+        if (AbstractsimulationPackage.eINSTANCE.getSensorFramework().isInstance(persistenceFramework)) {
             return SensorFrameworkRecorderConfigurationFactory.DATASOURCE_ID;
-        } else if (AbstractsimulationPackage.eINSTANCE.getEDP2().isInstance(config.getPersistenceFramework())) {
+        } else if (AbstractsimulationPackage.eINSTANCE.getEDP2().isInstance(persistenceFramework)) {
             return EDP2RecorderConfigurationFactory.REPOSITORY_ID;
         } else {
             throw new IllegalArgumentException("Tried to load unknown persistency framework");
         }
     }
 
-    private static String getPersistenceRecorder(final AbstractSimulationConfiguration config) {
-        if (AbstractsimulationPackage.eINSTANCE.getSensorFramework().isInstance(config.getPersistenceFramework())) {
-            final SensorFramework sensorFramework = (SensorFramework) config.getPersistenceFramework();
+    private static String getPersistenceRecorder(final PersistenceFramework persistenceFramework) {
+        if (AbstractsimulationPackage.eINSTANCE.getSensorFramework().isInstance(persistenceFramework)) {
+            final SensorFramework sensorFramework = (SensorFramework) persistenceFramework;
             final Datasource datasource = sensorFramework.getDatasource();
             final IDAOFactory daoFactory = SensorFrameworkFactory.createOrOpenDatasource(datasource);
 
             return "" + daoFactory.getID();
-        } else if (AbstractsimulationPackage.eINSTANCE.getEDP2().isInstance(config.getPersistenceFramework())) {
-            final EDP2 edp2 = (EDP2) config.getPersistenceFramework();
+        } else if (AbstractsimulationPackage.eINSTANCE.getEDP2().isInstance(persistenceFramework)) {
+            final EDP2 edp2 = (EDP2) persistenceFramework;
             final Datasource datasource = edp2.getDatasource();
             final Repository repository = EDP2Factory.createOrOpenDatasource(datasource);
 
