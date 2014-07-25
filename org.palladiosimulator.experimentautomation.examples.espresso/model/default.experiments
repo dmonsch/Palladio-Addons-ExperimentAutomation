@@ -10,7 +10,6 @@
       </persistenceFramework>
       <stopConditions xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:MeasurementCountStopCondition" measurementCount="1000"/>
       <stopConditions xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:SimTimeStopCondition" simulationTime="-1"/>
-      <probeSpecConfiguration blackboardType="CONCURRENT"/>
     </toolConfiguration>
     <stopConditions xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:MeasurementCountStopCondition" measurementCount="100"/>
     <stopConditions xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:SimTimeStopCondition" simulationTime="-1"/>

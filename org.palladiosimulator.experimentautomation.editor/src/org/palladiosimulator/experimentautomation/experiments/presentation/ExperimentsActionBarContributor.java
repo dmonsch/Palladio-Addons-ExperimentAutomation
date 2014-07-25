@@ -42,7 +42,7 @@ import org.palladiosimulator.experimentautomation.variation.presentation.Experim
  * @generated
  */
 public class ExperimentsActionBarContributor extends EditingDomainActionBarContributor implements
-        ISelectionChangedListener {
+ISelectionChangedListener {
     /**
      * This keeps track of the active editor. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

@@ -14,7 +14,6 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasou
 import org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
 import org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.PersistenceFramework;
-import org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration;
 import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
 import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework;
 import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition;
@@ -86,11 +85,6 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
         @Override
         public Adapter caseRandomNumberGeneratorSeed(final RandomNumberGeneratorSeed object) {
             return AbstractsimulationAdapterFactory.this.createRandomNumberGeneratorSeedAdapter();
-        }
-
-        @Override
-        public Adapter caseProbeSpecConfiguration(final ProbeSpecConfiguration object) {
-            return AbstractsimulationAdapterFactory.this.createProbeSpecConfigurationAdapter();
         }
 
         @Override
@@ -199,21 +193,6 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createRandomNumberGeneratorSeedAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration
-     * <em>Probe Spec Configuration</em>}'. <!-- begin-user-doc --> This default implementation
-     * returns null so that we can easily ignore cases; it's useful to ignore a case when
-     * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     *
-     * @return the new adapter.
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration
-     * @generated
-     */
-    public Adapter createProbeSpecConfigurationAdapter() {
         return null;
     }
 

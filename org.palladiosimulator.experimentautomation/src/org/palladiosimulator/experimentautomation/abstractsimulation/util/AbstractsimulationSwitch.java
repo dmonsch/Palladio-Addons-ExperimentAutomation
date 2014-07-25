@@ -13,7 +13,6 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasou
 import org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
 import org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.PersistenceFramework;
-import org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration;
 import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
 import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework;
 import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition;
@@ -94,14 +93,6 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED: {
             final RandomNumberGeneratorSeed randomNumberGeneratorSeed = (RandomNumberGeneratorSeed) theEObject;
             T result = this.caseRandomNumberGeneratorSeed(randomNumberGeneratorSeed);
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
-            return result;
-        }
-        case AbstractsimulationPackage.PROBE_SPEC_CONFIGURATION: {
-            final ProbeSpecConfiguration probeSpecConfiguration = (ProbeSpecConfiguration) theEObject;
-            T result = this.caseProbeSpecConfiguration(probeSpecConfiguration);
             if (result == null) {
                 result = this.defaultCase(theEObject);
             }
@@ -239,22 +230,6 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseRandomNumberGeneratorSeed(final RandomNumberGeneratorSeed object) {
-        return null;
-    }
-
-    /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Probe Spec Configuration</em>'. <!-- begin-user-doc --> This implementation returns null;
-     * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     *
-     * @param object
-     *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Probe Spec Configuration</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T caseProbeSpecConfiguration(final ProbeSpecConfiguration object) {
         return null;
     }
 

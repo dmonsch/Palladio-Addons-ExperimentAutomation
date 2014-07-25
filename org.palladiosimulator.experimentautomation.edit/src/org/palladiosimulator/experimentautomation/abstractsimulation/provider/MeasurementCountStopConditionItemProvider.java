@@ -18,14 +18,14 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.Measurement
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition}
  * object. <!-- begin-user-doc --> <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class MeasurementCountStopConditionItemProvider extends StopConditionItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public MeasurementCountStopConditionItemProvider(final AdapterFactory adapterFactory) {
@@ -35,7 +35,7 @@ public class MeasurementCountStopConditionItemProvider extends StopConditionItem
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -51,7 +51,7 @@ public class MeasurementCountStopConditionItemProvider extends StopConditionItem
     /**
      * This adds a property descriptor for the Measurement Count feature. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addMeasurementCountPropertyDescriptor(final Object object) {
@@ -67,7 +67,7 @@ public class MeasurementCountStopConditionItemProvider extends StopConditionItem
 
     /**
      * This returns MeasurementCountStopCondition.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -93,7 +93,7 @@ public class MeasurementCountStopConditionItemProvider extends StopConditionItem
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -111,7 +111,7 @@ public class MeasurementCountStopConditionItemProvider extends StopConditionItem
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

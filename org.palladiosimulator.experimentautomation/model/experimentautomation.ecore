@@ -149,9 +149,6 @@
           ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="simulateFailures" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="probeSpecConfiguration"
-          ordered="false" lowerBound="1" eType="#//abstractsimulation/ProbeSpecConfiguration"
-          containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="PersistenceFramework" abstract="true">
       <eStructuralFeatures xsi:type="ecore:EReference" name="datasource" ordered="false"
@@ -170,15 +167,6 @@
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="seed5" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ProbeSpecConfiguration">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="blackboardType" ordered="false"
-          lowerBound="1" eType="#//abstractsimulation/BlackboardType"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EEnum" name="BlackboardType">
-      <eLiterals name="SIMPLE"/>
-      <eLiterals name="CONCURRENT" value="1"/>
-      <eLiterals name="NONE" value="2"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SensorFramework" eSuperTypes="#//abstractsimulation/PersistenceFramework"/>
     <eClassifiers xsi:type="ecore:EClass" name="Datasource" abstract="true"/>

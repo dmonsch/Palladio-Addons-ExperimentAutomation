@@ -32,11 +32,11 @@ import org.palladiosimulator.experimentautomation.variation.provider.ExperimentA
  * @generated
  */
 public class VariationItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public VariationItemProvider(final AdapterFactory adapterFactory) {
@@ -46,7 +46,7 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -67,7 +67,7 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
     /**
      * This adds a property descriptor for the Type feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addTypePropertyDescriptor(final Object object) {
@@ -75,13 +75,13 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Variation_type_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Variation_type_feature", "_UI_Variation_type"),
-                        ExperimentsPackage.Literals.VARIATION__TYPE, true, false, true, null, null, null));
+                ExperimentsPackage.Literals.VARIATION__TYPE, true, false, true, null, null, null));
     }
 
     /**
      * This adds a property descriptor for the Min Value feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addMinValuePropertyDescriptor(final Object object) {
@@ -89,14 +89,14 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Variation_minValue_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Variation_minValue_feature", "_UI_Variation_type"),
-                        ExperimentsPackage.Literals.VARIATION__MIN_VALUE, true, false, false,
-                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                ExperimentsPackage.Literals.VARIATION__MIN_VALUE, true, false, false,
+                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Max Value feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addMaxValuePropertyDescriptor(final Object object) {
@@ -104,14 +104,14 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Variation_maxValue_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Variation_maxValue_feature", "_UI_Variation_type"),
-                        ExperimentsPackage.Literals.VARIATION__MAX_VALUE, true, false, false,
-                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                ExperimentsPackage.Literals.VARIATION__MAX_VALUE, true, false, false,
+                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Max Variations feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addMaxVariationsPropertyDescriptor(final Object object) {
@@ -120,13 +120,13 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
                 this.getString("_UI_Variation_maxVariations_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_Variation_maxVariations_feature",
                         "_UI_Variation_type"), ExperimentsPackage.Literals.VARIATION__MAX_VARIATIONS, true, false,
-                false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                        false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Varied Object Id feature. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addVariedObjectIdPropertyDescriptor(final Object object) {
@@ -135,13 +135,13 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
                 this.getString("_UI_Variation_variedObjectId_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_Variation_variedObjectId_feature",
                         "_UI_Variation_type"), ExperimentsPackage.Literals.VARIATION__VARIED_OBJECT_ID, true, false,
-                false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                        false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Name feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addNamePropertyDescriptor(final Object object) {
@@ -149,8 +149,8 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Variation_name_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Variation_name_feature", "_UI_Variation_type"),
-                        ExperimentsPackage.Literals.VARIATION__NAME, true, false, false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                ExperimentsPackage.Literals.VARIATION__NAME, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -173,7 +173,7 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -186,7 +186,7 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
 
     /**
      * This returns Variation.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -211,7 +211,7 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -236,7 +236,7 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -259,7 +259,7 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

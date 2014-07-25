@@ -4,7 +4,6 @@ package org.palladiosimulator.experimentautomation.abstractsimulation;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
@@ -121,22 +120,13 @@ public interface AbstractsimulationPackage extends EPackage {
     int ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES = ExperimentsPackage.TOOL_CONFIGURATION_FEATURE_COUNT + 4;
 
     /**
-     * The feature id for the '<em><b>Probe Spec Configuration</b></em>' containment reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION = ExperimentsPackage.TOOL_CONFIGURATION_FEATURE_COUNT + 5;
-
-    /**
      * The number of structural features of the '<em>Abstract Simulation Configuration</em>' class.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int ABSTRACT_SIMULATION_CONFIGURATION_FEATURE_COUNT = ExperimentsPackage.TOOL_CONFIGURATION_FEATURE_COUNT + 6;
+    int ABSTRACT_SIMULATION_CONFIGURATION_FEATURE_COUNT = ExperimentsPackage.TOOL_CONFIGURATION_FEATURE_COUNT + 5;
 
     /**
      * The meta object id for the '
@@ -243,35 +233,6 @@ public interface AbstractsimulationPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl
-     * <em>Probe Spec Configuration</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getProbeSpecConfiguration()
-     * @generated
-     */
-    int PROBE_SPEC_CONFIGURATION = 3;
-
-    /**
-     * The feature id for the '<em><b>Blackboard Type</b></em>' attribute. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int PROBE_SPEC_CONFIGURATION__BLACKBOARD_TYPE = 0;
-
-    /**
-     * The number of structural features of the '<em>Probe Spec Configuration</em>' class. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int PROBE_SPEC_CONFIGURATION_FEATURE_COUNT = 1;
-
-    /**
-     * The meta object id for the '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.SensorFrameworkImpl
      * <em>Sensor Framework</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -279,7 +240,7 @@ public interface AbstractsimulationPackage extends EPackage {
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSensorFramework()
      * @generated
      */
-    int SENSOR_FRAMEWORK = 4;
+    int SENSOR_FRAMEWORK = 3;
 
     /**
      * The feature id for the '<em><b>Datasource</b></em>' containment reference. <!--
@@ -308,7 +269,7 @@ public interface AbstractsimulationPackage extends EPackage {
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getDatasource()
      * @generated
      */
-    int DATASOURCE = 5;
+    int DATASOURCE = 4;
 
     /**
      * The number of structural features of the '<em>Datasource</em>' class. <!-- begin-user-doc -->
@@ -328,7 +289,7 @@ public interface AbstractsimulationPackage extends EPackage {
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getMemoryDatasource()
      * @generated
      */
-    int MEMORY_DATASOURCE = 6;
+    int MEMORY_DATASOURCE = 5;
 
     /**
      * The number of structural features of the '<em>Memory Datasource</em>' class. <!--
@@ -348,7 +309,7 @@ public interface AbstractsimulationPackage extends EPackage {
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getFileDatasource()
      * @generated
      */
-    int FILE_DATASOURCE = 7;
+    int FILE_DATASOURCE = 6;
 
     /**
      * The feature id for the '<em><b>Location</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -377,7 +338,7 @@ public interface AbstractsimulationPackage extends EPackage {
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getStopCondition()
      * @generated
      */
-    int STOP_CONDITION = 10;
+    int STOP_CONDITION = 9;
 
     /**
      * The number of structural features of the '<em>Stop Condition</em>' class. <!-- begin-user-doc
@@ -398,7 +359,7 @@ public interface AbstractsimulationPackage extends EPackage {
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getMeasurementCountStopCondition()
      * @generated
      */
-    int MEASUREMENT_COUNT_STOP_CONDITION = 8;
+    int MEASUREMENT_COUNT_STOP_CONDITION = 7;
 
     /**
      * The feature id for the '<em><b>Measurement Count</b></em>' attribute. <!-- begin-user-doc -->
@@ -427,7 +388,7 @@ public interface AbstractsimulationPackage extends EPackage {
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSimTimeStopCondition()
      * @generated
      */
-    int SIM_TIME_STOP_CONDITION = 9;
+    int SIM_TIME_STOP_CONDITION = 8;
 
     /**
      * The feature id for the '<em><b>Simulation Time</b></em>' attribute. <!-- begin-user-doc -->
@@ -456,7 +417,7 @@ public interface AbstractsimulationPackage extends EPackage {
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getEDP2()
      * @generated
      */
-    int EDP2 = 11;
+    int EDP2 = 10;
 
     /**
      * The feature id for the '<em><b>Datasource</b></em>' containment reference. <!--
@@ -475,17 +436,6 @@ public interface AbstractsimulationPackage extends EPackage {
      * @ordered
      */
     int EDP2_FEATURE_COUNT = PERSISTENCE_FRAMEWORK_FEATURE_COUNT + 0;
-
-    /**
-     * The meta object id for the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType
-     * <em>Blackboard Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getBlackboardType()
-     * @generated
-     */
-    int BLACKBOARD_TYPE = 12;
 
     /**
      * Returns the meta object for class '
@@ -558,18 +508,6 @@ public interface AbstractsimulationPackage extends EPackage {
      * @generated
      */
     EAttribute getAbstractSimulationConfiguration_SimulateFailures();
-
-    /**
-     * Returns the meta object for the containment reference '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration
-     * <em>Probe Spec Configuration</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @return the meta object for the containment reference '<em>Probe Spec Configuration</em>'.
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration()
-     * @see #getAbstractSimulationConfiguration()
-     * @generated
-     */
-    EReference getAbstractSimulationConfiguration_ProbeSpecConfiguration();
 
     /**
      * Returns the meta object for class '
@@ -676,29 +614,6 @@ public interface AbstractsimulationPackage extends EPackage {
      * @generated
      */
     EAttribute getRandomNumberGeneratorSeed_Seed5();
-
-    /**
-     * Returns the meta object for class '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration
-     * <em>Probe Spec Configuration</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @return the meta object for class '<em>Probe Spec Configuration</em>'.
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration
-     * @generated
-     */
-    EClass getProbeSpecConfiguration();
-
-    /**
-     * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration#getBlackboardType
-     * <em>Blackboard Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @return the meta object for the attribute '<em>Blackboard Type</em>'.
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration#getBlackboardType()
-     * @see #getProbeSpecConfiguration()
-     * @generated
-     */
-    EAttribute getProbeSpecConfiguration_BlackboardType();
 
     /**
      * Returns the meta object for class '
@@ -825,17 +740,6 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getEDP2();
 
     /**
-     * Returns the meta object for enum '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType
-     * <em>Blackboard Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @return the meta object for enum '<em>Blackboard Type</em>'.
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType
-     * @generated
-     */
-    EEnum getBlackboardType();
-
-    /**
      * Returns the factory that creates the instances of the model. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -915,15 +819,6 @@ public interface AbstractsimulationPackage extends EPackage {
                 .getAbstractSimulationConfiguration_SimulateFailures();
 
         /**
-         * The meta object literal for the '<em><b>Probe Spec Configuration</b></em>' containment
-         * reference feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
-         * @generated
-         */
-        EReference ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION = eINSTANCE
-                .getAbstractSimulationConfiguration_ProbeSpecConfiguration();
-
-        /**
          * The meta object literal for the '
          * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.PersistenceFrameworkImpl
          * <em>Persistence Framework</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1001,25 +896,6 @@ public interface AbstractsimulationPackage extends EPackage {
          * @generated
          */
         EAttribute RANDOM_NUMBER_GENERATOR_SEED__SEED5 = eINSTANCE.getRandomNumberGeneratorSeed_Seed5();
-
-        /**
-         * The meta object literal for the '
-         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl
-         * <em>Probe Spec Configuration</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
-         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.ProbeSpecConfigurationImpl
-         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getProbeSpecConfiguration()
-         * @generated
-         */
-        EClass PROBE_SPEC_CONFIGURATION = eINSTANCE.getProbeSpecConfiguration();
-
-        /**
-         * The meta object literal for the '<em><b>Blackboard Type</b></em>' attribute feature. <!--
-         * begin-user-doc --> <!-- end-user-doc -->
-         *
-         * @generated
-         */
-        EAttribute PROBE_SPEC_CONFIGURATION__BLACKBOARD_TYPE = eINSTANCE.getProbeSpecConfiguration_BlackboardType();
 
         /**
          * The meta object literal for the '
@@ -1134,17 +1010,6 @@ public interface AbstractsimulationPackage extends EPackage {
          * @generated
          */
         EClass EDP2 = eINSTANCE.getEDP2();
-
-        /**
-         * The meta object literal for the '
-         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType
-         * <em>Blackboard Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
-         * @see org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType
-         * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getBlackboardType()
-         * @generated
-         */
-        EEnum BLACKBOARD_TYPE = eINSTANCE.getBlackboardType();
 
     }
 

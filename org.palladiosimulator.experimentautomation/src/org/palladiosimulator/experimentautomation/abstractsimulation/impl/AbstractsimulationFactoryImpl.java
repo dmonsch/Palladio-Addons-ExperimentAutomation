@@ -3,19 +3,16 @@
 package org.palladiosimulator.experimentautomation.abstractsimulation.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationFactory;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType;
 import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2;
 import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
 import org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource;
-import org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration;
 import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
 import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework;
 import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition;
@@ -63,8 +60,6 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
         switch (eClass.getClassifierID()) {
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED:
             return this.createRandomNumberGeneratorSeed();
-        case AbstractsimulationPackage.PROBE_SPEC_CONFIGURATION:
-            return this.createProbeSpecConfiguration();
         case AbstractsimulationPackage.SENSOR_FRAMEWORK:
             return this.createSensorFramework();
         case AbstractsimulationPackage.MEMORY_DATASOURCE:
@@ -88,50 +83,9 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
      * @generated
      */
     @Override
-    public Object createFromString(final EDataType eDataType, final String initialValue) {
-        switch (eDataType.getClassifierID()) {
-        case AbstractsimulationPackage.BLACKBOARD_TYPE:
-            return this.createBlackboardTypeFromString(eDataType, initialValue);
-        default:
-            throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-        }
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public String convertToString(final EDataType eDataType, final Object instanceValue) {
-        switch (eDataType.getClassifierID()) {
-        case AbstractsimulationPackage.BLACKBOARD_TYPE:
-            return this.convertBlackboardTypeToString(eDataType, instanceValue);
-        default:
-            throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-        }
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
     public RandomNumberGeneratorSeed createRandomNumberGeneratorSeed() {
         final RandomNumberGeneratorSeedImpl randomNumberGeneratorSeed = new RandomNumberGeneratorSeedImpl();
         return randomNumberGeneratorSeed;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public ProbeSpecConfiguration createProbeSpecConfiguration() {
-        final ProbeSpecConfigurationImpl probeSpecConfiguration = new ProbeSpecConfigurationImpl();
-        return probeSpecConfiguration;
     }
 
     /**
@@ -198,29 +152,6 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
     public EDP2 createEDP2() {
         final EDP2Impl edp2 = new EDP2Impl();
         return edp2;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    public BlackboardType createBlackboardTypeFromString(final EDataType eDataType, final String initialValue) {
-        final BlackboardType result = BlackboardType.get(initialValue);
-        if (result == null) {
-            throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '"
-                    + eDataType.getName() + "'");
-        }
-        return result;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    public String convertBlackboardTypeToString(final EDataType eDataType, final Object instanceValue) {
-        return instanceValue == null ? null : instanceValue.toString();
     }
 
     /**

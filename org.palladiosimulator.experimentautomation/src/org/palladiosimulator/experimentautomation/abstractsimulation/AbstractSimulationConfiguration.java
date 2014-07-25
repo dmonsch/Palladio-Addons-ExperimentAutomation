@@ -27,9 +27,6 @@ import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
  * <li>
  * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
  * <em>Simulate Failures</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration
- * <em>Probe Spec Configuration</em>}</li>
  * </ul>
  * </p>
  *
@@ -175,35 +172,5 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * @generated
      */
     void setSimulateFailures(boolean value);
-
-    /**
-     * Returns the value of the '<em><b>Probe Spec Configuration</b></em>' containment reference.
-     * <!-- begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Probe Spec Configuration</em>' containment reference isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     *
-     * @return the value of the '<em>Probe Spec Configuration</em>' containment reference.
-     * @see #setProbeSpecConfiguration(ProbeSpecConfiguration)
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_ProbeSpecConfiguration()
-     * @model containment="true" required="true" ordered="false"
-     * @generated
-     */
-    ProbeSpecConfiguration getProbeSpecConfiguration();
-
-    /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getProbeSpecConfiguration
-     * <em>Probe Spec Configuration</em>}' containment reference. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     *
-     * @param value
-     *            the new value of the '<em>Probe Spec Configuration</em>' containment reference.
-     * @see #getProbeSpecConfiguration()
-     * @generated
-     */
-    void setProbeSpecConfiguration(ProbeSpecConfiguration value);
 
 } // AbstractSimulationConfiguration

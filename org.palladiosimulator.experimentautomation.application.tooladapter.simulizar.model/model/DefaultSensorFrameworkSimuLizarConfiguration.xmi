@@ -18,6 +18,4 @@
   <stopConditions
       xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:SimTimeStopCondition"
       simulationTime="-1"/>
-  <probeSpecConfiguration
-      blackboardType="CONCURRENT"/>
 </simulizartooladapter:SimuLizarConfiguration>

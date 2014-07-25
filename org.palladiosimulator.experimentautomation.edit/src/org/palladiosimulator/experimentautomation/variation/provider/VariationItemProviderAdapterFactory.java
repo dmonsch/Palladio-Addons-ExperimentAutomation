@@ -27,11 +27,11 @@ import org.palladiosimulator.experimentautomation.variation.util.VariationAdapte
  * {@link #fireNotifyChanged fireNotifyChanged}. The adapters also support Eclipse property sheets.
  * Note that most of the adapters are shared among multiple instances. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- *
+ * 
  * @generated
  */
 public class VariationItemProviderAdapterFactory extends VariationAdapterFactory implements ComposeableAdapterFactory,
-        IChangeNotifier, IDisposable {
+IChangeNotifier, IDisposable {
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -51,14 +51,14 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
     /**
      * This keeps track of all the supported types checked by {@link #isFactoryForType
      * isFactoryForType}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
     /**
      * This constructs an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public VariationItemProviderAdapterFactory() {
@@ -98,7 +98,7 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.variation.StructuralVariation} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected StructuralVariationItemProvider structuralVariationItemProvider;
@@ -123,7 +123,7 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.variation.VariationRepository} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected VariationRepositoryItemProvider variationRepositoryItemProvider;
@@ -147,7 +147,7 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
     /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -158,7 +158,7 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
     /**
      * This sets the composed adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -168,7 +168,7 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -189,7 +189,7 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -206,7 +206,7 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
 
     /**
      * This adds a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -216,7 +216,7 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
 
     /**
      * This removes a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -242,7 +242,7 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
     /**
      * This disposes all of the item providers created by this factory. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

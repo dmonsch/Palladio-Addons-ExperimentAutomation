@@ -30,15 +30,6 @@ public interface AbstractsimulationFactory extends EFactory {
     RandomNumberGeneratorSeed createRandomNumberGeneratorSeed();
 
     /**
-     * Returns a new object of class '<em>Probe Spec Configuration</em>'. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     *
-     * @return a new object of class '<em>Probe Spec Configuration</em>'.
-     * @generated
-     */
-    ProbeSpecConfiguration createProbeSpecConfiguration();
-
-    /**
      * Returns a new object of class '<em>Sensor Framework</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *

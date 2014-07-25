@@ -13,14 +13,14 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource} object.
  * <!-- begin-user-doc --> <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class MemoryDatasourceItemProvider extends DatasourceItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public MemoryDatasourceItemProvider(final AdapterFactory adapterFactory) {
@@ -30,7 +30,7 @@ public class MemoryDatasourceItemProvider extends DatasourceItemProvider {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -44,7 +44,7 @@ public class MemoryDatasourceItemProvider extends DatasourceItemProvider {
 
     /**
      * This returns MemoryDatasource.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -67,7 +67,7 @@ public class MemoryDatasourceItemProvider extends DatasourceItemProvider {
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -79,7 +79,7 @@ public class MemoryDatasourceItemProvider extends DatasourceItemProvider {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

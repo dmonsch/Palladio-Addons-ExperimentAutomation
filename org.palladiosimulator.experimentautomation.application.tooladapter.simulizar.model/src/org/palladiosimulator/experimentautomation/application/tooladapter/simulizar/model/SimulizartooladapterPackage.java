@@ -117,15 +117,6 @@ public interface SimulizartooladapterPackage extends EPackage {
     int SIMU_LIZAR_CONFIGURATION__SIMULATE_FAILURES = AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES;
 
     /**
-     * The feature id for the '<em><b>Probe Spec Configuration</b></em>' containment reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int SIMU_LIZAR_CONFIGURATION__PROBE_SPEC_CONFIGURATION = AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION;
-
-    /**
      * The number of structural features of the '<em>Simu Lizar Configuration</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *

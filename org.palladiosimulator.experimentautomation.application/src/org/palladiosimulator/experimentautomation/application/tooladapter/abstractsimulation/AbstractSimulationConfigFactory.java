@@ -41,7 +41,6 @@ public class AbstractSimulationConfigFactory {
         map.put(AbstractSimulationConfig.SIMULATION_TIME, getMaximumSimulationTime(experiment, simConfig));
         map.put(AbstractSimulationConfig.MAXIMUM_MEASUREMENT_COUNT, getMaximumMeasurementCount(experiment, simConfig));
         map.put(AbstractSimulationConfig.VERBOSE_LOGGING, false);
-        map.put(AbstractSimulationConfig.BLACKBOARD_TYPE, simConfig.getProbeSpecConfiguration().getBlackboardType());
 
         fillRandomNumberGeneratorSeed(simConfig, map);
         // fillConfidenceStopCondition(config, map);

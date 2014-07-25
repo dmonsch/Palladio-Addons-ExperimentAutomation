@@ -150,8 +150,6 @@
             createChild="true" ecoreFeature="ecore:EReference experimentautomation.ecore#//abstractsimulation/AbstractSimulationConfiguration/randomNumberGeneratorSeed"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//abstractsimulation/AbstractSimulationConfiguration/simulateLinkingResources"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//abstractsimulation/AbstractSimulationConfiguration/simulateFailures"/>
-        <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
-            createChild="true" ecoreFeature="ecore:EReference experimentautomation.ecore#//abstractsimulation/AbstractSimulationConfiguration/probeSpecConfiguration"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="experimentautomation.ecore#//abstractsimulation/PersistenceFramework">
         <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
@@ -164,9 +162,6 @@
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//abstractsimulation/RandomNumberGeneratorSeed/seed3"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//abstractsimulation/RandomNumberGeneratorSeed/seed4"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//abstractsimulation/RandomNumberGeneratorSeed/seed5"/>
-      </genClasses>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//abstractsimulation/ProbeSpecConfiguration">
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//abstractsimulation/ProbeSpecConfiguration/blackboardType"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//abstractsimulation/SensorFramework"/>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="experimentautomation.ecore#//abstractsimulation/Datasource"/>

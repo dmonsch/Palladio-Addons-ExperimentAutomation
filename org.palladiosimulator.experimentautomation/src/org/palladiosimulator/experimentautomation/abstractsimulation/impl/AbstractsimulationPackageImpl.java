@@ -4,20 +4,17 @@ package org.palladiosimulator.experimentautomation.abstractsimulation.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationFactory;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import org.palladiosimulator.experimentautomation.abstractsimulation.BlackboardType;
 import org.palladiosimulator.experimentautomation.abstractsimulation.Datasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
 import org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.PersistenceFramework;
-import org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration;
 import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
 import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework;
 import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition;
@@ -54,13 +51,6 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      * @generated
      */
     private EClass randomNumberGeneratorSeedEClass = null;
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    private EClass probeSpecConfigurationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -117,13 +107,6 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      * @generated
      */
     private EClass edp2EClass = null;
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    private EEnum blackboardTypeEEnum = null;
 
     /**
      * Creates an instance of the model <b>Package</b>, registered with
@@ -272,16 +255,6 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      * @generated
      */
     @Override
-    public EReference getAbstractSimulationConfiguration_ProbeSpecConfiguration() {
-        return (EReference) this.abstractSimulationConfigurationEClass.getEStructuralFeatures().get(5);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
     public EClass getPersistenceFramework() {
         return this.persistenceFrameworkEClass;
     }
@@ -364,26 +337,6 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
     @Override
     public EAttribute getRandomNumberGeneratorSeed_Seed5() {
         return (EAttribute) this.randomNumberGeneratorSeedEClass.getEStructuralFeatures().get(5);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EClass getProbeSpecConfiguration() {
-        return this.probeSpecConfigurationEClass;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EAttribute getProbeSpecConfiguration_BlackboardType() {
-        return (EAttribute) this.probeSpecConfigurationEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -502,16 +455,6 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      * @generated
      */
     @Override
-    public EEnum getBlackboardType() {
-        return this.blackboardTypeEEnum;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
     public AbstractsimulationFactory getAbstractsimulationFactory() {
         return (AbstractsimulationFactory) this.getEFactoryInstance();
     }
@@ -547,8 +490,6 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
                 ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES);
         this.createEAttribute(this.abstractSimulationConfigurationEClass,
                 ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES);
-        this.createEReference(this.abstractSimulationConfigurationEClass,
-                ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION);
 
         this.persistenceFrameworkEClass = this.createEClass(PERSISTENCE_FRAMEWORK);
         this.createEReference(this.persistenceFrameworkEClass, PERSISTENCE_FRAMEWORK__DATASOURCE);
@@ -560,9 +501,6 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
         this.createEAttribute(this.randomNumberGeneratorSeedEClass, RANDOM_NUMBER_GENERATOR_SEED__SEED3);
         this.createEAttribute(this.randomNumberGeneratorSeedEClass, RANDOM_NUMBER_GENERATOR_SEED__SEED4);
         this.createEAttribute(this.randomNumberGeneratorSeedEClass, RANDOM_NUMBER_GENERATOR_SEED__SEED5);
-
-        this.probeSpecConfigurationEClass = this.createEClass(PROBE_SPEC_CONFIGURATION);
-        this.createEAttribute(this.probeSpecConfigurationEClass, PROBE_SPEC_CONFIGURATION__BLACKBOARD_TYPE);
 
         this.sensorFrameworkEClass = this.createEClass(SENSOR_FRAMEWORK);
 
@@ -583,9 +521,6 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
         this.stopConditionEClass = this.createEClass(STOP_CONDITION);
 
         this.edp2EClass = this.createEClass(EDP2);
-
-        // Create enums
-        this.blackboardTypeEEnum = this.createEEnum(BLACKBOARD_TYPE);
     }
 
     /**
@@ -650,10 +585,6 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
         this.initEAttribute(this.getAbstractSimulationConfiguration_SimulateFailures(),
                 this.ecorePackage.getEBoolean(), "simulateFailures", null, 1, 1, AbstractSimulationConfiguration.class,
                 !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEReference(this.getAbstractSimulationConfiguration_ProbeSpecConfiguration(),
-                this.getProbeSpecConfiguration(), null, "probeSpecConfiguration", null, 1, 1,
-                AbstractSimulationConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.persistenceFrameworkEClass, PersistenceFramework.class, "PersistenceFramework",
                 IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -681,12 +612,6 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
         this.initEAttribute(this.getRandomNumberGeneratorSeed_Seed5(), this.ecorePackage.getEInt(), "seed5", null, 1,
                 1, RandomNumberGeneratorSeed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
                 IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-        this.initEClass(this.probeSpecConfigurationEClass, ProbeSpecConfiguration.class, "ProbeSpecConfiguration",
-                !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEAttribute(this.getProbeSpecConfiguration_BlackboardType(), this.getBlackboardType(),
-                "blackboardType", null, 1, 1, ProbeSpecConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.sensorFrameworkEClass, SensorFramework.class, "SensorFramework", !IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -720,12 +645,6 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
         this.initEClass(this.edp2EClass, org.palladiosimulator.experimentautomation.abstractsimulation.EDP2.class,
                 "EDP2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-        // Initialize enums and add enum literals
-        this.initEEnum(this.blackboardTypeEEnum, BlackboardType.class, "BlackboardType");
-        this.addEEnumLiteral(this.blackboardTypeEEnum, BlackboardType.SIMPLE);
-        this.addEEnumLiteral(this.blackboardTypeEEnum, BlackboardType.CONCURRENT);
-        this.addEEnumLiteral(this.blackboardTypeEEnum, BlackboardType.NONE);
 
         // Create resource
         this.createResource(eNS_URI);

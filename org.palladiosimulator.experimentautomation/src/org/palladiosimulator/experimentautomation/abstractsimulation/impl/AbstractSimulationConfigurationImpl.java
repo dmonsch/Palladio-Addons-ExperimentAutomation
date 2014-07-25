@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
 import org.palladiosimulator.experimentautomation.abstractsimulation.PersistenceFramework;
-import org.palladiosimulator.experimentautomation.abstractsimulation.ProbeSpecConfiguration;
 import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
 import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
 import org.palladiosimulator.experimentautomation.experiments.impl.ToolConfigurationImpl;
@@ -41,9 +40,6 @@ import org.palladiosimulator.experimentautomation.experiments.impl.ToolConfigura
  * <li>
  * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#isSimulateFailures
  * <em>Simulate Failures</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#getProbeSpecConfiguration
- * <em>Probe Spec Configuration</em>}</li>
  * </ul>
  * </p>
  *
@@ -123,17 +119,6 @@ AbstractSimulationConfiguration {
      * @ordered
      */
     protected boolean simulateFailures = SIMULATE_FAILURES_EDEFAULT;
-
-    /**
-     * The cached value of the '{@link #getProbeSpecConfiguration()
-     * <em>Probe Spec Configuration</em>}' containment reference. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     *
-     * @see #getProbeSpecConfiguration()
-     * @generated
-     * @ordered
-     */
-    protected ProbeSpecConfiguration probeSpecConfiguration;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -350,68 +335,6 @@ AbstractSimulationConfiguration {
      * @generated
      */
     @Override
-    public ProbeSpecConfiguration getProbeSpecConfiguration() {
-        return this.probeSpecConfiguration;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    public NotificationChain basicSetProbeSpecConfiguration(final ProbeSpecConfiguration newProbeSpecConfiguration,
-            NotificationChain msgs) {
-        final ProbeSpecConfiguration oldProbeSpecConfiguration = this.probeSpecConfiguration;
-        this.probeSpecConfiguration = newProbeSpecConfiguration;
-        if (this.eNotificationRequired()) {
-            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION,
-                    oldProbeSpecConfiguration, newProbeSpecConfiguration);
-            if (msgs == null) {
-                msgs = notification;
-            } else {
-                msgs.add(notification);
-            }
-        }
-        return msgs;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public void setProbeSpecConfiguration(final ProbeSpecConfiguration newProbeSpecConfiguration) {
-        if (newProbeSpecConfiguration != this.probeSpecConfiguration) {
-            NotificationChain msgs = null;
-            if (this.probeSpecConfiguration != null) {
-                msgs = ((InternalEObject) this.probeSpecConfiguration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION, null,
-                        msgs);
-            }
-            if (newProbeSpecConfiguration != null) {
-                msgs = ((InternalEObject) newProbeSpecConfiguration).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION, null,
-                        msgs);
-            }
-            msgs = this.basicSetProbeSpecConfiguration(newProbeSpecConfiguration, msgs);
-            if (msgs != null) {
-                msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION,
-                    newProbeSpecConfiguration, newProbeSpecConfiguration));
-        }
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
     public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
         switch (featureID) {
@@ -421,8 +344,6 @@ AbstractSimulationConfiguration {
             return ((InternalEList<?>) this.getStopConditions()).basicRemove(otherEnd, msgs);
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED:
             return this.basicSetRandomNumberGeneratorSeed(null, msgs);
-        case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION:
-            return this.basicSetProbeSpecConfiguration(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -445,8 +366,6 @@ AbstractSimulationConfiguration {
             return this.isSimulateLinkingResources();
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES:
             return this.isSimulateFailures();
-        case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION:
-            return this.getProbeSpecConfiguration();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -476,9 +395,6 @@ AbstractSimulationConfiguration {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES:
             this.setSimulateFailures((Boolean) newValue);
             return;
-        case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION:
-            this.setProbeSpecConfiguration((ProbeSpecConfiguration) newValue);
-            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -506,9 +422,6 @@ AbstractSimulationConfiguration {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES:
             this.setSimulateFailures(SIMULATE_FAILURES_EDEFAULT);
             return;
-        case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION:
-            this.setProbeSpecConfiguration((ProbeSpecConfiguration) null);
-            return;
         }
         super.eUnset(featureID);
     }
@@ -531,8 +444,6 @@ AbstractSimulationConfiguration {
             return this.simulateLinkingResources != SIMULATE_LINKING_RESOURCES_EDEFAULT;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES:
             return this.simulateFailures != SIMULATE_FAILURES_EDEFAULT;
-        case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PROBE_SPEC_CONFIGURATION:
-            return this.probeSpecConfiguration != null;
         }
         return super.eIsSet(featureID);
     }
