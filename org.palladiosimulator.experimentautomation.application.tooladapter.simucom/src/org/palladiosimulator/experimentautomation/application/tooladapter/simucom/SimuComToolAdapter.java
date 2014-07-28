@@ -52,7 +52,7 @@ public class SimuComToolAdapter implements IToolAdapter {
     }
 
     @Override
-    public boolean hasSupportFor(ToolConfiguration configuration) {
+    public boolean hasSupportFor(final ToolConfiguration configuration) {
         return SimucomtooladapterPackage.eINSTANCE.getSimuComConfiguration().isInstance(configuration);
     }
 
