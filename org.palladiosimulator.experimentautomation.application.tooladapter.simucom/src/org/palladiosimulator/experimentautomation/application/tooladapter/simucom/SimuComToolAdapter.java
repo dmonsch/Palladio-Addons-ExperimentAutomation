@@ -31,6 +31,9 @@ public class SimuComToolAdapter implements IToolAdapter {
     private static final String SIMULATOR_ID_SIMUCOM = "de.uka.ipd.sdq.codegen.simucontroller.simucom";
     private static final Logger LOGGER = Logger.getLogger(SimuComToolAdapter.class);
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public SequentialBlackboardInteractingJob<MDSDBlackboard> createRunAnalysisJob(final Experiment experiment,
             final ToolConfiguration toolConfig, final List<Variation> variations, final List<Long> factorLevels,
@@ -39,7 +42,8 @@ public class SimuComToolAdapter implements IToolAdapter {
         final SimuComConfig simuComConfig = createSimuComConfig(simuComToolConfig, experiment, factorLevels, repetition);
         final SimuComWorkflowConfiguration workflowConfig = createSimuComWorkflowConfiguration(simuComConfig);
 
-        final SequentialBlackboardInteractingJob<MDSDBlackboard> result = new SequentialBlackboardInteractingJob<MDSDBlackboard>();
+        final SequentialBlackboardInteractingJob<MDSDBlackboard> result;
+        result = new SequentialBlackboardInteractingJob<MDSDBlackboard>();
         try {
             result.add(new LogExperimentInformationJob(experiment, simuComConfig, variations, factorLevels, repetition));
             result.add(new SimuComJob(workflowConfig, null, false));
@@ -51,6 +55,9 @@ public class SimuComToolAdapter implements IToolAdapter {
         return result;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean hasSupportFor(final ToolConfiguration configuration) {
         return SimucomtooladapterPackage.eINSTANCE.getSimuComConfiguration().isInstance(configuration);

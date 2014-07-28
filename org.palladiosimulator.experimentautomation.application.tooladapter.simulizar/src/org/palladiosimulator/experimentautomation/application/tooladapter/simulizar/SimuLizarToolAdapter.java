@@ -29,6 +29,9 @@ public class SimuLizarToolAdapter implements IToolAdapter {
 
     private static final String SIMULATOR_ID_SIMULIZAR = "de.uka.ipd.sdq.codegen.simucontroller.simucom";
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public SequentialBlackboardInteractingJob<MDSDBlackboard> createRunAnalysisJob(final Experiment experiment,
             final ToolConfiguration toolConfig, final List<Variation> variations, final List<Long> factorLevels,
@@ -48,7 +51,10 @@ public class SimuLizarToolAdapter implements IToolAdapter {
         return result;
     }
 
-    @Override
+    /**
+     * {@inheritDoc}
+     */
+    @Override    
     public boolean hasSupportFor(final ToolConfiguration configuration) {
         return SimulizartooladapterPackage.eINSTANCE.getSimuLizarConfiguration().isInstance(configuration);
     }
