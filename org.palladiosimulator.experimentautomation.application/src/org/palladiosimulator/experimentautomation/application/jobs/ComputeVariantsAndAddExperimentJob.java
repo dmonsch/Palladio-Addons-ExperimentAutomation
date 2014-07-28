@@ -24,9 +24,9 @@ public class ComputeVariantsAndAddExperimentJob extends SequentialBlackboardInte
      * Default Constructor.
      * 
      * @param experiment
-     *            The experiment to be conducted.
+     *            the experiment to be conducted.
      * @param toolConfiguration
-     *            The given analysis tool, e.g., SimuCom.
+     *            the given analysis tool, e.g., SimuCom.
      */
     public ComputeVariantsAndAddExperimentJob(final Experiment experiment, final ToolConfiguration toolConfiguration) {
         super(false);
@@ -44,6 +44,18 @@ public class ComputeVariantsAndAddExperimentJob extends SequentialBlackboardInte
      * currentFactorLevels are empty. Seems to be something statistical done here like trying out
      * each pair-wise combination... Related to
      * http://en.wikipedia.org/wiki/Fractional_factorial_design ?
+     * 
+     * @param experiment
+     *            the experiment to be conducted.
+     * @param toolConfiguration
+     *            the given analysis tool, e.g., SimuCom.
+     * @param variations
+     *            the given variations to be considered.
+     * @param variants
+     *            the variants of the given variations.
+     * @param currentFactorLevels
+     *            the concrete values to be used for a given variation. For each factor, there is a
+     *            corresponding variant with the same index value.
      */
     private void computeVariantsAndAddJob(final Experiment experiment, final ToolConfiguration toolConfiguration,
             final List<Variation> variations, final List<Variation> variants, final List<Long> currentFactorLevels) {

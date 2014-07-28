@@ -212,6 +212,7 @@ public class AbstractSimulationConfigFactory {
      * {@link AbstractSimulationConfig}.
      * 
      * @param map
+     *            the attributes map for a run configuration.
      */
     private static void adjustMapValueTypes(final Map<String, Object> map) {
         for (final Entry<String, Object> entry : map.entrySet()) {

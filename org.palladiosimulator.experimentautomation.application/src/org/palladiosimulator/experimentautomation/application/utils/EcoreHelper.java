@@ -22,8 +22,10 @@ public class EcoreHelper {
      * instance contained in the containment hierarchy of the copied object.
      * 
      * @param source
-     *            the object that is to be copied
-     * @return Copy of the source object
+     *            the object that is to be copied.
+     * @param <T>
+     *            Type of the EObject.
+     * @return Copy of the source object.
      */
     public static <T extends EObject> T copy(final T source) {
         final T copy = EcoreUtil.copy(source);
