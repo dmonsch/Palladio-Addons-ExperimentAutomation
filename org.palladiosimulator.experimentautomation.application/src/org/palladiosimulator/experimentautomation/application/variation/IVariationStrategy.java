@@ -9,6 +9,9 @@ import org.eclipse.emf.ecore.EObject;
  * closed workload). Second, a strategy must allow to assign a concrete value to the specified
  * element (e.g., 10 users).
  * 
+ * Implementing classes are can be referenced from Experiment Automation's variation meta class. The
+ * "pcm.variation" model includes such references that are used in the PCM context.
+ * 
  * @author Sebastian Lehrig
  */
 public interface IVariationStrategy {
