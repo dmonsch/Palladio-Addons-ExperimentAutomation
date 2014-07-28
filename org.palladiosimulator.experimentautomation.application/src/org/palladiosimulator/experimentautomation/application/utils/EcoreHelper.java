@@ -23,6 +23,7 @@ public class EcoreHelper {
      * 
      * @param source
      *            the object that is to be copied
+     * @return Copy of the source object
      */
     public static <T extends EObject> T copy(final T source) {
         final T copy = EcoreUtil.copy(source);
@@ -51,13 +52,13 @@ public class EcoreHelper {
             }
         }
         return null;
-    }    
+    }
 
-    public static <T extends EClass> EObject loadResourceFromBundle(final ResourceSet resourceSet,
-            final Bundle bundle, final IPath modelLocation, final T expectedType) {
+    public static <T extends EClass> EObject loadResourceFromBundle(final ResourceSet resourceSet, final Bundle bundle,
+            final IPath modelLocation, final T expectedType) {
         LOGGER.info("Loading resource " + modelLocation.toString() + " from bundle");
-        final URI modelUri = URI.createFileURI(modelLocation.toOSString());// absolutePathToBundleURI(bundle,
-                                                                           // modelLocation);
+        final URI modelUri = URI.createFileURI(modelLocation.toOSString()); // absolutePathToBundleURI(bundle,
+                                                                            // modelLocation);
         final Resource r = resourceSet.getResource(modelUri, true);
 
         final EObject o = r.getContents().get(0);

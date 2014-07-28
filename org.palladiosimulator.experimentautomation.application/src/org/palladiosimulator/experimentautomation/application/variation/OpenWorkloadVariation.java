@@ -1,8 +1,8 @@
 package org.palladiosimulator.experimentautomation.application.variation;
 
 import org.eclipse.emf.ecore.EObject;
-
 import org.palladiosimulator.experimentautomation.application.utils.PCMModelHelper;
+
 import de.uka.ipd.sdq.pcm.core.CoreFactory;
 import de.uka.ipd.sdq.pcm.core.PCMRandomVariable;
 import de.uka.ipd.sdq.pcm.usagemodel.OpenWorkload;

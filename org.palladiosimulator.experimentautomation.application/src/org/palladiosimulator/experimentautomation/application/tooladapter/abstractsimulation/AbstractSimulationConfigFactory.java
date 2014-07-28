@@ -217,9 +217,8 @@ public class AbstractSimulationConfigFactory {
         for (final Entry<String, Object> entry : map.entrySet()) {
             final Object value = entry.getValue();
 
-            if (value instanceof Boolean) {
-                // do nothing: As an exception, Booleans are not represented by string
-            } else {
+            // As an exception, Booleans are not represented by string
+            if (!(value instanceof Boolean)) {
                 entry.setValue(value.toString());
             }
         }

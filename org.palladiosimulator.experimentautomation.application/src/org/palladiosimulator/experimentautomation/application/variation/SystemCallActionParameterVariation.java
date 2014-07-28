@@ -27,9 +27,6 @@ public class SystemCallActionParameterVariation implements IVariationStrategy {
     private VariableUsage getRecordSizeVariable(EntryLevelSystemCall call) {
         List<VariableUsage> parameterUsages = call.getInputParameterUsages_EntryLevelSystemCall();
         for (VariableUsage variableUsage : parameterUsages) {
-            if (variableUsage.getNamedReference__VariableUsage().getReferenceName().equals(SEARCH_STRING)) {
-                ;
-            }
             return variableUsage;
         }
         return null;

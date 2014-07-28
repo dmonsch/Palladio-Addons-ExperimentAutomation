@@ -17,7 +17,7 @@ import de.uka.ipd.sdq.pcm.seff.ServiceEffectSpecification;
 public class LoadBalancingVariation implements IVariationStrategy {
 
     private BasicComponent loadBalancer;
-    private static final Logger logger = Logger.getLogger(LoadBalancingVariation.class);
+    private static final Logger LOGGER = Logger.getLogger(LoadBalancingVariation.class);
 
     @Override
     public void setVariedObject(EObject o) {
@@ -54,7 +54,7 @@ public class LoadBalancingVariation implements IVariationStrategy {
         for (ServiceEffectSpecification serviceEffectSpecification : seffs) {
 
             BranchAction branch = getBranchAction(serviceEffectSpecification);
-            logger.debug("Number of branches: " + branch.getBranches_Branch().size() + ", new BranchProbability: "
+            LOGGER.debug("Number of branches: " + branch.getBranches_Branch().size() + ", new BranchProbability: "
                     + branchProbability);
 
             for (int i = 0; i < branch.getBranches_Branch().size(); i++) {

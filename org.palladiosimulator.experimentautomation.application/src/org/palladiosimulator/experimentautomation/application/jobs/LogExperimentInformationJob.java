@@ -16,11 +16,11 @@ public class LogExperimentInformationJob extends SequentialBlackboardInteracting
 
     // private static final Logger LOGGER = Logger.getLogger(LogExperimentInformationJob.class);
 
-    final private Experiment experiment;
-    final private AbstractSimulationConfig simulationConfig;
-    final private List<Variation> variations;
-    final private List<Long> factorLevels;
-    final private int repetition;
+    private final Experiment experiment;
+    private final AbstractSimulationConfig simulationConfig;
+    private final List<Variation> variations;
+    private final List<Long> factorLevels;
+    private final int repetition;
 
     public LogExperimentInformationJob(final Experiment experiment, final AbstractSimulationConfig simulationConfig,
             final List<Variation> variations, final List<Long> factorLevels, final int repetition) {
@@ -33,6 +33,8 @@ public class LogExperimentInformationJob extends SequentialBlackboardInteracting
 
     /**
      * TODO How to enable logging? [Lehrig]
+     * 
+     * {@inheritDoc}
      */
     @Override
     public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
@@ -46,10 +48,10 @@ public class LogExperimentInformationJob extends SequentialBlackboardInteracting
         stringBuilder.append(this.simulationConfig.getNameBase());
         stringBuilder.append("\"\n");
 
-        for (int i=0; i<this.variations.size(); i++) {
+        for (int i = 0; i < this.variations.size(); i++) {
             final Variation variation = this.variations.get(i);
             final Long factor = this.factorLevels.get(i);
-            
+
             stringBuilder.append("VARIATION: ");
             stringBuilder.append(variation.getName());
             stringBuilder.append("[");

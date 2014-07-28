@@ -14,7 +14,7 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 
 public class CleanUpRecorderJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
 
-    final private PersistenceFramework persistenceFramework;
+    private final PersistenceFramework persistenceFramework;
 
     public CleanUpRecorderJob(final PersistenceFramework persistenceFramework) {
         this.persistenceFramework = persistenceFramework;
@@ -27,9 +27,8 @@ public class CleanUpRecorderJob extends SequentialBlackboardInteractingJob<MDSDB
             final Datasource datasource = sensorFramework.getDatasource();
 
             SensorFrameworkFactory.closeDatasource(datasource);
-        } else if (AbstractsimulationPackage.eINSTANCE.getEDP2().isInstance(this.persistenceFramework)) {
+        } else if (!AbstractsimulationPackage.eINSTANCE.getEDP2().isInstance(this.persistenceFramework)) {
             // For EDP2, nothing to do!
-        } else {
             throw new IllegalArgumentException("Tried to clean up unknown persistency framework");
         }
 

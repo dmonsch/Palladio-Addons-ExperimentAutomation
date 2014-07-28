@@ -2,15 +2,15 @@ package org.palladiosimulator.experimentautomation.application.variation;
 
 import org.apache.log4j.Logger;
 import org.eclipse.emf.ecore.EObject;
-
 import org.palladiosimulator.experimentautomation.application.utils.PCMModelHelper;
+
 import de.uka.ipd.sdq.pcm.core.CoreFactory;
 import de.uka.ipd.sdq.pcm.core.PCMRandomVariable;
 import de.uka.ipd.sdq.pcm.usagemodel.Loop;
 
 public class LoopIterationVariation implements IVariationStrategy {
 
-    private static final Logger logger = Logger.getLogger(LoopIterationVariation.class);
+    private static final Logger LOGGER = Logger.getLogger(LoopIterationVariation.class);
 
     private Loop loop;
 
@@ -26,7 +26,7 @@ public class LoopIterationVariation implements IVariationStrategy {
     public String vary(final long value) {
         int intValue;
         if (value > Integer.MAX_VALUE) {
-            logger.warn("Warning: Converted long to int, but the value was larger than MAXINT.");
+            LOGGER.warn("Warning: Converted long to int, but the value was larger than MAXINT.");
             intValue = Integer.MAX_VALUE;
         }
         intValue = new Long(value).intValue();

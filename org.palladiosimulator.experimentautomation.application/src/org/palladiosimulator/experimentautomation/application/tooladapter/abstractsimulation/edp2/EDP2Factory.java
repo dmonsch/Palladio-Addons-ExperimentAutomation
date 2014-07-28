@@ -37,7 +37,7 @@ public class EDP2Factory {
                 final FileDatasource fileDatasource = (FileDatasource) datasource;
                 final File file = new File(fileDatasource.getLocation());
                 final URI fileURI = URI.createFileURI(file.getAbsoluteFile().toString());
-                
+
                 if (ldRepository == null || !ldRepository.getUri().equals(fileURI.toString())) {
                     repository = RepositoryManager.initializeLocalDirectoryRepository(file);
                 } else {
