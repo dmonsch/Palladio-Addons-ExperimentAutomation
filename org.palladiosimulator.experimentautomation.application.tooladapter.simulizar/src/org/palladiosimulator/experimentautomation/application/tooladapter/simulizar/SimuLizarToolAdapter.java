@@ -48,7 +48,7 @@ public class SimuLizarToolAdapter implements IToolAdapter {
     }
 
     @Override
-    public boolean hasSupportFor(ToolConfiguration configuration) {
+    public boolean hasSupportFor(final ToolConfiguration configuration) {
         return SimulizartooladapterPackage.eINSTANCE.getSimuLizarConfiguration().isInstance(configuration);
     }
 
