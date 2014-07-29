@@ -17,6 +17,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumbe
 import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework;
 import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition;
 import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
+import org.palladiosimulator.experimentautomation.application.VariationFactorTuple;
 import org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.edp2.EDP2Factory;
 import org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.sensorframework.SensorFrameworkFactory;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
@@ -42,22 +43,21 @@ public class AbstractSimulationConfigFactory {
      * Fills out the run configuration features of an {@link AbstractSimulationConfig}.
      * 
      * @param experiment
-     *            The experiment specification.
+     *            the experiment specification.
      * @param simConfig
-     *            The configuration of the concrete analyzer.
+     *            the configuration of the concrete analyzer.
      * @param simulatorID
-     *            The ID of the used analyzer.
-     * @param factorLevels
-     *            Factor levels giving information about the current variation. Needed for computing
-     *            the name of the experiment run.
+     *            the ID of the used analyzer.
+     * @param variationFactorTuples
+     *            the variations and according value factors.
      * @param repetition
-     *            The current repetition number for the given experiment and variant. Needed for
+     *            the current repetition number for the given experiment and variant. Needed for
      *            computing the name of the experiment run.
-     * @return A filled-out run configuration.
+     * @return a filled-out run configuration.
      */
     public static Map<String, Object> createConfigMap(final Experiment experiment,
-            final AbstractSimulationConfiguration simConfig, final String simulatorID, final List<Long> factorLevels,
-            final int repetition) {
+            final AbstractSimulationConfiguration simConfig, final String simulatorID,
+            final List<VariationFactorTuple> variationFactorTuples, final int repetition) {
         final Map<String, Object> map = new HashMap<String, Object>();
 
         /***************************************************/
@@ -68,7 +68,7 @@ public class AbstractSimulationConfigFactory {
 
         /** Experiment Run */
         map.put(AbstractSimulationConfig.EXPERIMENT_RUN,
-                computeExperimentName(experiment, simConfig, factorLevels, repetition));
+                computeExperimentName(experiment, simConfig, variationFactorTuples, repetition));
 
         /** Simulation Results */
         final PersistenceFramework persistenceFramework = simConfig.getPersistenceFramework();
@@ -107,12 +107,13 @@ public class AbstractSimulationConfigFactory {
     }
 
     private static String computeExperimentName(final Experiment experiment,
-            final AbstractSimulationConfiguration simConfig, final List<Long> factorLevels, final int repetition) {
+            final AbstractSimulationConfiguration simConfig, final List<VariationFactorTuple> variationFactorTuples,
+            final int repetition) {
         final StringBuilder stringBuilder = new StringBuilder();
 
         stringBuilder.append(experiment.getName());
         stringBuilder.append(" ");
-        stringBuilder.append(factorLevels.toString());
+        stringBuilder.append(variationFactorTuples.toString());
         stringBuilder.append("-");
         stringBuilder.append(repetition);
         stringBuilder.append(" (");

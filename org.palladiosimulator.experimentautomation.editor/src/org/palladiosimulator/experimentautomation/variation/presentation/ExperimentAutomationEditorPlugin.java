@@ -42,9 +42,11 @@ public final class ExperimentAutomationEditorPlugin extends EMFPlugin {
      * @generated
      */
     public ExperimentAutomationEditorPlugin() {
-        super(new ResourceLocator[] { EDP2EditPlugin.INSTANCE, IdentifierEditPlugin.INSTANCE,
-                MetricSpecEditPlugin.INSTANCE, PalladioComponentModelEditPlugin.INSTANCE, PmsEditPlugin.INSTANCE,
-                ProbabilityFunctionEditPlugin.INSTANCE, StoexEditPlugin.INSTANCE, UnitsEditPlugin.INSTANCE, });
+        super(new ResourceLocator[] {
+                EDP2EditPlugin.INSTANCE, IdentifierEditPlugin.INSTANCE, MetricSpecEditPlugin.INSTANCE,
+                PalladioComponentModelEditPlugin.INSTANCE, PmsEditPlugin.INSTANCE,
+                ProbabilityFunctionEditPlugin.INSTANCE, StoexEditPlugin.INSTANCE, UnitsEditPlugin.INSTANCE,
+        });
     }
 
     /**

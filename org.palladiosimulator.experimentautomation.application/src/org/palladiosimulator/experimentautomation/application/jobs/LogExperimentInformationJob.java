@@ -3,8 +3,8 @@ package org.palladiosimulator.experimentautomation.application.jobs;
 import java.util.List;
 
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.palladiosimulator.experimentautomation.application.VariationFactorTuple;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
-import org.palladiosimulator.experimentautomation.experiments.Variation;
 
 import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
@@ -18,16 +18,14 @@ public class LogExperimentInformationJob extends SequentialBlackboardInteracting
 
     private final Experiment experiment;
     private final AbstractSimulationConfig simulationConfig;
-    private final List<Variation> variations;
-    private final List<Long> factorLevels;
+    private final List<VariationFactorTuple> variationFactorTuples;
     private final int repetition;
 
     public LogExperimentInformationJob(final Experiment experiment, final AbstractSimulationConfig simulationConfig,
-            final List<Variation> variations, final List<Long> factorLevels, final int repetition) {
+            final List<VariationFactorTuple> variationFactorTuples, final int repetition) {
         this.experiment = experiment;
         this.simulationConfig = simulationConfig;
-        this.variations = variations;
-        this.factorLevels = factorLevels;
+        this.variationFactorTuples = variationFactorTuples;
         this.repetition = repetition;
     }
 
@@ -48,16 +46,13 @@ public class LogExperimentInformationJob extends SequentialBlackboardInteracting
         stringBuilder.append(this.simulationConfig.getNameBase());
         stringBuilder.append("\"\n");
 
-        for (int i = 0; i < this.variations.size(); i++) {
-            final Variation variation = this.variations.get(i);
-            final Long factor = this.factorLevels.get(i);
-
+        for (final VariationFactorTuple variationFactorTuple : variationFactorTuples) {
             stringBuilder.append("VARIATION: ");
-            stringBuilder.append(variation.getName());
+            stringBuilder.append(variationFactorTuple.getVariation().getName());
             stringBuilder.append("[");
-            stringBuilder.append(factor);
+            stringBuilder.append(variationFactorTuple.getFactor());
             stringBuilder.append("](");
-            stringBuilder.append(variation.getVariedObjectId());
+            stringBuilder.append(variationFactorTuple.getVariation().getVariedObjectId());
             stringBuilder.append(")\n");
         }
 

@@ -495,6 +495,31 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     }
 
     /**
+     * This keeps track of the one adapter used for all
+     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider}
+     * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    protected NestedIntervalsValueProviderItemProvider nestedIntervalsValueProviderItemProvider;
+
+    /**
+     * This creates an adapter for a
+     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider}.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public Adapter createNestedIntervalsValueProviderAdapter() {
+        if (this.nestedIntervalsValueProviderItemProvider == null) {
+            this.nestedIntervalsValueProviderItemProvider = new NestedIntervalsValueProviderItemProvider(this);
+        }
+
+        return this.nestedIntervalsValueProviderItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * 
@@ -647,6 +672,9 @@ ComposeableAdapterFactory, IChangeNotifier, IDisposable {
         }
         if (this.reconfigurationRulesFolderItemProvider != null) {
             this.reconfigurationRulesFolderItemProvider.dispose();
+        }
+        if (this.nestedIntervalsValueProviderItemProvider != null) {
+            this.nestedIntervalsValueProviderItemProvider.dispose();
         }
     }
 

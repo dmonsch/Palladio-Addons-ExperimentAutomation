@@ -2,9 +2,9 @@ package org.palladiosimulator.experimentautomation.application.tooladapter;
 
 import java.util.List;
 
+import org.palladiosimulator.experimentautomation.application.VariationFactorTuple;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
-import org.palladiosimulator.experimentautomation.experiments.Variation;
 
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
@@ -24,17 +24,15 @@ public interface IToolAdapter {
      *            the experiment to be conducted.
      * @param toolConfiguration
      *            the analysis tool to be used.
-     * @param variations
-     *            the variations to be considered in this experiment run.
-     * @param factorLevels
-     *            the concrete factor values of each variation.
+     * @param variationFactorTuples
+     *            the variations and according value factors.
      * @param repetition
      *            the current repetition number of this experiment run; used for statistical
      *            significance.
      * @return the job conducting the specified experiment run.
      */
     public SequentialBlackboardInteractingJob<MDSDBlackboard> createRunAnalysisJob(final Experiment experiment,
-            final ToolConfiguration toolConfiguration, final List<Variation> variations, final List<Long> factorLevels,
+            final ToolConfiguration toolConfiguration, final List<VariationFactorTuple> variationFactorTuples,
             final int repetition);
 
     /**

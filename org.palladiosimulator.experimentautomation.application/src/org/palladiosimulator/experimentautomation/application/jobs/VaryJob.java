@@ -4,10 +4,10 @@ import java.util.List;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EObject;
+import org.palladiosimulator.experimentautomation.application.VariationFactorTuple;
 import org.palladiosimulator.experimentautomation.application.utils.EcoreHelper;
 import org.palladiosimulator.experimentautomation.application.variation.IVariationStrategy;
 import org.palladiosimulator.experimentautomation.application.variation.VariationStrategyFactory;
-import org.palladiosimulator.experimentautomation.experiments.Variation;
 
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
@@ -24,48 +24,42 @@ import de.uka.ipd.sdq.workflow.pcm.jobs.LoadPCMModelsIntoBlackboardJob;
  */
 public class VaryJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
 
-    private final List<Variation> variations;
-    private final List<Long> factorLevels;
+    private final List<VariationFactorTuple> variationFactorTuples;
 
     /**
      * Default Constructor.
      * 
-     * @param variations
-     *            Variations considered for the experiment.
-     * @param factorLevels
-     *            Factor levels considered for the experiment.
+     * @param variationFactorTuples
+     *            the variations and according value factors.
      */
-    public VaryJob(final List<Variation> variations, final List<Long> factorLevels) {
+    public VaryJob(final List<VariationFactorTuple> variationFactorTuples) {
         super(false);
 
-        this.variations = variations;
-        this.factorLevels = factorLevels;
+        this.variationFactorTuples = variationFactorTuples;
     }
 
     @Override
     public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
         // modify the copied PCM model according to the variation descriptions; one by one
-        for (int i = 0; i < this.variations.size(); i++) {
-            final Variation variation = this.variations.get(i);
-            final Long currentValue = this.factorLevels.get(i);
-
-            this.executeVariation(variation, currentValue);
+        for (final VariationFactorTuple variationAndFactor : variationFactorTuples) {
+            this.executeVariation(variationAndFactor);
         }
     }
 
-    private void executeVariation(final Variation variation, Long currentValue) {
+    private void executeVariation(final VariationFactorTuple variationAndFactor) {
         ResourceSetPartition pcmPartition = this.getBlackboard().getPartition(
                 LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID);
-        final EObject variedObject = EcoreHelper.findModelElementById(pcmPartition.getResourceSet(),
-                variation.getVariedObjectId());
+        final EObject variedObject = EcoreHelper.findModelElementById(pcmPartition.getResourceSet(), variationAndFactor
+                .getVariation().getVariedObjectId());
 
         if (variedObject == null) {
-            throw new RuntimeException("Unable to find model element with ID " + variation.getVariedObjectId()
-                    + " in resource set");
+            throw new RuntimeException("Unable to find model element with ID "
+                    + variationAndFactor.getVariation().getVariedObjectId() + " in resource set");
         }
 
-        final IVariationStrategy variationStrategy = VariationStrategyFactory.createStrategy(variation.getType());
+        final IVariationStrategy variationStrategy = VariationStrategyFactory.createStrategy(variationAndFactor
+                .getVariation().getType());
         variationStrategy.setVariedObject(variedObject);
-        variationStrategy.vary(currentValue);
+        variationStrategy.vary(variationAndFactor.getFactor());
     }
 }

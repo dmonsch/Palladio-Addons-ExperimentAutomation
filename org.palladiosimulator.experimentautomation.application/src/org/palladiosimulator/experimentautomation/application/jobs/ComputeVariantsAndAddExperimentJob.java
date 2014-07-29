@@ -3,6 +3,7 @@ package org.palladiosimulator.experimentautomation.application.jobs;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.palladiosimulator.experimentautomation.application.VariationFactorTuple;
 import org.palladiosimulator.experimentautomation.application.variation.valueprovider.IValueProviderStrategy;
 import org.palladiosimulator.experimentautomation.application.variation.valueprovider.ValueProviderFactory;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
@@ -33,7 +34,7 @@ public class ComputeVariantsAndAddExperimentJob extends SequentialBlackboardInte
 
         // Note: Calling recursive method
         this.computeVariantsAndAddJob(experiment, toolConfiguration, experiment.getVariations(),
-                new ArrayList<Variation>(), new ArrayList<Long>());
+                new ArrayList<VariationFactorTuple>());
     }
 
     /**
@@ -51,23 +52,18 @@ public class ComputeVariantsAndAddExperimentJob extends SequentialBlackboardInte
      *            the given analysis tool, e.g., SimuCom.
      * @param variations
      *            the given variations to be considered.
-     * @param variants
-     *            the variants of the given variations.
-     * @param currentFactorLevels
-     *            the concrete values to be used for a given variation. For each factor, there is a
-     *            corresponding variant with the same index value.
+     * @param variationFactorTuples
+     *            the variants of the given variations as well as the concrete values to be used for
+     *            a given variation.
      */
     private void computeVariantsAndAddJob(final Experiment experiment, final ToolConfiguration toolConfiguration,
-            final List<Variation> variations, final List<Variation> variants, final List<Long> currentFactorLevels) {
+            final List<Variation> variations, final List<VariationFactorTuple> variationFactorTuples) {
         if (variations.isEmpty()) {
-            final List<Variation> variantsCopy = new ArrayList<Variation>();
-            variantsCopy.addAll(variants);
+            final List<VariationFactorTuple> variationsAndFactorsCopy = new ArrayList<VariationFactorTuple>();
+            variationsAndFactorsCopy.addAll(variationFactorTuples);
 
-            final List<Long> factorsCopy = new ArrayList<Long>();
-            factorsCopy.addAll(currentFactorLevels);
-
-            this.add(new VaryJob(variantsCopy, factorsCopy));
-            this.add(new RepeatExperimentJob(experiment, toolConfiguration, variantsCopy, factorsCopy));
+            this.add(new VaryJob(variationsAndFactorsCopy));
+            this.add(new RepeatExperimentJob(experiment, toolConfiguration, variationsAndFactorsCopy));
         } else {
             // obtain variation description
             final List<Variation> copy = new ArrayList<Variation>();
@@ -87,13 +83,9 @@ public class ComputeVariantsAndAddExperimentJob extends SequentialBlackboardInte
                 }
 
                 if (factorLevel >= variation.getMinValue() && factorLevel <= variation.getMaxValue()) {
-                    variants.add(variation);
-                    currentFactorLevels.add(factorLevel);
-
-                    this.computeVariantsAndAddJob(experiment, toolConfiguration, copy, variants, currentFactorLevels);
-
-                    variants.remove(variants.size() - 1);
-                    currentFactorLevels.remove(currentFactorLevels.size() - 1);
+                    variationFactorTuples.add(new VariationFactorTuple(variation, factorLevel));
+                    this.computeVariantsAndAddJob(experiment, toolConfiguration, copy, variationFactorTuples);
+                    variationFactorTuples.remove(variationFactorTuples.size() - 1);
                 }
 
                 iteration++;

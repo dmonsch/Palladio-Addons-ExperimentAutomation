@@ -2,9 +2,9 @@ package org.palladiosimulator.experimentautomation.application.jobs;
 
 import java.util.List;
 
+import org.palladiosimulator.experimentautomation.application.VariationFactorTuple;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
-import org.palladiosimulator.experimentautomation.experiments.Variation;
 
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
@@ -20,20 +20,18 @@ public class RepeatExperimentJob extends SequentialBlackboardInteractingJob<MDSD
      * Default Constructor.
      * 
      * @param experiment
-     *            The experiment to be conducted.
+     *            the experiment to be conducted.
      * @param toolConfiguration
-     *            The given analysis tool, e.g., SimuCom.
-     * @param variations
-     *            Variations considered for the experiment.
-     * @param factorLevels
-     *            Factor levels considered for the experiment.
+     *            the given analysis tool, e.g., SimuCom.
+     * @param variationFactorTuples
+     *            the variations and according value factors.
      */
     public RepeatExperimentJob(final Experiment experiment, final ToolConfiguration toolConfiguration,
-            final List<Variation> variations, final List<Long> factorLevels) {
+            final List<VariationFactorTuple> variationFactorTuples) {
         super(false);
 
         for (int repetition = 1; repetition <= experiment.getRepetitions(); repetition++) {
-            this.add(new RunExperimentJob(experiment, toolConfiguration, variations, factorLevels, repetition));
+            this.add(new RunExperimentJob(experiment, toolConfiguration, variationFactorTuples, repetition));
         }
     }
 }

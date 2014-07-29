@@ -3,6 +3,7 @@ package org.palladiosimulator.experimentautomation.application.variation.valuepr
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.SetValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.ValueProvider;
@@ -22,6 +23,9 @@ public class ValueProviderFactory {
         } else if (ExperimentsPackage.eINSTANCE.getLinearValueProvider().isInstance(specification)) {
             final LinearValueProvider p = (LinearValueProvider) specification;
             return new LinearValueProviderStrategy(p);
+        } else if (ExperimentsPackage.eINSTANCE.getNestedIntervalsValueProvider().isInstance(specification)) {
+            final NestedIntervalsValueProvider p = (NestedIntervalsValueProvider) specification;
+            return new NestedIntervalsValueProviderStrategy(p);
         }
         throw new RuntimeException("Could not find a value provider strategy for " + specification.eClass().getName());
     }

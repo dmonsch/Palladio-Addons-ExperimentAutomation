@@ -254,6 +254,9 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
 
         newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.VARIATION__VALUE_PROVIDER,
                 ExperimentsFactory.eINSTANCE.createLinearValueProvider()));
+
+        newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.VARIATION__VALUE_PROVIDER,
+                ExperimentsFactory.eINSTANCE.createNestedIntervalsValueProvider()));
     }
 
     /**

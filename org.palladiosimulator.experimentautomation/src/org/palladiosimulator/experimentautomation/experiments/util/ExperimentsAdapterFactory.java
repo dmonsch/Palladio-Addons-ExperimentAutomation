@@ -17,6 +17,7 @@ import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.Modification;
+import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime;
 import org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign;
 import org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider;
@@ -184,6 +185,11 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
         @Override
         public Adapter caseReconfigurationRulesFolder(final ReconfigurationRulesFolder object) {
             return ExperimentsAdapterFactory.this.createReconfigurationRulesFolderAdapter();
+        }
+
+        @Override
+        public Adapter caseNestedIntervalsValueProvider(final NestedIntervalsValueProvider object) {
+            return ExperimentsAdapterFactory.this.createNestedIntervalsValueProviderAdapter();
         }
 
         @Override
@@ -517,6 +523,21 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createReconfigurationRulesFolderAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '
+     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider
+     * <em>Nested Intervals Value Provider</em>}'. <!-- begin-user-doc --> This default
+     * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
+     * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     *
+     * @return the new adapter.
+     * @see org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider
+     * @generated
+     */
+    public Adapter createNestedIntervalsValueProviderAdapter() {
         return null;
     }
 

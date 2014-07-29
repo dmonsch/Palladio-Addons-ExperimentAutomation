@@ -131,6 +131,12 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="folderUri" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NestedIntervalsValueProvider" eSuperTypes="#//experiments/ValueProvider">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="minValue" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxValue" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="abstractsimulation" nsURI="http://palladiosimulator.org/ExperimentAutomation/AbstractSimulation/1.0"
       nsPrefix="ExperimentAutomation.Experiments.AbstractSimulation">

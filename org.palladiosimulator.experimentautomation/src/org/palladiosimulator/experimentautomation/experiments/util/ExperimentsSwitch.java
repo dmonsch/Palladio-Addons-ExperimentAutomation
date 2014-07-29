@@ -16,6 +16,7 @@ import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.Modification;
+import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime;
 import org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign;
 import org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider;
@@ -270,6 +271,17 @@ public class ExperimentsSwitch<T> extends Switch<T> {
         case ExperimentsPackage.RECONFIGURATION_RULES_FOLDER: {
             final ReconfigurationRulesFolder reconfigurationRulesFolder = (ReconfigurationRulesFolder) theEObject;
             T result = this.caseReconfigurationRulesFolder(reconfigurationRulesFolder);
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
+            return result;
+        }
+        case ExperimentsPackage.NESTED_INTERVALS_VALUE_PROVIDER: {
+            final NestedIntervalsValueProvider nestedIntervalsValueProvider = (NestedIntervalsValueProvider) theEObject;
+            T result = this.caseNestedIntervalsValueProvider(nestedIntervalsValueProvider);
+            if (result == null) {
+                result = this.caseValueProvider(nestedIntervalsValueProvider);
+            }
             if (result == null) {
                 result = this.defaultCase(theEObject);
             }
@@ -606,6 +618,22 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseReconfigurationRulesFolder(final ReconfigurationRulesFolder object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '
+     * <em>Nested Intervals Value Provider</em>'. <!-- begin-user-doc --> This implementation
+     * returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
+     *
+     * @param object
+     *            the target of the switch.
+     * @return the result of interpreting the object as an instance of '
+     *         <em>Nested Intervals Value Provider</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseNestedIntervalsValueProvider(final NestedIntervalsValueProvider object) {
         return null;
     }
 

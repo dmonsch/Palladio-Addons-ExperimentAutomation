@@ -2,6 +2,6 @@ package org.palladiosimulator.experimentautomation.application.variation.valuepr
 
 public interface IValueProviderStrategy {
 
-    public long valueAtPosition(int position);
+    public long valueAtPosition(final int position);
 
 }

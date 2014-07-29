@@ -28,7 +28,8 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="3.10.0",
  org.palladiosimulator.commons;bundle-version="1.0.0",
  org.palladiosimulator.simulizar
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: org.palladiosimulator.experimentautomation.application.jobs,
+Export-Package: org.palladiosimulator.experimentautomation.application,
+ org.palladiosimulator.experimentautomation.application.jobs,
  org.palladiosimulator.experimentautomation.application.tooladapter,
  org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation,
  org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.sensorframework,
