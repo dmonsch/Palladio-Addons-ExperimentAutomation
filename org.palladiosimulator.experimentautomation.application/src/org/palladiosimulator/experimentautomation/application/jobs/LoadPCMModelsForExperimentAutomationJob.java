@@ -29,9 +29,9 @@ import de.uka.ipd.sdq.workflow.pcm.jobs.LoadPCMModelsIntoBlackboardJob;
 /**
  * Loads the PCM models given in the configuration into an MDSD blackboard. Uses the initial model
  * of Experiment Automation to receive the referred PCM models.
- * 
+ *
  * TODO Copy model before putting it into blackboard [Lehrig]
- * 
+ *
  * @author Sebastian Lehrig
  */
 public class LoadPCMModelsForExperimentAutomationJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
@@ -40,7 +40,7 @@ public class LoadPCMModelsForExperimentAutomationJob extends SequentialBlackboar
 
     private final InitialModel initialModel;
 
-    public LoadPCMModelsForExperimentAutomationJob(InitialModel initialModel) {
+    public LoadPCMModelsForExperimentAutomationJob(final InitialModel initialModel) {
         super(false);
         this.initialModel = initialModel;
     }
@@ -82,7 +82,7 @@ public class LoadPCMModelsForExperimentAutomationJob extends SequentialBlackboar
             pmsPartition.loadModel(pmsModel.eResource().getURI());
         }
         this.getBlackboard().addPartition(LoadPMSModelIntoBlackboardJob.PMS_MODEL_PARTITION_ID, pmsPartition);
-        pmsPartition.resolveAllProxiesToPCM();
+        pmsPartition.resolveAllProxies();
 
         // configure partition & load SDM models
         final SDMResourceSetPartition sdmPartition = new SDMResourceSetPartition();
@@ -104,7 +104,7 @@ public class LoadPCMModelsForExperimentAutomationJob extends SequentialBlackboar
                     final String folderString = pathURL.toExternalForm().replace("file:", "");
 
                     folder = new File(folderString);
-                } catch (IOException e) {
+                } catch (final IOException e) {
                     LOGGER.warn("No SDM models found, SD reconfigurations disabled.", e);
                     return;
                 }
