@@ -64,7 +64,7 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
      */
     @Override
     public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
-        final boolean successWithLastRun = false; // FIXME Repeat based on previous analysis result
+        final boolean successWithLastRun = true; // FIXME Repeat based on previous analysis result
 
         if (this.tuples2nestedIntervals.size() > 0) {
             for (final VariationFactorTuple variationFactorTuple : this.tuples2nestedIntervals.keySet()) {
@@ -80,11 +80,14 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
                     this.tuples2nestedIntervals.remove(variationFactorTuple);
                 } else {
                     variationFactorTuple.setFactor(nestedInterval.valueAtPosition(0));
-                    System.out.println("Investigating new Value: " + nestedInterval.valueAtPosition(0));
                 }
             }
 
             if (this.tuples2nestedIntervals.size() > 0) {
+                final IBlackboardInteractingJob<MDSDBlackboard> varyJob = new VaryJob(this.variationFactorTuples);
+                varyJob.setBlackboard(this.getBlackboard());
+                varyJob.execute(monitor);
+
                 final IBlackboardInteractingJob<MDSDBlackboard> runAnalysisJob = this.toolAdapter.createRunAnalysisJob(
                         this.experiment, this.toolConfig, this.variationFactorTuples, this.repetition);
                 runAnalysisJob.setBlackboard(this.getBlackboard());
