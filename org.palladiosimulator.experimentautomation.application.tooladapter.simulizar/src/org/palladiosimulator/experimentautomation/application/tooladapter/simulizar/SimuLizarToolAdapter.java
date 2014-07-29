@@ -43,7 +43,7 @@ public class SimuLizarToolAdapter implements IToolAdapter {
                 experiment.getInitialModel().getReconfigurationRules());
 
         final SequentialBlackboardInteractingJob<MDSDBlackboard> result;
-        result = new SequentialBlackboardInteractingJob<MDSDBlackboard>();
+        result = new SequentialBlackboardInteractingJob<MDSDBlackboard>(true);
         result.addJob(new LogExperimentInformationJob(experiment, simuComConfig, variationFactorTuples, repetition));
         result.addJob(new PCMStartInterpretationJob(workflowConfig));
         result.addJob(new CleanUpRecorderJob(simuLizarToolConfig.getPersistenceFramework()));

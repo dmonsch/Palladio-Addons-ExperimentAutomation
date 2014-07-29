@@ -13,6 +13,7 @@ import org.palladiosimulator.experimentautomation.application.variation.valuepro
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 
+import de.uka.ipd.sdq.workflow.jobs.IBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.jobs.UserCanceledException;
@@ -31,6 +32,8 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
     public AddDynamicVariationJob(IToolAdapter toolAdapter, final Experiment experiment,
             final ToolConfiguration toolConfig, final List<VariationFactorTuple> variationFactorTuples,
             final int repetition) {
+        super(true);
+
         this.toolAdapter = toolAdapter;
         this.experiment = experiment;
         this.toolConfig = toolConfig;
@@ -61,7 +64,7 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
      */
     @Override
     public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
-        final boolean successWithLastRun = true; // FIXME Repeat based on previous analysis result
+        final boolean successWithLastRun = false; // FIXME Repeat based on previous analysis result
 
         if (this.tuples2nestedIntervals.size() > 0) {
             for (final VariationFactorTuple variationFactorTuple : this.tuples2nestedIntervals.keySet()) {
@@ -81,12 +84,14 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
                 }
             }
 
-            if (this.tuples2nestedIntervals.size() > 0) {   
-                this.addFirst(this);
-                this.addFirst(this.toolAdapter.createRunAnalysisJob(this.experiment, this.toolConfig,
-                        this.variationFactorTuples, this.repetition));
-                super.execute(monitor);
+            if (this.tuples2nestedIntervals.size() > 0) {
+                final IBlackboardInteractingJob<MDSDBlackboard> runAnalysisJob = this.toolAdapter.createRunAnalysisJob(
+                        this.experiment, this.toolConfig, this.variationFactorTuples, this.repetition);
+                runAnalysisJob.setBlackboard(this.getBlackboard());
+                runAnalysisJob.execute(monitor);
+
+                this.execute(monitor);
             }
-        }        
+        }
     }
 }
