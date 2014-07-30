@@ -32,8 +32,8 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
     @Override
     public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
 
-        if (false) {
-            this.runAnalysisJob.sloWasViolated();
+        if (true) {
+            this.runAnalysisJob.setSloWasViolated();
         }
 
     }
