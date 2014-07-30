@@ -3,6 +3,7 @@
 package org.palladiosimulator.experimentautomation.experiments;
 
 import org.eclipse.emf.ecore.EObject;
+import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
 import org.palladiosimulator.simulizar.pms.PMSModel;
 
 import de.uka.ipd.sdq.pcm.allocation.Allocation;
@@ -32,6 +33,9 @@ import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
  * <li>
  * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getPlatformMonitoringSpecification
  * <em>Platform Monitoring Specification</em>}</li>
+ * <li>
+ * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getServiceLevelObjectives
+ * <em>Service Level Objectives</em>}</li>
  * </ul>
  * </p>
  *
@@ -213,5 +217,34 @@ public interface InitialModel extends EObject {
      * @generated
      */
     void setPlatformMonitoringSpecification(PMSModel value);
+
+    /**
+     * Returns the value of the '<em><b>Service Level Objectives</b></em>' reference. <!--
+     * begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Service Level Objectives</em>' reference isn't clear, there really
+     * should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     *
+     * @return the value of the '<em>Service Level Objectives</em>' reference.
+     * @see #setServiceLevelObjectives(ServiceLevelObjectiveRepository)
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_ServiceLevelObjectives()
+     * @model
+     * @generated
+     */
+    ServiceLevelObjectiveRepository getServiceLevelObjectives();
+
+    /**
+     * Sets the value of the '
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getServiceLevelObjectives
+     * <em>Service Level Objectives</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @param value
+     *            the new value of the '<em>Service Level Objectives</em>' reference.
+     * @see #getServiceLevelObjectives()
+     * @generated
+     */
+    void setServiceLevelObjectives(ServiceLevelObjectiveRepository value);
 
 } // InitialModel

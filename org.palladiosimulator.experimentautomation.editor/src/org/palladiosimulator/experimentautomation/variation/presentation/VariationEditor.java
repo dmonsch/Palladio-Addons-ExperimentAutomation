@@ -123,6 +123,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.provider.Ab
 import org.palladiosimulator.experimentautomation.experiments.provider.ExperimentsItemProviderAdapterFactory;
 import org.palladiosimulator.experimentautomation.variation.provider.VariationItemProviderAdapterFactory;
 import org.palladiosimulator.metricspec.provider.MetricSpecItemProviderAdapterFactory;
+import org.palladiosimulator.servicelevelobjective.provider.ServicelevelObjectiveItemProviderAdapterFactory;
 import org.palladiosimulator.simulizar.pms.provider.PmsItemProviderAdapterFactory;
 
 import de.uka.ipd.sdq.identifier.provider.IdentifierItemProviderAdapterFactory;
@@ -698,6 +699,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
         this.adapterFactory.addAdapterFactory(new SubsystemItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new PmsItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ProbfunctionItemProviderAdapterFactory());
+        this.adapterFactory.addAdapterFactory(new ServicelevelObjectiveItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new StoexItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new UnitsItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());

@@ -27,11 +27,11 @@ import org.palladiosimulator.experimentautomation.variation.provider.ExperimentA
  * @generated
  */
 public class InitialModelItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public InitialModelItemProvider(final AdapterFactory adapterFactory) {
@@ -41,7 +41,7 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -55,6 +55,7 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
             this.addEventMiddleWareRepositoryPropertyDescriptor(object);
             this.addReconfigurationRulesPropertyDescriptor(object);
             this.addPlatformMonitoringSpecificationPropertyDescriptor(object);
+            this.addServiceLevelObjectivesPropertyDescriptor(object);
         }
         return this.itemPropertyDescriptors;
     }
@@ -62,7 +63,7 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * This adds a property descriptor for the Usage Model feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addUsageModelPropertyDescriptor(final Object object) {
@@ -71,13 +72,13 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
                 this.getString("_UI_InitialModel_usageModel_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_InitialModel_usageModel_feature",
                         "_UI_InitialModel_type"), ExperimentsPackage.Literals.INITIAL_MODEL__USAGE_MODEL, true, false,
-                        true, null, null, null));
+                true, null, null, null));
     }
 
     /**
      * This adds a property descriptor for the Allocation feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addAllocationPropertyDescriptor(final Object object) {
@@ -86,13 +87,13 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
                 this.getString("_UI_InitialModel_allocation_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_InitialModel_allocation_feature",
                         "_UI_InitialModel_type"), ExperimentsPackage.Literals.INITIAL_MODEL__ALLOCATION, true, false,
-                        true, null, null, null));
+                true, null, null, null));
     }
 
     /**
      * This adds a property descriptor for the Middleware Repository feature. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addMiddlewareRepositoryPropertyDescriptor(final Object object) {
@@ -101,7 +102,7 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
                 this.getString("_UI_InitialModel_middlewareRepository_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_InitialModel_middlewareRepository_feature",
                         "_UI_InitialModel_type"), ExperimentsPackage.Literals.INITIAL_MODEL__MIDDLEWARE_REPOSITORY,
-                        true, false, true, null, null, null));
+                true, false, true, null, null, null));
     }
 
     /**
@@ -116,14 +117,14 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
                 this.getString("_UI_InitialModel_eventMiddleWareRepository_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_InitialModel_eventMiddleWareRepository_feature",
                         "_UI_InitialModel_type"),
-                        ExperimentsPackage.Literals.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY, true, false, true, null, null,
-                        null));
+                ExperimentsPackage.Literals.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY, true, false, true, null, null,
+                null));
     }
 
     /**
      * This adds a property descriptor for the Reconfiguration Rules feature. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addReconfigurationRulesPropertyDescriptor(final Object object) {
@@ -132,7 +133,7 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
                 this.getString("_UI_InitialModel_reconfigurationRules_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_InitialModel_reconfigurationRules_feature",
                         "_UI_InitialModel_type"), ExperimentsPackage.Literals.INITIAL_MODEL__RECONFIGURATION_RULES,
-                        true, false, true, null, null, null));
+                true, false, true, null, null, null));
     }
 
     /**
@@ -147,13 +148,28 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
                 this.getString("_UI_InitialModel_platformMonitoringSpecification_feature"), this.getString(
                         "_UI_PropertyDescriptor_description",
                         "_UI_InitialModel_platformMonitoringSpecification_feature", "_UI_InitialModel_type"),
-                        ExperimentsPackage.Literals.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION, true, false, true, null,
-                        null, null));
+                ExperimentsPackage.Literals.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION, true, false, true, null,
+                null, null));
+    }
+
+    /**
+     * This adds a property descriptor for the Service Level Objectives feature. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    protected void addServiceLevelObjectivesPropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_InitialModel_serviceLevelObjectives_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_InitialModel_serviceLevelObjectives_feature",
+                        "_UI_InitialModel_type"), ExperimentsPackage.Literals.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES,
+                true, false, true, null, null, null));
     }
 
     /**
      * This returns InitialModel.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -176,7 +192,7 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -188,7 +204,7 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -199,7 +215,7 @@ IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, II
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

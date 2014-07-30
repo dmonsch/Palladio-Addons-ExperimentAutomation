@@ -46,7 +46,7 @@ import org.palladiosimulator.experimentautomation.experiments.impl.ToolConfigura
  * @generated
  */
 public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurationImpl implements
-        AbstractSimulationConfiguration {
+AbstractSimulationConfiguration {
     /**
      * The cached value of the '{@link #getPersistenceFramework() <em>Persistence Framework</em>}'
      * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->

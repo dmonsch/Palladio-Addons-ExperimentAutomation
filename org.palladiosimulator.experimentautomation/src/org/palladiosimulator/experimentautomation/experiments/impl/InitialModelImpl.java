@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
+import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
 import org.palladiosimulator.simulizar.pms.PMSModel;
 
 import de.uka.ipd.sdq.pcm.allocation.Allocation;
@@ -41,6 +42,9 @@ import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
  * <li>
  * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getPlatformMonitoringSpecification
  * <em>Platform Monitoring Specification</em>}</li>
+ * <li>
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getServiceLevelObjectives
+ * <em>Service Level Objectives</em>}</li>
  * </ul>
  * </p>
  *
@@ -108,6 +112,16 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      * @ordered
      */
     protected PMSModel platformMonitoringSpecification;
+
+    /**
+     * The cached value of the '{@link #getServiceLevelObjectives()
+     * <em>Service Level Objectives</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @see #getServiceLevelObjectives()
+     * @generated
+     * @ordered
+     */
+    protected ServiceLevelObjectiveRepository serviceLevelObjectives;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -406,6 +420,53 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      * @generated
      */
     @Override
+    public ServiceLevelObjectiveRepository getServiceLevelObjectives() {
+        if (this.serviceLevelObjectives != null && this.serviceLevelObjectives.eIsProxy()) {
+            final InternalEObject oldServiceLevelObjectives = (InternalEObject) this.serviceLevelObjectives;
+            this.serviceLevelObjectives = (ServiceLevelObjectiveRepository) this
+                    .eResolveProxy(oldServiceLevelObjectives);
+            if (this.serviceLevelObjectives != oldServiceLevelObjectives) {
+                if (this.eNotificationRequired()) {
+                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES, oldServiceLevelObjectives,
+                            this.serviceLevelObjectives));
+                }
+            }
+        }
+        return this.serviceLevelObjectives;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public ServiceLevelObjectiveRepository basicGetServiceLevelObjectives() {
+        return this.serviceLevelObjectives;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setServiceLevelObjectives(final ServiceLevelObjectiveRepository newServiceLevelObjectives) {
+        final ServiceLevelObjectiveRepository oldServiceLevelObjectives = this.serviceLevelObjectives;
+        this.serviceLevelObjectives = newServiceLevelObjectives;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES, oldServiceLevelObjectives,
+                    this.serviceLevelObjectives));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL:
@@ -438,6 +499,11 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
                 return this.getPlatformMonitoringSpecification();
             }
             return this.basicGetPlatformMonitoringSpecification();
+        case ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES:
+            if (resolve) {
+                return this.getServiceLevelObjectives();
+            }
+            return this.basicGetServiceLevelObjectives();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -467,6 +533,9 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
             return;
         case ExperimentsPackage.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION:
             this.setPlatformMonitoringSpecification((PMSModel) newValue);
+            return;
+        case ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES:
+            this.setServiceLevelObjectives((ServiceLevelObjectiveRepository) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -498,6 +567,9 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
         case ExperimentsPackage.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION:
             this.setPlatformMonitoringSpecification((PMSModel) null);
             return;
+        case ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES:
+            this.setServiceLevelObjectives((ServiceLevelObjectiveRepository) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -522,6 +594,8 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
             return this.reconfigurationRules != null;
         case ExperimentsPackage.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION:
             return this.platformMonitoringSpecification != null;
+        case ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES:
+            return this.serviceLevelObjectives != null;
         }
         return super.eIsSet(featureID);
     }

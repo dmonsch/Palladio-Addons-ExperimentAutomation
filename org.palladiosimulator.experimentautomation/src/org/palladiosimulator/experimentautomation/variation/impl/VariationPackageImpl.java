@@ -17,6 +17,7 @@ import org.palladiosimulator.experimentautomation.variation.VariationFactory;
 import org.palladiosimulator.experimentautomation.variation.VariationPackage;
 import org.palladiosimulator.experimentautomation.variation.VariationRepository;
 import org.palladiosimulator.experimentautomation.variation.VariationType;
+import org.palladiosimulator.servicelevelobjective.ServicelevelObjectivePackage;
 import org.palladiosimulator.simulizar.pms.PmsPackage;
 
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
@@ -102,20 +103,21 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
         // Obtain or create and register package
         final VariationPackageImpl theVariationPackage = (VariationPackageImpl) (EPackage.Registry.INSTANCE
                 .get(eNS_URI) instanceof VariationPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
-                        : new VariationPackageImpl());
+                : new VariationPackageImpl());
 
         isInited = true;
 
         // Initialize simple dependencies
         PmsPackage.eINSTANCE.eClass();
+        ServicelevelObjectivePackage.eINSTANCE.eClass();
 
         // Obtain or create and register interdependencies
         final ExperimentsPackageImpl theExperimentsPackage = (ExperimentsPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(ExperimentsPackage.eNS_URI) instanceof ExperimentsPackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(ExperimentsPackage.eNS_URI) : ExperimentsPackage.eINSTANCE);
+                        .getEPackage(ExperimentsPackage.eNS_URI) : ExperimentsPackage.eINSTANCE);
         final AbstractsimulationPackageImpl theAbstractsimulationPackage = (AbstractsimulationPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(AbstractsimulationPackage.eNS_URI) instanceof AbstractsimulationPackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(AbstractsimulationPackage.eNS_URI) : AbstractsimulationPackage.eINSTANCE);
+                        .getEPackage(AbstractsimulationPackage.eNS_URI) : AbstractsimulationPackage.eINSTANCE);
 
         // Create package meta-data objects
         theVariationPackage.createPackageContents();

@@ -47,6 +47,8 @@
       <import plugin="org.palladiosimulator.experimentautomation.edit" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.edit.ui" version="2.10.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui.ide" version="3.10.0" match="greaterOrEqual"/>
+      <import plugin="org.palladiosimulator.servicelevelobjective"/>
+      <import plugin="org.palladiosimulator.servicelevelobjective.edit"/>
    </requires>
 
    <plugin

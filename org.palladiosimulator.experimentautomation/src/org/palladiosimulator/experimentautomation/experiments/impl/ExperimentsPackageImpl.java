@@ -35,6 +35,7 @@ import org.palladiosimulator.experimentautomation.experiments.ValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.Variation;
 import org.palladiosimulator.experimentautomation.variation.VariationPackage;
 import org.palladiosimulator.experimentautomation.variation.impl.VariationPackageImpl;
+import org.palladiosimulator.servicelevelobjective.ServicelevelObjectivePackage;
 import org.palladiosimulator.simulizar.pms.PmsPackage;
 
 import de.uka.ipd.sdq.pcm.allocation.AllocationPackage;
@@ -248,20 +249,21 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         // Obtain or create and register package
         final ExperimentsPackageImpl theExperimentsPackage = (ExperimentsPackageImpl) (EPackage.Registry.INSTANCE
                 .get(eNS_URI) instanceof ExperimentsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
-                : new ExperimentsPackageImpl());
+                        : new ExperimentsPackageImpl());
 
         isInited = true;
 
         // Initialize simple dependencies
         PmsPackage.eINSTANCE.eClass();
+        ServicelevelObjectivePackage.eINSTANCE.eClass();
 
         // Obtain or create and register interdependencies
         final VariationPackageImpl theVariationPackage = (VariationPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(VariationPackage.eNS_URI) instanceof VariationPackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(VariationPackage.eNS_URI) : VariationPackage.eINSTANCE);
+                        .getEPackage(VariationPackage.eNS_URI) : VariationPackage.eINSTANCE);
         final AbstractsimulationPackageImpl theAbstractsimulationPackage = (AbstractsimulationPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(AbstractsimulationPackage.eNS_URI) instanceof AbstractsimulationPackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(AbstractsimulationPackage.eNS_URI) : AbstractsimulationPackage.eINSTANCE);
+                        .getEPackage(AbstractsimulationPackage.eNS_URI) : AbstractsimulationPackage.eINSTANCE);
 
         // Create package meta-data objects
         theExperimentsPackage.createPackageContents();
@@ -857,6 +859,16 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      * @generated
      */
     @Override
+    public EReference getInitialModel_ServiceLevelObjectives() {
+        return (EReference) this.initialModelEClass.getEStructuralFeatures().get(6);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
     public EClass getReconfigurationRulesFolder() {
         return this.reconfigurationRulesFolderEClass;
     }
@@ -1007,6 +1019,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         this.createEReference(this.initialModelEClass, INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY);
         this.createEReference(this.initialModelEClass, INITIAL_MODEL__RECONFIGURATION_RULES);
         this.createEReference(this.initialModelEClass, INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION);
+        this.createEReference(this.initialModelEClass, INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES);
 
         this.reconfigurationRulesFolderEClass = this.createEClass(RECONFIGURATION_RULES_FOLDER);
         this.createEAttribute(this.reconfigurationRulesFolderEClass, RECONFIGURATION_RULES_FOLDER__FOLDER_URI);
@@ -1052,6 +1065,8 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         final RepositoryPackage theRepositoryPackage = (RepositoryPackage) EPackage.Registry.INSTANCE
                 .getEPackage(RepositoryPackage.eNS_URI);
         final PmsPackage thePmsPackage = (PmsPackage) EPackage.Registry.INSTANCE.getEPackage(PmsPackage.eNS_URI);
+        final ServicelevelObjectivePackage theServicelevelObjectivePackage = (ServicelevelObjectivePackage) EPackage.Registry.INSTANCE
+                .getEPackage(ServicelevelObjectivePackage.eNS_URI);
 
         // Create type parameters
 
@@ -1240,6 +1255,10 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         this.initEReference(this.getInitialModel_PlatformMonitoringSpecification(), thePmsPackage.getPMSModel(), null,
                 "platformMonitoringSpecification", null, 0, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getInitialModel_ServiceLevelObjectives(),
+                theServicelevelObjectivePackage.getServiceLevelObjectiveRepository(), null, "serviceLevelObjectives",
+                null, 0, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+                IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.reconfigurationRulesFolderEClass, ReconfigurationRulesFolder.class,
                 "ReconfigurationRulesFolder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

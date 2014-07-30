@@ -778,13 +778,22 @@ public interface ExperimentsPackage extends EPackage {
     int INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION = 5;
 
     /**
+     * The feature id for the '<em><b>Service Level Objectives</b></em>' reference. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES = 6;
+
+    /**
      * The number of structural features of the '<em>Initial Model</em>' class. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int INITIAL_MODEL_FEATURE_COUNT = 6;
+    int INITIAL_MODEL_FEATURE_COUNT = 7;
 
     /**
      * The meta object id for the '
@@ -1519,6 +1528,18 @@ public interface ExperimentsPackage extends EPackage {
     EReference getInitialModel_PlatformMonitoringSpecification();
 
     /**
+     * Returns the meta object for the reference '
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getServiceLevelObjectives
+     * <em>Service Level Objectives</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for the reference '<em>Service Level Objectives</em>'.
+     * @see org.palladiosimulator.experimentautomation.experiments.InitialModel#getServiceLevelObjectives()
+     * @see #getInitialModel()
+     * @generated
+     */
+    EReference getInitialModel_ServiceLevelObjectives();
+
+    /**
      * Returns the meta object for class '
      * {@link org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder
      * <em>Reconfiguration Rules Folder</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -2117,6 +2138,14 @@ public interface ExperimentsPackage extends EPackage {
          */
         EReference INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION = eINSTANCE
                 .getInitialModel_PlatformMonitoringSpecification();
+
+        /**
+         * The meta object literal for the '<em><b>Service Level Objectives</b></em>' reference
+         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @generated
+         */
+        EReference INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES = eINSTANCE.getInitialModel_ServiceLevelObjectives();
 
         /**
          * The meta object literal for the '

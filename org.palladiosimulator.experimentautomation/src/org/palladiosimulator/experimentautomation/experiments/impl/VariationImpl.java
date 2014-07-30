@@ -537,7 +537,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
             return this.maxVariations != MAX_VARIATIONS_EDEFAULT;
         case ExperimentsPackage.VARIATION__VARIED_OBJECT_ID:
             return VARIED_OBJECT_ID_EDEFAULT == null ? this.variedObjectId != null : !VARIED_OBJECT_ID_EDEFAULT
-                    .equals(this.variedObjectId);
+            .equals(this.variedObjectId);
         case ExperimentsPackage.VARIATION__NAME:
             return NAME_EDEFAULT == null ? this.name != null : !NAME_EDEFAULT.equals(this.name);
         }

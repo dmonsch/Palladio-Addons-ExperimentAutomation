@@ -25,7 +25,7 @@ public class LinearValueProviderItemProvider extends ValueProviderItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public LinearValueProviderItemProvider(final AdapterFactory adapterFactory) {
@@ -35,7 +35,7 @@ public class LinearValueProviderItemProvider extends ValueProviderItemProvider {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -52,7 +52,7 @@ public class LinearValueProviderItemProvider extends ValueProviderItemProvider {
     /**
      * This adds a property descriptor for the Summand feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addSummandPropertyDescriptor(final Object object) {
@@ -61,13 +61,13 @@ public class LinearValueProviderItemProvider extends ValueProviderItemProvider {
                 this.getString("_UI_LinearValueProvider_summand_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_LinearValueProvider_summand_feature",
                         "_UI_LinearValueProvider_type"), ExperimentsPackage.Literals.LINEAR_VALUE_PROVIDER__SUMMAND,
-                        true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+                true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Factor feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addFactorPropertyDescriptor(final Object object) {
@@ -76,12 +76,12 @@ public class LinearValueProviderItemProvider extends ValueProviderItemProvider {
                 this.getString("_UI_LinearValueProvider_factor_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_LinearValueProvider_factor_feature",
                         "_UI_LinearValueProvider_type"), ExperimentsPackage.Literals.LINEAR_VALUE_PROVIDER__FACTOR,
-                        true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+                true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
      * This returns LinearValueProvider.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -105,7 +105,7 @@ public class LinearValueProviderItemProvider extends ValueProviderItemProvider {
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -124,7 +124,7 @@ public class LinearValueProviderItemProvider extends ValueProviderItemProvider {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

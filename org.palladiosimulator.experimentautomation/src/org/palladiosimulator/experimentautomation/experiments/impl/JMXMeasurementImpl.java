@@ -141,7 +141,7 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
         switch (featureID) {
         case ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD:
             return POLLING_PERIOD_EDEFAULT == null ? this.pollingPeriod != null : !POLLING_PERIOD_EDEFAULT
-                    .equals(this.pollingPeriod);
+            .equals(this.pollingPeriod);
         }
         return super.eIsSet(featureID);
     }
