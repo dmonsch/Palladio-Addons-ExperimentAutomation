@@ -15,6 +15,6 @@
     <stopConditions xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:SimTimeStopCondition" simulationTime="-1"/>
     <experimentDesign xsi:type="ExperimentAutomation.Experiments:FullFactorialDesign"/>
     <responseMeasurement xsi:type="ExperimentAutomation.Experiments:SimulationDurationMeasurement"/>
-    <initialModel usageModel="default.usagemodel#/" allocation="default.allocation#_JiPBICHdEd6lJo4DCALHMw" middlewareRepository="pathmap://PCM_MODELS/Glassfish.repository#_yQk9oIX1EdyWta7nHuXiHQ" eventMiddleWareRepository="pathmap://PCM_MODELS/default_event_middleware.repository#_Onc7cMALEd-LKvNtxXAQbQ" platformMonitoringSpecification="usage.pms#/"/>
+    <initialModel usageModel="default.usagemodel#/" allocation="default.allocation#_JiPBICHdEd6lJo4DCALHMw" middlewareRepository="pathmap://PCM_MODELS/Glassfish.repository#_yQk9oIX1EdyWta7nHuXiHQ" eventMiddleWareRepository="pathmap://PCM_MODELS/default_event_middleware.repository#_Onc7cMALEd-LKvNtxXAQbQ" platformMonitoringSpecification="usage.pms#/" serviceLevelObjectives="example.slo#/"/>
   </experiments>
 </ExperimentAutomation.Experiments:ExperimentRepository>
