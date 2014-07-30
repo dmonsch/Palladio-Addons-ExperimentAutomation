@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.palladiosimulator.experimentautomation.application.VariationFactorTuple;
+import org.palladiosimulator.experimentautomation.application.jobs.CheckForSLOViolationsJob;
 import org.palladiosimulator.experimentautomation.application.jobs.CleanUpRecorderJob;
 import org.palladiosimulator.experimentautomation.application.jobs.LogExperimentInformationJob;
 import org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter;
@@ -22,8 +23,6 @@ import org.palladiosimulator.simulizar.runconfig.SimuLizarWorkflowConfiguration;
 import de.uka.ipd.sdq.simucomframework.SimuComConfig;
 
 /**
- * FIXME Check for SLO violations.
- * 
  * @author Sebastian Lehrig
  */
 public class SimuLizarToolAdapter implements IToolAdapter {
@@ -45,6 +44,8 @@ public class SimuLizarToolAdapter implements IToolAdapter {
         final RunAnalysisJob result = new RunAnalysisJob();
         result.addJob(new LogExperimentInformationJob(experiment, simuComConfig, variationFactorTuples, repetition));
         result.addJob(new PCMStartInterpretationJob(workflowConfig));
+        result.addJob(new CheckForSLOViolationsJob(result, experiment.getInitialModel().getServiceLevelObjectives(),
+                simuLizarToolConfig.getPersistenceFramework()));
         result.addJob(new CleanUpRecorderJob(simuLizarToolConfig.getPersistenceFramework()));
 
         return result;

@@ -7,6 +7,7 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.CoreException;
 import org.palladiosimulator.experimentautomation.application.VariationFactorTuple;
+import org.palladiosimulator.experimentautomation.application.jobs.CheckForSLOViolationsJob;
 import org.palladiosimulator.experimentautomation.application.jobs.CleanUpRecorderJob;
 import org.palladiosimulator.experimentautomation.application.jobs.LogExperimentInformationJob;
 import org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter;
@@ -23,9 +24,7 @@ import de.uka.ipd.sdq.codegen.simucontroller.workflow.jobs.SimuComJob;
 import de.uka.ipd.sdq.simucomframework.SimuComConfig;
 
 /**
- * FIXME Check for SLO violations.
- * 
- * @author Sebastian Lehrig 
+ * @author Sebastian Lehrig
  */
 public class SimuComToolAdapter implements IToolAdapter {
 
@@ -36,18 +35,21 @@ public class SimuComToolAdapter implements IToolAdapter {
      * {@inheritDoc}
      */
     @Override
-    public RunAnalysisJob createRunAnalysisJob(final Experiment experiment,
-            final ToolConfiguration toolConfig, final List<VariationFactorTuple> variationFactorTuples,
-            final int repetition) {
+    public RunAnalysisJob createRunAnalysisJob(final Experiment experiment, final ToolConfiguration toolConfig,
+            final List<VariationFactorTuple> variationFactorTuples, final int repetition) {
         final SimuComConfiguration simuComToolConfig = (SimuComConfiguration) toolConfig;
-        final SimuComConfig simuComConfig = createSimuComConfig(simuComToolConfig, experiment, variationFactorTuples, repetition);
+        final SimuComConfig simuComConfig = createSimuComConfig(simuComToolConfig, experiment, variationFactorTuples,
+                repetition);
         final SimuComWorkflowConfiguration workflowConfig = createSimuComWorkflowConfiguration(simuComConfig);
 
         final RunAnalysisJob result = new RunAnalysisJob();
         try {
             result.add(new LogExperimentInformationJob(experiment, simuComConfig, variationFactorTuples, repetition));
             result.add(new SimuComJob(workflowConfig, null, false));
-            result.add(new CleanUpRecorderJob(simuComToolConfig.getPersistenceFramework()));            
+            result.addJob(new CheckForSLOViolationsJob(result,
+                    experiment.getInitialModel().getServiceLevelObjectives(), simuComToolConfig
+                            .getPersistenceFramework()));
+            result.add(new CleanUpRecorderJob(simuComToolConfig.getPersistenceFramework()));
         } catch (CoreException e) {
             LOGGER.error("SimuCom execution failed: " + e);
         }
