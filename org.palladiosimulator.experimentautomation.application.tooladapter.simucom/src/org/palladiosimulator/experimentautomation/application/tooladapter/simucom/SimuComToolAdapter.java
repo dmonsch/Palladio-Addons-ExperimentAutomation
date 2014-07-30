@@ -23,7 +23,9 @@ import de.uka.ipd.sdq.codegen.simucontroller.workflow.jobs.SimuComJob;
 import de.uka.ipd.sdq.simucomframework.SimuComConfig;
 
 /**
- * @author Sebastian Lehrig
+ * FIXME Check for SLO violations.
+ * 
+ * @author Sebastian Lehrig 
  */
 public class SimuComToolAdapter implements IToolAdapter {
 

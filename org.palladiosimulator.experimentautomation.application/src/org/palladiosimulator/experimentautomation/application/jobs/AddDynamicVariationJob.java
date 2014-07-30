@@ -67,16 +67,14 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
      */
     @Override
     public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
-        final boolean successWithLastRun = true; // FIXME Repeat based on previous analysis result
-
         if (this.tuples2nestedIntervals.size() > 0) {
             for (final VariationFactorTuple variationFactorTuple : this.tuples2nestedIntervals.keySet()) {
                 final NestedIntervalsValueProviderStrategy nestedInterval = this.tuples2nestedIntervals
                         .get(variationFactorTuple);
-                if (successWithLastRun) {
-                    nestedInterval.setMin(nestedInterval.valueAtPosition(0));
-                } else {
+                if (this.runAnalysisJob.sloWasViolated()) {
                     nestedInterval.setMax(nestedInterval.valueAtPosition(0));
+                } else {
+                    nestedInterval.setMin(nestedInterval.valueAtPosition(0));
                 }
 
                 if (nestedInterval.isConverged()) {

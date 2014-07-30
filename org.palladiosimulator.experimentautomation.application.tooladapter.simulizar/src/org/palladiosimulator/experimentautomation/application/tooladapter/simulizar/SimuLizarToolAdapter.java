@@ -22,6 +22,8 @@ import org.palladiosimulator.simulizar.runconfig.SimuLizarWorkflowConfiguration;
 import de.uka.ipd.sdq.simucomframework.SimuComConfig;
 
 /**
+ * FIXME Check for SLO violations.
+ * 
  * @author Sebastian Lehrig
  */
 public class SimuLizarToolAdapter implements IToolAdapter {
