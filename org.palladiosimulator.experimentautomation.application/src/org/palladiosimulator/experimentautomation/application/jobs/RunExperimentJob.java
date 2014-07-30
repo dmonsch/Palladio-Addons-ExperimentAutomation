@@ -41,7 +41,7 @@ public class RunExperimentJob extends SequentialBlackboardInteractingJob<MDSDBla
                 toolConfiguration, variationFactorTuples, repetition);
 
         this.add(runAnalysisJob);
-        this.add(new AddDynamicVariationJob(analysisTool, experiment, toolConfiguration, variationFactorTuples,
+        this.add(new AddDynamicVariationJob(runAnalysisJob, analysisTool, experiment, toolConfiguration, variationFactorTuples,
                 repetition));
     }
 }

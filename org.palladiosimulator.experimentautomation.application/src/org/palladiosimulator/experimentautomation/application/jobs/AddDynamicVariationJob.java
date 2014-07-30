@@ -7,6 +7,7 @@ import java.util.Map;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.palladiosimulator.experimentautomation.application.VariationFactorTuple;
 import org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter;
+import org.palladiosimulator.experimentautomation.application.tooladapter.RunAnalysisJob;
 import org.palladiosimulator.experimentautomation.application.variation.valueprovider.IValueProviderStrategy;
 import org.palladiosimulator.experimentautomation.application.variation.valueprovider.NestedIntervalsValueProviderStrategy;
 import org.palladiosimulator.experimentautomation.application.variation.valueprovider.ValueProviderFactory;
@@ -26,14 +27,16 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
     private final ToolConfiguration toolConfig;
     private final List<VariationFactorTuple> variationFactorTuples;
     private final int repetition;
-
     private final Map<VariationFactorTuple, NestedIntervalsValueProviderStrategy> tuples2nestedIntervals;
 
-    public AddDynamicVariationJob(IToolAdapter toolAdapter, final Experiment experiment,
-            final ToolConfiguration toolConfig, final List<VariationFactorTuple> variationFactorTuples,
-            final int repetition) {
+    private RunAnalysisJob runAnalysisJob;
+
+    public AddDynamicVariationJob(final RunAnalysisJob runAnalysisJob, final IToolAdapter toolAdapter,
+            final Experiment experiment, final ToolConfiguration toolConfig,
+            final List<VariationFactorTuple> variationFactorTuples, final int repetition) {
         super(true);
 
+        this.runAnalysisJob = runAnalysisJob;
         this.toolAdapter = toolAdapter;
         this.experiment = experiment;
         this.toolConfig = toolConfig;
@@ -88,10 +91,10 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
                 varyJob.setBlackboard(this.getBlackboard());
                 varyJob.execute(monitor);
 
-                final IBlackboardInteractingJob<MDSDBlackboard> runAnalysisJob = this.toolAdapter.createRunAnalysisJob(
-                        this.experiment, this.toolConfig, this.variationFactorTuples, this.repetition);
-                runAnalysisJob.setBlackboard(this.getBlackboard());
-                runAnalysisJob.execute(monitor);
+                this.runAnalysisJob = this.toolAdapter.createRunAnalysisJob(this.experiment, this.toolConfig,
+                        this.variationFactorTuples, this.repetition);
+                this.runAnalysisJob.setBlackboard(this.getBlackboard());
+                this.runAnalysisJob.execute(monitor);
 
                 this.execute(monitor);
             }
