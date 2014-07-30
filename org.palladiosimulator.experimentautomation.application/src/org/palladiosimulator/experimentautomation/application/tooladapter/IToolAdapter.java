@@ -6,9 +6,6 @@ import org.palladiosimulator.experimentautomation.application.VariationFactorTup
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 
-import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
-import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
-
 /**
  * Adapter interface for analysis tools to be used by Experiment Automation.
  * 
@@ -31,7 +28,7 @@ public interface IToolAdapter {
      *            significance.
      * @return the job conducting the specified experiment run.
      */
-    public SequentialBlackboardInteractingJob<MDSDBlackboard> createRunAnalysisJob(final Experiment experiment,
+    public RunAnalysisJob createRunAnalysisJob(final Experiment experiment,
             final ToolConfiguration toolConfiguration, final List<VariationFactorTuple> variationFactorTuples,
             final int repetition);
 

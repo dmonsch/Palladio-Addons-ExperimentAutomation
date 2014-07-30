@@ -8,6 +8,7 @@ import org.palladiosimulator.experimentautomation.application.VariationFactorTup
 import org.palladiosimulator.experimentautomation.application.jobs.CleanUpRecorderJob;
 import org.palladiosimulator.experimentautomation.application.jobs.LogExperimentInformationJob;
 import org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter;
+import org.palladiosimulator.experimentautomation.application.tooladapter.RunAnalysisJob;
 import org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.AbstractSimulationConfigFactory;
 import org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.AbstractSimulationWorkflowConfigurationFactory;
 import org.palladiosimulator.experimentautomation.application.tooladapter.simulizar.model.SimuLizarConfiguration;
@@ -19,8 +20,6 @@ import org.palladiosimulator.simulizar.launcher.jobs.PCMStartInterpretationJob;
 import org.palladiosimulator.simulizar.runconfig.SimuLizarWorkflowConfiguration;
 
 import de.uka.ipd.sdq.simucomframework.SimuComConfig;
-import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
-import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 
 /**
  * @author Sebastian Lehrig
@@ -33,17 +32,15 @@ public class SimuLizarToolAdapter implements IToolAdapter {
      * {@inheritDoc}
      */
     @Override
-    public SequentialBlackboardInteractingJob<MDSDBlackboard> createRunAnalysisJob(final Experiment experiment,
-            final ToolConfiguration toolConfig, final List<VariationFactorTuple> variationFactorTuples,
-            final int repetition) {
+    public RunAnalysisJob createRunAnalysisJob(final Experiment experiment, final ToolConfiguration toolConfig,
+            final List<VariationFactorTuple> variationFactorTuples, final int repetition) {
         final SimuLizarConfiguration simuLizarToolConfig = (SimuLizarConfiguration) toolConfig;
         final SimuComConfig simuComConfig = createSimuComConfig(simuLizarToolConfig, experiment, variationFactorTuples,
                 repetition);
         final SimuLizarWorkflowConfiguration workflowConfig = createSimuLizarWorkflowConfiguration(simuComConfig,
                 experiment.getInitialModel().getReconfigurationRules());
 
-        final SequentialBlackboardInteractingJob<MDSDBlackboard> result;
-        result = new SequentialBlackboardInteractingJob<MDSDBlackboard>(true);
+        final RunAnalysisJob result = new RunAnalysisJob();
         result.addJob(new LogExperimentInformationJob(experiment, simuComConfig, variationFactorTuples, repetition));
         result.addJob(new PCMStartInterpretationJob(workflowConfig));
         result.addJob(new CleanUpRecorderJob(simuLizarToolConfig.getPersistenceFramework()));

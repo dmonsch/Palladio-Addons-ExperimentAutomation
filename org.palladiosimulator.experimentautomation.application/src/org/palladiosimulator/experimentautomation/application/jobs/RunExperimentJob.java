@@ -5,10 +5,10 @@ import java.util.List;
 import org.palladiosimulator.experimentautomation.application.VariationFactorTuple;
 import org.palladiosimulator.experimentautomation.application.tooladapter.AnalysisToolFactory;
 import org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter;
+import org.palladiosimulator.experimentautomation.application.tooladapter.RunAnalysisJob;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 
-import de.uka.ipd.sdq.workflow.jobs.IBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 
@@ -37,7 +37,7 @@ public class RunExperimentJob extends SequentialBlackboardInteractingJob<MDSDBla
         super(false);
 
         final IToolAdapter analysisTool = AnalysisToolFactory.createToolAdapater(toolConfiguration);
-        final IBlackboardInteractingJob<MDSDBlackboard> runAnalysisJob = analysisTool.createRunAnalysisJob(experiment,
+        final RunAnalysisJob runAnalysisJob = analysisTool.createRunAnalysisJob(experiment,
                 toolConfiguration, variationFactorTuples, repetition);
 
         this.add(runAnalysisJob);

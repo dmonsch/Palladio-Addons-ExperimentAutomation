@@ -10,6 +10,7 @@ import org.palladiosimulator.experimentautomation.application.VariationFactorTup
 import org.palladiosimulator.experimentautomation.application.jobs.CleanUpRecorderJob;
 import org.palladiosimulator.experimentautomation.application.jobs.LogExperimentInformationJob;
 import org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter;
+import org.palladiosimulator.experimentautomation.application.tooladapter.RunAnalysisJob;
 import org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.AbstractSimulationConfigFactory;
 import org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.AbstractSimulationWorkflowConfigurationFactory;
 import org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.SimuComConfiguration;
@@ -20,8 +21,6 @@ import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 import de.uka.ipd.sdq.codegen.simucontroller.runconfig.SimuComWorkflowConfiguration;
 import de.uka.ipd.sdq.codegen.simucontroller.workflow.jobs.SimuComJob;
 import de.uka.ipd.sdq.simucomframework.SimuComConfig;
-import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
-import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 
 /**
  * @author Sebastian Lehrig
@@ -35,15 +34,14 @@ public class SimuComToolAdapter implements IToolAdapter {
      * {@inheritDoc}
      */
     @Override
-    public SequentialBlackboardInteractingJob<MDSDBlackboard> createRunAnalysisJob(final Experiment experiment,
+    public RunAnalysisJob createRunAnalysisJob(final Experiment experiment,
             final ToolConfiguration toolConfig, final List<VariationFactorTuple> variationFactorTuples,
             final int repetition) {
         final SimuComConfiguration simuComToolConfig = (SimuComConfiguration) toolConfig;
         final SimuComConfig simuComConfig = createSimuComConfig(simuComToolConfig, experiment, variationFactorTuples, repetition);
         final SimuComWorkflowConfiguration workflowConfig = createSimuComWorkflowConfiguration(simuComConfig);
 
-        final SequentialBlackboardInteractingJob<MDSDBlackboard> result;
-        result = new SequentialBlackboardInteractingJob<MDSDBlackboard>(true);
+        final RunAnalysisJob result = new RunAnalysisJob();
         try {
             result.add(new LogExperimentInformationJob(experiment, simuComConfig, variationFactorTuples, repetition));
             result.add(new SimuComJob(workflowConfig, null, false));
