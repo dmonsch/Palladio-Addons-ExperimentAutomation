@@ -18,7 +18,6 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.Persistence
 import org.palladiosimulator.experimentautomation.application.tooladapter.RunAnalysisJob;
 import org.palladiosimulator.measurementframework.Measurement;
 import org.palladiosimulator.measurementframework.measureprovider.IMeasureProvider;
-import org.palladiosimulator.metricspec.constants.MetricDescriptionConstants;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjective;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
 
@@ -80,12 +79,7 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
                 .getExperimentRuns().get(0).getMeasurements().get(2).getMeasurementsRanges().get(0)
                 .getRawMeasurements());
 
-        long sloViolations = 0;
-        for (final ServiceLevelObjective serviceLevelObjective : this.serviceLevelObjectives
-                .getServicelevelobjectives()) {
-            sloViolations += computeSloViolations(dataSource, serviceLevelObjective);
-        }
-
+        final long sloViolations = computeSloViolations(dataSource);
         if (sloViolations > 0) {
             this.runAnalysisJob.setSloWasViolated();
         }
@@ -95,30 +89,32 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
     }
 
     /**
-     * Computes the number of SLO violations in the given data source and for the given SLO.
+     * Computes the number of SLO violations in the given data source.
      * 
      * FIXME Currently only checks for upper (hard) threshold. Lower and fuzzy thresholds are not
      * supported. [Lehrig]
      * 
      * @param dataSource
      *            the EDP2 datasource to get measurements from.
-     * @param serviceLevelObjective
-     *            a concrete SLO to check for.
      * @return the number of found SLO violations.
      */
-    private long computeSloViolations(final IDataSource dataSource, final ServiceLevelObjective serviceLevelObjective) {
-        @SuppressWarnings("unchecked")
-        final Measure<Double, Duration> threshold = (Measure<Double, Duration>) serviceLevelObjective
-                .getUpperThreshold().getThresholdLimit();
-
+    private long computeSloViolations(final IDataSource dataSource) {
         long sloViolations = 0;
         final IDataStream<Measurement> dataStream = dataSource.getDataStream();
-        for (final IMeasureProvider tuple : dataStream) {
-            final Measure<Double, Duration> responseTime = tuple
-                    .getMeasureForMetric(MetricDescriptionConstants.RESPONSE_TIME_METRIC);
 
-            if (responseTime.compareTo(threshold) > 0) {
-                sloViolations++;
+        for (final IMeasureProvider tuple : dataStream) {
+            for (final ServiceLevelObjective serviceLevelObjective : this.serviceLevelObjectives
+                    .getServicelevelobjectives()) {
+                @SuppressWarnings("unchecked")
+                final Measure<Double, Duration> threshold = (Measure<Double, Duration>) serviceLevelObjective
+                        .getUpperThreshold().getThresholdLimit();
+                
+                final Measure<Double, Duration> measurement = tuple
+                        .getMeasureForMetric(serviceLevelObjective.getMetricDescription());
+
+                if (measurement.compareTo(threshold) > 0) {
+                    sloViolations++;
+                }
             }
         }
         dataStream.close();
