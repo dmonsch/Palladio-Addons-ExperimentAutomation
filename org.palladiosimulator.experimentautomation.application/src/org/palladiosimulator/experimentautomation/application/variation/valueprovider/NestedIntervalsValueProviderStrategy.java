@@ -38,6 +38,9 @@ public class NestedIntervalsValueProviderStrategy implements IValueProviderStrat
             this.converged = true;
         } else if (this.min == this.middle) {
             this.middle++;
+            if(this.middle == this.max) {
+                this.converged = true;
+            }
         }
     }
 
