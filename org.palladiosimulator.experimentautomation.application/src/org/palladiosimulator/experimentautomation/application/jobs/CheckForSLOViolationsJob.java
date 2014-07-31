@@ -69,12 +69,8 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
         // not supported. [Lehrig]
         for (final ServiceLevelObjective serviceLevelObjective : this.serviceLevelObjectives
                 .getServicelevelobjectives()) {
+            final long sloViolations = computeSloViolations(dataSource, serviceLevelObjective);
 
-            @SuppressWarnings("unchecked")
-            final Measure<Double, Duration> threshold = (Measure<Double, Duration>) serviceLevelObjective
-                    .getUpperThreshold().getThresholdLimit();
-
-            final long sloViolations = computeSloViolations(dataSource, threshold);
             if (sloViolations > 0) {
                 this.runAnalysisJob.setSloWasViolated();
             }
@@ -84,7 +80,11 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
         }
     }
 
-    private long computeSloViolations(final IDataSource dataSource, final Measure<Double, Duration> threshold) {
+    private long computeSloViolations(final IDataSource dataSource, final ServiceLevelObjective serviceLevelObjective) {
+        @SuppressWarnings("unchecked")
+        final Measure<Double, Duration> threshold = (Measure<Double, Duration>) serviceLevelObjective
+                .getUpperThreshold().getThresholdLimit();
+
         long sloViolations = 0;
         final IDataStream<Measurement> dataStream = dataSource.getDataStream();
         for (final IMeasureProvider tuple : dataStream) {
@@ -96,6 +96,7 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
             }
         }
         dataStream.close();
+
         return sloViolations;
     }
 
