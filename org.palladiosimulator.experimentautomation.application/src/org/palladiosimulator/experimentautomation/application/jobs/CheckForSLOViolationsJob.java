@@ -1,7 +1,6 @@
 package org.palladiosimulator.experimentautomation.application.jobs;
 
 import javax.measure.Measure;
-import javax.measure.quantity.Duration;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.palladiosimulator.edp2.dao.exception.DataNotAccessibleException;
@@ -98,6 +97,9 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
      *            the EDP2 datasource to get measurements from.
      * @return the number of found SLO violations.
      */
+    @SuppressWarnings({
+            "rawtypes", "unchecked"
+    })
     private long computeSloViolations(final IDataSource dataSource) {
         long sloViolations = 0;
         final IDataStream<Measurement> dataStream = dataSource.getDataStream();
@@ -105,12 +107,8 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
         for (final IMeasureProvider tuple : dataStream) {
             for (final ServiceLevelObjective serviceLevelObjective : this.serviceLevelObjectives
                     .getServicelevelobjectives()) {
-                @SuppressWarnings("unchecked")
-                final Measure<Double, Duration> threshold = (Measure<Double, Duration>) serviceLevelObjective
-                        .getUpperThreshold().getThresholdLimit();
-                
-                final Measure<Double, Duration> measurement = tuple
-                        .getMeasureForMetric(serviceLevelObjective.getMetricDescription());
+                final Measure threshold = serviceLevelObjective.getUpperThreshold().getThresholdLimit();
+                final Measure measurement = tuple.getMeasureForMetric(serviceLevelObjective.getMetricDescription());
 
                 if (measurement.compareTo(threshold) > 0) {
                     sloViolations++;
