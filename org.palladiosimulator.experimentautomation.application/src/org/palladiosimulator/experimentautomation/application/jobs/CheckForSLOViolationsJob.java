@@ -41,6 +41,21 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
     private final PersistenceFramework persistenceFramework;
     private final String experimentGroupPurpose;
 
+    /**
+     * Default constructor.
+     * 
+     * @param runAnalysisJob
+     *            the job conducting an analysis and providing measurement results to the
+     *            persistence framework.
+     * @param serviceLevelObjectives
+     *            a set of SLOs to be checked for.
+     * @param persistenceFramework
+     *            the persistence framework providing measurement data. Currently, only EDP2 is
+     *            supported.
+     * @param experimentGroupPurpose
+     *            the (hopefully?) unique name of an experiment run; used to identify the experiment
+     *            group of the last analysis run.
+     */
     public CheckForSLOViolationsJob(final RunAnalysisJob runAnalysisJob,
             final ServiceLevelObjectiveRepository serviceLevelObjectives,
             final PersistenceFramework persistenceFramework, final String experimentGroupPurpose) {
@@ -65,8 +80,6 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
                 .getExperimentRuns().get(0).getMeasurements().get(2).getMeasurementsRanges().get(0)
                 .getRawMeasurements());
 
-        // FIXME Currently only checks for upper (hard) threshold. Lower and fuzzy thresholds are
-        // not supported. [Lehrig]
         for (final ServiceLevelObjective serviceLevelObjective : this.serviceLevelObjectives
                 .getServicelevelobjectives()) {
             final long sloViolations = computeSloViolations(dataSource, serviceLevelObjective);
@@ -80,6 +93,18 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
         }
     }
 
+    /**
+     * Computes the number of SLO violations in the given data source and for the given SLO.
+     * 
+     * FIXME Currently only checks for upper (hard) threshold. Lower and fuzzy thresholds are not
+     * supported. [Lehrig]
+     * 
+     * @param dataSource
+     *            the EDP2 datasource to get measurements from.
+     * @param serviceLevelObjective
+     *            a concrete SLO to check for.
+     * @return the number of found SLO violations.
+     */
     private long computeSloViolations(final IDataSource dataSource, final ServiceLevelObjective serviceLevelObjective) {
         @SuppressWarnings("unchecked")
         final Measure<Double, Duration> threshold = (Measure<Double, Duration>) serviceLevelObjective
@@ -100,6 +125,14 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
         return sloViolations;
     }
 
+    /**
+     * Returns an experiment group object from the given repository, based on the experiment group
+     * purpose member variable.
+     * 
+     * @param repository
+     *            the repository containing the experiment group.
+     * @return the experiment group of interest.
+     */
     private ExperimentGroup getExperimentGroup(final Repository repository) {
         ExperimentGroup experimentGroup = null;
         for (final ExperimentGroup expGroup : repository.getExperimentGroups()) {
