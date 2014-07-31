@@ -80,17 +80,18 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
                 .getExperimentRuns().get(0).getMeasurements().get(2).getMeasurementsRanges().get(0)
                 .getRawMeasurements());
 
+        long sloViolations = 0;
         for (final ServiceLevelObjective serviceLevelObjective : this.serviceLevelObjectives
                 .getServicelevelobjectives()) {
-            final long sloViolations = computeSloViolations(dataSource, serviceLevelObjective);
-
-            if (sloViolations > 0) {
-                this.runAnalysisJob.setSloWasViolated();
-            }
-
-            // TODO Move output to dedicated EDP2 Measurement? Store somewhere else?
-            System.out.println("SLO Violations: " + sloViolations);
+            sloViolations += computeSloViolations(dataSource, serviceLevelObjective);
         }
+
+        if (sloViolations > 0) {
+            this.runAnalysisJob.setSloWasViolated();
+        }
+
+        // TODO Move output to dedicated EDP2 Measurement? Store somewhere else?
+        System.out.println("SLO Violations: " + sloViolations);
     }
 
     /**
