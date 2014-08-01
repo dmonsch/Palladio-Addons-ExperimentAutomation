@@ -30,6 +30,8 @@ public class AbstractSimulationWorkflowConfigurationFactory {
         /** Analysis Configuration Tab *********************/
         /***************************************************/
         /** Location of temporary data */
+        workflowConfig.getAttributes().put(ConstantsContainer.TEMPORARY_DATA_LOCATION,
+                ConstantsContainer.DEFAULT_TEMPORARY_DATA_LOCATION);
         workflowConfig.setStoragePluginID(ConstantsContainer.DEFAULT_TEMPORARY_DATA_LOCATION);
         workflowConfig.setOverwriteWithoutAsking(true); // TODO ensure that no folders can be
                                                         // deleted accidentally
