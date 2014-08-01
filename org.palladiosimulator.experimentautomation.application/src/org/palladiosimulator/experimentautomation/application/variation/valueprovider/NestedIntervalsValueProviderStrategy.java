@@ -13,8 +13,8 @@ public class NestedIntervalsValueProviderStrategy implements IValueProviderStrat
         this.min = specification.getMinValue();
         this.max = specification.getMaxValue();
         this.converged = false;
-        
-        calculateMiddle();
+
+        this.middle = this.min;
     }
 
     @Override
@@ -30,15 +30,20 @@ public class NestedIntervalsValueProviderStrategy implements IValueProviderStrat
         if (min < this.min) {
             throw new IllegalArgumentException("New interval has to be nested in original interval");
         }
-
-        this.min = min;
-        calculateMiddle();
+        
+        if (this.min == this.middle && this.middle != this.max) {
+            this.middle = this.max;
+            this.min = min;
+        } else {
+            this.min = min;
+            calculateMiddle();
+        }
 
         if (this.min == this.max) {
             this.converged = true;
         } else if (this.min == this.middle) {
             this.middle++;
-            if(this.middle == this.max) {
+            if (this.middle == this.max) {
                 this.converged = true;
             }
         }
