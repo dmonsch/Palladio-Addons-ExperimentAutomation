@@ -45,7 +45,8 @@ public class SimuLizarToolAdapter implements IToolAdapter {
         result.addJob(new LogExperimentInformationJob(experiment, simuComConfig, variationFactorTuples, repetition));
         result.addJob(new PCMStartInterpretationJob(workflowConfig));
         result.addJob(new CheckForSLOViolationsJob(result, experiment.getInitialModel().getServiceLevelObjectives(),
-                simuLizarToolConfig.getPersistenceFramework(), simuComConfig.getNameBase()));
+                simuLizarToolConfig.getPersistenceFramework(), simuComConfig.getNameBase(), simuComConfig
+                        .getVariationId()));
         result.addJob(new CleanUpRecorderJob(simuLizarToolConfig.getPersistenceFramework()));
 
         return result;

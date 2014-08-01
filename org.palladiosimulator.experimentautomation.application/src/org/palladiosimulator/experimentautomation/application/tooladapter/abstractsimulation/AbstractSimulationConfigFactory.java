@@ -67,8 +67,9 @@ public class AbstractSimulationConfigFactory {
         map.put(AbstractSimulationConfig.SIMULATOR_ID, simulatorID);
 
         /** Experiment Run */
-        map.put(AbstractSimulationConfig.EXPERIMENT_RUN,
-                computeExperimentName(experiment, simConfig, variationFactorTuples, repetition));
+        map.put(AbstractSimulationConfig.EXPERIMENT_RUN, computeExperimentRunName(experiment));
+        map.put(EDP2RecorderConfigurationFactory.VARIATION_ID,
+                computeVariationName(simConfig, variationFactorTuples, repetition));
 
         /** Simulation Results */
         final PersistenceFramework persistenceFramework = simConfig.getPersistenceFramework();
@@ -106,21 +107,28 @@ public class AbstractSimulationConfigFactory {
         return map;
     }
 
-    private static String computeExperimentName(final Experiment experiment,
-            final AbstractSimulationConfiguration simConfig, final List<VariationFactorTuple> variationFactorTuples,
-            final int repetition) {
+    private static String computeExperimentRunName(final Experiment experiment) {
         final StringBuilder stringBuilder = new StringBuilder();
 
         stringBuilder.append(experiment.getName());
-        stringBuilder.append(" ");
+        stringBuilder.append(" [");
+        stringBuilder.append(experiment.getId());
+        stringBuilder.append("]");
+
+        return stringBuilder.toString();
+    }
+
+    private static String computeVariationName(final AbstractSimulationConfiguration simConfig,
+            final List<VariationFactorTuple> variationFactorTuples, final int repetition) {
+        final StringBuilder stringBuilder = new StringBuilder();
+
+        stringBuilder.append("Variation ");
         stringBuilder.append(variationFactorTuples.toString());
         stringBuilder.append("-");
         stringBuilder.append(repetition);
-        stringBuilder.append(" (");
-        stringBuilder.append(experiment.getId());
-        stringBuilder.append("; ");
+        stringBuilder.append(" [");
         stringBuilder.append(simConfig.getName());
-        stringBuilder.append(")");
+        stringBuilder.append("]");
 
         return stringBuilder.toString();
     }
