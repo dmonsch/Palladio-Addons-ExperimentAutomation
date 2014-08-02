@@ -4,12 +4,12 @@
   <rm:locator searchPathRef="StoryDiagrams" failOnError="false" pattern="^org\.storydriven\..*" />
   <rm:locator searchPathRef="StoryDiagrams" failOnError="false" pattern="^de\.mdelab\..*" />
   <rm:locator searchPathRef="StoryDiagrams" failOnError="false" pattern="^de\.upb\.swt\.core.*" />
+  <rm:locator pattern="^org\.palladiosimulator\..*" searchPathRef="RecorderFramework" failOnError="false"/>
   <rm:locator pattern="^de\.uka\.ipd\.sdq\..*" searchPathRef="Palladio" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\..*" searchPathRef="Palladio" failOnError="false"/>
   <rm:locator pattern="^de\.fzi\.se\..*" searchPathRef="Palladio" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\.simulizar.*" searchPathRef="SimuLizar" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\..*" searchPathRef="ProbeFramework" failOnError="false"/>
-  <rm:locator pattern="^org\.palladiosimulator\..*" searchPathRef="RecorderFramework" failOnError="false"/>
   <rm:locator pattern="^de\.uka\.ipd\.sdq\..*" searchPathRef="SensorFramework" failOnError="false"/>
   <rm:locator pattern="^org\.hibernate*" searchPathRef="SensorFramework" failOnError="false"/>  
   <rm:locator pattern="^de\.uka\.ipd\.sdq\..*" searchPathRef="palladio-commons" failOnError="false"/>
@@ -32,6 +32,13 @@
       <rm:uri format="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/Palladio/Incubation/ExperimentAutomation/trunk/{0}">
         <bc:propertyRef key="buckminster.component"/>
       </rm:uri>
+    </rm:provider>
+  </rm:searchPath>
+  <rm:searchPath name="RecorderFramework">
+    <rm:provider componentTypes="osgi.bundle,eclipse.feature,buckminster" readerType="p2" source="false" mutable="false">
+      <rm:property key="buckminster.source" value="false"/>
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="http://sdqweb.ipd.kit.edu/eclipse/recorderframework/nightly/"/>
     </rm:provider>
   </rm:searchPath>
   <rm:searchPath name="ServiceLevelObjectives">
@@ -67,13 +74,6 @@
       <rm:property key="buckminster.source" value="false"/>
       <rm:property key="buckminster.mutable" value="false"/>
       <rm:uri format="http://sdqweb.ipd.kit.edu/eclipse/probeframework/nightly/"/>
-    </rm:provider>
-  </rm:searchPath>
-  <rm:searchPath name="RecorderFramework">
-    <rm:provider componentTypes="osgi.bundle,eclipse.feature,buckminster" readerType="p2" source="false" mutable="false">
-      <rm:property key="buckminster.source" value="false"/>
-      <rm:property key="buckminster.mutable" value="false"/>
-      <rm:uri format="http://sdqweb.ipd.kit.edu/eclipse/recorderframework/nightly/"/>
     </rm:provider>
   </rm:searchPath>
   <rm:searchPath name="SensorFramework">
