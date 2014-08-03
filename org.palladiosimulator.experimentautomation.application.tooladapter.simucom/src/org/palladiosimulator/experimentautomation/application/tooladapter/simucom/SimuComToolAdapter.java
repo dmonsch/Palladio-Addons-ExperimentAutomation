@@ -38,8 +38,7 @@ public class SimuComToolAdapter implements IToolAdapter {
     public RunAnalysisJob createRunAnalysisJob(final Experiment experiment, final ToolConfiguration toolConfig,
             final List<VariationFactorTuple> variationFactorTuples, final int repetition) {
         final SimuComConfiguration simuComToolConfig = (SimuComConfiguration) toolConfig;
-        final SimuComConfig simuComConfig = createSimuComConfig(simuComToolConfig, experiment, variationFactorTuples,
-                repetition);
+        final SimuComConfig simuComConfig = createSimuComConfig(simuComToolConfig, experiment, variationFactorTuples);
         final SimuComWorkflowConfiguration workflowConfig = createSimuComWorkflowConfiguration(simuComConfig);
 
         final RunAnalysisJob result = new RunAnalysisJob();
@@ -66,9 +65,9 @@ public class SimuComToolAdapter implements IToolAdapter {
     }
 
     private SimuComConfig createSimuComConfig(final SimuComConfiguration simuComConfiguration,
-            final Experiment experiment, final List<VariationFactorTuple> variationFactorTuples, final int repetition) {
+            final Experiment experiment, final List<VariationFactorTuple> variationFactorTuples) {
         final Map<String, Object> configMap = AbstractSimulationConfigFactory.createConfigMap(experiment,
-                simuComConfiguration, SIMULATOR_ID_SIMUCOM, variationFactorTuples, repetition);
+                simuComConfiguration, SIMULATOR_ID_SIMUCOM, variationFactorTuples);
 
         configMap.put(SimuComConfig.SIMULATE_LINKING_RESOURCES, false);
         configMap.put(SimuComConfig.SIMULATE_FAILURES, false);

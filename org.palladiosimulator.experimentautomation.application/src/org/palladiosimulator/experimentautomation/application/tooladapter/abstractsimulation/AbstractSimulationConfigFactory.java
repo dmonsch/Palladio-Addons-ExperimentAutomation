@@ -57,7 +57,7 @@ public class AbstractSimulationConfigFactory {
      */
     public static Map<String, Object> createConfigMap(final Experiment experiment,
             final AbstractSimulationConfiguration simConfig, final String simulatorID,
-            final List<VariationFactorTuple> variationFactorTuples, final int repetition) {
+            final List<VariationFactorTuple> variationFactorTuples) {
         final Map<String, Object> map = new HashMap<String, Object>();
 
         /***************************************************/
@@ -69,7 +69,7 @@ public class AbstractSimulationConfigFactory {
         /** Experiment Run */
         map.put(AbstractSimulationConfig.EXPERIMENT_RUN, computeExperimentRunName(experiment));
         map.put(EDP2RecorderConfigurationFactory.VARIATION_ID,
-                computeVariationName(simConfig, variationFactorTuples, repetition));
+                computeVariationName(simConfig, variationFactorTuples));
 
         /** Simulation Results */
         final PersistenceFramework persistenceFramework = simConfig.getPersistenceFramework();
@@ -119,13 +119,11 @@ public class AbstractSimulationConfigFactory {
     }
 
     private static String computeVariationName(final AbstractSimulationConfiguration simConfig,
-            final List<VariationFactorTuple> variationFactorTuples, final int repetition) {
+            final List<VariationFactorTuple> variationFactorTuples) {
         final StringBuilder stringBuilder = new StringBuilder();
 
         stringBuilder.append("Variation ");
         stringBuilder.append(variationFactorTuples.toString());
-        stringBuilder.append("-");
-        stringBuilder.append(repetition);
         stringBuilder.append(" [");
         stringBuilder.append(simConfig.getName());
         stringBuilder.append("]");

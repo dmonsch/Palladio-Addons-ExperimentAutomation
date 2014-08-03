@@ -44,7 +44,7 @@ public class AbstractSimulationWorkflowConfigurationFactory {
 
         /** Sensitivity Analysis Parameters */
         workflowConfig.setSensitivityAnalysisEnabled(false); // TODO Sensitivity analysis should be
-                                                             // replaced by Experiment AUtomation
+                                                             // replaced by Experiment Automation
 
         /***************************************************/
         /** Feature Settings Tab ***************************/

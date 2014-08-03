@@ -17,7 +17,7 @@ public class AnalysisToolFactory {
                                 "org.palladiosimulator.experimentautomation.application.tooladapter");
                 for (final IConfigurationElement e : adapterExtensions) {
                     try {
-                        IToolAdapter toolAdapter = (IToolAdapter) e.createExecutableExtension("class");
+                        final IToolAdapter toolAdapter = (IToolAdapter) e.createExecutableExtension("class");
                         if (toolAdapter != null && toolAdapter.hasSupportFor(configuration)) {
                             return toolAdapter;
                         }
