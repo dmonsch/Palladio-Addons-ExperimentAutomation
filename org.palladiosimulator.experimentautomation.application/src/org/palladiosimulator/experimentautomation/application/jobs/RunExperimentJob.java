@@ -37,11 +37,11 @@ public class RunExperimentJob extends SequentialBlackboardInteractingJob<MDSDBla
         super(false);
 
         final IToolAdapter analysisTool = AnalysisToolFactory.createToolAdapater(toolConfiguration);
-        final RunAnalysisJob runAnalysisJob = analysisTool.createRunAnalysisJob(experiment,
-                toolConfiguration, variationFactorTuples, repetition);
+        final RunAnalysisJob runAnalysisJob = analysisTool.createRunAnalysisJob(experiment, toolConfiguration,
+                variationFactorTuples, repetition);
 
         this.add(runAnalysisJob);
-        this.add(new AddDynamicVariationJob(runAnalysisJob, analysisTool, experiment, toolConfiguration, variationFactorTuples,
-                repetition));
+        this.add(new AddDynamicVariationJob(runAnalysisJob, analysisTool, experiment, toolConfiguration,
+                variationFactorTuples, repetition));
     }
 }

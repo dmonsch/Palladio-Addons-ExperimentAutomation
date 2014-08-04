@@ -28,9 +28,8 @@ public interface IToolAdapter {
      *            significance.
      * @return the job conducting the specified experiment run.
      */
-    public RunAnalysisJob createRunAnalysisJob(final Experiment experiment,
-            final ToolConfiguration toolConfiguration, final List<VariationFactorTuple> variationFactorTuples,
-            final int repetition);
+    public RunAnalysisJob createRunAnalysisJob(final Experiment experiment, final ToolConfiguration toolConfiguration,
+            final List<VariationFactorTuple> variationFactorTuples, final int repetition);
 
     /**
      * States whether a tool adapter supports the given concrete tool configuration.

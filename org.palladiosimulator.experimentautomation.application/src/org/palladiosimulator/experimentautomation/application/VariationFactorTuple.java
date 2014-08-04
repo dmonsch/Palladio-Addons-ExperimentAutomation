@@ -26,9 +26,7 @@ public class VariationFactorTuple {
 
     @Override
     public String toString() {
-        return ""+factor;
+        return "" + factor;
     }
-    
- 
 
 }

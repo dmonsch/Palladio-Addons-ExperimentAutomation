@@ -68,8 +68,7 @@ public class AbstractSimulationConfigFactory {
 
         /** Experiment Run */
         map.put(AbstractSimulationConfig.EXPERIMENT_RUN, computeExperimentRunName(experiment));
-        map.put(EDP2RecorderConfigurationFactory.VARIATION_ID,
-                computeVariationName(simConfig, variationFactorTuples));
+        map.put(EDP2RecorderConfigurationFactory.VARIATION_ID, computeVariationName(simConfig, variationFactorTuples));
 
         /** Simulation Results */
         final PersistenceFramework persistenceFramework = simConfig.getPersistenceFramework();

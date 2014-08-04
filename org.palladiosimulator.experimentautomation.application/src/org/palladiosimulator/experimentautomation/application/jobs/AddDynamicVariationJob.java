@@ -75,7 +75,7 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
                 final NestedIntervalsValueProviderStrategy nestedInterval = this.tuples2nestedIntervals
                         .get(variationFactorTuple);
                 if (this.runAnalysisJob.sloWasViolated()) {
-                    nestedInterval.setMax(nestedInterval.valueAtPosition(0)-1L);
+                    nestedInterval.setMax(nestedInterval.valueAtPosition(0) - 1L);
                 } else {
                     nestedInterval.setMin(nestedInterval.valueAtPosition(0));
                 }

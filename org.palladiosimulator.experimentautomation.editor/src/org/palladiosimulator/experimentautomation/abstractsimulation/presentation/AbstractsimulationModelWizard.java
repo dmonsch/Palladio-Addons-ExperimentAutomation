@@ -302,7 +302,7 @@ public class AbstractsimulationModelWizard extends Wizard implements INewWizard 
                     final String key = FILE_EXTENSIONS.size() > 1 ? "_WARN_FilenameExtensions"
                             : "_WARN_FilenameExtension";
                     this.setErrorMessage(ExperimentAutomationEditorPlugin.INSTANCE.getString(key, new Object[] {
-                            FORMATTED_FILE_EXTENSIONS
+                        FORMATTED_FILE_EXTENSIONS
                     }));
                     return false;
                 }

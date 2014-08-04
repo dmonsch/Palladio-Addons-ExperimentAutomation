@@ -157,7 +157,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
         // Obtain or create and register package
         final AbstractsimulationPackageImpl theAbstractsimulationPackage = (AbstractsimulationPackageImpl) (EPackage.Registry.INSTANCE
                 .get(eNS_URI) instanceof AbstractsimulationPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
-                        : new AbstractsimulationPackageImpl());
+                : new AbstractsimulationPackageImpl());
 
         isInited = true;
 
@@ -168,10 +168,10 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
         // Obtain or create and register interdependencies
         final VariationPackageImpl theVariationPackage = (VariationPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(VariationPackage.eNS_URI) instanceof VariationPackageImpl ? EPackage.Registry.INSTANCE
-                        .getEPackage(VariationPackage.eNS_URI) : VariationPackage.eINSTANCE);
+                .getEPackage(VariationPackage.eNS_URI) : VariationPackage.eINSTANCE);
         final ExperimentsPackageImpl theExperimentsPackage = (ExperimentsPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(ExperimentsPackage.eNS_URI) instanceof ExperimentsPackageImpl ? EPackage.Registry.INSTANCE
-                        .getEPackage(ExperimentsPackage.eNS_URI) : ExperimentsPackage.eINSTANCE);
+                .getEPackage(ExperimentsPackage.eNS_URI) : ExperimentsPackage.eINSTANCE);
 
         // Create package meta-data objects
         theAbstractsimulationPackage.createPackageContents();

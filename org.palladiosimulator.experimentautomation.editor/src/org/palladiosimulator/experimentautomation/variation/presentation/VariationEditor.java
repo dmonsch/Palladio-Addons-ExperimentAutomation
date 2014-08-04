@@ -156,7 +156,7 @@ import de.uka.ipd.sdq.units.provider.UnitsItemProviderAdapterFactory;
  * @generated
  */
 public class VariationEditor extends MultiPageEditorPart implements IEditingDomainProvider, ISelectionProvider,
-IMenuListener, IViewerProvider, IGotoMarker {
+        IMenuListener, IViewerProvider, IGotoMarker {
     /**
      * This keeps track of the editing domain that is used to track all changes to the model. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -594,8 +594,8 @@ IMenuListener, IViewerProvider, IGotoMarker {
         if (this.updateProblemIndication) {
             final BasicDiagnostic diagnostic = new BasicDiagnostic(Diagnostic.OK,
                     "org.palladiosimulator.experimentautomation.editor", 0, null, new Object[] {
-                    this.editingDomain.getResourceSet()
-            });
+                        this.editingDomain.getResourceSet()
+                    });
             for (final Diagnostic childDiagnostic : this.resourceToDiagnosticMap.values()) {
                 if (childDiagnostic.getSeverity() != Diagnostic.OK) {
                     diagnostic.add(childDiagnostic);
@@ -682,7 +682,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
         this.adapterFactory.addAdapterFactory(new CompositionItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new UsagemodelItemProviderAdapterFactory());
         this.adapterFactory
-        .addAdapterFactory(new de.uka.ipd.sdq.pcm.repository.provider.RepositoryItemProviderAdapterFactory());
+                .addAdapterFactory(new de.uka.ipd.sdq.pcm.repository.provider.RepositoryItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ResourcetypeItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ProtocolItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ParameterItemProviderAdapterFactory());
@@ -986,15 +986,15 @@ IMenuListener, IViewerProvider, IGotoMarker {
             final BasicDiagnostic basicDiagnostic = new BasicDiagnostic(Diagnostic.ERROR,
                     "org.palladiosimulator.experimentautomation.editor", 0, getString("_UI_CreateModelError_message",
                             resource.getURI()), new Object[] {
-                exception == null ? (Object) resource : exception
-            });
+                        exception == null ? (Object) resource : exception
+                    });
             basicDiagnostic.merge(EcoreUtil.computeDiagnostic(resource, true));
             return basicDiagnostic;
         } else if (exception != null) {
             return new BasicDiagnostic(Diagnostic.ERROR, "org.palladiosimulator.experimentautomation.editor", 0,
                     getString("_UI_CreateModelError_message", resource.getURI()), new Object[] {
-                exception
-            });
+                        exception
+                    });
         } else {
             return Diagnostic.OK_INSTANCE;
         }
@@ -1592,7 +1592,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
         this.setPartName(editorInput.getName());
         final IProgressMonitor progressMonitor = this.getActionBars().getStatusLineManager() != null ? this
                 .getActionBars().getStatusLineManager().getProgressMonitor() : new NullProgressMonitor();
-                this.doSave(progressMonitor);
+        this.doSave(progressMonitor);
     }
 
     /**
@@ -1742,7 +1742,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
      */
     private static String getString(final String key, final Object s1) {
         return ExperimentAutomationEditorPlugin.INSTANCE.getString(key, new Object[] {
-                s1
+            s1
         });
     }
 

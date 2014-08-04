@@ -257,10 +257,10 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
             return NAME_EDEFAULT == null ? this.name != null : !NAME_EDEFAULT.equals(this.name);
         case VariationPackage.VARIATION_TYPE__STRATEGY_CLASS:
             return STRATEGY_CLASS_EDEFAULT == null ? this.strategyClass != null : !STRATEGY_CLASS_EDEFAULT
-            .equals(this.strategyClass);
+                    .equals(this.strategyClass);
         case VariationPackage.VARIATION_TYPE__VARIED_ENTITY_INTERFACE:
             return VARIED_ENTITY_INTERFACE_EDEFAULT == null ? this.variedEntityInterface != null
-            : !VARIED_ENTITY_INTERFACE_EDEFAULT.equals(this.variedEntityInterface);
+                    : !VARIED_ENTITY_INTERFACE_EDEFAULT.equals(this.variedEntityInterface);
         }
         return super.eIsSet(featureID);
     }

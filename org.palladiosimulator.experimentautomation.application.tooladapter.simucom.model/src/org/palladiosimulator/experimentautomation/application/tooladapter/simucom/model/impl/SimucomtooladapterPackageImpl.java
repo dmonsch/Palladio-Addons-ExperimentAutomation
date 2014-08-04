@@ -73,7 +73,7 @@ public class SimucomtooladapterPackageImpl extends EPackageImpl implements Simuc
         // Obtain or create and register package
         final SimucomtooladapterPackageImpl theSimucomtooladapterPackage = (SimucomtooladapterPackageImpl) (EPackage.Registry.INSTANCE
                 .get(eNS_URI) instanceof SimucomtooladapterPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
-                        : new SimucomtooladapterPackageImpl());
+                : new SimucomtooladapterPackageImpl());
 
         isInited = true;
 
