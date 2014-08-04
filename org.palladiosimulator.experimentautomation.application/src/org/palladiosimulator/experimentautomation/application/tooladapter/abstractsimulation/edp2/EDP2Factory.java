@@ -16,8 +16,6 @@ public class EDP2Factory {
     /**
      * Loads an EDP2 repository based on the given data source.
      * 
-     * FIXME Local Repository IDs are hard coded; a problem when more than 1 exist [Lehrig]
-     * 
      * @param datasource
      *            The data source to be used for loading, e.g., a memory or a file data source.
      * @return The repository corresponding to the given data source.
@@ -35,11 +33,11 @@ public class EDP2Factory {
         } else if (AbstractsimulationPackage.eINSTANCE.getFileDatasource().isInstance(datasource)) {
             final FileDatasource fileDatasource = (FileDatasource) datasource;
             final File file = new File(fileDatasource.getLocation());
-            final URI fileURI = URI.createFileURI(file.getAbsoluteFile().toString());
+            final String repositoryID = URI.createFileURI(file.getAbsolutePath()).toString();
             final LocalDirectoryRepositoryImpl ldRepository = (LocalDirectoryRepositoryImpl) RepositoryManager
-                    .getRepositoryFromUUID("org.palladiosimulator.edp2.dao.localfile.dao");
+                    .getRepositoryFromUUID(repositoryID);
 
-            if (ldRepository == null || !ldRepository.getUri().equals(fileURI.toString())) {
+            if (ldRepository == null) {
                 // create LocalDirectory Repository
                 repository = RepositoryManager.initializeLocalDirectoryRepository(file);
             } else {
@@ -52,7 +50,7 @@ public class EDP2Factory {
 
         RepositoryManager.addRepository(RepositoryManager.getCentralRepository(), repository);
         datasource.setId(repository.getId());
-        
+
         return repository;
     }
 
