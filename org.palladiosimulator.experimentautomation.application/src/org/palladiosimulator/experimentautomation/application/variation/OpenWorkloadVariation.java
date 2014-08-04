@@ -30,7 +30,7 @@ public class OpenWorkloadVariation implements IVariationStrategy {
     public String vary(final long value) {
         // int intValue;
         // if (value > Integer.MAX_VALUE) {
-        // logger.warn("Warning: Converted long to int, but the value was larger than MAXINT.");
+        // LOGGER.warn("Warning: Converted long to int, but the value was larger than MAXINT.");
         // intValue = Integer.MAX_VALUE;
         // } else {
         // intValue = new Long(value).intValue();
