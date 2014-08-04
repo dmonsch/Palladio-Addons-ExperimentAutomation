@@ -104,6 +104,8 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
     /**
      * Computes the number of SLO violations in the given data source.
      * 
+     * FIXME get(0) is generally wrong (we cannot cope with multiple exp. runs/ranges). [Lehrig]
+     * 
      * @param experimentSetting
      *            the experiment setting to be investigated for SLO violations.
      * @return the number of found SLO violations.
