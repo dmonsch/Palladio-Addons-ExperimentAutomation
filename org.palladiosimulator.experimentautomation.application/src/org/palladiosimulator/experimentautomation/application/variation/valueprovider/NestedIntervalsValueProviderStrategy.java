@@ -43,9 +43,6 @@ public class NestedIntervalsValueProviderStrategy implements IValueProviderStrat
             this.converged = true;
         } else if (this.min == this.middle) {
             this.middle++;
-            if (this.middle == this.max) {
-                this.converged = true;
-            }
         }
     }
 
@@ -60,7 +57,7 @@ public class NestedIntervalsValueProviderStrategy implements IValueProviderStrat
         if (this.min == this.max) {
             this.converged = true;
         }
-    }
+    }    
 
     public boolean isConverged() {
         return this.converged;
@@ -68,6 +65,19 @@ public class NestedIntervalsValueProviderStrategy implements IValueProviderStrat
 
     private void calculateMiddle() {
         this.middle = (this.min + this.max) / 2L;
+    }
+    
+    @Override
+    public String toString() {
+        final StringBuilder stringBuilder = new StringBuilder();
+        
+        stringBuilder.append("Capacity Interval: [");
+        stringBuilder.append(this.min);
+        stringBuilder.append(", ");
+        stringBuilder.append(this.max);
+        stringBuilder.append("]");
+        
+        return stringBuilder.toString();
     }
 
 }

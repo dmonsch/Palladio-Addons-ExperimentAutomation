@@ -55,7 +55,10 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
                     .getVariation().getValueProvider());
 
             if (valueProvider instanceof NestedIntervalsValueProviderStrategy) {
-                result.put(variationFactorTuple, (NestedIntervalsValueProviderStrategy) valueProvider);
+                final NestedIntervalsValueProviderStrategy nestedInterval = (NestedIntervalsValueProviderStrategy) valueProvider;
+                result.put(variationFactorTuple, nestedInterval);
+
+                System.out.println(nestedInterval);
             }
         }
 
@@ -72,7 +75,7 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
                 final NestedIntervalsValueProviderStrategy nestedInterval = this.tuples2nestedIntervals
                         .get(variationFactorTuple);
                 if (this.runAnalysisJob.sloWasViolated()) {
-                    nestedInterval.setMax(nestedInterval.valueAtPosition(0));
+                    nestedInterval.setMax(nestedInterval.valueAtPosition(0)-1L);
                 } else {
                     nestedInterval.setMin(nestedInterval.valueAtPosition(0));
                 }
@@ -82,6 +85,8 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
                 } else {
                     variationFactorTuple.setFactor(nestedInterval.valueAtPosition(0));
                 }
+
+                System.out.println(nestedInterval);
             }
 
             if (this.tuples2nestedIntervals.size() > 0) {
