@@ -104,16 +104,15 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
     /**
      * Computes the number of SLO violations in the given data source.
      * 
-     * FIXME get(0) is generally wrong (we cannot cope with multiple exp. runs/ranges). [Lehrig]
-     * 
      * @param experimentSetting
      *            the experiment setting to be investigated for SLO violations.
      * @return the number of found SLO violations.
      */
     private long computeSloViolations(final ExperimentSetting experimentSetting) {
-        long sloViolations = 0L;
-        final ExperimentRun experimentRun = experimentSetting.getExperimentRuns().get(0);
+        final int lastExperiment = experimentSetting.getExperimentRuns().size() - 1;
+        final ExperimentRun experimentRun = experimentSetting.getExperimentRuns().get(lastExperiment);
 
+        long sloViolations = 0L;
         for (final ServiceLevelObjective serviceLevelObjective : this.serviceLevelObjectives
                 .getServicelevelobjectives()) {
             final Measurements measurements = findMeasurements(experimentRun.getMeasurements(), serviceLevelObjective);
