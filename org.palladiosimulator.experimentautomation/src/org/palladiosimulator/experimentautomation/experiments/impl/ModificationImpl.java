@@ -325,7 +325,7 @@ public class ModificationImpl extends EObjectImpl implements Modification {
             return NAME_EDEFAULT == null ? this.name != null : !NAME_EDEFAULT.equals(this.name);
         case ExperimentsPackage.MODIFICATION__VARIED_OBJECT_ID:
             return VARIED_OBJECT_ID_EDEFAULT == null ? this.variedObjectId != null : !VARIED_OBJECT_ID_EDEFAULT
-                    .equals(this.variedObjectId);
+            .equals(this.variedObjectId);
         case ExperimentsPackage.MODIFICATION__VALUE:
             return this.value != VALUE_EDEFAULT;
         }

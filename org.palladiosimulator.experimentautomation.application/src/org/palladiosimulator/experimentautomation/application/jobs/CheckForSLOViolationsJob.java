@@ -211,24 +211,14 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
     /**
      * Returns the EDP2 repository containing measurements from the last analysis run.
      * 
-     * FIXME Memory datasources do not work. [Lehrig]
-     * 
-     * FIXME Repository IDs are hard coded; it currently only works because localfile IDs are
-     * non-unique (which is a bug on its own). [Lehrig]
-     * 
      * @param datasource
      *            the EDP2 datasource to get measurements from.
      * @return the EDP2 repository.
      */
     private Repository getEDP2Repository(final Datasource datasource) {
-        final Repository repository;
+        final Repository repository = RepositoryManager.getRepositoryFromUUID(datasource.getId());
 
-        if (AbstractsimulationPackage.eINSTANCE.getMemoryDatasource().isInstance(datasource)) {
-            throw new RuntimeException(
-                    "FIXME: Implement support for EDP2 memory datasouces. Only local files work as of now.");
-        } else if (AbstractsimulationPackage.eINSTANCE.getFileDatasource().isInstance(datasource)) {
-            repository = RepositoryManager.getRepositoryFromUUID("org.palladiosimulator.edp2.dao.localfile.dao");
-        } else {
+        if (repository == null) {
             throw new RuntimeException("Could not determine datasource type. This should not have happened.");
         }
 

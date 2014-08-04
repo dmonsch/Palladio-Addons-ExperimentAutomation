@@ -101,7 +101,7 @@ public class NestedIntervalsValueProviderItemProvider extends ValueProviderItemP
     public String getText(final Object object) {
         final NestedIntervalsValueProvider nestedIntervalsValueProvider = (NestedIntervalsValueProvider) object;
         return this.getString("_UI_NestedIntervalsValueProvider_type") + " "
-                + nestedIntervalsValueProvider.getMinValue();
+        + nestedIntervalsValueProvider.getMinValue();
     }
 
     /**

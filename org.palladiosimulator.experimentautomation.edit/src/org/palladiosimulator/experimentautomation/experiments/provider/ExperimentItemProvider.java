@@ -75,8 +75,8 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Experiment_id_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Experiment_id_feature", "_UI_Experiment_type"),
-                ExperimentsPackage.Literals.EXPERIMENT__ID, true, false, false,
-                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                        ExperimentsPackage.Literals.EXPERIMENT__ID, true, false, false,
+                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -90,8 +90,8 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Experiment_name_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Experiment_name_feature", "_UI_Experiment_type"),
-                ExperimentsPackage.Literals.EXPERIMENT__NAME, true, false, false,
-                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                        ExperimentsPackage.Literals.EXPERIMENT__NAME, true, false, false,
+                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**

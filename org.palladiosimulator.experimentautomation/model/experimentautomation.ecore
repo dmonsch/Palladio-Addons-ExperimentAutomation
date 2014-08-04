@@ -125,9 +125,9 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="reconfigurationRules"
           eType="#//experiments/ReconfigurationRulesFolder"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="platformMonitoringSpecification"
-          eType="ecore:EClass platform:/plugin/org.palladiosimulator.simulizar.pms/model/pms.ecore#//PMSModel"/>
+          eType="ecore:EClass ../../org.palladiosimulator.simulizar.pms/model/pms.ecore#//PMSModel"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="serviceLevelObjectives"
-          eType="ecore:EClass platform:/plugin/org.palladiosimulator.servicelevelobjective/model/servicelevelobjective.ecore#//ServiceLevelObjectiveRepository"/>
+          eType="ecore:EClass ../../org.palladiosimulator.servicelevelobjective/model/servicelevelobjective.ecore#//ServiceLevelObjectiveRepository"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ReconfigurationRulesFolder">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="folderUri" lowerBound="1"
@@ -177,7 +177,9 @@
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SensorFramework" eSuperTypes="#//abstractsimulation/PersistenceFramework"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Datasource" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Datasource" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MemoryDatasource" eSuperTypes="#//abstractsimulation/Datasource"/>
     <eClassifiers xsi:type="ecore:EClass" name="FileDatasource" eSuperTypes="#//abstractsimulation/Datasource">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" ordered="false"

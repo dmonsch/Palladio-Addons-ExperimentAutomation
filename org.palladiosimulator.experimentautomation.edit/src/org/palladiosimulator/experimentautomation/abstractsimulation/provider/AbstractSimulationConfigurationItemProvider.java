@@ -104,7 +104,7 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
             this.childrenFeatures
                     .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK);
             this.childrenFeatures
-                    .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS);
+            .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS);
             this.childrenFeatures
                     .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED);
         }

@@ -8,6 +8,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource;
 
 /**
  * This is the item provider adapter for a
@@ -60,7 +61,9 @@ public class MemoryDatasourceItemProvider extends DatasourceItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        return this.getString("_UI_MemoryDatasource_type");
+        final String label = ((MemoryDatasource) object).getId();
+        return label == null || label.length() == 0 ? this.getString("_UI_MemoryDatasource_type") : this
+                .getString("_UI_MemoryDatasource_type") + " " + label;
     }
 
     /**

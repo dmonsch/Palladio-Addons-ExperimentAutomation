@@ -272,13 +272,22 @@ public interface AbstractsimulationPackage extends EPackage {
     int DATASOURCE = 4;
 
     /**
+     * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int DATASOURCE__ID = 0;
+
+    /**
      * The number of structural features of the '<em>Datasource</em>' class. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int DATASOURCE_FEATURE_COUNT = 0;
+    int DATASOURCE_FEATURE_COUNT = 1;
 
     /**
      * The meta object id for the '
@@ -290,6 +299,15 @@ public interface AbstractsimulationPackage extends EPackage {
      * @generated
      */
     int MEMORY_DATASOURCE = 5;
+
+    /**
+     * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int MEMORY_DATASOURCE__ID = DATASOURCE__ID;
 
     /**
      * The number of structural features of the '<em>Memory Datasource</em>' class. <!--
@@ -310,6 +328,15 @@ public interface AbstractsimulationPackage extends EPackage {
      * @generated
      */
     int FILE_DATASOURCE = 6;
+
+    /**
+     * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int FILE_DATASOURCE__ID = DATASOURCE__ID;
 
     /**
      * The feature id for the '<em><b>Location</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -638,6 +665,18 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getDatasource();
 
     /**
+     * Returns the meta object for the attribute '
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.Datasource#getId
+     * <em>Id</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for the attribute '<em>Id</em>'.
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.Datasource#getId()
+     * @see #getDatasource()
+     * @generated
+     */
+    EAttribute getDatasource_Id();
+
+    /**
      * Returns the meta object for class '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource
      * <em>Memory Datasource</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -918,6 +957,14 @@ public interface AbstractsimulationPackage extends EPackage {
          * @generated
          */
         EClass DATASOURCE = eINSTANCE.getDatasource();
+
+        /**
+         * The meta object literal for the '<em><b>Id</b></em>' attribute feature. <!--
+         * begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @generated
+         */
+        EAttribute DATASOURCE__ID = eINSTANCE.getDatasource_Id();
 
         /**
          * The meta object literal for the '

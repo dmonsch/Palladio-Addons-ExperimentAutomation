@@ -64,7 +64,7 @@ public class VariationTypeItemProvider extends IdentifierItemProvider {
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_VariationType_name_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_VariationType_name_feature", "_UI_VariationType_type"),
-                VariationPackage.Literals.VARIATION_TYPE__NAME, true, false, false,
+                        VariationPackage.Literals.VARIATION_TYPE__NAME, true, false, false,
                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 

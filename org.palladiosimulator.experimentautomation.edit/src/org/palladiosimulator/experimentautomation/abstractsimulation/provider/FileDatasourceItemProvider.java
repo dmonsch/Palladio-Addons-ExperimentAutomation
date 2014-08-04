@@ -81,7 +81,7 @@ public class FileDatasourceItemProvider extends DatasourceItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((FileDatasource) object).getLocation();
+        final String label = ((FileDatasource) object).getId();
         return label == null || label.length() == 0 ? this.getString("_UI_FileDatasource_type") : this
                 .getString("_UI_FileDatasource_type") + " " + label;
     }

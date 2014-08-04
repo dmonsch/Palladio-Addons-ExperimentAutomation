@@ -75,7 +75,7 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Variation_type_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Variation_type_feature", "_UI_Variation_type"),
-                ExperimentsPackage.Literals.VARIATION__TYPE, true, false, true, null, null, null));
+                        ExperimentsPackage.Literals.VARIATION__TYPE, true, false, true, null, null, null));
     }
 
     /**
@@ -89,8 +89,8 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Variation_minValue_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Variation_minValue_feature", "_UI_Variation_type"),
-                ExperimentsPackage.Literals.VARIATION__MIN_VALUE, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                        ExperimentsPackage.Literals.VARIATION__MIN_VALUE, true, false, false,
+                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -104,8 +104,8 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Variation_maxValue_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Variation_maxValue_feature", "_UI_Variation_type"),
-                ExperimentsPackage.Literals.VARIATION__MAX_VALUE, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                        ExperimentsPackage.Literals.VARIATION__MAX_VALUE, true, false, false,
+                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -149,8 +149,8 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Variation_name_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Variation_name_feature", "_UI_Variation_type"),
-                ExperimentsPackage.Literals.VARIATION__NAME, true, false, false,
-                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                        ExperimentsPackage.Literals.VARIATION__NAME, true, false, false,
+                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**

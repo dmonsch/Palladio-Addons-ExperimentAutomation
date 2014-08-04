@@ -13,42 +13,46 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasou
 
 public class EDP2Factory {
 
-    private static Repository repository = null;
-
     /**
      * Loads an EDP2 repository based on the given data source.
      * 
-     * FIXME The singleton repository used here is generally unsuitable. Situations when experiments
-     * have different memory/file data sources cannot be realized. The current version is hacked and
-     * works only in special situations. These issues should be discussed and fixed. [Lehrig]
+     * FIXME Local Repository IDs are hard coded; a problem when more than 1 exist [Lehrig]
      * 
      * @param datasource
      *            The data source to be used for loading, e.g., a memory or a file data source.
      * @return The repository corresponding to the given data source.
      */
     public static Repository createOrOpenDatasource(final Datasource datasource) {
-        if (repository == null) {
-            if (AbstractsimulationPackage.eINSTANCE.getMemoryDatasource().isInstance(datasource)) {
-                // create MemoryDatasource
-                repository = RepositoryFactory.eINSTANCE.createLocalMemoryRepository();
-            } else if (AbstractsimulationPackage.eINSTANCE.getFileDatasource().isInstance(datasource)) {
-                final LocalDirectoryRepositoryImpl ldRepository = (LocalDirectoryRepositoryImpl) RepositoryManager
-                        .getRepositoryFromUUID("org.palladiosimulator.edp2.dao.localfile.dao");
-                final FileDatasource fileDatasource = (FileDatasource) datasource;
-                final File file = new File(fileDatasource.getLocation());
-                final URI fileURI = URI.createFileURI(file.getAbsoluteFile().toString());
-
-                if (ldRepository == null || !ldRepository.getUri().equals(fileURI.toString())) {
-                    repository = RepositoryManager.initializeLocalDirectoryRepository(file);
-                } else {
-                    repository = ldRepository;
-                }
-            } else {
-                throw new RuntimeException("Could not determine datasource type. This should not have happened.");
-            }
-            RepositoryManager.addRepository(RepositoryManager.getCentralRepository(), repository);
+        if (datasource.getId() != null) {
+            return RepositoryManager.getRepositoryFromUUID(datasource.getId());
         }
 
+        final Repository repository;
+
+        if (AbstractsimulationPackage.eINSTANCE.getMemoryDatasource().isInstance(datasource)) {
+            // create Memory Repository
+            repository = RepositoryFactory.eINSTANCE.createLocalMemoryRepository();
+        } else if (AbstractsimulationPackage.eINSTANCE.getFileDatasource().isInstance(datasource)) {
+            final FileDatasource fileDatasource = (FileDatasource) datasource;
+            final File file = new File(fileDatasource.getLocation());
+            final URI fileURI = URI.createFileURI(file.getAbsoluteFile().toString());
+            final LocalDirectoryRepositoryImpl ldRepository = (LocalDirectoryRepositoryImpl) RepositoryManager
+                    .getRepositoryFromUUID("org.palladiosimulator.edp2.dao.localfile.dao");
+
+            if (ldRepository == null || !ldRepository.getUri().equals(fileURI.toString())) {
+                // create LocalDirectory Repository
+                repository = RepositoryManager.initializeLocalDirectoryRepository(file);
+            } else {
+                // found existing LocalDirectory Repository
+                repository = ldRepository;
+            }
+        } else {
+            throw new RuntimeException("Could not determine datasource type. This should not have happened.");
+        }
+
+        RepositoryManager.addRepository(RepositoryManager.getCentralRepository(), repository);
+        datasource.setId(repository.getId());
+        
         return repository;
     }
 

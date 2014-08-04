@@ -71,7 +71,7 @@ public class ModificationItemProvider extends ItemProviderAdapter implements IEd
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Modification_type_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Modification_type_feature", "_UI_Modification_type"),
-                ExperimentsPackage.Literals.MODIFICATION__TYPE, true, false, true, null, null, null));
+                        ExperimentsPackage.Literals.MODIFICATION__TYPE, true, false, true, null, null, null));
     }
 
     /**
@@ -85,7 +85,7 @@ public class ModificationItemProvider extends ItemProviderAdapter implements IEd
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Modification_name_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Modification_name_feature", "_UI_Modification_type"),
-                ExperimentsPackage.Literals.MODIFICATION__NAME, true, false, false,
+                        ExperimentsPackage.Literals.MODIFICATION__NAME, true, false, false,
                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
@@ -115,7 +115,7 @@ public class ModificationItemProvider extends ItemProviderAdapter implements IEd
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Modification_value_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Modification_value_feature", "_UI_Modification_type"),
-                ExperimentsPackage.Literals.MODIFICATION__VALUE, true, false, false,
+                        ExperimentsPackage.Literals.MODIFICATION__VALUE, true, false, false,
                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 

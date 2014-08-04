@@ -41,7 +41,7 @@ import org.eclipse.ui.PartInitException;
  * @generated
  */
 public class VariationActionBarContributor extends EditingDomainActionBarContributor implements
-        ISelectionChangedListener {
+ISelectionChangedListener {
     /**
      * This keeps track of the active editor. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 

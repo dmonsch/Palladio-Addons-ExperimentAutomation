@@ -157,7 +157,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
         // Obtain or create and register package
         final AbstractsimulationPackageImpl theAbstractsimulationPackage = (AbstractsimulationPackageImpl) (EPackage.Registry.INSTANCE
                 .get(eNS_URI) instanceof AbstractsimulationPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
-                : new AbstractsimulationPackageImpl());
+                        : new AbstractsimulationPackageImpl());
 
         isInited = true;
 
@@ -168,10 +168,10 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
         // Obtain or create and register interdependencies
         final VariationPackageImpl theVariationPackage = (VariationPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(VariationPackage.eNS_URI) instanceof VariationPackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(VariationPackage.eNS_URI) : VariationPackage.eINSTANCE);
+                        .getEPackage(VariationPackage.eNS_URI) : VariationPackage.eINSTANCE);
         final ExperimentsPackageImpl theExperimentsPackage = (ExperimentsPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(ExperimentsPackage.eNS_URI) instanceof ExperimentsPackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(ExperimentsPackage.eNS_URI) : ExperimentsPackage.eINSTANCE);
+                        .getEPackage(ExperimentsPackage.eNS_URI) : ExperimentsPackage.eINSTANCE);
 
         // Create package meta-data objects
         theAbstractsimulationPackage.createPackageContents();
@@ -367,6 +367,16 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      * @generated
      */
     @Override
+    public EAttribute getDatasource_Id() {
+        return (EAttribute) this.datasourceEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
     public EClass getMemoryDatasource() {
         return this.memoryDatasourceEClass;
     }
@@ -507,6 +517,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
         this.sensorFrameworkEClass = this.createEClass(SENSOR_FRAMEWORK);
 
         this.datasourceEClass = this.createEClass(DATASOURCE);
+        this.createEAttribute(this.datasourceEClass, DATASOURCE__ID);
 
         this.memoryDatasourceEClass = this.createEClass(MEMORY_DATASOURCE);
 
@@ -620,6 +631,9 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
         this.initEClass(this.datasourceEClass, Datasource.class, "Datasource", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
+        this.initEAttribute(this.getDatasource_Id(), this.ecorePackage.getEString(), "id", null, 0, 1,
+                Datasource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.memoryDatasourceEClass, MemoryDatasource.class, "MemoryDatasource", !IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -3820,6 +3820,9 @@
           <children xmi:type="notation:Node" xmi:id="_EK3hVA6eEeSlordmsC7PkQ" type="2003" element="_EIPrIA6eEeSlordmsC7PkQ">
             <children xmi:type="notation:Node" xmi:id="_EK4IYA6eEeSlordmsC7PkQ" type="5007"/>
             <children xmi:type="notation:Node" xmi:id="_EK4IYQ6eEeSlordmsC7PkQ" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_Z51oIBvkEeSEc_H88kIWfg" type="3010" element="_Z4inoBvkEeSEc_H88kIWfg">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_Z51oIRvkEeSEc_H88kIWfg"/>
+              </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_EK4IYg6eEeSlordmsC7PkQ"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_EK4IYw6eEeSlordmsC7PkQ"/>
             </children>
@@ -4514,14 +4517,25 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_EIQSMA6eEeSlordmsC7PkQ" labelFormat="italic" iconPath="/org.eclipse.emf.ecoretools.design/icons/full/obj16/EClass_abstract.gif" backgroundStyle="Liquid">
-          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_EIQSMQ6eEeSlordmsC7PkQ"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_czmqkBvkEeSEc_H88kIWfg" labelFormat="italic" iconPath="/org.eclipse.emf.ecoretools.design/icons/full/obj16/EClass_abstract.gif" backgroundStyle="Liquid">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_czmqkRvkEeSEc_H88kIWfg"/>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@conditionnalStyles.1/@style"/>
-          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_EIQSMg6eEeSlordmsC7PkQ" red="125" green="125" blue="125"/>
-          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_EIQSMw6eEeSlordmsC7PkQ" red="255" green="255" blue="255"/>
-          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_EIQSNA6eEeSlordmsC7PkQ" red="228" green="228" blue="228"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_czmqkhvkEeSEc_H88kIWfg" red="125" green="125" blue="125"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_czmqkxvkEeSEc_H88kIWfg" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_czmqlBvkEeSEc_H88kIWfg" red="228" green="228" blue="228"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Z4inoBvkEeSEc_H88kIWfg" name="id : EString" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@6800f77a{platform:/resource/org.palladiosimulator.experimentautomation/model/experimentautomation.ecore#//abstractsimulation/Datasource/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+          <target xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//abstractsimulation/Datasource/id"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//abstractsimulation/Datasource/id"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_w5kTQBvkEeSEc_H88kIWfg" labelAlignment="LEFT">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_w5kTQRvkEeSEc_H88kIWfg"/>
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_w5kTQhvkEeSEc_H88kIWfg"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_w5kTQxvkEeSEc_H88kIWfg"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+        </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_EIRgUA6eEeSlordmsC7PkQ" name="SimTimeStopCondition" tooltipText="" outgoingEdges="_EKSSgA6eEeSlordmsC7PkQ" width="12" height="10">
         <target xmi:type="ecore:EClass" href="experimentautomation.ecore#//abstractsimulation/SimTimeStopCondition"/>
