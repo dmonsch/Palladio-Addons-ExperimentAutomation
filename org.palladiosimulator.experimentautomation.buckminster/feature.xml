@@ -7,6 +7,7 @@
 
    <url>
       <discovery label="Palladio" url="https://sdqweb.ipd.kit.edu/eclipse/palladio/nightly"/>
+      <discovery label="Palladio Workflow Engine" url="http://sdqweb.ipd.kit.edu/eclipse/workflowengine/nightly"/>
       <discovery label="SimuLizar" url="https://sdqweb.ipd.kit.edu/eclipse/simulizar/nightly"/>
       <discovery label="StoryDiagrams" url="http://sdqweb.ipd.kit.edu/eclipse/storydiagraminterpreter/nightly/"/>
       <discovery label="Palladio Recorder Framework" url="http://sdqweb.ipd.kit.edu/eclipse/recorderframework/nightly/"/>
