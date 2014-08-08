@@ -20,7 +20,6 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasou
 import org.palladiosimulator.experimentautomation.application.filters.SLOFilter;
 import org.palladiosimulator.experimentautomation.application.tooladapter.RunAnalysisJob;
 import org.palladiosimulator.measurementframework.Measurement;
-import org.palladiosimulator.measurementframework.measureprovider.IMeasureProvider;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjective;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
 
@@ -112,12 +111,8 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
             final IDataSource dataSource = new Edp2DataTupleDataSource(rawMeasurements);
             final SLOFilter sloFilter = new SLOFilter(dataSource, serviceLevelObjective);
             final IDataStream<Measurement> dataStream = sloFilter.getDataStream();
-            for (final IMeasureProvider tuple : dataStream) {
-                // process whole data stream
+            sloViolations += dataStream.size();
 
-                // TODO Is that really how it should work? [Lehrig]
-            }
-            sloViolations += sloFilter.getSloViolations();
             dataStream.close();
         }
 

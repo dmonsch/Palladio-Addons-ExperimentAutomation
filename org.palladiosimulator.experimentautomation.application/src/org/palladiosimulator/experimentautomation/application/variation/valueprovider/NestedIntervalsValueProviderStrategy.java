@@ -50,10 +50,15 @@ public class NestedIntervalsValueProviderStrategy implements IValueProviderStrat
         if (max > this.max) {
             throw new IllegalArgumentException("New interval has to be nested in original interval");
         }
-
+        
+        if (this.min > max) {
+            this.min = max;
+        }
+        
         this.max = max;
+        
         calculateMiddle();
-
+        
         if (this.min == this.max) {
             this.converged = true;
         }
