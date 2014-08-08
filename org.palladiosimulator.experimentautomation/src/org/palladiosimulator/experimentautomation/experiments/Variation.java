@@ -41,7 +41,7 @@ public interface Variation extends EObject {
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Type</em>' reference.
      * @see #setType(VariationType)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getVariation_Type()
@@ -54,7 +54,7 @@ public interface Variation extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getType
      * <em>Type</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Type</em>' reference.
      * @see #getType()
@@ -99,7 +99,7 @@ public interface Variation extends EObject {
      * of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Min Value</em>' attribute.
      * @see #setMinValue(long)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getVariation_MinValue()
@@ -112,7 +112,7 @@ public interface Variation extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getMinValue
      * <em>Min Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Min Value</em>' attribute.
      * @see #getMinValue()
@@ -127,7 +127,7 @@ public interface Variation extends EObject {
      * of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Max Value</em>' attribute.
      * @see #setMaxValue(long)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getVariation_MaxValue()
@@ -140,7 +140,7 @@ public interface Variation extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getMaxValue
      * <em>Max Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Max Value</em>' attribute.
      * @see #getMaxValue()
@@ -155,7 +155,7 @@ public interface Variation extends EObject {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Max Variations</em>' attribute.
      * @see #setMaxVariations(long)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getVariation_MaxVariations()
@@ -168,7 +168,7 @@ public interface Variation extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getMaxVariations
      * <em>Max Variations</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Max Variations</em>' attribute.
      * @see #getMaxVariations()
@@ -184,7 +184,7 @@ public interface Variation extends EObject {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Varied Object Id</em>' attribute.
      * @see #setVariedObjectId(String)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getVariation_VariedObjectId()
@@ -197,7 +197,7 @@ public interface Variation extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getVariedObjectId
      * <em>Varied Object Id</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Varied Object Id</em>' attribute.
      * @see #getVariedObjectId()
@@ -212,7 +212,7 @@ public interface Variation extends EObject {
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getVariation_Name()
@@ -225,7 +225,7 @@ public interface Variation extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.Variation#getName
      * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Name</em>' attribute.
      * @see #getName()

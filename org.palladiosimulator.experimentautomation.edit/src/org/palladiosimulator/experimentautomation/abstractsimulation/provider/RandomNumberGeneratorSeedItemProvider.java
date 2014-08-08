@@ -26,15 +26,15 @@ import org.palladiosimulator.experimentautomation.variation.provider.ExperimentA
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed}
  * object. <!-- begin-user-doc --> <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public RandomNumberGeneratorSeedItemProvider(final AdapterFactory adapterFactory) {
@@ -44,7 +44,7 @@ public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter i
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -65,7 +65,7 @@ public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter i
     /**
      * This adds a property descriptor for the Seed0 feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addSeed0PropertyDescriptor(final Object object) {
@@ -74,14 +74,14 @@ public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter i
                 this.getString("_UI_RandomNumberGeneratorSeed_seed0_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_RandomNumberGeneratorSeed_seed0_feature",
                         "_UI_RandomNumberGeneratorSeed_type"),
-                AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED0, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                        AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED0, true, false, false,
+                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Seed1 feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addSeed1PropertyDescriptor(final Object object) {
@@ -90,14 +90,14 @@ public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter i
                 this.getString("_UI_RandomNumberGeneratorSeed_seed1_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_RandomNumberGeneratorSeed_seed1_feature",
                         "_UI_RandomNumberGeneratorSeed_type"),
-                AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED1, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                        AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED1, true, false, false,
+                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Seed2 feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addSeed2PropertyDescriptor(final Object object) {
@@ -106,14 +106,14 @@ public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter i
                 this.getString("_UI_RandomNumberGeneratorSeed_seed2_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_RandomNumberGeneratorSeed_seed2_feature",
                         "_UI_RandomNumberGeneratorSeed_type"),
-                AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED2, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                        AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED2, true, false, false,
+                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Seed3 feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addSeed3PropertyDescriptor(final Object object) {
@@ -122,14 +122,14 @@ public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter i
                 this.getString("_UI_RandomNumberGeneratorSeed_seed3_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_RandomNumberGeneratorSeed_seed3_feature",
                         "_UI_RandomNumberGeneratorSeed_type"),
-                AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED3, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                        AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED3, true, false, false,
+                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Seed4 feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addSeed4PropertyDescriptor(final Object object) {
@@ -138,14 +138,14 @@ public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter i
                 this.getString("_UI_RandomNumberGeneratorSeed_seed4_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_RandomNumberGeneratorSeed_seed4_feature",
                         "_UI_RandomNumberGeneratorSeed_type"),
-                AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED4, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                        AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED4, true, false, false,
+                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Seed5 feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addSeed5PropertyDescriptor(final Object object) {
@@ -154,13 +154,13 @@ public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter i
                 this.getString("_UI_RandomNumberGeneratorSeed_seed5_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_RandomNumberGeneratorSeed_seed5_feature",
                         "_UI_RandomNumberGeneratorSeed_type"),
-                AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED5, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                        AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED5, true, false, false,
+                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
      * This returns RandomNumberGeneratorSeed.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -184,7 +184,7 @@ public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter i
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -207,7 +207,7 @@ public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter i
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -218,7 +218,7 @@ public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter i
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

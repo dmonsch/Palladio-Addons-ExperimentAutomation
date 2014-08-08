@@ -16,9 +16,7 @@ import org.palladiosimulator.edp2.models.ExperimentData.RawMeasurements;
 import org.palladiosimulator.edp2.models.Repository.Repository;
 import org.palladiosimulator.edp2.util.MeasurementsUtility;
 import org.palladiosimulator.edp2.util.MeasuringPointUtility;
-import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import org.palladiosimulator.experimentautomation.abstractsimulation.Datasource;
-import org.palladiosimulator.experimentautomation.abstractsimulation.PersistenceFramework;
+import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource;
 import org.palladiosimulator.experimentautomation.application.filters.SLOFilter;
 import org.palladiosimulator.experimentautomation.application.tooladapter.RunAnalysisJob;
 import org.palladiosimulator.measurementframework.Measurement;
@@ -42,7 +40,7 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
 
     private final RunAnalysisJob runAnalysisJob;
     private final ServiceLevelObjectiveRepository serviceLevelObjectives;
-    private final PersistenceFramework persistenceFramework;
+    private final EDP2Datasource edp2datasource;
     private final String experimentGroupPurpose;
     private final String experimentSettingDescription;
 
@@ -54,24 +52,18 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
      *            persistence framework.
      * @param serviceLevelObjectives
      *            a set of SLOs to be checked for.
-     * @param persistenceFramework
-     *            the persistence framework providing measurement data. Currently, only EDP2 is
-     *            supported.
+     * @param edp2datasource
+     *            the EDP2 persistence framework providing measurement data.
      * @param experimentGroupPurpose
      *            the (hopefully?) unique name of an experiment run; used to identify the experiment
      *            group of the last analysis run.
      */
     public CheckForSLOViolationsJob(final RunAnalysisJob runAnalysisJob,
-            final ServiceLevelObjectiveRepository serviceLevelObjectives,
-            final PersistenceFramework persistenceFramework, final String experimentGroupPurpose,
-            final String experimentSettingDescription) {
-        if (!AbstractsimulationPackage.eINSTANCE.getEDP2().isInstance(persistenceFramework)) {
-            throw new IllegalArgumentException("CheckForSLOViolationsJob currently only works with EDP2");
-        }
-
+            final ServiceLevelObjectiveRepository serviceLevelObjectives, final EDP2Datasource edp2datasource,
+            final String experimentGroupPurpose, final String experimentSettingDescription) {
         this.runAnalysisJob = runAnalysisJob;
         this.serviceLevelObjectives = serviceLevelObjectives;
-        this.persistenceFramework = persistenceFramework;
+        this.edp2datasource = edp2datasource;
         this.experimentGroupPurpose = experimentGroupPurpose;
         this.experimentSettingDescription = experimentSettingDescription;
     }
@@ -84,8 +76,7 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
      */
     @Override
     public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
-        final Datasource datasource = this.persistenceFramework.getDatasource();
-        final Repository repository = getEDP2Repository(datasource);
+        final Repository repository = getEDP2Repository(edp2datasource);
         final ExperimentGroup experimentGroup = getExperimentGroup(repository);
         final ExperimentSetting experimentSetting = getExperimentSetting(experimentGroup);
         final long sloViolations = computeSloViolations(experimentSetting);
@@ -210,12 +201,12 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
     /**
      * Returns the EDP2 repository containing measurements from the last analysis run.
      * 
-     * @param datasource
+     * @param edp2datasource
      *            the EDP2 datasource to get measurements from.
      * @return the EDP2 repository.
      */
-    private Repository getEDP2Repository(final Datasource datasource) {
-        final Repository repository = RepositoryManager.getRepositoryFromUUID(datasource.getId());
+    private Repository getEDP2Repository(final EDP2Datasource edp2datasource) {
+        final Repository repository = RepositoryManager.getRepositoryFromUUID(edp2datasource.getId());
 
         if (repository == null) {
             throw new RuntimeException("Could not determine datasource type. This should not have happened.");

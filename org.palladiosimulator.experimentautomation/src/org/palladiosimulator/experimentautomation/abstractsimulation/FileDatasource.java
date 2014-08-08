@@ -19,7 +19,7 @@ package org.palladiosimulator.experimentautomation.abstractsimulation;
  * @model
  * @generated
  */
-public interface FileDatasource extends Datasource {
+public interface FileDatasource extends EDP2Datasource {
     /**
      * Returns the value of the '<em><b>Location</b></em>' attribute. <!-- begin-user-doc -->
      * <p>
@@ -27,7 +27,7 @@ public interface FileDatasource extends Datasource {
      * of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Location</em>' attribute.
      * @see #setLocation(String)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getFileDatasource_Location()
@@ -40,7 +40,7 @@ public interface FileDatasource extends Datasource {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource#getLocation
      * <em>Location</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Location</em>' attribute.
      * @see #getLocation()

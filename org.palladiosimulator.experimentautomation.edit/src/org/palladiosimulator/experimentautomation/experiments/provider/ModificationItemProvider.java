@@ -30,11 +30,11 @@ import org.palladiosimulator.experimentautomation.variation.provider.ExperimentA
  * @generated
  */
 public class ModificationItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public ModificationItemProvider(final AdapterFactory adapterFactory) {
@@ -44,7 +44,7 @@ public class ModificationItemProvider extends ItemProviderAdapter implements IEd
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -63,7 +63,7 @@ public class ModificationItemProvider extends ItemProviderAdapter implements IEd
     /**
      * This adds a property descriptor for the Type feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addTypePropertyDescriptor(final Object object) {
@@ -71,13 +71,13 @@ public class ModificationItemProvider extends ItemProviderAdapter implements IEd
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Modification_type_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Modification_type_feature", "_UI_Modification_type"),
-                        ExperimentsPackage.Literals.MODIFICATION__TYPE, true, false, true, null, null, null));
+                ExperimentsPackage.Literals.MODIFICATION__TYPE, true, false, true, null, null, null));
     }
 
     /**
      * This adds a property descriptor for the Name feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addNamePropertyDescriptor(final Object object) {
@@ -85,14 +85,14 @@ public class ModificationItemProvider extends ItemProviderAdapter implements IEd
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Modification_name_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Modification_name_feature", "_UI_Modification_type"),
-                        ExperimentsPackage.Literals.MODIFICATION__NAME, true, false, false,
-                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                ExperimentsPackage.Literals.MODIFICATION__NAME, true, false, false,
+                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Varied Object Id feature. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addVariedObjectIdPropertyDescriptor(final Object object) {
@@ -101,13 +101,13 @@ public class ModificationItemProvider extends ItemProviderAdapter implements IEd
                 this.getString("_UI_Modification_variedObjectId_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_Modification_variedObjectId_feature",
                         "_UI_Modification_type"), ExperimentsPackage.Literals.MODIFICATION__VARIED_OBJECT_ID, true,
-                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                        false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Value feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addValuePropertyDescriptor(final Object object) {
@@ -115,13 +115,13 @@ public class ModificationItemProvider extends ItemProviderAdapter implements IEd
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Modification_value_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Modification_value_feature", "_UI_Modification_type"),
-                        ExperimentsPackage.Literals.MODIFICATION__VALUE, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                ExperimentsPackage.Literals.MODIFICATION__VALUE, true, false, false,
+                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
      * This returns Modification.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -146,7 +146,7 @@ public class ModificationItemProvider extends ItemProviderAdapter implements IEd
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -166,7 +166,7 @@ public class ModificationItemProvider extends ItemProviderAdapter implements IEd
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -177,7 +177,7 @@ public class ModificationItemProvider extends ItemProviderAdapter implements IEd
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

@@ -27,11 +27,11 @@ import org.palladiosimulator.experimentautomation.experiments.util.ExperimentsAd
  * {@link #fireNotifyChanged fireNotifyChanged}. The adapters also support Eclipse property sheets.
  * Note that most of the adapters are shared among multiple instances. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- *
+ * 
  * @generated
  */
 public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFactory implements
-        ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -51,14 +51,14 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
     /**
      * This keeps track of all the supported types checked by {@link #isFactoryForType
      * isFactoryForType}. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
     /**
      * This constructs an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public ExperimentsItemProviderAdapterFactory() {
@@ -73,7 +73,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.ExperimentRepository}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ExperimentRepositoryItemProvider experimentRepositoryItemProvider;
@@ -132,7 +132,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.Variation}. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -148,7 +148,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected PolynomialValueProviderItemProvider polynomialValueProviderItemProvider;
@@ -173,7 +173,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ExponentialValueProviderItemProvider exponentialValueProviderItemProvider;
@@ -198,7 +198,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.SetValueProvider} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected SetValueProviderItemProvider setValueProviderItemProvider;
@@ -223,7 +223,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected PlacketBurmanDesignItemProvider placketBurmanDesignItemProvider;
@@ -248,7 +248,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected FullFactorialDesignItemProvider fullFactorialDesignItemProvider;
@@ -273,7 +273,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.FractionalFactorialDesign}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected FractionalFactorialDesignItemProvider fractionalFactorialDesignItemProvider;
@@ -282,7 +282,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.FractionalFactorialDesign}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -298,7 +298,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected OneFactorAtATimeItemProvider oneFactorAtATimeItemProvider;
@@ -323,7 +323,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.SimulationDurationMeasurement}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected SimulationDurationMeasurementItemProvider simulationDurationMeasurementItemProvider;
@@ -332,7 +332,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.SimulationDurationMeasurement}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -348,7 +348,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.ProfilingMeasurement}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ProfilingMeasurementItemProvider profilingMeasurementItemProvider;
@@ -398,7 +398,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.LinearValueProvider} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected LinearValueProviderItemProvider linearValueProviderItemProvider;
@@ -473,7 +473,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ReconfigurationRulesFolderItemProvider reconfigurationRulesFolderItemProvider;
@@ -482,7 +482,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -498,7 +498,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This keeps track of the one adapter used for all
      * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected NestedIntervalsValueProviderItemProvider nestedIntervalsValueProviderItemProvider;
@@ -507,7 +507,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      * This creates an adapter for a
      * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider}.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -522,7 +522,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
     /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -533,7 +533,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
     /**
      * This sets the composed adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -543,7 +543,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -564,7 +564,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -581,7 +581,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This adds a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -591,7 +591,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This removes a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -617,7 +617,7 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
     /**
      * This disposes all of the item providers created by this factory. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

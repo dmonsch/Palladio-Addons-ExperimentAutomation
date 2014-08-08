@@ -46,9 +46,9 @@ public class SimuComToolAdapter implements IToolAdapter {
             result.add(new LogExperimentInformationJob(experiment, simuComConfig, variationFactorTuples, repetition));
             result.add(new SimuComJob(workflowConfig, null, false));
             result.addJob(new CheckForSLOViolationsJob(result,
-                    experiment.getInitialModel().getServiceLevelObjectives(), simuComToolConfig
-                            .getPersistenceFramework(), simuComConfig.getNameBase(), simuComConfig.getVariationId()));
-            result.add(new CleanUpRecorderJob(simuComToolConfig.getPersistenceFramework()));
+                    experiment.getInitialModel().getServiceLevelObjectives(), simuComToolConfig.getDatasource(),
+                    simuComConfig.getNameBase(), simuComConfig.getVariationId()));
+            result.add(new CleanUpRecorderJob(simuComToolConfig.getDatasource()));
         } catch (CoreException e) {
             LOGGER.error("SimuCom execution failed: " + e);
         }

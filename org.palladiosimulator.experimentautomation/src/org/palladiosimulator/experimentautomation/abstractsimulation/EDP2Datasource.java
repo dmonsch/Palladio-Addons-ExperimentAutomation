@@ -5,23 +5,22 @@ package org.palladiosimulator.experimentautomation.abstractsimulation;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * <!-- begin-user-doc --> A representation of the model object '<em><b>Datasource</b></em>'. <!--
- * end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>EDP2 Datasource</b></em>'.
+ * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.Datasource#getId <em>Id
- * </em>}</li>
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource#getId
+ * <em>Id</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getDatasource()
+ * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getEDP2Datasource()
  * @model abstract="true"
  * @generated
  */
-public interface Datasource extends EObject {
-
+public interface EDP2Datasource extends EObject {
     /**
      * Returns the value of the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc -->
      * <p>
@@ -29,10 +28,10 @@ public interface Datasource extends EObject {
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Id</em>' attribute.
      * @see #setId(String)
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getDatasource_Id()
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getEDP2Datasource_Id()
      * @model
      * @generated
      */
@@ -40,13 +39,14 @@ public interface Datasource extends EObject {
 
     /**
      * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.Datasource#getId
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource#getId
      * <em>Id</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Id</em>' attribute.
      * @see #getId()
      * @generated
      */
     void setId(String value);
-} // Datasource
+
+} // EDP2Datasource

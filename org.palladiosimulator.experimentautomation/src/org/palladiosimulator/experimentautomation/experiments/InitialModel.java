@@ -51,7 +51,7 @@ public interface InitialModel extends EObject {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Usage Model</em>' reference.
      * @see #setUsageModel(UsageModel)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_UsageModel()
@@ -64,7 +64,7 @@ public interface InitialModel extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getUsageModel
      * <em>Usage Model</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Usage Model</em>' reference.
      * @see #getUsageModel()
@@ -79,7 +79,7 @@ public interface InitialModel extends EObject {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Allocation</em>' reference.
      * @see #setAllocation(Allocation)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_Allocation()
@@ -92,7 +92,7 @@ public interface InitialModel extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getAllocation
      * <em>Allocation</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Allocation</em>' reference.
      * @see #getAllocation()
@@ -121,7 +121,7 @@ public interface InitialModel extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getMiddlewareRepository
      * <em>Middleware Repository</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Middleware Repository</em>' reference.
      * @see #getMiddlewareRepository()
@@ -180,7 +180,7 @@ public interface InitialModel extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getReconfigurationRules
      * <em>Reconfiguration Rules</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Reconfiguration Rules</em>' reference.
      * @see #getReconfigurationRules()
@@ -210,7 +210,7 @@ public interface InitialModel extends EObject {
      * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getPlatformMonitoringSpecification
      * <em>Platform Monitoring Specification</em>}' reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Platform Monitoring Specification</em>' reference.
      * @see #getPlatformMonitoringSpecification()
@@ -239,7 +239,7 @@ public interface InitialModel extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getServiceLevelObjectives
      * <em>Service Level Objectives</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Service Level Objectives</em>' reference.
      * @see #getServiceLevelObjectives()

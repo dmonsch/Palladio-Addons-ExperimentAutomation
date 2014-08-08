@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import org.palladiosimulator.experimentautomation.abstractsimulation.PersistenceFramework;
+import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
 import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
 import org.palladiosimulator.experimentautomation.experiments.impl.ToolConfigurationImpl;
@@ -25,9 +25,6 @@ import org.palladiosimulator.experimentautomation.experiments.impl.ToolConfigura
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#getPersistenceFramework
- * <em>Persistence Framework</em>}</li>
  * <li>
  * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#getStopConditions
  * <em>Stop Conditions</em>}</li>
@@ -40,6 +37,9 @@ import org.palladiosimulator.experimentautomation.experiments.impl.ToolConfigura
  * <li>
  * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#isSimulateFailures
  * <em>Simulate Failures</em>}</li>
+ * <li>
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#getDatasource
+ * <em>Datasource</em>}</li>
  * </ul>
  * </p>
  *
@@ -48,19 +48,9 @@ import org.palladiosimulator.experimentautomation.experiments.impl.ToolConfigura
 public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurationImpl implements
 AbstractSimulationConfiguration {
     /**
-     * The cached value of the '{@link #getPersistenceFramework() <em>Persistence Framework</em>}'
-     * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getPersistenceFramework()
-     * @generated
-     * @ordered
-     */
-    protected PersistenceFramework persistenceFramework;
-
-    /**
      * The cached value of the '{@link #getStopConditions() <em>Stop Conditions</em>}' containment
      * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getStopConditions()
      * @generated
      * @ordered
@@ -71,7 +61,7 @@ AbstractSimulationConfiguration {
      * The cached value of the '{@link #getRandomNumberGeneratorSeed()
      * <em>Random Number Generator Seed</em>}' containment reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @see #getRandomNumberGeneratorSeed()
      * @generated
      * @ordered
@@ -103,7 +93,7 @@ AbstractSimulationConfiguration {
     /**
      * The default value of the '{@link #isSimulateFailures() <em>Simulate Failures</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #isSimulateFailures()
      * @generated
      * @ordered
@@ -113,7 +103,7 @@ AbstractSimulationConfiguration {
     /**
      * The cached value of the '{@link #isSimulateFailures() <em>Simulate Failures</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #isSimulateFailures()
      * @generated
      * @ordered
@@ -121,8 +111,18 @@ AbstractSimulationConfiguration {
     protected boolean simulateFailures = SIMULATE_FAILURES_EDEFAULT;
 
     /**
+     * The cached value of the '{@link #getDatasource() <em>Datasource</em>}' containment reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
+     * @see #getDatasource()
+     * @generated
+     * @ordered
+     */
+    protected EDP2Datasource datasource;
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected AbstractSimulationConfigurationImpl() {
@@ -131,7 +131,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -141,69 +141,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public PersistenceFramework getPersistenceFramework() {
-        return this.persistenceFramework;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    public NotificationChain basicSetPersistenceFramework(final PersistenceFramework newPersistenceFramework,
-            NotificationChain msgs) {
-        final PersistenceFramework oldPersistenceFramework = this.persistenceFramework;
-        this.persistenceFramework = newPersistenceFramework;
-        if (this.eNotificationRequired()) {
-            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK,
-                    oldPersistenceFramework, newPersistenceFramework);
-            if (msgs == null) {
-                msgs = notification;
-            } else {
-                msgs.add(notification);
-            }
-        }
-        return msgs;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public void setPersistenceFramework(final PersistenceFramework newPersistenceFramework) {
-        if (newPersistenceFramework != this.persistenceFramework) {
-            NotificationChain msgs = null;
-            if (this.persistenceFramework != null) {
-                msgs = ((InternalEObject) this.persistenceFramework).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK, null,
-                        msgs);
-            }
-            if (newPersistenceFramework != null) {
-                msgs = ((InternalEObject) newPersistenceFramework).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK, null,
-                        msgs);
-            }
-            msgs = this.basicSetPersistenceFramework(newPersistenceFramework, msgs);
-            if (msgs != null) {
-                msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK,
-                    newPersistenceFramework, newPersistenceFramework));
-        }
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -217,7 +155,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -227,7 +165,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public NotificationChain basicSetRandomNumberGeneratorSeed(
@@ -249,7 +187,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -279,7 +217,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -289,7 +227,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -305,7 +243,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -315,7 +253,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -331,33 +269,90 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
+     * @generated
+     */
+    @Override
+    public EDP2Datasource getDatasource() {
+        return this.datasource;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    public NotificationChain basicSetDatasource(final EDP2Datasource newDatasource, NotificationChain msgs) {
+        final EDP2Datasource oldDatasource = this.datasource;
+        this.datasource = newDatasource;
+        if (this.eNotificationRequired()) {
+            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE, oldDatasource,
+                    newDatasource);
+            if (msgs == null) {
+                msgs = notification;
+            } else {
+                msgs.add(notification);
+            }
+        }
+        return msgs;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public void setDatasource(final EDP2Datasource newDatasource) {
+        if (newDatasource != this.datasource) {
+            NotificationChain msgs = null;
+            if (this.datasource != null) {
+                msgs = ((InternalEObject) this.datasource).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+                        - AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE, null, msgs);
+            }
+            if (newDatasource != null) {
+                msgs = ((InternalEObject) newDatasource).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+                        - AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE, null, msgs);
+            }
+            msgs = this.basicSetDatasource(newDatasource, msgs);
+            if (msgs != null) {
+                msgs.dispatch();
+            }
+        } else if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE, newDatasource,
+                    newDatasource));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
         switch (featureID) {
-        case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK:
-            return this.basicSetPersistenceFramework(null, msgs);
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS:
             return ((InternalEList<?>) this.getStopConditions()).basicRemove(otherEnd, msgs);
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED:
             return this.basicSetRandomNumberGeneratorSeed(null, msgs);
+        case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE:
+            return this.basicSetDatasource(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-        case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK:
-            return this.getPersistenceFramework();
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS:
             return this.getStopConditions();
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED:
@@ -366,22 +361,21 @@ AbstractSimulationConfiguration {
             return this.isSimulateLinkingResources();
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES:
             return this.isSimulateFailures();
+        case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE:
+            return this.getDatasource();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
     @Override
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-        case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK:
-            this.setPersistenceFramework((PersistenceFramework) newValue);
-            return;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS:
             this.getStopConditions().clear();
             this.getStopConditions().addAll((Collection<? extends StopCondition>) newValue);
@@ -395,21 +389,21 @@ AbstractSimulationConfiguration {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES:
             this.setSimulateFailures((Boolean) newValue);
             return;
+        case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE:
+            this.setDatasource((EDP2Datasource) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void eUnset(final int featureID) {
         switch (featureID) {
-        case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK:
-            this.setPersistenceFramework((PersistenceFramework) null);
-            return;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS:
             this.getStopConditions().clear();
             return;
@@ -422,20 +416,21 @@ AbstractSimulationConfiguration {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES:
             this.setSimulateFailures(SIMULATE_FAILURES_EDEFAULT);
             return;
+        case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE:
+            this.setDatasource((EDP2Datasource) null);
+            return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
-        case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK:
-            return this.persistenceFramework != null;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS:
             return this.stopConditions != null && !this.stopConditions.isEmpty();
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED:
@@ -444,13 +439,15 @@ AbstractSimulationConfiguration {
             return this.simulateLinkingResources != SIMULATE_LINKING_RESOURCES_EDEFAULT;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES:
             return this.simulateFailures != SIMULATE_FAILURES_EDEFAULT;
+        case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE:
+            return this.datasource != null;
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

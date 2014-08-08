@@ -27,14 +27,12 @@
       <import plugin="de.uka.ipd.sdq.workflow" version="2.1.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.workflow.mdsd" version="2.1.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.simucomframework" version="2.0.0" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.sensorframework" version="1.1.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.simulation.abstractsimengine" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.codegen.simucontroller" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.workflow.pcm" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.simulation" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.simucomframework.simucomstatus" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.experimentautomation" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.palladiosimulator.recorderframework.sensorframework" version="2.0.1" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.edp2" version="2.0.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.recorderframework.edp2" version="2.0.1" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.edp2.dao" version="1.0.0" match="greaterOrEqual"/>

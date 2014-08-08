@@ -10,13 +10,11 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationFactory;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import org.palladiosimulator.experimentautomation.abstractsimulation.Datasource;
+import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
 import org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource;
-import org.palladiosimulator.experimentautomation.abstractsimulation.PersistenceFramework;
 import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
-import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework;
 import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition;
 import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
@@ -28,86 +26,65 @@ import org.palladiosimulator.simulizar.pms.PmsPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class AbstractsimulationPackageImpl extends EPackageImpl implements AbstractsimulationPackage {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass abstractSimulationConfigurationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    private EClass persistenceFrameworkEClass = null;
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass randomNumberGeneratorSeedEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
-    private EClass sensorFrameworkEClass = null;
+    private EClass edp2DatasourceEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    private EClass datasourceEClass = null;
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass memoryDatasourceEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass fileDatasourceEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass measurementCountStopConditionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass simTimeStopConditionEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass stopConditionEClass = null;
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    private EClass edp2EClass = null;
 
     /**
      * Creates an instance of the model <b>Package</b>, registered with
@@ -117,7 +94,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      * Note: the correct way to create the package is via the static factory method {@link #init
      * init()}, which also performs initialization of the package, or returns the registered
      * package, if one already exists. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see org.eclipse.emf.ecore.EPackage.Registry
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#eNS_URI
      * @see #init()
@@ -129,7 +106,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private static boolean isInited = false;
@@ -142,7 +119,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
      * This method is used to initialize {@link AbstractsimulationPackage#eINSTANCE} when that field
      * is accessed. Clients should not invoke it directly. Instead, they should simply access that
      * field to obtain the package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #eNS_URI
      * @see #createPackageContents()
      * @see #initializePackageContents()
@@ -193,7 +170,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -203,77 +180,57 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
-    public EReference getAbstractSimulationConfiguration_PersistenceFramework() {
+    public EReference getAbstractSimulationConfiguration_StopConditions() {
         return (EReference) this.abstractSimulationConfigurationEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
-    public EReference getAbstractSimulationConfiguration_StopConditions() {
+    public EReference getAbstractSimulationConfiguration_RandomNumberGeneratorSeed() {
         return (EReference) this.abstractSimulationConfigurationEClass.getEStructuralFeatures().get(1);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EReference getAbstractSimulationConfiguration_RandomNumberGeneratorSeed() {
-        return (EReference) this.abstractSimulationConfigurationEClass.getEStructuralFeatures().get(2);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public EAttribute getAbstractSimulationConfiguration_SimulateLinkingResources() {
+        return (EAttribute) this.abstractSimulationConfigurationEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public EAttribute getAbstractSimulationConfiguration_SimulateFailures() {
         return (EAttribute) this.abstractSimulationConfigurationEClass.getEStructuralFeatures().get(3);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
-    public EAttribute getAbstractSimulationConfiguration_SimulateFailures() {
-        return (EAttribute) this.abstractSimulationConfigurationEClass.getEStructuralFeatures().get(4);
+    public EReference getAbstractSimulationConfiguration_Datasource() {
+        return (EReference) this.abstractSimulationConfigurationEClass.getEStructuralFeatures().get(4);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EClass getPersistenceFramework() {
-        return this.persistenceFrameworkEClass;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EReference getPersistenceFramework_Datasource() {
-        return (EReference) this.persistenceFrameworkEClass.getEStructuralFeatures().get(0);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -283,7 +240,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -293,7 +250,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -303,7 +260,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -313,7 +270,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -323,7 +280,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -333,7 +290,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -343,37 +300,27 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
-    public EClass getSensorFramework() {
-        return this.sensorFrameworkEClass;
+    public EClass getEDP2Datasource() {
+        return this.edp2DatasourceEClass;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
-    public EClass getDatasource() {
-        return this.datasourceEClass;
+    public EAttribute getEDP2Datasource_Id() {
+        return (EAttribute) this.edp2DatasourceEClass.getEStructuralFeatures().get(0);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EAttribute getDatasource_Id() {
-        return (EAttribute) this.datasourceEClass.getEStructuralFeatures().get(0);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -383,7 +330,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -393,7 +340,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -403,7 +350,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -413,7 +360,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -423,7 +370,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -433,7 +380,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -443,7 +390,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -453,17 +400,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EClass getEDP2() {
-        return this.edp2EClass;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -473,7 +410,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private boolean isCreated = false;
@@ -481,7 +418,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
     /**
      * Creates the meta-model objects for the package. This method is guarded to have no affect on
      * any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public void createPackageContents() {
@@ -493,8 +430,6 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
         // Create classes and their features
         this.abstractSimulationConfigurationEClass = this.createEClass(ABSTRACT_SIMULATION_CONFIGURATION);
         this.createEReference(this.abstractSimulationConfigurationEClass,
-                ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK);
-        this.createEReference(this.abstractSimulationConfigurationEClass,
                 ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS);
         this.createEReference(this.abstractSimulationConfigurationEClass,
                 ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED);
@@ -502,9 +437,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
                 ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES);
         this.createEAttribute(this.abstractSimulationConfigurationEClass,
                 ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES);
-
-        this.persistenceFrameworkEClass = this.createEClass(PERSISTENCE_FRAMEWORK);
-        this.createEReference(this.persistenceFrameworkEClass, PERSISTENCE_FRAMEWORK__DATASOURCE);
+        this.createEReference(this.abstractSimulationConfigurationEClass, ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE);
 
         this.randomNumberGeneratorSeedEClass = this.createEClass(RANDOM_NUMBER_GENERATOR_SEED);
         this.createEAttribute(this.randomNumberGeneratorSeedEClass, RANDOM_NUMBER_GENERATOR_SEED__SEED0);
@@ -514,10 +447,8 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
         this.createEAttribute(this.randomNumberGeneratorSeedEClass, RANDOM_NUMBER_GENERATOR_SEED__SEED4);
         this.createEAttribute(this.randomNumberGeneratorSeedEClass, RANDOM_NUMBER_GENERATOR_SEED__SEED5);
 
-        this.sensorFrameworkEClass = this.createEClass(SENSOR_FRAMEWORK);
-
-        this.datasourceEClass = this.createEClass(DATASOURCE);
-        this.createEAttribute(this.datasourceEClass, DATASOURCE__ID);
+        this.edp2DatasourceEClass = this.createEClass(EDP2_DATASOURCE);
+        this.createEAttribute(this.edp2DatasourceEClass, EDP2_DATASOURCE__ID);
 
         this.memoryDatasourceEClass = this.createEClass(MEMORY_DATASOURCE);
 
@@ -532,13 +463,11 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
         this.createEAttribute(this.simTimeStopConditionEClass, SIM_TIME_STOP_CONDITION__SIMULATION_TIME);
 
         this.stopConditionEClass = this.createEClass(STOP_CONDITION);
-
-        this.edp2EClass = this.createEClass(EDP2);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private boolean isInitialized = false;
@@ -546,7 +475,7 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
     /**
      * Complete the initialization of the package and its meta-model. This method is guarded to have
      * no affect on any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public void initializePackageContents() {
@@ -570,20 +499,14 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
         // Add supertypes to classes
         this.abstractSimulationConfigurationEClass.getESuperTypes().add(theExperimentsPackage.getToolConfiguration());
-        this.sensorFrameworkEClass.getESuperTypes().add(this.getPersistenceFramework());
-        this.memoryDatasourceEClass.getESuperTypes().add(this.getDatasource());
-        this.fileDatasourceEClass.getESuperTypes().add(this.getDatasource());
+        this.memoryDatasourceEClass.getESuperTypes().add(this.getEDP2Datasource());
+        this.fileDatasourceEClass.getESuperTypes().add(this.getEDP2Datasource());
         this.measurementCountStopConditionEClass.getESuperTypes().add(this.getStopCondition());
         this.simTimeStopConditionEClass.getESuperTypes().add(this.getStopCondition());
-        this.edp2EClass.getESuperTypes().add(this.getPersistenceFramework());
 
         // Initialize classes and features; add operations and parameters
         this.initEClass(this.abstractSimulationConfigurationEClass, AbstractSimulationConfiguration.class,
                 "AbstractSimulationConfiguration", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getAbstractSimulationConfiguration_PersistenceFramework(),
-                this.getPersistenceFramework(), null, "persistenceFramework", null, 1, 1,
-                AbstractSimulationConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
         this.initEReference(this.getAbstractSimulationConfiguration_StopConditions(), this.getStopCondition(), null,
                 "stopConditions", null, 1, -1, AbstractSimulationConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -598,12 +521,9 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
         this.initEAttribute(this.getAbstractSimulationConfiguration_SimulateFailures(),
                 this.ecorePackage.getEBoolean(), "simulateFailures", null, 1, 1, AbstractSimulationConfiguration.class,
                 !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-        this.initEClass(this.persistenceFrameworkEClass, PersistenceFramework.class, "PersistenceFramework",
-                IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getPersistenceFramework_Datasource(), this.getDatasource(), null, "datasource", null,
-                1, 1, PersistenceFramework.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEReference(this.getAbstractSimulationConfiguration_Datasource(), this.getEDP2Datasource(), null,
+                "datasource", null, 1, 1, AbstractSimulationConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.randomNumberGeneratorSeedEClass, RandomNumberGeneratorSeed.class,
                 "RandomNumberGeneratorSeed", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -626,13 +546,10 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
                 1, RandomNumberGeneratorSeed.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
                 IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        this.initEClass(this.sensorFrameworkEClass, SensorFramework.class, "SensorFramework", !IS_ABSTRACT,
-                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-        this.initEClass(this.datasourceEClass, Datasource.class, "Datasource", IS_ABSTRACT, !IS_INTERFACE,
+        this.initEClass(this.edp2DatasourceEClass, EDP2Datasource.class, "EDP2Datasource", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        this.initEAttribute(this.getDatasource_Id(), this.ecorePackage.getEString(), "id", null, 0, 1,
-                Datasource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+        this.initEAttribute(this.getEDP2Datasource_Id(), this.ecorePackage.getEString(), "id", null, 0, 1,
+                EDP2Datasource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.memoryDatasourceEClass, MemoryDatasource.class, "MemoryDatasource", !IS_ABSTRACT,
@@ -658,9 +575,6 @@ public class AbstractsimulationPackageImpl extends EPackageImpl implements Abstr
 
         this.initEClass(this.stopConditionEClass, StopCondition.class, "StopCondition", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-
-        this.initEClass(this.edp2EClass, org.palladiosimulator.experimentautomation.abstractsimulation.EDP2.class,
-                "EDP2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         // Create resource
         this.createResource(eNS_URI);

@@ -26,15 +26,15 @@ import org.palladiosimulator.experimentautomation.variation.provider.ExperimentA
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder} object.
  * <!-- begin-user-doc --> <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class ReconfigurationRulesFolderItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public ReconfigurationRulesFolderItemProvider(final AdapterFactory adapterFactory) {
@@ -44,7 +44,7 @@ public class ReconfigurationRulesFolderItemProvider extends ItemProviderAdapter 
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -60,7 +60,7 @@ public class ReconfigurationRulesFolderItemProvider extends ItemProviderAdapter 
     /**
      * This adds a property descriptor for the Folder Uri feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addFolderUriPropertyDescriptor(final Object object) {
@@ -69,13 +69,13 @@ public class ReconfigurationRulesFolderItemProvider extends ItemProviderAdapter 
                 this.getString("_UI_ReconfigurationRulesFolder_folderUri_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_ReconfigurationRulesFolder_folderUri_feature",
                         "_UI_ReconfigurationRulesFolder_type"),
-                ExperimentsPackage.Literals.RECONFIGURATION_RULES_FOLDER__FOLDER_URI, true, false, false,
-                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                        ExperimentsPackage.Literals.RECONFIGURATION_RULES_FOLDER__FOLDER_URI, true, false, false,
+                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
      * This returns ReconfigurationRulesFolder.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -100,7 +100,7 @@ public class ReconfigurationRulesFolderItemProvider extends ItemProviderAdapter 
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -118,7 +118,7 @@ public class ReconfigurationRulesFolderItemProvider extends ItemProviderAdapter 
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -129,7 +129,7 @@ public class ReconfigurationRulesFolderItemProvider extends ItemProviderAdapter 
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

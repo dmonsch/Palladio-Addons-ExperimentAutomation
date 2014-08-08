@@ -6,16 +6,13 @@
     xmlns:ExperimentAutomation.Experiments.AbstractSimulation="http://palladiosimulator.org/ExperimentAutomation/AbstractSimulation/1.0"
     xmlns:simulizartooladapter="http://palladiosimulator.org/ExperimentAutomation/ToolAdapter/SimuLizar/1.0"
     name="Default EDP2 SimuLizar Configuration">
-  <persistenceFramework
-      xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:EDP2">
-    <datasource
-        xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:FileDatasource"
-        location="C:/data/experimentAutomation"/>
-  </persistenceFramework>
   <stopConditions
       xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:MeasurementCountStopCondition"
       measurementCount="1000"/>
   <stopConditions
       xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:SimTimeStopCondition"
       simulationTime="-1"/>
+  <datasource
+      xsi:type="ExperimentAutomation.Experiments.AbstractSimulation:FileDatasource"
+      location="C:/data/experimentAutomation"/>
 </simulizartooladapter:SimuLizarConfiguration>

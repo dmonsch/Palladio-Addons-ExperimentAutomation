@@ -18,7 +18,7 @@ import org.palladiosimulator.experimentautomation.experiments.ValueProvider;
 public abstract class ValueProviderImpl extends EObjectImpl implements ValueProvider {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ValueProviderImpl() {
@@ -27,7 +27,7 @@ public abstract class ValueProviderImpl extends EObjectImpl implements ValueProv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

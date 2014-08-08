@@ -1,4 +1,4 @@
-package org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation.edp2;
+package org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation;
 
 import java.io.File;
 
@@ -8,10 +8,10 @@ import org.palladiosimulator.edp2.models.Repository.Repository;
 import org.palladiosimulator.edp2.models.Repository.RepositoryFactory;
 import org.palladiosimulator.edp2.models.Repository.impl.LocalDirectoryRepositoryImpl;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import org.palladiosimulator.experimentautomation.abstractsimulation.Datasource;
+import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource;
 
-public class EDP2Factory {
+public class EDP2DatasourceFactory {
 
     /**
      * Loads an EDP2 repository based on the given data source.
@@ -20,7 +20,7 @@ public class EDP2Factory {
      *            The data source to be used for loading, e.g., a memory or a file data source.
      * @return The repository corresponding to the given data source.
      */
-    public static Repository createOrOpenDatasource(final Datasource datasource) {
+    public static Repository createOrOpenDatasource(final EDP2Datasource datasource) {
         if (datasource.getId() != null) {
             return RepositoryManager.getRepositoryFromUUID(datasource.getId());
         }

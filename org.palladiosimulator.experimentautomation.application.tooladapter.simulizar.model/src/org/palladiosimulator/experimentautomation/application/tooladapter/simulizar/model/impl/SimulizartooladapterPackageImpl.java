@@ -73,7 +73,7 @@ public class SimulizartooladapterPackageImpl extends EPackageImpl implements Sim
         // Obtain or create and register package
         final SimulizartooladapterPackageImpl theSimulizartooladapterPackage = (SimulizartooladapterPackageImpl) (EPackage.Registry.INSTANCE
                 .get(eNS_URI) instanceof SimulizartooladapterPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
-                : new SimulizartooladapterPackageImpl());
+                        : new SimulizartooladapterPackageImpl());
 
         isInited = true;
 

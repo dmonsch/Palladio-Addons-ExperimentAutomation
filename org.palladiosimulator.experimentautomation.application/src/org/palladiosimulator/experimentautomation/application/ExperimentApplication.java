@@ -34,8 +34,7 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
  * a filter; only listed experiments are conducted (instead of all experiments of the experiment
  * repository).
  * 
- * Once the experiments are finished, you will find all data in the recorder (e.g., EDP2 or
- * SensorFramework) you configured.
+ * Once the experiments are finished, you will find all data in the EDP2 recorder.
  * 
  * @author Merkle, Sebastian Lehrig
  */

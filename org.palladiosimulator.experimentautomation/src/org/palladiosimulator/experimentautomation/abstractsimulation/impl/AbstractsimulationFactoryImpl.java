@@ -9,23 +9,21 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationFactory;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
-import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2;
 import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
 import org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
-import org.palladiosimulator.experimentautomation.abstractsimulation.SensorFramework;
 import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class AbstractsimulationFactoryImpl extends EFactoryImpl implements AbstractsimulationFactory {
     /**
      * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public static AbstractsimulationFactory init() {
@@ -43,7 +41,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public AbstractsimulationFactoryImpl() {
@@ -52,7 +50,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -60,8 +58,6 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
         switch (eClass.getClassifierID()) {
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED:
             return this.createRandomNumberGeneratorSeed();
-        case AbstractsimulationPackage.SENSOR_FRAMEWORK:
-            return this.createSensorFramework();
         case AbstractsimulationPackage.MEMORY_DATASOURCE:
             return this.createMemoryDatasource();
         case AbstractsimulationPackage.FILE_DATASOURCE:
@@ -70,8 +66,6 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
             return this.createMeasurementCountStopCondition();
         case AbstractsimulationPackage.SIM_TIME_STOP_CONDITION:
             return this.createSimTimeStopCondition();
-        case AbstractsimulationPackage.EDP2:
-            return this.createEDP2();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -79,7 +73,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -90,18 +84,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public SensorFramework createSensorFramework() {
-        final SensorFrameworkImpl sensorFramework = new SensorFrameworkImpl();
-        return sensorFramework;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -112,7 +95,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -123,7 +106,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -134,7 +117,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -145,18 +128,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EDP2 createEDP2() {
-        final EDP2Impl edp2 = new EDP2Impl();
-        return edp2;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -166,7 +138,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @deprecated
      * @generated
      */

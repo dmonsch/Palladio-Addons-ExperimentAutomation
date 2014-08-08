@@ -13,9 +13,6 @@ import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
  * The following features are supported:
  * <ul>
  * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getPersistenceFramework
- * <em>Persistence Framework</em>}</li>
- * <li>
  * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getStopConditions
  * <em>Stop Conditions</em>}</li>
  * <li>
@@ -27,6 +24,9 @@ import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
  * <li>
  * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
  * <em>Simulate Failures</em>}</li>
+ * <li>
+ * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getDatasource
+ * <em>Datasource</em>}</li>
  * </ul>
  * </p>
  *
@@ -35,36 +35,6 @@ import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
  * @generated
  */
 public interface AbstractSimulationConfiguration extends ToolConfiguration {
-    /**
-     * Returns the value of the '<em><b>Persistence Framework</b></em>' containment reference. <!--
-     * begin-user-doc -->
-     * <p>
-     * If the meaning of the '<em>Persistence Framework</em>' containment reference isn't clear,
-     * there really should be more of a description here...
-     * </p>
-     * <!-- end-user-doc -->
-     *
-     * @return the value of the '<em>Persistence Framework</em>' containment reference.
-     * @see #setPersistenceFramework(PersistenceFramework)
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_PersistenceFramework()
-     * @model containment="true" required="true" ordered="false"
-     * @generated
-     */
-    PersistenceFramework getPersistenceFramework();
-
-    /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getPersistenceFramework
-     * <em>Persistence Framework</em>}' containment reference. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     *
-     * @param value
-     *            the new value of the '<em>Persistence Framework</em>' containment reference.
-     * @see #getPersistenceFramework()
-     * @generated
-     */
-    void setPersistenceFramework(PersistenceFramework value);
-
     /**
      * Returns the value of the '<em><b>Stop Conditions</b></em>' containment reference list. The
      * list contents are of type
@@ -91,7 +61,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * clear, there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Random Number Generator Seed</em>' containment reference.
      * @see #setRandomNumberGeneratorSeed(RandomNumberGeneratorSeed)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_RandomNumberGeneratorSeed()
@@ -105,7 +75,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed
      * <em>Random Number Generator Seed</em>}' containment reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Random Number Generator Seed</em>' containment
      *            reference.
@@ -152,7 +122,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Simulate Failures</em>' attribute.
      * @see #setSimulateFailures(boolean)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_SimulateFailures()
@@ -165,12 +135,41 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
      * <em>Simulate Failures</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Simulate Failures</em>' attribute.
      * @see #isSimulateFailures()
      * @generated
      */
     void setSimulateFailures(boolean value);
+
+    /**
+     * Returns the value of the '<em><b>Datasource</b></em>' containment reference. <!--
+     * begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Datasource</em>' containment reference isn't clear, there really
+     * should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     *
+     * @return the value of the '<em>Datasource</em>' containment reference.
+     * @see #setDatasource(EDP2Datasource)
+     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_Datasource()
+     * @model containment="true" required="true" ordered="false"
+     * @generated
+     */
+    EDP2Datasource getDatasource();
+
+    /**
+     * Sets the value of the '
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getDatasource
+     * <em>Datasource</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @param value
+     *            the new value of the '<em>Datasource</em>' containment reference.
+     * @see #getDatasource()
+     * @generated
+     */
+    void setDatasource(EDP2Datasource value);
 
 } // AbstractSimulationConfiguration

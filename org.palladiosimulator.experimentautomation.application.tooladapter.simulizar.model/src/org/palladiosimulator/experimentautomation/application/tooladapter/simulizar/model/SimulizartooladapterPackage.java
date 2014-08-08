@@ -72,15 +72,6 @@ public interface SimulizartooladapterPackage extends EPackage {
     int SIMU_LIZAR_CONFIGURATION__NAME = AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__NAME;
 
     /**
-     * The feature id for the '<em><b>Persistence Framework</b></em>' containment reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int SIMU_LIZAR_CONFIGURATION__PERSISTENCE_FRAMEWORK = AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK;
-
-    /**
      * The feature id for the '<em><b>Stop Conditions</b></em>' containment reference list. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
@@ -115,6 +106,15 @@ public interface SimulizartooladapterPackage extends EPackage {
      * @ordered
      */
     int SIMU_LIZAR_CONFIGURATION__SIMULATE_FAILURES = AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES;
+
+    /**
+     * The feature id for the '<em><b>Datasource</b></em>' containment reference. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int SIMU_LIZAR_CONFIGURATION__DATASOURCE = AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE;
 
     /**
      * The number of structural features of the '<em>Simu Lizar Configuration</em>' class. <!--

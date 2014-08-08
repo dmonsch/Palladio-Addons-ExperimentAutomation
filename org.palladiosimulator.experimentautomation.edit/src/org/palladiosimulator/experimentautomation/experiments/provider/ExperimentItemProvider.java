@@ -33,11 +33,11 @@ import org.palladiosimulator.experimentautomation.variation.provider.ExperimentA
  * @generated
  */
 public class ExperimentItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public ExperimentItemProvider(final AdapterFactory adapterFactory) {
@@ -47,7 +47,7 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -75,14 +75,14 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Experiment_id_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Experiment_id_feature", "_UI_Experiment_type"),
-                        ExperimentsPackage.Literals.EXPERIMENT__ID, true, false, false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                ExperimentsPackage.Literals.EXPERIMENT__ID, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Name feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addNamePropertyDescriptor(final Object object) {
@@ -90,14 +90,14 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_Experiment_name_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Experiment_name_feature", "_UI_Experiment_type"),
-                        ExperimentsPackage.Literals.EXPERIMENT__NAME, true, false, false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                ExperimentsPackage.Literals.EXPERIMENT__NAME, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Tool Configuration feature. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addToolConfigurationPropertyDescriptor(final Object object) {
@@ -106,13 +106,13 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
                 this.getString("_UI_Experiment_toolConfiguration_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_Experiment_toolConfiguration_feature",
                         "_UI_Experiment_type"), ExperimentsPackage.Literals.EXPERIMENT__TOOL_CONFIGURATION, true,
-                false, true, null, null, null));
+                        false, true, null, null, null));
     }
 
     /**
      * This adds a property descriptor for the Description feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addDescriptionPropertyDescriptor(final Object object) {
@@ -121,13 +121,13 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
                 this.getString("_UI_Experiment_description_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_Experiment_description_feature",
                         "_UI_Experiment_type"), ExperimentsPackage.Literals.EXPERIMENT__DESCRIPTION, true, false,
-                false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                        false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Repetitions feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addRepetitionsPropertyDescriptor(final Object object) {
@@ -136,7 +136,7 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
                 this.getString("_UI_Experiment_repetitions_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_Experiment_repetitions_feature",
                         "_UI_Experiment_type"), ExperimentsPackage.Literals.EXPERIMENT__REPETITIONS, true, false,
-                false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                        false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -164,7 +164,7 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -177,7 +177,7 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
 
     /**
      * This returns Experiment.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -202,7 +202,7 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -231,7 +231,7 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -272,7 +272,7 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

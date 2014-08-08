@@ -17,7 +17,7 @@ import org.palladiosimulator.experimentautomation.experiments.FullFactorialDesig
 public class FullFactorialDesignImpl extends ExperimentDesignImpl implements FullFactorialDesign {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected FullFactorialDesignImpl() {
@@ -26,7 +26,7 @@ public class FullFactorialDesignImpl extends ExperimentDesignImpl implements Ful
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

@@ -22,7 +22,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasou
  *
  * @generated
  */
-public class FileDatasourceImpl extends DatasourceImpl implements FileDatasource {
+public class FileDatasourceImpl extends EDP2DatasourceImpl implements FileDatasource {
     /**
      * The default value of the '{@link #getLocation() <em>Location</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -45,7 +45,7 @@ public class FileDatasourceImpl extends DatasourceImpl implements FileDatasource
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected FileDatasourceImpl() {
@@ -54,7 +54,7 @@ public class FileDatasourceImpl extends DatasourceImpl implements FileDatasource
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -64,7 +64,7 @@ public class FileDatasourceImpl extends DatasourceImpl implements FileDatasource
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -74,7 +74,7 @@ public class FileDatasourceImpl extends DatasourceImpl implements FileDatasource
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -89,7 +89,7 @@ public class FileDatasourceImpl extends DatasourceImpl implements FileDatasource
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -103,7 +103,7 @@ public class FileDatasourceImpl extends DatasourceImpl implements FileDatasource
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -118,7 +118,7 @@ public class FileDatasourceImpl extends DatasourceImpl implements FileDatasource
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -133,7 +133,7 @@ public class FileDatasourceImpl extends DatasourceImpl implements FileDatasource
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -147,7 +147,7 @@ public class FileDatasourceImpl extends DatasourceImpl implements FileDatasource
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

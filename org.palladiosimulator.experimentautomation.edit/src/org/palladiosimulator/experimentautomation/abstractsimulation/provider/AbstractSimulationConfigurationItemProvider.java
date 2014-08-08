@@ -23,14 +23,14 @@ import org.palladiosimulator.experimentautomation.variation.provider.ExperimentA
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration}
  * object. <!-- begin-user-doc --> <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class AbstractSimulationConfigurationItemProvider extends ToolConfigurationItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     public AbstractSimulationConfigurationItemProvider(final AdapterFactory adapterFactory) {
@@ -40,7 +40,7 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -67,14 +67,14 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
                         "_UI_PropertyDescriptor_description",
                         "_UI_AbstractSimulationConfiguration_simulateLinkingResources_feature",
                         "_UI_AbstractSimulationConfiguration_type"),
-                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES, true,
-                false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+                        AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES, true,
+                        false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Simulate Failures feature. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected void addSimulateFailuresPropertyDescriptor(final Object object) {
@@ -84,8 +84,8 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
                         "_UI_PropertyDescriptor_description",
                         "_UI_AbstractSimulationConfiguration_simulateFailures_feature",
                         "_UI_AbstractSimulationConfiguration_type"),
-                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES, true, false,
-                false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+                        AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES, true, false,
+                        false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -102,18 +102,17 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
         if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
             this.childrenFeatures
-                    .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK);
+                    .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS);
             this.childrenFeatures
-            .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS);
-            this.childrenFeatures
-                    .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED);
+            .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED);
+            this.childrenFeatures.add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE);
         }
         return this.childrenFeatures;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -141,7 +140,7 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -153,9 +152,9 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
-        case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK:
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS:
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED:
+        case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
@@ -165,20 +164,12 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
-
-        newChildDescriptors.add(this.createChildParameter(
-                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK,
-                AbstractsimulationFactory.eINSTANCE.createSensorFramework()));
-
-        newChildDescriptors.add(this.createChildParameter(
-                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__PERSISTENCE_FRAMEWORK,
-                AbstractsimulationFactory.eINSTANCE.createEDP2()));
 
         newChildDescriptors.add(this.createChildParameter(
                 AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS,
@@ -191,12 +182,20 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
         newChildDescriptors.add(this.createChildParameter(
                 AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED,
                 AbstractsimulationFactory.eINSTANCE.createRandomNumberGeneratorSeed()));
+
+        newChildDescriptors.add(this.createChildParameter(
+                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE,
+                AbstractsimulationFactory.eINSTANCE.createMemoryDatasource()));
+
+        newChildDescriptors.add(this.createChildParameter(
+                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE,
+                AbstractsimulationFactory.eINSTANCE.createFileDatasource()));
     }
 
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

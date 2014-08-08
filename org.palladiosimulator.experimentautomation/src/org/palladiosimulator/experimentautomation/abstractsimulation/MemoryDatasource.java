@@ -11,5 +11,5 @@ package org.palladiosimulator.experimentautomation.abstractsimulation;
  * @model
  * @generated
  */
-public interface MemoryDatasource extends Datasource {
+public interface MemoryDatasource extends EDP2Datasource {
 } // MemoryDatasource

@@ -144,9 +144,6 @@
       nsPrefix="ExperimentAutomation.Experiments.AbstractSimulation">
     <eClassifiers xsi:type="ecore:EClass" name="AbstractSimulationConfiguration" abstract="true"
         eSuperTypes="#//experiments/ToolConfiguration">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="persistenceFramework"
-          ordered="false" lowerBound="1" eType="#//abstractsimulation/PersistenceFramework"
-          containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="stopConditions" ordered="false"
           lowerBound="1" upperBound="-1" eType="#//abstractsimulation/StopCondition"
           containment="true"/>
@@ -157,10 +154,8 @@
           ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="simulateFailures" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="PersistenceFramework" abstract="true">
       <eStructuralFeatures xsi:type="ecore:EReference" name="datasource" ordered="false"
-          lowerBound="1" eType="#//abstractsimulation/Datasource" containment="true"/>
+          lowerBound="1" eType="#//abstractsimulation/EDP2Datasource" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RandomNumberGeneratorSeed">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="seed0" ordered="false"
@@ -176,12 +171,11 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="seed5" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SensorFramework" eSuperTypes="#//abstractsimulation/PersistenceFramework"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Datasource" abstract="true">
+    <eClassifiers xsi:type="ecore:EClass" name="EDP2Datasource" abstract="true">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="MemoryDatasource" eSuperTypes="#//abstractsimulation/Datasource"/>
-    <eClassifiers xsi:type="ecore:EClass" name="FileDatasource" eSuperTypes="#//abstractsimulation/Datasource">
+    <eClassifiers xsi:type="ecore:EClass" name="MemoryDatasource" eSuperTypes="#//abstractsimulation/EDP2Datasource"/>
+    <eClassifiers xsi:type="ecore:EClass" name="FileDatasource" eSuperTypes="#//abstractsimulation/EDP2Datasource">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
@@ -194,6 +188,5 @@
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="StopCondition" abstract="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="EDP2" eSuperTypes="#//abstractsimulation/PersistenceFramework"/>
   </eSubpackages>
 </ecore:EPackage>

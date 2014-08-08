@@ -29,7 +29,7 @@ public interface ReconfigurationRulesFolder extends EObject {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Folder Uri</em>' attribute.
      * @see #setFolderUri(String)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getReconfigurationRulesFolder_FolderUri()
@@ -42,7 +42,7 @@ public interface ReconfigurationRulesFolder extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder#getFolderUri
      * <em>Folder Uri</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Folder Uri</em>' attribute.
      * @see #getFolderUri()

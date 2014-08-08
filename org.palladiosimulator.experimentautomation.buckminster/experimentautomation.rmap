@@ -11,11 +11,9 @@
   <rm:locator pattern="^org\.palladiosimulator\.measurementframework.*" searchPathRef="measurementframework" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\.simulizar.*" searchPathRef="SimuLizar" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\..*" searchPathRef="ProbeFramework" failOnError="false"/>
-  <rm:locator pattern="^de\.uka\.ipd\.sdq\..*" searchPathRef="SensorFramework" failOnError="false"/>
   <rm:locator pattern="^de\.uka\.ipd\.sdq\..*" searchPathRef="Palladio" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\..*" searchPathRef="Palladio" failOnError="false"/>
-  <rm:locator pattern="^de\.fzi\.se\..*" searchPathRef="Palladio" failOnError="false"/>
-  <rm:locator pattern="^org\.hibernate*" searchPathRef="SensorFramework" failOnError="false"/>  
+  <rm:locator pattern="^de\.fzi\.se\..*" searchPathRef="Palladio" failOnError="false"/>  
   <rm:locator pattern="^de\.uka\.ipd\.sdq\..*" searchPathRef="palladio-commons" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\..*" searchPathRef="palladio-commons" failOnError="false"/>
   <rm:locator pattern="^edu\.kit\..*" searchPathRef="palladio-commons" failOnError="false"/>
@@ -75,14 +73,7 @@
       <rm:property key="buckminster.mutable" value="false"/>
       <rm:uri format="http://sdqweb.ipd.kit.edu/eclipse/probeframework/nightly/"/>
     </rm:provider>
-  </rm:searchPath>
-  <rm:searchPath name="SensorFramework">
-    <rm:provider componentTypes="osgi.bundle,eclipse.feature,buckminster" readerType="p2" source="false" mutable="false">
-      <rm:property key="buckminster.source" value="false"/>
-      <rm:property key="buckminster.mutable" value="false"/>
-      <rm:uri format="http://sdqweb.ipd.kit.edu/eclipse/sensorframework/nightly/"/>
-    </rm:provider>
-  </rm:searchPath>
+  </rm:searchPath>  
   <rm:searchPath name="palladio-commons">
     <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
       <rm:property key="buckminster.source" value="false"/>

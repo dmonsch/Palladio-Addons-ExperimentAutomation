@@ -33,7 +33,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -43,7 +43,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
     /**
      * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -53,7 +53,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
     /**
      * The default value of the '{@link #getStrategyClass() <em>Strategy Class</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getStrategyClass()
      * @generated
      * @ordered
@@ -73,7 +73,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
     /**
      * The default value of the '{@link #getVariedEntityInterface()
      * <em>Varied Entity Interface</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getVariedEntityInterface()
      * @generated
      * @ordered
@@ -83,7 +83,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
     /**
      * The cached value of the '{@link #getVariedEntityInterface() <em>Varied Entity Interface</em>}
      * ' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getVariedEntityInterface()
      * @generated
      * @ordered
@@ -92,7 +92,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected VariationTypeImpl() {
@@ -101,7 +101,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -111,7 +111,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -121,7 +121,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -136,7 +136,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -146,7 +146,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -161,7 +161,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -171,7 +171,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -187,7 +187,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -205,7 +205,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -226,7 +226,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -247,7 +247,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -267,7 +267,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
