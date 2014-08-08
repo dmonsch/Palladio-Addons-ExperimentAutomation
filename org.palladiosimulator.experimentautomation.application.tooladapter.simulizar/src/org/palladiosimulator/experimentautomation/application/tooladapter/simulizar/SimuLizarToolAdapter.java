@@ -6,7 +6,6 @@ import java.util.Map;
 
 import org.palladiosimulator.experimentautomation.application.VariationFactorTuple;
 import org.palladiosimulator.experimentautomation.application.jobs.CheckForSLOViolationsJob;
-import org.palladiosimulator.experimentautomation.application.jobs.CleanUpRecorderJob;
 import org.palladiosimulator.experimentautomation.application.jobs.LogExperimentInformationJob;
 import org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter;
 import org.palladiosimulator.experimentautomation.application.tooladapter.RunAnalysisJob;
@@ -45,7 +44,6 @@ public class SimuLizarToolAdapter implements IToolAdapter {
         result.addJob(new PCMStartInterpretationJob(workflowConfig));
         result.addJob(new CheckForSLOViolationsJob(result, experiment.getInitialModel().getServiceLevelObjectives(),
                 simuLizarToolConfig.getDatasource(), simuComConfig.getNameBase(), simuComConfig.getVariationId()));
-        result.addJob(new CleanUpRecorderJob(simuLizarToolConfig.getDatasource()));
 
         return result;
     }

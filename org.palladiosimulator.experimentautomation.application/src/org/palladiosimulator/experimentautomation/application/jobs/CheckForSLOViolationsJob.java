@@ -111,8 +111,8 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
             final IDataSource dataSource = new Edp2DataTupleDataSource(rawMeasurements);
             final SLOFilter sloFilter = new SLOFilter(dataSource, serviceLevelObjective);
             final IDataStream<Measurement> dataStream = sloFilter.getDataStream();
-            sloViolations += dataStream.size();
 
+            sloViolations += dataStream.size();
             dataStream.close();
         }
 

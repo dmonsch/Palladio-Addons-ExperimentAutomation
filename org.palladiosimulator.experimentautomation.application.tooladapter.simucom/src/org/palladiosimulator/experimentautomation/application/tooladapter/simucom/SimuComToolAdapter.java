@@ -8,7 +8,6 @@ import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.CoreException;
 import org.palladiosimulator.experimentautomation.application.VariationFactorTuple;
 import org.palladiosimulator.experimentautomation.application.jobs.CheckForSLOViolationsJob;
-import org.palladiosimulator.experimentautomation.application.jobs.CleanUpRecorderJob;
 import org.palladiosimulator.experimentautomation.application.jobs.LogExperimentInformationJob;
 import org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter;
 import org.palladiosimulator.experimentautomation.application.tooladapter.RunAnalysisJob;
@@ -48,7 +47,6 @@ public class SimuComToolAdapter implements IToolAdapter {
             result.addJob(new CheckForSLOViolationsJob(result,
                     experiment.getInitialModel().getServiceLevelObjectives(), simuComToolConfig.getDatasource(),
                     simuComConfig.getNameBase(), simuComConfig.getVariationId()));
-            result.add(new CleanUpRecorderJob(simuComToolConfig.getDatasource()));
         } catch (CoreException e) {
             LOGGER.error("SimuCom execution failed: " + e);
         }
