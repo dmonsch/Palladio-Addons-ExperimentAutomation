@@ -2,12 +2,12 @@ package org.palladiosimulator.experimentautomation.application.jobs;
 
 import java.util.List;
 
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
 import org.palladiosimulator.experimentautomation.application.VariationFactorTuple;
 import org.palladiosimulator.experimentautomation.application.tooladapter.AnalysisToolFactory;
 import org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter;
 import org.palladiosimulator.experimentautomation.application.tooladapter.RunAnalysisJob;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
-import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
@@ -24,7 +24,7 @@ public class RunExperimentJob extends SequentialBlackboardInteractingJob<MDSDBla
      * 
      * @param experiment
      *            The experiment to be conducted.
-     * @param toolConfiguration
+     * @param simulationConfiguration
      *            The given analysis tool, e.g., SimuCom.
      * @param variationFactorTuples
      *            the variations and according value factors.
@@ -32,16 +32,16 @@ public class RunExperimentJob extends SequentialBlackboardInteractingJob<MDSDBla
      *            Gives the current number of repetitions for this exact experiment; for statistical
      *            significance. Note that repetition>1 makes only sense for non-fixed random seeds.
      */
-    public RunExperimentJob(final Experiment experiment, final ToolConfiguration toolConfiguration,
+    public RunExperimentJob(final Experiment experiment, final AbstractSimulationConfiguration simulationConfiguration,
             final List<VariationFactorTuple> variationFactorTuples, final int repetition) {
         super(false);
 
-        final IToolAdapter analysisTool = AnalysisToolFactory.createToolAdapater(toolConfiguration);
-        final RunAnalysisJob runAnalysisJob = analysisTool.createRunAnalysisJob(experiment, toolConfiguration,
+        final IToolAdapter analysisTool = AnalysisToolFactory.createToolAdapater(simulationConfiguration);
+        final RunAnalysisJob runAnalysisJob = analysisTool.createRunAnalysisJob(experiment, simulationConfiguration,
                 variationFactorTuples, repetition);
 
         this.add(runAnalysisJob);
-        this.add(new AddDynamicVariationJob(runAnalysisJob, analysisTool, experiment, toolConfiguration,
+        this.add(new AddDynamicVariationJob(runAnalysisJob, analysisTool, experiment, simulationConfiguration,
                 variationFactorTuples, repetition));
     }
 }

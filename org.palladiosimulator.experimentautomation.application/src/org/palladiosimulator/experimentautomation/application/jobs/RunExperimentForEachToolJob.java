@@ -1,5 +1,6 @@
 package org.palladiosimulator.experimentautomation.application.jobs;
 
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 
@@ -24,7 +25,13 @@ public class RunExperimentForEachToolJob extends SequentialBlackboardInteracting
         super(false);
 
         for (final ToolConfiguration toolConfiguration : experiment.getToolConfiguration()) {
-            this.add(new ComputeVariantsAndAddExperimentJob(experiment, toolConfiguration));
+            if (!(toolConfiguration instanceof AbstractSimulationConfiguration)) {
+                throw new IllegalArgumentException(
+                        "Expected tool configuration to be of type AbstractSimulationConfiguration");
+            }
+
+            this.add(new ComputeVariantsAndAddExperimentJob(experiment,
+                    (AbstractSimulationConfiguration) toolConfiguration));
         }
     }
 }

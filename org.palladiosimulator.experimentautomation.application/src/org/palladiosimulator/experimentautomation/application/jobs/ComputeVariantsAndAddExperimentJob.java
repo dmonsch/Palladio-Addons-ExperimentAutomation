@@ -3,11 +3,11 @@ package org.palladiosimulator.experimentautomation.application.jobs;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
 import org.palladiosimulator.experimentautomation.application.VariationFactorTuple;
 import org.palladiosimulator.experimentautomation.application.variation.valueprovider.IValueProviderStrategy;
 import org.palladiosimulator.experimentautomation.application.variation.valueprovider.ValueProviderFactory;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
-import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 import org.palladiosimulator.experimentautomation.experiments.Variation;
 
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
@@ -26,14 +26,14 @@ public class ComputeVariantsAndAddExperimentJob extends SequentialBlackboardInte
      * 
      * @param experiment
      *            the experiment to be conducted.
-     * @param toolConfiguration
+     * @param simulationConfiguration
      *            the given analysis tool, e.g., SimuCom.
      */
-    public ComputeVariantsAndAddExperimentJob(final Experiment experiment, final ToolConfiguration toolConfiguration) {
+    public ComputeVariantsAndAddExperimentJob(final Experiment experiment, final AbstractSimulationConfiguration simulationConfiguration) {
         super(false);
 
         // Note: Calling recursive method
-        this.computeVariantsAndAddJob(experiment, toolConfiguration, experiment.getVariations(),
+        this.computeVariantsAndAddJob(experiment, simulationConfiguration, experiment.getVariations(),
                 new ArrayList<VariationFactorTuple>());
     }
 
@@ -48,7 +48,7 @@ public class ComputeVariantsAndAddExperimentJob extends SequentialBlackboardInte
      * 
      * @param experiment
      *            the experiment to be conducted.
-     * @param toolConfiguration
+     * @param simulationConfiguration
      *            the given analysis tool, e.g., SimuCom.
      * @param variations
      *            the given variations to be considered.
@@ -56,14 +56,14 @@ public class ComputeVariantsAndAddExperimentJob extends SequentialBlackboardInte
      *            the variants of the given variations as well as the concrete values to be used for
      *            a given variation.
      */
-    private void computeVariantsAndAddJob(final Experiment experiment, final ToolConfiguration toolConfiguration,
+    private void computeVariantsAndAddJob(final Experiment experiment, final AbstractSimulationConfiguration simulationConfiguration,
             final List<Variation> variations, final List<VariationFactorTuple> variationFactorTuples) {
         if (variations.isEmpty()) {
             final List<VariationFactorTuple> variationsAndFactorsCopy = new ArrayList<VariationFactorTuple>();
             variationsAndFactorsCopy.addAll(variationFactorTuples);
 
             this.add(new VaryJob(variationsAndFactorsCopy));
-            this.add(new RepeatExperimentJob(experiment, toolConfiguration, variationsAndFactorsCopy));
+            this.add(new RepeatExperimentJob(experiment, simulationConfiguration, variationsAndFactorsCopy));
         } else {
             // obtain variation description
             final List<Variation> copy = new ArrayList<Variation>();
@@ -84,7 +84,7 @@ public class ComputeVariantsAndAddExperimentJob extends SequentialBlackboardInte
 
                 if (factorLevel >= variation.getMinValue() && factorLevel <= variation.getMaxValue()) {
                     variationFactorTuples.add(new VariationFactorTuple(variation, factorLevel));
-                    this.computeVariantsAndAddJob(experiment, toolConfiguration, copy, variationFactorTuples);
+                    this.computeVariantsAndAddJob(experiment, simulationConfiguration, copy, variationFactorTuples);
                     variationFactorTuples.remove(variationFactorTuples.size() - 1);
                 }
 

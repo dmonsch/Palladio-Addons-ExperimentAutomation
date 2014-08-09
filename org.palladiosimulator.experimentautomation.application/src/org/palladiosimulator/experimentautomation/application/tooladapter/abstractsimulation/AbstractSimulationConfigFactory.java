@@ -58,8 +58,8 @@ public class AbstractSimulationConfigFactory {
         map.put(AbstractSimulationConfig.SIMULATOR_ID, simulatorID);
 
         /** Experiment Run */
-        map.put(AbstractSimulationConfig.EXPERIMENT_RUN, computeExperimentRunName(experiment));
-        map.put(EDP2RecorderConfigurationFactory.VARIATION_ID, computeVariationName(simConfig, variationFactorTuples));
+        map.put(AbstractSimulationConfig.EXPERIMENT_RUN, computeExperimentGroupPurpose(experiment));
+        map.put(EDP2RecorderConfigurationFactory.VARIATION_ID, computeExperimentSettingName(simConfig, variationFactorTuples));
 
         /** Simulation Results */
         map.put(AbstractSimulationConfig.PERSISTENCE_RECORDER_NAME, EDP2_ID);
@@ -96,7 +96,7 @@ public class AbstractSimulationConfigFactory {
         return map;
     }
 
-    private static String computeExperimentRunName(final Experiment experiment) {
+    public static String computeExperimentGroupPurpose(final Experiment experiment) {
         final StringBuilder stringBuilder = new StringBuilder();
 
         stringBuilder.append(experiment.getName());
@@ -107,7 +107,7 @@ public class AbstractSimulationConfigFactory {
         return stringBuilder.toString();
     }
 
-    private static String computeVariationName(final AbstractSimulationConfiguration simConfig,
+    private static String computeExperimentSettingName(final AbstractSimulationConfiguration simConfig,
             final List<VariationFactorTuple> variationFactorTuples) {
         final StringBuilder stringBuilder = new StringBuilder();
 
