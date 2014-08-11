@@ -22,6 +22,7 @@
   <rm:locator pattern="^org\.jscience.*" searchPathRef="thirdparty" failOnError="false"/>
   <rm:locator pattern="^org\.jfree\..*" searchPathRef="thirdparty" failOnError="false"/>
   <rm:locator pattern="^org\.apache\..*" searchPathRef="thirdparty" failOnError="false"/>
+  <rm:locator pattern="^org\.hibernate.*" searchPathRef="thirdparty" failOnError="false"/>
   <rm:locator searchPathRef="MDSDProfiles" failOnError="false"/>
   <rm:locator searchPathRef="eclipse-release" failOnError="false"/>
   <rm:locator searchPathRef="orbit" failOnError="false"/>
