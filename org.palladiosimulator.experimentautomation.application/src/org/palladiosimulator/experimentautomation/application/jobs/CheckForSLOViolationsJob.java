@@ -37,11 +37,17 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
  */
 public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
 
+    /**
+     * The job conducting an analysis and providing measurement results to the persistence
+     * framework.
+     */
     private final RunAnalysisJob runAnalysisJob;
+
+    /** A set of SLOs to be checked for. */
     private final ServiceLevelObjectiveRepository serviceLevelObjectives;
-    private final EDP2Datasource edp2datasource;
-    private final String experimentGroupPurpose;
-    private final String experimentSettingDescription;
+
+    /** The experiment setting to be investigated for SLO violations. */
+    private final ExperimentSetting experimentSetting;
 
     /**
      * Default constructor.
@@ -54,17 +60,21 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
      * @param edp2datasource
      *            the EDP2 persistence framework providing measurement data.
      * @param experimentGroupPurpose
-     *            the (hopefully?) unique name of an experiment run; used to identify the experiment
-     *            group of the last analysis run.
+     *            the unique name of an experiment run; used to identify the experiment group of the
+     *            last analysis run.
+     * @param experimentSettingDescription
+     *            a unique identifier string for the experiment setting description to check SLOs
+     *            for.
      */
     public CheckForSLOViolationsJob(final RunAnalysisJob runAnalysisJob,
             final ServiceLevelObjectiveRepository serviceLevelObjectives, final EDP2Datasource edp2datasource,
             final String experimentGroupPurpose, final String experimentSettingDescription) {
         this.runAnalysisJob = runAnalysisJob;
         this.serviceLevelObjectives = serviceLevelObjectives;
-        this.edp2datasource = edp2datasource;
-        this.experimentGroupPurpose = experimentGroupPurpose;
-        this.experimentSettingDescription = experimentSettingDescription;
+
+        final Repository repository = getEDP2Repository(edp2datasource.getId());
+        final ExperimentGroup experimentGroup = getExperimentGroup(repository, experimentGroupPurpose);
+        this.experimentSetting = getExperimentSetting(experimentGroup, experimentSettingDescription);
     }
 
     /**
@@ -75,10 +85,8 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
      */
     @Override
     public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
-        final Repository repository = getEDP2Repository(edp2datasource);
-        final ExperimentGroup experimentGroup = getExperimentGroup(repository);
-        final ExperimentSetting experimentSetting = getExperimentSetting(experimentGroup);
-        final long sloViolations = computeSloViolations(experimentSetting);
+
+        final long sloViolations = computeSloViolations();
 
         // TODO We are really intolerant against SLO violations. Instead, we may want that 99,99% of
         // all requests do not violate our SLO. This would require to extend the current SLO
@@ -86,21 +94,16 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
         if (sloViolations > 0) {
             this.runAnalysisJob.setSloWasViolated();
         }
-
-        // TODO Move output to dedicated EDP2 Measurement? Store somewhere else?
-        System.out.println("SLO Violations: " + sloViolations);
     }
 
     /**
-     * Computes the number of SLO violations in the given data source.
+     * Computes the number of SLO violations.
      * 
-     * @param experimentSetting
-     *            the experiment setting to be investigated for SLO violations.
      * @return the number of found SLO violations.
      */
-    private long computeSloViolations(final ExperimentSetting experimentSetting) {
-        final int lastExperiment = experimentSetting.getExperimentRuns().size() - 1;
-        final ExperimentRun experimentRun = experimentSetting.getExperimentRuns().get(lastExperiment);
+    private long computeSloViolations() {
+        final int lastExperiment = this.experimentSetting.getExperimentRuns().size() - 1;
+        final ExperimentRun experimentRun = this.experimentSetting.getExperimentRuns().get(lastExperiment);
 
         long sloViolations = 0L;
         for (final ServiceLevelObjective serviceLevelObjective : this.serviceLevelObjectives
@@ -169,39 +172,52 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
      * 
      * @param repository
      *            the repository containing the experiment group.
+     * @param purpose
+     *            the unique name of an experiment run; used to identify the experiment group of the
+     *            last analysis run.
      * @return the experiment group of interest.
      */
-    private ExperimentGroup getExperimentGroup(final Repository repository) {
+    private ExperimentGroup getExperimentGroup(final Repository repository, final String purpose) {
         for (final ExperimentGroup experimentGroup : repository.getExperimentGroups()) {
-            if (experimentGroup.getPurpose().equals(this.experimentGroupPurpose)) {
+            if (experimentGroup.getPurpose().equals(purpose)) {
                 return experimentGroup;
             }
         }
 
-        throw new IllegalArgumentException("Could not find experiment group with purpose \""
-                + this.experimentGroupPurpose + "\"");
+        throw new IllegalArgumentException("Could not find experiment group with purpose \"" + purpose + "\"");
     }
 
-    private ExperimentSetting getExperimentSetting(final ExperimentGroup experimentGroup) {
-        for (final ExperimentSetting experimentSetting : experimentGroup.getExperimentSettings()) {
-            if (experimentSetting.getDescription().equals(this.experimentSettingDescription)) {
-                return experimentSetting;
+    /**
+     * Returns the experiment setting from the given experiment group that is identified by the
+     * unique experiment setting description string.
+     * 
+     * @param experimentGroup
+     *            the experiment group to be investigated.
+     * @param experimentSettingDescription
+     *            the unique experiment setting description identifier.
+     * @return the experiment setting whose description matches the given identifier string.
+     */
+    private ExperimentSetting getExperimentSetting(final ExperimentGroup experimentGroup,
+            final String experimentSettingDescription) {
+        for (final ExperimentSetting expSetting : experimentGroup.getExperimentSettings()) {
+            if (expSetting.getDescription().equals(experimentSettingDescription)) {
+                return expSetting;
             }
         }
 
         throw new IllegalArgumentException("Could not find experiment setting for variation \""
-                + this.experimentSettingDescription + "\"");
+                + experimentSettingDescription + "\"");
     }
 
     /**
      * Returns the EDP2 repository containing measurements from the last analysis run.
      * 
-     * @param edp2datasource
-     *            the EDP2 datasource to get measurements from.
+     * @param edp2datasourceID
+     *            the EDP2 datasource ID to get measurements from.
      * @return the EDP2 repository.
      */
-    private Repository getEDP2Repository(final EDP2Datasource edp2datasource) {
-        final Repository repository = RepositoryManager.getRepositoryFromUUID(edp2datasource.getId());
+    private Repository getEDP2Repository(final String edp2datasourceID) {
+        final Repository repository = RepositoryManager.getRepositoryFromUUID(edp2datasourceID);
 
         if (repository == null) {
             throw new RuntimeException("Could not determine datasource type. This should not have happened.");

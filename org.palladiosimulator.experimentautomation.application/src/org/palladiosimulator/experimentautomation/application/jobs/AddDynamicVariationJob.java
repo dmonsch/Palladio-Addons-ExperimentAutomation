@@ -77,9 +77,6 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
             if (valueProvider instanceof NestedIntervalsValueProviderStrategy) {
                 final NestedIntervalsValueProviderStrategy nestedInterval = (NestedIntervalsValueProviderStrategy) valueProvider;
                 result.put(variationFactorTuple, nestedInterval);
-
-                // TODO where to output this data?
-                System.out.println(nestedInterval);
             }
         }
 
@@ -144,15 +141,9 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
 
                     // Finish
                     edp2ConfigFactory.finalizeRecorderConfigurationFactory();
-
-                    // TODO Remove debug output
-                    System.out.println("CAPACITY=" + nestedInterval.valueAtPosition(0));
                 } else {
                     variationFactorTuple.setFactor(nestedInterval.valueAtPosition(0));
                 }
-
-                // TODO where to output this data?
-                System.out.println(nestedInterval);
             }
 
             if (this.tuples2nestedIntervals.size() > 0) {
