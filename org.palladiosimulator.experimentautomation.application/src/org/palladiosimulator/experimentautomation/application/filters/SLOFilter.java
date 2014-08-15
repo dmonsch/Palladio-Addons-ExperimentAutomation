@@ -7,20 +7,25 @@ import javax.measure.Measure;
 import org.palladiosimulator.edp2.datastream.IDataSource;
 import org.palladiosimulator.edp2.datastream.filter.AbstractFilter;
 import org.palladiosimulator.measurementframework.Measurement;
+import org.palladiosimulator.metricspec.constants.MetricDescriptionConstants;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjective;
 
 /**
  * Filter for SLO violations.
- * 
+ *
  * @author Sebastian Lehrig
  */
 public class SLOFilter extends AbstractFilter {
 
-    private final ServiceLevelObjective serviceLevelObjective;
+    private ServiceLevelObjective serviceLevelObjective;
+
+    public SLOFilter() {
+        super(MetricDescriptionConstants.RESPONSE_TIME_METRIC_TUPLE);
+    }
 
     /**
      * Default constructor.
-     * 
+     *
      * @param datasource
      *            the data source as needed by the parent class.
      * @param serviceLevelObjective
@@ -36,18 +41,22 @@ public class SLOFilter extends AbstractFilter {
      * Determines whether an SLO violations occurred for the given SLO member variable and for the
      * given measurement. For instance, a response time tuple (10s, 5s) would be an SLO violation if
      * the SLO specifies a threshold of 3s.
-     * 
+     *
      * TODO This method assumes that (1) measurement tuples come in and (2) SLOs are checked against
      * the second tuple element (see example above). The SLO metamodel needs extensions to get rid
      * of such assumptions, by making explicit whether a tuple element should be used for SLO
      * checking. [Lehrig]
-     * 
+     *
      * TODO Matthias should enrich this method by fuzzy thresholds. [Lehrig]
-     * 
+     *
      * {@inheritDoc}
      */
     @Override
-    protected boolean shouldSkip(Measurement measurement) {
+    protected boolean shouldSkip(final Measurement measurement) {
+        if (this.serviceLevelObjective == null) {
+            return false;
+        }
+
         final List<Measure<?, ?>> measures = measurement.asList();
 
         if (serviceLevelObjective.getLowerThreshold() != null) {
