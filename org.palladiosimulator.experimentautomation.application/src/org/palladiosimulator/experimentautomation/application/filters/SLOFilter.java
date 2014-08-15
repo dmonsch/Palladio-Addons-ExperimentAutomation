@@ -4,7 +4,11 @@ import java.util.List;
 
 import javax.measure.Measure;
 
+import org.eclipse.ui.IMemento;
+import org.eclipse.ui.IPersistable;
+import org.eclipse.ui.IPersistableElement;
 import org.palladiosimulator.edp2.datastream.IDataSource;
+import org.palladiosimulator.edp2.datastream.configurable.PropertyConfigurable;
 import org.palladiosimulator.edp2.datastream.filter.AbstractFilter;
 import org.palladiosimulator.measurementframework.Measurement;
 import org.palladiosimulator.metricspec.constants.MetricDescriptionConstants;
@@ -15,7 +19,7 @@ import org.palladiosimulator.servicelevelobjective.ServiceLevelObjective;
  *
  * @author Sebastian Lehrig
  */
-public class SLOFilter extends AbstractFilter {
+public class SLOFilter extends AbstractFilter implements IPersistable, IPersistableElement {
 
     private ServiceLevelObjective serviceLevelObjective;
 
@@ -37,6 +41,26 @@ public class SLOFilter extends AbstractFilter {
         this.serviceLevelObjective = serviceLevelObjective;
     }
 
+    /*
+     * (non-Javadoc)
+     *
+     * @see org.eclipse.ui.IPersistable#saveState(org.eclipse.ui.IMemento)
+     */
+    @Override
+    public void saveState(final IMemento memento) {
+        SLOFilterInputFactory.saveConfigurationState(memento, this);
+    }
+
+    /*
+     * (non-Javadoc)
+     *
+     * @see org.eclipse.ui.IPersistableElement#getFactoryId()
+     */
+    @Override
+    public String getFactoryId() {
+        return SLOFilterInputFactory.FACTORY_ID;
+    }
+
     /**
      * Determines whether an SLO violations occurred for the given SLO member variable and for the
      * given measurement. For instance, a response time tuple (10s, 5s) would be an SLO violation if
@@ -53,7 +77,7 @@ public class SLOFilter extends AbstractFilter {
      */
     @Override
     protected boolean shouldSkip(final Measurement measurement) {
-        if (this.serviceLevelObjective == null) {
+        if (this.serviceLevelObjective == null || this.serviceLevelObjective == SLOFilterConfiguration.EMPTY_SLO) {
             return false;
         }
 
@@ -76,4 +100,11 @@ public class SLOFilter extends AbstractFilter {
         return true;
     }
 
+    /* (non-Javadoc)
+     * @see org.palladiosimulator.edp2.datastream.filter.AbstractAdapter#createProperties()
+     */
+    @Override
+    protected PropertyConfigurable createProperties() {
+        return new SLOFilterConfiguration();
+    }
 }
