@@ -1,7 +1,5 @@
 package org.palladiosimulator.experimentautomation.application.filters;
 
-import java.util.List;
-
 import javax.measure.Measure;
 
 import org.eclipse.ui.IMemento;
@@ -25,6 +23,7 @@ public class SLOFilter extends AbstractFilter implements IPersistable, IPersista
 
     public SLOFilter() {
         super(MetricDescriptionConstants.RESPONSE_TIME_METRIC_TUPLE);
+        // TODO Using RT is too specific. Can we do better? [Lehrig]
     }
 
     /**
@@ -36,14 +35,16 @@ public class SLOFilter extends AbstractFilter implements IPersistable, IPersista
      *            the SLO to check for.
      */
     public SLOFilter(final IDataSource datasource, final ServiceLevelObjective serviceLevelObjective) {
-        super(datasource, serviceLevelObjective.getMetricDescription());
+        super(datasource, MetricDescriptionConstants.RESPONSE_TIME_METRIC_TUPLE);
+        // TODO Using a tuple is actually not intended; we should just refer to metric the SLO
+        // provides; e.g., RT [Lehrig]
 
         this.serviceLevelObjective = serviceLevelObjective;
     }
 
     /*
      * (non-Javadoc)
-     *
+     * 
      * @see org.eclipse.ui.IPersistable#saveState(org.eclipse.ui.IMemento)
      */
     @Override
@@ -53,7 +54,7 @@ public class SLOFilter extends AbstractFilter implements IPersistable, IPersista
 
     /*
      * (non-Javadoc)
-     *
+     * 
      * @see org.eclipse.ui.IPersistableElement#getFactoryId()
      */
     @Override
@@ -66,33 +67,31 @@ public class SLOFilter extends AbstractFilter implements IPersistable, IPersista
      * given measurement. For instance, a response time tuple (10s, 5s) would be an SLO violation if
      * the SLO specifies a threshold of 3s.
      *
-     * TODO This method assumes that (1) measurement tuples come in and (2) SLOs are checked against
-     * the second tuple element (see example above). The SLO metamodel needs extensions to get rid
-     * of such assumptions, by making explicit whether a tuple element should be used for SLO
-     * checking. [Lehrig]
-     *
      * TODO Matthias should enrich this method by fuzzy thresholds. [Lehrig]
      *
      * {@inheritDoc}
      */
+    @SuppressWarnings({
+            "rawtypes", "unchecked"
+    })
     @Override
     protected boolean shouldSkip(final Measurement measurement) {
         if (this.serviceLevelObjective == null || this.serviceLevelObjective == SLOFilterConfiguration.EMPTY_SLO) {
             return false;
         }
 
-        final List<Measure<?, ?>> measures = measurement.asList();
+        final Measure responseTime = measurement.getMeasureForMetric(serviceLevelObjective.getMetricDescription());
 
         if (serviceLevelObjective.getLowerThreshold() != null) {
             final Measure lowerThreshold = serviceLevelObjective.getLowerThreshold().getThresholdLimit();
-            if (measures.get(1).compareTo(lowerThreshold) < 0) {
+            if (responseTime.compareTo(lowerThreshold) < 0) {
                 return false;
             }
         }
 
         if (serviceLevelObjective.getUpperThreshold() != null) {
             final Measure upperThreshold = serviceLevelObjective.getUpperThreshold().getThresholdLimit();
-            if (measures.get(1).compareTo(upperThreshold) > 0) {
+            if (responseTime.compareTo(upperThreshold) > 0) {
                 return false;
             }
         }
@@ -100,7 +99,9 @@ public class SLOFilter extends AbstractFilter implements IPersistable, IPersista
         return true;
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
+     * 
      * @see org.palladiosimulator.edp2.datastream.filter.AbstractAdapter#createProperties()
      */
     @Override

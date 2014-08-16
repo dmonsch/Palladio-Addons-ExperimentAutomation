@@ -20,6 +20,8 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasou
 import org.palladiosimulator.experimentautomation.application.filters.SLOFilter;
 import org.palladiosimulator.experimentautomation.application.tooladapter.RunAnalysisJob;
 import org.palladiosimulator.measurementframework.Measurement;
+import org.palladiosimulator.metricspec.MetricDescription;
+import org.palladiosimulator.metricspec.MetricSetDescription;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjective;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
 
@@ -137,10 +139,7 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
     private Measurements findMeasurements(final List<Measurements> measurementsList,
             final ServiceLevelObjective serviceLevelObjective) {
         for (final Measurements measurements : measurementsList) {
-            final String measureMetric = measurements.getMeasure().getMetric().getId();
-            final String sloMetric = serviceLevelObjective.getMetricDescription().getId();
-
-            if (measureMetric.equals(sloMetric)) {
+            if (containsMetric(measurements.getMeasure().getMetric(), serviceLevelObjective.getMetricDescription())) {
                 final String measureMeasuringPoint = MeasuringPointUtility.measuringPointToString(measurements
                         .getMeasure().getMeasuringPoint());
                 final String sloMeasuringPoint = MeasuringPointUtility.measuringPointToString(serviceLevelObjective
@@ -164,6 +163,22 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
             }
         }
         throw new RuntimeException("Measurement for SLO \"" + serviceLevelObjective.getName() + "\" not found");
+    }
+
+    private boolean containsMetric(MetricDescription metric, MetricDescription metricToCheckFor) {
+        if (metric == metricToCheckFor || metric.getId().equals(metricToCheckFor.getId())) {
+            return true;
+        }
+
+        if (metric instanceof MetricSetDescription) {
+            for (MetricDescription subMetric : ((MetricSetDescription) metric).getSubsumedMetrics()) {
+                if (containsMetric(subMetric, metricToCheckFor)) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     /**
