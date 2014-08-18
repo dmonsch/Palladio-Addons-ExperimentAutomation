@@ -9,8 +9,8 @@ public class SLOFilterInputFactory extends PropertyConfigurableElementFactory {
     public static final String FACTORY_ID = SLOFilterInputFactory.class.getCanonicalName();
 
     @Override
-    protected IPropertyConfigurable createElementInternal(IMemento memento) {
-        return new SLOFilterConfiguration();
+    protected IPropertyConfigurable createElementInternal(final IMemento memento) {
+        return new SLOFilter();
     }
 
 }
