@@ -49,7 +49,7 @@ public class SLOFilter extends AbstractFilter implements IPersistable, IPersista
      */
     @Override
     public void saveState(final IMemento memento) {
-        SLOFilterInputFactory.saveConfigurationState(memento, this);
+        SLOFilterInputFactory.saveState(memento, this);
     }
 
     /*
