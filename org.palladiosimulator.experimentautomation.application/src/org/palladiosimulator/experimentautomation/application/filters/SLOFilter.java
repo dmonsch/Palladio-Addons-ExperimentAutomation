@@ -44,7 +44,7 @@ public class SLOFilter extends AbstractFilter implements IPersistable, IPersista
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see org.eclipse.ui.IPersistable#saveState(org.eclipse.ui.IMemento)
      */
     @Override
@@ -54,7 +54,7 @@ public class SLOFilter extends AbstractFilter implements IPersistable, IPersista
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see org.eclipse.ui.IPersistableElement#getFactoryId()
      */
     @Override
@@ -72,11 +72,11 @@ public class SLOFilter extends AbstractFilter implements IPersistable, IPersista
      * {@inheritDoc}
      */
     @SuppressWarnings({
-            "rawtypes", "unchecked"
+        "rawtypes", "unchecked"
     })
     @Override
     protected boolean shouldSkip(final Measurement measurement) {
-        if (this.serviceLevelObjective == null || this.serviceLevelObjective == SLOFilterConfiguration.EMPTY_SLO) {
+        if (this.serviceLevelObjective == null || this.getConfiguration().isPropertyNotSet(SLOFilterConfiguration.SLO_KEY)) {
             return false;
         }
 
@@ -101,7 +101,7 @@ public class SLOFilter extends AbstractFilter implements IPersistable, IPersista
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see org.palladiosimulator.edp2.datastream.filter.AbstractAdapter#createProperties()
      */
     @Override

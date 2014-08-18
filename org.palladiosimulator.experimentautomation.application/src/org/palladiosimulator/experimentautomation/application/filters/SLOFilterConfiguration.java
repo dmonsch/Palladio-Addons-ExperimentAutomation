@@ -6,24 +6,25 @@ import java.util.Map;
 import org.palladiosimulator.edp2.datastream.configurable.reflective.ConfigurationProperty;
 import org.palladiosimulator.edp2.datastream.configurable.reflective.ReflectivePropertyConfigurable;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjective;
-import org.palladiosimulator.servicelevelobjective.ServicelevelObjectiveFactory;
 
 public class SLOFilterConfiguration extends ReflectivePropertyConfigurable {
 
     public static final String SLO_KEY = "serviceLevelObjective";
-    public static final ServiceLevelObjective EMPTY_SLO = ServicelevelObjectiveFactory.eINSTANCE.createServiceLevelObjective();
 
-    @ConfigurationProperty(description = "Service Level Objective (SLO)")
+    @ConfigurationProperty(description = "Service Level Objective (SLO)", isUnsetable=true)
     private ServiceLevelObjective serviceLevelObjective;
 
     public ServiceLevelObjective getServiceLevelObjective() {
+        if (isPropertyNotSet(SLO_KEY)) {
+            throw new IllegalStateException("Tried to get an unset SLO");
+        }
         return this.serviceLevelObjective;
     }
 
     @Override
     public Map<String, Object> getDefaultConfiguration() {
         final Map<String, Object> result = new HashMap<String, Object>();
-        result.put(SLO_KEY, EMPTY_SLO);
+        result.put(SLO_KEY, getNotSetConstant());
         return result;
     }
 }
