@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.equinox.app.IApplication;
 import org.eclipse.equinox.app.IApplicationContext;
 import org.osgi.framework.Bundle;
+import org.palladiosimulator.experimentautomation.application.config.ExperimentAutomationConfiguration;
 import org.palladiosimulator.experimentautomation.application.jobs.RunExperimentAutomationJob;
 import org.palladiosimulator.experimentautomation.application.utils.EcoreHelper;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
@@ -68,11 +69,13 @@ public class ExperimentApplication implements IApplication {
 
         // load experiments
         final List<Experiment> experiments = getExperiments(experimentsLocation, filteredExperimentIDs);
+        final ExperimentAutomationConfiguration experimentAutomationConfiguration = new ExperimentAutomationConfiguration();
+        experimentAutomationConfiguration.setExperiments(experiments);
 
         // run experiments via blackboard-based workflow
         final MDSDBlackboard blackboard = new MDSDBlackboard();
         final BlackboardBasedWorkflow<MDSDBlackboard> workflow = new BlackboardBasedWorkflow<MDSDBlackboard>(
-                new RunExperimentAutomationJob(experiments), blackboard);
+                new RunExperimentAutomationJob(experimentAutomationConfiguration), blackboard);
         workflow.run();
 
         return IApplication.EXIT_OK;
