@@ -1,6 +1,8 @@
 package org.palladiosimulator.experimentautomation.application.jobs;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.palladiosimulator.edp2.dao.exception.DataNotAccessibleException;
@@ -18,6 +20,7 @@ import org.palladiosimulator.edp2.util.MeasurementsUtility;
 import org.palladiosimulator.edp2.util.MeasuringPointUtility;
 import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource;
 import org.palladiosimulator.experimentautomation.application.filters.SLOFilter;
+import org.palladiosimulator.experimentautomation.application.filters.SLOFilterConfiguration;
 import org.palladiosimulator.experimentautomation.application.tooladapter.RunAnalysisJob;
 import org.palladiosimulator.measurementframework.Measurement;
 import org.palladiosimulator.metricspec.MetricDescription;
@@ -113,8 +116,12 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
             final Measurements measurements = findMeasurements(experimentRun.getMeasurements(), serviceLevelObjective);
             final RawMeasurements rawMeasurements = measurements.getMeasurementsRanges().get(0).getRawMeasurements();
 
+            final Map<String, Object> properties = new HashMap<String, Object>(1);
+            properties.put(SLOFilterConfiguration.SLO_KEY, serviceLevelObjective);
+
             final IDataSource dataSource = new Edp2DataTupleDataSource(rawMeasurements);
-            final SLOFilter sloFilter = new SLOFilter(dataSource, serviceLevelObjective);
+            final SLOFilter sloFilter = new SLOFilter(dataSource);
+            sloFilter.setProperties(properties);
             final IDataStream<Measurement> dataStream = sloFilter.getDataStream();
 
             sloViolations += dataStream.size();
