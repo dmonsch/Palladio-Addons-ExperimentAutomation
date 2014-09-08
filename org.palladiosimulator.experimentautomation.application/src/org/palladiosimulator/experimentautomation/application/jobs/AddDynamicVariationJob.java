@@ -27,10 +27,10 @@ import org.palladiosimulator.measurementframework.TupleMeasurement;
 import org.palladiosimulator.metricspec.constants.MetricDescriptionConstants;
 import org.palladiosimulator.recorderframework.AbstractRecorder;
 import org.palladiosimulator.recorderframework.config.AbstractRecorderConfiguration;
+import org.palladiosimulator.recorderframework.config.IRecorderConfiguration;
 import org.palladiosimulator.recorderframework.config.IRecorderConfigurationFactory;
 import org.palladiosimulator.recorderframework.edp2.EDP2RawRecorder;
 import org.palladiosimulator.recorderframework.edp2.config.EDP2ReportRecorderConfigurationFactory;
-import org.palladiosimulator.recorderframework.launch.IRecorderConfiguration;
 
 import de.uka.ipd.sdq.workflow.jobs.IBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
