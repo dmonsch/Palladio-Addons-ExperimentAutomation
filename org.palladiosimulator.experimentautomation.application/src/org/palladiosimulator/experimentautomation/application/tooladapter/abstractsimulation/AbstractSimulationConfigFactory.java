@@ -16,7 +16,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStop
 import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
 import org.palladiosimulator.experimentautomation.application.VariationFactorTuple;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
-import org.palladiosimulator.recorderframework.edp2.EDP2RecorderConfigurationFactory;
+import org.palladiosimulator.recorderframework.edp2.config.EDP2RecorderConfigurationFactory;
 
 import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
 
@@ -41,9 +41,6 @@ public class AbstractSimulationConfigFactory {
      *            the ID of the used analyzer.
      * @param variationFactorTuples
      *            the variations and according value factors.
-     * @param repetition
-     *            the current repetition number for the given experiment and variant. Needed for
-     *            computing the name of the experiment run.
      * @return a filled-out run configuration.
      */
     public static Map<String, Object> createConfigMap(final Experiment experiment,

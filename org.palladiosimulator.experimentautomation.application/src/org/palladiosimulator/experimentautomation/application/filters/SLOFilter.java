@@ -29,8 +29,6 @@ public class SLOFilter extends AbstractFilter implements IPersistable, IPersista
      *
      * @param datasource
      *            the data source as needed by the parent class.
-     * @param serviceLevelObjective
-     *            the SLO to check for.
      */
     public SLOFilter(final IDataSource datasource) {
         super(datasource, MetricDescriptionConstants.RESPONSE_TIME_METRIC_TUPLE);

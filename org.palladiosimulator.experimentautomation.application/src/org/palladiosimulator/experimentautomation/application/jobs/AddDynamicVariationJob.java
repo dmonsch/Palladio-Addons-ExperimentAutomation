@@ -25,11 +25,11 @@ import org.palladiosimulator.measurementframework.BasicMeasurement;
 import org.palladiosimulator.measurementframework.Measurement;
 import org.palladiosimulator.measurementframework.TupleMeasurement;
 import org.palladiosimulator.metricspec.constants.MetricDescriptionConstants;
-import org.palladiosimulator.recorderframework.AbstractRecorderConfiguration;
-import org.palladiosimulator.recorderframework.IRecorderConfigurationFactory;
-import org.palladiosimulator.recorderframework.Recorder;
+import org.palladiosimulator.recorderframework.AbstractRecorder;
+import org.palladiosimulator.recorderframework.config.AbstractRecorderConfiguration;
+import org.palladiosimulator.recorderframework.config.IRecorderConfigurationFactory;
 import org.palladiosimulator.recorderframework.edp2.EDP2RawRecorder;
-import org.palladiosimulator.recorderframework.edp2.EDP2ReportRecorderConfigurationFactory;
+import org.palladiosimulator.recorderframework.edp2.config.EDP2ReportRecorderConfigurationFactory;
 import org.palladiosimulator.recorderframework.launch.IRecorderConfiguration;
 
 import de.uka.ipd.sdq.workflow.jobs.IBlackboardInteractingJob;
@@ -40,7 +40,7 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 
 public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
 
-    private final MeasuringpointFactory MEASURING_POINT_FACTORY = MeasuringpointFactory.eINSTANCE;
+    private static final MeasuringpointFactory MEASURING_POINT_FACTORY = MeasuringpointFactory.eINSTANCE;
 
     private final IToolAdapter toolAdapter;
     private final Experiment experiment;
@@ -127,12 +127,12 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
                             MetricDescriptionConstants.USER_CAPACITY_TUPLE);
                     recorderConfigurationMap.put(AbstractRecorderConfiguration.MEASURING_POINT, capacityMeasuringPoint);
 
-                    // Recorder
+                    // AbstractRecorder
                     final IRecorderConfigurationFactory edp2ConfigFactory = new EDP2ReportRecorderConfigurationFactory();
                     edp2ConfigFactory.initialize(recorderConfigurationMap);
                     final IRecorderConfiguration recorderConfiguration = edp2ConfigFactory
                             .createRecorderConfiguration(recorderConfigurationMap);
-                    final Recorder reportRecorder = new EDP2RawRecorder();
+                    final AbstractRecorder reportRecorder = new EDP2RawRecorder();
 
                     // Write data
                     reportRecorder.initialize(recorderConfiguration);

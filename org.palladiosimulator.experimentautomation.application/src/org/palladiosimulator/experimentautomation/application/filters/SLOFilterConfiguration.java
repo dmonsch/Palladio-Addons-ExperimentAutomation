@@ -11,7 +11,7 @@ public class SLOFilterConfiguration extends ReflectivePropertyConfigurable {
 
     public static final String SLO_KEY = "serviceLevelObjective";
 
-    @ConfigurationProperty(description = "Service Level Objective (SLO)", isUnsetable=true)
+    @ConfigurationProperty(description = "Service Level Objective (SLO)", isUnsetable = true)
     private ServiceLevelObjective serviceLevelObjective;
 
     public ServiceLevelObjective getServiceLevelObjective() {
