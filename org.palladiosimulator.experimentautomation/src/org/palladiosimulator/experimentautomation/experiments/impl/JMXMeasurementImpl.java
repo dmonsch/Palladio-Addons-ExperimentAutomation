@@ -26,7 +26,7 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
     /**
      * The default value of the '{@link #getPollingPeriod() <em>Polling Period</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getPollingPeriod()
      * @generated
      * @ordered
@@ -45,7 +45,7 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected JMXMeasurementImpl() {
@@ -54,7 +54,7 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -64,7 +64,7 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -74,7 +74,7 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -89,7 +89,7 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -103,7 +103,7 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -118,7 +118,7 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -133,7 +133,7 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -148,7 +148,7 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

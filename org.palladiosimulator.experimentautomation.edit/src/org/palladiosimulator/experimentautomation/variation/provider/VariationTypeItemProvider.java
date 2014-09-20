@@ -28,7 +28,7 @@ public class VariationTypeItemProvider extends IdentifierItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public VariationTypeItemProvider(final AdapterFactory adapterFactory) {
@@ -38,7 +38,7 @@ public class VariationTypeItemProvider extends IdentifierItemProvider {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -56,7 +56,7 @@ public class VariationTypeItemProvider extends IdentifierItemProvider {
     /**
      * This adds a property descriptor for the Name feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addNamePropertyDescriptor(final Object object) {
@@ -64,14 +64,14 @@ public class VariationTypeItemProvider extends IdentifierItemProvider {
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
                 this.getString("_UI_VariationType_name_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_VariationType_name_feature", "_UI_VariationType_type"),
-                VariationPackage.Literals.VARIATION_TYPE__NAME, true, false, false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                        VariationPackage.Literals.VARIATION_TYPE__NAME, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Strategy Class feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addStrategyClassPropertyDescriptor(final Object object) {
@@ -80,13 +80,13 @@ public class VariationTypeItemProvider extends IdentifierItemProvider {
                 this.getString("_UI_VariationType_strategyClass_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_VariationType_strategyClass_feature",
                         "_UI_VariationType_type"), VariationPackage.Literals.VARIATION_TYPE__STRATEGY_CLASS, true,
-                        false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Varied Entity Interface feature. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addVariedEntityInterfacePropertyDescriptor(final Object object) {
@@ -95,7 +95,7 @@ public class VariationTypeItemProvider extends IdentifierItemProvider {
                 this.getString("_UI_VariationType_variedEntityInterface_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_VariationType_variedEntityInterface_feature",
                         "_UI_VariationType_type"), VariationPackage.Literals.VARIATION_TYPE__VARIED_ENTITY_INTERFACE,
-                        true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -115,7 +115,7 @@ public class VariationTypeItemProvider extends IdentifierItemProvider {
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -135,7 +135,7 @@ public class VariationTypeItemProvider extends IdentifierItemProvider {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -146,7 +146,7 @@ public class VariationTypeItemProvider extends IdentifierItemProvider {
     /**
      * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

@@ -25,7 +25,7 @@ public class FileDatasourceItemProvider extends EDP2DatasourceItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public FileDatasourceItemProvider(final AdapterFactory adapterFactory) {
@@ -35,7 +35,7 @@ public class FileDatasourceItemProvider extends EDP2DatasourceItemProvider {
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -51,7 +51,7 @@ public class FileDatasourceItemProvider extends EDP2DatasourceItemProvider {
     /**
      * This adds a property descriptor for the Location feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addLocationPropertyDescriptor(final Object object) {
@@ -60,12 +60,12 @@ public class FileDatasourceItemProvider extends EDP2DatasourceItemProvider {
                 this.getString("_UI_FileDatasource_location_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_FileDatasource_location_feature",
                         "_UI_FileDatasource_type"), AbstractsimulationPackage.Literals.FILE_DATASOURCE__LOCATION, true,
-                        false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
      * This returns FileDatasource.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -90,7 +90,7 @@ public class FileDatasourceItemProvider extends EDP2DatasourceItemProvider {
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -108,7 +108,7 @@ public class FileDatasourceItemProvider extends EDP2DatasourceItemProvider {
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

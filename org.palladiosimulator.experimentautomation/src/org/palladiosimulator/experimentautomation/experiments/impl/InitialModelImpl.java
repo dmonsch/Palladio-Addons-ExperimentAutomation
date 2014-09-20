@@ -16,6 +16,7 @@ import org.palladiosimulator.simulizar.pms.PMSModel;
 
 import de.uka.ipd.sdq.pcm.allocation.Allocation;
 import de.uka.ipd.sdq.pcm.repository.Repository;
+import de.uka.ipd.sdq.pcm.resourceenvironment.ResourceEnvironment;
 import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
 
 /**
@@ -45,6 +46,15 @@ import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
  * <li>
  * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getServiceLevelObjectives
  * <em>Service Level Objectives</em>}</li>
+ * <li>
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getRepository
+ * <em>Repository</em>}</li>
+ * <li>
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getSystem
+ * <em>System</em>}</li>
+ * <li>
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getResourceEnvironment
+ * <em>Resource Environment</em>}</li>
  * </ul>
  * </p>
  *
@@ -74,7 +84,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
     /**
      * The cached value of the '{@link #getMiddlewareRepository() <em>Middleware Repository</em>}'
      * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getMiddlewareRepository()
      * @generated
      * @ordered
@@ -95,7 +105,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
     /**
      * The cached value of the '{@link #getReconfigurationRules() <em>Reconfiguration Rules</em>}'
      * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getReconfigurationRules()
      * @generated
      * @ordered
@@ -106,7 +116,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      * The cached value of the '{@link #getPlatformMonitoringSpecification()
      * <em>Platform Monitoring Specification</em>}' reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @see #getPlatformMonitoringSpecification()
      * @generated
      * @ordered
@@ -116,7 +126,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
     /**
      * The cached value of the '{@link #getServiceLevelObjectives()
      * <em>Service Level Objectives</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getServiceLevelObjectives()
      * @generated
      * @ordered
@@ -124,8 +134,38 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
     protected ServiceLevelObjectiveRepository serviceLevelObjectives;
 
     /**
+     * The cached value of the '{@link #getRepository() <em>Repository</em>}' reference. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @see #getRepository()
+     * @generated
+     * @ordered
+     */
+    protected Repository repository;
+
+    /**
+     * The cached value of the '{@link #getSystem() <em>System</em>}' reference. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     *
+     * @see #getSystem()
+     * @generated
+     * @ordered
+     */
+    protected de.uka.ipd.sdq.pcm.system.System system;
+
+    /**
+     * The cached value of the '{@link #getResourceEnvironment() <em>Resource Environment</em>}'
+     * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @see #getResourceEnvironment()
+     * @generated
+     * @ordered
+     */
+    protected ResourceEnvironment resourceEnvironment;
+
+    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected InitialModelImpl() {
@@ -134,7 +174,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -144,7 +184,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -164,7 +204,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public UsageModel basicGetUsageModel() {
@@ -173,7 +213,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -188,7 +228,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -208,7 +248,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public Allocation basicGetAllocation() {
@@ -217,7 +257,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -232,7 +272,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -253,7 +293,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public Repository basicGetMiddlewareRepository() {
@@ -262,7 +302,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -278,7 +318,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -299,7 +339,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public Repository basicGetEventMiddleWareRepository() {
@@ -308,7 +348,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -324,7 +364,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -345,7 +385,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ReconfigurationRulesFolder basicGetReconfigurationRules() {
@@ -354,7 +394,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -370,7 +410,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -391,7 +431,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public PMSModel basicGetPlatformMonitoringSpecification() {
@@ -400,7 +440,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -416,7 +456,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -438,7 +478,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ServiceLevelObjectiveRepository basicGetServiceLevelObjectives() {
@@ -447,7 +487,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -463,7 +503,141 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @generated
+     */
+    @Override
+    public Repository getRepository() {
+        if (this.repository != null && ((EObject) this.repository).eIsProxy()) {
+            final InternalEObject oldRepository = (InternalEObject) this.repository;
+            this.repository = (Repository) this.eResolveProxy(oldRepository);
+            if (this.repository != oldRepository) {
+                if (this.eNotificationRequired()) {
+                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            ExperimentsPackage.INITIAL_MODEL__REPOSITORY, oldRepository, this.repository));
+                }
+            }
+        }
+        return this.repository;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public Repository basicGetRepository() {
+        return this.repository;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setRepository(final Repository newRepository) {
+        final Repository oldRepository = this.repository;
+        this.repository = newRepository;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.INITIAL_MODEL__REPOSITORY,
+                    oldRepository, this.repository));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public de.uka.ipd.sdq.pcm.system.System getSystem() {
+        if (this.system != null && ((EObject) this.system).eIsProxy()) {
+            final InternalEObject oldSystem = (InternalEObject) this.system;
+            this.system = (de.uka.ipd.sdq.pcm.system.System) this.eResolveProxy(oldSystem);
+            if (this.system != oldSystem) {
+                if (this.eNotificationRequired()) {
+                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            ExperimentsPackage.INITIAL_MODEL__SYSTEM, oldSystem, this.system));
+                }
+            }
+        }
+        return this.system;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public de.uka.ipd.sdq.pcm.system.System basicGetSystem() {
+        return this.system;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setSystem(final de.uka.ipd.sdq.pcm.system.System newSystem) {
+        final de.uka.ipd.sdq.pcm.system.System oldSystem = this.system;
+        this.system = newSystem;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.INITIAL_MODEL__SYSTEM,
+                    oldSystem, this.system));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public ResourceEnvironment getResourceEnvironment() {
+        if (this.resourceEnvironment != null && ((EObject) this.resourceEnvironment).eIsProxy()) {
+            final InternalEObject oldResourceEnvironment = (InternalEObject) this.resourceEnvironment;
+            this.resourceEnvironment = (ResourceEnvironment) this.eResolveProxy(oldResourceEnvironment);
+            if (this.resourceEnvironment != oldResourceEnvironment) {
+                if (this.eNotificationRequired()) {
+                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            ExperimentsPackage.INITIAL_MODEL__RESOURCE_ENVIRONMENT, oldResourceEnvironment,
+                            this.resourceEnvironment));
+                }
+            }
+        }
+        return this.resourceEnvironment;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public ResourceEnvironment basicGetResourceEnvironment() {
+        return this.resourceEnvironment;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setResourceEnvironment(final ResourceEnvironment newResourceEnvironment) {
+        final ResourceEnvironment oldResourceEnvironment = this.resourceEnvironment;
+        this.resourceEnvironment = newResourceEnvironment;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    ExperimentsPackage.INITIAL_MODEL__RESOURCE_ENVIRONMENT, oldResourceEnvironment,
+                    this.resourceEnvironment));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     @Override
@@ -504,13 +678,28 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
                 return this.getServiceLevelObjectives();
             }
             return this.basicGetServiceLevelObjectives();
+        case ExperimentsPackage.INITIAL_MODEL__REPOSITORY:
+            if (resolve) {
+                return this.getRepository();
+            }
+            return this.basicGetRepository();
+        case ExperimentsPackage.INITIAL_MODEL__SYSTEM:
+            if (resolve) {
+                return this.getSystem();
+            }
+            return this.basicGetSystem();
+        case ExperimentsPackage.INITIAL_MODEL__RESOURCE_ENVIRONMENT:
+            if (resolve) {
+                return this.getResourceEnvironment();
+            }
+            return this.basicGetResourceEnvironment();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -537,13 +726,22 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
         case ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES:
             this.setServiceLevelObjectives((ServiceLevelObjectiveRepository) newValue);
             return;
+        case ExperimentsPackage.INITIAL_MODEL__REPOSITORY:
+            this.setRepository((Repository) newValue);
+            return;
+        case ExperimentsPackage.INITIAL_MODEL__SYSTEM:
+            this.setSystem((de.uka.ipd.sdq.pcm.system.System) newValue);
+            return;
+        case ExperimentsPackage.INITIAL_MODEL__RESOURCE_ENVIRONMENT:
+            this.setResourceEnvironment((ResourceEnvironment) newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -570,13 +768,22 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
         case ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES:
             this.setServiceLevelObjectives((ServiceLevelObjectiveRepository) null);
             return;
+        case ExperimentsPackage.INITIAL_MODEL__REPOSITORY:
+            this.setRepository((Repository) null);
+            return;
+        case ExperimentsPackage.INITIAL_MODEL__SYSTEM:
+            this.setSystem((de.uka.ipd.sdq.pcm.system.System) null);
+            return;
+        case ExperimentsPackage.INITIAL_MODEL__RESOURCE_ENVIRONMENT:
+            this.setResourceEnvironment((ResourceEnvironment) null);
+            return;
         }
         super.eUnset(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -596,6 +803,12 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
             return this.platformMonitoringSpecification != null;
         case ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES:
             return this.serviceLevelObjectives != null;
+        case ExperimentsPackage.INITIAL_MODEL__REPOSITORY:
+            return this.repository != null;
+        case ExperimentsPackage.INITIAL_MODEL__SYSTEM:
+            return this.system != null;
+        case ExperimentsPackage.INITIAL_MODEL__RESOURCE_ENVIRONMENT:
+            return this.resourceEnvironment != null;
         }
         return super.eIsSet(featureID);
     }

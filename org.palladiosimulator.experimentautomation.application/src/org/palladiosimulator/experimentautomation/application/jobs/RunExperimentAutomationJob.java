@@ -1,7 +1,5 @@
 package org.palladiosimulator.experimentautomation.application.jobs;
 
-import java.util.List;
-
 import org.palladiosimulator.experimentautomation.application.config.ExperimentAutomationConfiguration;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
 
@@ -9,6 +7,8 @@ import de.uka.ipd.sdq.codegen.simucontroller.debug.IDebugListener;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 import de.uka.ipd.sdq.workflow.pcm.jobs.PreparePCMBlackboardPartionJob;
+import eu.cloudscaleproject.env.architecturaltemplate.completion.config.ATConfiguration;
+import eu.cloudscaleproject.env.architecturaltemplate.completion.jobs.RunATJob;
 
 /**
  * This job conducts a series of experiments. Each experiment has its own initial set of Palladio
@@ -44,11 +44,12 @@ public class RunExperimentAutomationJob extends SequentialBlackboardInteractingJ
             throw new IllegalArgumentException("Debug listener has to be non-null for debug runs");
         }
 
-        final List<Experiment> experiments = configuration.getExperiments();
-
         this.add(new PreparePCMBlackboardPartionJob());
-        for (final Experiment experiment : experiments) {
-            this.add(new LoadPCMModelsForExperimentAutomationJob(experiment.getInitialModel()));
+        for (final Experiment experiment : configuration.getExperiments()) {
+            final ATConfiguration config = new ATConfiguration();
+            config.setInitialModel(experiment.getInitialModel());
+            this.add(new RunATJob(config)); // Loads completed PCM models to PCM partition
+            //this.add(new LoadPCMModelsForExperimentAutomationJob(experiment.getInitialModel()));
             this.add(new RunExperimentForEachToolJob(experiment));
         }
     }

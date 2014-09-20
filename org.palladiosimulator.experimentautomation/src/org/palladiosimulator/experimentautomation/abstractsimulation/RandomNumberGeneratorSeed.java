@@ -44,7 +44,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Seed0</em>' attribute.
      * @see #setSeed0(int)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed0()
@@ -57,7 +57,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed0
      * <em>Seed0</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Seed0</em>' attribute.
      * @see #getSeed0()
@@ -72,7 +72,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Seed1</em>' attribute.
      * @see #setSeed1(int)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed1()
@@ -85,7 +85,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed1
      * <em>Seed1</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Seed1</em>' attribute.
      * @see #getSeed1()
@@ -100,7 +100,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Seed2</em>' attribute.
      * @see #setSeed2(int)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed2()
@@ -113,7 +113,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed2
      * <em>Seed2</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Seed2</em>' attribute.
      * @see #getSeed2()
@@ -128,7 +128,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Seed3</em>' attribute.
      * @see #setSeed3(int)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed3()
@@ -141,7 +141,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed3
      * <em>Seed3</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Seed3</em>' attribute.
      * @see #getSeed3()
@@ -156,7 +156,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Seed4</em>' attribute.
      * @see #setSeed4(int)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed4()
@@ -169,7 +169,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed4
      * <em>Seed4</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Seed4</em>' attribute.
      * @see #getSeed4()
@@ -184,7 +184,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Seed5</em>' attribute.
      * @see #setSeed5(int)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed5()
@@ -197,7 +197,7 @@ public interface RandomNumberGeneratorSeed extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed5
      * <em>Seed5</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Seed5</em>' attribute.
      * @see #getSeed5()

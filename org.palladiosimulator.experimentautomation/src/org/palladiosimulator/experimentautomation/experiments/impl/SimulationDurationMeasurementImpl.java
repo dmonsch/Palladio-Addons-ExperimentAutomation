@@ -17,7 +17,7 @@ import org.palladiosimulator.experimentautomation.experiments.SimulationDuration
 public class SimulationDurationMeasurementImpl extends ResponseMeasurementImpl implements SimulationDurationMeasurement {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected SimulationDurationMeasurementImpl() {
@@ -26,7 +26,7 @@ public class SimulationDurationMeasurementImpl extends ResponseMeasurementImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

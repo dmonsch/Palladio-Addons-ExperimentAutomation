@@ -20,21 +20,21 @@ import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
  * <code>createXXX</code> method for each class of the model. <!-- end-user-doc -->
- * 
+ *
  * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage
  * @generated
  */
 public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
     /**
      * The cached model package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected static AbstractsimulationPackage modelPackage;
 
     /**
      * Creates an instance of the adapter factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public AbstractsimulationAdapterFactory() {
@@ -47,7 +47,7 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
      * Returns whether this factory is applicable for the type of the object. <!-- begin-user-doc
      * --> This implementation returns <code>true</code> if the object is either the model's package
      * or is an instance object of the model. <!-- end-user-doc -->
-     * 
+     *
      * @return whether this factory is applicable for the type of the object.
      * @generated
      */
@@ -65,7 +65,7 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
     /**
      * The switch that delegates to the <code>createXXX</code> methods. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected AbstractsimulationSwitch<Adapter> modelSwitch = new AbstractsimulationSwitch<Adapter>() {
@@ -122,7 +122,7 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates an adapter for the <code>target</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param target
      *            the object to adapt.
      * @return the adapter for the <code>target</code>.
@@ -139,7 +139,7 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
      * <em>Abstract Simulation Configuration</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
      * @generated
@@ -154,7 +154,7 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
      * <em>Random Number Generator Seed</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed
      * @generated
@@ -169,7 +169,7 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
      * <em>EDP2 Datasource</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource
      * @generated
@@ -184,7 +184,7 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
      * <em>Memory Datasource</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource
      * @generated
@@ -199,7 +199,7 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
      * <em>File Datasource</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource
      * @generated
@@ -214,7 +214,7 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
      * <em>Measurement Count Stop Condition</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition
      * @generated
@@ -229,7 +229,7 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
      * <em>Sim Time Stop Condition</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition
      * @generated
@@ -244,7 +244,7 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
      * <em>Stop Condition</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition
      * @generated
@@ -259,7 +259,7 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
      * <em>Tool Configuration</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.ToolConfiguration
      * @generated
@@ -271,7 +271,7 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
     /**
      * Creates a new adapter for the default case. <!-- begin-user-doc --> This default
      * implementation returns null. <!-- end-user-doc -->
-     * 
+     *
      * @return the new adapter.
      * @generated
      */

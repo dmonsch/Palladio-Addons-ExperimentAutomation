@@ -36,7 +36,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
     /**
      * The cached value of the '{@link #getValues() <em>Values</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getValues()
      * @generated
      * @ordered
@@ -45,7 +45,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected SetValueProviderImpl() {
@@ -54,7 +54,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -64,7 +64,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -74,7 +74,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -89,7 +89,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -103,7 +103,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -118,7 +118,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -133,7 +133,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -147,7 +147,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

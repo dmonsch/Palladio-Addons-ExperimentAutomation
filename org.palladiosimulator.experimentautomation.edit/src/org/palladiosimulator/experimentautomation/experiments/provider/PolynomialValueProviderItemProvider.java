@@ -18,14 +18,14 @@ import org.palladiosimulator.experimentautomation.experiments.PolynomialValuePro
  * This is the item provider adapter for a
  * {@link org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider} object.
  * <!-- begin-user-doc --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class PolynomialValueProviderItemProvider extends ValueProviderItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     public PolynomialValueProviderItemProvider(final AdapterFactory adapterFactory) {
@@ -35,7 +35,7 @@ public class PolynomialValueProviderItemProvider extends ValueProviderItemProvid
     /**
      * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -52,7 +52,7 @@ public class PolynomialValueProviderItemProvider extends ValueProviderItemProvid
     /**
      * This adds a property descriptor for the Exponent feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addExponentPropertyDescriptor(final Object object) {
@@ -61,14 +61,14 @@ public class PolynomialValueProviderItemProvider extends ValueProviderItemProvid
                 this.getString("_UI_PolynomialValueProvider_exponent_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_PolynomialValueProvider_exponent_feature",
                         "_UI_PolynomialValueProvider_type"),
-                        ExperimentsPackage.Literals.POLYNOMIAL_VALUE_PROVIDER__EXPONENT, true, false, false,
-                        ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+                ExperimentsPackage.Literals.POLYNOMIAL_VALUE_PROVIDER__EXPONENT, true, false, false,
+                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
      * This adds a property descriptor for the Factor feature. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected void addFactorPropertyDescriptor(final Object object) {
@@ -77,13 +77,13 @@ public class PolynomialValueProviderItemProvider extends ValueProviderItemProvid
                 this.getString("_UI_PolynomialValueProvider_factor_feature"), this.getString(
                         "_UI_PropertyDescriptor_description", "_UI_PolynomialValueProvider_factor_feature",
                         "_UI_PolynomialValueProvider_type"),
-                        ExperimentsPackage.Literals.POLYNOMIAL_VALUE_PROVIDER__FACTOR, true, false, false,
-                        ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+                ExperimentsPackage.Literals.POLYNOMIAL_VALUE_PROVIDER__FACTOR, true, false, false,
+                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
      * This returns PolynomialValueProvider.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -107,7 +107,7 @@ public class PolynomialValueProviderItemProvider extends ValueProviderItemProvid
      * This handles model notifications by calling {@link #updateChildren} to update any cached
      * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
      * . <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -126,7 +126,7 @@ public class PolynomialValueProviderItemProvider extends ValueProviderItemProvid
     /**
      * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that
      * can be created under this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
