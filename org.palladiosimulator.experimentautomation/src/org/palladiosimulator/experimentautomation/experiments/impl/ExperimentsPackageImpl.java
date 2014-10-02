@@ -37,6 +37,7 @@ import org.palladiosimulator.experimentautomation.variation.VariationPackage;
 import org.palladiosimulator.experimentautomation.variation.impl.VariationPackageImpl;
 import org.palladiosimulator.servicelevelobjective.ServicelevelObjectivePackage;
 import org.palladiosimulator.simulizar.pms.PmsPackage;
+import org.scaledl.usageevolution.UsageevolutionPackage;
 
 import de.uka.ipd.sdq.pcm.allocation.AllocationPackage;
 import de.uka.ipd.sdq.pcm.repository.RepositoryPackage;
@@ -258,6 +259,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         // Initialize simple dependencies
         PmsPackage.eINSTANCE.eClass();
         ServicelevelObjectivePackage.eINSTANCE.eClass();
+        UsageevolutionPackage.eINSTANCE.eClass();
 
         // Obtain or create and register interdependencies
         final VariationPackageImpl theVariationPackage = (VariationPackageImpl) (EPackage.Registry.INSTANCE
@@ -901,6 +903,16 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      * @generated
      */
     @Override
+    public EReference getInitialModel_UsageEvolution() {
+        return (EReference) this.initialModelEClass.getEStructuralFeatures().get(10);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
     public EClass getReconfigurationRulesFolder() {
         return this.reconfigurationRulesFolderEClass;
     }
@@ -1055,6 +1067,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         this.createEReference(this.initialModelEClass, INITIAL_MODEL__REPOSITORY);
         this.createEReference(this.initialModelEClass, INITIAL_MODEL__SYSTEM);
         this.createEReference(this.initialModelEClass, INITIAL_MODEL__RESOURCE_ENVIRONMENT);
+        this.createEReference(this.initialModelEClass, INITIAL_MODEL__USAGE_EVOLUTION);
 
         this.reconfigurationRulesFolderEClass = this.createEClass(RECONFIGURATION_RULES_FOLDER);
         this.createEAttribute(this.reconfigurationRulesFolderEClass, RECONFIGURATION_RULES_FOLDER__FOLDER_URI);
@@ -1106,6 +1119,8 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
                 .getEPackage(SystemPackage.eNS_URI);
         final ResourceenvironmentPackage theResourceenvironmentPackage = (ResourceenvironmentPackage) EPackage.Registry.INSTANCE
                 .getEPackage(ResourceenvironmentPackage.eNS_URI);
+        final UsageevolutionPackage theUsageevolutionPackage = (UsageevolutionPackage) EPackage.Registry.INSTANCE
+                .getEPackage(UsageevolutionPackage.eNS_URI);
 
         // Create type parameters
 
@@ -1308,6 +1323,9 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
                 theResourceenvironmentPackage.getResourceEnvironment(), null, "resourceEnvironment", null, 0, 1,
                 InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getInitialModel_UsageEvolution(), theUsageevolutionPackage.getUsageEvolution(), null,
+                "usageEvolution", null, 0, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.reconfigurationRulesFolderEClass, ReconfigurationRulesFolder.class,
                 "ReconfigurationRulesFolder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

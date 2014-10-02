@@ -130,6 +130,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="system" eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//system/System"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="resourceEnvironment"
           eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//resourceenvironment/ResourceEnvironment"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="usageEvolution" eType="ecore:EClass ../../org.scaledl.usageevolution/model/usageevolution.ecore#//UsageEvolution"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ReconfigurationRulesFolder">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="folderUri" lowerBound="1"

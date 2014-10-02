@@ -5,6 +5,7 @@ package org.palladiosimulator.experimentautomation.experiments;
 import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
 import org.palladiosimulator.simulizar.pms.PMSModel;
+import org.scaledl.usageevolution.UsageEvolution;
 
 import de.uka.ipd.sdq.pcm.allocation.Allocation;
 import de.uka.ipd.sdq.pcm.repository.Repository;
@@ -44,6 +45,8 @@ import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
  * <li>
  * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getResourceEnvironment
  * <em>Resource Environment</em>}</li>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getUsageEvolution
+ * <em>Usage Evolution</em>}</li>
  * </ul>
  * </p>
  *
@@ -339,5 +342,33 @@ public interface InitialModel extends EObject {
      * @generated
      */
     void setResourceEnvironment(ResourceEnvironment value);
+
+    /**
+     * Returns the value of the '<em><b>Usage Evolution</b></em>' reference. <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Usage Evolution</em>' reference isn't clear, there really should
+     * be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     *
+     * @return the value of the '<em>Usage Evolution</em>' reference.
+     * @see #setUsageEvolution(UsageEvolution)
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_UsageEvolution()
+     * @model
+     * @generated
+     */
+    UsageEvolution getUsageEvolution();
+
+    /**
+     * Sets the value of the '
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getUsageEvolution
+     * <em>Usage Evolution</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @param value
+     *            the new value of the '<em>Usage Evolution</em>' reference.
+     * @see #getUsageEvolution()
+     * @generated
+     */
+    void setUsageEvolution(UsageEvolution value);
 
 } // InitialModel

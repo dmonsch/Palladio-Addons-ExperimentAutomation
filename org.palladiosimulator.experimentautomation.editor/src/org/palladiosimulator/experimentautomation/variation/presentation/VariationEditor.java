@@ -125,6 +125,7 @@ import org.palladiosimulator.experimentautomation.variation.provider.VariationIt
 import org.palladiosimulator.metricspec.provider.MetricSpecItemProviderAdapterFactory;
 import org.palladiosimulator.servicelevelobjective.provider.ServicelevelObjectiveItemProviderAdapterFactory;
 import org.palladiosimulator.simulizar.pms.provider.PmsItemProviderAdapterFactory;
+import org.scaledl.usageevolution.provider.UsageevolutionItemProviderAdapterFactory;
 
 import de.uka.ipd.sdq.identifier.provider.IdentifierItemProviderAdapterFactory;
 import de.uka.ipd.sdq.pcm.allocation.provider.AllocationItemProviderAdapterFactory;
@@ -149,6 +150,7 @@ import de.uka.ipd.sdq.pcm.usagemodel.provider.UsagemodelItemProviderAdapterFacto
 import de.uka.ipd.sdq.probfunction.provider.ProbfunctionItemProviderAdapterFactory;
 import de.uka.ipd.sdq.stoex.provider.StoexItemProviderAdapterFactory;
 import de.uka.ipd.sdq.units.provider.UnitsItemProviderAdapterFactory;
+import dlim.provider.DlimItemProviderAdapterFactory;
 
 /**
  * This is an example of a Variation model editor. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -671,6 +673,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
         this.adapterFactory.addAdapterFactory(new VariationItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ExperimentsItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new AbstractsimulationItemProviderAdapterFactory());
+        this.adapterFactory.addAdapterFactory(new DlimItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ExperimentDataItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new RepositoryItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new MeasuringpointItemProviderAdapterFactory());
@@ -702,6 +705,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
         this.adapterFactory.addAdapterFactory(new ServicelevelObjectiveItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new StoexItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new UnitsItemProviderAdapterFactory());
+        this.adapterFactory.addAdapterFactory(new UsageevolutionItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
         // Create the command stack that will notify this editor as commands are executed.

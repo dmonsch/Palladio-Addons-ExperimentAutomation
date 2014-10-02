@@ -13,6 +13,7 @@ import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
 import org.palladiosimulator.simulizar.pms.PMSModel;
+import org.scaledl.usageevolution.UsageEvolution;
 
 import de.uka.ipd.sdq.pcm.allocation.Allocation;
 import de.uka.ipd.sdq.pcm.repository.Repository;
@@ -55,6 +56,9 @@ import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
  * <li>
  * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getResourceEnvironment
  * <em>Resource Environment</em>}</li>
+ * <li>
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getUsageEvolution
+ * <em>Usage Evolution</em>}</li>
  * </ul>
  * </p>
  *
@@ -162,6 +166,16 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      * @ordered
      */
     protected ResourceEnvironment resourceEnvironment;
+
+    /**
+     * The cached value of the '{@link #getUsageEvolution() <em>Usage Evolution</em>}' reference.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @see #getUsageEvolution()
+     * @generated
+     * @ordered
+     */
+    protected UsageEvolution usageEvolution;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -641,6 +655,50 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      * @generated
      */
     @Override
+    public UsageEvolution getUsageEvolution() {
+        if (this.usageEvolution != null && this.usageEvolution.eIsProxy()) {
+            final InternalEObject oldUsageEvolution = (InternalEObject) this.usageEvolution;
+            this.usageEvolution = (UsageEvolution) this.eResolveProxy(oldUsageEvolution);
+            if (this.usageEvolution != oldUsageEvolution) {
+                if (this.eNotificationRequired()) {
+                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                            ExperimentsPackage.INITIAL_MODEL__USAGE_EVOLUTION, oldUsageEvolution, this.usageEvolution));
+                }
+            }
+        }
+        return this.usageEvolution;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public UsageEvolution basicGetUsageEvolution() {
+        return this.usageEvolution;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setUsageEvolution(final UsageEvolution newUsageEvolution) {
+        final UsageEvolution oldUsageEvolution = this.usageEvolution;
+        this.usageEvolution = newUsageEvolution;
+        if (this.eNotificationRequired()) {
+            this.eNotify(new ENotificationImpl(this, Notification.SET,
+                    ExperimentsPackage.INITIAL_MODEL__USAGE_EVOLUTION, oldUsageEvolution, this.usageEvolution));
+        }
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL:
@@ -693,6 +751,11 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
                 return this.getResourceEnvironment();
             }
             return this.basicGetResourceEnvironment();
+        case ExperimentsPackage.INITIAL_MODEL__USAGE_EVOLUTION:
+            if (resolve) {
+                return this.getUsageEvolution();
+            }
+            return this.basicGetUsageEvolution();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -734,6 +797,9 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
             return;
         case ExperimentsPackage.INITIAL_MODEL__RESOURCE_ENVIRONMENT:
             this.setResourceEnvironment((ResourceEnvironment) newValue);
+            return;
+        case ExperimentsPackage.INITIAL_MODEL__USAGE_EVOLUTION:
+            this.setUsageEvolution((UsageEvolution) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -777,6 +843,9 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
         case ExperimentsPackage.INITIAL_MODEL__RESOURCE_ENVIRONMENT:
             this.setResourceEnvironment((ResourceEnvironment) null);
             return;
+        case ExperimentsPackage.INITIAL_MODEL__USAGE_EVOLUTION:
+            this.setUsageEvolution((UsageEvolution) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -809,6 +878,8 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
             return this.system != null;
         case ExperimentsPackage.INITIAL_MODEL__RESOURCE_ENVIRONMENT:
             return this.resourceEnvironment != null;
+        case ExperimentsPackage.INITIAL_MODEL__USAGE_EVOLUTION:
+            return this.usageEvolution != null;
         }
         return super.eIsSet(featureID);
     }

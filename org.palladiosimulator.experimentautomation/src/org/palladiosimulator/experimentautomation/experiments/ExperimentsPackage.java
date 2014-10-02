@@ -814,13 +814,22 @@ public interface ExperimentsPackage extends EPackage {
     int INITIAL_MODEL__RESOURCE_ENVIRONMENT = 9;
 
     /**
+     * The feature id for the '<em><b>Usage Evolution</b></em>' reference. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int INITIAL_MODEL__USAGE_EVOLUTION = 10;
+
+    /**
      * The number of structural features of the '<em>Initial Model</em>' class. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int INITIAL_MODEL_FEATURE_COUNT = 10;
+    int INITIAL_MODEL_FEATURE_COUNT = 11;
 
     /**
      * The meta object id for the '
@@ -1603,6 +1612,18 @@ public interface ExperimentsPackage extends EPackage {
     EReference getInitialModel_ResourceEnvironment();
 
     /**
+     * Returns the meta object for the reference '
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getUsageEvolution
+     * <em>Usage Evolution</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for the reference '<em>Usage Evolution</em>'.
+     * @see org.palladiosimulator.experimentautomation.experiments.InitialModel#getUsageEvolution()
+     * @see #getInitialModel()
+     * @generated
+     */
+    EReference getInitialModel_UsageEvolution();
+
+    /**
      * Returns the meta object for class '
      * {@link org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder
      * <em>Reconfiguration Rules Folder</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -2233,6 +2254,14 @@ public interface ExperimentsPackage extends EPackage {
          * @generated
          */
         EReference INITIAL_MODEL__RESOURCE_ENVIRONMENT = eINSTANCE.getInitialModel_ResourceEnvironment();
+
+        /**
+         * The meta object literal for the '<em><b>Usage Evolution</b></em>' reference feature. <!--
+         * begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @generated
+         */
+        EReference INITIAL_MODEL__USAGE_EVOLUTION = eINSTANCE.getInitialModel_UsageEvolution();
 
         /**
          * The meta object literal for the '

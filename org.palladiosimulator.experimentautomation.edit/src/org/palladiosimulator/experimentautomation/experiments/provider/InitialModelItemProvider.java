@@ -59,6 +59,7 @@ public class InitialModelItemProvider extends ItemProviderAdapter implements IEd
             this.addRepositoryPropertyDescriptor(object);
             this.addSystemPropertyDescriptor(object);
             this.addResourceEnvironmentPropertyDescriptor(object);
+            this.addUsageEvolutionPropertyDescriptor(object);
         }
         return this.itemPropertyDescriptors;
     }
@@ -212,6 +213,21 @@ public class InitialModelItemProvider extends ItemProviderAdapter implements IEd
                         "_UI_PropertyDescriptor_description", "_UI_InitialModel_resourceEnvironment_feature",
                         "_UI_InitialModel_type"), ExperimentsPackage.Literals.INITIAL_MODEL__RESOURCE_ENVIRONMENT,
                 true, false, true, null, null, null));
+    }
+
+    /**
+     * This adds a property descriptor for the Usage Evolution feature. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     */
+    protected void addUsageEvolutionPropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_InitialModel_usageEvolution_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_InitialModel_usageEvolution_feature",
+                        "_UI_InitialModel_type"), ExperimentsPackage.Literals.INITIAL_MODEL__USAGE_EVOLUTION, true,
+                false, true, null, null, null));
     }
 
     /**

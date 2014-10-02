@@ -14,6 +14,8 @@ Export-Package: org.palladiosimulator.experimentautomation.abstractsimulation.pr
 Require-Bundle: org.eclipse.core.runtime;bundle-version="3.10.0",
  org.palladiosimulator.experimentautomation;bundle-version="1.0.0";visibility:=reexport,
  org.eclipse.emf.edit;bundle-version="2.10.0";visibility:=reexport,
+ dlim.generator;visibility:=reexport,
+ dlim.generator.edit;visibility:=reexport,
  org.palladiosimulator.edp2;bundle-version="2.0.0";visibility:=reexport,
  org.palladiosimulator.edp2.edit;bundle-version="1.0.0";visibility:=reexport,
  de.uka.ipd.sdq.identifier;bundle-version="2.1.0";visibility:=reexport,
@@ -32,5 +34,7 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="3.10.0",
  de.uka.ipd.sdq.stoex.edit;bundle-version="2.2.0";visibility:=reexport,
  de.uka.ipd.sdq.units;bundle-version="2.1.0";visibility:=reexport,
  de.uka.ipd.sdq.units.edit;bundle-version="2.1.0";visibility:=reexport,
+ org.scaledl.usageevolution;visibility:=reexport,
+ org.scaledl.usageevolution.edit;visibility:=reexport,
  org.eclipse.uml2.common.edit;bundle-version="2.0.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy

@@ -19,6 +19,7 @@ import org.palladiosimulator.experimentautomation.variation.VariationRepository;
 import org.palladiosimulator.experimentautomation.variation.VariationType;
 import org.palladiosimulator.servicelevelobjective.ServicelevelObjectivePackage;
 import org.palladiosimulator.simulizar.pms.PmsPackage;
+import org.scaledl.usageevolution.UsageevolutionPackage;
 
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
 
@@ -110,6 +111,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
         // Initialize simple dependencies
         PmsPackage.eINSTANCE.eClass();
         ServicelevelObjectivePackage.eINSTANCE.eClass();
+        UsageevolutionPackage.eINSTANCE.eClass();
 
         // Obtain or create and register interdependencies
         final ExperimentsPackageImpl theExperimentsPackage = (ExperimentsPackageImpl) (EPackage.Registry.INSTANCE
