@@ -32,7 +32,7 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="3.10.0",
  org.palladiosimulator.recorderframework;bundle-version="2.0.1",
  org.palladiosimulator.edp2.visualization;bundle-version="1.0.0",
  org.eclipse.emf.emfstore.common,
- eu.cloudscaleproject.env.architecturaltemplate.completion.jobs
+ org.scaledl.architecturaltemplates.completion.jobs
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.palladiosimulator.experimentautomation.application,
  org.palladiosimulator.experimentautomation.application.jobs,
