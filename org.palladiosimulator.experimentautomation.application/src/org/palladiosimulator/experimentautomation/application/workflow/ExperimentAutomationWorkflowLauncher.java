@@ -54,7 +54,7 @@ public class ExperimentAutomationWorkflowLauncher extends
                 Level.DEBUG == logLevel ? DETAILED_LOG_PATTERN : SHORT_LOG_PATTERN));
         loggerList.add(setupLogger("de.uka.ipd.sdq.statistics", logLevel,
                 Level.DEBUG == logLevel ? DETAILED_LOG_PATTERN : SHORT_LOG_PATTERN));
-        loggerList.add(setupLogger("eu.cloudscaleproject.env.architecturaltemplate", logLevel,
+        loggerList.add(setupLogger("org.scaledl.architecturaltemplates", logLevel,
                 Level.DEBUG == logLevel ? DETAILED_LOG_PATTERN : SHORT_LOG_PATTERN));
         loggerList.add(setupLogger("org.palladiosimulator.experimentautomation", logLevel,
                 Level.DEBUG == logLevel ? DETAILED_LOG_PATTERN : SHORT_LOG_PATTERN));
