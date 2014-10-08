@@ -2,13 +2,13 @@ package org.palladiosimulator.experimentautomation.application.jobs;
 
 import org.palladiosimulator.experimentautomation.application.config.ExperimentAutomationConfiguration;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
+import org.scaledl.architecturaltemplates.completion.config.ATConfiguration;
+import org.scaledl.architecturaltemplates.completion.jobs.RunATJob;
 
 import de.uka.ipd.sdq.codegen.simucontroller.debug.IDebugListener;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 import de.uka.ipd.sdq.workflow.pcm.jobs.PreparePCMBlackboardPartionJob;
-import eu.cloudscaleproject.env.architecturaltemplate.completion.config.ATConfiguration;
-import eu.cloudscaleproject.env.architecturaltemplate.completion.jobs.RunATJob;
 
 /**
  * This job conducts a series of experiments. Each experiment has its own initial set of Palladio
