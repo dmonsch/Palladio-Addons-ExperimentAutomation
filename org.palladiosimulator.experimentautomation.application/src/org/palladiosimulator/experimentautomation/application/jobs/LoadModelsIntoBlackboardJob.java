@@ -10,13 +10,13 @@ import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadPMSModelIntoBlackboardJob;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadSDMModelsIntoBlackboardJob;
 import org.palladiosimulator.simulizar.launcher.partitions.PMSResourceSetPartition;
 import org.palladiosimulator.simulizar.launcher.partitions.SDMResourceSetPartition;
-import org.palladiosimulator.simulizar.pms.PMSModel;
 
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
@@ -27,20 +27,20 @@ import de.uka.ipd.sdq.workflow.pcm.blackboard.PCMResourceSetPartition;
 import de.uka.ipd.sdq.workflow.pcm.jobs.LoadPCMModelsIntoBlackboardJob;
 
 /**
- * Loads the PCM models given in the configuration into an MDSD blackboard. Uses the initial model
- * of Experiment Automation to receive the referred PCM models.
- *
- * TODO Copy model before putting it into blackboard [Lehrig]
- *
+ * Loads all needed source PCM models into the PCM blackboard partition. Uses the initial model of
+ * Experiment Automation to receive the referred PCM models. These PCM models may be uncompleted,
+ * i.e., no AT completion was executed yet. Therefore, such models require stereotypes that
+ * reference AT models. These AT models can be used to execute AT completions.
+ * 
  * @author Sebastian Lehrig
  */
-public class LoadPCMModelsForExperimentAutomationJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
+public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
 
-    private static final Logger LOGGER = Logger.getLogger(LoadPCMModelsForExperimentAutomationJob.class);
+    private static final Logger LOGGER = Logger.getLogger(LoadModelsIntoBlackboardJob.class);
 
     private final InitialModel initialModel;
 
-    public LoadPCMModelsForExperimentAutomationJob(final InitialModel initialModel) {
+    public LoadModelsIntoBlackboardJob(final InitialModel initialModel) {
         super(false);
         this.initialModel = initialModel;
     }
@@ -53,8 +53,11 @@ public class LoadPCMModelsForExperimentAutomationJob extends SequentialBlackboar
         if (LOGGER.isEnabledFor(Level.INFO)) {
             LOGGER.info("Loading PCM models");
         }
-        pcmPartition.loadModel(this.initialModel.getAllocation().eResource().getURI());
-        pcmPartition.loadModel(this.initialModel.getUsageModel().eResource().getURI());
+        loadIfExisting(pcmPartition, this.initialModel.getRepository());
+        loadIfExisting(pcmPartition, this.initialModel.getSystem());
+        loadIfExisting(pcmPartition, this.initialModel.getResourceEnvironment());
+        loadIfExisting(pcmPartition, this.initialModel.getAllocation());
+        loadIfExisting(pcmPartition, this.initialModel.getUsageModel());
         pcmPartition.resolveAllProxies();
 
         // load the middleware completion
@@ -63,7 +66,7 @@ public class LoadPCMModelsForExperimentAutomationJob extends SequentialBlackboar
         if (LOGGER.isEnabledFor(Level.INFO)) {
             LOGGER.info("Loading middleware completion models");
         }
-        middlewarePartition.loadModel(this.initialModel.getMiddlewareRepository().eResource().getURI());
+        loadIfExisting(middlewarePartition, this.initialModel.getMiddlewareRepository());
         middlewarePartition.resolveAllProxies();
 
         // load the event middleware repository
@@ -72,22 +75,24 @@ public class LoadPCMModelsForExperimentAutomationJob extends SequentialBlackboar
         if (LOGGER.isEnabledFor(Level.INFO)) {
             LOGGER.info("Loading event middleware models");
         }
-        eventMiddlewarePartition.loadModel(this.initialModel.getEventMiddleWareRepository().eResource().getURI());
+        loadIfExisting(eventMiddlewarePartition, this.initialModel.getEventMiddleWareRepository());
         eventMiddlewarePartition.resolveAllProxies();
 
         // configure partition & load PMS model
         final PMSResourceSetPartition pmsPartition = new PMSResourceSetPartition((PCMResourceSetPartition) pcmPartition);
-        final PMSModel pmsModel = this.initialModel.getPlatformMonitoringSpecification();
-        if (pmsModel != null) {
-            pmsPartition.loadModel(pmsModel.eResource().getURI());
-        }
         this.getBlackboard().addPartition(LoadPMSModelIntoBlackboardJob.PMS_MODEL_PARTITION_ID, pmsPartition);
+        if (LOGGER.isEnabledFor(Level.INFO)) {
+            LOGGER.info("Loading PMS model");
+        }
+        loadIfExisting(pmsPartition, this.initialModel.getPlatformMonitoringSpecification());
         pmsPartition.resolveAllProxies();
 
         // configure partition & load SDM models
         final SDMResourceSetPartition sdmPartition = new SDMResourceSetPartition();
         final ReconfigurationRulesFolder reconfigurationRulesFolder = this.initialModel.getReconfigurationRules();
-
+        if (LOGGER.isEnabledFor(Level.INFO)) {
+            LOGGER.info("Loading reconfigurations");
+        }
         this.getBlackboard().addPartition(LoadSDMModelsIntoBlackboardJob.SDM_MODEL_PARTITION_ID, sdmPartition);
         if (reconfigurationRulesFolder != null) {
 
@@ -131,11 +136,17 @@ public class LoadPCMModelsForExperimentAutomationJob extends SequentialBlackboar
         }
     }
 
+    private static void loadIfExisting(final ResourceSetPartition resourceSetPartition, final EObject eObject) {
+        if (eObject != null) {
+            resourceSetPartition.loadModel(eObject.eResource().getURI());
+        }
+    }
+
     /**
      * {@inheritDoc}
      */
     @Override
     public String getName() {
-        return "Perform PCM Model Load";
+        return "Perform AT PCM Model Load";
     }
 }
