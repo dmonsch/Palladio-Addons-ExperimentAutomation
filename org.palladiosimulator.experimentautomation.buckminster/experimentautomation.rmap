@@ -3,7 +3,8 @@
   <rm:locator searchPathRef="ExperimentAutomation" failOnError="false"/>
   <rm:locator searchPathRef="StoryDiagrams" failOnError="false" pattern="^org\.storydriven\..*" />
   <rm:locator searchPathRef="StoryDiagrams" failOnError="false" pattern="^de\.mdelab\..*" />
-  <rm:locator searchPathRef="StoryDiagrams" failOnError="false" pattern="^de\.upb\.swt\.core.*" />
+  <rm:locator searchPathRef="StoryDiagrams" failOnError="false" pattern="^de\.upb\.swt\.core.*" />  
+  <rm:locator searchPathRef="ArchitecturalTemplates" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\..*" searchPathRef="RecorderFramework" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\.metricspec.*" searchPathRef="metricspec" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\.servicelevelobjective.*" searchPathRef="ServiceLevelObjectives" failOnError="false"/>
@@ -33,6 +34,13 @@
       <rm:uri format="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/Palladio/Incubation/ExperimentAutomation/trunk/{0}">
         <bc:propertyRef key="buckminster.component"/>
       </rm:uri>
+    </rm:provider>
+  </rm:searchPath> 
+  <rm:searchPath name="ArchitecturalTemplates">
+    <rm:provider componentTypes="osgi.bundle,eclipse.feature,buckminster" readerType="p2" source="false" mutable="false">
+      <rm:property key="buckminster.source" value="false"/>
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="http://cloudscale.xlab.si/cse/updatesites/architecturaltemplates/nightly/"/>
     </rm:provider>
   </rm:searchPath>
   <rm:searchPath name="RecorderFramework">

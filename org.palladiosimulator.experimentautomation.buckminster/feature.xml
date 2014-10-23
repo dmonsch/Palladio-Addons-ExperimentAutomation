@@ -10,6 +10,7 @@
       <discovery label="Palladio Workflow Engine" url="http://sdqweb.ipd.kit.edu/eclipse/workflowengine/nightly"/>
       <discovery label="SimuLizar" url="https://sdqweb.ipd.kit.edu/eclipse/simulizar/nightly"/>
       <discovery label="StoryDiagrams" url="http://sdqweb.ipd.kit.edu/eclipse/storydiagraminterpreter/nightly/"/>
+      <discovery label="Architectural Templates" url="http://cloudscale.xlab.si/cse/updatesites/architecturaltemplates/nightly/"/>
       <discovery label="Palladio Recorder Framework" url="http://sdqweb.ipd.kit.edu/eclipse/recorderframework/nightly/"/>
       <discovery label="Palladio Probe Framework" url="http://sdqweb.ipd.kit.edu/eclipse/probeframework/nightly/"/>
       <discovery label="Palladio Service Level Objectives" url="http://sdqweb.ipd.kit.edu/eclipse/servicelevelobjectives/nightly/"/>
