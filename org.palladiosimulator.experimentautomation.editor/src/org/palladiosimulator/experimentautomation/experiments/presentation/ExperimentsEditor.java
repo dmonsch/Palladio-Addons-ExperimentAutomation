@@ -128,6 +128,7 @@ import org.palladiosimulator.servicelevelobjective.provider.ServicelevelObjectiv
 import org.palladiosimulator.simulizar.pms.provider.PmsItemProviderAdapterFactory;
 import org.scaledl.usageevolution.provider.UsageevolutionItemProviderAdapterFactory;
 
+import tools.descartes.dlim.provider.DlimItemProviderAdapterFactory;
 import de.uka.ipd.sdq.identifier.provider.IdentifierItemProviderAdapterFactory;
 import de.uka.ipd.sdq.pcm.allocation.provider.AllocationItemProviderAdapterFactory;
 import de.uka.ipd.sdq.pcm.core.composition.provider.CompositionItemProviderAdapterFactory;
@@ -151,7 +152,6 @@ import de.uka.ipd.sdq.pcm.usagemodel.provider.UsagemodelItemProviderAdapterFacto
 import de.uka.ipd.sdq.probfunction.provider.ProbfunctionItemProviderAdapterFactory;
 import de.uka.ipd.sdq.stoex.provider.StoexItemProviderAdapterFactory;
 import de.uka.ipd.sdq.units.provider.UnitsItemProviderAdapterFactory;
-import dlim.provider.DlimItemProviderAdapterFactory;
 
 /**
  * This is an example of a Experiments model editor. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -159,7 +159,7 @@ import dlim.provider.DlimItemProviderAdapterFactory;
  * @generated
  */
 public class ExperimentsEditor extends MultiPageEditorPart implements IEditingDomainProvider, ISelectionProvider,
-IMenuListener, IViewerProvider, IGotoMarker {
+        IMenuListener, IViewerProvider, IGotoMarker {
     /**
      * This keeps track of the editing domain that is used to track all changes to the model. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -596,9 +596,8 @@ IMenuListener, IViewerProvider, IGotoMarker {
     protected void updateProblemIndication() {
         if (this.updateProblemIndication) {
             final BasicDiagnostic diagnostic = new BasicDiagnostic(Diagnostic.OK,
-                    "org.palladiosimulator.experimentautomation.editor", 0, null, new Object[] {
-                    this.editingDomain.getResourceSet()
-            });
+                    "org.palladiosimulator.experimentautomation.editor", 0, null,
+                    new Object[] { this.editingDomain.getResourceSet() });
             for (final Diagnostic childDiagnostic : this.resourceToDiagnosticMap.values()) {
                 if (childDiagnostic.getSeverity() != Diagnostic.OK) {
                     diagnostic.add(childDiagnostic);
@@ -686,7 +685,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
         this.adapterFactory.addAdapterFactory(new CompositionItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new UsagemodelItemProviderAdapterFactory());
         this.adapterFactory
-        .addAdapterFactory(new de.uka.ipd.sdq.pcm.repository.provider.RepositoryItemProviderAdapterFactory());
+                .addAdapterFactory(new de.uka.ipd.sdq.pcm.repository.provider.RepositoryItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ResourcetypeItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ProtocolItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ParameterItemProviderAdapterFactory());
@@ -947,9 +946,8 @@ IMenuListener, IViewerProvider, IGotoMarker {
         this.getSite().registerContextMenu(contextMenu, new UnwrappingSelectionProvider(viewer));
 
         final int dndOperations = DND.DROP_COPY | DND.DROP_MOVE | DND.DROP_LINK;
-        final Transfer[] transfers = new Transfer[] {
-                LocalTransfer.getInstance(), LocalSelectionTransfer.getTransfer(), FileTransfer.getInstance()
-        };
+        final Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(),
+                LocalSelectionTransfer.getTransfer(), FileTransfer.getInstance() };
         viewer.addDragSupport(dndOperations, transfers, new ViewerDragAdapter(viewer));
         viewer.addDropSupport(dndOperations, transfers, new EditingDomainViewerDropAdapter(this.editingDomain, viewer));
     }
@@ -990,16 +988,12 @@ IMenuListener, IViewerProvider, IGotoMarker {
         if (!resource.getErrors().isEmpty() || !resource.getWarnings().isEmpty()) {
             final BasicDiagnostic basicDiagnostic = new BasicDiagnostic(Diagnostic.ERROR,
                     "org.palladiosimulator.experimentautomation.editor", 0, getString("_UI_CreateModelError_message",
-                            resource.getURI()), new Object[] {
-                exception == null ? (Object) resource : exception
-            });
+                            resource.getURI()), new Object[] { exception == null ? (Object) resource : exception });
             basicDiagnostic.merge(EcoreUtil.computeDiagnostic(resource, true));
             return basicDiagnostic;
         } else if (exception != null) {
             return new BasicDiagnostic(Diagnostic.ERROR, "org.palladiosimulator.experimentautomation.editor", 0,
-                    getString("_UI_CreateModelError_message", resource.getURI()), new Object[] {
-                exception
-            });
+                    getString("_UI_CreateModelError_message", resource.getURI()), new Object[] { exception });
         } else {
             return Diagnostic.OK_INSTANCE;
         }
@@ -1170,9 +1164,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
                 selfColumn.setText(getString("_UI_SelfColumn_label"));
                 selfColumn.setResizable(true);
 
-                this.tableViewer.setColumnProperties(new String[] {
-                        "a", "b"
-                });
+                this.tableViewer.setColumnProperties(new String[] { "a", "b" });
                 this.tableViewer.setContentProvider(new AdapterFactoryContentProvider(this.adapterFactory));
                 this.tableViewer.setLabelProvider(new AdapterFactoryLabelProvider(this.adapterFactory));
 
@@ -1215,9 +1207,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
                 selfColumn.setResizable(true);
                 selfColumn.setWidth(200);
 
-                this.treeViewerWithColumns.setColumnProperties(new String[] {
-                        "a", "b"
-                });
+                this.treeViewerWithColumns.setColumnProperties(new String[] { "a", "b" });
                 this.treeViewerWithColumns.setContentProvider(new AdapterFactoryContentProvider(this.adapterFactory));
                 this.treeViewerWithColumns.setLabelProvider(new AdapterFactoryLabelProvider(this.adapterFactory));
 
@@ -1597,7 +1587,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
         this.setPartName(editorInput.getName());
         final IProgressMonitor progressMonitor = this.getActionBars().getStatusLineManager() != null ? this
                 .getActionBars().getStatusLineManager().getProgressMonitor() : new NullProgressMonitor();
-                this.doSave(progressMonitor);
+        this.doSave(progressMonitor);
     }
 
     /**
@@ -1746,9 +1736,7 @@ IMenuListener, IViewerProvider, IGotoMarker {
      * @generated
      */
     private static String getString(final String key, final Object s1) {
-        return ExperimentAutomationEditorPlugin.INSTANCE.getString(key, new Object[] {
-                s1
-        });
+        return ExperimentAutomationEditorPlugin.INSTANCE.getString(key, new Object[] { s1 });
     }
 
     /**

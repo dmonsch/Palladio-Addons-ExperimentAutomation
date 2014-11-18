@@ -62,7 +62,7 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
 
         // load the middleware completion
         final ResourceSetPartition middlewarePartition = this.getBlackboard().getPartition(
-                LoadPCMModelsIntoBlackboardJob.MIDDLEWARE_PARTITION_ID);
+                LoadPCMModelsIntoBlackboardJob.RMI_MIDDLEWARE_PARTITION_ID);
         if (LOGGER.isEnabledFor(Level.INFO)) {
             LOGGER.info("Loading middleware completion models");
         }
