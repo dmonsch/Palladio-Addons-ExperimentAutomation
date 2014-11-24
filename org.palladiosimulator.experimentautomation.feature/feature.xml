@@ -26,6 +26,7 @@
       <import plugin="de.uka.ipd.sdq.pcm" version="3.6.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.simulizar.pms" version="2.0.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.probfunction" version="2.1.0" match="greaterOrEqual"/>
+      <import plugin="org.palladiosimulator.servicelevelobjective"/>
       <import plugin="de.uka.ipd.sdq.stoex" version="2.2.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.units" version="2.1.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.edp2" version="2.0.0" match="greaterOrEqual"/>
@@ -40,6 +41,7 @@
       <import plugin="de.uka.ipd.sdq.pcm.edit" version="3.6.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.simulizar.pms.edit" version="2.0.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.probfunction.edit" version="2.1.0" match="greaterOrEqual"/>
+      <import plugin="org.palladiosimulator.servicelevelobjective.edit"/>
       <import plugin="de.uka.ipd.sdq.stoex.edit" version="2.2.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.units.edit" version="2.1.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.uml2.common.edit" version="2.0.0" match="greaterOrEqual"/>
@@ -47,8 +49,10 @@
       <import plugin="org.palladiosimulator.experimentautomation.edit" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.edit.ui" version="2.10.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui.ide" version="3.10.0" match="greaterOrEqual"/>
-      <import plugin="org.palladiosimulator.servicelevelobjective"/>
-      <import plugin="org.palladiosimulator.servicelevelobjective.edit"/>
+      <import plugin="dlim.generator"/>
+      <import plugin="org.scaledl.usageevolution"/>
+      <import plugin="org.scaledl.usageevolution.edit"/>
+      <import plugin="tools.descartes.dlim.generator.edit" version="0.14.10" match="greaterOrEqual"/>
    </requires>
 
    <plugin
