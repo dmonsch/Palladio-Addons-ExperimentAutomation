@@ -18,7 +18,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.StopConditi
 public abstract class StopConditionImpl extends EObjectImpl implements StopCondition {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected StopConditionImpl() {
@@ -27,7 +27,7 @@ public abstract class StopConditionImpl extends EObjectImpl implements StopCondi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

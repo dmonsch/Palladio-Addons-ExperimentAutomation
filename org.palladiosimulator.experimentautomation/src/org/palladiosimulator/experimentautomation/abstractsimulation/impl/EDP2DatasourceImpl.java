@@ -27,7 +27,7 @@ public abstract class EDP2DatasourceImpl extends EObjectImpl implements EDP2Data
     /**
      * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #getId()
      * @generated
      * @ordered
@@ -37,7 +37,7 @@ public abstract class EDP2DatasourceImpl extends EObjectImpl implements EDP2Data
     /**
      * The cached value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #getId()
      * @generated
      * @ordered
@@ -46,7 +46,7 @@ public abstract class EDP2DatasourceImpl extends EObjectImpl implements EDP2Data
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected EDP2DatasourceImpl() {
@@ -55,7 +55,7 @@ public abstract class EDP2DatasourceImpl extends EObjectImpl implements EDP2Data
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -65,7 +65,7 @@ public abstract class EDP2DatasourceImpl extends EObjectImpl implements EDP2Data
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -75,7 +75,7 @@ public abstract class EDP2DatasourceImpl extends EObjectImpl implements EDP2Data
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -90,7 +90,7 @@ public abstract class EDP2DatasourceImpl extends EObjectImpl implements EDP2Data
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -104,7 +104,7 @@ public abstract class EDP2DatasourceImpl extends EObjectImpl implements EDP2Data
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -119,7 +119,7 @@ public abstract class EDP2DatasourceImpl extends EObjectImpl implements EDP2Data
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -134,7 +134,7 @@ public abstract class EDP2DatasourceImpl extends EObjectImpl implements EDP2Data
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -148,7 +148,7 @@ public abstract class EDP2DatasourceImpl extends EObjectImpl implements EDP2Data
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

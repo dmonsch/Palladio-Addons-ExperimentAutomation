@@ -13,7 +13,7 @@
   <models xmi:type="ecore:EPackage" href="platform:/resource/org.palladiosimulator.servicelevelobjective/model/servicelevelobjective.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/resource/org.scaledl.usageevolution/model/usageevolution.ecore#/"/>
-  <models xmi:type="ecore:EPackage" href="platform:/plugin/dlim.generator/src/dlim/model/dlim.ecore#/"/>
+  <models xmi:type="ecore:EPackage" href="platform:/plugin/tools.descartes.tools.descartes.dlim.generator/src/tools/descartes/dlim/model/dlim.ecore#/"/>
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_nrKW4AhEEeS9D9QV2TNBhg" initialized="true">
     <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_ntkxsAhEEeS9D9QV2TNBhg" name="experimentautomation class diagram">
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_ntkxtghEEeS9D9QV2TNBhg" source="GMF_DIAGRAMS">

@@ -27,7 +27,7 @@ public interface JMXMeasurement extends ResponseMeasurement {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Polling Period</em>' attribute.
      * @see #setPollingPeriod(Integer)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getJMXMeasurement_PollingPeriod()
@@ -40,7 +40,7 @@ public interface JMXMeasurement extends ResponseMeasurement {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.JMXMeasurement#getPollingPeriod
      * <em>Polling Period</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Polling Period</em>' attribute.
      * @see #getPollingPeriod()
