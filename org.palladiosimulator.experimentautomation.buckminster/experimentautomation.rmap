@@ -25,7 +25,7 @@
   <rm:locator pattern="^org\.apache\..*" searchPathRef="thirdparty" failOnError="false"/>
   <rm:locator pattern="^org\.hibernate.*" searchPathRef="thirdparty" failOnError="false"/>
   <rm:locator pattern="^org\.scaledl\.usageevolution.*" searchPathRef="UsageEvolution" failOnError="false"/>
-  <rm:locator pattern="^dlim.*" searchPathRef="Limbo" failOnError="false"/>
+  <rm:locator pattern="^tools.descartes.dlim.*" searchPathRef="Limbo" failOnError="false"/>
   <rm:locator searchPathRef="MDSDProfiles" failOnError="false"/>
   <rm:locator searchPathRef="eclipse-release" failOnError="false"/>
   <rm:locator searchPathRef="orbit" failOnError="false"/>
