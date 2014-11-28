@@ -15,8 +15,10 @@ import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadPMSModelIntoBlackboardJob;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadSDMModelsIntoBlackboardJob;
+import org.palladiosimulator.simulizar.launcher.jobs.LoadUEModelIntoBlackboardJob;
 import org.palladiosimulator.simulizar.launcher.partitions.PMSResourceSetPartition;
 import org.palladiosimulator.simulizar.launcher.partitions.SDMResourceSetPartition;
+import org.palladiosimulator.simulizar.launcher.partitions.UEResourceSetPartition;
 
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
@@ -86,6 +88,15 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
         }
         loadIfExisting(pmsPartition, this.initialModel.getPlatformMonitoringSpecification());
         pmsPartition.resolveAllProxies();
+
+        // configure partition & load Usage Evolution model
+        final UEResourceSetPartition uePartition = new UEResourceSetPartition((PCMResourceSetPartition) pcmPartition);
+        this.getBlackboard().addPartition(LoadUEModelIntoBlackboardJob.UE_MODEL_PARTITION_ID, uePartition);
+        if (LOGGER.isEnabledFor(Level.INFO)) {
+            LOGGER.info("Loading Usage Evolution model");
+        }
+        loadIfExisting(uePartition, this.initialModel.getUsageEvolution());
+        uePartition.resolveAllProxies();
 
         // configure partition & load SDM models
         final SDMResourceSetPartition sdmPartition = new SDMResourceSetPartition();
