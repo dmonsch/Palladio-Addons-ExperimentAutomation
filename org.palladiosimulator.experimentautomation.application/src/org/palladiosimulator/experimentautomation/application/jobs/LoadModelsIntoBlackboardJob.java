@@ -114,7 +114,7 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
                             .loadModel(URI.createFileURI(file.getPath()));
                 }
             } else {
-                LOGGER.warn("No SDM models found, SD reconfigurations disabled.");
+                LOGGER.info("No SDM models found, SD reconfigurations disabled.");
             }
         }
     }
