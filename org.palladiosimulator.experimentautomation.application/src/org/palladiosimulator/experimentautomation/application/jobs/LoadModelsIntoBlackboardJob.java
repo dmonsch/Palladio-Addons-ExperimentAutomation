@@ -4,6 +4,9 @@ import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -16,16 +19,12 @@ import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRul
 import org.palladiosimulator.simulizar.launcher.jobs.LoadPMSModelIntoBlackboardJob;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadSDMModelsIntoBlackboardJob;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadUEModelIntoBlackboardJob;
-import org.palladiosimulator.simulizar.launcher.partitions.PMSResourceSetPartition;
-import org.palladiosimulator.simulizar.launcher.partitions.SDMResourceSetPartition;
-import org.palladiosimulator.simulizar.launcher.partitions.UEResourceSetPartition;
 
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.jobs.UserCanceledException;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.ResourceSetPartition;
-import de.uka.ipd.sdq.workflow.pcm.blackboard.PCMResourceSetPartition;
 import de.uka.ipd.sdq.workflow.pcm.jobs.LoadPCMModelsIntoBlackboardJob;
 
 /**
@@ -49,64 +48,36 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
 
     @Override
     public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
-        // Load the PCM model itself
-        final ResourceSetPartition pcmPartition = this.getBlackboard().getPartition(
-                LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID);
-        if (LOGGER.isEnabledFor(Level.INFO)) {
-            LOGGER.info("Loading PCM models");
-        }
-        loadIfExisting(pcmPartition, this.initialModel.getRepository());
-        loadIfExisting(pcmPartition, this.initialModel.getSystem());
-        loadIfExisting(pcmPartition, this.initialModel.getResourceEnvironment());
-        loadIfExisting(pcmPartition, this.initialModel.getAllocation());
-        loadIfExisting(pcmPartition, this.initialModel.getUsageModel());
-        pcmPartition.resolveAllProxies();
+        // Load the PCM models
+        List<EObject> pcmModels = new ArrayList<EObject>();
+        pcmModels.add(this.initialModel.getRepository());
+        pcmModels.add(this.initialModel.getSystem());
+        pcmModels.add(this.initialModel.getResourceEnvironment());
+        pcmModels.add(this.initialModel.getAllocation());
+        pcmModels.add(this.initialModel.getUsageModel());
+        loadIntoBlackboard(LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID, pcmModels);
 
         // load the middleware completion
-        final ResourceSetPartition middlewarePartition = this.getBlackboard().getPartition(
-                LoadPCMModelsIntoBlackboardJob.RMI_MIDDLEWARE_PARTITION_ID);
-        if (LOGGER.isEnabledFor(Level.INFO)) {
-            LOGGER.info("Loading middleware completion models");
-        }
-        loadIfExisting(middlewarePartition, this.initialModel.getMiddlewareRepository());
-        middlewarePartition.resolveAllProxies();
+        loadIntoBlackboard(LoadPCMModelsIntoBlackboardJob.RMI_MIDDLEWARE_PARTITION_ID,
+                this.initialModel.getMiddlewareRepository());
 
         // load the event middleware repository
-        final ResourceSetPartition eventMiddlewarePartition = this.getBlackboard().getPartition(
-                LoadPCMModelsIntoBlackboardJob.EVENT_MIDDLEWARE_PARTITION_ID);
-        if (LOGGER.isEnabledFor(Level.INFO)) {
-            LOGGER.info("Loading event middleware models");
-        }
-        loadIfExisting(eventMiddlewarePartition, this.initialModel.getEventMiddleWareRepository());
-        eventMiddlewarePartition.resolveAllProxies();
+        loadIntoBlackboard(LoadPCMModelsIntoBlackboardJob.EVENT_MIDDLEWARE_PARTITION_ID,
+                this.initialModel.getEventMiddleWareRepository());
 
-        // configure partition & load PMS model
-        final PMSResourceSetPartition pmsPartition = new PMSResourceSetPartition((PCMResourceSetPartition) pcmPartition);
-        this.getBlackboard().addPartition(LoadPMSModelIntoBlackboardJob.PMS_MODEL_PARTITION_ID, pmsPartition);
-        if (LOGGER.isEnabledFor(Level.INFO)) {
-            LOGGER.info("Loading PMS model");
-        }
-        loadIfExisting(pmsPartition, this.initialModel.getPlatformMonitoringSpecification());
-        pmsPartition.resolveAllProxies();
+        // load PMS model
+        loadIntoBlackboard(LoadPMSModelIntoBlackboardJob.PMS_MODEL_PARTITION_ID,
+                this.initialModel.getPlatformMonitoringSpecification());
 
-        // configure partition & load Usage Evolution model
-        final UEResourceSetPartition uePartition = new UEResourceSetPartition((PCMResourceSetPartition) pcmPartition);
-        this.getBlackboard().addPartition(LoadUEModelIntoBlackboardJob.UE_MODEL_PARTITION_ID, uePartition);
-        if (LOGGER.isEnabledFor(Level.INFO)) {
-            LOGGER.info("Loading Usage Evolution model");
-        }
-        loadIfExisting(uePartition, this.initialModel.getUsageEvolution());
-        uePartition.resolveAllProxies();
+        // load Usage Evolution model
+        loadIntoBlackboard(LoadUEModelIntoBlackboardJob.UE_MODEL_PARTITION_ID, this.initialModel.getUsageEvolution());
 
-        // configure partition & load SDM models
-        final SDMResourceSetPartition sdmPartition = new SDMResourceSetPartition();
+        // load SDM models
         final ReconfigurationRulesFolder reconfigurationRulesFolder = this.initialModel.getReconfigurationRules();
-        if (LOGGER.isEnabledFor(Level.INFO)) {
-            LOGGER.info("Loading reconfigurations");
-        }
-        this.getBlackboard().addPartition(LoadSDMModelsIntoBlackboardJob.SDM_MODEL_PARTITION_ID, sdmPartition);
         if (reconfigurationRulesFolder != null) {
-
+            if (LOGGER.isEnabledFor(Level.INFO)) {
+                LOGGER.info("Loading reconfigurations");
+            }
             // add file protocol only if necessary
             File folder = null;
             if (!reconfigurationRulesFolder.getFolderUri().startsWith("platform:")) {
@@ -139,12 +110,28 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
             });
             if (files != null && files.length > 0) {
                 for (final File file : files) {
-                    sdmPartition.loadModel(URI.createFileURI(file.getPath()));
+                    this.getBlackboard().getPartition(LoadSDMModelsIntoBlackboardJob.SDM_MODEL_PARTITION_ID)
+                            .loadModel(URI.createFileURI(file.getPath()));
                 }
             } else {
                 LOGGER.warn("No SDM models found, SD reconfigurations disabled.");
             }
         }
+    }
+
+    private void loadIntoBlackboard(final String partitionId, final EObject eObject) {
+        loadIntoBlackboard(partitionId, Arrays.asList(eObject));
+    }
+
+    private void loadIntoBlackboard(final String partitionId, final List<EObject> eObjects) {
+        final ResourceSetPartition partition = this.getBlackboard().getPartition(partitionId);
+        if (LOGGER.isEnabledFor(Level.INFO)) {
+            LOGGER.info("Loading models for partition " + partitionId);
+        }
+        for (final EObject eObject : eObjects) {
+            loadIfExisting(partition, eObject);
+        }
+        partition.resolveAllProxies();
     }
 
     private static void loadIfExisting(final ResourceSetPartition resourceSetPartition, final EObject eObject) {

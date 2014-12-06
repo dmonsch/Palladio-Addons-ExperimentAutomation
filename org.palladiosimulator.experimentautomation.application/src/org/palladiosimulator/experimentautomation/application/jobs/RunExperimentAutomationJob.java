@@ -47,6 +47,7 @@ public class RunExperimentAutomationJob extends SequentialBlackboardInteractingJ
         this.add(new PreparePCMBlackboardPartionJob());
         for (final Experiment experiment : configuration.getExperiments()) {
             final ATConfiguration config = new ATConfiguration();
+            this.add(new PrepareBlackboardJob());
             this.add(new LoadModelsIntoBlackboardJob(experiment.getInitialModel()));
             this.add(new RunATJob(config)); // Loads completed PCM models to PCM partition
             this.add(new RunExperimentForEachToolJob(experiment));
