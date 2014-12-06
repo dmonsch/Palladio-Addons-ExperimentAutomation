@@ -76,7 +76,7 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
         final ReconfigurationRulesFolder reconfigurationRulesFolder = this.initialModel.getReconfigurationRules();
         if (reconfigurationRulesFolder != null) {
             if (LOGGER.isEnabledFor(Level.INFO)) {
-                LOGGER.info("Loading reconfigurations");
+                LOGGER.info("Loading models for partition " + LoadSDMModelsIntoBlackboardJob.SDM_MODEL_PARTITION_ID);
             }
             // add file protocol only if necessary
             File folder = null;

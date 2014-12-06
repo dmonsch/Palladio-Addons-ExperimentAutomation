@@ -8,7 +8,6 @@ import org.palladiosimulator.simulizar.launcher.partitions.PMSResourceSetPartiti
 import org.palladiosimulator.simulizar.launcher.partitions.SDMResourceSetPartition;
 import org.palladiosimulator.simulizar.launcher.partitions.UEResourceSetPartition;
 
-import de.uka.ipd.sdq.workflow.jobs.CleanupFailedException;
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.jobs.UserCanceledException;
@@ -17,6 +16,11 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.ResourceSetPartition;
 import de.uka.ipd.sdq.workflow.pcm.blackboard.PCMResourceSetPartition;
 import de.uka.ipd.sdq.workflow.pcm.jobs.LoadPCMModelsIntoBlackboardJob;
 
+/**
+ * Prepares the MDSD blackboard for partitions needed by Experiment Automation's initial model.
+ * 
+ * @author Sebastian Lehrig
+ */
 public class PrepareBlackboardJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
 
     public PrepareBlackboardJob() {
@@ -40,18 +44,6 @@ public class PrepareBlackboardJob extends SequentialBlackboardInteractingJob<MDS
         // configure SDM models partition
         final SDMResourceSetPartition sdmPartition = new SDMResourceSetPartition();
         this.getBlackboard().addPartition(LoadSDMModelsIntoBlackboardJob.SDM_MODEL_PARTITION_ID, sdmPartition);
-    }
-
-    @Override
-    public void cleanup(IProgressMonitor monitor) throws CleanupFailedException {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public String getName() {
-        // TODO Auto-generated method stub
-        return null;
     }
 
 }
