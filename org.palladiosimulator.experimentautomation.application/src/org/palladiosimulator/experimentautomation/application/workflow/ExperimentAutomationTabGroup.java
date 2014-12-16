@@ -17,6 +17,9 @@ import de.uka.ipd.sdq.workflow.launchconfig.tabs.DebugEnabledCommonTab;
  */
 public class ExperimentAutomationTabGroup extends ExtendableTabGroup {
 
+    /** The id of the workflow extending configuration tabs have to register for. */
+    public static String WORKFLOW_ID_EXPERIMENT_AUTOMATION_TABS = "workflow.extension.experimentautomation.tabs";
+
     /**
      * {@inheritDoc}
      */
@@ -25,6 +28,7 @@ public class ExperimentAutomationTabGroup extends ExtendableTabGroup {
         final List<ILaunchConfigurationTab> tabs = new ArrayList<ILaunchConfigurationTab>();
 
         tabs.add(new ExperimentAutomationConfigurationTab());
+        tabs.addAll(createExtensionTabs(dialog, mode, WORKFLOW_ID_EXPERIMENT_AUTOMATION_TABS));
         for (final String workflowExtensionPointId : WorkflowHooks.getAllWorkflowHookIDs()) {
             tabs.addAll(createExtensionTabs(dialog, mode, workflowExtensionPointId));
         }
