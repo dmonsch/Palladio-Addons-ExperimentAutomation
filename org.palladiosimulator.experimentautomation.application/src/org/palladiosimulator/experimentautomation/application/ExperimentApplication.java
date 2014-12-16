@@ -1,6 +1,7 @@
 package org.palladiosimulator.experimentautomation.application;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.eclipse.core.runtime.IPath;
@@ -71,6 +72,7 @@ public class ExperimentApplication implements IApplication {
         final List<Experiment> experiments = getExperiments(experimentsLocation, filteredExperimentIDs);
         final ExperimentAutomationConfiguration experimentAutomationConfiguration = new ExperimentAutomationConfiguration();
         experimentAutomationConfiguration.setExperiments(experiments);
+        experimentAutomationConfiguration.setAttributes(new HashMap<String, Object>());
 
         // run experiments via blackboard-based workflow
         final MDSDBlackboard blackboard = new MDSDBlackboard();

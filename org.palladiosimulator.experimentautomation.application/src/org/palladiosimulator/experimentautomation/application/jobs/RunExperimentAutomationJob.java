@@ -2,11 +2,10 @@ package org.palladiosimulator.experimentautomation.application.jobs;
 
 import org.palladiosimulator.experimentautomation.application.config.ExperimentAutomationConfiguration;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
-import org.scaledl.architecturaltemplates.completion.config.ATConfiguration;
-import org.scaledl.architecturaltemplates.completion.jobs.RunATJob;
+import org.scaledl.architecturaltemplates.completion.config.ATExtensionJobConfiguration;
 
 import de.uka.ipd.sdq.codegen.simucontroller.debug.IDebugListener;
-import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
+import de.uka.ipd.sdq.workflow.extension.AbstractExtendableJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 import de.uka.ipd.sdq.workflow.pcm.jobs.PreparePCMBlackboardPartionJob;
 
@@ -16,7 +15,10 @@ import de.uka.ipd.sdq.workflow.pcm.jobs.PreparePCMBlackboardPartionJob;
  * 
  * @author Sebastian Lehrig
  */
-public class RunExperimentAutomationJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
+public class RunExperimentAutomationJob extends AbstractExtendableJob<MDSDBlackboard> {
+
+    /** The id of the workflow extending configuration tabs have to register for. */
+    public static String WORKFLOW_ID_BEFORE_EXPERIMENT_RUN = "workflow.extension.experimentautomation.before.experimentrun";
 
     /**
      * Default Constructor.
@@ -46,10 +48,15 @@ public class RunExperimentAutomationJob extends SequentialBlackboardInteractingJ
 
         this.add(new PreparePCMBlackboardPartionJob());
         for (final Experiment experiment : configuration.getExperiments()) {
-            final ATConfiguration config = new ATConfiguration();
+            final ATExtensionJobConfiguration config = new ATExtensionJobConfiguration();
             this.add(new PrepareBlackboardJob());
             this.add(new LoadModelsIntoBlackboardJob(experiment.getInitialModel()));
-            this.add(new RunATJob(config)); // Loads completed PCM models to PCM partition
+
+            // All Workflow extension jobs with the extension hook id
+            // WORKFLOW_ID_BEFORE_EXPERIMENT_RUN
+            handleJobExtensions(WORKFLOW_ID_BEFORE_EXPERIMENT_RUN, configuration);
+
+            // this.add(new RunATJob(config)); // Loads completed PCM models to PCM partition
             this.add(new RunExperimentForEachToolJob(experiment));
         }
     }
