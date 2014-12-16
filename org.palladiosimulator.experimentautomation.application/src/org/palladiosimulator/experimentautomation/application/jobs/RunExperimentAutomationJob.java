@@ -2,7 +2,6 @@ package org.palladiosimulator.experimentautomation.application.jobs;
 
 import org.palladiosimulator.experimentautomation.application.config.ExperimentAutomationConfiguration;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
-import org.scaledl.architecturaltemplates.completion.config.ATExtensionJobConfiguration;
 
 import de.uka.ipd.sdq.codegen.simucontroller.debug.IDebugListener;
 import de.uka.ipd.sdq.workflow.extension.AbstractExtendableJob;
@@ -48,7 +47,6 @@ public class RunExperimentAutomationJob extends AbstractExtendableJob<MDSDBlackb
 
         this.add(new PreparePCMBlackboardPartionJob());
         for (final Experiment experiment : configuration.getExperiments()) {
-            final ATExtensionJobConfiguration config = new ATExtensionJobConfiguration();
             this.add(new PrepareBlackboardJob());
             this.add(new LoadModelsIntoBlackboardJob(experiment.getInitialModel()));
 
@@ -56,7 +54,6 @@ public class RunExperimentAutomationJob extends AbstractExtendableJob<MDSDBlackb
             // WORKFLOW_ID_BEFORE_EXPERIMENT_RUN
             handleJobExtensions(WORKFLOW_ID_BEFORE_EXPERIMENT_RUN, configuration);
 
-            // this.add(new RunATJob(config)); // Loads completed PCM models to PCM partition
             this.add(new RunExperimentForEachToolJob(experiment));
         }
     }

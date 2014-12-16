@@ -38,6 +38,14 @@
       <import plugin="org.palladiosimulator.edp2.dao" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.edp2.util" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.commons" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.palladiosimulator.simulizar"/>
+      <import plugin="org.palladiosimulator.edp2.datastream"/>
+      <import plugin="org.palladiosimulator.measurementframework"/>
+      <import plugin="org.jscience"/>
+      <import plugin="org.palladiosimulator.servicelevelobjective"/>
+      <import plugin="org.palladiosimulator.recorderframework" version="2.0.1" match="greaterOrEqual"/>
+      <import plugin="org.palladiosimulator.edp2.visualization" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.emfstore.common"/>
    </requires>
 
    <plugin
