@@ -6,7 +6,6 @@ import java.util.List;
 import org.eclipse.debug.ui.ILaunchConfigurationDialog;
 import org.eclipse.debug.ui.ILaunchConfigurationTab;
 
-import de.uka.ipd.sdq.codegen.simucontroller.workflow.jobs.WorkflowHooks;
 import de.uka.ipd.sdq.workflow.launchconfig.extension.ExtendableTabGroup;
 import de.uka.ipd.sdq.workflow.launchconfig.tabs.DebugEnabledCommonTab;
 
@@ -29,9 +28,6 @@ public class ExperimentAutomationTabGroup extends ExtendableTabGroup {
 
         tabs.add(new ExperimentAutomationConfigurationTab());
         tabs.addAll(createExtensionTabs(dialog, mode, WORKFLOW_ID_EXPERIMENT_AUTOMATION_TABS));
-        for (final String workflowExtensionPointId : WorkflowHooks.getAllWorkflowHookIDs()) {
-            tabs.addAll(createExtensionTabs(dialog, mode, workflowExtensionPointId));
-        }
         tabs.add(new DebugEnabledCommonTab());
 
         setTabs(tabs.toArray(new ILaunchConfigurationTab[] {}));

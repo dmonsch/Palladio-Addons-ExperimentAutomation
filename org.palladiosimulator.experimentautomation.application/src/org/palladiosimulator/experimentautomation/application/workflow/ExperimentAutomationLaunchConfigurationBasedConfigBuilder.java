@@ -37,6 +37,7 @@ public class ExperimentAutomationLaunchConfigurationBasedConfigBuilder extends A
         : ExperimentAutomationConfigurationTab.DEFAULT_EXPERIMENTS;
 
         config.setExperiments(getExperimentRepository(experimentsURI).getExperiments());
+        config.setAttributes(this.properties);
     }
 
     private ExperimentRepository getExperimentRepository(final String experimentsURIString) {
@@ -44,7 +45,7 @@ public class ExperimentAutomationLaunchConfigurationBasedConfigBuilder extends A
         final ResourceSet resourceSet = new ResourceSetImpl();
         final Resource resource = resourceSet.getResource(experimentsURI, true);
         final EObject eObject = resource.getContents().get(0);
-        
+
         if (ExperimentsPackage.eINSTANCE.getExperimentRepository().isInstance(eObject)) {
             return (ExperimentRepository) eObject;
         } else {
