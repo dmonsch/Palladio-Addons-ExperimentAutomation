@@ -14,13 +14,13 @@ import org.palladiosimulator.experimentautomation.variation.VariationPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class SimulizartooladapterPackageImpl extends EPackageImpl implements SimulizartooladapterPackage {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass simuLizarConfigurationEClass = null;
@@ -33,7 +33,7 @@ public class SimulizartooladapterPackageImpl extends EPackageImpl implements Sim
      * Note: the correct way to create the package is via the static factory method {@link #init
      * init()}, which also performs initialization of the package, or returns the registered
      * package, if one already exists. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.eclipse.emf.ecore.EPackage.Registry
      * @see org.palladiosimulator.experimentautomation.application.tooladapter.simulizar.model.SimulizartooladapterPackage#eNS_URI
      * @see #init()
@@ -45,7 +45,7 @@ public class SimulizartooladapterPackageImpl extends EPackageImpl implements Sim
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private static boolean isInited = false;
@@ -58,7 +58,7 @@ public class SimulizartooladapterPackageImpl extends EPackageImpl implements Sim
      * This method is used to initialize {@link SimulizartooladapterPackage#eINSTANCE} when that
      * field is accessed. Clients should not invoke it directly. Instead, they should simply access
      * that field to obtain the package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #eNS_URI
      * @see #createPackageContents()
      * @see #initializePackageContents()
@@ -98,7 +98,7 @@ public class SimulizartooladapterPackageImpl extends EPackageImpl implements Sim
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -108,7 +108,7 @@ public class SimulizartooladapterPackageImpl extends EPackageImpl implements Sim
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -118,7 +118,7 @@ public class SimulizartooladapterPackageImpl extends EPackageImpl implements Sim
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private boolean isCreated = false;
@@ -126,7 +126,7 @@ public class SimulizartooladapterPackageImpl extends EPackageImpl implements Sim
     /**
      * Creates the meta-model objects for the package. This method is guarded to have no affect on
      * any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public void createPackageContents() {
@@ -141,7 +141,7 @@ public class SimulizartooladapterPackageImpl extends EPackageImpl implements Sim
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private boolean isInitialized = false;
@@ -149,7 +149,7 @@ public class SimulizartooladapterPackageImpl extends EPackageImpl implements Sim
     /**
      * Complete the initialization of the package and its meta-model. This method is guarded to have
      * no affect on any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public void initializePackageContents() {

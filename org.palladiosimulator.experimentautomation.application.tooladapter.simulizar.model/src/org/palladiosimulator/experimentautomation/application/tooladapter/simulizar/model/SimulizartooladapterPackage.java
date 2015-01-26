@@ -16,7 +16,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.Abstractsim
  * <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * 
+ *
  * @see org.palladiosimulator.experimentautomation.application.tooladapter.simulizar.model.SimulizartooladapterFactory
  * @model kind="package"
  * @generated
@@ -24,28 +24,28 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.Abstractsim
 public interface SimulizartooladapterPackage extends EPackage {
     /**
      * The package name. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String eNAME = "model";
 
     /**
      * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String eNS_URI = "http://palladiosimulator.org/ExperimentAutomation/ToolAdapter/SimuLizar/1.0";
 
     /**
      * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String eNS_PREFIX = "simulizartooladapter";
 
     /**
      * The singleton instance of the package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     SimulizartooladapterPackage eINSTANCE = org.palladiosimulator.experimentautomation.application.tooladapter.simulizar.model.impl.SimulizartooladapterPackageImpl
@@ -55,7 +55,7 @@ public interface SimulizartooladapterPackage extends EPackage {
      * The meta object id for the '
      * {@link org.palladiosimulator.experimentautomation.application.tooladapter.simulizar.model.impl.SimuLizarConfigurationImpl
      * <em>Simu Lizar Configuration</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.experimentautomation.application.tooladapter.simulizar.model.impl.SimuLizarConfigurationImpl
      * @see org.palladiosimulator.experimentautomation.application.tooladapter.simulizar.model.impl.SimulizartooladapterPackageImpl#getSimuLizarConfiguration()
      * @generated
@@ -65,7 +65,7 @@ public interface SimulizartooladapterPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -83,7 +83,7 @@ public interface SimulizartooladapterPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Random Number Generator Seed</b></em>' containment reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -101,7 +101,7 @@ public interface SimulizartooladapterPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Simulate Failures</b></em>' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -110,7 +110,7 @@ public interface SimulizartooladapterPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Datasource</b></em>' containment reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -129,7 +129,7 @@ public interface SimulizartooladapterPackage extends EPackage {
      * Returns the meta object for class '
      * {@link org.palladiosimulator.experimentautomation.application.tooladapter.simulizar.model.SimuLizarConfiguration
      * <em>Simu Lizar Configuration</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Simu Lizar Configuration</em>'.
      * @see org.palladiosimulator.experimentautomation.application.tooladapter.simulizar.model.SimuLizarConfiguration
      * @generated
@@ -139,7 +139,7 @@ public interface SimulizartooladapterPackage extends EPackage {
     /**
      * Returns the factory that creates the instances of the model. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @return the factory that creates the instances of the model.
      * @generated
      */
@@ -154,7 +154,7 @@ public interface SimulizartooladapterPackage extends EPackage {
      * <li>and each data type</li>
      * </ul>
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     interface Literals {
@@ -162,7 +162,7 @@ public interface SimulizartooladapterPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.experimentautomation.application.tooladapter.simulizar.model.impl.SimuLizarConfigurationImpl
          * <em>Simu Lizar Configuration</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.experimentautomation.application.tooladapter.simulizar.model.impl.SimuLizarConfigurationImpl
          * @see org.palladiosimulator.experimentautomation.application.tooladapter.simulizar.model.impl.SimulizartooladapterPackageImpl#getSimuLizarConfiguration()
          * @generated

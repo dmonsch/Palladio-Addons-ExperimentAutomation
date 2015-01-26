@@ -5,19 +5,18 @@ package org.palladiosimulator.experimentautomation.application.tooladapter.simuc
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
-import org.eclipse.emf.ecore.xmi.XMLResource;
 
 /**
  * <!-- begin-user-doc --> The <b>Resource Factory</b> associated with the package. <!--
  * end-user-doc -->
- * 
+ *
  * @see org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.util.SimucomtooladapterResourceImpl
  * @generated
  */
 public class SimucomtooladapterResourceFactoryImpl extends ResourceFactoryImpl {
     /**
      * Creates an instance of the resource factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public SimucomtooladapterResourceFactoryImpl() {
@@ -26,21 +25,12 @@ public class SimucomtooladapterResourceFactoryImpl extends ResourceFactoryImpl {
 
     /**
      * Creates an instance of the resource. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public Resource createResource(final URI uri) {
-        final XMLResource result = new SimucomtooladapterResourceImpl(uri);
-        result.getDefaultSaveOptions().put(XMLResource.OPTION_EXTENDED_META_DATA, Boolean.TRUE);
-        result.getDefaultLoadOptions().put(XMLResource.OPTION_EXTENDED_META_DATA, Boolean.TRUE);
-
-        result.getDefaultSaveOptions().put(XMLResource.OPTION_SCHEMA_LOCATION, Boolean.TRUE);
-
-        result.getDefaultLoadOptions().put(XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
-        result.getDefaultSaveOptions().put(XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE);
-
-        result.getDefaultLoadOptions().put(XMLResource.OPTION_USE_LEXICAL_HANDLER, Boolean.TRUE);
+        final Resource result = new SimucomtooladapterResourceImpl(uri);
         return result;
     }
 

@@ -13,13 +13,13 @@ import org.palladiosimulator.experimentautomation.application.tooladapter.simuli
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class SimulizartooladapterFactoryImpl extends EFactoryImpl implements SimulizartooladapterFactory {
     /**
      * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static SimulizartooladapterFactory init() {
@@ -37,7 +37,7 @@ public class SimulizartooladapterFactoryImpl extends EFactoryImpl implements Sim
 
     /**
      * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public SimulizartooladapterFactoryImpl() {
@@ -46,7 +46,7 @@ public class SimulizartooladapterFactoryImpl extends EFactoryImpl implements Sim
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -61,7 +61,7 @@ public class SimulizartooladapterFactoryImpl extends EFactoryImpl implements Sim
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -72,7 +72,7 @@ public class SimulizartooladapterFactoryImpl extends EFactoryImpl implements Sim
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -82,7 +82,7 @@ public class SimulizartooladapterFactoryImpl extends EFactoryImpl implements Sim
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @deprecated
      * @generated
      */

@@ -17,7 +17,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.Abstractsim
  * <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * 
+ *
  * @see org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.SimucomtooladapterFactory
  * @model kind="package"
  * @generated
@@ -25,28 +25,28 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.Abstractsim
 public interface SimucomtooladapterPackage extends EPackage {
     /**
      * The package name. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String eNAME = "model";
 
     /**
      * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String eNS_URI = "http://palladiosimulator.org/ExperimentAutomation/ToolAdapter/SimuCom/1.0";
 
     /**
      * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String eNS_PREFIX = "simucomtooladapter";
 
     /**
      * The singleton instance of the package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     SimucomtooladapterPackage eINSTANCE = org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.impl.SimucomtooladapterPackageImpl
@@ -56,7 +56,7 @@ public interface SimucomtooladapterPackage extends EPackage {
      * The meta object id for the '
      * {@link org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.impl.SimuComConfigurationImpl
      * <em>Simu Com Configuration</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.impl.SimuComConfigurationImpl
      * @see org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.impl.SimucomtooladapterPackageImpl#getSimuComConfiguration()
      * @generated
@@ -66,7 +66,7 @@ public interface SimucomtooladapterPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -84,7 +84,7 @@ public interface SimucomtooladapterPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Random Number Generator Seed</b></em>' containment reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -102,7 +102,7 @@ public interface SimucomtooladapterPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Simulate Failures</b></em>' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -111,7 +111,7 @@ public interface SimucomtooladapterPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Datasource</b></em>' containment reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -150,7 +150,7 @@ public interface SimucomtooladapterPackage extends EPackage {
      * Returns the meta object for class '
      * {@link org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.SimuComConfiguration
      * <em>Simu Com Configuration</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Simu Com Configuration</em>'.
      * @see org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.SimuComConfiguration
      * @generated
@@ -160,7 +160,7 @@ public interface SimucomtooladapterPackage extends EPackage {
     /**
      * Returns the factory that creates the instances of the model. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @return the factory that creates the instances of the model.
      * @generated
      */
@@ -176,7 +176,7 @@ public interface SimucomtooladapterPackage extends EPackage {
      * <li>and each data type</li>
      * </ul>
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     interface Literals {
@@ -184,7 +184,7 @@ public interface SimucomtooladapterPackage extends EPackage {
          * The meta object literal for the '
          * {@link org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.impl.SimuComConfigurationImpl
          * <em>Simu Com Configuration</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.impl.SimuComConfigurationImpl
          * @see org.palladiosimulator.experimentautomation.application.tooladapter.simucom.model.impl.SimucomtooladapterPackageImpl#getSimuComConfiguration()
          * @generated

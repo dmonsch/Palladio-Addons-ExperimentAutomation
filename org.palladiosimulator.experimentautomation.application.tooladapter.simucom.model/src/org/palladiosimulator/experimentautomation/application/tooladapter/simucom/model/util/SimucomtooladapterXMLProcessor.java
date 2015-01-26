@@ -12,14 +12,14 @@ import org.palladiosimulator.experimentautomation.application.tooladapter.simuco
 /**
  * This class contains helper methods to serialize and deserialize XML documents <!-- begin-user-doc
  * --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class SimucomtooladapterXMLProcessor extends XMLProcessor {
 
     /**
      * Public constructor to instantiate the helper. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public SimucomtooladapterXMLProcessor() {
@@ -30,7 +30,7 @@ public class SimucomtooladapterXMLProcessor extends XMLProcessor {
     /**
      * Register for "*" and "xml" file extensions the SimucomtooladapterResourceFactoryImpl factory.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

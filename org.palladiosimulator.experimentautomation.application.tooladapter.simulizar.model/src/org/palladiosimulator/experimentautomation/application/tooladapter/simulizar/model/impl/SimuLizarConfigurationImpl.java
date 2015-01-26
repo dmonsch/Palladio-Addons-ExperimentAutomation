@@ -18,7 +18,7 @@ import org.palladiosimulator.experimentautomation.application.tooladapter.simuli
 public class SimuLizarConfigurationImpl extends AbstractSimulationConfigurationImpl implements SimuLizarConfiguration {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected SimuLizarConfigurationImpl() {
@@ -27,7 +27,7 @@ public class SimuLizarConfigurationImpl extends AbstractSimulationConfigurationI
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

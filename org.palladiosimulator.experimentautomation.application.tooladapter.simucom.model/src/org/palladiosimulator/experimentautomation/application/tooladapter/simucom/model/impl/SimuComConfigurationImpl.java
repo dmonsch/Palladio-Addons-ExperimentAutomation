@@ -18,7 +18,7 @@ import org.palladiosimulator.experimentautomation.application.tooladapter.simuco
 public class SimuComConfigurationImpl extends AbstractSimulationConfigurationImpl implements SimuComConfiguration {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected SimuComConfigurationImpl() {
@@ -27,7 +27,7 @@ public class SimuComConfigurationImpl extends AbstractSimulationConfigurationImp
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
