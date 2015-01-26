@@ -61,7 +61,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * clear, there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Random Number Generator Seed</em>' containment reference.
      * @see #setRandomNumberGeneratorSeed(RandomNumberGeneratorSeed)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_RandomNumberGeneratorSeed()
@@ -75,7 +75,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed
      * <em>Random Number Generator Seed</em>}' containment reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Random Number Generator Seed</em>' containment
      *            reference.
@@ -122,7 +122,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Simulate Failures</em>' attribute.
      * @see #setSimulateFailures(boolean)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_SimulateFailures()
@@ -135,7 +135,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
      * <em>Simulate Failures</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Simulate Failures</em>' attribute.
      * @see #isSimulateFailures()
@@ -164,7 +164,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getDatasource
      * <em>Datasource</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Datasource</em>' containment reference.
      * @see #getDatasource()

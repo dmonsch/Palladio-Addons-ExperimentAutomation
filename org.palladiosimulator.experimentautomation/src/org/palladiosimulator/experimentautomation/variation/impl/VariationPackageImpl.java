@@ -21,39 +21,38 @@ import org.palladiosimulator.servicelevelobjective.ServicelevelObjectivePackage;
 import org.palladiosimulator.simulizar.pms.PmsPackage;
 import org.scaledl.usageevolution.UsageevolutionPackage;
 
-import tools.descartes.dlim.DlimPackage;
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class VariationPackageImpl extends EPackageImpl implements VariationPackage {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass variationTypeEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass valueVariationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass structuralVariationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass variationRepositoryEClass = null;
@@ -66,7 +65,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
      * Note: the correct way to create the package is via the static factory method {@link #init
      * init()}, which also performs initialization of the package, or returns the registered
      * package, if one already exists. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.eclipse.emf.ecore.EPackage.Registry
      * @see org.palladiosimulator.experimentautomation.variation.VariationPackage#eNS_URI
      * @see #init()
@@ -78,7 +77,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private static boolean isInited = false;
@@ -91,7 +90,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
      * This method is used to initialize {@link VariationPackage#eINSTANCE} when that field is
      * accessed. Clients should not invoke it directly. Instead, they should simply access that
      * field to obtain the package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #eNS_URI
      * @see #createPackageContents()
      * @see #initializePackageContents()
@@ -105,12 +104,11 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
         // Obtain or create and register package
         final VariationPackageImpl theVariationPackage = (VariationPackageImpl) (EPackage.Registry.INSTANCE
                 .get(eNS_URI) instanceof VariationPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
-                : new VariationPackageImpl());
+                        : new VariationPackageImpl());
 
         isInited = true;
 
         // Initialize simple dependencies
-        DlimPackage.eINSTANCE.eClass();
         PmsPackage.eINSTANCE.eClass();
         ServicelevelObjectivePackage.eINSTANCE.eClass();
         UsageevolutionPackage.eINSTANCE.eClass();
@@ -143,7 +141,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -153,7 +151,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -163,7 +161,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -173,7 +171,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -183,7 +181,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -193,7 +191,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -203,7 +201,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -213,7 +211,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -223,7 +221,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -233,7 +231,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private boolean isCreated = false;
@@ -241,7 +239,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
     /**
      * Creates the meta-model objects for the package. This method is guarded to have no affect on
      * any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public void createPackageContents() {
@@ -266,7 +264,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private boolean isInitialized = false;
@@ -274,7 +272,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
     /**
      * Complete the initialization of the package and its meta-model. This method is guarded to have
      * no affect on any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public void initializePackageContents() {

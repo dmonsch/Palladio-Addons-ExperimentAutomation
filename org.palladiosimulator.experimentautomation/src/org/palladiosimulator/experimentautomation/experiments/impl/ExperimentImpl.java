@@ -69,7 +69,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getVariations() <em>Variations</em>}' containment reference
      * list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getVariations()
      * @generated
      * @ordered
@@ -79,7 +79,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getModifications() <em>Modifications</em>}' containment
      * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getModifications()
      * @generated
      * @ordered
@@ -89,7 +89,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getId()
      * @generated
      * @ordered
@@ -99,7 +99,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getId()
      * @generated
      * @ordered
@@ -109,7 +109,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getName()
      * @generated
      * @ordered
@@ -119,7 +119,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getName()
      * @generated
      * @ordered
@@ -129,7 +129,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getToolConfiguration() <em>Tool Configuration</em>}'
      * containment reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getToolConfiguration()
      * @generated
      * @ordered
@@ -139,7 +139,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getStopConditions() <em>Stop Conditions</em>}' containment
      * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getStopConditions()
      * @generated
      * @ordered
@@ -169,7 +169,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getExperimentDesign() <em>Experiment Design</em>}'
      * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getExperimentDesign()
      * @generated
      * @ordered
@@ -179,7 +179,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getResponseMeasurement() <em>Response Measurement</em>}'
      * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getResponseMeasurement()
      * @generated
      * @ordered
@@ -189,7 +189,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     /**
      * The cached value of the '{@link #getInitialModel() <em>Initial Model</em>}' containment
      * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getInitialModel()
      * @generated
      * @ordered
@@ -218,7 +218,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ExperimentImpl() {
@@ -227,7 +227,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -237,7 +237,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -251,7 +251,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -265,7 +265,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -275,7 +275,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -290,7 +290,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -300,7 +300,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -315,7 +315,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -329,7 +329,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -343,7 +343,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -353,7 +353,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -368,7 +368,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -378,7 +378,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetExperimentDesign(final ExperimentDesign newExperimentDesign, NotificationChain msgs) {
@@ -398,7 +398,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -425,7 +425,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -435,7 +435,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetResponseMeasurement(final ResponseMeasurement newResponseMeasurement,
@@ -456,7 +456,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -483,7 +483,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -493,7 +493,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetInitialModel(final InitialModel newInitialModel, NotificationChain msgs) {
@@ -513,7 +513,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -540,7 +540,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -550,7 +550,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -565,7 +565,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -592,7 +592,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -626,7 +626,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -676,7 +676,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -721,7 +721,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -741,7 +741,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
             return this.stopConditions != null && !this.stopConditions.isEmpty();
         case ExperimentsPackage.EXPERIMENT__DESCRIPTION:
             return DESCRIPTION_EDEFAULT == null ? this.description != null : !DESCRIPTION_EDEFAULT
-                    .equals(this.description);
+            .equals(this.description);
         case ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN:
             return this.experimentDesign != null;
         case ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT:
@@ -756,7 +756,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

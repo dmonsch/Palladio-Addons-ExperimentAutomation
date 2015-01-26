@@ -88,7 +88,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
     /**
      * The cached value of the '{@link #getMiddlewareRepository() <em>Middleware Repository</em>}'
      * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getMiddlewareRepository()
      * @generated
      * @ordered
@@ -109,7 +109,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
     /**
      * The cached value of the '{@link #getReconfigurationRules() <em>Reconfiguration Rules</em>}'
      * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getReconfigurationRules()
      * @generated
      * @ordered
@@ -120,7 +120,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      * The cached value of the '{@link #getPlatformMonitoringSpecification()
      * <em>Platform Monitoring Specification</em>}' reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @see #getPlatformMonitoringSpecification()
      * @generated
      * @ordered
@@ -130,7 +130,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
     /**
      * The cached value of the '{@link #getServiceLevelObjectives()
      * <em>Service Level Objectives</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getServiceLevelObjectives()
      * @generated
      * @ordered
@@ -150,7 +150,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
     /**
      * The cached value of the '{@link #getSystem() <em>System</em>}' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSystem()
      * @generated
      * @ordered
@@ -160,7 +160,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
     /**
      * The cached value of the '{@link #getResourceEnvironment() <em>Resource Environment</em>}'
      * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getResourceEnvironment()
      * @generated
      * @ordered
@@ -170,7 +170,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
     /**
      * The cached value of the '{@link #getUsageEvolution() <em>Usage Evolution</em>}' reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getUsageEvolution()
      * @generated
      * @ordered
@@ -179,7 +179,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected InitialModelImpl() {
@@ -188,7 +188,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -198,7 +198,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -218,7 +218,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public UsageModel basicGetUsageModel() {
@@ -227,7 +227,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -242,7 +242,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -262,7 +262,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public Allocation basicGetAllocation() {
@@ -271,7 +271,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -286,7 +286,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -307,7 +307,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public Repository basicGetMiddlewareRepository() {
@@ -316,7 +316,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -332,7 +332,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -353,7 +353,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public Repository basicGetEventMiddleWareRepository() {
@@ -362,7 +362,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -378,7 +378,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -399,7 +399,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ReconfigurationRulesFolder basicGetReconfigurationRules() {
@@ -408,7 +408,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -424,7 +424,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -445,7 +445,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public PMSModel basicGetPlatformMonitoringSpecification() {
@@ -454,7 +454,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -470,7 +470,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -492,7 +492,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ServiceLevelObjectiveRepository basicGetServiceLevelObjectives() {
@@ -501,7 +501,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -517,7 +517,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -537,7 +537,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public Repository basicGetRepository() {
@@ -546,7 +546,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -561,7 +561,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -581,7 +581,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public de.uka.ipd.sdq.pcm.system.System basicGetSystem() {
@@ -590,7 +590,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -605,7 +605,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -626,7 +626,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ResourceEnvironment basicGetResourceEnvironment() {
@@ -635,7 +635,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -651,7 +651,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -671,7 +671,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public UsageEvolution basicGetUsageEvolution() {
@@ -680,7 +680,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -695,7 +695,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -762,7 +762,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -807,7 +807,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -852,7 +852,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

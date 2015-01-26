@@ -28,7 +28,7 @@ public interface ToolConfiguration extends EObject {
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getToolConfiguration_Name()
@@ -41,7 +41,7 @@ public interface ToolConfiguration extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.ToolConfiguration#getName
      * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Name</em>' attribute.
      * @see #getName()

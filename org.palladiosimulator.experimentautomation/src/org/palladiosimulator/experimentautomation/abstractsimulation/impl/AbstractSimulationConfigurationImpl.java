@@ -46,11 +46,11 @@ import org.palladiosimulator.experimentautomation.experiments.impl.ToolConfigura
  * @generated
  */
 public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurationImpl implements
-AbstractSimulationConfiguration {
+        AbstractSimulationConfiguration {
     /**
      * The cached value of the '{@link #getStopConditions() <em>Stop Conditions</em>}' containment
      * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getStopConditions()
      * @generated
      * @ordered
@@ -61,7 +61,7 @@ AbstractSimulationConfiguration {
      * The cached value of the '{@link #getRandomNumberGeneratorSeed()
      * <em>Random Number Generator Seed</em>}' containment reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @see #getRandomNumberGeneratorSeed()
      * @generated
      * @ordered
@@ -93,7 +93,7 @@ AbstractSimulationConfiguration {
     /**
      * The default value of the '{@link #isSimulateFailures() <em>Simulate Failures</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #isSimulateFailures()
      * @generated
      * @ordered
@@ -103,7 +103,7 @@ AbstractSimulationConfiguration {
     /**
      * The cached value of the '{@link #isSimulateFailures() <em>Simulate Failures</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #isSimulateFailures()
      * @generated
      * @ordered
@@ -113,7 +113,7 @@ AbstractSimulationConfiguration {
     /**
      * The cached value of the '{@link #getDatasource() <em>Datasource</em>}' containment reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getDatasource()
      * @generated
      * @ordered
@@ -122,7 +122,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected AbstractSimulationConfigurationImpl() {
@@ -131,7 +131,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -141,7 +141,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -155,7 +155,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -165,7 +165,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetRandomNumberGeneratorSeed(
@@ -187,7 +187,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -217,7 +217,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -227,7 +227,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -243,7 +243,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -253,7 +253,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -269,7 +269,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -279,7 +279,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetDatasource(final EDP2Datasource newDatasource, NotificationChain msgs) {
@@ -300,7 +300,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -328,7 +328,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -347,7 +347,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -369,7 +369,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -398,7 +398,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -425,7 +425,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -447,7 +447,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

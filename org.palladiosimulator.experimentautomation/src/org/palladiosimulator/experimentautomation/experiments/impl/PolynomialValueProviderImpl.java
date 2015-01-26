@@ -59,7 +59,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
     /**
      * The cached value of the '{@link #getFactor() <em>Factor</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getFactor()
      * @generated
      * @ordered
@@ -68,7 +68,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected PolynomialValueProviderImpl() {
@@ -77,7 +77,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -87,7 +87,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -97,7 +97,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -112,7 +112,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -122,7 +122,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -137,7 +137,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -153,7 +153,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -171,7 +171,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -189,7 +189,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -205,7 +205,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

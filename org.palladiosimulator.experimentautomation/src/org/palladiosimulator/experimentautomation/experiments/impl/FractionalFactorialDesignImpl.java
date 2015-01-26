@@ -18,7 +18,7 @@ import org.palladiosimulator.experimentautomation.experiments.FractionalFactoria
 public class FractionalFactorialDesignImpl extends EObjectImpl implements FractionalFactorialDesign {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected FractionalFactorialDesignImpl() {
@@ -27,7 +27,7 @@ public class FractionalFactorialDesignImpl extends EObjectImpl implements Fracti
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

@@ -159,7 +159,7 @@ import de.uka.ipd.sdq.units.provider.UnitsItemProviderAdapterFactory;
  * @generated
  */
 public class ExperimentsEditor extends MultiPageEditorPart implements IEditingDomainProvider, ISelectionProvider,
-        IMenuListener, IViewerProvider, IGotoMarker {
+IMenuListener, IViewerProvider, IGotoMarker {
     /**
      * This keeps track of the editing domain that is used to track all changes to the model. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -685,7 +685,7 @@ public class ExperimentsEditor extends MultiPageEditorPart implements IEditingDo
         this.adapterFactory.addAdapterFactory(new CompositionItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new UsagemodelItemProviderAdapterFactory());
         this.adapterFactory
-                .addAdapterFactory(new de.uka.ipd.sdq.pcm.repository.provider.RepositoryItemProviderAdapterFactory());
+        .addAdapterFactory(new de.uka.ipd.sdq.pcm.repository.provider.RepositoryItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ResourcetypeItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ProtocolItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ParameterItemProviderAdapterFactory());
@@ -1587,7 +1587,7 @@ public class ExperimentsEditor extends MultiPageEditorPart implements IEditingDo
         this.setPartName(editorInput.getName());
         final IProgressMonitor progressMonitor = this.getActionBars().getStatusLineManager() != null ? this
                 .getActionBars().getStatusLineManager().getProgressMonitor() : new NullProgressMonitor();
-        this.doSave(progressMonitor);
+                this.doSave(progressMonitor);
     }
 
     /**

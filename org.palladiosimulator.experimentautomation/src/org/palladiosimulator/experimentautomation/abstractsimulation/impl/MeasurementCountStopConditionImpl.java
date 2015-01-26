@@ -26,7 +26,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
     /**
      * The default value of the '{@link #getMeasurementCount() <em>Measurement Count</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getMeasurementCount()
      * @generated
      * @ordered
@@ -36,7 +36,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
     /**
      * The cached value of the '{@link #getMeasurementCount() <em>Measurement Count</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getMeasurementCount()
      * @generated
      * @ordered
@@ -45,7 +45,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MeasurementCountStopConditionImpl() {
@@ -54,7 +54,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -64,7 +64,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -74,7 +74,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -90,7 +90,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -104,7 +104,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -119,7 +119,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -134,7 +134,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -148,7 +148,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

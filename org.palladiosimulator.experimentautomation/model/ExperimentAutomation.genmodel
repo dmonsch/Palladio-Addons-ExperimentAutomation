@@ -27,9 +27,11 @@
   </genAnnotations>
   <foreignModel>experimentautomation.ecore</foreignModel>
   <genPackages xsi:type="genmodel:GenPackage" prefix="ExperimentAutomation" basePackage="org.palladiosimulator"
-      disposableProviderFactory="true" ecorePackage="experimentautomation.ecore#/">
+      resource="XML" disposableProviderFactory="true" extensibleProviderFactory="true"
+      ecorePackage="experimentautomation.ecore#/" publicationLocation="">
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Variation" basePackage="org.palladiosimulator.experimentautomation"
-        resource="XML" disposableProviderFactory="true" ecorePackage="experimentautomation.ecore#//variation">
+        resource="XML" disposableProviderFactory="true" extensibleProviderFactory="true"
+        ecorePackage="experimentautomation.ecore#//variation">
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="experimentautomation.ecore#//variation/VariationType">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//variation/VariationType/name"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//variation/VariationType/strategyClass"/>
@@ -43,7 +45,8 @@
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Experiments" basePackage="org.palladiosimulator.experimentautomation"
-        resource="XML" disposableProviderFactory="true" ecorePackage="experimentautomation.ecore#//experiments">
+        resource="XML" disposableProviderFactory="true" extensibleProviderFactory="true"
+        ecorePackage="experimentautomation.ecore#//experiments">
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//experiments/ExperimentRepository">
         <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
             createChild="true" ecoreFeature="ecore:EReference experimentautomation.ecore#//experiments/ExperimentRepository/experiments"/>
@@ -149,7 +152,7 @@
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Abstractsimulation"
         basePackage="org.palladiosimulator.experimentautomation" resource="XML" disposableProviderFactory="true"
-        ecorePackage="experimentautomation.ecore#//abstractsimulation">
+        extensibleProviderFactory="true" ecorePackage="experimentautomation.ecore#//abstractsimulation">
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="experimentautomation.ecore#//abstractsimulation/AbstractSimulationConfiguration">
         <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
             createChild="true" ecoreFeature="ecore:EReference experimentautomation.ecore#//abstractsimulation/AbstractSimulationConfiguration/stopConditions"/>
