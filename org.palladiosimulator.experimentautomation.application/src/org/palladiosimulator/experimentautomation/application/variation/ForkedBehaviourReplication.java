@@ -27,7 +27,7 @@ public class ForkedBehaviourReplication implements IVariationStrategy {
     }
 
     @Override
-    public String vary(final long value) {
+    public String vary(final Double value) {
         final ForkedBehaviour referenceBehaviour = this.fork.getAsynchronousForkedBehaviours_ForkAction().get(0);
         for (int i = 0; i < value; i++) {
             final ForkedBehaviour copy = EcoreHelper.copy(referenceBehaviour);

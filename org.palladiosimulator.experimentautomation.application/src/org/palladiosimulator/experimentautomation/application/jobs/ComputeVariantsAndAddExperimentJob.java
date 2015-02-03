@@ -29,7 +29,8 @@ public class ComputeVariantsAndAddExperimentJob extends SequentialBlackboardInte
      * @param simulationConfiguration
      *            the given analysis tool, e.g., SimuCom.
      */
-    public ComputeVariantsAndAddExperimentJob(final Experiment experiment, final AbstractSimulationConfiguration simulationConfiguration) {
+    public ComputeVariantsAndAddExperimentJob(final Experiment experiment,
+            final AbstractSimulationConfiguration simulationConfiguration) {
         super(false);
 
         // Note: Calling recursive method
@@ -56,8 +57,9 @@ public class ComputeVariantsAndAddExperimentJob extends SequentialBlackboardInte
      *            the variants of the given variations as well as the concrete values to be used for
      *            a given variation.
      */
-    private void computeVariantsAndAddJob(final Experiment experiment, final AbstractSimulationConfiguration simulationConfiguration,
-            final List<Variation> variations, final List<VariationFactorTuple> variationFactorTuples) {
+    private void computeVariantsAndAddJob(final Experiment experiment,
+            final AbstractSimulationConfiguration simulationConfiguration, final List<Variation> variations,
+            final List<VariationFactorTuple> variationFactorTuples) {
         if (variations.isEmpty()) {
             final List<VariationFactorTuple> variationsAndFactorsCopy = new ArrayList<VariationFactorTuple>();
             variationsAndFactorsCopy.addAll(variationFactorTuples);
@@ -74,7 +76,7 @@ public class ComputeVariantsAndAddExperimentJob extends SequentialBlackboardInte
             final IValueProviderStrategy valueProvider = ValueProviderFactory.createValueProvider(variation
                     .getValueProvider());
 
-            long factorLevel = 0;
+            Double factorLevel = 0.0;
             int iteration = 0;
             while (factorLevel <= variation.getMaxValue() && iteration < variation.getMaxVariations()) {
                 factorLevel = valueProvider.valueAtPosition(iteration);

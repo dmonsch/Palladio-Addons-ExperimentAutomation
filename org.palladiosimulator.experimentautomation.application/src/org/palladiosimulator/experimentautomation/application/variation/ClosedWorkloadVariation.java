@@ -28,13 +28,13 @@ public class ClosedWorkloadVariation implements IVariationStrategy {
     }
 
     @Override
-    public String vary(final long value) {
+    public String vary(final Double value) {
         final int intValue;
         if (value > Integer.MAX_VALUE) {
             LOGGER.warn("Warning: Converted long to int, but the value was larger than MAXINT.");
             intValue = Integer.MAX_VALUE;
         } else {
-            intValue = new Long(value).intValue();
+            intValue = new Double(value).intValue();
         }
         this.workload.setPopulation(intValue);
 

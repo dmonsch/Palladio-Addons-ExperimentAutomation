@@ -4,9 +4,9 @@ import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsVal
 
 public class NestedIntervalsValueProviderStrategy implements IValueProviderStrategy {
 
-    private long min;
-    private long middle;
-    private long max;
+    private Double min;
+    private Double middle;
+    private Double max;
     private boolean converged;
 
     public NestedIntervalsValueProviderStrategy(final NestedIntervalsValueProvider specification) {
@@ -18,15 +18,15 @@ public class NestedIntervalsValueProviderStrategy implements IValueProviderStrat
     }
 
     @Override
-    public long valueAtPosition(final int position) {
+    public Double valueAtPosition(final int position) {
         if (position != 0) {
-            return -1; // Only position 0 is supported
+            return -1.0; // Only position 0 is supported
         }
 
         return this.middle;
     }
 
-    public void setMin(final long min) {
+    public void setMin(final Double min) {
         if (min < this.min) {
             throw new IllegalArgumentException("New interval has to be nested in original interval");
         }
@@ -46,19 +46,19 @@ public class NestedIntervalsValueProviderStrategy implements IValueProviderStrat
         }
     }
 
-    public void setMax(final long max) {
+    public void setMax(final Double max) {
         if (max > this.max) {
             throw new IllegalArgumentException("New interval has to be nested in original interval");
         }
-        
+
         if (this.min > max) {
             this.min = max;
         }
-        
+
         this.max = max;
-        
+
         calculateMiddle();
-        
+
         if (this.min == this.max) {
             this.converged = true;
         }

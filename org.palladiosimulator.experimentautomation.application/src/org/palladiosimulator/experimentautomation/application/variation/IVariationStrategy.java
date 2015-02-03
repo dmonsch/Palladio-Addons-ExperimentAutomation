@@ -31,6 +31,6 @@ public interface IVariationStrategy {
      *            the concrete value to assigned to the varied object.
      * @return a textual description of the variation.
      */
-    public String vary(long value);
+    public String vary(Double value);
 
 }

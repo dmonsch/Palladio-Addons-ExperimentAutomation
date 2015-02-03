@@ -11,9 +11,8 @@ public class PolynomialValueProviderStrategy implements IValueProviderStrategy {
     }
 
     @Override
-    public long valueAtPosition(final int position) {
-        final double result = Math.pow(position, this.specification.getExponent()) * this.specification.getFactor();
-        return new Double(result).longValue();
+    public Double valueAtPosition(final int position) {
+        return Math.pow(position, this.specification.getExponent()) * this.specification.getFactor();
     }
 
 }

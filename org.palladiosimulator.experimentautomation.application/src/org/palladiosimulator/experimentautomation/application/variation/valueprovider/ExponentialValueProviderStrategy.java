@@ -11,10 +11,10 @@ public class ExponentialValueProviderStrategy implements IValueProviderStrategy 
     }
 
     @Override
-    public long valueAtPosition(final int position) {
+    public Double valueAtPosition(final int position) {
         final double base = this.specification.getBase();
         final double result = Math.pow(base, position);
-        return new Double(result).longValue();
+        return result;
     }
 
 }

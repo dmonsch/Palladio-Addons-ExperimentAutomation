@@ -28,15 +28,15 @@ public class LoadBalancingVariation implements IVariationStrategy {
     }
 
     @Override
-    public String vary(long value) {
+    public String vary(Double value) {
         String semaphoreResult = adjustSemaphore(value);
         String branchProbresult = adjustBranchProbabilities(value);
         return semaphoreResult + "\n" + branchProbresult;
     }
 
-    private String adjustSemaphore(long value) {
+    private String adjustSemaphore(Double value) {
         PassiveResource semaphore = getFirstPassiveResource(loadBalancer);
-        semaphore.getCapacity_PassiveResource().setSpecification(Long.toString(value));
+        semaphore.getCapacity_PassiveResource().setSpecification(Double.toString(value));
 
         return "Parameter value of " + semaphore.eClass().getName() + "'" + semaphore.getEntityName() + "' = " + value
                 + ": ";
@@ -47,7 +47,7 @@ public class LoadBalancingVariation implements IVariationStrategy {
 
     }
 
-    private String adjustBranchProbabilities(long value) {
+    private String adjustBranchProbabilities(Double value) {
         double branchProbability = 1.0 / value;
 
         List<ServiceEffectSpecification> seffs = loadBalancer.getServiceEffectSpecifications__BasicComponent();

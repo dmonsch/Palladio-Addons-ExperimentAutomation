@@ -103,13 +103,13 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
 
                     // Measurement
                     final Measure<Double, Duration> pointInTimeMeasure = Measure.valueOf(0d, SI.SECOND);
-                    final Measure<Long, Dimensionless> capacityMeasure = Measure.valueOf(
+                    final Measure<Double, Dimensionless> capacityMeasure = Measure.valueOf(
                             nestedInterval.valueAtPosition(0), Dimensionless.UNIT);
 
                     final List<Measurement> result = new ArrayList<Measurement>(2);
                     result.add(new BasicMeasurement<Double, Duration>(pointInTimeMeasure,
                             MetricDescriptionConstants.POINT_IN_TIME_METRIC));
-                    result.add(new BasicMeasurement<Long, Dimensionless>(capacityMeasure,
+                    result.add(new BasicMeasurement<Double, Dimensionless>(capacityMeasure,
                             MetricDescriptionConstants.USER_CAPACITY));
 
                     final Measurement resultMeasurement = new TupleMeasurement(result,

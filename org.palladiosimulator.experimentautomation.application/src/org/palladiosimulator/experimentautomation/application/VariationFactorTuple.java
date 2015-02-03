@@ -5,18 +5,18 @@ import org.palladiosimulator.experimentautomation.experiments.Variation;
 public class VariationFactorTuple {
 
     private final Variation variation;
-    private long factor;
+    private Double factor;
 
-    public VariationFactorTuple(final Variation variation, final long factor) {
+    public VariationFactorTuple(final Variation variation, final Double factor) {
         this.variation = variation;
         this.factor = factor;
     }
 
-    public long getFactor() {
+    public Double getFactor() {
         return this.factor;
     }
 
-    public void setFactor(long factor) {
+    public void setFactor(Double factor) {
         this.factor = factor;
     }
 

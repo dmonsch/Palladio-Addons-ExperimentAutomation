@@ -27,7 +27,7 @@ public class OpenWorkloadVariation implements IVariationStrategy {
     }
 
     @Override
-    public String vary(final long value) {
+    public String vary(final Double value) {
         // int intValue;
         // if (value > Integer.MAX_VALUE) {
         // LOGGER.warn("Warning: Converted long to int, but the value was larger than MAXINT.");
@@ -37,7 +37,7 @@ public class OpenWorkloadVariation implements IVariationStrategy {
         // }
         final PCMRandomVariable var = CoreFactory.eINSTANCE.createPCMRandomVariable();
         // var.setOpenWorkload_PCMRandomVariable(workload);
-        var.setSpecification(new Long(value).toString());
+        var.setSpecification(new Double(value).toString());
         this.workload.setInterArrivalTime_OpenWorkload(var);
 
         return "Open workload interarrival time = " + value + ": " + this.workload.eClass().getName() + " of "

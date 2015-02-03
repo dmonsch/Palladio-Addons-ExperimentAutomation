@@ -23,13 +23,13 @@ public class LoopIterationVariation implements IVariationStrategy {
     }
 
     @Override
-    public String vary(final long value) {
+    public String vary(final Double value) {
         int intValue;
         if (value > Integer.MAX_VALUE) {
             LOGGER.warn("Warning: Converted long to int, but the value was larger than MAXINT.");
             intValue = Integer.MAX_VALUE;
         }
-        intValue = new Long(value).intValue();
+        intValue = new Double(value).intValue();
         final PCMRandomVariable r = CoreFactory.eINSTANCE.createPCMRandomVariable();
         r.setSpecification(new Integer(intValue).toString());
         this.loop.setLoopIteration_Loop(r);

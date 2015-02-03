@@ -17,13 +17,13 @@ public class SetValueProviderStrategy implements IValueProviderStrategy {
     }
 
     @Override
-    public long valueAtPosition(final int position) {
+    public Double valueAtPosition(final int position) {
         if (position > this.values.size() - 1) {
-            return -1;
+            return -1.0;
             // throw new RuntimeException("Requested the value at position " + (position + 1)
             // + ", but the set contains only " + values.size() + " values.");
         }
-        return this.values.get(position).longValue();
+        return this.values.get(position);
     }
 
     private static List<Double> parseValueString(final String values) {

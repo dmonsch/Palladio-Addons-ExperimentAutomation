@@ -11,7 +11,7 @@ public class LinearValueProviderStrategy implements IValueProviderStrategy {
     }
 
     @Override
-    public long valueAtPosition(final int position) {
-        return (long) (this.specification.getFactor() * position + this.specification.getSummand());
+    public Double valueAtPosition(final int position) {
+        return (this.specification.getFactor() * position + this.specification.getSummand());
     }
 }

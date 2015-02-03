@@ -33,10 +33,10 @@ public class SystemCallActionParameterVariation implements IVariationStrategy {
     }
 
     @Override
-    public String vary(long value) {
+    public String vary(Double value) {
 
         PCMRandomVariable newValue = CoreFactory.eINSTANCE.createPCMRandomVariable();
-        newValue.setSpecification(Long.toString(value));
+        newValue.setSpecification(Double.toString(value));
         this.variedParameter.getVariableCharacterisation_VariableUsage().get(0)
                 .setSpecification_VariableCharacterisation(newValue);
 

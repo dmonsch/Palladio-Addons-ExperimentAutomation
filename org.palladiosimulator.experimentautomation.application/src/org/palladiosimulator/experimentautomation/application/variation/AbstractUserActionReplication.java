@@ -21,7 +21,7 @@ public class AbstractUserActionReplication implements IVariationStrategy {
     }
 
     @Override
-    public String vary(final long value) {
+    public String vary(final Double value) {
         AbstractUserAction lastAction = this.action;
         for (int i = 0; i < value; i++) {
             final AbstractUserAction previousSuccessor = lastAction.getSuccessor();
