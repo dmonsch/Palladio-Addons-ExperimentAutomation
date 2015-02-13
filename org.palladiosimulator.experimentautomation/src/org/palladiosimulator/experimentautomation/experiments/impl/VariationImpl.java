@@ -70,7 +70,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
      * @generated
      * @ordered
      */
-    protected static final long MIN_VALUE_EDEFAULT = 0L;
+    protected static final double MIN_VALUE_EDEFAULT = 0.0;
 
     /**
      * The cached value of the '{@link #getMinValue() <em>Min Value</em>}' attribute. <!--
@@ -80,7 +80,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
      * @generated
      * @ordered
      */
-    protected long minValue = MIN_VALUE_EDEFAULT;
+    protected double minValue = MIN_VALUE_EDEFAULT;
 
     /**
      * The default value of the '{@link #getMaxValue() <em>Max Value</em>}' attribute. <!--
@@ -90,7 +90,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
      * @generated
      * @ordered
      */
-    protected static final long MAX_VALUE_EDEFAULT = 0L;
+    protected static final double MAX_VALUE_EDEFAULT = 0.0;
 
     /**
      * The cached value of the '{@link #getMaxValue() <em>Max Value</em>}' attribute. <!--
@@ -100,7 +100,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
      * @generated
      * @ordered
      */
-    protected long maxValue = MAX_VALUE_EDEFAULT;
+    protected double maxValue = MAX_VALUE_EDEFAULT;
 
     /**
      * The default value of the '{@link #getMaxVariations() <em>Max Variations</em>}' attribute.
@@ -288,7 +288,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
      * @generated
      */
     @Override
-    public long getMinValue() {
+    public double getMinValue() {
         return this.minValue;
     }
 
@@ -298,8 +298,8 @@ public class VariationImpl extends EObjectImpl implements Variation {
      * @generated
      */
     @Override
-    public void setMinValue(final long newMinValue) {
-        final long oldMinValue = this.minValue;
+    public void setMinValue(final double newMinValue) {
+        final double oldMinValue = this.minValue;
         this.minValue = newMinValue;
         if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.VARIATION__MIN_VALUE,
@@ -313,7 +313,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
      * @generated
      */
     @Override
-    public long getMaxValue() {
+    public double getMaxValue() {
         return this.maxValue;
     }
 
@@ -323,8 +323,8 @@ public class VariationImpl extends EObjectImpl implements Variation {
      * @generated
      */
     @Override
-    public void setMaxValue(final long newMaxValue) {
-        final long oldMaxValue = this.maxValue;
+    public void setMaxValue(final double newMaxValue) {
+        final double oldMaxValue = this.maxValue;
         this.maxValue = newMaxValue;
         if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.VARIATION__MAX_VALUE,
@@ -466,10 +466,10 @@ public class VariationImpl extends EObjectImpl implements Variation {
             this.setValueProvider((ValueProvider) newValue);
             return;
         case ExperimentsPackage.VARIATION__MIN_VALUE:
-            this.setMinValue((Long) newValue);
+            this.setMinValue((Double) newValue);
             return;
         case ExperimentsPackage.VARIATION__MAX_VALUE:
-            this.setMaxValue((Long) newValue);
+            this.setMaxValue((Double) newValue);
             return;
         case ExperimentsPackage.VARIATION__MAX_VARIATIONS:
             this.setMaxVariations((Long) newValue);

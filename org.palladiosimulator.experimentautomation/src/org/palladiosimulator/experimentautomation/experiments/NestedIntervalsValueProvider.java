@@ -32,12 +32,12 @@ public interface NestedIntervalsValueProvider extends ValueProvider {
      * <!-- end-user-doc -->
      *
      * @return the value of the '<em>Min Value</em>' attribute.
-     * @see #setMinValue(long)
+     * @see #setMinValue(double)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getNestedIntervalsValueProvider_MinValue()
      * @model required="true"
      * @generated
      */
-    long getMinValue();
+    double getMinValue();
 
     /**
      * Sets the value of the '
@@ -49,7 +49,7 @@ public interface NestedIntervalsValueProvider extends ValueProvider {
      * @see #getMinValue()
      * @generated
      */
-    void setMinValue(long value);
+    void setMinValue(double value);
 
     /**
      * Returns the value of the '<em><b>Max Value</b></em>' attribute. <!-- begin-user-doc -->
@@ -60,12 +60,12 @@ public interface NestedIntervalsValueProvider extends ValueProvider {
      * <!-- end-user-doc -->
      *
      * @return the value of the '<em>Max Value</em>' attribute.
-     * @see #setMaxValue(long)
+     * @see #setMaxValue(double)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getNestedIntervalsValueProvider_MaxValue()
      * @model required="true"
      * @generated
      */
-    long getMaxValue();
+    double getMaxValue();
 
     /**
      * Sets the value of the '
@@ -77,6 +77,6 @@ public interface NestedIntervalsValueProvider extends ValueProvider {
      * @see #getMaxValue()
      * @generated
      */
-    void setMaxValue(long value);
+    void setMaxValue(double value);
 
 } // NestedIntervalsValueProvider

@@ -116,10 +116,10 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
         // Obtain or create and register interdependencies
         final ExperimentsPackageImpl theExperimentsPackage = (ExperimentsPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(ExperimentsPackage.eNS_URI) instanceof ExperimentsPackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(ExperimentsPackage.eNS_URI) : ExperimentsPackage.eINSTANCE);
+                        .getEPackage(ExperimentsPackage.eNS_URI) : ExperimentsPackage.eINSTANCE);
         final AbstractsimulationPackageImpl theAbstractsimulationPackage = (AbstractsimulationPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(AbstractsimulationPackage.eNS_URI) instanceof AbstractsimulationPackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(AbstractsimulationPackage.eNS_URI) : AbstractsimulationPackage.eINSTANCE);
+                        .getEPackage(AbstractsimulationPackage.eNS_URI) : AbstractsimulationPackage.eINSTANCE);
 
         // Create package meta-data objects
         theVariationPackage.createPackageContents();

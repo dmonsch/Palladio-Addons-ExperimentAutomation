@@ -252,7 +252,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         // Obtain or create and register package
         final ExperimentsPackageImpl theExperimentsPackage = (ExperimentsPackageImpl) (EPackage.Registry.INSTANCE
                 .get(eNS_URI) instanceof ExperimentsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
-                : new ExperimentsPackageImpl());
+                        : new ExperimentsPackageImpl());
 
         isInited = true;
 
@@ -264,10 +264,10 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         // Obtain or create and register interdependencies
         final VariationPackageImpl theVariationPackage = (VariationPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(VariationPackage.eNS_URI) instanceof VariationPackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(VariationPackage.eNS_URI) : VariationPackage.eINSTANCE);
+                        .getEPackage(VariationPackage.eNS_URI) : VariationPackage.eINSTANCE);
         final AbstractsimulationPackageImpl theAbstractsimulationPackage = (AbstractsimulationPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(AbstractsimulationPackage.eNS_URI) instanceof AbstractsimulationPackageImpl ? EPackage.Registry.INSTANCE
-                .getEPackage(AbstractsimulationPackage.eNS_URI) : AbstractsimulationPackage.eINSTANCE);
+                        .getEPackage(AbstractsimulationPackage.eNS_URI) : AbstractsimulationPackage.eINSTANCE);
 
         // Create package meta-data objects
         theExperimentsPackage.createPackageContents();
@@ -1189,10 +1189,10 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         this.initEReference(this.getVariation_ValueProvider(), this.getValueProvider(), null, "valueProvider", null, 1,
                 1, Variation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEAttribute(this.getVariation_MinValue(), this.ecorePackage.getELong(), "minValue", null, 1, 1,
+        this.initEAttribute(this.getVariation_MinValue(), this.ecorePackage.getEDouble(), "minValue", null, 1, 1,
                 Variation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, !IS_ORDERED);
-        this.initEAttribute(this.getVariation_MaxValue(), this.ecorePackage.getELong(), "maxValue", null, 1, 1,
+        this.initEAttribute(this.getVariation_MaxValue(), this.ecorePackage.getEDouble(), "maxValue", null, 1, 1,
                 Variation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, !IS_ORDERED);
         this.initEAttribute(this.getVariation_MaxVariations(), this.ecorePackage.getELong(), "maxVariations", null, 1,
@@ -1335,11 +1335,11 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
         this.initEClass(this.nestedIntervalsValueProviderEClass, NestedIntervalsValueProvider.class,
                 "NestedIntervalsValueProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEAttribute(this.getNestedIntervalsValueProvider_MinValue(), this.ecorePackage.getELong(), "minValue",
-                null, 1, 1, NestedIntervalsValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+        this.initEAttribute(this.getNestedIntervalsValueProvider_MinValue(), this.ecorePackage.getEDouble(),
+                "minValue", null, 1, 1, NestedIntervalsValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEAttribute(this.getNestedIntervalsValueProvider_MaxValue(), this.ecorePackage.getELong(), "maxValue",
-                null, 1, 1, NestedIntervalsValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+        this.initEAttribute(this.getNestedIntervalsValueProvider_MaxValue(), this.ecorePackage.getEDouble(),
+                "maxValue", null, 1, 1, NestedIntervalsValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Create resource

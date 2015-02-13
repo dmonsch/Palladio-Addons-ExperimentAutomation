@@ -57,9 +57,9 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="valueProvider" ordered="false"
           lowerBound="1" eType="#//experiments/ValueProvider" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="minValue" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxValue" ordered="false"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxVariations" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="variedObjectId" ordered="false"
@@ -138,9 +138,9 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="NestedIntervalsValueProvider" eSuperTypes="#//experiments/ValueProvider">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="minValue" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxValue" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="abstractsimulation" nsURI="http://palladiosimulator.org/ExperimentAutomation/AbstractSimulation/1.0"
