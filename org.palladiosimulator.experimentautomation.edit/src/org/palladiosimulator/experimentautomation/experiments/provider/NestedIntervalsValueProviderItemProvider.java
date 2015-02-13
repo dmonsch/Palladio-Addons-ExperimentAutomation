@@ -62,7 +62,7 @@ public class NestedIntervalsValueProviderItemProvider extends ValueProviderItemP
                         "_UI_PropertyDescriptor_description", "_UI_NestedIntervalsValueProvider_minValue_feature",
                         "_UI_NestedIntervalsValueProvider_type"),
                 ExperimentsPackage.Literals.NESTED_INTERVALS_VALUE_PROVIDER__MIN_VALUE, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -78,7 +78,7 @@ public class NestedIntervalsValueProviderItemProvider extends ValueProviderItemP
                         "_UI_PropertyDescriptor_description", "_UI_NestedIntervalsValueProvider_maxValue_feature",
                         "_UI_NestedIntervalsValueProvider_type"),
                 ExperimentsPackage.Literals.NESTED_INTERVALS_VALUE_PROVIDER__MAX_VALUE, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**

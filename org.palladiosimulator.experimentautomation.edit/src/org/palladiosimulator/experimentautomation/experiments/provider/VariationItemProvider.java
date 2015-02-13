@@ -90,7 +90,7 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
                 this.getString("_UI_Variation_minValue_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Variation_minValue_feature", "_UI_Variation_type"),
                         ExperimentsPackage.Literals.VARIATION__MIN_VALUE, true, false, false,
-                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                        ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -105,7 +105,7 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
                 this.getString("_UI_Variation_maxValue_feature"), this.getString("_UI_PropertyDescriptor_description",
                         "_UI_Variation_maxValue_feature", "_UI_Variation_type"),
                         ExperimentsPackage.Literals.VARIATION__MAX_VALUE, true, false, false,
-                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                        ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
