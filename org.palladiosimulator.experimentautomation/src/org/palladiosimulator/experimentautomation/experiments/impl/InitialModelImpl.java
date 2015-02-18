@@ -12,7 +12,7 @@ import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
-import org.palladiosimulator.simulizar.pms.PMSModel;
+import org.palladiosimulator.simulizar.pms.MonitorRepository;
 import org.scaledl.usageevolution.UsageEvolution;
 
 import de.uka.ipd.sdq.pcm.allocation.Allocation;
@@ -42,8 +42,8 @@ import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
  * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getReconfigurationRules
  * <em>Reconfiguration Rules</em>}</li>
  * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getPlatformMonitoringSpecification
- * <em>Platform Monitoring Specification</em>}</li>
+ * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getMonitorRepository
+ * <em>Monitor Repository</em>}</li>
  * <li>
  * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getServiceLevelObjectives
  * <em>Service Level Objectives</em>}</li>
@@ -117,15 +117,14 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
     protected ReconfigurationRulesFolder reconfigurationRules;
 
     /**
-     * The cached value of the '{@link #getPlatformMonitoringSpecification()
-     * <em>Platform Monitoring Specification</em>}' reference. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
+     * The cached value of the '{@link #getMonitorRepository() <em>Monitor Repository</em>}'
+     * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
-     * @see #getPlatformMonitoringSpecification()
+     * @see #getMonitorRepository()
      * @generated
      * @ordered
      */
-    protected PMSModel platformMonitoringSpecification;
+    protected MonitorRepository monitorRepository;
 
     /**
      * The cached value of the '{@link #getServiceLevelObjectives()
@@ -428,19 +427,19 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      * @generated
      */
     @Override
-    public PMSModel getPlatformMonitoringSpecification() {
-        if (this.platformMonitoringSpecification != null && this.platformMonitoringSpecification.eIsProxy()) {
-            final InternalEObject oldPlatformMonitoringSpecification = (InternalEObject) this.platformMonitoringSpecification;
-            this.platformMonitoringSpecification = (PMSModel) this.eResolveProxy(oldPlatformMonitoringSpecification);
-            if (this.platformMonitoringSpecification != oldPlatformMonitoringSpecification) {
+    public MonitorRepository getMonitorRepository() {
+        if (this.monitorRepository != null && this.monitorRepository.eIsProxy()) {
+            final InternalEObject oldMonitorRepository = (InternalEObject) this.monitorRepository;
+            this.monitorRepository = (MonitorRepository) this.eResolveProxy(oldMonitorRepository);
+            if (this.monitorRepository != oldMonitorRepository) {
                 if (this.eNotificationRequired()) {
                     this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION,
-                            oldPlatformMonitoringSpecification, this.platformMonitoringSpecification));
+                            ExperimentsPackage.INITIAL_MODEL__MONITOR_REPOSITORY, oldMonitorRepository,
+                            this.monitorRepository));
                 }
             }
         }
-        return this.platformMonitoringSpecification;
+        return this.monitorRepository;
     }
 
     /**
@@ -448,8 +447,8 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      *
      * @generated
      */
-    public PMSModel basicGetPlatformMonitoringSpecification() {
-        return this.platformMonitoringSpecification;
+    public MonitorRepository basicGetMonitorRepository() {
+        return this.monitorRepository;
     }
 
     /**
@@ -458,13 +457,12 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      * @generated
      */
     @Override
-    public void setPlatformMonitoringSpecification(final PMSModel newPlatformMonitoringSpecification) {
-        final PMSModel oldPlatformMonitoringSpecification = this.platformMonitoringSpecification;
-        this.platformMonitoringSpecification = newPlatformMonitoringSpecification;
+    public void setMonitorRepository(final MonitorRepository newMonitorRepository) {
+        final MonitorRepository oldMonitorRepository = this.monitorRepository;
+        this.monitorRepository = newMonitorRepository;
         if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION,
-                    oldPlatformMonitoringSpecification, this.platformMonitoringSpecification));
+                    ExperimentsPackage.INITIAL_MODEL__MONITOR_REPOSITORY, oldMonitorRepository, this.monitorRepository));
         }
     }
 
@@ -726,11 +724,11 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
                 return this.getReconfigurationRules();
             }
             return this.basicGetReconfigurationRules();
-        case ExperimentsPackage.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION:
+        case ExperimentsPackage.INITIAL_MODEL__MONITOR_REPOSITORY:
             if (resolve) {
-                return this.getPlatformMonitoringSpecification();
+                return this.getMonitorRepository();
             }
-            return this.basicGetPlatformMonitoringSpecification();
+            return this.basicGetMonitorRepository();
         case ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES:
             if (resolve) {
                 return this.getServiceLevelObjectives();
@@ -783,8 +781,8 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
         case ExperimentsPackage.INITIAL_MODEL__RECONFIGURATION_RULES:
             this.setReconfigurationRules((ReconfigurationRulesFolder) newValue);
             return;
-        case ExperimentsPackage.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION:
-            this.setPlatformMonitoringSpecification((PMSModel) newValue);
+        case ExperimentsPackage.INITIAL_MODEL__MONITOR_REPOSITORY:
+            this.setMonitorRepository((MonitorRepository) newValue);
             return;
         case ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES:
             this.setServiceLevelObjectives((ServiceLevelObjectiveRepository) newValue);
@@ -828,8 +826,8 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
         case ExperimentsPackage.INITIAL_MODEL__RECONFIGURATION_RULES:
             this.setReconfigurationRules((ReconfigurationRulesFolder) null);
             return;
-        case ExperimentsPackage.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION:
-            this.setPlatformMonitoringSpecification((PMSModel) null);
+        case ExperimentsPackage.INITIAL_MODEL__MONITOR_REPOSITORY:
+            this.setMonitorRepository((MonitorRepository) null);
             return;
         case ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES:
             this.setServiceLevelObjectives((ServiceLevelObjectiveRepository) null);
@@ -868,8 +866,8 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
             return this.eventMiddleWareRepository != null;
         case ExperimentsPackage.INITIAL_MODEL__RECONFIGURATION_RULES:
             return this.reconfigurationRules != null;
-        case ExperimentsPackage.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION:
-            return this.platformMonitoringSpecification != null;
+        case ExperimentsPackage.INITIAL_MODEL__MONITOR_REPOSITORY:
+            return this.monitorRepository != null;
         case ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES:
             return this.serviceLevelObjectives != null;
         case ExperimentsPackage.INITIAL_MODEL__REPOSITORY:

@@ -46,7 +46,7 @@ import org.palladiosimulator.experimentautomation.experiments.impl.ToolConfigura
  * @generated
  */
 public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurationImpl implements
-        AbstractSimulationConfiguration {
+AbstractSimulationConfiguration {
     /**
      * The cached value of the '{@link #getStopConditions() <em>Stop Conditions</em>}' containment
      * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->

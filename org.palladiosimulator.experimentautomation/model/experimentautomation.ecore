@@ -122,8 +122,7 @@
           lowerBound="1" eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Repository"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="reconfigurationRules"
           eType="#//experiments/ReconfigurationRulesFolder"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="platformMonitoringSpecification"
-          eType="ecore:EClass ../../org.palladiosimulator.simulizar.pms/model/pms.ecore#//PMSModel"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="monitorRepository" eType="ecore:EClass ../../org.palladiosimulator.simulizar.pms/model/pms.ecore#//MonitorRepository"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="serviceLevelObjectives"
           eType="ecore:EClass ../../org.palladiosimulator.servicelevelobjective/model/servicelevelobjective.ecore#//ServiceLevelObjectiveRepository"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="repository" eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Repository"/>

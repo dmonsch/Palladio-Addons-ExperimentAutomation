@@ -104,7 +104,7 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
         // Obtain or create and register package
         final VariationPackageImpl theVariationPackage = (VariationPackageImpl) (EPackage.Registry.INSTANCE
                 .get(eNS_URI) instanceof VariationPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
-                        : new VariationPackageImpl());
+                : new VariationPackageImpl());
 
         isInited = true;
 

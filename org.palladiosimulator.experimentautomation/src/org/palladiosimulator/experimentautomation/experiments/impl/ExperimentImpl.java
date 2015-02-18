@@ -741,7 +741,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
             return this.stopConditions != null && !this.stopConditions.isEmpty();
         case ExperimentsPackage.EXPERIMENT__DESCRIPTION:
             return DESCRIPTION_EDEFAULT == null ? this.description != null : !DESCRIPTION_EDEFAULT
-            .equals(this.description);
+                    .equals(this.description);
         case ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN:
             return this.experimentDesign != null;
         case ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT:

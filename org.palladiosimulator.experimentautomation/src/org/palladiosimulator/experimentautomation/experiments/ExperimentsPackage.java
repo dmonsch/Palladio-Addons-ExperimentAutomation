@@ -769,13 +769,13 @@ public interface ExperimentsPackage extends EPackage {
     int INITIAL_MODEL__RECONFIGURATION_RULES = 4;
 
     /**
-     * The feature id for the '<em><b>Platform Monitoring Specification</b></em>' reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * The feature id for the '<em><b>Monitor Repository</b></em>' reference. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION = 5;
+    int INITIAL_MODEL__MONITOR_REPOSITORY = 5;
 
     /**
      * The feature id for the '<em><b>Service Level Objectives</b></em>' reference. <!--
@@ -1553,15 +1553,15 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for the reference '
-     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getPlatformMonitoringSpecification
-     * <em>Platform Monitoring Specification</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getMonitorRepository
+     * <em>Monitor Repository</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
-     * @return the meta object for the reference '<em>Platform Monitoring Specification</em>'.
-     * @see org.palladiosimulator.experimentautomation.experiments.InitialModel#getPlatformMonitoringSpecification()
+     * @return the meta object for the reference '<em>Monitor Repository</em>'.
+     * @see org.palladiosimulator.experimentautomation.experiments.InitialModel#getMonitorRepository()
      * @see #getInitialModel()
      * @generated
      */
-    EReference getInitialModel_PlatformMonitoringSpecification();
+    EReference getInitialModel_MonitorRepository();
 
     /**
      * Returns the meta object for the reference '
@@ -2215,13 +2215,12 @@ public interface ExperimentsPackage extends EPackage {
         EReference INITIAL_MODEL__RECONFIGURATION_RULES = eINSTANCE.getInitialModel_ReconfigurationRules();
 
         /**
-         * The meta object literal for the '<em><b>Platform Monitoring Specification</b></em>'
-         * reference feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '<em><b>Monitor Repository</b></em>' reference feature.
+         * <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @generated
          */
-        EReference INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION = eINSTANCE
-                .getInitialModel_PlatformMonitoringSpecification();
+        EReference INITIAL_MODEL__MONITOR_REPOSITORY = eINSTANCE.getInitialModel_MonitorRepository();
 
         /**
          * The meta object literal for the '<em><b>Service Level Objectives</b></em>' reference

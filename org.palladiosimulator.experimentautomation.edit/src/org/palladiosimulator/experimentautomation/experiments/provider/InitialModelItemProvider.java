@@ -54,7 +54,7 @@ public class InitialModelItemProvider extends ItemProviderAdapter implements IEd
             this.addMiddlewareRepositoryPropertyDescriptor(object);
             this.addEventMiddleWareRepositoryPropertyDescriptor(object);
             this.addReconfigurationRulesPropertyDescriptor(object);
-            this.addPlatformMonitoringSpecificationPropertyDescriptor(object);
+            this.addMonitorRepositoryPropertyDescriptor(object);
             this.addServiceLevelObjectivesPropertyDescriptor(object);
             this.addRepositoryPropertyDescriptor(object);
             this.addSystemPropertyDescriptor(object);
@@ -141,19 +141,18 @@ public class InitialModelItemProvider extends ItemProviderAdapter implements IEd
     }
 
     /**
-     * This adds a property descriptor for the Platform Monitoring Specification feature. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * This adds a property descriptor for the Monitor Repository feature. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      *
      * @generated
      */
-    protected void addPlatformMonitoringSpecificationPropertyDescriptor(final Object object) {
+    protected void addMonitorRepositoryPropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_InitialModel_platformMonitoringSpecification_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description",
-                        "_UI_InitialModel_platformMonitoringSpecification_feature", "_UI_InitialModel_type"),
-                ExperimentsPackage.Literals.INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION, true, false, true, null,
-                null, null));
+                this.getString("_UI_InitialModel_monitorRepository_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_InitialModel_monitorRepository_feature",
+                        "_UI_InitialModel_type"), ExperimentsPackage.Literals.INITIAL_MODEL__MONITOR_REPOSITORY, true,
+                false, true, null, null, null));
     }
 
     /**

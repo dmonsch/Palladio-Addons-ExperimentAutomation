@@ -853,7 +853,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      * @generated
      */
     @Override
-    public EReference getInitialModel_PlatformMonitoringSpecification() {
+    public EReference getInitialModel_MonitorRepository() {
         return (EReference) this.initialModelEClass.getEStructuralFeatures().get(5);
     }
 
@@ -1062,7 +1062,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         this.createEReference(this.initialModelEClass, INITIAL_MODEL__MIDDLEWARE_REPOSITORY);
         this.createEReference(this.initialModelEClass, INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY);
         this.createEReference(this.initialModelEClass, INITIAL_MODEL__RECONFIGURATION_RULES);
-        this.createEReference(this.initialModelEClass, INITIAL_MODEL__PLATFORM_MONITORING_SPECIFICATION);
+        this.createEReference(this.initialModelEClass, INITIAL_MODEL__MONITOR_REPOSITORY);
         this.createEReference(this.initialModelEClass, INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES);
         this.createEReference(this.initialModelEClass, INITIAL_MODEL__REPOSITORY);
         this.createEReference(this.initialModelEClass, INITIAL_MODEL__SYSTEM);
@@ -1306,9 +1306,9 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         this.initEReference(this.getInitialModel_ReconfigurationRules(), this.getReconfigurationRulesFolder(), null,
                 "reconfigurationRules", null, 0, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getInitialModel_PlatformMonitoringSpecification(), thePmsPackage.getPMSModel(), null,
-                "platformMonitoringSpecification", null, 0, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE,
-                IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getInitialModel_MonitorRepository(), thePmsPackage.getMonitorRepository(), null,
+                "monitorRepository", null, 0, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEReference(this.getInitialModel_ServiceLevelObjectives(),
                 theServicelevelObjectivePackage.getServiceLevelObjectiveRepository(), null, "serviceLevelObjectives",
                 null, 0, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,

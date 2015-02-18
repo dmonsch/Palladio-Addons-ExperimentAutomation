@@ -4,7 +4,7 @@ package org.palladiosimulator.experimentautomation.experiments;
 
 import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
-import org.palladiosimulator.simulizar.pms.PMSModel;
+import org.palladiosimulator.simulizar.pms.MonitorRepository;
 import org.scaledl.usageevolution.UsageEvolution;
 
 import de.uka.ipd.sdq.pcm.allocation.Allocation;
@@ -33,8 +33,8 @@ import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
  * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getReconfigurationRules
  * <em>Reconfiguration Rules</em>}</li>
  * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getPlatformMonitoringSpecification
- * <em>Platform Monitoring Specification</em>}</li>
+ * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getMonitorRepository
+ * <em>Monitor Repository</em>}</li>
  * <li>
  * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getServiceLevelObjectives
  * <em>Service Level Objectives</em>}</li>
@@ -200,34 +200,33 @@ public interface InitialModel extends EObject {
     void setReconfigurationRules(ReconfigurationRulesFolder value);
 
     /**
-     * Returns the value of the '<em><b>Platform Monitoring Specification</b></em>' reference. <!--
-     * begin-user-doc -->
+     * Returns the value of the '<em><b>Monitor Repository</b></em>' reference. <!-- begin-user-doc
+     * -->
      * <p>
-     * If the meaning of the '<em>Platform Monitoring Specification</em>' reference isn't clear,
-     * there really should be more of a description here...
+     * If the meaning of the '<em>Monitor Repository</em>' reference isn't clear, there really
+     * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
      *
-     * @return the value of the '<em>Platform Monitoring Specification</em>' reference.
-     * @see #setPlatformMonitoringSpecification(PMSModel)
-     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_PlatformMonitoringSpecification()
+     * @return the value of the '<em>Monitor Repository</em>' reference.
+     * @see #setMonitorRepository(MonitorRepository)
+     * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_MonitorRepository()
      * @model
      * @generated
      */
-    PMSModel getPlatformMonitoringSpecification();
+    MonitorRepository getMonitorRepository();
 
     /**
      * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getPlatformMonitoringSpecification
-     * <em>Platform Monitoring Specification</em>}' reference. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getMonitorRepository
+     * <em>Monitor Repository</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value
-     *            the new value of the '<em>Platform Monitoring Specification</em>' reference.
-     * @see #getPlatformMonitoringSpecification()
+     *            the new value of the '<em>Monitor Repository</em>' reference.
+     * @see #getMonitorRepository()
      * @generated
      */
-    void setPlatformMonitoringSpecification(PMSModel value);
+    void setMonitorRepository(MonitorRepository value);
 
     /**
      * Returns the value of the '<em><b>Service Level Objectives</b></em>' reference. <!--

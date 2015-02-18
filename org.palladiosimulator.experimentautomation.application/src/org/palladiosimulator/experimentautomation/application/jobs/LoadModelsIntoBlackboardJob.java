@@ -16,7 +16,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
-import org.palladiosimulator.simulizar.launcher.jobs.LoadPMSModelIntoBlackboardJob;
+import org.palladiosimulator.simulizar.launcher.jobs.LoadMonitorRepositoryModelIntoBlackboardJob;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadSDMModelsIntoBlackboardJob;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadUEModelIntoBlackboardJob;
 
@@ -65,9 +65,9 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
         loadIntoBlackboard(LoadPCMModelsIntoBlackboardJob.EVENT_MIDDLEWARE_PARTITION_ID,
                 this.initialModel.getEventMiddleWareRepository());
 
-        // load PMS model
-        loadIntoBlackboard(LoadPMSModelIntoBlackboardJob.PMS_MODEL_PARTITION_ID,
-                this.initialModel.getPlatformMonitoringSpecification());
+        // load monitor repository model
+        loadIntoBlackboard(LoadMonitorRepositoryModelIntoBlackboardJob.MONITOR_REPOSITORY_MODEL_PARTITION_ID,
+                this.initialModel.getMonitorRepository());
 
         // load Usage Evolution model
         loadIntoBlackboard(LoadUEModelIntoBlackboardJob.UE_MODEL_PARTITION_ID, this.initialModel.getUsageEvolution());
