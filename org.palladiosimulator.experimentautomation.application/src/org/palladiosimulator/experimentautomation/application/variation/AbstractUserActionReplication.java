@@ -6,7 +6,7 @@ import org.palladiosimulator.experimentautomation.application.utils.PCMModelHelp
 
 import de.uka.ipd.sdq.pcm.usagemodel.AbstractUserAction;
 
-public class AbstractUserActionReplication implements IVariationStrategy {
+public class AbstractUserActionReplication implements IVariationStrategy<Long> {
 
     /** the action that is to be replicated */
     private AbstractUserAction action;
@@ -21,16 +21,16 @@ public class AbstractUserActionReplication implements IVariationStrategy {
     }
 
     @Override
-    public String vary(final Double value) {
+    public String vary(final Long value) {
         AbstractUserAction lastAction = this.action;
-        for (int i = 0; i < value; i++) {
+        for (long l = 0; l < value; l++) {
             final AbstractUserAction previousSuccessor = lastAction.getSuccessor();
             final AbstractUserAction copy = EcoreHelper.copy(this.action);
             lastAction.setSuccessor(copy);
             copy.setScenarioBehaviour_AbstractUserAction(this.action.getScenarioBehaviour_AbstractUserAction());
             copy.setPredecessor(lastAction);
             copy.setSuccessor(previousSuccessor);
-            copy.setEntityName(copy.getEntityName() + (i + 1));
+            copy.setEntityName(copy.getEntityName() + (l + 1));
             lastAction = copy;
         }
 

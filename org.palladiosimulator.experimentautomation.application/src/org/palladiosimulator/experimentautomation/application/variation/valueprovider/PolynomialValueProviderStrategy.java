@@ -2,7 +2,7 @@ package org.palladiosimulator.experimentautomation.application.variation.valuepr
 
 import org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider;
 
-public class PolynomialValueProviderStrategy implements IValueProviderStrategy {
+public class PolynomialValueProviderStrategy implements IValueProviderStrategy<Double> {
 
     private final PolynomialValueProvider specification;
 

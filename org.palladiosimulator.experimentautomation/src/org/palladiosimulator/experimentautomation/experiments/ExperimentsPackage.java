@@ -862,15 +862,15 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsValueProviderImpl
-     * <em>Nested Intervals Value Provider</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
-     * -->
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsDoubleValueProviderImpl
+     * <em>Nested Intervals Double Value Provider</em>}' class. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
      *
-     * @see org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsValueProviderImpl
-     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getNestedIntervalsValueProvider()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsDoubleValueProviderImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getNestedIntervalsDoubleValueProvider()
      * @generated
      */
-    int NESTED_INTERVALS_VALUE_PROVIDER = 21;
+    int NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER = 21;
 
     /**
      * The feature id for the '<em><b>Min Value</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -879,7 +879,7 @@ public interface ExperimentsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int NESTED_INTERVALS_VALUE_PROVIDER__MIN_VALUE = VALUE_PROVIDER_FEATURE_COUNT + 0;
+    int NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MIN_VALUE = VALUE_PROVIDER_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Max Value</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -888,16 +888,55 @@ public interface ExperimentsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int NESTED_INTERVALS_VALUE_PROVIDER__MAX_VALUE = VALUE_PROVIDER_FEATURE_COUNT + 1;
+    int NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MAX_VALUE = VALUE_PROVIDER_FEATURE_COUNT + 1;
 
     /**
-     * The number of structural features of the '<em>Nested Intervals Value Provider</em>' class.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The number of structural features of the '<em>Nested Intervals Double Value Provider</em>'
+     * class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int NESTED_INTERVALS_VALUE_PROVIDER_FEATURE_COUNT = VALUE_PROVIDER_FEATURE_COUNT + 2;
+    int NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER_FEATURE_COUNT = VALUE_PROVIDER_FEATURE_COUNT + 2;
+
+    /**
+     * The meta object id for the '
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsLongValueProviderImpl
+     * <em>Nested Intervals Long Value Provider</em>}' class. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsLongValueProviderImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getNestedIntervalsLongValueProvider()
+     * @generated
+     */
+    int NESTED_INTERVALS_LONG_VALUE_PROVIDER = 22;
+
+    /**
+     * The feature id for the '<em><b>Min Value</b></em>' attribute. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int NESTED_INTERVALS_LONG_VALUE_PROVIDER__MIN_VALUE = VALUE_PROVIDER_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Max Value</b></em>' attribute. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int NESTED_INTERVALS_LONG_VALUE_PROVIDER__MAX_VALUE = VALUE_PROVIDER_FEATURE_COUNT + 1;
+
+    /**
+     * The number of structural features of the '<em>Nested Intervals Long Value Provider</em>'
+     * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int NESTED_INTERVALS_LONG_VALUE_PROVIDER_FEATURE_COUNT = VALUE_PROVIDER_FEATURE_COUNT + 2;
 
     /**
      * Returns the meta object for class '
@@ -1648,38 +1687,75 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider
-     * <em>Nested Intervals Value Provider</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider
+     * <em>Nested Intervals Double Value Provider</em>}'. <!-- begin-user-doc --> <!-- end-user-doc
+     * -->
      *
-     * @return the meta object for class '<em>Nested Intervals Value Provider</em>'.
-     * @see org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider
+     * @return the meta object for class '<em>Nested Intervals Double Value Provider</em>'.
+     * @see org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider
      * @generated
      */
-    EClass getNestedIntervalsValueProvider();
+    EClass getNestedIntervalsDoubleValueProvider();
 
     /**
      * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider#getMinValue
+     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider#getMinValue
      * <em>Min Value</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the attribute '<em>Min Value</em>'.
-     * @see org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider#getMinValue()
-     * @see #getNestedIntervalsValueProvider()
+     * @see org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider#getMinValue()
+     * @see #getNestedIntervalsDoubleValueProvider()
      * @generated
      */
-    EAttribute getNestedIntervalsValueProvider_MinValue();
+    EAttribute getNestedIntervalsDoubleValueProvider_MinValue();
 
     /**
      * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider#getMaxValue
+     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider#getMaxValue
      * <em>Max Value</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the attribute '<em>Max Value</em>'.
-     * @see org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider#getMaxValue()
-     * @see #getNestedIntervalsValueProvider()
+     * @see org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider#getMaxValue()
+     * @see #getNestedIntervalsDoubleValueProvider()
      * @generated
      */
-    EAttribute getNestedIntervalsValueProvider_MaxValue();
+    EAttribute getNestedIntervalsDoubleValueProvider_MaxValue();
+
+    /**
+     * Returns the meta object for class '
+     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider
+     * <em>Nested Intervals Long Value Provider</em>}'. <!-- begin-user-doc --> <!-- end-user-doc
+     * -->
+     *
+     * @return the meta object for class '<em>Nested Intervals Long Value Provider</em>'.
+     * @see org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider
+     * @generated
+     */
+    EClass getNestedIntervalsLongValueProvider();
+
+    /**
+     * Returns the meta object for the attribute '
+     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider#getMinValue
+     * <em>Min Value</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for the attribute '<em>Min Value</em>'.
+     * @see org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider#getMinValue()
+     * @see #getNestedIntervalsLongValueProvider()
+     * @generated
+     */
+    EAttribute getNestedIntervalsLongValueProvider_MinValue();
+
+    /**
+     * Returns the meta object for the attribute '
+     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider#getMaxValue
+     * <em>Max Value</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for the attribute '<em>Max Value</em>'.
+     * @see org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider#getMaxValue()
+     * @see #getNestedIntervalsLongValueProvider()
+     * @generated
+     */
+    EAttribute getNestedIntervalsLongValueProvider_MaxValue();
 
     /**
      * Returns the factory that creates the instances of the model. <!-- begin-user-doc --> <!--
@@ -2284,15 +2360,15 @@ public interface ExperimentsPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsValueProviderImpl
-         * <em>Nested Intervals Value Provider</em>}' class. <!-- begin-user-doc --> <!--
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsDoubleValueProviderImpl
+         * <em>Nested Intervals Double Value Provider</em>}' class. <!-- begin-user-doc --> <!--
          * end-user-doc -->
          *
-         * @see org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsValueProviderImpl
-         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getNestedIntervalsValueProvider()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsDoubleValueProviderImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getNestedIntervalsDoubleValueProvider()
          * @generated
          */
-        EClass NESTED_INTERVALS_VALUE_PROVIDER = eINSTANCE.getNestedIntervalsValueProvider();
+        EClass NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER = eINSTANCE.getNestedIntervalsDoubleValueProvider();
 
         /**
          * The meta object literal for the '<em><b>Min Value</b></em>' attribute feature. <!--
@@ -2300,7 +2376,8 @@ public interface ExperimentsPackage extends EPackage {
          *
          * @generated
          */
-        EAttribute NESTED_INTERVALS_VALUE_PROVIDER__MIN_VALUE = eINSTANCE.getNestedIntervalsValueProvider_MinValue();
+        EAttribute NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MIN_VALUE = eINSTANCE
+                .getNestedIntervalsDoubleValueProvider_MinValue();
 
         /**
          * The meta object literal for the '<em><b>Max Value</b></em>' attribute feature. <!--
@@ -2308,7 +2385,38 @@ public interface ExperimentsPackage extends EPackage {
          *
          * @generated
          */
-        EAttribute NESTED_INTERVALS_VALUE_PROVIDER__MAX_VALUE = eINSTANCE.getNestedIntervalsValueProvider_MaxValue();
+        EAttribute NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MAX_VALUE = eINSTANCE
+                .getNestedIntervalsDoubleValueProvider_MaxValue();
+
+        /**
+         * The meta object literal for the '
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsLongValueProviderImpl
+         * <em>Nested Intervals Long Value Provider</em>}' class. <!-- begin-user-doc --> <!--
+         * end-user-doc -->
+         *
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsLongValueProviderImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getNestedIntervalsLongValueProvider()
+         * @generated
+         */
+        EClass NESTED_INTERVALS_LONG_VALUE_PROVIDER = eINSTANCE.getNestedIntervalsLongValueProvider();
+
+        /**
+         * The meta object literal for the '<em><b>Min Value</b></em>' attribute feature. <!--
+         * begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @generated
+         */
+        EAttribute NESTED_INTERVALS_LONG_VALUE_PROVIDER__MIN_VALUE = eINSTANCE
+                .getNestedIntervalsLongValueProvider_MinValue();
+
+        /**
+         * The meta object literal for the '<em><b>Max Value</b></em>' attribute feature. <!--
+         * begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @generated
+         */
+        EAttribute NESTED_INTERVALS_LONG_VALUE_PROVIDER__MAX_VALUE = eINSTANCE
+                .getNestedIntervalsLongValueProvider_MaxValue();
 
     }
 

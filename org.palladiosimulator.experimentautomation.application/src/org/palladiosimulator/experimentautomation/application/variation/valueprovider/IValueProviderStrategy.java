@@ -1,7 +1,7 @@
 package org.palladiosimulator.experimentautomation.application.variation.valueprovider;
 
-public interface IValueProviderStrategy {
+public interface IValueProviderStrategy<RETURN_TYPE> {
 
-    public Double valueAtPosition(final int position);
+    public RETURN_TYPE valueAtPosition(final int position);
 
 }

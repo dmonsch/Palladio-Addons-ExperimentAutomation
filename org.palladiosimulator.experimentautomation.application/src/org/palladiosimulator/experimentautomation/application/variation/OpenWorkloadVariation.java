@@ -8,7 +8,7 @@ import de.uka.ipd.sdq.pcm.core.PCMRandomVariable;
 import de.uka.ipd.sdq.pcm.usagemodel.OpenWorkload;
 import de.uka.ipd.sdq.pcm.usagemodel.UsageScenario;
 
-public class OpenWorkloadVariation implements IVariationStrategy {
+public class OpenWorkloadVariation implements IVariationStrategy<Double> {
 
     private OpenWorkload workload;
 
@@ -37,7 +37,7 @@ public class OpenWorkloadVariation implements IVariationStrategy {
         // }
         final PCMRandomVariable var = CoreFactory.eINSTANCE.createPCMRandomVariable();
         // var.setOpenWorkload_PCMRandomVariable(workload);
-        var.setSpecification(new Double(value).toString());
+        var.setSpecification(value.toString());
         this.workload.setInterArrivalTime_OpenWorkload(var);
 
         return "Open workload interarrival time = " + value + ": " + this.workload.eClass().getName() + " of "

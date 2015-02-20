@@ -7,7 +7,7 @@ import org.palladiosimulator.experimentautomation.application.utils.PCMModelHelp
 import de.uka.ipd.sdq.pcm.seff.ForkAction;
 import de.uka.ipd.sdq.pcm.seff.ForkedBehaviour;
 
-public class ForkedBehaviourReplication implements IVariationStrategy {
+public class ForkedBehaviourReplication implements IVariationStrategy<Long> {
 
     /** the action that is to be replicated */
     private ForkAction fork;
@@ -27,9 +27,9 @@ public class ForkedBehaviourReplication implements IVariationStrategy {
     }
 
     @Override
-    public String vary(final Double value) {
+    public String vary(final Long value) {
         final ForkedBehaviour referenceBehaviour = this.fork.getAsynchronousForkedBehaviours_ForkAction().get(0);
-        for (int i = 0; i < value; i++) {
+        for (long l = 0; l < value; l++) {
             final ForkedBehaviour copy = EcoreHelper.copy(referenceBehaviour);
             copy.setForkAction_ForkedBehaivour(this.fork);
         }

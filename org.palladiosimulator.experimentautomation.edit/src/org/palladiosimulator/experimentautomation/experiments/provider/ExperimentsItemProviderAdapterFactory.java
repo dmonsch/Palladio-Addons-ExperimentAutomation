@@ -511,27 +511,53 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider}
+     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    protected NestedIntervalsValueProviderItemProvider nestedIntervalsValueProviderItemProvider;
+    protected NestedIntervalsDoubleValueProviderItemProvider nestedIntervalsDoubleValueProviderItemProvider;
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider}.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider}
+     * . <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
     @Override
-    public Adapter createNestedIntervalsValueProviderAdapter() {
-        if (this.nestedIntervalsValueProviderItemProvider == null) {
-            this.nestedIntervalsValueProviderItemProvider = new NestedIntervalsValueProviderItemProvider(this);
+    public Adapter createNestedIntervalsDoubleValueProviderAdapter() {
+        if (this.nestedIntervalsDoubleValueProviderItemProvider == null) {
+            this.nestedIntervalsDoubleValueProviderItemProvider = new NestedIntervalsDoubleValueProviderItemProvider(
+                    this);
         }
 
-        return this.nestedIntervalsValueProviderItemProvider;
+        return this.nestedIntervalsDoubleValueProviderItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all
+     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider}
+     * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    protected NestedIntervalsLongValueProviderItemProvider nestedIntervalsLongValueProviderItemProvider;
+
+    /**
+     * This creates an adapter for a
+     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider}
+     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Adapter createNestedIntervalsLongValueProviderAdapter() {
+        if (this.nestedIntervalsLongValueProviderItemProvider == null) {
+            this.nestedIntervalsLongValueProviderItemProvider = new NestedIntervalsLongValueProviderItemProvider(this);
+        }
+
+        return this.nestedIntervalsLongValueProviderItemProvider;
     }
 
     /**
@@ -717,8 +743,11 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
         if (this.reconfigurationRulesFolderItemProvider != null) {
             this.reconfigurationRulesFolderItemProvider.dispose();
         }
-        if (this.nestedIntervalsValueProviderItemProvider != null) {
-            this.nestedIntervalsValueProviderItemProvider.dispose();
+        if (this.nestedIntervalsDoubleValueProviderItemProvider != null) {
+            this.nestedIntervalsDoubleValueProviderItemProvider.dispose();
+        }
+        if (this.nestedIntervalsLongValueProviderItemProvider != null) {
+            this.nestedIntervalsLongValueProviderItemProvider.dispose();
         }
     }
 

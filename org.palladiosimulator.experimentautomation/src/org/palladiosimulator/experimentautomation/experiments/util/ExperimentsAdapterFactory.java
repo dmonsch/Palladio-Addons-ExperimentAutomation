@@ -17,7 +17,8 @@ import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.Modification;
-import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime;
 import org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign;
 import org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider;
@@ -188,8 +189,13 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseNestedIntervalsValueProvider(final NestedIntervalsValueProvider object) {
-            return ExperimentsAdapterFactory.this.createNestedIntervalsValueProviderAdapter();
+        public Adapter caseNestedIntervalsDoubleValueProvider(final NestedIntervalsDoubleValueProvider object) {
+            return ExperimentsAdapterFactory.this.createNestedIntervalsDoubleValueProviderAdapter();
+        }
+
+        @Override
+        public Adapter caseNestedIntervalsLongValueProvider(final NestedIntervalsLongValueProvider object) {
+            return ExperimentsAdapterFactory.this.createNestedIntervalsLongValueProviderAdapter();
         }
 
         @Override
@@ -528,16 +534,31 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider
-     * <em>Nested Intervals Value Provider</em>}'. <!-- begin-user-doc --> This default
+     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider
+     * <em>Nested Intervals Double Value Provider</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider
+     * @see org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider
      * @generated
      */
-    public Adapter createNestedIntervalsValueProviderAdapter() {
+    public Adapter createNestedIntervalsDoubleValueProviderAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '
+     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider
+     * <em>Nested Intervals Long Value Provider</em>}'. <!-- begin-user-doc --> This default
+     * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
+     * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     *
+     * @return the new adapter.
+     * @see org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider
+     * @generated
+     */
+    public Adapter createNestedIntervalsLongValueProviderAdapter() {
         return null;
     }
 

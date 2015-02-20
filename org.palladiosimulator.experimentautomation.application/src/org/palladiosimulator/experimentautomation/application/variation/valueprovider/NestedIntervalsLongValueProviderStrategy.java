@@ -1,32 +1,31 @@
 package org.palladiosimulator.experimentautomation.application.variation.valueprovider;
 
-import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider;
 
-public class NestedIntervalsValueProviderStrategy implements IValueProviderStrategy {
+public class NestedIntervalsLongValueProviderStrategy extends AbstractNestedIntervalsValueProviderStrategy<Long> {
 
-    private Double min;
-    private Double middle;
-    private Double max;
-    private boolean converged;
+    private long min;
+    private long middle;
+    private long max;
 
-    public NestedIntervalsValueProviderStrategy(final NestedIntervalsValueProvider specification) {
+    public NestedIntervalsLongValueProviderStrategy(final NestedIntervalsLongValueProvider specification) {
+        super();
         this.min = specification.getMinValue();
         this.max = specification.getMaxValue();
-        this.converged = false;
-
         this.middle = this.min;
     }
 
     @Override
-    public Double valueAtPosition(final int position) {
+    public Long valueAtPosition(final int position) {
         if (position != 0) {
-            return -1.0; // Only position 0 is supported
+            return -1L; // Only position 0 is supported
         }
 
         return this.middle;
     }
 
-    public void setMin(final Double min) {
+    @Override
+    public void setMin(final Long min) {
         if (min < this.min) {
             throw new IllegalArgumentException("New interval has to be nested in original interval");
         }
@@ -46,7 +45,8 @@ public class NestedIntervalsValueProviderStrategy implements IValueProviderStrat
         }
     }
 
-    public void setMax(final Double max) {
+    @Override
+    public void setMax(final Long max) {
         if (max > this.max) {
             throw new IllegalArgumentException("New interval has to be nested in original interval");
         }
@@ -62,10 +62,6 @@ public class NestedIntervalsValueProviderStrategy implements IValueProviderStrat
         if (this.min == this.max) {
             this.converged = true;
         }
-    }
-
-    public boolean isConverged() {
-        return this.converged;
     }
 
     private void calculateMiddle() {

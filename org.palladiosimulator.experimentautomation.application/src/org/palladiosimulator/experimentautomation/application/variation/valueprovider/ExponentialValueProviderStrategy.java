@@ -2,7 +2,7 @@ package org.palladiosimulator.experimentautomation.application.variation.valuepr
 
 import org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider;
 
-public class ExponentialValueProviderStrategy implements IValueProviderStrategy {
+public class ExponentialValueProviderStrategy implements IValueProviderStrategy<Double> {
 
     private final ExponentialValueProvider specification;
 

@@ -2,21 +2,21 @@ package org.palladiosimulator.experimentautomation.application;
 
 import org.palladiosimulator.experimentautomation.experiments.Variation;
 
-public class VariationFactorTuple {
+public class VariationFactorTuple<FACTOR_TYPE> {
 
     private final Variation variation;
-    private Double factor;
+    private FACTOR_TYPE factor;
 
-    public VariationFactorTuple(final Variation variation, final Double factor) {
+    public VariationFactorTuple(final Variation variation, final FACTOR_TYPE factor) {
         this.variation = variation;
         this.factor = factor;
     }
 
-    public Double getFactor() {
+    public FACTOR_TYPE getFactor() {
         return this.factor;
     }
 
-    public void setFactor(Double factor) {
+    public void setFactor(FACTOR_TYPE factor) {
         this.factor = factor;
     }
 

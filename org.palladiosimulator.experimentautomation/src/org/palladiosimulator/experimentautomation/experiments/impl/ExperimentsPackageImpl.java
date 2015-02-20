@@ -21,7 +21,8 @@ import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.Modification;
-import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime;
 import org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign;
 import org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider;
@@ -203,7 +204,14 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      *
      * @generated
      */
-    private EClass nestedIntervalsValueProviderEClass = null;
+    private EClass nestedIntervalsDoubleValueProviderEClass = null;
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    private EClass nestedIntervalsLongValueProviderEClass = null;
 
     /**
      * Creates an instance of the model <b>Package</b>, registered with
@@ -933,8 +941,8 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      * @generated
      */
     @Override
-    public EClass getNestedIntervalsValueProvider() {
-        return this.nestedIntervalsValueProviderEClass;
+    public EClass getNestedIntervalsDoubleValueProvider() {
+        return this.nestedIntervalsDoubleValueProviderEClass;
     }
 
     /**
@@ -943,8 +951,8 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      * @generated
      */
     @Override
-    public EAttribute getNestedIntervalsValueProvider_MinValue() {
-        return (EAttribute) this.nestedIntervalsValueProviderEClass.getEStructuralFeatures().get(0);
+    public EAttribute getNestedIntervalsDoubleValueProvider_MinValue() {
+        return (EAttribute) this.nestedIntervalsDoubleValueProviderEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -953,8 +961,38 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      * @generated
      */
     @Override
-    public EAttribute getNestedIntervalsValueProvider_MaxValue() {
-        return (EAttribute) this.nestedIntervalsValueProviderEClass.getEStructuralFeatures().get(1);
+    public EAttribute getNestedIntervalsDoubleValueProvider_MaxValue() {
+        return (EAttribute) this.nestedIntervalsDoubleValueProviderEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EClass getNestedIntervalsLongValueProvider() {
+        return this.nestedIntervalsLongValueProviderEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EAttribute getNestedIntervalsLongValueProvider_MinValue() {
+        return (EAttribute) this.nestedIntervalsLongValueProviderEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EAttribute getNestedIntervalsLongValueProvider_MaxValue() {
+        return (EAttribute) this.nestedIntervalsLongValueProviderEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -1072,9 +1110,17 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         this.reconfigurationRulesFolderEClass = this.createEClass(RECONFIGURATION_RULES_FOLDER);
         this.createEAttribute(this.reconfigurationRulesFolderEClass, RECONFIGURATION_RULES_FOLDER__FOLDER_URI);
 
-        this.nestedIntervalsValueProviderEClass = this.createEClass(NESTED_INTERVALS_VALUE_PROVIDER);
-        this.createEAttribute(this.nestedIntervalsValueProviderEClass, NESTED_INTERVALS_VALUE_PROVIDER__MIN_VALUE);
-        this.createEAttribute(this.nestedIntervalsValueProviderEClass, NESTED_INTERVALS_VALUE_PROVIDER__MAX_VALUE);
+        this.nestedIntervalsDoubleValueProviderEClass = this.createEClass(NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER);
+        this.createEAttribute(this.nestedIntervalsDoubleValueProviderEClass,
+                NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MIN_VALUE);
+        this.createEAttribute(this.nestedIntervalsDoubleValueProviderEClass,
+                NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MAX_VALUE);
+
+        this.nestedIntervalsLongValueProviderEClass = this.createEClass(NESTED_INTERVALS_LONG_VALUE_PROVIDER);
+        this.createEAttribute(this.nestedIntervalsLongValueProviderEClass,
+                NESTED_INTERVALS_LONG_VALUE_PROVIDER__MIN_VALUE);
+        this.createEAttribute(this.nestedIntervalsLongValueProviderEClass,
+                NESTED_INTERVALS_LONG_VALUE_PROVIDER__MAX_VALUE);
     }
 
     /**
@@ -1136,7 +1182,8 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         this.profilingMeasurementEClass.getESuperTypes().add(this.getResponseMeasurement());
         this.jmxMeasurementEClass.getESuperTypes().add(this.getResponseMeasurement());
         this.linearValueProviderEClass.getESuperTypes().add(this.getValueProvider());
-        this.nestedIntervalsValueProviderEClass.getESuperTypes().add(this.getValueProvider());
+        this.nestedIntervalsDoubleValueProviderEClass.getESuperTypes().add(this.getValueProvider());
+        this.nestedIntervalsLongValueProviderEClass.getESuperTypes().add(this.getValueProvider());
 
         // Initialize classes and features; add operations and parameters
         this.initEClass(this.experimentRepositoryEClass, ExperimentRepository.class, "ExperimentRepository",
@@ -1333,14 +1380,23 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
                 "folderUri", null, 1, 1, ReconfigurationRulesFolder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        this.initEClass(this.nestedIntervalsValueProviderEClass, NestedIntervalsValueProvider.class,
-                "NestedIntervalsValueProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEAttribute(this.getNestedIntervalsValueProvider_MinValue(), this.ecorePackage.getEDouble(),
-                "minValue", null, 1, 1, NestedIntervalsValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEAttribute(this.getNestedIntervalsValueProvider_MaxValue(), this.ecorePackage.getEDouble(),
-                "maxValue", null, 1, 1, NestedIntervalsValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEClass(this.nestedIntervalsDoubleValueProviderEClass, NestedIntervalsDoubleValueProvider.class,
+                "NestedIntervalsDoubleValueProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEAttribute(this.getNestedIntervalsDoubleValueProvider_MinValue(), this.ecorePackage.getEDouble(),
+                "minValue", null, 1, 1, NestedIntervalsDoubleValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEAttribute(this.getNestedIntervalsDoubleValueProvider_MaxValue(), this.ecorePackage.getEDouble(),
+                "maxValue", null, 1, 1, NestedIntervalsDoubleValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        this.initEClass(this.nestedIntervalsLongValueProviderEClass, NestedIntervalsLongValueProvider.class,
+                "NestedIntervalsLongValueProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEAttribute(this.getNestedIntervalsLongValueProvider_MinValue(), this.ecorePackage.getELong(),
+                "minValue", null, 1, 1, NestedIntervalsLongValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEAttribute(this.getNestedIntervalsLongValueProvider_MaxValue(), this.ecorePackage.getELong(),
+                "maxValue", null, 1, 1, NestedIntervalsLongValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Create resource
         this.createResource(eNS_URI);

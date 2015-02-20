@@ -6,7 +6,7 @@ import org.palladiosimulator.experimentautomation.application.utils.PCMModelHelp
 
 import de.uka.ipd.sdq.pcm.seff.AbstractAction;
 
-public class AbstractActionReplication implements IVariationStrategy {
+public class AbstractActionReplication implements IVariationStrategy<Long> {
 
     /** the action that is to be replicated */
     private AbstractAction action;
@@ -21,9 +21,9 @@ public class AbstractActionReplication implements IVariationStrategy {
     }
 
     @Override
-    public String vary(final Double value) {
+    public String vary(final Long value) {
         AbstractAction lastAction = this.action;
-        for (int i = 0; i < value; i++) {
+        for (long l = 0; l < value; l++) {
             final AbstractAction previousSuccessor = lastAction.getSuccessor_AbstractAction();
             final AbstractAction copy = EcoreHelper.copy(this.action);
             lastAction.setSuccessor_AbstractAction(copy);
@@ -31,7 +31,7 @@ public class AbstractActionReplication implements IVariationStrategy {
                     .getResourceDemandingBehaviour_AbstractAction());
             copy.setPredecessor_AbstractAction(lastAction);
             copy.setSuccessor_AbstractAction(previousSuccessor);
-            copy.setEntityName(copy.getEntityName() + (i + 1));
+            copy.setEntityName(copy.getEntityName() + (l + 1));
             lastAction = copy;
         }
 

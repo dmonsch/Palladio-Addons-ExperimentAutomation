@@ -2,7 +2,7 @@ package org.palladiosimulator.experimentautomation.application.variation.valuepr
 
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
 
-public class LinearValueProviderStrategy implements IValueProviderStrategy {
+public class LinearValueProviderStrategy implements IValueProviderStrategy<Double> {
 
     private final LinearValueProvider specification;
 

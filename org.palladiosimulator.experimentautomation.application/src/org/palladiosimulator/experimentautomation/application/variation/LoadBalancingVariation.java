@@ -14,7 +14,7 @@ import de.uka.ipd.sdq.pcm.seff.ProbabilisticBranchTransition;
 import de.uka.ipd.sdq.pcm.seff.ResourceDemandingSEFF;
 import de.uka.ipd.sdq.pcm.seff.ServiceEffectSpecification;
 
-public class LoadBalancingVariation implements IVariationStrategy {
+public class LoadBalancingVariation implements IVariationStrategy<Long> {
 
     private BasicComponent loadBalancer;
     private static final Logger LOGGER = Logger.getLogger(LoadBalancingVariation.class);
@@ -28,13 +28,13 @@ public class LoadBalancingVariation implements IVariationStrategy {
     }
 
     @Override
-    public String vary(Double value) {
+    public String vary(Long value) {
         String semaphoreResult = adjustSemaphore(value);
         String branchProbresult = adjustBranchProbabilities(value);
         return semaphoreResult + "\n" + branchProbresult;
     }
 
-    private String adjustSemaphore(Double value) {
+    private String adjustSemaphore(long value) {
         PassiveResource semaphore = getFirstPassiveResource(loadBalancer);
         semaphore.getCapacity_PassiveResource().setSpecification(Double.toString(value));
 
@@ -47,7 +47,7 @@ public class LoadBalancingVariation implements IVariationStrategy {
 
     }
 
-    private String adjustBranchProbabilities(Double value) {
+    private String adjustBranchProbabilities(long value) {
         double branchProbability = 1.0 / value;
 
         List<ServiceEffectSpecification> seffs = loadBalancer.getServiceEffectSpecifications__BasicComponent();

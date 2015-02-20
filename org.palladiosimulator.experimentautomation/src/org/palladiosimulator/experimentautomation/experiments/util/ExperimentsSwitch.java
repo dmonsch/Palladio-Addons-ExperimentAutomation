@@ -16,7 +16,8 @@ import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.Modification;
-import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime;
 import org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign;
 import org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider;
@@ -276,11 +277,22 @@ public class ExperimentsSwitch<T> extends Switch<T> {
             }
             return result;
         }
-        case ExperimentsPackage.NESTED_INTERVALS_VALUE_PROVIDER: {
-            final NestedIntervalsValueProvider nestedIntervalsValueProvider = (NestedIntervalsValueProvider) theEObject;
-            T result = this.caseNestedIntervalsValueProvider(nestedIntervalsValueProvider);
+        case ExperimentsPackage.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER: {
+            final NestedIntervalsDoubleValueProvider nestedIntervalsDoubleValueProvider = (NestedIntervalsDoubleValueProvider) theEObject;
+            T result = this.caseNestedIntervalsDoubleValueProvider(nestedIntervalsDoubleValueProvider);
             if (result == null) {
-                result = this.caseValueProvider(nestedIntervalsValueProvider);
+                result = this.caseValueProvider(nestedIntervalsDoubleValueProvider);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
+            return result;
+        }
+        case ExperimentsPackage.NESTED_INTERVALS_LONG_VALUE_PROVIDER: {
+            final NestedIntervalsLongValueProvider nestedIntervalsLongValueProvider = (NestedIntervalsLongValueProvider) theEObject;
+            T result = this.caseNestedIntervalsLongValueProvider(nestedIntervalsLongValueProvider);
+            if (result == null) {
+                result = this.caseValueProvider(nestedIntervalsLongValueProvider);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -623,17 +635,33 @@ public class ExperimentsSwitch<T> extends Switch<T> {
 
     /**
      * Returns the result of interpreting the object as an instance of '
-     * <em>Nested Intervals Value Provider</em>'. <!-- begin-user-doc --> This implementation
+     * <em>Nested Intervals Double Value Provider</em>'. <!-- begin-user-doc --> This implementation
      * returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
      *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
-     *         <em>Nested Intervals Value Provider</em>'.
+     *         <em>Nested Intervals Double Value Provider</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseNestedIntervalsValueProvider(final NestedIntervalsValueProvider object) {
+    public T caseNestedIntervalsDoubleValueProvider(final NestedIntervalsDoubleValueProvider object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '
+     * <em>Nested Intervals Long Value Provider</em>'. <!-- begin-user-doc --> This implementation
+     * returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
+     *
+     * @param object
+     *            the target of the switch.
+     * @return the result of interpreting the object as an instance of '
+     *         <em>Nested Intervals Long Value Provider</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseNestedIntervalsLongValueProvider(final NestedIntervalsLongValueProvider object) {
         return null;
     }
 

@@ -7,7 +7,7 @@ import org.palladiosimulator.experimentautomation.application.utils.PCMModelHelp
 import de.uka.ipd.sdq.pcm.usagemodel.ClosedWorkload;
 import de.uka.ipd.sdq.pcm.usagemodel.UsageScenario;
 
-public class ClosedWorkloadVariation implements IVariationStrategy {
+public class ClosedWorkloadVariation implements IVariationStrategy<Long> {
 
     private static final Logger LOGGER = Logger.getLogger(ClosedWorkloadVariation.class);
 
@@ -28,13 +28,13 @@ public class ClosedWorkloadVariation implements IVariationStrategy {
     }
 
     @Override
-    public String vary(final Double value) {
+    public String vary(final Long value) {
         final int intValue;
         if (value > Integer.MAX_VALUE) {
             LOGGER.warn("Warning: Converted long to int, but the value was larger than MAXINT.");
             intValue = Integer.MAX_VALUE;
         } else {
-            intValue = new Double(value).intValue();
+            intValue = value.intValue();
         }
         this.workload.setPopulation(intValue);
 

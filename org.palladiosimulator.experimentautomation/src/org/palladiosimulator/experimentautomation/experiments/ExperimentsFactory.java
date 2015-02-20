@@ -174,13 +174,22 @@ public interface ExperimentsFactory extends EFactory {
     ReconfigurationRulesFolder createReconfigurationRulesFolder();
 
     /**
-     * Returns a new object of class '<em>Nested Intervals Value Provider</em>'. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * Returns a new object of class '<em>Nested Intervals Double Value Provider</em>'. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
-     * @return a new object of class '<em>Nested Intervals Value Provider</em>'.
+     * @return a new object of class '<em>Nested Intervals Double Value Provider</em>'.
      * @generated
      */
-    NestedIntervalsValueProvider createNestedIntervalsValueProvider();
+    NestedIntervalsDoubleValueProvider createNestedIntervalsDoubleValueProvider();
+
+    /**
+     * Returns a new object of class '<em>Nested Intervals Long Value Provider</em>'. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return a new object of class '<em>Nested Intervals Long Value Provider</em>'.
+     * @generated
+     */
+    NestedIntervalsLongValueProvider createNestedIntervalsLongValueProvider();
 
     /**
      * Returns the package supported by this factory. <!-- begin-user-doc --> <!-- end-user-doc -->

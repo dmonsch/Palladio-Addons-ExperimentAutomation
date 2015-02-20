@@ -6,7 +6,7 @@ import java.util.StringTokenizer;
 
 import org.palladiosimulator.experimentautomation.experiments.SetValueProvider;
 
-public class SetValueProviderStrategy implements IValueProviderStrategy {
+public class SetValueProviderStrategy implements IValueProviderStrategy<Double> {
 
     private final SetValueProvider specification;
     private final List<Double> values;

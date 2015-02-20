@@ -17,8 +17,10 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSim
 import org.palladiosimulator.experimentautomation.application.VariationFactorTuple;
 import org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter;
 import org.palladiosimulator.experimentautomation.application.tooladapter.RunAnalysisJob;
+import org.palladiosimulator.experimentautomation.application.variation.valueprovider.AbstractNestedIntervalsValueProviderStrategy;
 import org.palladiosimulator.experimentautomation.application.variation.valueprovider.IValueProviderStrategy;
-import org.palladiosimulator.experimentautomation.application.variation.valueprovider.NestedIntervalsValueProviderStrategy;
+import org.palladiosimulator.experimentautomation.application.variation.valueprovider.NestedIntervalsDoubleValueProviderStrategy;
+import org.palladiosimulator.experimentautomation.application.variation.valueprovider.NestedIntervalsLongValueProviderStrategy;
 import org.palladiosimulator.experimentautomation.application.variation.valueprovider.ValueProviderFactory;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import org.palladiosimulator.measurementframework.BasicMeasurement;
@@ -40,6 +42,8 @@ import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 
 public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
 
+    private static final Double EPSILON = 0.00001;
+
     private static final MeasuringpointFactory MEASURING_POINT_FACTORY = MeasuringpointFactory.eINSTANCE;
 
     private final IToolAdapter toolAdapter;
@@ -47,7 +51,7 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
     private final AbstractSimulationConfiguration simulationConfiguration;
     private final List<VariationFactorTuple> variationFactorTuples;
     private final int repetition;
-    private final Map<VariationFactorTuple, NestedIntervalsValueProviderStrategy> tuples2nestedIntervals;
+    private final Map<VariationFactorTuple, AbstractNestedIntervalsValueProviderStrategy> tuples2nestedIntervals;
 
     private RunAnalysisJob runAnalysisJob;
 
@@ -66,17 +70,25 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
         this.tuples2nestedIntervals = computeNestedIntervalsValueProviders();
     }
 
-    private Map<VariationFactorTuple, NestedIntervalsValueProviderStrategy> computeNestedIntervalsValueProviders() {
-        final Map<VariationFactorTuple, NestedIntervalsValueProviderStrategy> result;
-        result = new HashMap<VariationFactorTuple, NestedIntervalsValueProviderStrategy>();
+    private Map<VariationFactorTuple, AbstractNestedIntervalsValueProviderStrategy> computeNestedIntervalsValueProviders() {
+        final Map<VariationFactorTuple, AbstractNestedIntervalsValueProviderStrategy> result;
+        result = new HashMap<VariationFactorTuple, AbstractNestedIntervalsValueProviderStrategy>();
 
         for (final VariationFactorTuple variationFactorTuple : this.variationFactorTuples) {
-            final IValueProviderStrategy valueProvider = ValueProviderFactory.createValueProvider(variationFactorTuple
-                    .getVariation().getValueProvider());
-
-            if (valueProvider instanceof NestedIntervalsValueProviderStrategy) {
-                final NestedIntervalsValueProviderStrategy nestedInterval = (NestedIntervalsValueProviderStrategy) valueProvider;
-                result.put(variationFactorTuple, nestedInterval);
+            try {
+                final IValueProviderStrategy<Long> valueProvider = ValueProviderFactory
+                        .createLongValueProvider(variationFactorTuple.getVariation().getValueProvider());
+                if (valueProvider instanceof NestedIntervalsLongValueProviderStrategy) {
+                    final AbstractNestedIntervalsValueProviderStrategy nestedInterval = (NestedIntervalsLongValueProviderStrategy) valueProvider;
+                    result.put(variationFactorTuple, nestedInterval);
+                }
+            } catch (RuntimeException e) {
+                final IValueProviderStrategy<Double> valueProvider = ValueProviderFactory
+                        .createDoubleValueProvider(variationFactorTuple.getVariation().getValueProvider());
+                if (valueProvider instanceof NestedIntervalsDoubleValueProviderStrategy) {
+                    final AbstractNestedIntervalsValueProviderStrategy nestedInterval = (NestedIntervalsDoubleValueProviderStrategy) valueProvider;
+                    result.put(variationFactorTuple, nestedInterval);
+                }
             }
         }
 
@@ -90,10 +102,16 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
     public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
         if (this.tuples2nestedIntervals.size() > 0) {
             for (final VariationFactorTuple variationFactorTuple : this.tuples2nestedIntervals.keySet()) {
-                final NestedIntervalsValueProviderStrategy nestedInterval = this.tuples2nestedIntervals
+                final AbstractNestedIntervalsValueProviderStrategy nestedInterval = this.tuples2nestedIntervals
                         .get(variationFactorTuple);
                 if (this.runAnalysisJob.sloWasViolated()) {
-                    nestedInterval.setMax(nestedInterval.valueAtPosition(0) - 1L);
+                    if (nestedInterval instanceof NestedIntervalsDoubleValueProviderStrategy) {
+                        nestedInterval.setMax((Double) nestedInterval.valueAtPosition(0) - EPSILON);
+                    } else if (nestedInterval instanceof NestedIntervalsLongValueProviderStrategy) {
+                        nestedInterval.setMax((Long) nestedInterval.valueAtPosition(0) - 1L);
+                    } else {
+                        throw new RuntimeException("Unknown nested intervals provider strategy");
+                    }
                 } else {
                     nestedInterval.setMin(nestedInterval.valueAtPosition(0));
                 }
@@ -101,30 +119,41 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
                 if (nestedInterval.isConverged()) {
                     this.tuples2nestedIntervals.remove(variationFactorTuple);
 
+                    // Config
+                    final Map<String, Object> recorderConfigurationMap = runAnalysisJob.getConfiguration();
+
                     // Measurement
                     final Measure<Double, Duration> pointInTimeMeasure = Measure.valueOf(0d, SI.SECOND);
-                    final Measure<Double, Dimensionless> capacityMeasure = Measure.valueOf(
-                            nestedInterval.valueAtPosition(0), Dimensionless.UNIT);
-
                     final List<Measurement> result = new ArrayList<Measurement>(2);
                     result.add(new BasicMeasurement<Double, Duration>(pointInTimeMeasure,
                             MetricDescriptionConstants.POINT_IN_TIME_METRIC));
-                    result.add(new BasicMeasurement<Double, Dimensionless>(capacityMeasure,
-                            MetricDescriptionConstants.USER_CAPACITY));
 
-                    final Measurement resultMeasurement = new TupleMeasurement(result,
-                            MetricDescriptionConstants.USER_CAPACITY_TUPLE);
+                    Measurement resultMeasurement;
+                    if (nestedInterval instanceof NestedIntervalsDoubleValueProviderStrategy) {
+                        final Measure<Double, Duration> capacityMeasure = Measure.valueOf(
+                                (Double) nestedInterval.valueAtPosition(0), SI.SECOND);
+                        result.add(new BasicMeasurement<Double, Duration>(capacityMeasure,
+                                MetricDescriptionConstants.INTER_ARRIVAL_TIME_CAPACITY));
+                        resultMeasurement = new TupleMeasurement(result,
+                                MetricDescriptionConstants.INTER_ARRIVAL_TIME_CAPACITY_TUPLE);
+                        recorderConfigurationMap.put(AbstractRecorderConfiguration.RECORDER_ACCEPTED_METRIC,
+                                MetricDescriptionConstants.INTER_ARRIVAL_TIME_CAPACITY_TUPLE);
+                    } else if (nestedInterval instanceof NestedIntervalsLongValueProviderStrategy) {
+                        final Measure<Long, Dimensionless> capacityMeasure = Measure.valueOf(
+                                (Long) nestedInterval.valueAtPosition(0), Dimensionless.UNIT);
+                        result.add(new BasicMeasurement<Long, Dimensionless>(capacityMeasure,
+                                MetricDescriptionConstants.USER_CAPACITY));
+                        resultMeasurement = new TupleMeasurement(result, MetricDescriptionConstants.USER_CAPACITY_TUPLE);
+                        recorderConfigurationMap.put(AbstractRecorderConfiguration.RECORDER_ACCEPTED_METRIC,
+                                MetricDescriptionConstants.USER_CAPACITY_TUPLE);
+                    } else {
+                        throw new RuntimeException("Unknown nested intervals provider strategy");
+                    }
 
                     // Measuring Point
                     final StringMeasuringPoint capacityMeasuringPoint = MEASURING_POINT_FACTORY
                             .createStringMeasuringPoint(); // FIXME
                     capacityMeasuringPoint.setMeasuringPoint("System Capacity");
-
-                    // Config
-                    final Map<String, Object> recorderConfigurationMap = runAnalysisJob.getConfiguration();
-
-                    recorderConfigurationMap.put(AbstractRecorderConfiguration.RECORDER_ACCEPTED_METRIC,
-                            MetricDescriptionConstants.USER_CAPACITY_TUPLE);
                     recorderConfigurationMap.put(AbstractRecorderConfiguration.MEASURING_POINT, capacityMeasuringPoint);
 
                     // AbstractRecorder

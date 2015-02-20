@@ -9,7 +9,7 @@ import de.uka.ipd.sdq.pcm.core.PCMRandomVariable;
 import de.uka.ipd.sdq.pcm.parameter.VariableUsage;
 import de.uka.ipd.sdq.pcm.usagemodel.EntryLevelSystemCall;
 
-public class SystemCallActionParameterVariation implements IVariationStrategy {
+public class SystemCallActionParameterVariation implements IVariationStrategy<Double> {
 
     private static final Object SEARCH_STRING = "records";
     private VariableUsage variedParameter = null;

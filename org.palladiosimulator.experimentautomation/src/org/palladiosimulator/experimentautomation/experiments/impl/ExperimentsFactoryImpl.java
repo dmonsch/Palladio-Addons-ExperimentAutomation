@@ -18,7 +18,8 @@ import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.Modification;
-import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime;
 import org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign;
 import org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider;
@@ -103,8 +104,10 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
             return this.createInitialModel();
         case ExperimentsPackage.RECONFIGURATION_RULES_FOLDER:
             return this.createReconfigurationRulesFolder();
-        case ExperimentsPackage.NESTED_INTERVALS_VALUE_PROVIDER:
-            return this.createNestedIntervalsValueProvider();
+        case ExperimentsPackage.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER:
+            return this.createNestedIntervalsDoubleValueProvider();
+        case ExperimentsPackage.NESTED_INTERVALS_LONG_VALUE_PROVIDER:
+            return this.createNestedIntervalsLongValueProvider();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -303,9 +306,20 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      * @generated
      */
     @Override
-    public NestedIntervalsValueProvider createNestedIntervalsValueProvider() {
-        final NestedIntervalsValueProviderImpl nestedIntervalsValueProvider = new NestedIntervalsValueProviderImpl();
-        return nestedIntervalsValueProvider;
+    public NestedIntervalsDoubleValueProvider createNestedIntervalsDoubleValueProvider() {
+        final NestedIntervalsDoubleValueProviderImpl nestedIntervalsDoubleValueProvider = new NestedIntervalsDoubleValueProviderImpl();
+        return nestedIntervalsDoubleValueProvider;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public NestedIntervalsLongValueProvider createNestedIntervalsLongValueProvider() {
+        final NestedIntervalsLongValueProviderImpl nestedIntervalsLongValueProvider = new NestedIntervalsLongValueProviderImpl();
+        return nestedIntervalsLongValueProvider;
     }
 
     /**

@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * 
  * @author Sebastian Lehrig
  */
-public interface IVariationStrategy {
+public interface IVariationStrategy<VALUE_TYPE> {
 
     /**
      * Sets the given EObject as the element top be varied.
@@ -31,6 +31,6 @@ public interface IVariationStrategy {
      *            the concrete value to assigned to the varied object.
      * @return a textual description of the variation.
      */
-    public String vary(Double value);
+    public String vary(VALUE_TYPE value);
 
 }

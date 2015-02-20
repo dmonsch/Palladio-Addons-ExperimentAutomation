@@ -72,25 +72,48 @@ public class ComputeVariantsAndAddExperimentJob extends SequentialBlackboardInte
             copy.addAll(variations);
             final Variation variation = copy.remove(0);
 
-            // obtain value provider
-            final IValueProviderStrategy valueProvider = ValueProviderFactory.createValueProvider(variation
-                    .getValueProvider());
+            try {
+                // obtain long value provider
+                final IValueProviderStrategy<Long> valueProvider = ValueProviderFactory
+                        .createLongValueProvider(variation.getValueProvider());
 
-            Double factorLevel = 0.0;
-            int iteration = 0;
-            while (factorLevel <= variation.getMaxValue() && iteration < variation.getMaxVariations()) {
-                factorLevel = valueProvider.valueAtPosition(iteration);
-                if (factorLevel == -1) {
-                    break;
+                long factorLevel = 0;
+                int iteration = 0;
+                while (factorLevel <= (long) variation.getMaxValue() && iteration < variation.getMaxVariations()) {
+                    factorLevel = valueProvider.valueAtPosition(iteration);
+                    if (factorLevel == -1) {
+                        break;
+                    }
+
+                    if (factorLevel >= (long) variation.getMinValue() && factorLevel <= (long) variation.getMaxValue()) {
+                        variationFactorTuples.add(new VariationFactorTuple<Long>(variation, factorLevel));
+                        this.computeVariantsAndAddJob(experiment, simulationConfiguration, copy, variationFactorTuples);
+                        variationFactorTuples.remove(variationFactorTuples.size() - 1);
+                    }
+
+                    iteration++;
                 }
+            } catch (RuntimeException e) {
+                // obtain double value provider
+                final IValueProviderStrategy<Double> valueProvider = ValueProviderFactory
+                        .createDoubleValueProvider(variation.getValueProvider());
 
-                if (factorLevel >= variation.getMinValue() && factorLevel <= variation.getMaxValue()) {
-                    variationFactorTuples.add(new VariationFactorTuple(variation, factorLevel));
-                    this.computeVariantsAndAddJob(experiment, simulationConfiguration, copy, variationFactorTuples);
-                    variationFactorTuples.remove(variationFactorTuples.size() - 1);
+                Double factorLevel = 0.0;
+                int iteration = 0;
+                while (factorLevel <= variation.getMaxValue() && iteration < variation.getMaxVariations()) {
+                    factorLevel = valueProvider.valueAtPosition(iteration);
+                    if (factorLevel == -1.0) {
+                        break;
+                    }
+
+                    if (factorLevel >= variation.getMinValue() && factorLevel <= variation.getMaxValue()) {
+                        variationFactorTuples.add(new VariationFactorTuple<Double>(variation, factorLevel));
+                        this.computeVariantsAndAddJob(experiment, simulationConfiguration, copy, variationFactorTuples);
+                        variationFactorTuples.remove(variationFactorTuples.size() - 1);
+                    }
+
+                    iteration++;
                 }
-
-                iteration++;
             }
         }
     }
