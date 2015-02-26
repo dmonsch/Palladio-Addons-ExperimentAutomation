@@ -14,8 +14,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import monitorrepository.provider.MonitorrepositoryItemProviderAdapterFactory;
-
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IResource;
@@ -673,13 +671,14 @@ IMenuListener, IViewerProvider, IGotoMarker {
         this.adapterFactory.addAdapterFactory(new VariationItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ExperimentsItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new AbstractsimulationItemProviderAdapterFactory());
-        this.adapterFactory.addAdapterFactory(new MonitorrepositoryItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new DlimItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ExperimentDataItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new RepositoryItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new MeasuringpointItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new IdentifierItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new MetricSpecItemProviderAdapterFactory());
+        this.adapterFactory
+        .addAdapterFactory(new org.palladiosimulator.simulizar.monitorrepository.provider.MonitorrepositoryItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new PcmItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new CoreItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new EntityItemProviderAdapterFactory());

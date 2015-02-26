@@ -2,8 +2,6 @@
  */
 package org.palladiosimulator.experimentautomation.experiments.impl;
 
-import monitorrepository.impl.MonitorrepositoryPackageImpl;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -39,6 +37,7 @@ import org.palladiosimulator.experimentautomation.experiments.Variation;
 import org.palladiosimulator.experimentautomation.variation.VariationPackage;
 import org.palladiosimulator.experimentautomation.variation.impl.VariationPackageImpl;
 import org.palladiosimulator.servicelevelobjective.ServicelevelObjectivePackage;
+import org.palladiosimulator.simulizar.monitorrepository.MonitorrepositoryPackage;
 import org.scaledl.usageevolution.UsageevolutionPackage;
 
 import de.uka.ipd.sdq.pcm.allocation.AllocationPackage;
@@ -266,6 +265,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         isInited = true;
 
         // Initialize simple dependencies
+        MonitorrepositoryPackage.eINSTANCE.eClass();
         ServicelevelObjectivePackage.eINSTANCE.eClass();
         UsageevolutionPackage.eINSTANCE.eClass();
 
@@ -276,22 +276,16 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         final AbstractsimulationPackageImpl theAbstractsimulationPackage = (AbstractsimulationPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(AbstractsimulationPackage.eNS_URI) instanceof AbstractsimulationPackageImpl ? EPackage.Registry.INSTANCE
                         .getEPackage(AbstractsimulationPackage.eNS_URI) : AbstractsimulationPackage.eINSTANCE);
-        final MonitorrepositoryPackageImpl theMonitorrepositoryPackage = (MonitorrepositoryPackageImpl) (EPackage.Registry.INSTANCE
-                .getEPackage(monitorrepository.MonitorrepositoryPackage.eNS_URI) instanceof MonitorrepositoryPackageImpl ? EPackage.Registry.INSTANCE
-                        .getEPackage(monitorrepository.MonitorrepositoryPackage.eNS_URI)
-                        : monitorrepository.MonitorrepositoryPackage.eINSTANCE);
 
         // Create package meta-data objects
         theExperimentsPackage.createPackageContents();
         theVariationPackage.createPackageContents();
         theAbstractsimulationPackage.createPackageContents();
-        theMonitorrepositoryPackage.createPackageContents();
 
         // Initialize created meta-data
         theExperimentsPackage.initializePackageContents();
         theVariationPackage.initializePackageContents();
         theAbstractsimulationPackage.initializePackageContents();
-        theMonitorrepositoryPackage.initializePackageContents();
 
         // Mark meta-data to indicate it can't be changed
         theExperimentsPackage.freeze();
@@ -1164,8 +1158,8 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
                 .getEPackage(AllocationPackage.eNS_URI);
         final RepositoryPackage theRepositoryPackage = (RepositoryPackage) EPackage.Registry.INSTANCE
                 .getEPackage(RepositoryPackage.eNS_URI);
-        final monitorrepository.MonitorrepositoryPackage theMonitorrepositoryPackage = (monitorrepository.MonitorrepositoryPackage) EPackage.Registry.INSTANCE
-                .getEPackage(monitorrepository.MonitorrepositoryPackage.eNS_URI);
+        final MonitorrepositoryPackage theMonitorrepositoryPackage = (MonitorrepositoryPackage) EPackage.Registry.INSTANCE
+                .getEPackage(MonitorrepositoryPackage.eNS_URI);
         final ServicelevelObjectivePackage theServicelevelObjectivePackage = (ServicelevelObjectivePackage) EPackage.Registry.INSTANCE
                 .getEPackage(ServicelevelObjectivePackage.eNS_URI);
         final SystemPackage theSystemPackage = (SystemPackage) EPackage.Registry.INSTANCE

@@ -5755,7 +5755,7 @@
       <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Archetype']/@ownedRepresentationExtensions[name='Entities%20With%20Archetypes']/@layers[name='Archetypes']"/>
       <target xmi:type="ecore:EPackage" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//subsystem"/>
     </ownedRepresentations>
-    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_nxzKYAhEEeS9D9QV2TNBhg" name="pms class diagram">
+    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_nxzKYAhEEeS9D9QV2TNBhg" name="monitorrepository class diagram">
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_nxzKZghEEeS9D9QV2TNBhg" source="GMF_DIAGRAMS">
         <data xmi:type="notation:Diagram" xmi:id="_nxzKZwhEEeS9D9QV2TNBhg" type="Sirius" element="_nxzKYAhEEeS9D9QV2TNBhg" measurementUnit="Pixel">
           <children xmi:type="notation:Node" xmi:id="_nxzKaQhEEeS9D9QV2TNBhg" type="2001" element="_nxzKYQhEEeS9D9QV2TNBhg">

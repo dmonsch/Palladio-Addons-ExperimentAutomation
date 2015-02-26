@@ -33,9 +33,12 @@ public class PrepareBlackboardJob extends SequentialBlackboardInteractingJob<MDS
         final ResourceSetPartition pcmPartition = this.getBlackboard().getPartition(
                 LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID);
 
-        // configure PMS model partition
-        final MonitorRepositoryResourceSetPartition pmsPartition = new MonitorRepositoryResourceSetPartition((PCMResourceSetPartition) pcmPartition);
-        this.getBlackboard().addPartition(LoadMonitorRepositoryModelIntoBlackboardJob.MONITOR_REPOSITORY_MODEL_PARTITION_ID, pmsPartition);
+        // configure MonitorRepository model partition
+        final MonitorRepositoryResourceSetPartition monitorRepositoryPartition = new MonitorRepositoryResourceSetPartition(
+                (PCMResourceSetPartition) pcmPartition);
+        this.getBlackboard().addPartition(
+                LoadMonitorRepositoryModelIntoBlackboardJob.MONITOR_REPOSITORY_MODEL_PARTITION_ID,
+                monitorRepositoryPartition);
 
         // configure Usage Evolution model partition
         final UEResourceSetPartition uePartition = new UEResourceSetPartition((PCMResourceSetPartition) pcmPartition);
