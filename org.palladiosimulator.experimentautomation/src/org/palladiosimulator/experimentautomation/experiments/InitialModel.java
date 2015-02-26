@@ -4,7 +4,6 @@ package org.palladiosimulator.experimentautomation.experiments;
 
 import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
-import org.palladiosimulator.simulizar.pms.MonitorRepository;
 import org.scaledl.usageevolution.UsageEvolution;
 
 import de.uka.ipd.sdq.pcm.allocation.Allocation;
@@ -209,12 +208,12 @@ public interface InitialModel extends EObject {
      * <!-- end-user-doc -->
      *
      * @return the value of the '<em>Monitor Repository</em>' reference.
-     * @see #setMonitorRepository(MonitorRepository)
+     * @see #setMonitorRepository(monitorrepository.MonitorRepository)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_MonitorRepository()
      * @model
      * @generated
      */
-    MonitorRepository getMonitorRepository();
+    monitorrepository.MonitorRepository getMonitorRepository();
 
     /**
      * Sets the value of the '
@@ -226,7 +225,7 @@ public interface InitialModel extends EObject {
      * @see #getMonitorRepository()
      * @generated
      */
-    void setMonitorRepository(MonitorRepository value);
+    void setMonitorRepository(monitorrepository.MonitorRepository value);
 
     /**
      * Returns the value of the '<em><b>Service Level Objectives</b></em>' reference. <!--

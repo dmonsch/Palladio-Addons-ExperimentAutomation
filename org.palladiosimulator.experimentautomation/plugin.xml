@@ -51,4 +51,12 @@
             class="org.palladiosimulator.experimentautomation.abstractsimulation.util.AbstractsimulationResourceFactoryImpl"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ExperimentAutomation -->
+      <package
+            uri="http://palladiosimulator.org/SimuLizar/MonitorRepository/1.0"
+            class="monitorrepository.MonitorrepositoryPackage"
+            genModel="model/ExperimentAutomation.genmodel"/>
+   </extension>
+
 </plugin>

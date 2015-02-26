@@ -14,6 +14,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import monitorrepository.provider.MonitorrepositoryItemProviderAdapterFactory;
+
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IResource;
@@ -125,7 +127,6 @@ import org.palladiosimulator.experimentautomation.variation.presentation.Experim
 import org.palladiosimulator.experimentautomation.variation.provider.VariationItemProviderAdapterFactory;
 import org.palladiosimulator.metricspec.provider.MetricSpecItemProviderAdapterFactory;
 import org.palladiosimulator.servicelevelobjective.provider.ServicelevelObjectiveItemProviderAdapterFactory;
-import org.palladiosimulator.simulizar.pms.provider.PmsItemProviderAdapterFactory;
 import org.scaledl.usageevolution.provider.UsageevolutionItemProviderAdapterFactory;
 
 import tools.descartes.dlim.provider.DlimItemProviderAdapterFactory;
@@ -677,6 +678,7 @@ ISelectionProvider, IMenuListener, IViewerProvider, IGotoMarker {
         this.adapterFactory.addAdapterFactory(new VariationItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ExperimentsItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new AbstractsimulationItemProviderAdapterFactory());
+        this.adapterFactory.addAdapterFactory(new MonitorrepositoryItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new DlimItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ExperimentDataItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new RepositoryItemProviderAdapterFactory());
@@ -704,7 +706,6 @@ ISelectionProvider, IMenuListener, IViewerProvider, IGotoMarker {
         this.adapterFactory.addAdapterFactory(new ResourceenvironmentItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new AllocationItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new SubsystemItemProviderAdapterFactory());
-        this.adapterFactory.addAdapterFactory(new PmsItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ProbfunctionItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ServicelevelObjectiveItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new StoexItemProviderAdapterFactory());

@@ -12,7 +12,6 @@ import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
-import org.palladiosimulator.simulizar.pms.MonitorRepository;
 import org.scaledl.usageevolution.UsageEvolution;
 
 import de.uka.ipd.sdq.pcm.allocation.Allocation;
@@ -124,7 +123,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      * @generated
      * @ordered
      */
-    protected MonitorRepository monitorRepository;
+    protected monitorrepository.MonitorRepository monitorRepository;
 
     /**
      * The cached value of the '{@link #getServiceLevelObjectives()
@@ -427,10 +426,10 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      * @generated
      */
     @Override
-    public MonitorRepository getMonitorRepository() {
+    public monitorrepository.MonitorRepository getMonitorRepository() {
         if (this.monitorRepository != null && this.monitorRepository.eIsProxy()) {
             final InternalEObject oldMonitorRepository = (InternalEObject) this.monitorRepository;
-            this.monitorRepository = (MonitorRepository) this.eResolveProxy(oldMonitorRepository);
+            this.monitorRepository = (monitorrepository.MonitorRepository) this.eResolveProxy(oldMonitorRepository);
             if (this.monitorRepository != oldMonitorRepository) {
                 if (this.eNotificationRequired()) {
                     this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
@@ -447,7 +446,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      *
      * @generated
      */
-    public MonitorRepository basicGetMonitorRepository() {
+    public monitorrepository.MonitorRepository basicGetMonitorRepository() {
         return this.monitorRepository;
     }
 
@@ -457,8 +456,8 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      * @generated
      */
     @Override
-    public void setMonitorRepository(final MonitorRepository newMonitorRepository) {
-        final MonitorRepository oldMonitorRepository = this.monitorRepository;
+    public void setMonitorRepository(final monitorrepository.MonitorRepository newMonitorRepository) {
+        final monitorrepository.MonitorRepository oldMonitorRepository = this.monitorRepository;
         this.monitorRepository = newMonitorRepository;
         if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET,
@@ -782,7 +781,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
             this.setReconfigurationRules((ReconfigurationRulesFolder) newValue);
             return;
         case ExperimentsPackage.INITIAL_MODEL__MONITOR_REPOSITORY:
-            this.setMonitorRepository((MonitorRepository) newValue);
+            this.setMonitorRepository((monitorrepository.MonitorRepository) newValue);
             return;
         case ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES:
             this.setServiceLevelObjectives((ServiceLevelObjectiveRepository) newValue);
@@ -827,7 +826,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
             this.setReconfigurationRules((ReconfigurationRulesFolder) null);
             return;
         case ExperimentsPackage.INITIAL_MODEL__MONITOR_REPOSITORY:
-            this.setMonitorRepository((MonitorRepository) null);
+            this.setMonitorRepository((monitorrepository.MonitorRepository) null);
             return;
         case ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES:
             this.setServiceLevelObjectives((ServiceLevelObjectiveRepository) null);

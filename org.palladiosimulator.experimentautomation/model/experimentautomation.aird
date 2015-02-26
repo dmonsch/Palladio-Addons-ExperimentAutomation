@@ -4,7 +4,7 @@
   <models xmi:type="ecore:EPackage" href="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="http://www.eclipse.org/emf/2002/Ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#/"/>
-  <models xmi:type="ecore:EPackage" href="platform:/resource/org.palladiosimulator.simulizar.pms/model/pms.ecore#/"/>
+  <models xmi:type="ecore:EPackage" href="platform:/resource/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/org.palladiosimulator.edp2/model/EDP2.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#/"/>
@@ -3291,8 +3291,8 @@
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_-g8aEBZhEeSOwq7oB4WALw" name="MonitorRepository" visible="false" tooltipText="" incomingEdges="_-h-U0BZhEeSOwq7oB4WALw">
-        <target xmi:type="ecore:EClass" href="platform:/resource/org.palladiosimulator.simulizar.pms/model/pms.ecore#//MonitorRepository"/>
-        <semanticElements xmi:type="ecore:EClass" href="platform:/resource/org.palladiosimulator.simulizar.pms/model/pms.ecore#//MonitorRepository"/>
+        <target xmi:type="ecore:EClass" href="platform:/resource/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.ecore#//MonitorRepository"/>
+        <semanticElements xmi:type="ecore:EClass" href="platform:/resource/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.ecore#//MonitorRepository"/>
         <decorations xmi:type="viewpoint:Decoration" xmi:id="_-hvrVBZhEeSOwq7oB4WALw">
           <description xmi:type="description:SemanticBasedDecoration" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='External']"/>
         </decorations>
@@ -3681,8 +3681,8 @@
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_yGkvgBffEeSoUsjueZK-JA" name="MonitorRepository" tooltipText="" incomingEdges="_MCSNQLeGEeSV66VpGnkeFA" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="platform:/resource/org.palladiosimulator.simulizar.pms/model/pms.ecore#//MonitorRepository"/>
-        <semanticElements xmi:type="ecore:EClass" href="platform:/resource/org.palladiosimulator.simulizar.pms/model/pms.ecore#//MonitorRepository"/>
+        <target xmi:type="ecore:EClass" href="platform:/resource/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.ecore#//MonitorRepository"/>
+        <semanticElements xmi:type="ecore:EClass" href="platform:/resource/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.ecore#//MonitorRepository"/>
         <decorations xmi:type="viewpoint:Decoration" xmi:id="_yHOPwRffEeSoUsjueZK-JA">
           <description xmi:type="description:SemanticBasedDecoration" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='External']"/>
         </decorations>
@@ -5773,8 +5773,8 @@
         </data>
       </ownedAnnotationEntries>
       <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_nxzKYQhEEeS9D9QV2TNBhg" width="-1" height="-1">
-        <target xmi:type="ecore:EPackage" href="platform:/resource/org.palladiosimulator.simulizar.pms/model/pms.ecore#/"/>
-        <semanticElements xmi:type="ecore:EPackage" href="platform:/resource/org.palladiosimulator.simulizar.pms/model/pms.ecore#/"/>
+        <target xmi:type="ecore:EPackage" href="platform:/resource/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.ecore#/"/>
+        <semanticElements xmi:type="ecore:EPackage" href="platform:/resource/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.ecore#/"/>
         <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_nxzKYghEEeS9D9QV2TNBhg" showIcon="false" labelPosition="node" workspacePath="/org.eclipse.emf.ecoretools.design/icons/full/back/empty.svg">
           <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_nxzKYwhEEeS9D9QV2TNBhg"/>
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@nodeMappings[name='Empty%20Diagram']/@style"/>
@@ -5788,7 +5788,7 @@
       <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Package']"/>
       <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Validation']"/>
       <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Archetype']/@ownedRepresentationExtensions[name='Entities%20With%20Archetypes']/@layers[name='Archetypes']"/>
-      <target xmi:type="ecore:EPackage" href="platform:/resource/org.palladiosimulator.simulizar.pms/model/pms.ecore#/"/>
+      <target xmi:type="ecore:EPackage" href="platform:/resource/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.ecore#/"/>
     </ownedRepresentations>
     <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_nyIhkAhEEeS9D9QV2TNBhg" name="models class diagram">
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_nyIhlghEEeS9D9QV2TNBhg" source="GMF_DIAGRAMS">

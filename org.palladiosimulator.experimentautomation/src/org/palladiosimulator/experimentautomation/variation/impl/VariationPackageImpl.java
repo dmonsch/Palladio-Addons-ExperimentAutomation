@@ -2,6 +2,8 @@
  */
 package org.palladiosimulator.experimentautomation.variation.impl;
 
+import monitorrepository.impl.MonitorrepositoryPackageImpl;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -18,7 +20,6 @@ import org.palladiosimulator.experimentautomation.variation.VariationPackage;
 import org.palladiosimulator.experimentautomation.variation.VariationRepository;
 import org.palladiosimulator.experimentautomation.variation.VariationType;
 import org.palladiosimulator.servicelevelobjective.ServicelevelObjectivePackage;
-import org.palladiosimulator.simulizar.pms.PmsPackage;
 import org.scaledl.usageevolution.UsageevolutionPackage;
 
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
@@ -109,7 +110,6 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
         isInited = true;
 
         // Initialize simple dependencies
-        PmsPackage.eINSTANCE.eClass();
         ServicelevelObjectivePackage.eINSTANCE.eClass();
         UsageevolutionPackage.eINSTANCE.eClass();
 
@@ -120,16 +120,22 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
         final AbstractsimulationPackageImpl theAbstractsimulationPackage = (AbstractsimulationPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(AbstractsimulationPackage.eNS_URI) instanceof AbstractsimulationPackageImpl ? EPackage.Registry.INSTANCE
                         .getEPackage(AbstractsimulationPackage.eNS_URI) : AbstractsimulationPackage.eINSTANCE);
+        final MonitorrepositoryPackageImpl theMonitorrepositoryPackage = (MonitorrepositoryPackageImpl) (EPackage.Registry.INSTANCE
+                .getEPackage(monitorrepository.MonitorrepositoryPackage.eNS_URI) instanceof MonitorrepositoryPackageImpl ? EPackage.Registry.INSTANCE
+                        .getEPackage(monitorrepository.MonitorrepositoryPackage.eNS_URI)
+                        : monitorrepository.MonitorrepositoryPackage.eINSTANCE);
 
         // Create package meta-data objects
         theVariationPackage.createPackageContents();
         theExperimentsPackage.createPackageContents();
         theAbstractsimulationPackage.createPackageContents();
+        theMonitorrepositoryPackage.createPackageContents();
 
         // Initialize created meta-data
         theVariationPackage.initializePackageContents();
         theExperimentsPackage.initializePackageContents();
         theAbstractsimulationPackage.initializePackageContents();
+        theMonitorrepositoryPackage.initializePackageContents();
 
         // Mark meta-data to indicate it can't be changed
         theVariationPackage.freeze();

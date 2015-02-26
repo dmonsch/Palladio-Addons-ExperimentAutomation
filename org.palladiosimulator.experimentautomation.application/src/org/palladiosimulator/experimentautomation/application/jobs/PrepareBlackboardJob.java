@@ -4,7 +4,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadMonitorRepositoryModelIntoBlackboardJob;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadSDMModelsIntoBlackboardJob;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadUEModelIntoBlackboardJob;
-import org.palladiosimulator.simulizar.launcher.partitions.PMSResourceSetPartition;
+import org.palladiosimulator.simulizar.launcher.partitions.MonitorRepositoryResourceSetPartition;
 import org.palladiosimulator.simulizar.launcher.partitions.SDMResourceSetPartition;
 import org.palladiosimulator.simulizar.launcher.partitions.UEResourceSetPartition;
 
@@ -34,7 +34,7 @@ public class PrepareBlackboardJob extends SequentialBlackboardInteractingJob<MDS
                 LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID);
 
         // configure PMS model partition
-        final PMSResourceSetPartition pmsPartition = new PMSResourceSetPartition((PCMResourceSetPartition) pcmPartition);
+        final MonitorRepositoryResourceSetPartition pmsPartition = new MonitorRepositoryResourceSetPartition((PCMResourceSetPartition) pcmPartition);
         this.getBlackboard().addPartition(LoadMonitorRepositoryModelIntoBlackboardJob.MONITOR_REPOSITORY_MODEL_PARTITION_ID, pmsPartition);
 
         // configure Usage Evolution model partition

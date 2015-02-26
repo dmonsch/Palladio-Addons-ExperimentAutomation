@@ -2,6 +2,8 @@
  */
 package org.palladiosimulator.experimentautomation.experiments.impl;
 
+import monitorrepository.impl.MonitorrepositoryPackageImpl;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -37,7 +39,6 @@ import org.palladiosimulator.experimentautomation.experiments.Variation;
 import org.palladiosimulator.experimentautomation.variation.VariationPackage;
 import org.palladiosimulator.experimentautomation.variation.impl.VariationPackageImpl;
 import org.palladiosimulator.servicelevelobjective.ServicelevelObjectivePackage;
-import org.palladiosimulator.simulizar.pms.PmsPackage;
 import org.scaledl.usageevolution.UsageevolutionPackage;
 
 import de.uka.ipd.sdq.pcm.allocation.AllocationPackage;
@@ -265,7 +266,6 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         isInited = true;
 
         // Initialize simple dependencies
-        PmsPackage.eINSTANCE.eClass();
         ServicelevelObjectivePackage.eINSTANCE.eClass();
         UsageevolutionPackage.eINSTANCE.eClass();
 
@@ -276,16 +276,22 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         final AbstractsimulationPackageImpl theAbstractsimulationPackage = (AbstractsimulationPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(AbstractsimulationPackage.eNS_URI) instanceof AbstractsimulationPackageImpl ? EPackage.Registry.INSTANCE
                         .getEPackage(AbstractsimulationPackage.eNS_URI) : AbstractsimulationPackage.eINSTANCE);
+        final MonitorrepositoryPackageImpl theMonitorrepositoryPackage = (MonitorrepositoryPackageImpl) (EPackage.Registry.INSTANCE
+                .getEPackage(monitorrepository.MonitorrepositoryPackage.eNS_URI) instanceof MonitorrepositoryPackageImpl ? EPackage.Registry.INSTANCE
+                        .getEPackage(monitorrepository.MonitorrepositoryPackage.eNS_URI)
+                        : monitorrepository.MonitorrepositoryPackage.eINSTANCE);
 
         // Create package meta-data objects
         theExperimentsPackage.createPackageContents();
         theVariationPackage.createPackageContents();
         theAbstractsimulationPackage.createPackageContents();
+        theMonitorrepositoryPackage.createPackageContents();
 
         // Initialize created meta-data
         theExperimentsPackage.initializePackageContents();
         theVariationPackage.initializePackageContents();
         theAbstractsimulationPackage.initializePackageContents();
+        theMonitorrepositoryPackage.initializePackageContents();
 
         // Mark meta-data to indicate it can't be changed
         theExperimentsPackage.freeze();
@@ -1158,7 +1164,8 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
                 .getEPackage(AllocationPackage.eNS_URI);
         final RepositoryPackage theRepositoryPackage = (RepositoryPackage) EPackage.Registry.INSTANCE
                 .getEPackage(RepositoryPackage.eNS_URI);
-        final PmsPackage thePmsPackage = (PmsPackage) EPackage.Registry.INSTANCE.getEPackage(PmsPackage.eNS_URI);
+        final monitorrepository.MonitorrepositoryPackage theMonitorrepositoryPackage = (monitorrepository.MonitorrepositoryPackage) EPackage.Registry.INSTANCE
+                .getEPackage(monitorrepository.MonitorrepositoryPackage.eNS_URI);
         final ServicelevelObjectivePackage theServicelevelObjectivePackage = (ServicelevelObjectivePackage) EPackage.Registry.INSTANCE
                 .getEPackage(ServicelevelObjectivePackage.eNS_URI);
         final SystemPackage theSystemPackage = (SystemPackage) EPackage.Registry.INSTANCE
@@ -1353,9 +1360,10 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         this.initEReference(this.getInitialModel_ReconfigurationRules(), this.getReconfigurationRulesFolder(), null,
                 "reconfigurationRules", null, 0, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getInitialModel_MonitorRepository(), thePmsPackage.getMonitorRepository(), null,
-                "monitorRepository", null, 0, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getInitialModel_MonitorRepository(),
+                theMonitorrepositoryPackage.getMonitorRepository(), null, "monitorRepository", null, 0, 1,
+                InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEReference(this.getInitialModel_ServiceLevelObjectives(),
                 theServicelevelObjectivePackage.getServiceLevelObjectiveRepository(), null, "serviceLevelObjectives",
                 null, 0, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,

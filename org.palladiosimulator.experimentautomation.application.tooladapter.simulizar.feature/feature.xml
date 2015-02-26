@@ -33,7 +33,7 @@
       <import plugin="de.uka.ipd.sdq.identifier"/>
       <import plugin="org.palladiosimulator.metricspec"/>
       <import plugin="de.uka.ipd.sdq.pcm"/>
-      <import plugin="org.palladiosimulator.simulizar.pms"/>
+      <import plugin="org.palladiosimulator.simulizar.monitorrepository"/>
       <import plugin="de.uka.ipd.sdq.probfunction"/>
       <import plugin="de.uka.ipd.sdq.stoex"/>
       <import plugin="de.uka.ipd.sdq.units"/>
