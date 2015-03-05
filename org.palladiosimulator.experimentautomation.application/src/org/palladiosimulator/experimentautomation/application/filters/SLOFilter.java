@@ -8,7 +8,7 @@ import org.eclipse.ui.IPersistableElement;
 import org.palladiosimulator.edp2.datastream.IDataSource;
 import org.palladiosimulator.edp2.datastream.configurable.PropertyConfigurable;
 import org.palladiosimulator.edp2.datastream.filter.AbstractFilter;
-import org.palladiosimulator.measurementframework.Measurement;
+import org.palladiosimulator.measurementframework.MeasuringValue;
 import org.palladiosimulator.metricspec.constants.MetricDescriptionConstants;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjective;
 
@@ -69,7 +69,7 @@ public class SLOFilter extends AbstractFilter implements IPersistable, IPersista
             "rawtypes", "unchecked"
     })
     @Override
-    protected boolean shouldSkip(final Measurement measurement) {
+    protected boolean shouldSkip(final MeasuringValue measurement) {
         if (this.getConfiguration().isPropertyNotSet(SLOFilterConfiguration.SLO_KEY)) {
             return false;
         }

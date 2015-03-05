@@ -24,7 +24,7 @@ import org.palladiosimulator.experimentautomation.application.variation.valuepro
 import org.palladiosimulator.experimentautomation.application.variation.valueprovider.ValueProviderFactory;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import org.palladiosimulator.measurementframework.BasicMeasurement;
-import org.palladiosimulator.measurementframework.Measurement;
+import org.palladiosimulator.measurementframework.MeasuringValue;
 import org.palladiosimulator.measurementframework.TupleMeasurement;
 import org.palladiosimulator.metricspec.constants.MetricDescriptionConstants;
 import org.palladiosimulator.recorderframework.AbstractRecorder;
@@ -124,11 +124,11 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
 
                     // Measurement
                     final Measure<Double, Duration> pointInTimeMeasure = Measure.valueOf(0d, SI.SECOND);
-                    final List<Measurement> result = new ArrayList<Measurement>(2);
+                    final List<MeasuringValue> result = new ArrayList<MeasuringValue>(2);
                     result.add(new BasicMeasurement<Double, Duration>(pointInTimeMeasure,
                             MetricDescriptionConstants.POINT_IN_TIME_METRIC));
 
-                    Measurement resultMeasurement;
+                    MeasuringValue resultMeasurement;
                     if (nestedInterval instanceof NestedIntervalsDoubleValueProviderStrategy) {
                         final Measure<Double, Duration> capacityMeasure = Measure.valueOf(
                                 (Double) nestedInterval.valueAtPosition(0), SI.SECOND);

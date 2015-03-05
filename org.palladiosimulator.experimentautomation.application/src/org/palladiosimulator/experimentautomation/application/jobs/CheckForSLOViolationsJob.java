@@ -13,7 +13,7 @@ import org.palladiosimulator.edp2.impl.RepositoryManager;
 import org.palladiosimulator.edp2.models.ExperimentData.ExperimentGroup;
 import org.palladiosimulator.edp2.models.ExperimentData.ExperimentRun;
 import org.palladiosimulator.edp2.models.ExperimentData.ExperimentSetting;
-import org.palladiosimulator.edp2.models.ExperimentData.Measurements;
+import org.palladiosimulator.edp2.models.ExperimentData.Measurement;
 import org.palladiosimulator.edp2.models.ExperimentData.RawMeasurements;
 import org.palladiosimulator.edp2.models.Repository.Repository;
 import org.palladiosimulator.edp2.util.MeasurementsUtility;
@@ -22,7 +22,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasou
 import org.palladiosimulator.experimentautomation.application.filters.SLOFilter;
 import org.palladiosimulator.experimentautomation.application.filters.SLOFilterConfiguration;
 import org.palladiosimulator.experimentautomation.application.tooladapter.RunAnalysisJob;
-import org.palladiosimulator.measurementframework.Measurement;
+import org.palladiosimulator.measurementframework.MeasuringValue;
 import org.palladiosimulator.metricspec.MetricDescription;
 import org.palladiosimulator.metricspec.MetricSetDescription;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjective;
@@ -113,8 +113,8 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
         long sloViolations = 0L;
         for (final ServiceLevelObjective serviceLevelObjective : this.serviceLevelObjectives
                 .getServicelevelobjectives()) {
-            final Measurements measurements = findMeasurements(experimentRun.getMeasurements(), serviceLevelObjective);
-            final RawMeasurements rawMeasurements = measurements.getMeasurementsRanges().get(0).getRawMeasurements();
+            final Measurement measurement = findMeasurement(experimentRun.getMeasurement(), serviceLevelObjective);
+            final RawMeasurements rawMeasurements = measurement.getMeasurementRanges().get(0).getRawMeasurements();
 
             final Map<String, Object> properties = new HashMap<String, Object>(1);
             properties.put(SLOFilterConfiguration.SLO_KEY, serviceLevelObjective);
@@ -122,7 +122,7 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
             final IDataSource dataSource = new Edp2DataTupleDataSource(rawMeasurements);
             final SLOFilter sloFilter = new SLOFilter(dataSource);
             sloFilter.setProperties(properties);
-            final IDataStream<Measurement> dataStream = sloFilter.getDataStream();
+            final IDataStream<MeasuringValue> dataStream = sloFilter.getDataStream();
 
             sloViolations += dataStream.size();
             dataStream.close();
@@ -135,7 +135,7 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
      * Finds the measurements referenced by the SLO in the given measurements lists. For
      * identification, this methods tries to match metric IDs and measuring point names.
      * 
-     * @param measurementsList
+     * @param measurementList
      *            the list of measurements to be investigated for a match.
      * @param serviceLevelObjective
      *            the SLO providing metric and measuring point for matching.
@@ -143,12 +143,12 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
      * @throws RuntimeException
      *             if no measurements object can be found.
      */
-    private Measurements findMeasurements(final List<Measurements> measurementsList,
+    private Measurement findMeasurement(final List<Measurement> measurementList,
             final ServiceLevelObjective serviceLevelObjective) {
-        for (final Measurements measurements : measurementsList) {
-            if (containsMetric(measurements.getMeasure().getMetric(), serviceLevelObjective.getMetricDescription())) {
-                final String measureMeasuringPoint = MeasuringPointUtility.measuringPointToString(measurements
-                        .getMeasure().getMeasuringPoint());
+        for (final Measurement measurement : measurementList) {
+            if (containsMetric(measurement.getMeasuringType().getMetric(), serviceLevelObjective.getMetricDescription())) {
+                final String measureMeasuringPoint = MeasuringPointUtility.measuringPointToString(measurement
+                        .getMeasuringType().getMeasuringPoint());
                 final String sloMeasuringPoint = MeasuringPointUtility.measuringPointToString(serviceLevelObjective
                         .getMeasuringPoint());
 
@@ -165,7 +165,7 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
                 // they reference the same entity. Options should be discussed if this becomes an
                 // important issue. [Lehrig]
                 if (measureMeasuringPoint.equals(sloMeasuringPoint)) {
-                    return measurements;
+                    return measurement;
                 }
             }
         }
