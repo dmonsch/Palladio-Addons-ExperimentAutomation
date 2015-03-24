@@ -17,7 +17,6 @@ import org.palladiosimulator.edp2.models.ExperimentData.Measurement;
 import org.palladiosimulator.edp2.models.ExperimentData.RawMeasurements;
 import org.palladiosimulator.edp2.models.Repository.Repository;
 import org.palladiosimulator.edp2.util.MeasurementsUtility;
-import org.palladiosimulator.edp2.util.MeasuringPointUtility;
 import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource;
 import org.palladiosimulator.experimentautomation.application.filters.SLOFilter;
 import org.palladiosimulator.experimentautomation.application.filters.SLOFilterConfiguration;
@@ -147,10 +146,9 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
             final ServiceLevelObjective serviceLevelObjective) {
         for (final Measurement measurement : measurementList) {
             if (containsMetric(measurement.getMeasuringType().getMetric(), serviceLevelObjective.getMetricDescription())) {
-                final String measureMeasuringPoint = MeasuringPointUtility.measuringPointToString(measurement
-                        .getMeasuringType().getMeasuringPoint());
-                final String sloMeasuringPoint = MeasuringPointUtility.measuringPointToString(serviceLevelObjective
-                        .getMeasuringPoint());
+                final String measureMeasuringPoint = measurement.getMeasuringType().getMeasuringPoint()
+                        .getStringRepresentation();
+                final String sloMeasuringPoint = serviceLevelObjective.getMeasuringPoint().getStringRepresentation();
 
                 // TODO Comparing the name of Measuring points is not the best solution (as the name
                 // is generally not unique). I see three options, all requiring some architectural
