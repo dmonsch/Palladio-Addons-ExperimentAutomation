@@ -1,54 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.0"?>
-
-<!--
--->
-
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated ExperimentAutomation -->
-      <package
-            uri="http://palladiosimulator.org/ExperimentAutomation/Variation/1.0"
-            class="org.palladiosimulator.experimentautomation.variation.VariationPackage"
-            genModel="model/ExperimentAutomation.genmodel"/>
+      <package uri="http://palladiosimulator.org/ExperimentAutomation/Variation/1.0" class="org.palladiosimulator.experimentautomation.variation.VariationPackage" genModel="model/ExperimentAutomation.genmodel"></package>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <!-- @generated ExperimentAutomation -->
-      <parser
-            type="variation"
-            class="org.palladiosimulator.experimentautomation.variation.util.VariationResourceFactoryImpl"/>
+      <parser type="variation" class="org.palladiosimulator.experimentautomation.variation.util.VariationResourceFactoryImpl"></parser>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated ExperimentAutomation -->
-      <package
-            uri="http://palladiosimulator.org/ExperimentAutomation/Experiments/1.0"
-            class="org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage"
-            genModel="model/ExperimentAutomation.genmodel"/>
+      <package uri="http://palladiosimulator.org/ExperimentAutomation/Experiments/1.0" class="org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage" genModel="model/ExperimentAutomation.genmodel"></package>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <!-- @generated ExperimentAutomation -->
-      <parser
-            type="experiments"
-            class="org.palladiosimulator.experimentautomation.experiments.util.ExperimentsResourceFactoryImpl"/>
+      <parser type="experiments" class="org.palladiosimulator.experimentautomation.experiments.util.ExperimentsResourceFactoryImpl"></parser>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated ExperimentAutomation -->
-      <package
-            uri="http://palladiosimulator.org/ExperimentAutomation/AbstractSimulation/1.0"
-            class="org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage"
-            genModel="model/ExperimentAutomation.genmodel"/>
+      <package uri="http://palladiosimulator.org/ExperimentAutomation/AbstractSimulation/1.0" class="org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage" genModel="model/ExperimentAutomation.genmodel"></package>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <!-- @generated ExperimentAutomation -->
-      <parser
-            type="abstractsimulation"
-            class="org.palladiosimulator.experimentautomation.abstractsimulation.util.AbstractsimulationResourceFactoryImpl"/>
+      <parser type="abstractsimulation" class="org.palladiosimulator.experimentautomation.abstractsimulation.util.AbstractsimulationResourceFactoryImpl"></parser>
    </extension>
 
 </plugin>
