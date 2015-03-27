@@ -19,7 +19,9 @@ import org.palladiosimulator.experimentautomation.experiments.FractionalFactoria
 import org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
+import org.palladiosimulator.experimentautomation.experiments.JobExtensionModification;
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.Modification;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.ObjectModification;
@@ -212,6 +214,20 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      * @generated
      */
     private EClass nestedIntervalsLongValueProviderEClass = null;
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    private EClass modificationEClass = null;
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    private EClass jobExtensionModificationEClass = null;
 
     /**
      * Creates an instance of the model <b>Package</b>, registered with
@@ -1001,6 +1017,36 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      * @generated
      */
     @Override
+    public EClass getModification() {
+        return this.modificationEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EClass getJobExtensionModification() {
+        return this.jobExtensionModificationEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EAttribute getJobExtensionModification_ExtensionID() {
+        return (EAttribute) this.jobExtensionModificationEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
     public ExperimentsFactory getExperimentsFactory() {
         return (ExperimentsFactory) this.getEFactoryInstance();
     }
@@ -1121,6 +1167,11 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
                 NESTED_INTERVALS_LONG_VALUE_PROVIDER__MIN_VALUE);
         this.createEAttribute(this.nestedIntervalsLongValueProviderEClass,
                 NESTED_INTERVALS_LONG_VALUE_PROVIDER__MAX_VALUE);
+
+        this.modificationEClass = this.createEClass(MODIFICATION);
+
+        this.jobExtensionModificationEClass = this.createEClass(JOB_EXTENSION_MODIFICATION);
+        this.createEAttribute(this.jobExtensionModificationEClass, JOB_EXTENSION_MODIFICATION__EXTENSION_ID);
     }
 
     /**
@@ -1183,8 +1234,10 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         this.profilingMeasurementEClass.getESuperTypes().add(this.getResponseMeasurement());
         this.jmxMeasurementEClass.getESuperTypes().add(this.getResponseMeasurement());
         this.linearValueProviderEClass.getESuperTypes().add(this.getValueProvider());
+        this.objectModificationEClass.getESuperTypes().add(this.getModification());
         this.nestedIntervalsDoubleValueProviderEClass.getESuperTypes().add(this.getValueProvider());
         this.nestedIntervalsLongValueProviderEClass.getESuperTypes().add(this.getValueProvider());
+        this.jobExtensionModificationEClass.getESuperTypes().add(this.getModification());
 
         // Initialize classes and features; add operations and parameters
         this.initEClass(this.experimentRepositoryEClass, ExperimentRepository.class, "ExperimentRepository",
@@ -1198,9 +1251,9 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         this.initEReference(this.getExperiment_Variations(), this.getVariation(), null, "variations", null, 0, -1,
                 Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEReference(this.getExperiment_Modifications(), this.getObjectModification(), null, "modifications",
-                null, 0, -1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getExperiment_Modifications(), this.getModification(), null, "modifications", null, 0,
+                -1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEAttribute(this.getExperiment_Id(), this.ecorePackage.getEString(), "id", null, 1, 1,
                 Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, !IS_ORDERED);
@@ -1399,6 +1452,15 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         this.initEAttribute(this.getNestedIntervalsLongValueProvider_MaxValue(), this.ecorePackage.getELong(),
                 "maxValue", null, 1, 1, NestedIntervalsLongValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        this.initEClass(this.modificationEClass, Modification.class, "Modification", IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+
+        this.initEClass(this.jobExtensionModificationEClass, JobExtensionModification.class,
+                "JobExtensionModification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEAttribute(this.getJobExtensionModification_ExtensionID(), this.ecorePackage.getEString(),
+                "extensionID", "org.palladiosimulator.quality.scalability", 0, 1, JobExtensionModification.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Create resource
         this.createResource(eNS_URI);

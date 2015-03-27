@@ -14,7 +14,9 @@ import org.palladiosimulator.experimentautomation.experiments.FractionalFactoria
 import org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
+import org.palladiosimulator.experimentautomation.experiments.JobExtensionModification;
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.Modification;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.ObjectModification;
@@ -257,6 +259,9 @@ public class ExperimentsSwitch<T> extends Switch<T> {
             final ObjectModification objectModification = (ObjectModification) theEObject;
             T result = this.caseObjectModification(objectModification);
             if (result == null) {
+                result = this.caseModification(objectModification);
+            }
+            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -293,6 +298,25 @@ public class ExperimentsSwitch<T> extends Switch<T> {
             T result = this.caseNestedIntervalsLongValueProvider(nestedIntervalsLongValueProvider);
             if (result == null) {
                 result = this.caseValueProvider(nestedIntervalsLongValueProvider);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
+            return result;
+        }
+        case ExperimentsPackage.MODIFICATION: {
+            final Modification modification = (Modification) theEObject;
+            T result = this.caseModification(modification);
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
+            return result;
+        }
+        case ExperimentsPackage.JOB_EXTENSION_MODIFICATION: {
+            final JobExtensionModification jobExtensionModification = (JobExtensionModification) theEObject;
+            T result = this.caseJobExtensionModification(jobExtensionModification);
+            if (result == null) {
+                result = this.caseModification(jobExtensionModification);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -663,6 +687,37 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseNestedIntervalsLongValueProvider(final NestedIntervalsLongValueProvider object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Modification</em>'. <!--
+     * begin-user-doc --> This implementation returns null; returning a non-null result will
+     * terminate the switch. <!-- end-user-doc -->
+     *
+     * @param object
+     *            the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Modification</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseModification(final Modification object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '
+     * <em>Job Extension Modification</em>'. <!-- begin-user-doc --> This implementation returns
+     * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
+     *
+     * @param object
+     *            the target of the switch.
+     * @return the result of interpreting the object as an instance of '
+     *         <em>Job Extension Modification</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseJobExtensionModification(final JobExtensionModification object) {
         return null;
     }
 

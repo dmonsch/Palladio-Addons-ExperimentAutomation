@@ -15,7 +15,9 @@ import org.palladiosimulator.experimentautomation.experiments.FractionalFactoria
 import org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
+import org.palladiosimulator.experimentautomation.experiments.JobExtensionModification;
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.Modification;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.ObjectModification;
@@ -196,6 +198,16 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
         @Override
         public Adapter caseNestedIntervalsLongValueProvider(final NestedIntervalsLongValueProvider object) {
             return ExperimentsAdapterFactory.this.createNestedIntervalsLongValueProviderAdapter();
+        }
+
+        @Override
+        public Adapter caseModification(final Modification object) {
+            return ExperimentsAdapterFactory.this.createModificationAdapter();
+        }
+
+        @Override
+        public Adapter caseJobExtensionModification(final JobExtensionModification object) {
+            return ExperimentsAdapterFactory.this.createJobExtensionModificationAdapter();
         }
 
         @Override
@@ -559,6 +571,36 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createNestedIntervalsLongValueProviderAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '
+     * {@link org.palladiosimulator.experimentautomation.experiments.Modification
+     * <em>Modification</em>}'. <!-- begin-user-doc --> This default implementation returns null so
+     * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
+     * the cases anyway. <!-- end-user-doc -->
+     *
+     * @return the new adapter.
+     * @see org.palladiosimulator.experimentautomation.experiments.Modification
+     * @generated
+     */
+    public Adapter createModificationAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '
+     * {@link org.palladiosimulator.experimentautomation.experiments.JobExtensionModification
+     * <em>Job Extension Modification</em>}'. <!-- begin-user-doc --> This default implementation
+     * returns null so that we can easily ignore cases; it's useful to ignore a case when
+     * inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     *
+     * @return the new adapter.
+     * @see org.palladiosimulator.experimentautomation.experiments.JobExtensionModification
+     * @generated
+     */
+    public Adapter createJobExtensionModificationAdapter() {
         return null;
     }
 

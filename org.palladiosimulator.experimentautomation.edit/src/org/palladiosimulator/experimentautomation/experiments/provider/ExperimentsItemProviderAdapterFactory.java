@@ -561,6 +561,31 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
     }
 
     /**
+     * This keeps track of the one adapter used for all
+     * {@link org.palladiosimulator.experimentautomation.experiments.JobExtensionModification}
+     * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    protected JobExtensionModificationItemProvider jobExtensionModificationItemProvider;
+
+    /**
+     * This creates an adapter for a
+     * {@link org.palladiosimulator.experimentautomation.experiments.JobExtensionModification}. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Adapter createJobExtensionModificationAdapter() {
+        if (this.jobExtensionModificationItemProvider == null) {
+            this.jobExtensionModificationItemProvider = new JobExtensionModificationItemProvider(this);
+        }
+
+        return this.jobExtensionModificationItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      *
@@ -748,6 +773,9 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
         }
         if (this.nestedIntervalsLongValueProviderItemProvider != null) {
             this.nestedIntervalsLongValueProviderItemProvider.dispose();
+        }
+        if (this.jobExtensionModificationItemProvider != null) {
+            this.jobExtensionModificationItemProvider.dispose();
         }
     }
 

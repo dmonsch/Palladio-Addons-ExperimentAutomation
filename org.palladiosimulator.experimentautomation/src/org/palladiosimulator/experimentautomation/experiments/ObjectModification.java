@@ -2,7 +2,6 @@
  */
 package org.palladiosimulator.experimentautomation.experiments;
 
-import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.experimentautomation.variation.VariationType;
 
 /**
@@ -28,7 +27,7 @@ import org.palladiosimulator.experimentautomation.variation.VariationType;
  * @model
  * @generated
  */
-public interface ObjectModification extends EObject {
+public interface ObjectModification extends Modification {
     /**
      * Returns the value of the '<em><b>Type</b></em>' reference. <!-- begin-user-doc -->
      * <p>

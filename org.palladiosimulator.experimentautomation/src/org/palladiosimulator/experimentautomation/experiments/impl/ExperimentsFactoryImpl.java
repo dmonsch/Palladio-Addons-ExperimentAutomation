@@ -16,6 +16,7 @@ import org.palladiosimulator.experimentautomation.experiments.FractionalFactoria
 import org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
+import org.palladiosimulator.experimentautomation.experiments.JobExtensionModification;
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider;
@@ -108,6 +109,8 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
             return this.createNestedIntervalsDoubleValueProvider();
         case ExperimentsPackage.NESTED_INTERVALS_LONG_VALUE_PROVIDER:
             return this.createNestedIntervalsLongValueProvider();
+        case ExperimentsPackage.JOB_EXTENSION_MODIFICATION:
+            return this.createJobExtensionModification();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -320,6 +323,17 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
     public NestedIntervalsLongValueProvider createNestedIntervalsLongValueProvider() {
         final NestedIntervalsLongValueProviderImpl nestedIntervalsLongValueProvider = new NestedIntervalsLongValueProviderImpl();
         return nestedIntervalsLongValueProvider;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public JobExtensionModification createJobExtensionModification() {
+        final JobExtensionModificationImpl jobExtensionModification = new JobExtensionModificationImpl();
+        return jobExtensionModification;
     }
 
     /**

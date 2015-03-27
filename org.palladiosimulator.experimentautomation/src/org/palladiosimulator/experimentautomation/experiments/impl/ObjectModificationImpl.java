@@ -6,7 +6,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.ObjectModification;
 import org.palladiosimulator.experimentautomation.variation.VariationType;
@@ -34,7 +33,7 @@ import org.palladiosimulator.experimentautomation.variation.VariationType;
  *
  * @generated
  */
-public class ObjectModificationImpl extends EObjectImpl implements ObjectModification {
+public class ObjectModificationImpl extends ModificationImpl implements ObjectModification {
     /**
      * The cached value of the '{@link #getType() <em>Type</em>}' reference. <!-- begin-user-doc -->
      * <!-- end-user-doc -->

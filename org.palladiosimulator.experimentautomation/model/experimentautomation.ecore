@@ -29,7 +29,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="variations" ordered="false"
           upperBound="-1" eType="#//experiments/Variation" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="modifications" upperBound="-1"
-          eType="#//experiments/ObjectModification" containment="true"/>
+          eType="#//experiments/Modification" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
@@ -104,7 +104,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="factor" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ObjectModification">
+    <eClassifiers xsi:type="ecore:EClass" name="ObjectModification" eSuperTypes="#//experiments/Modification">
       <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//variation/VariationType"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -148,6 +148,11 @@
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxValue" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Modification" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="JobExtensionModification" eSuperTypes="#//experiments/Modification">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="extensionID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          defaultValueLiteral="org.palladiosimulator.quality.scalability"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="abstractsimulation" nsURI="http://palladiosimulator.org/ExperimentAutomation/AbstractSimulation/1.0"

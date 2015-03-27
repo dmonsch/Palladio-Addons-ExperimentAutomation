@@ -658,6 +658,26 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.ModificationImpl
+     * <em>Modification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ModificationImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getModification()
+     * @generated
+     */
+    int MODIFICATION = 23;
+
+    /**
+     * The number of structural features of the '<em>Modification</em>' class. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int MODIFICATION_FEATURE_COUNT = 0;
+
+    /**
+     * The meta object id for the '
      * {@link org.palladiosimulator.experimentautomation.experiments.impl.ObjectModificationImpl
      * <em>Object Modification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -674,7 +694,7 @@ public interface ExperimentsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int OBJECT_MODIFICATION__TYPE = 0;
+    int OBJECT_MODIFICATION__TYPE = MODIFICATION_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -683,7 +703,7 @@ public interface ExperimentsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int OBJECT_MODIFICATION__NAME = 1;
+    int OBJECT_MODIFICATION__NAME = MODIFICATION_FEATURE_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Varied Object Id</b></em>' attribute. <!-- begin-user-doc -->
@@ -692,7 +712,7 @@ public interface ExperimentsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int OBJECT_MODIFICATION__VARIED_OBJECT_ID = 2;
+    int OBJECT_MODIFICATION__VARIED_OBJECT_ID = MODIFICATION_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Value</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -701,7 +721,7 @@ public interface ExperimentsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int OBJECT_MODIFICATION__VALUE = 3;
+    int OBJECT_MODIFICATION__VALUE = MODIFICATION_FEATURE_COUNT + 3;
 
     /**
      * The number of structural features of the '<em>Object Modification</em>' class. <!--
@@ -710,7 +730,7 @@ public interface ExperimentsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int OBJECT_MODIFICATION_FEATURE_COUNT = 4;
+    int OBJECT_MODIFICATION_FEATURE_COUNT = MODIFICATION_FEATURE_COUNT + 4;
 
     /**
      * The meta object id for the '
@@ -937,6 +957,35 @@ public interface ExperimentsPackage extends EPackage {
      * @ordered
      */
     int NESTED_INTERVALS_LONG_VALUE_PROVIDER_FEATURE_COUNT = VALUE_PROVIDER_FEATURE_COUNT + 2;
+
+    /**
+     * The meta object id for the '
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.JobExtensionModificationImpl
+     * <em>Job Extension Modification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.JobExtensionModificationImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getJobExtensionModification()
+     * @generated
+     */
+    int JOB_EXTENSION_MODIFICATION = 24;
+
+    /**
+     * The feature id for the '<em><b>Extension ID</b></em>' attribute. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int JOB_EXTENSION_MODIFICATION__EXTENSION_ID = MODIFICATION_FEATURE_COUNT + 0;
+
+    /**
+     * The number of structural features of the '<em>Job Extension Modification</em>' class. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int JOB_EXTENSION_MODIFICATION_FEATURE_COUNT = MODIFICATION_FEATURE_COUNT + 1;
 
     /**
      * Returns the meta object for class '
@@ -1758,6 +1807,40 @@ public interface ExperimentsPackage extends EPackage {
     EAttribute getNestedIntervalsLongValueProvider_MaxValue();
 
     /**
+     * Returns the meta object for class '
+     * {@link org.palladiosimulator.experimentautomation.experiments.Modification
+     * <em>Modification</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for class '<em>Modification</em>'.
+     * @see org.palladiosimulator.experimentautomation.experiments.Modification
+     * @generated
+     */
+    EClass getModification();
+
+    /**
+     * Returns the meta object for class '
+     * {@link org.palladiosimulator.experimentautomation.experiments.JobExtensionModification
+     * <em>Job Extension Modification</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for class '<em>Job Extension Modification</em>'.
+     * @see org.palladiosimulator.experimentautomation.experiments.JobExtensionModification
+     * @generated
+     */
+    EClass getJobExtensionModification();
+
+    /**
+     * Returns the meta object for the attribute '
+     * {@link org.palladiosimulator.experimentautomation.experiments.JobExtensionModification#getExtensionID
+     * <em>Extension ID</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for the attribute '<em>Extension ID</em>'.
+     * @see org.palladiosimulator.experimentautomation.experiments.JobExtensionModification#getExtensionID()
+     * @see #getJobExtensionModification()
+     * @generated
+     */
+    EAttribute getJobExtensionModification_ExtensionID();
+
+    /**
      * Returns the factory that creates the instances of the model. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -2417,6 +2500,37 @@ public interface ExperimentsPackage extends EPackage {
          */
         EAttribute NESTED_INTERVALS_LONG_VALUE_PROVIDER__MAX_VALUE = eINSTANCE
                 .getNestedIntervalsLongValueProvider_MaxValue();
+
+        /**
+         * The meta object literal for the '
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.ModificationImpl
+         * <em>Modification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ModificationImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getModification()
+         * @generated
+         */
+        EClass MODIFICATION = eINSTANCE.getModification();
+
+        /**
+         * The meta object literal for the '
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.JobExtensionModificationImpl
+         * <em>Job Extension Modification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
+         * -->
+         *
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.JobExtensionModificationImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getJobExtensionModification()
+         * @generated
+         */
+        EClass JOB_EXTENSION_MODIFICATION = eINSTANCE.getJobExtensionModification();
+
+        /**
+         * The meta object literal for the '<em><b>Extension ID</b></em>' attribute feature. <!--
+         * begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @generated
+         */
+        EAttribute JOB_EXTENSION_MODIFICATION__EXTENSION_ID = eINSTANCE.getJobExtensionModification_ExtensionID();
 
     }
 
