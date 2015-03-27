@@ -4,30 +4,30 @@
   <models xmi:type="ecore:EPackage" href="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="http://www.eclipse.org/emf/2002/Ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#/"/>
-  <models xmi:type="ecore:EPackage" href="platform:/resource/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.ecore#/"/>
+  <models xmi:type="ecore:EPackage" href="platform:/plugin/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/org.palladiosimulator.edp2/model/EDP2.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.ecore#/"/>
-  <models xmi:type="ecore:EPackage" href="platform:/resource/org.palladiosimulator.servicelevelobjective/model/servicelevelobjective.ecore#/"/>
-  <models xmi:type="ecore:EPackage" href="platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.ecore#/"/>
-  <models xmi:type="ecore:EPackage" href="platform:/resource/org.scaledl.usageevolution/model/usageevolution.ecore#/"/>
+  <models xmi:type="ecore:EPackage" href="platform:/plugin/org.palladiosimulator.servicelevelobjective/model/servicelevelobjective.ecore#/"/>
+  <models xmi:type="ecore:EPackage" href="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#/"/>
+  <models xmi:type="ecore:EPackage" href="platform:/plugin/org.scaledl.usageevolution/model/usageevolution.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/tools.descartes.tools.descartes.dlim.generator/src/tools/descartes/dlim/model/dlim.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/tools.descartes.dlim.generator/src/tools/descartes/dlim/model/dlim.ecore#/"/>
   <models xmi:type="genmodel:GenModel" href="ExperimentAutomation.genmodel#/"/>
-  <models xmi:type="genmodel_1:GenModel" href="platform:/resource/tools.descartes.dlim.generator/src/tools/descartes/dlim/model/dlim.genmodel#/"/>
+  <models xmi:type="genmodel_1:GenModel" href="platform:/plugin/tools.descartes.dlim.generator/src/tools/descartes/dlim/model/dlim.genmodel#/"/>
   <models xmi:type="genmodel_1:GenModel" href="platform:/plugin/org.palladiosimulator.edp2/model/EDP2.genmodel#/"/>
   <models xmi:type="genmodel_1:GenModel" href="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#/"/>
   <models xmi:type="genmodel_1:GenModel" href="platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.genmodel#/"/>
-  <models xmi:type="genmodel_1:GenModel" href="platform:/resource/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.genmodel#/"/>
+  <models xmi:type="genmodel_1:GenModel" href="platform:/plugin/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.genmodel#/"/>
   <models xmi:type="genmodel:GenModel" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.genmodel#/"/>
   <models xmi:type="genmodel:GenModel" href="platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#/"/>
-  <models xmi:type="genmodel_1:GenModel" href="platform:/resource/org.palladiosimulator.servicelevelobjective/model/servicelevelobjective.genmodel#/"/>
+  <models xmi:type="genmodel_1:GenModel" href="platform:/plugin/org.palladiosimulator.servicelevelobjective/model/servicelevelobjective.genmodel#/"/>
   <models xmi:type="genmodel:GenModel" href="platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#/"/>
   <models xmi:type="genmodel:GenModel" href="platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel#/"/>
-  <models xmi:type="genmodel_1:GenModel" href="platform:/resource/org.scaledl.usageevolution/model/usageevolution.genmodel#/"/>
-  <models xmi:type="ecore:EPackage" href="platform:/resource/tools.descartes.dlim.generator/src/tools/descartes/dlim/model/dlim.ecore#/"/>
+  <models xmi:type="genmodel_1:GenModel" href="platform:/plugin/org.scaledl.usageevolution/model/usageevolution.genmodel#/"/>
+  <models xmi:type="ecore:EPackage" href="platform:/plugin/tools.descartes.dlim.generator/src/tools/descartes/dlim/model/dlim.ecore#/"/>
   <models xmi:type="genmodel_1:GenModel" href="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#/"/>
   <models xmi:type="genmodel:GenModel" href="platform:/plugin/org.eclipse.uml2.types/model/Types.genmodel#/"/>
@@ -3318,8 +3318,8 @@
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_-g8aEBZhEeSOwq7oB4WALw" name="MonitorRepository" visible="false" tooltipText="" incomingEdges="_-h-U0BZhEeSOwq7oB4WALw">
-        <target xmi:type="ecore:EClass" href="platform:/resource/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.ecore#//MonitorRepository"/>
-        <semanticElements xmi:type="ecore:EClass" href="platform:/resource/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.ecore#//MonitorRepository"/>
+        <target xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.ecore#//MonitorRepository"/>
+        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.ecore#//MonitorRepository"/>
         <decorations xmi:type="viewpoint:Decoration" xmi:id="_-hvrVBZhEeSOwq7oB4WALw">
           <description xmi:type="description:SemanticBasedDecoration" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='External']"/>
         </decorations>
@@ -3708,8 +3708,8 @@
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_yGkvgBffEeSoUsjueZK-JA" name="MonitorRepository" tooltipText="" incomingEdges="_MCSNQLeGEeSV66VpGnkeFA" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="platform:/resource/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.ecore#//MonitorRepository"/>
-        <semanticElements xmi:type="ecore:EClass" href="platform:/resource/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.ecore#//MonitorRepository"/>
+        <target xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.ecore#//MonitorRepository"/>
+        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.simulizar.monitorrepository/model/monitorrepository.ecore#//MonitorRepository"/>
         <decorations xmi:type="viewpoint:Decoration" xmi:id="_yHOPwRffEeSoUsjueZK-JA">
           <description xmi:type="description:SemanticBasedDecoration" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='External']"/>
         </decorations>
@@ -3831,8 +3831,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_z_JlQBfgEeSoUsjueZK-JA" name="ServiceLevelObjectiveRepository" tooltipText="" incomingEdges="_z_tl8BfgEeSoUsjueZK-JA" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="platform:/resource/org.palladiosimulator.servicelevelobjective/model/servicelevelobjective.ecore#//ServiceLevelObjectiveRepository"/>
-        <semanticElements xmi:type="ecore:EClass" href="platform:/resource/org.palladiosimulator.servicelevelobjective/model/servicelevelobjective.ecore#//ServiceLevelObjectiveRepository"/>
+        <target xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.servicelevelobjective/model/servicelevelobjective.ecore#//ServiceLevelObjectiveRepository"/>
+        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.servicelevelobjective/model/servicelevelobjective.ecore#//ServiceLevelObjectiveRepository"/>
         <decorations xmi:type="viewpoint:Decoration" xmi:id="_z_otcBfgEeSoUsjueZK-JA">
           <description xmi:type="description:SemanticBasedDecoration" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='External']"/>
         </decorations>
