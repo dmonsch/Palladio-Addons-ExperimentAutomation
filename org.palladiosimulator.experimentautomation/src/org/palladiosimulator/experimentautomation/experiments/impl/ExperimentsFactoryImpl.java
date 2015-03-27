@@ -17,9 +17,9 @@ import org.palladiosimulator.experimentautomation.experiments.FullFactorialDesig
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
-import org.palladiosimulator.experimentautomation.experiments.Modification;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.ObjectModification;
 import org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime;
 import org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign;
 import org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider;
@@ -98,8 +98,8 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
             return this.createJMXMeasurement();
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER:
             return this.createLinearValueProvider();
-        case ExperimentsPackage.MODIFICATION:
-            return this.createModification();
+        case ExperimentsPackage.OBJECT_MODIFICATION:
+            return this.createObjectModification();
         case ExperimentsPackage.INITIAL_MODEL:
             return this.createInitialModel();
         case ExperimentsPackage.RECONFIGURATION_RULES_FOLDER:
@@ -273,9 +273,9 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      * @generated
      */
     @Override
-    public Modification createModification() {
-        final ModificationImpl modification = new ModificationImpl();
-        return modification;
+    public ObjectModification createObjectModification() {
+        final ObjectModificationImpl objectModification = new ObjectModificationImpl();
+        return objectModification;
     }
 
     /**

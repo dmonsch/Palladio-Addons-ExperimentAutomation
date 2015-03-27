@@ -77,7 +77,7 @@ public interface Experiment extends EObject {
      * @model containment="true"
      * @generated
      */
-    EList<Modification> getModifications();
+    EList<ObjectModification> getModifications();
 
     /**
      * Returns the value of the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc -->

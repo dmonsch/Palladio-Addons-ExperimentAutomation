@@ -111,12 +111,12 @@
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//experiments/LinearValueProvider/summand"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//experiments/LinearValueProvider/factor"/>
       </genClasses>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//experiments/Modification">
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//experiments/ObjectModification">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference experimentautomation.ecore#//experiments/Modification/type"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//experiments/Modification/name"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//experiments/Modification/variedObjectId"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//experiments/Modification/value"/>
+            propertySortChoices="true" ecoreFeature="ecore:EReference experimentautomation.ecore#//experiments/ObjectModification/type"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//experiments/ObjectModification/name"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//experiments/ObjectModification/variedObjectId"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute experimentautomation.ecore#//experiments/ObjectModification/value"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="experimentautomation.ecore#//experiments/InitialModel">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

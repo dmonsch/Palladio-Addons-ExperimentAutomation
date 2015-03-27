@@ -125,6 +125,7 @@ import org.palladiosimulator.experimentautomation.variation.presentation.Experim
 import org.palladiosimulator.experimentautomation.variation.provider.VariationItemProviderAdapterFactory;
 import org.palladiosimulator.metricspec.provider.MetricSpecItemProviderAdapterFactory;
 import org.palladiosimulator.servicelevelobjective.provider.ServicelevelObjectiveItemProviderAdapterFactory;
+import org.palladiosimulator.simulizar.monitorrepository.provider.MonitorrepositoryItemProviderAdapterFactory;
 import org.scaledl.usageevolution.provider.UsageevolutionItemProviderAdapterFactory;
 
 import tools.descartes.dlim.provider.DlimItemProviderAdapterFactory;
@@ -682,8 +683,7 @@ ISelectionProvider, IMenuListener, IViewerProvider, IGotoMarker {
         this.adapterFactory.addAdapterFactory(new MeasuringpointItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new IdentifierItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new MetricSpecItemProviderAdapterFactory());
-        this.adapterFactory
-        .addAdapterFactory(new org.palladiosimulator.simulizar.monitorrepository.provider.MonitorrepositoryItemProviderAdapterFactory());
+        this.adapterFactory.addAdapterFactory(new MonitorrepositoryItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new PcmItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new CoreItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new EntityItemProviderAdapterFactory());

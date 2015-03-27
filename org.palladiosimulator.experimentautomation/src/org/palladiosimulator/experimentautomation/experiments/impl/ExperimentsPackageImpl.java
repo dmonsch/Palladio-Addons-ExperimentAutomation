@@ -20,9 +20,9 @@ import org.palladiosimulator.experimentautomation.experiments.FullFactorialDesig
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
-import org.palladiosimulator.experimentautomation.experiments.Modification;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.ObjectModification;
 import org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime;
 import org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign;
 import org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider;
@@ -183,7 +183,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      *
      * @generated
      */
-    private EClass modificationEClass = null;
+    private EClass objectModificationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -751,8 +751,8 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      * @generated
      */
     @Override
-    public EClass getModification() {
-        return this.modificationEClass;
+    public EClass getObjectModification() {
+        return this.objectModificationEClass;
     }
 
     /**
@@ -761,8 +761,8 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      * @generated
      */
     @Override
-    public EReference getModification_Type() {
-        return (EReference) this.modificationEClass.getEStructuralFeatures().get(0);
+    public EReference getObjectModification_Type() {
+        return (EReference) this.objectModificationEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -771,8 +771,8 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      * @generated
      */
     @Override
-    public EAttribute getModification_Name() {
-        return (EAttribute) this.modificationEClass.getEStructuralFeatures().get(1);
+    public EAttribute getObjectModification_Name() {
+        return (EAttribute) this.objectModificationEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -781,8 +781,8 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      * @generated
      */
     @Override
-    public EAttribute getModification_VariedObjectId() {
-        return (EAttribute) this.modificationEClass.getEStructuralFeatures().get(2);
+    public EAttribute getObjectModification_VariedObjectId() {
+        return (EAttribute) this.objectModificationEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -791,8 +791,8 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      * @generated
      */
     @Override
-    public EAttribute getModification_Value() {
-        return (EAttribute) this.modificationEClass.getEStructuralFeatures().get(3);
+    public EAttribute getObjectModification_Value() {
+        return (EAttribute) this.objectModificationEClass.getEStructuralFeatures().get(3);
     }
 
     /**
@@ -1088,11 +1088,11 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         this.createEAttribute(this.linearValueProviderEClass, LINEAR_VALUE_PROVIDER__SUMMAND);
         this.createEAttribute(this.linearValueProviderEClass, LINEAR_VALUE_PROVIDER__FACTOR);
 
-        this.modificationEClass = this.createEClass(MODIFICATION);
-        this.createEReference(this.modificationEClass, MODIFICATION__TYPE);
-        this.createEAttribute(this.modificationEClass, MODIFICATION__NAME);
-        this.createEAttribute(this.modificationEClass, MODIFICATION__VARIED_OBJECT_ID);
-        this.createEAttribute(this.modificationEClass, MODIFICATION__VALUE);
+        this.objectModificationEClass = this.createEClass(OBJECT_MODIFICATION);
+        this.createEReference(this.objectModificationEClass, OBJECT_MODIFICATION__TYPE);
+        this.createEAttribute(this.objectModificationEClass, OBJECT_MODIFICATION__NAME);
+        this.createEAttribute(this.objectModificationEClass, OBJECT_MODIFICATION__VARIED_OBJECT_ID);
+        this.createEAttribute(this.objectModificationEClass, OBJECT_MODIFICATION__VALUE);
 
         this.initialModelEClass = this.createEClass(INITIAL_MODEL);
         this.createEReference(this.initialModelEClass, INITIAL_MODEL__USAGE_MODEL);
@@ -1198,9 +1198,9 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         this.initEReference(this.getExperiment_Variations(), this.getVariation(), null, "variations", null, 0, -1,
                 Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEReference(this.getExperiment_Modifications(), this.getModification(), null, "modifications", null, 0,
-                -1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getExperiment_Modifications(), this.getObjectModification(), null, "modifications",
+                null, 0, -1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEAttribute(this.getExperiment_Id(), this.ecorePackage.getEString(), "id", null, 1, 1,
                 Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, !IS_ORDERED);
@@ -1322,20 +1322,20 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
                 LinearValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
                 IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        this.initEClass(this.modificationEClass, Modification.class, "Modification", !IS_ABSTRACT, !IS_INTERFACE,
-                IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getModification_Type(), theVariationPackage.getVariationType(), null, "type", null, 0,
-                1, Modification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEAttribute(this.getModification_Name(), this.ecorePackage.getEString(), "name", null, 1, 1,
-                Modification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-                !IS_DERIVED, !IS_ORDERED);
-        this.initEAttribute(this.getModification_VariedObjectId(), this.ecorePackage.getEString(), "variedObjectId",
-                null, 1, 1, Modification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+        this.initEClass(this.objectModificationEClass, ObjectModification.class, "ObjectModification", !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getObjectModification_Type(), theVariationPackage.getVariationType(), null, "type",
+                null, 0, 1, ObjectModification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+                IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEAttribute(this.getObjectModification_Name(), this.ecorePackage.getEString(), "name", null, 1, 1,
+                ObjectModification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
                 IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEAttribute(this.getModification_Value(), this.ecorePackage.getELong(), "value", null, 1, 1,
-                Modification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-                !IS_DERIVED, !IS_ORDERED);
+        this.initEAttribute(this.getObjectModification_VariedObjectId(), this.ecorePackage.getEString(),
+                "variedObjectId", null, 1, 1, ObjectModification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEAttribute(this.getObjectModification_Value(), this.ecorePackage.getELong(), "value", null, 1, 1,
+                ObjectModification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.initialModelEClass, InitialModel.class, "InitialModel", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);

@@ -242,7 +242,7 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
                 ExperimentsFactory.eINSTANCE.createVariation()));
 
         newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__MODIFICATIONS,
-                ExperimentsFactory.eINSTANCE.createModification()));
+                ExperimentsFactory.eINSTANCE.createObjectModification()));
 
         newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__STOP_CONDITIONS,
                 AbstractsimulationFactory.eINSTANCE.createMeasurementCountStopCondition()));

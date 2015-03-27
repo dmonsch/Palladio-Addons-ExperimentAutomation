@@ -35,7 +35,7 @@
   <models xmi:type="genmodel_1:GenModel" href="platform:/plugin/tools.descartes.dlim.generator/src/tools/descartes/dlim/model/dlim.genmodel#/"/>
   <models xmi:type="modisco.xml:Root" href="../plugin.xml#/"/>
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_nrKW4AhEEeS9D9QV2TNBhg" initialized="true">
-    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_ntkxsAhEEeS9D9QV2TNBhg" name="experimentautomation class diagram">
+    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_ntkxsAhEEeS9D9QV2TNBhg" name="experimentautomation package diagram">
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_ntkxtghEEeS9D9QV2TNBhg" source="GMF_DIAGRAMS">
         <data xmi:type="notation:Diagram" xmi:id="_ntkxtwhEEeS9D9QV2TNBhg" type="Sirius" element="_ntkxsAhEEeS9D9QV2TNBhg" measurementUnit="Pixel">
           <children xmi:type="notation:Node" xmi:id="_fQg5UBY7EeSOwq7oB4WALw" type="2002" element="_fPygkBY7EeSOwq7oB4WALw">
@@ -130,7 +130,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_m0V3IhY7EeSOwq7oB4WALw"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_m0UB8RY7EeSOwq7oB4WALw" fontName="Segoe UI" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m0UB8hY7EeSOwq7oB4WALw" x="185" y="160"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m0UB8hY7EeSOwq7oB4WALw" x="24" y="164"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_m0V3IxY7EeSOwq7oB4WALw" type="2003" element="_myfdABY7EeSOwq7oB4WALw">
             <children xmi:type="notation:Node" xmi:id="_m0WeMBY7EeSOwq7oB4WALw" type="5007"/>
@@ -139,7 +139,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_m0WeMxY7EeSOwq7oB4WALw"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_m0V3JBY7EeSOwq7oB4WALw" fontName="Segoe UI" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m0V3JRY7EeSOwq7oB4WALw" x="365" y="160"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m0V3JRY7EeSOwq7oB4WALw" x="172" y="160"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_m0XFQBY7EeSOwq7oB4WALw" type="2003" element="_myhSMBY7EeSOwq7oB4WALw">
             <children xmi:type="notation:Node" xmi:id="_m0XFQxY7EeSOwq7oB4WALw" type="5007"/>
@@ -148,7 +148,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_m0XFRhY7EeSOwq7oB4WALw"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_m0XFQRY7EeSOwq7oB4WALw" fontName="Segoe UI" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m0XFQhY7EeSOwq7oB4WALw" y="160"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m0XFQhY7EeSOwq7oB4WALw" x="392" y="-24"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_m0XsUBY7EeSOwq7oB4WALw" type="2003" element="_myjHYBY7EeSOwq7oB4WALw">
             <children xmi:type="notation:Node" xmi:id="_m0XsUxY7EeSOwq7oB4WALw" type="5007"/>
@@ -166,7 +166,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_m0Y6chY7EeSOwq7oB4WALw"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_m0XsURY7EeSOwq7oB4WALw" fontName="Segoe UI" fontHeight="8" italic="true"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m0XsUhY7EeSOwq7oB4WALw" x="30" y="-25"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m0XsUhY7EeSOwq7oB4WALw" x="96"/>
           </children>
           <styles xmi:type="notation:DiagramStyle" xmi:id="_nuA2mAhEEeS9D9QV2TNBhg"/>
           <edges xmi:type="notation:Edge" xmi:id="_m0ck0BY7EeSOwq7oB4WALw" type="4001" element="_m0JC0BY7EeSOwq7oB4WALw" source="_m0XFQBY7EeSOwq7oB4WALw" target="_m0XsUBY7EeSOwq7oB4WALw">
@@ -288,6 +288,9 @@
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_myXhMBY7EeSOwq7oB4WALw" name="StructuralVariation" tooltipText="" outgoingEdges="_m0MGIBY7EeSOwq7oB4WALw" width="12" height="10">
         <target xmi:type="ecore:EClass" href="experimentautomation.ecore#//variation/StructuralVariation"/>
         <semanticElements xmi:type="ecore:EClass" href="experimentautomation.ecore#//variation/StructuralVariation"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_myeO4BY7EeSOwq7oB4WALw" backgroundStyle="Liquid">
           <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_myeO4RY7EeSOwq7oB4WALw"/>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
@@ -300,6 +303,9 @@
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_myfdABY7EeSOwq7oB4WALw" name="ValueVariation" tooltipText="" outgoingEdges="_m0N7UBY7EeSOwq7oB4WALw" width="12" height="10">
         <target xmi:type="ecore:EClass" href="experimentautomation.ecore#//variation/ValueVariation"/>
         <semanticElements xmi:type="ecore:EClass" href="experimentautomation.ecore#//variation/ValueVariation"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_mygrIBY7EeSOwq7oB4WALw" backgroundStyle="Liquid">
           <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_mygrIRY7EeSOwq7oB4WALw"/>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
@@ -312,6 +318,9 @@
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_myhSMBY7EeSOwq7oB4WALw" name="VariationRepository" tooltipText="" outgoingEdges="_m0JC0BY7EeSOwq7oB4WALw" width="12" height="10">
         <target xmi:type="ecore:EClass" href="experimentautomation.ecore#//variation/VariationRepository"/>
         <semanticElements xmi:type="ecore:EClass" href="experimentautomation.ecore#//variation/VariationRepository"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_myh5QBY7EeSOwq7oB4WALw" backgroundStyle="Liquid">
           <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_myh5QRY7EeSOwq7oB4WALw"/>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
@@ -543,7 +552,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_Dq-3wghFEeS9D9QV2TNBhg"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_Dq-QvwhFEeS9D9QV2TNBhg" fontName="Segoe UI" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Dq-QwAhFEeS9D9QV2TNBhg" x="1880" y="345"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Dq-QwAhFEeS9D9QV2TNBhg" x="1728" y="376"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Dq-3wwhFEeS9D9QV2TNBhg" type="2003" element="_Dpd01QhFEeS9D9QV2TNBhg">
             <children xmi:type="notation:Node" xmi:id="_Dq-3xghFEeS9D9QV2TNBhg" type="5007"/>
@@ -639,7 +648,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_DrB7EAhFEeS9D9QV2TNBhg"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_DrBUBQhFEeS9D9QV2TNBhg" fontName="Segoe UI" fontHeight="8" italic="true"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DrBUBghFEeS9D9QV2TNBhg" x="1675" y="335"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DrBUBghFEeS9D9QV2TNBhg" x="1408" y="-192"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_DrB7EQhFEeS9D9QV2TNBhg" type="2003" element="_DqDDoAhFEeS9D9QV2TNBhg">
             <children xmi:type="notation:Node" xmi:id="_DrB7FAhFEeS9D9QV2TNBhg" type="5007"/>
@@ -941,7 +950,7 @@
             </children>
             <styles xmi:type="notation:ConnectorStyle" xmi:id="_DrFlfQhFEeS9D9QV2TNBhg" routing="Rectilinear" jumpLinkStatus="Above"/>
             <styles xmi:type="notation:FontStyle" xmi:id="_DrFlfghFEeS9D9QV2TNBhg" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DrFlfwhFEeS9D9QV2TNBhg" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DrFlfwhFEeS9D9QV2TNBhg" points="[-46, 0, 321, 84]$[-46, -38, 321, 46]$[-367, -38, 0, 46]$[-367, -84, 0, 0]"/>
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DrGMgAhFEeS9D9QV2TNBhg" id="(0.5,0.0)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DrGMgQhFEeS9D9QV2TNBhg" id="(0.5,1.0)"/>
           </edges>
@@ -2052,26 +2061,26 @@
               </value>
             </value>
             <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="_zCS7dRfgEeSoUsjueZK-JA">
-              <key xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//experiments/Modification/name"/>
+              <key xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//experiments/ObjectModification/name"/>
               <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="_zCS7dhfgEeSoUsjueZK-JA" key="_Dqd6YAhFEeS9D9QV2TNBhg">
                 <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="_zCTigRfgEeSoUsjueZK-JA" value="_zCTigBfgEeSoUsjueZK-JA">
-                  <key xmi:type="ecore:EClass" href="experimentautomation.ecore#//experiments/Modification"/>
+                  <key xmi:type="ecore:EClass" href="experimentautomation.ecore#//experiments/ObjectModification"/>
                 </value>
               </value>
             </value>
             <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="_zCTihhfgEeSoUsjueZK-JA">
-              <key xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//experiments/Modification/variedObjectId"/>
+              <key xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//experiments/ObjectModification/variedObjectId"/>
               <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="_zCTihxfgEeSoUsjueZK-JA" key="_DqehdghFEeS9D9QV2TNBhg">
                 <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="_zCTiiRfgEeSoUsjueZK-JA" value="_zCTiiBfgEeSoUsjueZK-JA">
-                  <key xmi:type="ecore:EClass" href="experimentautomation.ecore#//experiments/Modification"/>
+                  <key xmi:type="ecore:EClass" href="experimentautomation.ecore#//experiments/ObjectModification"/>
                 </value>
               </value>
             </value>
             <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="_zCUJkBfgEeSoUsjueZK-JA">
-              <key xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//experiments/Modification/value"/>
+              <key xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//experiments/ObjectModification/value"/>
               <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="_zCUJkRfgEeSoUsjueZK-JA" key="_DqfIhghFEeS9D9QV2TNBhg">
                 <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="_zCUJkxfgEeSoUsjueZK-JA" value="_zCUJkhfgEeSoUsjueZK-JA">
-                  <key xmi:type="ecore:EClass" href="experimentautomation.ecore#//experiments/Modification"/>
+                  <key xmi:type="ecore:EClass" href="experimentautomation.ecore#//experiments/ObjectModification"/>
                 </value>
               </value>
             </value>
@@ -2549,9 +2558,9 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_DpdNwAhFEeS9D9QV2TNBhg" name="Modification" tooltipText="" outgoingEdges="_KN_gwBZGEeSOwq7oB4WALw" incomingEdges="_DqpglghFEeS9D9QV2TNBhg" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="experimentautomation.ecore#//experiments/Modification"/>
-        <semanticElements xmi:type="ecore:EClass" href="experimentautomation.ecore#//experiments/Modification"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_DpdNwAhFEeS9D9QV2TNBhg" name="ObjectModification" tooltipText="" outgoingEdges="_KN_gwBZGEeSOwq7oB4WALw" incomingEdges="_DqpglghFEeS9D9QV2TNBhg" width="12" height="10">
+        <target xmi:type="ecore:EClass" href="experimentautomation.ecore#//experiments/ObjectModification"/>
+        <semanticElements xmi:type="ecore:EClass" href="experimentautomation.ecore#//experiments/ObjectModification"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -2564,8 +2573,8 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Dqd6YAhFEeS9D9QV2TNBhg" name="name : EString" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//experiments/Modification/name"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//experiments/Modification/name"/>
+          <target xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//experiments/ObjectModification/name"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//experiments/ObjectModification/name"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_zCTighfgEeSoUsjueZK-JA" labelFormat="bold" labelAlignment="LEFT" description="_zCTigBfgEeSoUsjueZK-JA">
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_zCTigxfgEeSoUsjueZK-JA"/>
             <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_zCTihBfgEeSoUsjueZK-JA"/>
@@ -2574,8 +2583,8 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_DqehdghFEeS9D9QV2TNBhg" name="variedObjectId : EString" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//experiments/Modification/variedObjectId"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//experiments/Modification/variedObjectId"/>
+          <target xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//experiments/ObjectModification/variedObjectId"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//experiments/ObjectModification/variedObjectId"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_zCTiihfgEeSoUsjueZK-JA" labelFormat="bold" labelAlignment="LEFT" description="_zCTiiBfgEeSoUsjueZK-JA">
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_zCTiixfgEeSoUsjueZK-JA"/>
             <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_zCTijBfgEeSoUsjueZK-JA"/>
@@ -2584,8 +2593,8 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_DqfIhghFEeS9D9QV2TNBhg" name="value : ELong = 0" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//experiments/Modification/value"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//experiments/Modification/value"/>
+          <target xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//experiments/ObjectModification/value"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="experimentautomation.ecore#//experiments/ObjectModification/value"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_zCUJlBfgEeSoUsjueZK-JA" labelFormat="bold" labelAlignment="LEFT" description="_zCUJkhfgEeSoUsjueZK-JA">
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_zCUJlRfgEeSoUsjueZK-JA"/>
             <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_zCUJlhfgEeSoUsjueZK-JA"/>
@@ -3169,8 +3178,8 @@
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_KN_gwBZGEeSOwq7oB4WALw" name="[0..1] type" sourceNode="_DpdNwAhFEeS9D9QV2TNBhg" targetNode="_KM6isBZGEeSOwq7oB4WALw">
-        <target xmi:type="ecore:EReference" href="experimentautomation.ecore#//experiments/Modification/type"/>
-        <semanticElements xmi:type="ecore:EReference" href="experimentautomation.ecore#//experiments/Modification/type"/>
+        <target xmi:type="ecore:EReference" href="experimentautomation.ecore#//experiments/ObjectModification/type"/>
+        <semanticElements xmi:type="ecore:EReference" href="experimentautomation.ecore#//experiments/ObjectModification/type"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_KN_gwRZGEeSOwq7oB4WALw" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_KN_gwhZGEeSOwq7oB4WALw"/>

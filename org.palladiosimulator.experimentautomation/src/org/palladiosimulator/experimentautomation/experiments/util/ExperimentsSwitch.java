@@ -15,9 +15,9 @@ import org.palladiosimulator.experimentautomation.experiments.FullFactorialDesig
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
-import org.palladiosimulator.experimentautomation.experiments.Modification;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider;
+import org.palladiosimulator.experimentautomation.experiments.ObjectModification;
 import org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime;
 import org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign;
 import org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider;
@@ -253,9 +253,9 @@ public class ExperimentsSwitch<T> extends Switch<T> {
             }
             return result;
         }
-        case ExperimentsPackage.MODIFICATION: {
-            final Modification modification = (Modification) theEObject;
-            T result = this.caseModification(modification);
+        case ExperimentsPackage.OBJECT_MODIFICATION: {
+            final ObjectModification objectModification = (ObjectModification) theEObject;
+            T result = this.caseObjectModification(objectModification);
             if (result == null) {
                 result = this.defaultCase(theEObject);
             }
@@ -588,17 +588,18 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Modification</em>'. <!--
-     * begin-user-doc --> This implementation returns null; returning a non-null result will
+     * Returns the result of interpreting the object as an instance of '<em>Object Modification</em>
+     * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
      *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Modification</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Object Modification</em>
+     *         '.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseModification(final Modification object) {
+    public T caseObjectModification(final ObjectModification object) {
         return null;
     }
 

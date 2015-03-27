@@ -18,7 +18,7 @@ import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentDesign;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
-import org.palladiosimulator.experimentautomation.experiments.Modification;
+import org.palladiosimulator.experimentautomation.experiments.ObjectModification;
 import org.palladiosimulator.experimentautomation.experiments.ResponseMeasurement;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 import org.palladiosimulator.experimentautomation.experiments.Variation;
@@ -84,7 +84,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
      * @generated
      * @ordered
      */
-    protected EList<Modification> modifications;
+    protected EList<ObjectModification> modifications;
 
     /**
      * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc -->
@@ -255,9 +255,9 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
      * @generated
      */
     @Override
-    public EList<Modification> getModifications() {
+    public EList<ObjectModification> getModifications() {
         if (this.modifications == null) {
-            this.modifications = new EObjectContainmentEList<Modification>(Modification.class, this,
+            this.modifications = new EObjectContainmentEList<ObjectModification>(ObjectModification.class, this,
                     ExperimentsPackage.EXPERIMENT__MODIFICATIONS);
         }
         return this.modifications;
@@ -639,7 +639,7 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
             return;
         case ExperimentsPackage.EXPERIMENT__MODIFICATIONS:
             this.getModifications().clear();
-            this.getModifications().addAll((Collection<? extends Modification>) newValue);
+            this.getModifications().addAll((Collection<? extends ObjectModification>) newValue);
             return;
         case ExperimentsPackage.EXPERIMENT__ID:
             this.setId((String) newValue);

@@ -658,14 +658,14 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link org.palladiosimulator.experimentautomation.experiments.impl.ModificationImpl
-     * <em>Modification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.ObjectModificationImpl
+     * <em>Object Modification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
-     * @see org.palladiosimulator.experimentautomation.experiments.impl.ModificationImpl
-     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getModification()
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ObjectModificationImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getObjectModification()
      * @generated
      */
-    int MODIFICATION = 18;
+    int OBJECT_MODIFICATION = 18;
 
     /**
      * The feature id for the '<em><b>Type</b></em>' reference. <!-- begin-user-doc --> <!--
@@ -674,7 +674,7 @@ public interface ExperimentsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int MODIFICATION__TYPE = 0;
+    int OBJECT_MODIFICATION__TYPE = 0;
 
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -683,7 +683,7 @@ public interface ExperimentsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int MODIFICATION__NAME = 1;
+    int OBJECT_MODIFICATION__NAME = 1;
 
     /**
      * The feature id for the '<em><b>Varied Object Id</b></em>' attribute. <!-- begin-user-doc -->
@@ -692,7 +692,7 @@ public interface ExperimentsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int MODIFICATION__VARIED_OBJECT_ID = 2;
+    int OBJECT_MODIFICATION__VARIED_OBJECT_ID = 2;
 
     /**
      * The feature id for the '<em><b>Value</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -701,16 +701,16 @@ public interface ExperimentsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int MODIFICATION__VALUE = 3;
+    int OBJECT_MODIFICATION__VALUE = 3;
 
     /**
-     * The number of structural features of the '<em>Modification</em>' class. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * The number of structural features of the '<em>Object Modification</em>' class. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int MODIFICATION_FEATURE_COUNT = 4;
+    int OBJECT_MODIFICATION_FEATURE_COUNT = 4;
 
     /**
      * The meta object id for the '
@@ -1462,62 +1462,62 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link org.palladiosimulator.experimentautomation.experiments.Modification
-     * <em>Modification</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.experiments.ObjectModification
+     * <em>Object Modification</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
-     * @return the meta object for class '<em>Modification</em>'.
-     * @see org.palladiosimulator.experimentautomation.experiments.Modification
+     * @return the meta object for class '<em>Object Modification</em>'.
+     * @see org.palladiosimulator.experimentautomation.experiments.ObjectModification
      * @generated
      */
-    EClass getModification();
+    EClass getObjectModification();
 
     /**
      * Returns the meta object for the reference '
-     * {@link org.palladiosimulator.experimentautomation.experiments.Modification#getType
+     * {@link org.palladiosimulator.experimentautomation.experiments.ObjectModification#getType
      * <em>Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the reference '<em>Type</em>'.
-     * @see org.palladiosimulator.experimentautomation.experiments.Modification#getType()
-     * @see #getModification()
+     * @see org.palladiosimulator.experimentautomation.experiments.ObjectModification#getType()
+     * @see #getObjectModification()
      * @generated
      */
-    EReference getModification_Type();
+    EReference getObjectModification_Type();
 
     /**
      * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.experimentautomation.experiments.Modification#getName
+     * {@link org.palladiosimulator.experimentautomation.experiments.ObjectModification#getName
      * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the attribute '<em>Name</em>'.
-     * @see org.palladiosimulator.experimentautomation.experiments.Modification#getName()
-     * @see #getModification()
+     * @see org.palladiosimulator.experimentautomation.experiments.ObjectModification#getName()
+     * @see #getObjectModification()
      * @generated
      */
-    EAttribute getModification_Name();
+    EAttribute getObjectModification_Name();
 
     /**
      * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.experimentautomation.experiments.Modification#getVariedObjectId
+     * {@link org.palladiosimulator.experimentautomation.experiments.ObjectModification#getVariedObjectId
      * <em>Varied Object Id</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the attribute '<em>Varied Object Id</em>'.
-     * @see org.palladiosimulator.experimentautomation.experiments.Modification#getVariedObjectId()
-     * @see #getModification()
+     * @see org.palladiosimulator.experimentautomation.experiments.ObjectModification#getVariedObjectId()
+     * @see #getObjectModification()
      * @generated
      */
-    EAttribute getModification_VariedObjectId();
+    EAttribute getObjectModification_VariedObjectId();
 
     /**
      * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.experimentautomation.experiments.Modification#getValue
+     * {@link org.palladiosimulator.experimentautomation.experiments.ObjectModification#getValue
      * <em>Value</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the attribute '<em>Value</em>'.
-     * @see org.palladiosimulator.experimentautomation.experiments.Modification#getValue()
-     * @see #getModification()
+     * @see org.palladiosimulator.experimentautomation.experiments.ObjectModification#getValue()
+     * @see #getObjectModification()
      * @generated
      */
-    EAttribute getModification_Value();
+    EAttribute getObjectModification_Value();
 
     /**
      * Returns the meta object for class '
@@ -2198,14 +2198,14 @@ public interface ExperimentsPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link org.palladiosimulator.experimentautomation.experiments.impl.ModificationImpl
-         * <em>Modification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.ObjectModificationImpl
+         * <em>Object Modification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
-         * @see org.palladiosimulator.experimentautomation.experiments.impl.ModificationImpl
-         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getModification()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ObjectModificationImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getObjectModification()
          * @generated
          */
-        EClass MODIFICATION = eINSTANCE.getModification();
+        EClass OBJECT_MODIFICATION = eINSTANCE.getObjectModification();
 
         /**
          * The meta object literal for the '<em><b>Type</b></em>' reference feature. <!--
@@ -2213,7 +2213,7 @@ public interface ExperimentsPackage extends EPackage {
          *
          * @generated
          */
-        EReference MODIFICATION__TYPE = eINSTANCE.getModification_Type();
+        EReference OBJECT_MODIFICATION__TYPE = eINSTANCE.getObjectModification_Type();
 
         /**
          * The meta object literal for the '<em><b>Name</b></em>' attribute feature. <!--
@@ -2221,7 +2221,7 @@ public interface ExperimentsPackage extends EPackage {
          *
          * @generated
          */
-        EAttribute MODIFICATION__NAME = eINSTANCE.getModification_Name();
+        EAttribute OBJECT_MODIFICATION__NAME = eINSTANCE.getObjectModification_Name();
 
         /**
          * The meta object literal for the '<em><b>Varied Object Id</b></em>' attribute feature.
@@ -2229,7 +2229,7 @@ public interface ExperimentsPackage extends EPackage {
          *
          * @generated
          */
-        EAttribute MODIFICATION__VARIED_OBJECT_ID = eINSTANCE.getModification_VariedObjectId();
+        EAttribute OBJECT_MODIFICATION__VARIED_OBJECT_ID = eINSTANCE.getObjectModification_VariedObjectId();
 
         /**
          * The meta object literal for the '<em><b>Value</b></em>' attribute feature. <!--
@@ -2237,7 +2237,7 @@ public interface ExperimentsPackage extends EPackage {
          *
          * @generated
          */
-        EAttribute MODIFICATION__VALUE = eINSTANCE.getModification_Value();
+        EAttribute OBJECT_MODIFICATION__VALUE = eINSTANCE.getObjectModification_Value();
 
         /**
          * The meta object literal for the '

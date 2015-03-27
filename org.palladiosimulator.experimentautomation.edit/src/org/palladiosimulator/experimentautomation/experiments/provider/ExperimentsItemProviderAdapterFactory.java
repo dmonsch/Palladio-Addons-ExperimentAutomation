@@ -436,27 +436,27 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.experimentautomation.experiments.Modification} instances. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.experiments.ObjectModification} instances.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    protected ModificationItemProvider modificationItemProvider;
+    protected ObjectModificationItemProvider objectModificationItemProvider;
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.experimentautomation.experiments.Modification}. <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.ObjectModification}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
     @Override
-    public Adapter createModificationAdapter() {
-        if (this.modificationItemProvider == null) {
-            this.modificationItemProvider = new ModificationItemProvider(this);
+    public Adapter createObjectModificationAdapter() {
+        if (this.objectModificationItemProvider == null) {
+            this.objectModificationItemProvider = new ObjectModificationItemProvider(this);
         }
 
-        return this.modificationItemProvider;
+        return this.objectModificationItemProvider;
     }
 
     /**
@@ -734,8 +734,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
         if (this.linearValueProviderItemProvider != null) {
             this.linearValueProviderItemProvider.dispose();
         }
-        if (this.modificationItemProvider != null) {
-            this.modificationItemProvider.dispose();
+        if (this.objectModificationItemProvider != null) {
+            this.objectModificationItemProvider.dispose();
         }
         if (this.initialModelItemProvider != null) {
             this.initialModelItemProvider.dispose();

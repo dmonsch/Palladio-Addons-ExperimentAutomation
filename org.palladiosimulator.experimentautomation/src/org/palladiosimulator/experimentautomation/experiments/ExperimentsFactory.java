@@ -147,13 +147,13 @@ public interface ExperimentsFactory extends EFactory {
     LinearValueProvider createLinearValueProvider();
 
     /**
-     * Returns a new object of class '<em>Modification</em>'. <!-- begin-user-doc --> <!--
+     * Returns a new object of class '<em>Object Modification</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
-     * @return a new object of class '<em>Modification</em>'.
+     * @return a new object of class '<em>Object Modification</em>'.
      * @generated
      */
-    Modification createModification();
+    ObjectModification createObjectModification();
 
     /**
      * Returns a new object of class '<em>Initial Model</em>'. <!-- begin-user-doc --> <!--
