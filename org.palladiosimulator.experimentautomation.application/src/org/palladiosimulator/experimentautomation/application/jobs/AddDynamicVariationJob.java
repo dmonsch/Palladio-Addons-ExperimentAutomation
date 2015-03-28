@@ -11,6 +11,7 @@ import javax.measure.quantity.Duration;
 import javax.measure.unit.SI;
 
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.palladiosimulator.edp2.models.measuringpoint.MeasuringPointRepository;
 import org.palladiosimulator.edp2.models.measuringpoint.MeasuringpointFactory;
 import org.palladiosimulator.edp2.models.measuringpoint.StringMeasuringPoint;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
@@ -52,6 +53,10 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
     private final List<VariationFactorTuple> variationFactorTuples;
     private final int repetition;
     private final Map<VariationFactorTuple, AbstractNestedIntervalsValueProviderStrategy> tuples2nestedIntervals;
+
+    /** Default repository where measuring points are attached to. */
+    private static final MeasuringPointRepository MEASURING_POINT_REPOSITORY = MEASURING_POINT_FACTORY
+            .createMeasuringPointRepository();
 
     private RunAnalysisJob runAnalysisJob;
 
@@ -150,10 +155,16 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
                         throw new RuntimeException("Unknown nested intervals provider strategy");
                     }
 
+                    // FIXME Create a dedicated measuring point for capacity (maybe a combination of
+                    // allocation and usage scenario? System alone is surely insufficient as we
+                    // measure capacity for a concrete usage scenario and allocation...)
+
                     // Measuring Point
                     final StringMeasuringPoint capacityMeasuringPoint = MEASURING_POINT_FACTORY
-                            .createStringMeasuringPoint(); // FIXME
+                            .createStringMeasuringPoint();
                     capacityMeasuringPoint.setMeasuringPoint("System Capacity");
+                    capacityMeasuringPoint.setMeasuringPointRepository(MEASURING_POINT_REPOSITORY);
+
                     recorderConfigurationMap.put(AbstractRecorderConfiguration.MEASURING_POINT, capacityMeasuringPoint);
 
                     // AbstractRecorder
