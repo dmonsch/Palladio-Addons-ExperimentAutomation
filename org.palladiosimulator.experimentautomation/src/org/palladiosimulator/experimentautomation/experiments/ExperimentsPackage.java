@@ -960,32 +960,24 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * The meta object id for the '
-     * {@link org.palladiosimulator.experimentautomation.experiments.impl.JobExtensionModificationImpl
-     * <em>Job Extension Modification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see org.palladiosimulator.experimentautomation.experiments.impl.JobExtensionModificationImpl
-     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getJobExtensionModification()
-     * @generated
-     */
-    int JOB_EXTENSION_MODIFICATION = 24;
-
-    /**
-     * The feature id for the '<em><b>Extension ID</b></em>' attribute. <!-- begin-user-doc --> <!--
+     * {@link org.palladiosimulator.experimentautomation.experiments.impl.SchedulingPolicy2DelayModificationImpl
+     * <em>Scheduling Policy2 Delay Modification</em>}' class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.SchedulingPolicy2DelayModificationImpl
+     * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getSchedulingPolicy2DelayModification()
      * @generated
-     * @ordered
      */
-    int JOB_EXTENSION_MODIFICATION__EXTENSION_ID = MODIFICATION_FEATURE_COUNT + 0;
+    int SCHEDULING_POLICY2_DELAY_MODIFICATION = 24;
 
     /**
-     * The number of structural features of the '<em>Job Extension Modification</em>' class. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * The number of structural features of the '<em>Scheduling Policy2 Delay Modification</em>'
+     * class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int JOB_EXTENSION_MODIFICATION_FEATURE_COUNT = MODIFICATION_FEATURE_COUNT + 1;
+    int SCHEDULING_POLICY2_DELAY_MODIFICATION_FEATURE_COUNT = MODIFICATION_FEATURE_COUNT + 0;
 
     /**
      * Returns the meta object for class '
@@ -1819,26 +1811,15 @@ public interface ExperimentsPackage extends EPackage {
 
     /**
      * Returns the meta object for class '
-     * {@link org.palladiosimulator.experimentautomation.experiments.JobExtensionModification
-     * <em>Job Extension Modification</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.experiments.SchedulingPolicy2DelayModification
+     * <em>Scheduling Policy2 Delay Modification</em>}'. <!-- begin-user-doc --> <!-- end-user-doc
+     * -->
      *
-     * @return the meta object for class '<em>Job Extension Modification</em>'.
-     * @see org.palladiosimulator.experimentautomation.experiments.JobExtensionModification
+     * @return the meta object for class '<em>Scheduling Policy2 Delay Modification</em>'.
+     * @see org.palladiosimulator.experimentautomation.experiments.SchedulingPolicy2DelayModification
      * @generated
      */
-    EClass getJobExtensionModification();
-
-    /**
-     * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.experimentautomation.experiments.JobExtensionModification#getExtensionID
-     * <em>Extension ID</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @return the meta object for the attribute '<em>Extension ID</em>'.
-     * @see org.palladiosimulator.experimentautomation.experiments.JobExtensionModification#getExtensionID()
-     * @see #getJobExtensionModification()
-     * @generated
-     */
-    EAttribute getJobExtensionModification_ExtensionID();
+    EClass getSchedulingPolicy2DelayModification();
 
     /**
      * Returns the factory that creates the instances of the model. <!-- begin-user-doc --> <!--
@@ -2514,23 +2495,15 @@ public interface ExperimentsPackage extends EPackage {
 
         /**
          * The meta object literal for the '
-         * {@link org.palladiosimulator.experimentautomation.experiments.impl.JobExtensionModificationImpl
-         * <em>Job Extension Modification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
-         * -->
+         * {@link org.palladiosimulator.experimentautomation.experiments.impl.SchedulingPolicy2DelayModificationImpl
+         * <em>Scheduling Policy2 Delay Modification</em>}' class. <!-- begin-user-doc --> <!--
+         * end-user-doc -->
          *
-         * @see org.palladiosimulator.experimentautomation.experiments.impl.JobExtensionModificationImpl
-         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getJobExtensionModification()
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.SchedulingPolicy2DelayModificationImpl
+         * @see org.palladiosimulator.experimentautomation.experiments.impl.ExperimentsPackageImpl#getSchedulingPolicy2DelayModification()
          * @generated
          */
-        EClass JOB_EXTENSION_MODIFICATION = eINSTANCE.getJobExtensionModification();
-
-        /**
-         * The meta object literal for the '<em><b>Extension ID</b></em>' attribute feature. <!--
-         * begin-user-doc --> <!-- end-user-doc -->
-         *
-         * @generated
-         */
-        EAttribute JOB_EXTENSION_MODIFICATION__EXTENSION_ID = eINSTANCE.getJobExtensionModification_ExtensionID();
+        EClass SCHEDULING_POLICY2_DELAY_MODIFICATION = eINSTANCE.getSchedulingPolicy2DelayModification();
 
     }
 

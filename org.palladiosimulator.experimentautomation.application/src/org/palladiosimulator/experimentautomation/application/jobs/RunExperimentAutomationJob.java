@@ -49,6 +49,7 @@ public class RunExperimentAutomationJob extends AbstractExtendableJob<MDSDBlackb
         for (final Experiment experiment : configuration.getExperiments()) {
             this.add(new PrepareBlackboardJob());
             this.add(new LoadModelsIntoBlackboardJob(experiment.getInitialModel()));
+            this.add(new ModifyModelsJob(experiment.getModifications()));
 
             // All Workflow extension jobs with the extension hook id
             // WORKFLOW_ID_BEFORE_EXPERIMENT_RUN

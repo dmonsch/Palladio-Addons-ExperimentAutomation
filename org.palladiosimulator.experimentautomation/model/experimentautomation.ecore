@@ -150,10 +150,8 @@
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Modification" abstract="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="JobExtensionModification" eSuperTypes="#//experiments/Modification">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="extensionID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-          defaultValueLiteral="org.palladiosimulator.quality.scalability"/>
-    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SchedulingPolicy2DelayModification"
+        eSuperTypes="#//experiments/Modification"/>
   </eSubpackages>
   <eSubpackages name="abstractsimulation" nsURI="http://palladiosimulator.org/ExperimentAutomation/AbstractSimulation/1.0"
       nsPrefix="ExperimentAutomation.Experiments.AbstractSimulation">

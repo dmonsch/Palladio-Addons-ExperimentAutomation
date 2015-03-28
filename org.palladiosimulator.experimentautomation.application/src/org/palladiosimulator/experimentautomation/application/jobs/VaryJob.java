@@ -47,7 +47,7 @@ public class VaryJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> 
     }
 
     private void executeVariation(final VariationFactorTuple variationAndFactor) {
-        ResourceSetPartition pcmPartition = this.getBlackboard().getPartition(
+        final ResourceSetPartition pcmPartition = this.getBlackboard().getPartition(
                 LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID);
         final EObject variedObject = EcoreHelper.findModelElementById(pcmPartition.getResourceSet(), variationAndFactor
                 .getVariation().getVariedObjectId());

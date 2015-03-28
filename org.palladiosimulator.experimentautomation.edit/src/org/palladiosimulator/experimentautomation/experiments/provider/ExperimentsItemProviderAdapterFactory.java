@@ -562,27 +562,28 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.experimentautomation.experiments.JobExtensionModification}
+     * {@link org.palladiosimulator.experimentautomation.experiments.SchedulingPolicy2DelayModification}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    protected JobExtensionModificationItemProvider jobExtensionModificationItemProvider;
+    protected SchedulingPolicy2DelayModificationItemProvider schedulingPolicy2DelayModificationItemProvider;
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.experimentautomation.experiments.JobExtensionModification}. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.experiments.SchedulingPolicy2DelayModification}
+     * . <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
     @Override
-    public Adapter createJobExtensionModificationAdapter() {
-        if (this.jobExtensionModificationItemProvider == null) {
-            this.jobExtensionModificationItemProvider = new JobExtensionModificationItemProvider(this);
+    public Adapter createSchedulingPolicy2DelayModificationAdapter() {
+        if (this.schedulingPolicy2DelayModificationItemProvider == null) {
+            this.schedulingPolicy2DelayModificationItemProvider = new SchedulingPolicy2DelayModificationItemProvider(
+                    this);
         }
 
-        return this.jobExtensionModificationItemProvider;
+        return this.schedulingPolicy2DelayModificationItemProvider;
     }
 
     /**
@@ -774,8 +775,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
         if (this.nestedIntervalsLongValueProviderItemProvider != null) {
             this.nestedIntervalsLongValueProviderItemProvider.dispose();
         }
-        if (this.jobExtensionModificationItemProvider != null) {
-            this.jobExtensionModificationItemProvider.dispose();
+        if (this.schedulingPolicy2DelayModificationItemProvider != null) {
+            this.schedulingPolicy2DelayModificationItemProvider.dispose();
         }
     }
 

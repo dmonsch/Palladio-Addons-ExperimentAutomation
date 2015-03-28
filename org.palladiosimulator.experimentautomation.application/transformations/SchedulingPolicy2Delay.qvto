@@ -1,0 +1,77 @@
+modeltype PCM_ALLOC uses 'http://sdq.ipd.uka.de/PalladioComponentModel/Allocation/5.0';
+modeltype PCM_REP uses 'http://sdq.ipd.uka.de/PalladioComponentModel/Repository/5.0';
+modeltype PCM_SEFF uses 'http://sdq.ipd.uka.de/PalladioComponentModel/SEFF/5.0';
+modeltype PCM_SYS uses 'http://sdq.ipd.uka.de/PalladioComponentModel/System/5.0';
+modeltype PCM_RES_ENV uses 'http://sdq.ipd.uka.de/PalladioComponentModel/ResourceEnvironment/5.0';
+modeltype PCM_RES_TYPE uses 'http://sdq.ipd.uka.de/PalladioComponentModel/ResourceType/5.0';
+modeltype PCM_USAGE uses 'http://sdq.ipd.uka.de/PalladioComponentModel/UsageModel/5.0';
+modeltype PCM_FEATURE_CONF uses 'http://sdq.ipd.uka.de/FeatureConfig/2.0';
+modeltype PCM_FEATURE_MOD uses 'http://sdq.ipd.uka.de/FeatureModel/2.0';
+modeltype PCM_CORE uses 'http://sdq.ipd.uka.de/PalladioComponentModel/Core/5.0';
+modeltype PCM_COMP uses 'http://sdq.ipd.uka.de/PalladioComponentModel/Core/Composition/5.0';
+modeltype PCM_ENTITY uses 'http://sdq.ipd.uka.de/PalladioComponentModel/Core/Entity/5.0';
+modeltype PCM_PARAM uses 'http://sdq.ipd.uka.de/PalladioComponentModel/Parameter/5.0';
+modeltype PCM_STOEX uses 'http://sdq.ipd.uka.de/StochasticExpressions/2.2';
+
+
+/**
+ * Transformation of all scheduling policies to Delay. This transformation can serve
+ * for scalability analyses that focus on passive resources only.
+ *
+ * @author Sebastian Lehrig
+ */
+transformation SchedulingPolicy2Delay(	inout pcmAllocation : PCM_ALLOC,
+										inout pcmSystem : PCM_SYS,
+										inout pcmRepository : PCM_REP,
+										inout pcmResourceTypes : PCM_RES_TYPE  ) {
+									
+	/** The Delay scheduling policy if one exists */
+	property delaySchedulingPolicy : SchedulingPolicy = null;
+		
+	/**
+	 * The main transformation.
+	 * This is the entry point to the overall transformation.
+	 */
+	main() {		
+		log('SchedulingPolicy2Delay Transformation started');
+		
+		// find DELAY ProcessingResourceType
+		var resourceRepositories : Set(ResourceRepository) := pcmResourceTypes.rootObjects()[ResourceRepository];
+		var schedulingPolicies : Bag(SchedulingPolicy) := resourceRepositories.schedulingPolicies__ResourceRepository;
+		delaySchedulingPolicy := schedulingPolicies->selectOne(policy | policy.id = "Delay");
+		assert fatal(delaySchedulingPolicy <> null) 
+			with log ("Delay SchedulingPolicy not found!");
+		
+		// Restrict ResourceEnvironment to Delay Processing Resources only
+		pcmAllocation.rootObjects()[Allocation]->forAll(
+			allocation : Allocation | 
+			restrictToDelayProcessingResources(allocation.targetResourceEnvironment_Allocation)
+		);
+	}
+	
+	/**
+	 * Restricts ResourceEnvironment to Delay Scheduling Policies only.
+	 */
+	helper restrictToDelayProcessingResources(resourceEnvironment : ResourceEnvironment) : Boolean {
+		resourceEnvironment.resourceContainer_ResourceEnvironment->forEach(resourceContainer) {
+			restrictToDelayProcessingResourcesRecursively(resourceContainer);
+		};
+		
+		return true;
+	}
+	
+	/**
+	 * Recursively restricts ResourceContainers to Delay Scheduling Policies only.
+	 */
+	helper restrictToDelayProcessingResourcesRecursively(resourceContainer : ResourceContainer) {
+		// alter scheduling policiy to Delay
+		resourceContainer.activeResourceSpecifications_ResourceContainer->forEach(processingResourceSpecification){
+	    	processingResourceSpecification.schedulingPolicy := delaySchedulingPolicy;
+	    };
+	    
+	    // recursive call
+		resourceContainer.nestedResourceContainers__ResourceContainer->forEach(nestedResourceContainer){
+			restrictToDelayProcessingResourcesRecursively(nestedResourceContainer);
+		};		
+	}
+}

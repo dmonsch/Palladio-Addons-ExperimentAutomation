@@ -14,7 +14,6 @@ import org.palladiosimulator.experimentautomation.experiments.FractionalFactoria
 import org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
-import org.palladiosimulator.experimentautomation.experiments.JobExtensionModification;
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.Modification;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider;
@@ -26,6 +25,7 @@ import org.palladiosimulator.experimentautomation.experiments.PolynomialValuePro
 import org.palladiosimulator.experimentautomation.experiments.ProfilingMeasurement;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
 import org.palladiosimulator.experimentautomation.experiments.ResponseMeasurement;
+import org.palladiosimulator.experimentautomation.experiments.SchedulingPolicy2DelayModification;
 import org.palladiosimulator.experimentautomation.experiments.SetValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.SimulationDurationMeasurement;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
@@ -312,11 +312,11 @@ public class ExperimentsSwitch<T> extends Switch<T> {
             }
             return result;
         }
-        case ExperimentsPackage.JOB_EXTENSION_MODIFICATION: {
-            final JobExtensionModification jobExtensionModification = (JobExtensionModification) theEObject;
-            T result = this.caseJobExtensionModification(jobExtensionModification);
+        case ExperimentsPackage.SCHEDULING_POLICY2_DELAY_MODIFICATION: {
+            final SchedulingPolicy2DelayModification schedulingPolicy2DelayModification = (SchedulingPolicy2DelayModification) theEObject;
+            T result = this.caseSchedulingPolicy2DelayModification(schedulingPolicy2DelayModification);
             if (result == null) {
-                result = this.caseModification(jobExtensionModification);
+                result = this.caseModification(schedulingPolicy2DelayModification);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -707,17 +707,17 @@ public class ExperimentsSwitch<T> extends Switch<T> {
 
     /**
      * Returns the result of interpreting the object as an instance of '
-     * <em>Job Extension Modification</em>'. <!-- begin-user-doc --> This implementation returns
-     * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
+     * <em>Scheduling Policy2 Delay Modification</em>'. <!-- begin-user-doc --> This implementation
+     * returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
      *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '
-     *         <em>Job Extension Modification</em>'.
+     *         <em>Scheduling Policy2 Delay Modification</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseJobExtensionModification(final JobExtensionModification object) {
+    public T caseSchedulingPolicy2DelayModification(final SchedulingPolicy2DelayModification object) {
         return null;
     }
 

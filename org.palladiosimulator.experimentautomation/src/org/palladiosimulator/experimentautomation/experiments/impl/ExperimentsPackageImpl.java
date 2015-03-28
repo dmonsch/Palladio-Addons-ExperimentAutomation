@@ -19,7 +19,6 @@ import org.palladiosimulator.experimentautomation.experiments.FractionalFactoria
 import org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
-import org.palladiosimulator.experimentautomation.experiments.JobExtensionModification;
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.Modification;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider;
@@ -31,6 +30,7 @@ import org.palladiosimulator.experimentautomation.experiments.PolynomialValuePro
 import org.palladiosimulator.experimentautomation.experiments.ProfilingMeasurement;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
 import org.palladiosimulator.experimentautomation.experiments.ResponseMeasurement;
+import org.palladiosimulator.experimentautomation.experiments.SchedulingPolicy2DelayModification;
 import org.palladiosimulator.experimentautomation.experiments.SetValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.SimulationDurationMeasurement;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
@@ -227,7 +227,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      *
      * @generated
      */
-    private EClass jobExtensionModificationEClass = null;
+    private EClass schedulingPolicy2DelayModificationEClass = null;
 
     /**
      * Creates an instance of the model <b>Package</b>, registered with
@@ -1027,18 +1027,8 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      * @generated
      */
     @Override
-    public EClass getJobExtensionModification() {
-        return this.jobExtensionModificationEClass;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EAttribute getJobExtensionModification_ExtensionID() {
-        return (EAttribute) this.jobExtensionModificationEClass.getEStructuralFeatures().get(0);
+    public EClass getSchedulingPolicy2DelayModification() {
+        return this.schedulingPolicy2DelayModificationEClass;
     }
 
     /**
@@ -1170,8 +1160,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
         this.modificationEClass = this.createEClass(MODIFICATION);
 
-        this.jobExtensionModificationEClass = this.createEClass(JOB_EXTENSION_MODIFICATION);
-        this.createEAttribute(this.jobExtensionModificationEClass, JOB_EXTENSION_MODIFICATION__EXTENSION_ID);
+        this.schedulingPolicy2DelayModificationEClass = this.createEClass(SCHEDULING_POLICY2_DELAY_MODIFICATION);
     }
 
     /**
@@ -1237,7 +1226,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         this.objectModificationEClass.getESuperTypes().add(this.getModification());
         this.nestedIntervalsDoubleValueProviderEClass.getESuperTypes().add(this.getValueProvider());
         this.nestedIntervalsLongValueProviderEClass.getESuperTypes().add(this.getValueProvider());
-        this.jobExtensionModificationEClass.getESuperTypes().add(this.getModification());
+        this.schedulingPolicy2DelayModificationEClass.getESuperTypes().add(this.getModification());
 
         // Initialize classes and features; add operations and parameters
         this.initEClass(this.experimentRepositoryEClass, ExperimentRepository.class, "ExperimentRepository",
@@ -1456,11 +1445,8 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         this.initEClass(this.modificationEClass, Modification.class, "Modification", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
 
-        this.initEClass(this.jobExtensionModificationEClass, JobExtensionModification.class,
-                "JobExtensionModification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEAttribute(this.getJobExtensionModification_ExtensionID(), this.ecorePackage.getEString(),
-                "extensionID", "org.palladiosimulator.quality.scalability", 0, 1, JobExtensionModification.class,
-                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEClass(this.schedulingPolicy2DelayModificationEClass, SchedulingPolicy2DelayModification.class,
+                "SchedulingPolicy2DelayModification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         // Create resource
         this.createResource(eNS_URI);

@@ -15,7 +15,6 @@ import org.palladiosimulator.experimentautomation.experiments.FractionalFactoria
 import org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
-import org.palladiosimulator.experimentautomation.experiments.JobExtensionModification;
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.Modification;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider;
@@ -27,6 +26,7 @@ import org.palladiosimulator.experimentautomation.experiments.PolynomialValuePro
 import org.palladiosimulator.experimentautomation.experiments.ProfilingMeasurement;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
 import org.palladiosimulator.experimentautomation.experiments.ResponseMeasurement;
+import org.palladiosimulator.experimentautomation.experiments.SchedulingPolicy2DelayModification;
 import org.palladiosimulator.experimentautomation.experiments.SetValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.SimulationDurationMeasurement;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
@@ -206,8 +206,8 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseJobExtensionModification(final JobExtensionModification object) {
-            return ExperimentsAdapterFactory.this.createJobExtensionModificationAdapter();
+        public Adapter caseSchedulingPolicy2DelayModification(final SchedulingPolicy2DelayModification object) {
+            return ExperimentsAdapterFactory.this.createSchedulingPolicy2DelayModificationAdapter();
         }
 
         @Override
@@ -591,16 +591,16 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class '
-     * {@link org.palladiosimulator.experimentautomation.experiments.JobExtensionModification
-     * <em>Job Extension Modification</em>}'. <!-- begin-user-doc --> This default implementation
-     * returns null so that we can easily ignore cases; it's useful to ignore a case when
-     * inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.experiments.SchedulingPolicy2DelayModification
+     * <em>Scheduling Policy2 Delay Modification</em>}'. <!-- begin-user-doc --> This default
+     * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
+     * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.experimentautomation.experiments.JobExtensionModification
+     * @see org.palladiosimulator.experimentautomation.experiments.SchedulingPolicy2DelayModification
      * @generated
      */
-    public Adapter createJobExtensionModificationAdapter() {
+    public Adapter createSchedulingPolicy2DelayModificationAdapter() {
         return null;
     }
 

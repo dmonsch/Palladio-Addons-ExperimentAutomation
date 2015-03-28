@@ -192,13 +192,13 @@ public interface ExperimentsFactory extends EFactory {
     NestedIntervalsLongValueProvider createNestedIntervalsLongValueProvider();
 
     /**
-     * Returns a new object of class '<em>Job Extension Modification</em>'. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Returns a new object of class '<em>Scheduling Policy2 Delay Modification</em>'. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
-     * @return a new object of class '<em>Job Extension Modification</em>'.
+     * @return a new object of class '<em>Scheduling Policy2 Delay Modification</em>'.
      * @generated
      */
-    JobExtensionModification createJobExtensionModification();
+    SchedulingPolicy2DelayModification createSchedulingPolicy2DelayModification();
 
     /**
      * Returns the package supported by this factory. <!-- begin-user-doc --> <!-- end-user-doc -->

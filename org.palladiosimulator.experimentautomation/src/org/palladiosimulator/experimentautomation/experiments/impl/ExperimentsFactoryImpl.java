@@ -16,7 +16,6 @@ import org.palladiosimulator.experimentautomation.experiments.FractionalFactoria
 import org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
-import org.palladiosimulator.experimentautomation.experiments.JobExtensionModification;
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider;
@@ -26,6 +25,7 @@ import org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesig
 import org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.ProfilingMeasurement;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
+import org.palladiosimulator.experimentautomation.experiments.SchedulingPolicy2DelayModification;
 import org.palladiosimulator.experimentautomation.experiments.SetValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.SimulationDurationMeasurement;
 import org.palladiosimulator.experimentautomation.experiments.Variation;
@@ -109,8 +109,8 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
             return this.createNestedIntervalsDoubleValueProvider();
         case ExperimentsPackage.NESTED_INTERVALS_LONG_VALUE_PROVIDER:
             return this.createNestedIntervalsLongValueProvider();
-        case ExperimentsPackage.JOB_EXTENSION_MODIFICATION:
-            return this.createJobExtensionModification();
+        case ExperimentsPackage.SCHEDULING_POLICY2_DELAY_MODIFICATION:
+            return this.createSchedulingPolicy2DelayModification();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -331,9 +331,9 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      * @generated
      */
     @Override
-    public JobExtensionModification createJobExtensionModification() {
-        final JobExtensionModificationImpl jobExtensionModification = new JobExtensionModificationImpl();
-        return jobExtensionModification;
+    public SchedulingPolicy2DelayModification createSchedulingPolicy2DelayModification() {
+        final SchedulingPolicy2DelayModificationImpl schedulingPolicy2DelayModification = new SchedulingPolicy2DelayModificationImpl();
+        return schedulingPolicy2DelayModification;
     }
 
     /**
