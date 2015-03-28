@@ -163,6 +163,7 @@ public class AddDynamicVariationJob extends SequentialBlackboardInteractingJob<M
                     final StringMeasuringPoint capacityMeasuringPoint = MEASURING_POINT_FACTORY
                             .createStringMeasuringPoint();
                     capacityMeasuringPoint.setMeasuringPoint("System Capacity");
+                    MEASURING_POINT_REPOSITORY.getMeasuringPoints().add(capacityMeasuringPoint);
                     capacityMeasuringPoint.setMeasuringPointRepository(MEASURING_POINT_REPOSITORY);
 
                     recorderConfigurationMap.put(AbstractRecorderConfiguration.MEASURING_POINT, capacityMeasuringPoint);
