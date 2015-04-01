@@ -145,10 +145,12 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
     private Measurement findMeasurement(final List<Measurement> measurementList,
             final ServiceLevelObjective serviceLevelObjective) {
         for (final Measurement measurement : measurementList) {
-            if (containsMetric(measurement.getMeasuringType().getMetric(), serviceLevelObjective.getMetricDescription())) {
+            if (containsMetric(measurement.getMeasuringType().getMetric(), serviceLevelObjective
+                    .getMeasurementSpecification().getMetricDescription())) {
                 final String measureMeasuringPoint = measurement.getMeasuringType().getMeasuringPoint()
                         .getStringRepresentation();
-                final String sloMeasuringPoint = serviceLevelObjective.getMeasuringPoint().getStringRepresentation();
+                final String sloMeasuringPoint = serviceLevelObjective.getMeasurementSpecification().getMonitor()
+                        .getMeasuringPoint().getStringRepresentation();
 
                 // TODO Comparing the name of Measuring points is not the best solution (as the name
                 // is generally not unique). I see three options, all requiring some architectural

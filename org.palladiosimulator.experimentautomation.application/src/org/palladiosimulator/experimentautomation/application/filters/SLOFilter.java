@@ -65,9 +65,7 @@ public class SLOFilter extends AbstractFilter implements IPersistable, IPersista
      *
      * {@inheritDoc}
      */
-    @SuppressWarnings({
-            "rawtypes", "unchecked"
-    })
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     protected boolean shouldSkip(final MeasuringValue measurement) {
         if (this.getConfiguration().isPropertyNotSet(SLOFilterConfiguration.SLO_KEY)) {
@@ -81,7 +79,8 @@ public class SLOFilter extends AbstractFilter implements IPersistable, IPersista
         }
 
         final ServiceLevelObjective serviceLevelObjective = (ServiceLevelObjective) propertyObject;
-        final Measure responseTime = measurement.getMeasureForMetric(serviceLevelObjective.getMetricDescription());
+        final Measure responseTime = measurement.getMeasureForMetric(serviceLevelObjective
+                .getMeasurementSpecification().getMetricDescription());
 
         if (serviceLevelObjective.getLowerThreshold() != null) {
             final Measure lowerThreshold = serviceLevelObjective.getLowerThreshold().getThresholdLimit();
