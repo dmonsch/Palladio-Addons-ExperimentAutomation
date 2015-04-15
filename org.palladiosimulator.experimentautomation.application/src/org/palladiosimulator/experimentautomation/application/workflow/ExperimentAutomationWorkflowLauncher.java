@@ -37,26 +37,31 @@ public class ExperimentAutomationWorkflowLauncher extends
         return config;
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see de.uka.ipd.sdq.codegen.simucontroller.runconfig.AbstractMDSDLaunchConfigurationDelegate#
-     * setupLogging(org.apache.log4j.Level)
+    /**
+     * {@inheritDoc}
      */
     @Override
     protected ArrayList<LoggerAppenderStruct> setupLogging(final Level logLevel) throws CoreException {
         final ArrayList<LoggerAppenderStruct> loggerList = super.setupLogging(logLevel);
-        loggerList.add(setupLogger("de.uka.ipd.sdq.codegen", logLevel, Level.DEBUG == logLevel ? DETAILED_LOG_PATTERN
-                : SHORT_LOG_PATTERN));
-        loggerList.add(setupLogger("de.uka.ipd.sdq.simucomframework", logLevel,
+        loggerList.add(setupLogger("org.palladiosimulator.experimentautomation", logLevel,
                 Level.DEBUG == logLevel ? DETAILED_LOG_PATTERN : SHORT_LOG_PATTERN));
+
+        // TODO This code is tool-dependent. Should be realized by extenders for logger
+        // configurations.
+        loggerList.add(setupLogger("org.scaledl.architecturaltemplates", logLevel,
+                Level.DEBUG == logLevel ? DETAILED_LOG_PATTERN : SHORT_LOG_PATTERN));
+
+        // TODO This code is tool-dependent. Should be realized by extenders for logger
+        // configurations.
         loggerList.add(setupLogger("de.uka.ipd.sdq.workflow.mdsd.emf.qvtr", logLevel,
                 Level.DEBUG == logLevel ? DETAILED_LOG_PATTERN : SHORT_LOG_PATTERN));
         loggerList.add(setupLogger("de.uka.ipd.sdq.statistics", logLevel,
                 Level.DEBUG == logLevel ? DETAILED_LOG_PATTERN : SHORT_LOG_PATTERN));
-        loggerList.add(setupLogger("org.scaledl.architecturaltemplates", logLevel,
+        loggerList.add(setupLogger("de.uka.ipd.sdq.codegen", logLevel, Level.DEBUG == logLevel ? DETAILED_LOG_PATTERN
+                : SHORT_LOG_PATTERN));
+        loggerList.add(setupLogger("de.uka.ipd.sdq.simucomframework", logLevel,
                 Level.DEBUG == logLevel ? DETAILED_LOG_PATTERN : SHORT_LOG_PATTERN));
-        loggerList.add(setupLogger("org.palladiosimulator.experimentautomation", logLevel,
+        loggerList.add(setupLogger("org.palladiosimulator.simulizar.interpreter", logLevel,
                 Level.DEBUG == logLevel ? DETAILED_LOG_PATTERN : SHORT_LOG_PATTERN));
 
         return loggerList;
