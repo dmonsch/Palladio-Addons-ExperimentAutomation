@@ -40,7 +40,8 @@ public class SetValueProviderItemProvider extends ValueProviderItemProvider {
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null) {
+        if (this.itemPropertyDescriptors == null)
+        {
             super.getPropertyDescriptors(object);
 
             this.addValuesPropertyDescriptor(object);
@@ -55,12 +56,21 @@ public class SetValueProviderItemProvider extends ValueProviderItemProvider {
      * @generated
      */
     protected void addValuesPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_SetValueProvider_values_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_SetValueProvider_values_feature",
-                        "_UI_SetValueProvider_type"), ExperimentsPackage.Literals.SET_VALUE_PROVIDER__VALUES, true,
-                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_SetValueProvider_values_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_SetValueProvider_values_feature",
+                                "_UI_SetValueProvider_type"),
+                                ExperimentsPackage.Literals.SET_VALUE_PROVIDER__VALUES,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -82,8 +92,9 @@ public class SetValueProviderItemProvider extends ValueProviderItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((SetValueProvider) object).getValues();
-        return label == null || label.length() == 0 ? this.getString("_UI_SetValueProvider_type") : this
-                .getString("_UI_SetValueProvider_type") + " " + label;
+        return label == null || label.length() == 0 ?
+                this.getString("_UI_SetValueProvider_type") :
+                this.getString("_UI_SetValueProvider_type") + " " + label;
     }
 
     /**
@@ -97,7 +108,8 @@ public class SetValueProviderItemProvider extends ValueProviderItemProvider {
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(SetValueProvider.class)) {
+        switch (notification.getFeatureID(SetValueProvider.class))
+        {
         case ExperimentsPackage.SET_VALUE_PROVIDER__VALUES:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;

@@ -35,7 +35,8 @@ public class VariationAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public VariationAdapterFactory() {
-        if (modelPackage == null) {
+        if (modelPackage == null)
+        {
             modelPackage = VariationPackage.eINSTANCE;
         }
     }
@@ -50,10 +51,12 @@ public class VariationAdapterFactory extends AdapterFactoryImpl {
      */
     @Override
     public boolean isFactoryForType(final Object object) {
-        if (object == modelPackage) {
+        if (object == modelPackage)
+        {
             return true;
         }
-        if (object instanceof EObject) {
+        if (object instanceof EObject)
+        {
             return ((EObject) object).eClass().getEPackage() == modelPackage;
         }
         return false;
@@ -65,134 +68,141 @@ public class VariationAdapterFactory extends AdapterFactoryImpl {
      *
      * @generated
      */
-    protected VariationSwitch<Adapter> modelSwitch = new VariationSwitch<Adapter>() {
+    protected VariationSwitch<Adapter> modelSwitch = new VariationSwitch<Adapter>()
+            {
         @Override
-        public Adapter caseVariationType(final VariationType object) {
+        public Adapter caseVariationType(final VariationType object)
+        {
             return VariationAdapterFactory.this.createVariationTypeAdapter();
         }
 
         @Override
-        public Adapter caseValueVariation(final ValueVariation object) {
+        public Adapter caseValueVariation(final ValueVariation object)
+        {
             return VariationAdapterFactory.this.createValueVariationAdapter();
         }
 
         @Override
-        public Adapter caseStructuralVariation(final StructuralVariation object) {
+        public Adapter caseStructuralVariation(final StructuralVariation object)
+        {
             return VariationAdapterFactory.this.createStructuralVariationAdapter();
         }
 
         @Override
-        public Adapter caseVariationRepository(final VariationRepository object) {
+        public Adapter caseVariationRepository(final VariationRepository object)
+        {
             return VariationAdapterFactory.this.createVariationRepositoryAdapter();
         }
 
         @Override
-        public Adapter caseIdentifier(final Identifier object) {
+        public Adapter caseIdentifier(final Identifier object)
+        {
             return VariationAdapterFactory.this.createIdentifierAdapter();
         }
 
         @Override
-        public Adapter defaultCase(final EObject object) {
+        public Adapter defaultCase(final EObject object)
+        {
             return VariationAdapterFactory.this.createEObjectAdapter();
         }
-    };
+            };
 
-    /**
-     * Creates an adapter for the <code>target</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
+            /**
+             * Creates an adapter for the <code>target</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param target
      *            the object to adapt.
      * @return the adapter for the <code>target</code>.
-     * @generated
-     */
-    @Override
-    public Adapter createAdapter(final Notifier target) {
-        return this.modelSwitch.doSwitch((EObject) target);
-    }
+             * @generated
+             */
+            @Override
+            public Adapter createAdapter(final Notifier target) {
+                return this.modelSwitch.doSwitch((EObject) target);
+            }
 
-    /**
-     * Creates a new adapter for an object of class '
+            /**
+             * Creates a new adapter for an object of class '
      * {@link org.palladiosimulator.experimentautomation.variation.VariationType <em>Type</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
-     * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
-     * end-user-doc -->
-     *
+             * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
+             * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
+             * end-user-doc -->
+             *
      * @return the new adapter.
-     * @see org.palladiosimulator.experimentautomation.variation.VariationType
-     * @generated
-     */
-    public Adapter createVariationTypeAdapter() {
-        return null;
-    }
+             * @see org.palladiosimulator.experimentautomation.variation.VariationType
+             * @generated
+             */
+            public Adapter createVariationTypeAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for an object of class '
+            /**
+             * Creates a new adapter for an object of class '
      * {@link org.palladiosimulator.experimentautomation.variation.ValueVariation
      * <em>Value Variation</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.experimentautomation.variation.ValueVariation
-     * @generated
-     */
-    public Adapter createValueVariationAdapter() {
-        return null;
-    }
+             * @see org.palladiosimulator.experimentautomation.variation.ValueVariation
+             * @generated
+             */
+            public Adapter createValueVariationAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for an object of class '
+            /**
+             * Creates a new adapter for an object of class '
      * {@link org.palladiosimulator.experimentautomation.variation.StructuralVariation
      * <em>Structural Variation</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.experimentautomation.variation.StructuralVariation
-     * @generated
-     */
-    public Adapter createStructuralVariationAdapter() {
-        return null;
-    }
+             * @see org.palladiosimulator.experimentautomation.variation.StructuralVariation
+             * @generated
+             */
+            public Adapter createStructuralVariationAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for an object of class '
+            /**
+             * Creates a new adapter for an object of class '
      * {@link org.palladiosimulator.experimentautomation.variation.VariationRepository
      * <em>Repository</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.experimentautomation.variation.VariationRepository
-     * @generated
-     */
-    public Adapter createVariationRepositoryAdapter() {
-        return null;
-    }
+             * @see org.palladiosimulator.experimentautomation.variation.VariationRepository
+             * @generated
+             */
+            public Adapter createVariationRepositoryAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.identifier.Identifier
+            /**
+             * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.identifier.Identifier
      * <em>Identifier</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see de.uka.ipd.sdq.identifier.Identifier
-     * @generated
-     */
-    public Adapter createIdentifierAdapter() {
-        return null;
-    }
+             * @see de.uka.ipd.sdq.identifier.Identifier
+             * @generated
+             */
+            public Adapter createIdentifierAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for the default case. <!-- begin-user-doc --> This default
+            /**
+             * Creates a new adapter for the default case. <!-- begin-user-doc --> This default
      * implementation returns null. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @generated
-     */
-    public Adapter createEObjectAdapter() {
-        return null;
-    }
+             * @generated
+             */
+            public Adapter createEObjectAdapter() {
+                return null;
+            }
 
 } // VariationAdapterFactory

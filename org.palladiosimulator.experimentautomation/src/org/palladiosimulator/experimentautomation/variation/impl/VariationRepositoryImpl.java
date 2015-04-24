@@ -66,7 +66,8 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
      */
     @Override
     public EList<VariationType> getVariation() {
-        if (this.variation == null) {
+        if (this.variation == null)
+        {
             this.variation = new EObjectContainmentEList<VariationType>(VariationType.class, this,
                     VariationPackage.VARIATION_REPOSITORY__VARIATION);
         }
@@ -81,7 +82,8 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
     @Override
     public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case VariationPackage.VARIATION_REPOSITORY__VARIATION:
             return ((InternalEList<?>) this.getVariation()).basicRemove(otherEnd, msgs);
         }
@@ -95,7 +97,8 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case VariationPackage.VARIATION_REPOSITORY__VARIATION:
             return this.getVariation();
         }
@@ -110,7 +113,8 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
     @SuppressWarnings("unchecked")
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case VariationPackage.VARIATION_REPOSITORY__VARIATION:
             this.getVariation().clear();
             this.getVariation().addAll((Collection<? extends VariationType>) newValue);
@@ -126,7 +130,8 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case VariationPackage.VARIATION_REPOSITORY__VARIATION:
             this.getVariation().clear();
             return;
@@ -141,7 +146,8 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case VariationPackage.VARIATION_REPOSITORY__VARIATION:
             return this.variation != null && !this.variation.isEmpty();
         }

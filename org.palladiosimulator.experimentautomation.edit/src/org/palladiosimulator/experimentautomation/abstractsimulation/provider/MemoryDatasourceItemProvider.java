@@ -36,7 +36,8 @@ public class MemoryDatasourceItemProvider extends EDP2DatasourceItemProvider {
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null) {
+        if (this.itemPropertyDescriptors == null)
+        {
             super.getPropertyDescriptors(object);
 
         }
@@ -62,8 +63,9 @@ public class MemoryDatasourceItemProvider extends EDP2DatasourceItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((MemoryDatasource) object).getId();
-        return label == null || label.length() == 0 ? this.getString("_UI_MemoryDatasource_type") : this
-                .getString("_UI_MemoryDatasource_type") + " " + label;
+        return label == null || label.length() == 0 ?
+                this.getString("_UI_MemoryDatasource_type") :
+                this.getString("_UI_MemoryDatasource_type") + " " + label;
     }
 
     /**

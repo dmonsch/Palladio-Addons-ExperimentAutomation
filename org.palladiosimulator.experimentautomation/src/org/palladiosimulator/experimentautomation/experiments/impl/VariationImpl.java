@@ -188,10 +188,12 @@ public class VariationImpl extends EObjectImpl implements Variation {
      */
     @Override
     public VariationType getType() {
-        if (this.type != null && this.type.eIsProxy()) {
+        if (this.type != null && this.type.eIsProxy())
+        {
             final InternalEObject oldType = (InternalEObject) this.type;
             this.type = (VariationType) this.eResolveProxy(oldType);
-            if (this.type != oldType) {
+            if (this.type != oldType)
+            {
                 if (this.eNotificationRequired()) {
                     this.eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExperimentsPackage.VARIATION__TYPE,
                             oldType, this.type));
@@ -243,7 +245,8 @@ public class VariationImpl extends EObjectImpl implements Variation {
     public NotificationChain basicSetValueProvider(final ValueProvider newValueProvider, NotificationChain msgs) {
         final ValueProvider oldValueProvider = this.valueProvider;
         this.valueProvider = newValueProvider;
-        if (this.eNotificationRequired()) {
+        if (this.eNotificationRequired())
+        {
             final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
                     ExperimentsPackage.VARIATION__VALUE_PROVIDER, oldValueProvider, newValueProvider);
             if (msgs == null) {
@@ -262,7 +265,8 @@ public class VariationImpl extends EObjectImpl implements Variation {
      */
     @Override
     public void setValueProvider(final ValueProvider newValueProvider) {
-        if (newValueProvider != this.valueProvider) {
+        if (newValueProvider != this.valueProvider)
+        {
             NotificationChain msgs = null;
             if (this.valueProvider != null) {
                 msgs = ((InternalEObject) this.valueProvider).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
@@ -276,7 +280,8 @@ public class VariationImpl extends EObjectImpl implements Variation {
             if (msgs != null) {
                 msgs.dispatch();
             }
-        } else if (this.eNotificationRequired()) {
+        }
+        else if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.VARIATION__VALUE_PROVIDER,
                     newValueProvider, newValueProvider));
         }
@@ -303,7 +308,8 @@ public class VariationImpl extends EObjectImpl implements Variation {
         this.minValue = newMinValue;
         if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.VARIATION__MIN_VALUE,
-                    oldMinValue, this.minValue));
+                    oldMinValue,
+                    this.minValue));
         }
     }
 
@@ -328,7 +334,8 @@ public class VariationImpl extends EObjectImpl implements Variation {
         this.maxValue = newMaxValue;
         if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.VARIATION__MAX_VALUE,
-                    oldMaxValue, this.maxValue));
+                    oldMaxValue,
+                    this.maxValue));
         }
     }
 
@@ -415,7 +422,8 @@ public class VariationImpl extends EObjectImpl implements Variation {
     @Override
     public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.VARIATION__VALUE_PROVIDER:
             return this.basicSetValueProvider(null, msgs);
         }
@@ -429,7 +437,8 @@ public class VariationImpl extends EObjectImpl implements Variation {
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.VARIATION__TYPE:
             if (resolve) {
                 return this.getType();
@@ -458,7 +467,8 @@ public class VariationImpl extends EObjectImpl implements Variation {
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.VARIATION__TYPE:
             this.setType((VariationType) newValue);
             return;
@@ -491,7 +501,8 @@ public class VariationImpl extends EObjectImpl implements Variation {
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.VARIATION__TYPE:
             this.setType((VariationType) null);
             return;
@@ -524,7 +535,8 @@ public class VariationImpl extends EObjectImpl implements Variation {
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.VARIATION__TYPE:
             return this.type != null;
         case ExperimentsPackage.VARIATION__VALUE_PROVIDER:

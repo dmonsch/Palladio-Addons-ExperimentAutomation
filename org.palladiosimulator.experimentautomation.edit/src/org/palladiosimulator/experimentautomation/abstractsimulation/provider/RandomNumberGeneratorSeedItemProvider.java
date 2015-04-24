@@ -49,7 +49,8 @@ public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter i
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null) {
+        if (this.itemPropertyDescriptors == null)
+        {
             super.getPropertyDescriptors(object);
 
             this.addSeed0PropertyDescriptor(object);
@@ -69,13 +70,21 @@ public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter i
      * @generated
      */
     protected void addSeed0PropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_RandomNumberGeneratorSeed_seed0_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_RandomNumberGeneratorSeed_seed0_feature",
-                        "_UI_RandomNumberGeneratorSeed_type"),
-                AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED0, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_RandomNumberGeneratorSeed_seed0_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_RandomNumberGeneratorSeed_seed0_feature",
+                                "_UI_RandomNumberGeneratorSeed_type"),
+                                AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED0,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -85,13 +94,21 @@ public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter i
      * @generated
      */
     protected void addSeed1PropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_RandomNumberGeneratorSeed_seed1_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_RandomNumberGeneratorSeed_seed1_feature",
-                        "_UI_RandomNumberGeneratorSeed_type"),
-                AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED1, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_RandomNumberGeneratorSeed_seed1_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_RandomNumberGeneratorSeed_seed1_feature",
+                                "_UI_RandomNumberGeneratorSeed_type"),
+                                AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED1,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -101,13 +118,21 @@ public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter i
      * @generated
      */
     protected void addSeed2PropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_RandomNumberGeneratorSeed_seed2_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_RandomNumberGeneratorSeed_seed2_feature",
-                        "_UI_RandomNumberGeneratorSeed_type"),
-                AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED2, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_RandomNumberGeneratorSeed_seed2_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_RandomNumberGeneratorSeed_seed2_feature",
+                                "_UI_RandomNumberGeneratorSeed_type"),
+                                AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED2,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -117,13 +142,21 @@ public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter i
      * @generated
      */
     protected void addSeed3PropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_RandomNumberGeneratorSeed_seed3_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_RandomNumberGeneratorSeed_seed3_feature",
-                        "_UI_RandomNumberGeneratorSeed_type"),
-                AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED3, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_RandomNumberGeneratorSeed_seed3_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_RandomNumberGeneratorSeed_seed3_feature",
+                                "_UI_RandomNumberGeneratorSeed_type"),
+                                AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED3,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -133,13 +166,21 @@ public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter i
      * @generated
      */
     protected void addSeed4PropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_RandomNumberGeneratorSeed_seed4_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_RandomNumberGeneratorSeed_seed4_feature",
-                        "_UI_RandomNumberGeneratorSeed_type"),
-                AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED4, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_RandomNumberGeneratorSeed_seed4_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_RandomNumberGeneratorSeed_seed4_feature",
+                                "_UI_RandomNumberGeneratorSeed_type"),
+                                AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED4,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -149,13 +190,21 @@ public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter i
      * @generated
      */
     protected void addSeed5PropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_RandomNumberGeneratorSeed_seed5_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_RandomNumberGeneratorSeed_seed5_feature",
-                        "_UI_RandomNumberGeneratorSeed_type"),
-                AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED5, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_RandomNumberGeneratorSeed_seed5_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_RandomNumberGeneratorSeed_seed5_feature",
+                                "_UI_RandomNumberGeneratorSeed_type"),
+                                AbstractsimulationPackage.Literals.RANDOM_NUMBER_GENERATOR_SEED__SEED5,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -191,7 +240,8 @@ public class RandomNumberGeneratorSeedItemProvider extends ItemProviderAdapter i
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(RandomNumberGeneratorSeed.class)) {
+        switch (notification.getFeatureID(RandomNumberGeneratorSeed.class))
+        {
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED0:
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED1:
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED2:

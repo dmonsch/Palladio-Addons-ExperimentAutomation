@@ -36,7 +36,8 @@ public class ValueVariationItemProvider extends VariationTypeItemProvider {
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null) {
+        if (this.itemPropertyDescriptors == null)
+        {
             super.getPropertyDescriptors(object);
 
         }
@@ -62,8 +63,9 @@ public class ValueVariationItemProvider extends VariationTypeItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((ValueVariation) object).getName();
-        return label == null || label.length() == 0 ? this.getString("_UI_ValueVariation_type") : this
-                .getString("_UI_ValueVariation_type") + " " + label;
+        return label == null || label.length() == 0 ?
+                this.getString("_UI_ValueVariation_type") :
+                this.getString("_UI_ValueVariation_type") + " " + label;
     }
 
     /**

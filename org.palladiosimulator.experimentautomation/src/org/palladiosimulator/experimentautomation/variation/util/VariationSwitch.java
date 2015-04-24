@@ -37,7 +37,8 @@ public class VariationSwitch<T> extends Switch<T> {
      * @generated
      */
     public VariationSwitch() {
-        if (modelPackage == null) {
+        if (modelPackage == null)
+        {
             modelPackage = VariationPackage.eINSTANCE;
         }
     }
@@ -64,7 +65,8 @@ public class VariationSwitch<T> extends Switch<T> {
      */
     @Override
     protected T doSwitch(final int classifierID, final EObject theEObject) {
-        switch (classifierID) {
+        switch (classifierID)
+        {
         case VariationPackage.VARIATION_TYPE: {
             final VariationType variationType = (VariationType) theEObject;
             T result = this.caseVariationType(variationType);

@@ -49,7 +49,8 @@ public class EDP2DatasourceItemProvider extends ItemProviderAdapter implements I
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null) {
+        if (this.itemPropertyDescriptors == null)
+        {
             super.getPropertyDescriptors(object);
 
             this.addIdPropertyDescriptor(object);
@@ -64,12 +65,20 @@ public class EDP2DatasourceItemProvider extends ItemProviderAdapter implements I
      * @generated
      */
     protected void addIdPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_EDP2Datasource_id_feature"), this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_EDP2Datasource_id_feature", "_UI_EDP2Datasource_type"),
-                        AbstractsimulationPackage.Literals.EDP2_DATASOURCE__ID, true, false, false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_EDP2Datasource_id_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_EDP2Datasource_id_feature",
+                                "_UI_EDP2Datasource_type"),
+                                AbstractsimulationPackage.Literals.EDP2_DATASOURCE__ID,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -81,8 +90,9 @@ public class EDP2DatasourceItemProvider extends ItemProviderAdapter implements I
     @Override
     public String getText(final Object object) {
         final String label = ((EDP2Datasource) object).getId();
-        return label == null || label.length() == 0 ? this.getString("_UI_EDP2Datasource_type") : this
-                .getString("_UI_EDP2Datasource_type") + " " + label;
+        return label == null || label.length() == 0 ?
+                this.getString("_UI_EDP2Datasource_type") :
+                this.getString("_UI_EDP2Datasource_type") + " " + label;
     }
 
     /**
@@ -96,7 +106,8 @@ public class EDP2DatasourceItemProvider extends ItemProviderAdapter implements I
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(EDP2Datasource.class)) {
+        switch (notification.getFeatureID(EDP2Datasource.class))
+        {
         case AbstractsimulationPackage.EDP2_DATASOURCE__ID:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;

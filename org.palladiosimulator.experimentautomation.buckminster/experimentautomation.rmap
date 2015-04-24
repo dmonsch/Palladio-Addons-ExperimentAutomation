@@ -10,6 +10,7 @@
   <rm:locator pattern="^org\.palladiosimulator\.edp2.*" searchPathRef="edp2" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\.measurementframework.*" searchPathRef="measurementframework" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\.simulizar.*" searchPathRef="SimuLizar" failOnError="false"/>
+  <rm:locator pattern="^org\.palladiosimulator\.monitot.*" searchPathRef="monitor" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\..*" searchPathRef="ProbeFramework" failOnError="false"/>
   <rm:locator pattern="^de\.uka\.ipd\.sdq\..*" searchPathRef="Palladio" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\..*" searchPathRef="Palladio" failOnError="false"/>
@@ -70,6 +71,13 @@
       <rm:property key="buckminster.source" value="false"/>
       <rm:property key="buckminster.mutable" value="false"/>
       <rm:uri format="https://sdqweb.ipd.kit.edu/eclipse/simulizar/nightly"/>
+    </rm:provider>
+  </rm:searchPath>
+  <rm:searchPath name="monitor">
+    <rm:provider componentTypes="osgi.bundle,eclipse.feature,buckminster" readerType="p2" source="false" mutable="false">
+      <rm:property key="buckminster.source" value="false"/>
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="https://sdqweb.ipd.kit.edu/eclipse/monitorrepository/nightly"/>
     </rm:provider>
   </rm:searchPath>
   <rm:searchPath name="ProbeFramework">

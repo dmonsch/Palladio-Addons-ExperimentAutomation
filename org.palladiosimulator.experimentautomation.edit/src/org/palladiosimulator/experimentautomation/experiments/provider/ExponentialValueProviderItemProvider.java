@@ -40,7 +40,8 @@ public class ExponentialValueProviderItemProvider extends ValueProviderItemProvi
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null) {
+        if (this.itemPropertyDescriptors == null)
+        {
             super.getPropertyDescriptors(object);
 
             this.addBasePropertyDescriptor(object);
@@ -55,13 +56,21 @@ public class ExponentialValueProviderItemProvider extends ValueProviderItemProvi
      * @generated
      */
     protected void addBasePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_ExponentialValueProvider_base_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_ExponentialValueProvider_base_feature",
-                        "_UI_ExponentialValueProvider_type"),
-                ExperimentsPackage.Literals.EXPONENTIAL_VALUE_PROVIDER__BASE, true, false, false,
-                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_ExponentialValueProvider_base_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_ExponentialValueProvider_base_feature",
+                                "_UI_ExponentialValueProvider_type"),
+                                ExperimentsPackage.Literals.EXPONENTIAL_VALUE_PROVIDER__BASE,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -97,7 +106,8 @@ public class ExponentialValueProviderItemProvider extends ValueProviderItemProvi
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(ExponentialValueProvider.class)) {
+        switch (notification.getFeatureID(ExponentialValueProvider.class))
+        {
         case ExperimentsPackage.EXPONENTIAL_VALUE_PROVIDER__BASE:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;

@@ -84,7 +84,8 @@ public abstract class ToolConfigurationImpl extends EObjectImpl implements ToolC
         this.name = newName;
         if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.TOOL_CONFIGURATION__NAME,
-                    oldName, this.name));
+                    oldName,
+                    this.name));
         }
     }
 
@@ -95,7 +96,8 @@ public abstract class ToolConfigurationImpl extends EObjectImpl implements ToolC
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.TOOL_CONFIGURATION__NAME:
             return this.getName();
         }
@@ -109,7 +111,8 @@ public abstract class ToolConfigurationImpl extends EObjectImpl implements ToolC
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.TOOL_CONFIGURATION__NAME:
             this.setName((String) newValue);
             return;
@@ -124,7 +127,8 @@ public abstract class ToolConfigurationImpl extends EObjectImpl implements ToolC
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.TOOL_CONFIGURATION__NAME:
             this.setName(NAME_EDEFAULT);
             return;
@@ -139,7 +143,8 @@ public abstract class ToolConfigurationImpl extends EObjectImpl implements ToolC
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.TOOL_CONFIGURATION__NAME:
             return NAME_EDEFAULT == null ? this.name != null : !NAME_EDEFAULT.equals(this.name);
         }

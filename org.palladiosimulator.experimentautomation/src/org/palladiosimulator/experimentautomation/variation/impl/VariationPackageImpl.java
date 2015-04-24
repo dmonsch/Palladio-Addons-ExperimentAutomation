@@ -18,7 +18,6 @@ import org.palladiosimulator.experimentautomation.variation.VariationPackage;
 import org.palladiosimulator.experimentautomation.variation.VariationRepository;
 import org.palladiosimulator.experimentautomation.variation.VariationType;
 import org.palladiosimulator.servicelevelobjective.ServicelevelObjectivePackage;
-import org.palladiosimulator.simulizar.monitorrepository.MonitorrepositoryPackage;
 import org.scaledl.usageevolution.UsageevolutionPackage;
 
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
@@ -103,13 +102,12 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
 
         // Obtain or create and register package
         final VariationPackageImpl theVariationPackage = (VariationPackageImpl) (EPackage.Registry.INSTANCE
-                .get(eNS_URI) instanceof VariationPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
-                : new VariationPackageImpl());
+                .get(eNS_URI) instanceof VariationPackageImpl ? EPackage.Registry.INSTANCE
+                .get(eNS_URI) : new VariationPackageImpl());
 
         isInited = true;
 
         // Initialize simple dependencies
-        MonitorrepositoryPackage.eINSTANCE.eClass();
         ServicelevelObjectivePackage.eINSTANCE.eClass();
         UsageevolutionPackage.eINSTANCE.eClass();
 
@@ -119,7 +117,8 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
                         .getEPackage(ExperimentsPackage.eNS_URI) : ExperimentsPackage.eINSTANCE);
         final AbstractsimulationPackageImpl theAbstractsimulationPackage = (AbstractsimulationPackageImpl) (EPackage.Registry.INSTANCE
                 .getEPackage(AbstractsimulationPackage.eNS_URI) instanceof AbstractsimulationPackageImpl ? EPackage.Registry.INSTANCE
-                        .getEPackage(AbstractsimulationPackage.eNS_URI) : AbstractsimulationPackage.eINSTANCE);
+                        .getEPackage(AbstractsimulationPackage.eNS_URI)
+                : AbstractsimulationPackage.eINSTANCE);
 
         // Create package meta-data objects
         theVariationPackage.createPackageContents();
@@ -303,14 +302,16 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
         this.initEClass(this.variationTypeEClass, VariationType.class, "VariationType", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getVariationType_Name(), this.ecorePackage.getEString(), "name", null, 1, 1,
+                VariationType.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEAttribute(this.getVariationType_StrategyClass(), this.ecorePackage.getEString(), "strategyClass",
+                null, 1, 1,
                 VariationType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, !IS_ORDERED);
-        this.initEAttribute(this.getVariationType_StrategyClass(), this.ecorePackage.getEString(), "strategyClass",
+        this.initEAttribute(this.getVariationType_VariedEntityInterface(), this.ecorePackage.getEString(),
+                "variedEntityInterface",
                 null, 1, 1, VariationType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
                 IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEAttribute(this.getVariationType_VariedEntityInterface(), this.ecorePackage.getEString(),
-                "variedEntityInterface", null, 1, 1, VariationType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.valueVariationEClass, ValueVariation.class, "ValueVariation", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
@@ -321,7 +322,8 @@ public class VariationPackageImpl extends EPackageImpl implements VariationPacka
         this.initEClass(this.variationRepositoryEClass, VariationRepository.class, "VariationRepository", !IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         this.initEReference(this.getVariationRepository_Variation(), this.getVariationType(), null, "variation", null,
-                0, -1, VariationRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                0, -1,
+                VariationRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
                 !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         // Create resource

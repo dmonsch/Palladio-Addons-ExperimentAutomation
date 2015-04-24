@@ -35,7 +35,8 @@ public class ProfilingMeasurementItemProvider extends ResponseMeasurementItemPro
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null) {
+        if (this.itemPropertyDescriptors == null)
+        {
             super.getPropertyDescriptors(object);
 
         }

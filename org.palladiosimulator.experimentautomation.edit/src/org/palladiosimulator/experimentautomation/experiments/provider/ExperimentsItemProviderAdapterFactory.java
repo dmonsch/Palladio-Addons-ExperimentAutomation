@@ -102,7 +102,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createExperimentRepositoryAdapter() {
-        if (this.experimentRepositoryItemProvider == null) {
+        if (this.experimentRepositoryItemProvider == null)
+        {
             this.experimentRepositoryItemProvider = new ExperimentRepositoryItemProvider(this);
         }
 
@@ -127,7 +128,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createExperimentAdapter() {
-        if (this.experimentItemProvider == null) {
+        if (this.experimentItemProvider == null)
+        {
             this.experimentItemProvider = new ExperimentItemProvider(this);
         }
 
@@ -152,7 +154,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createVariationAdapter() {
-        if (this.variationItemProvider == null) {
+        if (this.variationItemProvider == null)
+        {
             this.variationItemProvider = new VariationItemProvider(this);
         }
 
@@ -177,7 +180,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createPolynomialValueProviderAdapter() {
-        if (this.polynomialValueProviderItemProvider == null) {
+        if (this.polynomialValueProviderItemProvider == null)
+        {
             this.polynomialValueProviderItemProvider = new PolynomialValueProviderItemProvider(this);
         }
 
@@ -202,7 +206,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createExponentialValueProviderAdapter() {
-        if (this.exponentialValueProviderItemProvider == null) {
+        if (this.exponentialValueProviderItemProvider == null)
+        {
             this.exponentialValueProviderItemProvider = new ExponentialValueProviderItemProvider(this);
         }
 
@@ -227,7 +232,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createSetValueProviderAdapter() {
-        if (this.setValueProviderItemProvider == null) {
+        if (this.setValueProviderItemProvider == null)
+        {
             this.setValueProviderItemProvider = new SetValueProviderItemProvider(this);
         }
 
@@ -252,7 +258,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createPlacketBurmanDesignAdapter() {
-        if (this.placketBurmanDesignItemProvider == null) {
+        if (this.placketBurmanDesignItemProvider == null)
+        {
             this.placketBurmanDesignItemProvider = new PlacketBurmanDesignItemProvider(this);
         }
 
@@ -277,7 +284,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createFullFactorialDesignAdapter() {
-        if (this.fullFactorialDesignItemProvider == null) {
+        if (this.fullFactorialDesignItemProvider == null)
+        {
             this.fullFactorialDesignItemProvider = new FullFactorialDesignItemProvider(this);
         }
 
@@ -302,7 +310,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createFractionalFactorialDesignAdapter() {
-        if (this.fractionalFactorialDesignItemProvider == null) {
+        if (this.fractionalFactorialDesignItemProvider == null)
+        {
             this.fractionalFactorialDesignItemProvider = new FractionalFactorialDesignItemProvider(this);
         }
 
@@ -327,7 +336,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createOneFactorAtATimeAdapter() {
-        if (this.oneFactorAtATimeItemProvider == null) {
+        if (this.oneFactorAtATimeItemProvider == null)
+        {
             this.oneFactorAtATimeItemProvider = new OneFactorAtATimeItemProvider(this);
         }
 
@@ -352,7 +362,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createSimulationDurationMeasurementAdapter() {
-        if (this.simulationDurationMeasurementItemProvider == null) {
+        if (this.simulationDurationMeasurementItemProvider == null)
+        {
             this.simulationDurationMeasurementItemProvider = new SimulationDurationMeasurementItemProvider(this);
         }
 
@@ -377,7 +388,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createProfilingMeasurementAdapter() {
-        if (this.profilingMeasurementItemProvider == null) {
+        if (this.profilingMeasurementItemProvider == null)
+        {
             this.profilingMeasurementItemProvider = new ProfilingMeasurementItemProvider(this);
         }
 
@@ -402,7 +414,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createJMXMeasurementAdapter() {
-        if (this.jmxMeasurementItemProvider == null) {
+        if (this.jmxMeasurementItemProvider == null)
+        {
             this.jmxMeasurementItemProvider = new JMXMeasurementItemProvider(this);
         }
 
@@ -427,7 +440,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createLinearValueProviderAdapter() {
-        if (this.linearValueProviderItemProvider == null) {
+        if (this.linearValueProviderItemProvider == null)
+        {
             this.linearValueProviderItemProvider = new LinearValueProviderItemProvider(this);
         }
 
@@ -452,7 +466,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createObjectModificationAdapter() {
-        if (this.objectModificationItemProvider == null) {
+        if (this.objectModificationItemProvider == null)
+        {
             this.objectModificationItemProvider = new ObjectModificationItemProvider(this);
         }
 
@@ -477,7 +492,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createInitialModelAdapter() {
-        if (this.initialModelItemProvider == null) {
+        if (this.initialModelItemProvider == null)
+        {
             this.initialModelItemProvider = new InitialModelItemProvider(this);
         }
 
@@ -502,7 +518,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createReconfigurationRulesFolderAdapter() {
-        if (this.reconfigurationRulesFolderItemProvider == null) {
+        if (this.reconfigurationRulesFolderItemProvider == null)
+        {
             this.reconfigurationRulesFolderItemProvider = new ReconfigurationRulesFolderItemProvider(this);
         }
 
@@ -527,7 +544,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createNestedIntervalsDoubleValueProviderAdapter() {
-        if (this.nestedIntervalsDoubleValueProviderItemProvider == null) {
+        if (this.nestedIntervalsDoubleValueProviderItemProvider == null)
+        {
             this.nestedIntervalsDoubleValueProviderItemProvider = new NestedIntervalsDoubleValueProviderItemProvider(
                     this);
         }
@@ -553,7 +571,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createNestedIntervalsLongValueProviderAdapter() {
-        if (this.nestedIntervalsLongValueProviderItemProvider == null) {
+        if (this.nestedIntervalsLongValueProviderItemProvider == null)
+        {
             this.nestedIntervalsLongValueProviderItemProvider = new NestedIntervalsLongValueProviderItemProvider(this);
         }
 
@@ -578,7 +597,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Adapter createSchedulingPolicy2DelayModificationAdapter() {
-        if (this.schedulingPolicy2DelayModificationItemProvider == null) {
+        if (this.schedulingPolicy2DelayModificationItemProvider == null)
+        {
             this.schedulingPolicy2DelayModificationItemProvider = new SchedulingPolicy2DelayModificationItemProvider(
                     this);
         }
@@ -636,9 +656,11 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
      */
     @Override
     public Object adapt(final Object object, final Object type) {
-        if (this.isFactoryForType(type)) {
+        if (this.isFactoryForType(type))
+        {
             final Object adapter = super.adapt(object, type);
-            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
+            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter)))
+            {
                 return adapter;
             }
         }
@@ -705,7 +727,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
     public void fireNotifyChanged(final Notification notification) {
         this.changeNotifier.fireNotifyChanged(notification);
 
-        if (this.parentAdapterFactory != null) {
+        if (this.parentAdapterFactory != null)
+        {
             this.parentAdapterFactory.fireNotifyChanged(notification);
         }
     }

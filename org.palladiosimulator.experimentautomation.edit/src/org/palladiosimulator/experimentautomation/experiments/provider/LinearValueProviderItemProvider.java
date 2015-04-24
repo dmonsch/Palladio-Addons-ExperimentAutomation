@@ -40,7 +40,8 @@ public class LinearValueProviderItemProvider extends ValueProviderItemProvider {
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null) {
+        if (this.itemPropertyDescriptors == null)
+        {
             super.getPropertyDescriptors(object);
 
             this.addSummandPropertyDescriptor(object);
@@ -56,12 +57,21 @@ public class LinearValueProviderItemProvider extends ValueProviderItemProvider {
      * @generated
      */
     protected void addSummandPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_LinearValueProvider_summand_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_LinearValueProvider_summand_feature",
-                        "_UI_LinearValueProvider_type"), ExperimentsPackage.Literals.LINEAR_VALUE_PROVIDER__SUMMAND,
-                true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_LinearValueProvider_summand_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_LinearValueProvider_summand_feature",
+                                "_UI_LinearValueProvider_type"),
+                                ExperimentsPackage.Literals.LINEAR_VALUE_PROVIDER__SUMMAND,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -71,12 +81,21 @@ public class LinearValueProviderItemProvider extends ValueProviderItemProvider {
      * @generated
      */
     protected void addFactorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_LinearValueProvider_factor_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_LinearValueProvider_factor_feature",
-                        "_UI_LinearValueProvider_type"), ExperimentsPackage.Literals.LINEAR_VALUE_PROVIDER__FACTOR,
-                true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_LinearValueProvider_factor_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_LinearValueProvider_factor_feature",
+                                "_UI_LinearValueProvider_type"),
+                                ExperimentsPackage.Literals.LINEAR_VALUE_PROVIDER__FACTOR,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -112,7 +131,8 @@ public class LinearValueProviderItemProvider extends ValueProviderItemProvider {
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(LinearValueProvider.class)) {
+        switch (notification.getFeatureID(LinearValueProvider.class))
+        {
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER__SUMMAND:
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER__FACTOR:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

@@ -43,7 +43,8 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null) {
+        if (this.itemPropertyDescriptors == null)
+        {
             super.getPropertyDescriptors(object);
 
             this.addSimulateLinkingResourcesPropertyDescriptor(object);
@@ -59,14 +60,22 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
      * @generated
      */
     protected void addSimulateLinkingResourcesPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_AbstractSimulationConfiguration_simulateLinkingResources_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description",
-                        "_UI_AbstractSimulationConfiguration_simulateLinkingResources_feature",
-                        "_UI_AbstractSimulationConfiguration_type"),
-                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES, true,
-                false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors
+                .add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_AbstractSimulationConfiguration_simulateLinkingResources_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_AbstractSimulationConfiguration_simulateLinkingResources_feature",
+                                "_UI_AbstractSimulationConfiguration_type"),
+                                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -76,14 +85,22 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
      * @generated
      */
     protected void addSimulateFailuresPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_AbstractSimulationConfiguration_simulateFailures_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description",
-                        "_UI_AbstractSimulationConfiguration_simulateFailures_feature",
-                        "_UI_AbstractSimulationConfiguration_type"),
-                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES, true, false,
-                false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors
+        .add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_AbstractSimulationConfiguration_simulateFailures_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_AbstractSimulationConfiguration_simulateFailures_feature",
+                                "_UI_AbstractSimulationConfiguration_type"),
+                                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -97,7 +114,8 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null) {
+        if (this.childrenFeatures == null)
+        {
             super.getChildrenFeatures(object);
             this.childrenFeatures
             .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS);
@@ -130,8 +148,9 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
     @Override
     public String getText(final Object object) {
         final String label = ((AbstractSimulationConfiguration) object).getName();
-        return label == null || label.length() == 0 ? this.getString("_UI_AbstractSimulationConfiguration_type") : this
-                .getString("_UI_AbstractSimulationConfiguration_type") + " " + label;
+        return label == null || label.length() == 0 ?
+                this.getString("_UI_AbstractSimulationConfiguration_type") :
+                this.getString("_UI_AbstractSimulationConfiguration_type") + " " + label;
     }
 
     /**
@@ -145,7 +164,8 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(AbstractSimulationConfiguration.class)) {
+        switch (notification.getFeatureID(AbstractSimulationConfiguration.class))
+        {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES:
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
@@ -169,25 +189,31 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(this.createChildParameter(
-                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS,
-                AbstractsimulationFactory.eINSTANCE.createMeasurementCountStopCondition()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS,
+                        AbstractsimulationFactory.eINSTANCE.createMeasurementCountStopCondition()));
 
-        newChildDescriptors.add(this.createChildParameter(
-                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS,
-                AbstractsimulationFactory.eINSTANCE.createSimTimeStopCondition()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS,
+                        AbstractsimulationFactory.eINSTANCE.createSimTimeStopCondition()));
 
-        newChildDescriptors.add(this.createChildParameter(
-                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED,
-                AbstractsimulationFactory.eINSTANCE.createRandomNumberGeneratorSeed()));
+        newChildDescriptors
+        .add
+                (this.createChildParameter
+                (AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED,
+                        AbstractsimulationFactory.eINSTANCE.createRandomNumberGeneratorSeed()));
 
-        newChildDescriptors.add(this.createChildParameter(
-                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE,
-                AbstractsimulationFactory.eINSTANCE.createMemoryDatasource()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE,
+                        AbstractsimulationFactory.eINSTANCE.createMemoryDatasource()));
 
-        newChildDescriptors.add(this.createChildParameter(
-                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE,
-                AbstractsimulationFactory.eINSTANCE.createFileDatasource()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE,
+                        AbstractsimulationFactory.eINSTANCE.createFileDatasource()));
     }
 
 }

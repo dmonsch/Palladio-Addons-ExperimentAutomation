@@ -83,7 +83,8 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
         this.pollingPeriod = newPollingPeriod;
         if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD, oldPollingPeriod, this.pollingPeriod));
+                    ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD,
+                    oldPollingPeriod, this.pollingPeriod));
         }
     }
 
@@ -94,7 +95,8 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD:
             return this.getPollingPeriod();
         }
@@ -108,7 +110,8 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD:
             this.setPollingPeriod((Integer) newValue);
             return;
@@ -123,7 +126,8 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD:
             this.setPollingPeriod(POLLING_PERIOD_EDEFAULT);
             return;
@@ -138,7 +142,8 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD:
             return POLLING_PERIOD_EDEFAULT == null ? this.pollingPeriod != null : !POLLING_PERIOD_EDEFAULT
             .equals(this.pollingPeriod);

@@ -7,7 +7,6 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.palladiosimulator.edp2.models.ExperimentData.provider.EDP2EditPlugin;
 import org.palladiosimulator.metricspec.provider.MetricSpecEditPlugin;
 import org.palladiosimulator.servicelevelobjective.provider.ServicelevelobjectiveEditPlugin;
-import org.palladiosimulator.simulizar.monitorrepository.provider.MonitorrepositoryEditPlugin;
 import org.scaledl.usageevolution.provider.UsageevolutionEditPlugin;
 
 import tools.descartes.dlim.provider.DlimEditPlugin;
@@ -44,11 +43,20 @@ public final class ExperimentAutomationEditPlugin extends EMFPlugin {
      * @generated
      */
     public ExperimentAutomationEditPlugin() {
-        super(new ResourceLocator[] { DlimEditPlugin.INSTANCE, EDP2EditPlugin.INSTANCE, IdentifierEditPlugin.INSTANCE,
-                MetricSpecEditPlugin.INSTANCE, MonitorrepositoryEditPlugin.INSTANCE,
-                PalladioComponentModelEditPlugin.INSTANCE, ProbabilityFunctionEditPlugin.INSTANCE,
-                ServicelevelobjectiveEditPlugin.INSTANCE, StoexEditPlugin.INSTANCE, UnitsEditPlugin.INSTANCE,
-                UsageevolutionEditPlugin.INSTANCE, });
+        super(new ResourceLocator[]
+        {
+                DlimEditPlugin.INSTANCE,
+                EDP2EditPlugin.INSTANCE,
+                IdentifierEditPlugin.INSTANCE,
+                MetricSpecEditPlugin.INSTANCE,
+                org.palladiosimulator.monitorrepository.provider.MonitorrepositoryEditPlugin.INSTANCE,
+                PalladioComponentModelEditPlugin.INSTANCE,
+                ProbabilityFunctionEditPlugin.INSTANCE,
+                ServicelevelobjectiveEditPlugin.INSTANCE,
+                StoexEditPlugin.INSTANCE,
+                UnitsEditPlugin.INSTANCE,
+                UsageevolutionEditPlugin.INSTANCE,
+        });
     }
 
     /**

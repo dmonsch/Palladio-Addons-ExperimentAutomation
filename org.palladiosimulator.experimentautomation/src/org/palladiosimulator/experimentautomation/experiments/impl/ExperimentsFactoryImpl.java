@@ -42,13 +42,16 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      * @generated
      */
     public static ExperimentsFactory init() {
-        try {
+        try
+        {
             final ExperimentsFactory theExperimentsFactory = (ExperimentsFactory) EPackage.Registry.INSTANCE
                     .getEFactory(ExperimentsPackage.eNS_URI);
-            if (theExperimentsFactory != null) {
+            if (theExperimentsFactory != null)
+            {
                 return theExperimentsFactory;
             }
-        } catch (final Exception exception) {
+        } catch (final Exception exception)
+        {
             EcorePlugin.INSTANCE.log(exception);
         }
         return new ExperimentsFactoryImpl();
@@ -70,7 +73,8 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
      */
     @Override
     public EObject create(final EClass eClass) {
-        switch (eClass.getClassifierID()) {
+        switch (eClass.getClassifierID())
+        {
         case ExperimentsPackage.EXPERIMENT_REPOSITORY:
             return this.createExperimentRepository();
         case ExperimentsPackage.EXPERIMENT:

@@ -38,7 +38,8 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public AbstractsimulationAdapterFactory() {
-        if (modelPackage == null) {
+        if (modelPackage == null)
+        {
             modelPackage = AbstractsimulationPackage.eINSTANCE;
         }
     }
@@ -53,10 +54,12 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
      */
     @Override
     public boolean isFactoryForType(final Object object) {
-        if (object == modelPackage) {
+        if (object == modelPackage)
+        {
             return true;
         }
-        if (object instanceof EObject) {
+        if (object instanceof EObject)
+        {
             return ((EObject) object).eClass().getEPackage() == modelPackage;
         }
         return false;
@@ -68,215 +71,226 @@ public class AbstractsimulationAdapterFactory extends AdapterFactoryImpl {
      *
      * @generated
      */
-    protected AbstractsimulationSwitch<Adapter> modelSwitch = new AbstractsimulationSwitch<Adapter>() {
+    protected AbstractsimulationSwitch<Adapter> modelSwitch = new AbstractsimulationSwitch<Adapter>()
+            {
         @Override
-        public Adapter caseAbstractSimulationConfiguration(final AbstractSimulationConfiguration object) {
+        public Adapter caseAbstractSimulationConfiguration(final AbstractSimulationConfiguration object)
+        {
             return AbstractsimulationAdapterFactory.this.createAbstractSimulationConfigurationAdapter();
         }
 
         @Override
-        public Adapter caseRandomNumberGeneratorSeed(final RandomNumberGeneratorSeed object) {
+        public Adapter caseRandomNumberGeneratorSeed(final RandomNumberGeneratorSeed object)
+        {
             return AbstractsimulationAdapterFactory.this.createRandomNumberGeneratorSeedAdapter();
         }
 
         @Override
-        public Adapter caseEDP2Datasource(final EDP2Datasource object) {
+        public Adapter caseEDP2Datasource(final EDP2Datasource object)
+        {
             return AbstractsimulationAdapterFactory.this.createEDP2DatasourceAdapter();
         }
 
         @Override
-        public Adapter caseMemoryDatasource(final MemoryDatasource object) {
+        public Adapter caseMemoryDatasource(final MemoryDatasource object)
+        {
             return AbstractsimulationAdapterFactory.this.createMemoryDatasourceAdapter();
         }
 
         @Override
-        public Adapter caseFileDatasource(final FileDatasource object) {
+        public Adapter caseFileDatasource(final FileDatasource object)
+        {
             return AbstractsimulationAdapterFactory.this.createFileDatasourceAdapter();
         }
 
         @Override
-        public Adapter caseMeasurementCountStopCondition(final MeasurementCountStopCondition object) {
+        public Adapter caseMeasurementCountStopCondition(final MeasurementCountStopCondition object)
+        {
             return AbstractsimulationAdapterFactory.this.createMeasurementCountStopConditionAdapter();
         }
 
         @Override
-        public Adapter caseSimTimeStopCondition(final SimTimeStopCondition object) {
+        public Adapter caseSimTimeStopCondition(final SimTimeStopCondition object)
+        {
             return AbstractsimulationAdapterFactory.this.createSimTimeStopConditionAdapter();
         }
 
         @Override
-        public Adapter caseStopCondition(final StopCondition object) {
+        public Adapter caseStopCondition(final StopCondition object)
+        {
             return AbstractsimulationAdapterFactory.this.createStopConditionAdapter();
         }
 
         @Override
-        public Adapter caseToolConfiguration(final ToolConfiguration object) {
+        public Adapter caseToolConfiguration(final ToolConfiguration object)
+        {
             return AbstractsimulationAdapterFactory.this.createToolConfigurationAdapter();
         }
 
         @Override
-        public Adapter defaultCase(final EObject object) {
+        public Adapter defaultCase(final EObject object)
+        {
             return AbstractsimulationAdapterFactory.this.createEObjectAdapter();
         }
-    };
+            };
 
-    /**
-     * Creates an adapter for the <code>target</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
+            /**
+             * Creates an adapter for the <code>target</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param target
      *            the object to adapt.
      * @return the adapter for the <code>target</code>.
-     * @generated
-     */
-    @Override
-    public Adapter createAdapter(final Notifier target) {
-        return this.modelSwitch.doSwitch((EObject) target);
-    }
+             * @generated
+             */
+            @Override
+            public Adapter createAdapter(final Notifier target) {
+                return this.modelSwitch.doSwitch((EObject) target);
+            }
 
-    /**
-     * Creates a new adapter for an object of class '
+            /**
+             * Creates a new adapter for an object of class '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
      * <em>Abstract Simulation Configuration</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
-     * @generated
-     */
-    public Adapter createAbstractSimulationConfigurationAdapter() {
-        return null;
-    }
+             * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
+             * @generated
+             */
+            public Adapter createAbstractSimulationConfigurationAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for an object of class '
+            /**
+             * Creates a new adapter for an object of class '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed
      * <em>Random Number Generator Seed</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed
-     * @generated
-     */
-    public Adapter createRandomNumberGeneratorSeedAdapter() {
-        return null;
-    }
+             * @see org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed
+             * @generated
+             */
+            public Adapter createRandomNumberGeneratorSeedAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for an object of class '
+            /**
+             * Creates a new adapter for an object of class '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource
      * <em>EDP2 Datasource</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource
-     * @generated
-     */
-    public Adapter createEDP2DatasourceAdapter() {
-        return null;
-    }
+             * @see org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource
+             * @generated
+             */
+            public Adapter createEDP2DatasourceAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for an object of class '
+            /**
+             * Creates a new adapter for an object of class '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource
      * <em>Memory Datasource</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource
-     * @generated
-     */
-    public Adapter createMemoryDatasourceAdapter() {
-        return null;
-    }
+             * @see org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource
+             * @generated
+             */
+            public Adapter createMemoryDatasourceAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for an object of class '
+            /**
+             * Creates a new adapter for an object of class '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource
      * <em>File Datasource</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource
-     * @generated
-     */
-    public Adapter createFileDatasourceAdapter() {
-        return null;
-    }
+             * @see org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource
+             * @generated
+             */
+            public Adapter createFileDatasourceAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for an object of class '
+            /**
+             * Creates a new adapter for an object of class '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition
      * <em>Measurement Count Stop Condition</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition
-     * @generated
-     */
-    public Adapter createMeasurementCountStopConditionAdapter() {
-        return null;
-    }
+             * @see org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition
+             * @generated
+             */
+            public Adapter createMeasurementCountStopConditionAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for an object of class '
+            /**
+             * Creates a new adapter for an object of class '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition
      * <em>Sim Time Stop Condition</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition
-     * @generated
-     */
-    public Adapter createSimTimeStopConditionAdapter() {
-        return null;
-    }
+             * @see org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition
+             * @generated
+             */
+            public Adapter createSimTimeStopConditionAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for an object of class '
+            /**
+             * Creates a new adapter for an object of class '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition
      * <em>Stop Condition</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition
-     * @generated
-     */
-    public Adapter createStopConditionAdapter() {
-        return null;
-    }
+             * @see org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition
+             * @generated
+             */
+            public Adapter createStopConditionAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for an object of class '
+            /**
+             * Creates a new adapter for an object of class '
      * {@link org.palladiosimulator.experimentautomation.experiments.ToolConfiguration
      * <em>Tool Configuration</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.experimentautomation.experiments.ToolConfiguration
-     * @generated
-     */
-    public Adapter createToolConfigurationAdapter() {
-        return null;
-    }
+             * @see org.palladiosimulator.experimentautomation.experiments.ToolConfiguration
+             * @generated
+             */
+            public Adapter createToolConfigurationAdapter() {
+                return null;
+            }
 
-    /**
-     * Creates a new adapter for the default case. <!-- begin-user-doc --> This default
+            /**
+             * Creates a new adapter for the default case. <!-- begin-user-doc --> This default
      * implementation returns null. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @generated
-     */
-    public Adapter createEObjectAdapter() {
-        return null;
-    }
+             * @generated
+             */
+            public Adapter createEObjectAdapter() {
+                return null;
+            }
 
 } // AbstractsimulationAdapterFactory

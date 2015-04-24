@@ -49,7 +49,8 @@ public class ExperimentRepositoryItemProvider extends ItemProviderAdapter implem
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null) {
+        if (this.itemPropertyDescriptors == null)
+        {
             super.getPropertyDescriptors(object);
 
         }
@@ -67,7 +68,8 @@ public class ExperimentRepositoryItemProvider extends ItemProviderAdapter implem
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null) {
+        if (this.childrenFeatures == null)
+        {
             super.getChildrenFeatures(object);
             this.childrenFeatures.add(ExperimentsPackage.Literals.EXPERIMENT_REPOSITORY__EXPERIMENTS);
         }
@@ -119,7 +121,8 @@ public class ExperimentRepositoryItemProvider extends ItemProviderAdapter implem
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(ExperimentRepository.class)) {
+        switch (notification.getFeatureID(ExperimentRepository.class))
+        {
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
@@ -137,9 +140,10 @@ public class ExperimentRepositoryItemProvider extends ItemProviderAdapter implem
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(this.createChildParameter(
-                ExperimentsPackage.Literals.EXPERIMENT_REPOSITORY__EXPERIMENTS,
-                ExperimentsFactory.eINSTANCE.createExperiment()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (ExperimentsPackage.Literals.EXPERIMENT_REPOSITORY__EXPERIMENTS,
+                        ExperimentsFactory.eINSTANCE.createExperiment()));
     }
 
     /**

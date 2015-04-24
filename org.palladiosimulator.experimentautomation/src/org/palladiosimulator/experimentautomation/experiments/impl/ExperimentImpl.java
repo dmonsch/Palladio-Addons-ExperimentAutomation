@@ -242,7 +242,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
      */
     @Override
     public EList<Variation> getVariations() {
-        if (this.variations == null) {
+        if (this.variations == null)
+        {
             this.variations = new EObjectContainmentEList<Variation>(Variation.class, this,
                     ExperimentsPackage.EXPERIMENT__VARIATIONS);
         }
@@ -256,7 +257,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
      */
     @Override
     public EList<Modification> getModifications() {
-        if (this.modifications == null) {
+        if (this.modifications == null)
+        {
             this.modifications = new EObjectContainmentEList<Modification>(Modification.class, this,
                     ExperimentsPackage.EXPERIMENT__MODIFICATIONS);
         }
@@ -320,7 +322,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
      */
     @Override
     public EList<ToolConfiguration> getToolConfiguration() {
-        if (this.toolConfiguration == null) {
+        if (this.toolConfiguration == null)
+        {
             this.toolConfiguration = new EObjectContainmentEList<ToolConfiguration>(ToolConfiguration.class, this,
                     ExperimentsPackage.EXPERIMENT__TOOL_CONFIGURATION);
         }
@@ -334,7 +337,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
      */
     @Override
     public EList<StopCondition> getStopConditions() {
-        if (this.stopConditions == null) {
+        if (this.stopConditions == null)
+        {
             this.stopConditions = new EObjectContainmentEList<StopCondition>(StopCondition.class, this,
                     ExperimentsPackage.EXPERIMENT__STOP_CONDITIONS);
         }
@@ -384,7 +388,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     public NotificationChain basicSetExperimentDesign(final ExperimentDesign newExperimentDesign, NotificationChain msgs) {
         final ExperimentDesign oldExperimentDesign = this.experimentDesign;
         this.experimentDesign = newExperimentDesign;
-        if (this.eNotificationRequired()) {
+        if (this.eNotificationRequired())
+        {
             final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
                     ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN, oldExperimentDesign, newExperimentDesign);
             if (msgs == null) {
@@ -403,7 +408,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
      */
     @Override
     public void setExperimentDesign(final ExperimentDesign newExperimentDesign) {
-        if (newExperimentDesign != this.experimentDesign) {
+        if (newExperimentDesign != this.experimentDesign)
+        {
             NotificationChain msgs = null;
             if (this.experimentDesign != null) {
                 msgs = ((InternalEObject) this.experimentDesign).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
@@ -417,9 +423,11 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
             if (msgs != null) {
                 msgs.dispatch();
             }
-        } else if (this.eNotificationRequired()) {
+        }
+        else if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN, newExperimentDesign, newExperimentDesign));
+                    ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN,
+                    newExperimentDesign, newExperimentDesign));
         }
     }
 
@@ -442,7 +450,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
             NotificationChain msgs) {
         final ResponseMeasurement oldResponseMeasurement = this.responseMeasurement;
         this.responseMeasurement = newResponseMeasurement;
-        if (this.eNotificationRequired()) {
+        if (this.eNotificationRequired())
+        {
             final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
                     ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT, oldResponseMeasurement, newResponseMeasurement);
             if (msgs == null) {
@@ -461,7 +470,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
      */
     @Override
     public void setResponseMeasurement(final ResponseMeasurement newResponseMeasurement) {
-        if (newResponseMeasurement != this.responseMeasurement) {
+        if (newResponseMeasurement != this.responseMeasurement)
+        {
             NotificationChain msgs = null;
             if (this.responseMeasurement != null) {
                 msgs = ((InternalEObject) this.responseMeasurement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
@@ -475,9 +485,11 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
             if (msgs != null) {
                 msgs.dispatch();
             }
-        } else if (this.eNotificationRequired()) {
+        }
+        else if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT, newResponseMeasurement, newResponseMeasurement));
+                    ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT,
+                    newResponseMeasurement, newResponseMeasurement));
         }
     }
 
@@ -499,7 +511,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     public NotificationChain basicSetInitialModel(final InitialModel newInitialModel, NotificationChain msgs) {
         final InitialModel oldInitialModel = this.initialModel;
         this.initialModel = newInitialModel;
-        if (this.eNotificationRequired()) {
+        if (this.eNotificationRequired())
+        {
             final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
                     ExperimentsPackage.EXPERIMENT__INITIAL_MODEL, oldInitialModel, newInitialModel);
             if (msgs == null) {
@@ -518,7 +531,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
      */
     @Override
     public void setInitialModel(final InitialModel newInitialModel) {
-        if (newInitialModel != this.initialModel) {
+        if (newInitialModel != this.initialModel)
+        {
             NotificationChain msgs = null;
             if (this.initialModel != null) {
                 msgs = ((InternalEObject) this.initialModel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
@@ -532,7 +546,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
             if (msgs != null) {
                 msgs.dispatch();
             }
-        } else if (this.eNotificationRequired()) {
+        }
+        else if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.EXPERIMENT__INITIAL_MODEL,
                     newInitialModel, newInitialModel));
         }
@@ -571,7 +586,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     @Override
     public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.EXPERIMENT__VARIATIONS:
             return ((InternalEList<?>) this.getVariations()).basicRemove(otherEnd, msgs);
         case ExperimentsPackage.EXPERIMENT__MODIFICATIONS:
@@ -597,7 +613,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.EXPERIMENT__VARIATIONS:
             return this.getVariations();
         case ExperimentsPackage.EXPERIMENT__MODIFICATIONS:
@@ -632,7 +649,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
     @SuppressWarnings("unchecked")
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.EXPERIMENT__VARIATIONS:
             this.getVariations().clear();
             this.getVariations().addAll((Collection<? extends Variation>) newValue);
@@ -681,7 +699,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.EXPERIMENT__VARIATIONS:
             this.getVariations().clear();
             return;
@@ -726,7 +745,8 @@ public class ExperimentImpl extends EObjectImpl implements Experiment {
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.EXPERIMENT__VARIATIONS:
             return this.variations != null && !this.variations.isEmpty();
         case ExperimentsPackage.EXPERIMENT__MODIFICATIONS:

@@ -25,13 +25,16 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
      * @generated
      */
     public static VariationFactory init() {
-        try {
+        try
+        {
             final VariationFactory theVariationFactory = (VariationFactory) EPackage.Registry.INSTANCE
                     .getEFactory(VariationPackage.eNS_URI);
-            if (theVariationFactory != null) {
+            if (theVariationFactory != null)
+            {
                 return theVariationFactory;
             }
-        } catch (final Exception exception) {
+        } catch (final Exception exception)
+        {
             EcorePlugin.INSTANCE.log(exception);
         }
         return new VariationFactoryImpl();
@@ -53,7 +56,8 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
      */
     @Override
     public EObject create(final EClass eClass) {
-        switch (eClass.getClassifierID()) {
+        switch (eClass.getClassifierID())
+        {
         case VariationPackage.VALUE_VARIATION:
             return this.createValueVariation();
         case VariationPackage.STRUCTURAL_VARIATION:

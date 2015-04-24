@@ -24,7 +24,7 @@
       <import plugin="de.uka.ipd.sdq.identifier" version="2.1.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.metricspec" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.pcm" version="3.6.0" match="greaterOrEqual"/>
-      <import plugin="org.palladiosimulator.simulizar.monitorrepository" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="org.palladiosimulator.monitorrepository" version="2.0.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.probfunction" version="2.1.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.servicelevelobjective"/>
       <import plugin="de.uka.ipd.sdq.stoex" version="2.2.0" match="greaterOrEqual"/>
@@ -40,7 +40,7 @@
       <import plugin="de.uka.ipd.sdq.identifier.edit" version="2.1.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.metricspec.edit" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.pcm.edit" version="3.6.0" match="greaterOrEqual"/>
-      <import plugin="org.palladiosimulator.simulizar.monitorrepository.edit" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="org.palladiosimulator.monitorrepository.edit" version="2.0.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.probfunction.edit" version="2.1.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.servicelevelobjective.edit"/>
       <import plugin="de.uka.ipd.sdq.stoex.edit" version="2.2.0" match="greaterOrEqual"/>

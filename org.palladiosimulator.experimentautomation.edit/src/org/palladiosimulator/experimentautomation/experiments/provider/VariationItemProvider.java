@@ -51,7 +51,8 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null) {
+        if (this.itemPropertyDescriptors == null)
+        {
             super.getPropertyDescriptors(object);
 
             this.addTypePropertyDescriptor(object);
@@ -71,11 +72,20 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
      * @generated
      */
     protected void addTypePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Variation_type_feature"), this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_Variation_type_feature", "_UI_Variation_type"),
-                        ExperimentsPackage.Literals.VARIATION__TYPE, true, false, true, null, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_Variation_type_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_Variation_type_feature",
+                                "_UI_Variation_type"),
+                                ExperimentsPackage.Literals.VARIATION__TYPE,
+                                true,
+                                false,
+                                true,
+                                null,
+                                null,
+                                null));
     }
 
     /**
@@ -85,12 +95,20 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
      * @generated
      */
     protected void addMinValuePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Variation_minValue_feature"), this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_Variation_minValue_feature", "_UI_Variation_type"),
-                        ExperimentsPackage.Literals.VARIATION__MIN_VALUE, true, false, false,
-                        ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_Variation_minValue_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_Variation_minValue_feature",
+                                "_UI_Variation_type"),
+                                ExperimentsPackage.Literals.VARIATION__MIN_VALUE,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -100,12 +118,20 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
      * @generated
      */
     protected void addMaxValuePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Variation_maxValue_feature"), this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_Variation_maxValue_feature", "_UI_Variation_type"),
-                        ExperimentsPackage.Literals.VARIATION__MAX_VALUE, true, false, false,
-                        ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_Variation_maxValue_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_Variation_maxValue_feature",
+                                "_UI_Variation_type"),
+                                ExperimentsPackage.Literals.VARIATION__MAX_VALUE,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -115,12 +141,21 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
      * @generated
      */
     protected void addMaxVariationsPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Variation_maxVariations_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_Variation_maxVariations_feature",
-                        "_UI_Variation_type"), ExperimentsPackage.Literals.VARIATION__MAX_VARIATIONS, true, false,
-                false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_Variation_maxVariations_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_Variation_maxVariations_feature",
+                                "_UI_Variation_type"),
+                                ExperimentsPackage.Literals.VARIATION__MAX_VARIATIONS,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -130,12 +165,21 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
      * @generated
      */
     protected void addVariedObjectIdPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Variation_variedObjectId_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_Variation_variedObjectId_feature",
-                        "_UI_Variation_type"), ExperimentsPackage.Literals.VARIATION__VARIED_OBJECT_ID, true, false,
-                false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_Variation_variedObjectId_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_Variation_variedObjectId_feature",
+                                "_UI_Variation_type"),
+                                ExperimentsPackage.Literals.VARIATION__VARIED_OBJECT_ID,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -145,12 +189,20 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
      * @generated
      */
     protected void addNamePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Variation_name_feature"), this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_Variation_name_feature", "_UI_Variation_type"),
-                        ExperimentsPackage.Literals.VARIATION__NAME, true, false, false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_Variation_name_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_Variation_name_feature",
+                                "_UI_Variation_type"),
+                                ExperimentsPackage.Literals.VARIATION__NAME,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -164,7 +216,8 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null) {
+        if (this.childrenFeatures == null)
+        {
             super.getChildrenFeatures(object);
             this.childrenFeatures.add(ExperimentsPackage.Literals.VARIATION__VALUE_PROVIDER);
         }
@@ -203,8 +256,9 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
     @Override
     public String getText(final Object object) {
         final String label = ((Variation) object).getName();
-        return label == null || label.length() == 0 ? this.getString("_UI_Variation_type") : this
-                .getString("_UI_Variation_type") + " " + label;
+        return label == null || label.length() == 0 ?
+                this.getString("_UI_Variation_type") :
+                this.getString("_UI_Variation_type") + " " + label;
     }
 
     /**
@@ -218,7 +272,8 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(Variation.class)) {
+        switch (notification.getFeatureID(Variation.class))
+        {
         case ExperimentsPackage.VARIATION__MIN_VALUE:
         case ExperimentsPackage.VARIATION__MAX_VALUE:
         case ExperimentsPackage.VARIATION__MAX_VARIATIONS:
@@ -243,23 +298,35 @@ public class VariationItemProvider extends ItemProviderAdapter implements IEditi
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.VARIATION__VALUE_PROVIDER,
-                ExperimentsFactory.eINSTANCE.createPolynomialValueProvider()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (ExperimentsPackage.Literals.VARIATION__VALUE_PROVIDER,
+                        ExperimentsFactory.eINSTANCE.createPolynomialValueProvider()));
 
-        newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.VARIATION__VALUE_PROVIDER,
-                ExperimentsFactory.eINSTANCE.createExponentialValueProvider()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (ExperimentsPackage.Literals.VARIATION__VALUE_PROVIDER,
+                        ExperimentsFactory.eINSTANCE.createExponentialValueProvider()));
 
-        newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.VARIATION__VALUE_PROVIDER,
-                ExperimentsFactory.eINSTANCE.createSetValueProvider()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (ExperimentsPackage.Literals.VARIATION__VALUE_PROVIDER,
+                        ExperimentsFactory.eINSTANCE.createSetValueProvider()));
 
-        newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.VARIATION__VALUE_PROVIDER,
-                ExperimentsFactory.eINSTANCE.createLinearValueProvider()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (ExperimentsPackage.Literals.VARIATION__VALUE_PROVIDER,
+                        ExperimentsFactory.eINSTANCE.createLinearValueProvider()));
 
-        newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.VARIATION__VALUE_PROVIDER,
-                ExperimentsFactory.eINSTANCE.createNestedIntervalsDoubleValueProvider()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (ExperimentsPackage.Literals.VARIATION__VALUE_PROVIDER,
+                        ExperimentsFactory.eINSTANCE.createNestedIntervalsDoubleValueProvider()));
 
-        newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.VARIATION__VALUE_PROVIDER,
-                ExperimentsFactory.eINSTANCE.createNestedIntervalsLongValueProvider()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (ExperimentsPackage.Literals.VARIATION__VALUE_PROVIDER,
+                        ExperimentsFactory.eINSTANCE.createNestedIntervalsLongValueProvider()));
     }
 
     /**

@@ -40,7 +40,8 @@ public class JMXMeasurementItemProvider extends ResponseMeasurementItemProvider 
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null) {
+        if (this.itemPropertyDescriptors == null)
+        {
             super.getPropertyDescriptors(object);
 
             this.addPollingPeriodPropertyDescriptor(object);
@@ -55,12 +56,21 @@ public class JMXMeasurementItemProvider extends ResponseMeasurementItemProvider 
      * @generated
      */
     protected void addPollingPeriodPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_JMXMeasurement_pollingPeriod_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_JMXMeasurement_pollingPeriod_feature",
-                        "_UI_JMXMeasurement_type"), ExperimentsPackage.Literals.JMX_MEASUREMENT__POLLING_PERIOD, true,
-                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_JMXMeasurement_pollingPeriod_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_JMXMeasurement_pollingPeriod_feature",
+                                "_UI_JMXMeasurement_type"),
+                                ExperimentsPackage.Literals.JMX_MEASUREMENT__POLLING_PERIOD,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -83,8 +93,9 @@ public class JMXMeasurementItemProvider extends ResponseMeasurementItemProvider 
     public String getText(final Object object) {
         final Integer labelValue = ((JMXMeasurement) object).getPollingPeriod();
         final String label = labelValue == null ? null : labelValue.toString();
-        return label == null || label.length() == 0 ? this.getString("_UI_JMXMeasurement_type") : this
-                .getString("_UI_JMXMeasurement_type") + " " + label;
+        return label == null || label.length() == 0 ?
+                this.getString("_UI_JMXMeasurement_type") :
+                this.getString("_UI_JMXMeasurement_type") + " " + label;
     }
 
     /**
@@ -98,7 +109,8 @@ public class JMXMeasurementItemProvider extends ResponseMeasurementItemProvider 
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(JMXMeasurement.class)) {
+        switch (notification.getFeatureID(JMXMeasurement.class))
+        {
         case ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;

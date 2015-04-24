@@ -95,7 +95,8 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.RECONFIGURATION_RULES_FOLDER__FOLDER_URI:
             return this.getFolderUri();
         }
@@ -109,7 +110,8 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.RECONFIGURATION_RULES_FOLDER__FOLDER_URI:
             this.setFolderUri((String) newValue);
             return;
@@ -124,7 +126,8 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.RECONFIGURATION_RULES_FOLDER__FOLDER_URI:
             this.setFolderUri(FOLDER_URI_EDEFAULT);
             return;
@@ -139,7 +142,8 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case ExperimentsPackage.RECONFIGURATION_RULES_FOLDER__FOLDER_URI:
             return FOLDER_URI_EDEFAULT == null ? this.folderUri != null : !FOLDER_URI_EDEFAULT.equals(this.folderUri);
         }

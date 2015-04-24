@@ -27,13 +27,16 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
      * @generated
      */
     public static AbstractsimulationFactory init() {
-        try {
+        try
+        {
             final AbstractsimulationFactory theAbstractsimulationFactory = (AbstractsimulationFactory) EPackage.Registry.INSTANCE
                     .getEFactory(AbstractsimulationPackage.eNS_URI);
-            if (theAbstractsimulationFactory != null) {
+            if (theAbstractsimulationFactory != null)
+            {
                 return theAbstractsimulationFactory;
             }
-        } catch (final Exception exception) {
+        } catch (final Exception exception)
+        {
             EcorePlugin.INSTANCE.log(exception);
         }
         return new AbstractsimulationFactoryImpl();
@@ -55,7 +58,8 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
      */
     @Override
     public EObject create(final EClass eClass) {
-        switch (eClass.getClassifierID()) {
+        switch (eClass.getClassifierID())
+        {
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED:
             return this.createRandomNumberGeneratorSeed();
         case AbstractsimulationPackage.MEMORY_DATASOURCE:

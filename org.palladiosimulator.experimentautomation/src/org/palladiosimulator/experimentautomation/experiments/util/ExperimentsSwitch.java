@@ -56,7 +56,8 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * @generated
      */
     public ExperimentsSwitch() {
-        if (modelPackage == null) {
+        if (modelPackage == null)
+        {
             modelPackage = ExperimentsPackage.eINSTANCE;
         }
     }
@@ -83,7 +84,8 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      */
     @Override
     protected T doSwitch(final int classifierID, final EObject theEObject) {
-        switch (classifierID) {
+        switch (classifierID)
+        {
         case ExperimentsPackage.EXPERIMENT_REPOSITORY: {
             final ExperimentRepository experimentRepository = (ExperimentRepository) theEObject;
             T result = this.caseExperimentRepository(experimentRepository);

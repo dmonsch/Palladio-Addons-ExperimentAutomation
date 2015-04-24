@@ -40,7 +40,8 @@ public class NestedIntervalsDoubleValueProviderItemProvider extends ValueProvide
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null) {
+        if (this.itemPropertyDescriptors == null)
+        {
             super.getPropertyDescriptors(object);
 
             this.addMinValuePropertyDescriptor(object);
@@ -56,14 +57,21 @@ public class NestedIntervalsDoubleValueProviderItemProvider extends ValueProvide
      * @generated
      */
     protected void addMinValuePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_NestedIntervalsDoubleValueProvider_minValue_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description",
-                        "_UI_NestedIntervalsDoubleValueProvider_minValue_feature",
-                        "_UI_NestedIntervalsDoubleValueProvider_type"),
-                ExperimentsPackage.Literals.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MIN_VALUE, true, false, false,
-                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_NestedIntervalsDoubleValueProvider_minValue_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_NestedIntervalsDoubleValueProvider_minValue_feature",
+                                "_UI_NestedIntervalsDoubleValueProvider_type"),
+                                ExperimentsPackage.Literals.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MIN_VALUE,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -73,14 +81,21 @@ public class NestedIntervalsDoubleValueProviderItemProvider extends ValueProvide
      * @generated
      */
     protected void addMaxValuePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_NestedIntervalsDoubleValueProvider_maxValue_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description",
-                        "_UI_NestedIntervalsDoubleValueProvider_maxValue_feature",
-                        "_UI_NestedIntervalsDoubleValueProvider_type"),
-                ExperimentsPackage.Literals.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MAX_VALUE, true, false, false,
-                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_NestedIntervalsDoubleValueProvider_maxValue_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_NestedIntervalsDoubleValueProvider_maxValue_feature",
+                                "_UI_NestedIntervalsDoubleValueProvider_type"),
+                                ExperimentsPackage.Literals.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MAX_VALUE,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -119,7 +134,8 @@ public class NestedIntervalsDoubleValueProviderItemProvider extends ValueProvide
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(NestedIntervalsDoubleValueProvider.class)) {
+        switch (notification.getFeatureID(NestedIntervalsDoubleValueProvider.class))
+        {
         case ExperimentsPackage.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MIN_VALUE:
         case ExperimentsPackage.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MAX_VALUE:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

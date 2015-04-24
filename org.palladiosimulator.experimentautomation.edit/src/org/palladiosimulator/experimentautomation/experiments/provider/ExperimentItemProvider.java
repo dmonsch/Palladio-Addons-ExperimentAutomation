@@ -52,7 +52,8 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null) {
+        if (this.itemPropertyDescriptors == null)
+        {
             super.getPropertyDescriptors(object);
 
             this.addIdPropertyDescriptor(object);
@@ -71,12 +72,20 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
      * @generated
      */
     protected void addIdPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Experiment_id_feature"), this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_Experiment_id_feature", "_UI_Experiment_type"),
-                        ExperimentsPackage.Literals.EXPERIMENT__ID, true, false, false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_Experiment_id_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_Experiment_id_feature",
+                                "_UI_Experiment_type"),
+                                ExperimentsPackage.Literals.EXPERIMENT__ID,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -86,12 +95,20 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
      * @generated
      */
     protected void addNamePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Experiment_name_feature"), this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_Experiment_name_feature", "_UI_Experiment_type"),
-                        ExperimentsPackage.Literals.EXPERIMENT__NAME, true, false, false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_Experiment_name_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_Experiment_name_feature",
+                                "_UI_Experiment_type"),
+                                ExperimentsPackage.Literals.EXPERIMENT__NAME,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -101,12 +118,21 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
      * @generated
      */
     protected void addToolConfigurationPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Experiment_toolConfiguration_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_Experiment_toolConfiguration_feature",
-                        "_UI_Experiment_type"), ExperimentsPackage.Literals.EXPERIMENT__TOOL_CONFIGURATION, true,
-                false, true, null, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_Experiment_toolConfiguration_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_Experiment_toolConfiguration_feature",
+                                "_UI_Experiment_type"),
+                                ExperimentsPackage.Literals.EXPERIMENT__TOOL_CONFIGURATION,
+                                true,
+                                false,
+                                true,
+                                null,
+                                null,
+                                null));
     }
 
     /**
@@ -116,12 +142,21 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
      * @generated
      */
     protected void addDescriptionPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Experiment_description_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_Experiment_description_feature",
-                        "_UI_Experiment_type"), ExperimentsPackage.Literals.EXPERIMENT__DESCRIPTION, true, false,
-                false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_Experiment_description_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_Experiment_description_feature",
+                                "_UI_Experiment_type"),
+                                ExperimentsPackage.Literals.EXPERIMENT__DESCRIPTION,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -131,12 +166,21 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
      * @generated
      */
     protected void addRepetitionsPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Experiment_repetitions_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_Experiment_repetitions_feature",
-                        "_UI_Experiment_type"), ExperimentsPackage.Literals.EXPERIMENT__REPETITIONS, true, false,
-                false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_Experiment_repetitions_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_Experiment_repetitions_feature",
+                                "_UI_Experiment_type"),
+                                ExperimentsPackage.Literals.EXPERIMENT__REPETITIONS,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -150,7 +194,8 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null) {
+        if (this.childrenFeatures == null)
+        {
             super.getChildrenFeatures(object);
             this.childrenFeatures.add(ExperimentsPackage.Literals.EXPERIMENT__VARIATIONS);
             this.childrenFeatures.add(ExperimentsPackage.Literals.EXPERIMENT__MODIFICATIONS);
@@ -194,8 +239,9 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
     @Override
     public String getText(final Object object) {
         final String label = ((Experiment) object).getName();
-        return label == null || label.length() == 0 ? this.getString("_UI_Experiment_type") : this
-                .getString("_UI_Experiment_type") + " " + label;
+        return label == null || label.length() == 0 ?
+                this.getString("_UI_Experiment_type") :
+                this.getString("_UI_Experiment_type") + " " + label;
     }
 
     /**
@@ -209,7 +255,8 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(Experiment.class)) {
+        switch (notification.getFeatureID(Experiment.class))
+        {
         case ExperimentsPackage.EXPERIMENT__ID:
         case ExperimentsPackage.EXPERIMENT__NAME:
         case ExperimentsPackage.EXPERIMENT__DESCRIPTION:
@@ -238,38 +285,60 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__VARIATIONS,
-                ExperimentsFactory.eINSTANCE.createVariation()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (ExperimentsPackage.Literals.EXPERIMENT__VARIATIONS,
+                        ExperimentsFactory.eINSTANCE.createVariation()));
 
-        newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__MODIFICATIONS,
-                ExperimentsFactory.eINSTANCE.createObjectModification()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (ExperimentsPackage.Literals.EXPERIMENT__MODIFICATIONS,
+                        ExperimentsFactory.eINSTANCE.createObjectModification()));
 
-        newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__MODIFICATIONS,
-                ExperimentsFactory.eINSTANCE.createSchedulingPolicy2DelayModification()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (ExperimentsPackage.Literals.EXPERIMENT__MODIFICATIONS,
+                        ExperimentsFactory.eINSTANCE.createSchedulingPolicy2DelayModification()));
 
-        newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__STOP_CONDITIONS,
-                AbstractsimulationFactory.eINSTANCE.createMeasurementCountStopCondition()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (ExperimentsPackage.Literals.EXPERIMENT__STOP_CONDITIONS,
+                        AbstractsimulationFactory.eINSTANCE.createMeasurementCountStopCondition()));
 
-        newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__STOP_CONDITIONS,
-                AbstractsimulationFactory.eINSTANCE.createSimTimeStopCondition()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (ExperimentsPackage.Literals.EXPERIMENT__STOP_CONDITIONS,
+                        AbstractsimulationFactory.eINSTANCE.createSimTimeStopCondition()));
 
-        newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__EXPERIMENT_DESIGN,
-                ExperimentsFactory.eINSTANCE.createFullFactorialDesign()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (ExperimentsPackage.Literals.EXPERIMENT__EXPERIMENT_DESIGN,
+                        ExperimentsFactory.eINSTANCE.createFullFactorialDesign()));
 
-        newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__EXPERIMENT_DESIGN,
-                ExperimentsFactory.eINSTANCE.createOneFactorAtATime()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (ExperimentsPackage.Literals.EXPERIMENT__EXPERIMENT_DESIGN,
+                        ExperimentsFactory.eINSTANCE.createOneFactorAtATime()));
 
-        newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__RESPONSE_MEASUREMENT,
-                ExperimentsFactory.eINSTANCE.createSimulationDurationMeasurement()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (ExperimentsPackage.Literals.EXPERIMENT__RESPONSE_MEASUREMENT,
+                        ExperimentsFactory.eINSTANCE.createSimulationDurationMeasurement()));
 
-        newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__RESPONSE_MEASUREMENT,
-                ExperimentsFactory.eINSTANCE.createProfilingMeasurement()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (ExperimentsPackage.Literals.EXPERIMENT__RESPONSE_MEASUREMENT,
+                        ExperimentsFactory.eINSTANCE.createProfilingMeasurement()));
 
-        newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__RESPONSE_MEASUREMENT,
-                ExperimentsFactory.eINSTANCE.createJMXMeasurement()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (ExperimentsPackage.Literals.EXPERIMENT__RESPONSE_MEASUREMENT,
+                        ExperimentsFactory.eINSTANCE.createJMXMeasurement()));
 
-        newChildDescriptors.add(this.createChildParameter(ExperimentsPackage.Literals.EXPERIMENT__INITIAL_MODEL,
-                ExperimentsFactory.eINSTANCE.createInitialModel()));
+        newChildDescriptors.add
+                (this.createChildParameter
+                (ExperimentsPackage.Literals.EXPERIMENT__INITIAL_MODEL,
+                        ExperimentsFactory.eINSTANCE.createInitialModel()));
     }
 
     /**

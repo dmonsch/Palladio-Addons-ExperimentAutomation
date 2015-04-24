@@ -40,7 +40,8 @@ public class SimTimeStopConditionItemProvider extends StopConditionItemProvider 
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null) {
+        if (this.itemPropertyDescriptors == null)
+        {
             super.getPropertyDescriptors(object);
 
             this.addSimulationTimePropertyDescriptor(object);
@@ -55,13 +56,21 @@ public class SimTimeStopConditionItemProvider extends StopConditionItemProvider 
      * @generated
      */
     protected void addSimulationTimePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_SimTimeStopCondition_simulationTime_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_SimTimeStopCondition_simulationTime_feature",
-                        "_UI_SimTimeStopCondition_type"),
-                AbstractsimulationPackage.Literals.SIM_TIME_STOP_CONDITION__SIMULATION_TIME, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors.add
+                (this.createItemPropertyDescriptor
+                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_SimTimeStopCondition_simulationTime_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_SimTimeStopCondition_simulationTime_feature",
+                                "_UI_SimTimeStopCondition_type"),
+                                AbstractsimulationPackage.Literals.SIM_TIME_STOP_CONDITION__SIMULATION_TIME,
+                                true,
+                                false,
+                                false,
+                                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                                null,
+                                null));
     }
 
     /**
@@ -97,7 +106,8 @@ public class SimTimeStopConditionItemProvider extends StopConditionItemProvider 
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(SimTimeStopCondition.class)) {
+        switch (notification.getFeatureID(SimTimeStopCondition.class))
+        {
         case AbstractsimulationPackage.SIM_TIME_STOP_CONDITION__SIMULATION_TIME:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;

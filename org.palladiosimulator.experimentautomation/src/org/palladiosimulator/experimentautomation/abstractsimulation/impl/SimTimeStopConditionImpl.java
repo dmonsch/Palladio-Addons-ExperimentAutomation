@@ -95,7 +95,8 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case AbstractsimulationPackage.SIM_TIME_STOP_CONDITION__SIMULATION_TIME:
             return this.getSimulationTime();
         }
@@ -109,7 +110,8 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case AbstractsimulationPackage.SIM_TIME_STOP_CONDITION__SIMULATION_TIME:
             this.setSimulationTime((Integer) newValue);
             return;
@@ -124,7 +126,8 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case AbstractsimulationPackage.SIM_TIME_STOP_CONDITION__SIMULATION_TIME:
             this.setSimulationTime(SIMULATION_TIME_EDEFAULT);
             return;
@@ -139,7 +142,8 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case AbstractsimulationPackage.SIM_TIME_STOP_CONDITION__SIMULATION_TIME:
             return this.simulationTime != SIMULATION_TIME_EDEFAULT;
         }

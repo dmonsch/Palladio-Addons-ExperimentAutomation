@@ -84,7 +84,8 @@ public abstract class EDP2DatasourceImpl extends EObjectImpl implements EDP2Data
         this.id = newId;
         if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET, AbstractsimulationPackage.EDP2_DATASOURCE__ID,
-                    oldId, this.id));
+                    oldId,
+                    this.id));
         }
     }
 
@@ -95,7 +96,8 @@ public abstract class EDP2DatasourceImpl extends EObjectImpl implements EDP2Data
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case AbstractsimulationPackage.EDP2_DATASOURCE__ID:
             return this.getId();
         }
@@ -109,7 +111,8 @@ public abstract class EDP2DatasourceImpl extends EObjectImpl implements EDP2Data
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case AbstractsimulationPackage.EDP2_DATASOURCE__ID:
             this.setId((String) newValue);
             return;
@@ -124,7 +127,8 @@ public abstract class EDP2DatasourceImpl extends EObjectImpl implements EDP2Data
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case AbstractsimulationPackage.EDP2_DATASOURCE__ID:
             this.setId(ID_EDEFAULT);
             return;
@@ -139,7 +143,8 @@ public abstract class EDP2DatasourceImpl extends EObjectImpl implements EDP2Data
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID) {
+        switch (featureID)
+        {
         case AbstractsimulationPackage.EDP2_DATASOURCE__ID:
             return ID_EDEFAULT == null ? this.id != null : !ID_EDEFAULT.equals(this.id);
         }

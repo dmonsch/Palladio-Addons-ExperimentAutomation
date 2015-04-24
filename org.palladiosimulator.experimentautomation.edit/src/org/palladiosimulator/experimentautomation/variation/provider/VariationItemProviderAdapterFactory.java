@@ -101,7 +101,8 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
      */
     @Override
     public Adapter createValueVariationAdapter() {
-        if (this.valueVariationItemProvider == null) {
+        if (this.valueVariationItemProvider == null)
+        {
             this.valueVariationItemProvider = new ValueVariationItemProvider(this);
         }
 
@@ -126,7 +127,8 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
      */
     @Override
     public Adapter createStructuralVariationAdapter() {
-        if (this.structuralVariationItemProvider == null) {
+        if (this.structuralVariationItemProvider == null)
+        {
             this.structuralVariationItemProvider = new StructuralVariationItemProvider(this);
         }
 
@@ -151,7 +153,8 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
      */
     @Override
     public Adapter createVariationRepositoryAdapter() {
-        if (this.variationRepositoryItemProvider == null) {
+        if (this.variationRepositoryItemProvider == null)
+        {
             this.variationRepositoryItemProvider = new VariationRepositoryItemProvider(this);
         }
 
@@ -208,9 +211,11 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
      */
     @Override
     public Object adapt(final Object object, final Object type) {
-        if (this.isFactoryForType(type)) {
+        if (this.isFactoryForType(type))
+        {
             final Object adapter = super.adapt(object, type);
-            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
+            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter)))
+            {
                 return adapter;
             }
         }
@@ -277,7 +282,8 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
     public void fireNotifyChanged(final Notification notification) {
         this.changeNotifier.fireNotifyChanged(notification);
 
-        if (this.parentAdapterFactory != null) {
+        if (this.parentAdapterFactory != null)
+        {
             this.parentAdapterFactory.fireNotifyChanged(notification);
         }
     }
