@@ -10,7 +10,8 @@
   <rm:locator pattern="^org\.palladiosimulator\.edp2.*" searchPathRef="edp2" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\.measurementframework.*" searchPathRef="measurementframework" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\.simulizar.*" searchPathRef="SimuLizar" failOnError="false"/>
-  <rm:locator pattern="^org\.palladiosimulator\.monitot.*" searchPathRef="monitor" failOnError="false"/>
+  <rm:locator pattern="^de\.fzi\.power.*" searchPathRef="SimuLizar" failOnError="false"/>
+  <rm:locator pattern="^org\.palladiosimulator\.monitor.*" searchPathRef="monitor" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\..*" searchPathRef="ProbeFramework" failOnError="false"/>
   <rm:locator pattern="^de\.uka\.ipd\.sdq\..*" searchPathRef="Palladio" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\..*" searchPathRef="Palladio" failOnError="false"/>
