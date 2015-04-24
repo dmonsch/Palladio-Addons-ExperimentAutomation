@@ -8,8 +8,7 @@ Bundle-Activator: org.palladiosimulator.experimentautomation.variation.provider.
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: monitorrepository.provider,
- org.palladiosimulator.experimentautomation.abstractsimulation.provider,
+Export-Package: org.palladiosimulator.experimentautomation.abstractsimulation.provider,
  org.palladiosimulator.experimentautomation.experiments.provider,
  org.palladiosimulator.experimentautomation.variation.provider
 Require-Bundle: org.eclipse.core.runtime;bundle-version="3.10.0",
