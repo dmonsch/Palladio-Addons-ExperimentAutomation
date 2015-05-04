@@ -17,8 +17,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadMonitorRepositoryModelIntoBlackboardJob;
-import org.palladiosimulator.simulizar.launcher.jobs.LoadSDMModelsIntoBlackboardJob;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadUEModelIntoBlackboardJob;
+import org.palladiosimulator.simulizar.reconfiguration.storydiagram.jobs.LoadSDMModelsIntoBlackboardJob;
 
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
