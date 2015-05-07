@@ -16,19 +16,6 @@
       </application>
    </extension>
       <extension
-         point="org.palladiosimulator.edp2.datastream.chainDescription">
-      <chainDescription
-            id="SLO violations"
-            name="SLO violations over time">
-         <filter
-               filterClass="org.palladiosimulator.experimentautomation.application.filters.SLOFilter">
-         </filter>
-         <datasink
-               sinkID="org.palladiosimulator.edp2.visualization.inputs.ScatterPlotInput">
-         </datasink>
-      </chainDescription>
-   </extension>
-      <extension
             point="org.eclipse.debug.core.launchConfigurationTypes">
          <launchConfigurationType
                delegate="org.palladiosimulator.experimentautomation.application.workflow.ExperimentAutomationWorkflowLauncher"

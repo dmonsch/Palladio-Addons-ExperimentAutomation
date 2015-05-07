@@ -18,14 +18,14 @@ import org.palladiosimulator.edp2.models.ExperimentData.RawMeasurements;
 import org.palladiosimulator.edp2.models.Repository.Repository;
 import org.palladiosimulator.edp2.util.MeasurementsUtility;
 import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource;
-import org.palladiosimulator.experimentautomation.application.filters.SLOFilter;
-import org.palladiosimulator.experimentautomation.application.filters.SLOFilterConfiguration;
 import org.palladiosimulator.experimentautomation.application.tooladapter.RunAnalysisJob;
 import org.palladiosimulator.measurementframework.MeasuringValue;
 import org.palladiosimulator.metricspec.MetricDescription;
 import org.palladiosimulator.metricspec.MetricSetDescription;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjective;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
+import org.palladiosimulator.servicelevelobjective.edp2.filters.SLOViolationEDP2DatasourceFilter;
+import org.palladiosimulator.servicelevelobjective.edp2.filters.SLOViolationEDP2DatasourceFilterConfiguration;
 
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
@@ -116,10 +116,10 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
             final RawMeasurements rawMeasurements = measurement.getMeasurementRanges().get(0).getRawMeasurements();
 
             final Map<String, Object> properties = new HashMap<String, Object>(1);
-            properties.put(SLOFilterConfiguration.SLO_KEY, serviceLevelObjective);
+            properties.put(SLOViolationEDP2DatasourceFilterConfiguration.SLO_KEY, serviceLevelObjective);
 
             final IDataSource dataSource = new Edp2DataTupleDataSource(rawMeasurements);
-            final SLOFilter sloFilter = new SLOFilter(dataSource);
+            final SLOViolationEDP2DatasourceFilter sloFilter = new SLOViolationEDP2DatasourceFilter(dataSource);
             sloFilter.setProperties(properties);
             final IDataStream<MeasuringValue> dataStream = sloFilter.getDataStream();
 
