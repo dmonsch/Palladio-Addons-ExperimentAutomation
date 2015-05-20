@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadMonitorRepositoryModelIntoBlackboardJob;
+import org.palladiosimulator.simulizar.launcher.jobs.LoadSimuLizarModelsIntoBlackboardJob;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadUEModelIntoBlackboardJob;
 import org.palladiosimulator.simulizar.reconfiguration.storydiagram.jobs.LoadSDMModelsIntoBlackboardJob;
 
@@ -55,6 +56,11 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
         pcmModels.add(this.initialModel.getResourceEnvironment());
         pcmModels.add(this.initialModel.getAllocation());
         pcmModels.add(this.initialModel.getUsageModel());
+
+        // load the PCM model into a original inital PCM model partition
+        loadIntoBlackboard(LoadSimuLizarModelsIntoBlackboardJob.ORIGINAL_PCM_MODELS_PARTITION_ID, pcmModels);
+
+        // load the PCM model into the standard parition
         loadIntoBlackboard(LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID, pcmModels);
 
         // load the middleware completion

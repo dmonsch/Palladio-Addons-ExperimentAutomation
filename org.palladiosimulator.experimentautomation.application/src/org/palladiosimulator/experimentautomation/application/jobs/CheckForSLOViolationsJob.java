@@ -169,7 +169,8 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
                 }
             }
         }
-        throw new RuntimeException("Measurement for SLO \"" + serviceLevelObjective.getName() + "\" not found");
+        throw new RuntimeException("Measurement for SLO \"" + serviceLevelObjective.getName()
+                + "\" not found. MeasurementList has " + measurementList.size() + " elements.");
     }
 
     private boolean containsMetric(MetricDescription metric, MetricDescription metricToCheckFor) {
