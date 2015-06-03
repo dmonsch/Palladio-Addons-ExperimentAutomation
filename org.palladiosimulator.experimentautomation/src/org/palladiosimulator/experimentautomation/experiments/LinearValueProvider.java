@@ -21,6 +21,7 @@ package org.palladiosimulator.experimentautomation.experiments;
  * @generated
  */
 public interface LinearValueProvider extends ValueProvider {
+
     /**
      * Returns the value of the '<em><b>Summand</b></em>' attribute. <!-- begin-user-doc -->
      * <p>

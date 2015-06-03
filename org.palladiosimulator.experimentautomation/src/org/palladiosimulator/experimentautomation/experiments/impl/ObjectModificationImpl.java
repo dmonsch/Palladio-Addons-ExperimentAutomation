@@ -34,6 +34,7 @@ import org.palladiosimulator.experimentautomation.variation.VariationType;
  * @generated
  */
 public class ObjectModificationImpl extends ModificationImpl implements ObjectModification {
+
     /**
      * The cached value of the '{@link #getType() <em>Type</em>}' reference. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -130,12 +131,10 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
      */
     @Override
     public VariationType getType() {
-        if (this.type != null && this.type.eIsProxy())
-        {
+        if (this.type != null && this.type.eIsProxy()) {
             final InternalEObject oldType = (InternalEObject) this.type;
             this.type = (VariationType) this.eResolveProxy(oldType);
-            if (this.type != oldType)
-            {
+            if (this.type != oldType) {
                 if (this.eNotificationRequired()) {
                     this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
                             ExperimentsPackage.OBJECT_MODIFICATION__TYPE, oldType, this.type));
@@ -251,8 +250,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.OBJECT_MODIFICATION__TYPE:
             if (resolve) {
                 return this.getType();
@@ -275,8 +273,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.OBJECT_MODIFICATION__TYPE:
             this.setType((VariationType) newValue);
             return;
@@ -300,8 +297,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.OBJECT_MODIFICATION__TYPE:
             this.setType((VariationType) null);
             return;
@@ -325,8 +321,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.OBJECT_MODIFICATION__TYPE:
             return this.type != null;
         case ExperimentsPackage.OBJECT_MODIFICATION__NAME:

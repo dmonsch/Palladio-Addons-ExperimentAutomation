@@ -24,6 +24,7 @@ import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
  * @generated
  */
 public interface AbstractsimulationPackage extends EPackage {
+
     /**
      * The package name. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -668,6 +669,7 @@ public interface AbstractsimulationPackage extends EPackage {
      * @generated
      */
     interface Literals {
+
         /**
          * The meta object literal for the '
          * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl

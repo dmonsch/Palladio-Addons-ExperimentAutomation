@@ -15,6 +15,7 @@ import org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime;
  * @generated
  */
 public class OneFactorAtATimeImpl extends ExperimentDesignImpl implements OneFactorAtATime {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

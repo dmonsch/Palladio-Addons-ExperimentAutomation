@@ -23,6 +23,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasou
  * @generated
  */
 public class FileDatasourceImpl extends EDP2DatasourceImpl implements FileDatasource {
+
     /**
      * The default value of the '{@link #getLocation() <em>Location</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -83,8 +84,7 @@ public class FileDatasourceImpl extends EDP2DatasourceImpl implements FileDataso
         this.location = newLocation;
         if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    AbstractsimulationPackage.FILE_DATASOURCE__LOCATION,
-                    oldLocation, this.location));
+                    AbstractsimulationPackage.FILE_DATASOURCE__LOCATION, oldLocation, this.location));
         }
     }
 
@@ -95,8 +95,7 @@ public class FileDatasourceImpl extends EDP2DatasourceImpl implements FileDataso
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case AbstractsimulationPackage.FILE_DATASOURCE__LOCATION:
             return this.getLocation();
         }
@@ -110,8 +109,7 @@ public class FileDatasourceImpl extends EDP2DatasourceImpl implements FileDataso
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case AbstractsimulationPackage.FILE_DATASOURCE__LOCATION:
             this.setLocation((String) newValue);
             return;
@@ -126,8 +124,7 @@ public class FileDatasourceImpl extends EDP2DatasourceImpl implements FileDataso
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case AbstractsimulationPackage.FILE_DATASOURCE__LOCATION:
             this.setLocation(LOCATION_EDEFAULT);
             return;
@@ -142,8 +139,7 @@ public class FileDatasourceImpl extends EDP2DatasourceImpl implements FileDataso
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case AbstractsimulationPackage.FILE_DATASOURCE__LOCATION:
             return LOCATION_EDEFAULT == null ? this.location != null : !LOCATION_EDEFAULT.equals(this.location);
         }

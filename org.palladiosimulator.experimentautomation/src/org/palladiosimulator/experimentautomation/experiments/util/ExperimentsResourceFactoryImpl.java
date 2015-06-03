@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.xmi.XMLResource;
  * @generated
  */
 public class ExperimentsResourceFactoryImpl extends ResourceFactoryImpl {
+
     /**
      * Creates an instance of the resource factory. <!-- begin-user-doc --> <!-- end-user-doc -->
      *

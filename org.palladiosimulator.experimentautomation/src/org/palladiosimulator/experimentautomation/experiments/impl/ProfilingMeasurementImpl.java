@@ -15,6 +15,7 @@ import org.palladiosimulator.experimentautomation.experiments.ProfilingMeasureme
  * @generated
  */
 public class ProfilingMeasurementImpl extends ResponseMeasurementImpl implements ProfilingMeasurement {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

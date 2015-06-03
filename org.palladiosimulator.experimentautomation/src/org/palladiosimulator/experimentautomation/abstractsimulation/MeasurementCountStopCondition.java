@@ -20,6 +20,7 @@ package org.palladiosimulator.experimentautomation.abstractsimulation;
  * @generated
  */
 public interface MeasurementCountStopCondition extends StopCondition {
+
     /**
      * Returns the value of the '<em><b>Measurement Count</b></em>' attribute. <!-- begin-user-doc
      * -->

@@ -15,6 +15,7 @@ import org.palladiosimulator.experimentautomation.variation.VariationPackage;
  * @generated
  */
 public class StructuralVariationImpl extends VariationTypeImpl implements StructuralVariation {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

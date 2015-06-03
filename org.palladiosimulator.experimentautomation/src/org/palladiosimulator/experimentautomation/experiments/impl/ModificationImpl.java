@@ -16,6 +16,7 @@ import org.palladiosimulator.experimentautomation.experiments.Modification;
  * @generated
  */
 public abstract class ModificationImpl extends EObjectImpl implements Modification {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

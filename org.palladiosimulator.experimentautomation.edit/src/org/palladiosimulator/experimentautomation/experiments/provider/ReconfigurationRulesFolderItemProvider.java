@@ -31,6 +31,7 @@ import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRul
  */
 public class ReconfigurationRulesFolderItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
         IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
@@ -49,8 +50,7 @@ public class ReconfigurationRulesFolderItemProvider extends ItemProviderAdapter 
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
             this.addFolderUriPropertyDescriptor(object);
@@ -65,21 +65,13 @@ public class ReconfigurationRulesFolderItemProvider extends ItemProviderAdapter 
      * @generated
      */
     protected void addFolderUriPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-                (this.createItemPropertyDescriptor
-                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ReconfigurationRulesFolder_folderUri_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ReconfigurationRulesFolder_folderUri_feature",
-                                "_UI_ReconfigurationRulesFolder_type"),
-                                ExperimentsPackage.Literals.RECONFIGURATION_RULES_FOLDER__FOLDER_URI,
-                                true,
-                                false,
-                                false,
-                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                                null,
-                                null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ReconfigurationRulesFolder_folderUri_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_ReconfigurationRulesFolder_folderUri_feature",
+                        "_UI_ReconfigurationRulesFolder_type"),
+                ExperimentsPackage.Literals.RECONFIGURATION_RULES_FOLDER__FOLDER_URI, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -101,9 +93,8 @@ public class ReconfigurationRulesFolderItemProvider extends ItemProviderAdapter 
     @Override
     public String getText(final Object object) {
         final String label = ((ReconfigurationRulesFolder) object).getFolderUri();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_ReconfigurationRulesFolder_type") :
-                this.getString("_UI_ReconfigurationRulesFolder_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_ReconfigurationRulesFolder_type") : this
+                .getString("_UI_ReconfigurationRulesFolder_type") + " " + label;
     }
 
     /**
@@ -117,8 +108,7 @@ public class ReconfigurationRulesFolderItemProvider extends ItemProviderAdapter 
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(ReconfigurationRulesFolder.class))
-        {
+        switch (notification.getFeatureID(ReconfigurationRulesFolder.class)) {
         case ExperimentsPackage.RECONFIGURATION_RULES_FOLDER__FOLDER_URI:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;

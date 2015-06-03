@@ -20,6 +20,7 @@ package org.palladiosimulator.experimentautomation.experiments;
  * @generated
  */
 public interface ExponentialValueProvider extends ValueProvider {
+
     /**
      * Returns the value of the '<em><b>Base</b></em>' attribute. <!-- begin-user-doc -->
      * <p>

@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EReference;
  * @generated
  */
 public interface ExperimentsPackage extends EPackage {
+
     /**
      * The package name. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -1843,6 +1844,7 @@ public interface ExperimentsPackage extends EPackage {
      * @generated
      */
     interface Literals {
+
         /**
          * The meta object literal for the '
          * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentRepositoryImpl

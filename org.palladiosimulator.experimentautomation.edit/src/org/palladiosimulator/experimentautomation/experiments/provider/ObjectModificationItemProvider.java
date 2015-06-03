@@ -22,6 +22,7 @@ import org.palladiosimulator.experimentautomation.experiments.ObjectModification
  * @generated
  */
 public class ObjectModificationItemProvider extends ModificationItemProvider {
+
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
@@ -40,8 +41,7 @@ public class ObjectModificationItemProvider extends ModificationItemProvider {
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
             this.addTypePropertyDescriptor(object);
@@ -59,21 +59,12 @@ public class ObjectModificationItemProvider extends ModificationItemProvider {
      * @generated
      */
     protected void addTypePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-                (this.createItemPropertyDescriptor
-                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ObjectModification_type_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ObjectModification_type_feature",
-                                "_UI_ObjectModification_type"),
-                                ExperimentsPackage.Literals.OBJECT_MODIFICATION__TYPE,
-                                true,
-                                false,
-                                true,
-                                null,
-                                null,
-                                null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ObjectModification_type_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_ObjectModification_type_feature",
+                        "_UI_ObjectModification_type"), ExperimentsPackage.Literals.OBJECT_MODIFICATION__TYPE, true,
+                false, true, null, null, null));
     }
 
     /**
@@ -83,21 +74,12 @@ public class ObjectModificationItemProvider extends ModificationItemProvider {
      * @generated
      */
     protected void addNamePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-                (this.createItemPropertyDescriptor
-                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ObjectModification_name_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ObjectModification_name_feature",
-                                "_UI_ObjectModification_type"),
-                                ExperimentsPackage.Literals.OBJECT_MODIFICATION__NAME,
-                                true,
-                                false,
-                                false,
-                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                                null,
-                                null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ObjectModification_name_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_ObjectModification_name_feature",
+                        "_UI_ObjectModification_type"), ExperimentsPackage.Literals.OBJECT_MODIFICATION__NAME, true,
+                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -107,21 +89,13 @@ public class ObjectModificationItemProvider extends ModificationItemProvider {
      * @generated
      */
     protected void addVariedObjectIdPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors
-        .add
-                (this.createItemPropertyDescriptor
-                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ObjectModification_variedObjectId_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ObjectModification_variedObjectId_feature", "_UI_ObjectModification_type"),
-                                ExperimentsPackage.Literals.OBJECT_MODIFICATION__VARIED_OBJECT_ID,
-                                true,
-                                false,
-                                false,
-                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                                null,
-                                null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ObjectModification_variedObjectId_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_ObjectModification_variedObjectId_feature",
+                        "_UI_ObjectModification_type"),
+                ExperimentsPackage.Literals.OBJECT_MODIFICATION__VARIED_OBJECT_ID, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -131,21 +105,12 @@ public class ObjectModificationItemProvider extends ModificationItemProvider {
      * @generated
      */
     protected void addValuePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-                (this.createItemPropertyDescriptor
-                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_ObjectModification_value_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_ObjectModification_value_feature",
-                                "_UI_ObjectModification_type"),
-                                ExperimentsPackage.Literals.OBJECT_MODIFICATION__VALUE,
-                                true,
-                                false,
-                                false,
-                                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                                null,
-                                null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ObjectModification_value_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_ObjectModification_value_feature",
+                        "_UI_ObjectModification_type"), ExperimentsPackage.Literals.OBJECT_MODIFICATION__VALUE, true,
+                false, false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -167,9 +132,8 @@ public class ObjectModificationItemProvider extends ModificationItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((ObjectModification) object).getName();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_ObjectModification_type") :
-                this.getString("_UI_ObjectModification_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_ObjectModification_type") : this
+                .getString("_UI_ObjectModification_type") + " " + label;
     }
 
     /**
@@ -183,8 +147,7 @@ public class ObjectModificationItemProvider extends ModificationItemProvider {
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(ObjectModification.class))
-        {
+        switch (notification.getFeatureID(ObjectModification.class)) {
         case ExperimentsPackage.OBJECT_MODIFICATION__NAME:
         case ExperimentsPackage.OBJECT_MODIFICATION__VARIED_OBJECT_ID:
         case ExperimentsPackage.OBJECT_MODIFICATION__VALUE:

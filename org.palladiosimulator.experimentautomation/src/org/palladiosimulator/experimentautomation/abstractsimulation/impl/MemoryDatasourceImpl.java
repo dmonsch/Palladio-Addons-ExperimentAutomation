@@ -15,6 +15,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatas
  * @generated
  */
 public class MemoryDatasourceImpl extends EDP2DatasourceImpl implements MemoryDatasource {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

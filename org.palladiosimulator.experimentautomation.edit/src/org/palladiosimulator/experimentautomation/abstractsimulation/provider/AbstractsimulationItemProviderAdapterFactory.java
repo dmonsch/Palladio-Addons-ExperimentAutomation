@@ -39,6 +39,7 @@ import org.palladiosimulator.experimentautomation.variation.provider.ExperimentA
  */
 public class AbstractsimulationItemProviderAdapterFactory extends AbstractsimulationAdapterFactory implements
         ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
+
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -102,8 +103,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
      */
     @Override
     public Adapter createRandomNumberGeneratorSeedAdapter() {
-        if (this.randomNumberGeneratorSeedItemProvider == null)
-        {
+        if (this.randomNumberGeneratorSeedItemProvider == null) {
             this.randomNumberGeneratorSeedItemProvider = new RandomNumberGeneratorSeedItemProvider(this);
         }
 
@@ -128,8 +128,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
      */
     @Override
     public Adapter createMemoryDatasourceAdapter() {
-        if (this.memoryDatasourceItemProvider == null)
-        {
+        if (this.memoryDatasourceItemProvider == null) {
             this.memoryDatasourceItemProvider = new MemoryDatasourceItemProvider(this);
         }
 
@@ -154,8 +153,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
      */
     @Override
     public Adapter createFileDatasourceAdapter() {
-        if (this.fileDatasourceItemProvider == null)
-        {
+        if (this.fileDatasourceItemProvider == null) {
             this.fileDatasourceItemProvider = new FileDatasourceItemProvider(this);
         }
 
@@ -180,8 +178,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
      */
     @Override
     public Adapter createMeasurementCountStopConditionAdapter() {
-        if (this.measurementCountStopConditionItemProvider == null)
-        {
+        if (this.measurementCountStopConditionItemProvider == null) {
             this.measurementCountStopConditionItemProvider = new MeasurementCountStopConditionItemProvider(this);
         }
 
@@ -206,8 +203,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
      */
     @Override
     public Adapter createSimTimeStopConditionAdapter() {
-        if (this.simTimeStopConditionItemProvider == null)
-        {
+        if (this.simTimeStopConditionItemProvider == null) {
             this.simTimeStopConditionItemProvider = new SimTimeStopConditionItemProvider(this);
         }
 
@@ -264,11 +260,9 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
      */
     @Override
     public Object adapt(final Object object, final Object type) {
-        if (this.isFactoryForType(type))
-        {
+        if (this.isFactoryForType(type)) {
             final Object adapter = super.adapt(object, type);
-            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter)))
-            {
+            if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
                 return adapter;
             }
         }
@@ -335,8 +329,7 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
     public void fireNotifyChanged(final Notification notification) {
         this.changeNotifier.fireNotifyChanged(notification);
 
-        if (this.parentAdapterFactory != null)
-        {
+        if (this.parentAdapterFactory != null) {
             this.parentAdapterFactory.fireNotifyChanged(notification);
         }
     }

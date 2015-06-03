@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface ReconfigurationRulesFolder extends EObject {
+
     /**
      * Returns the value of the '<em><b>Folder Uri</b></em>' attribute. <!-- begin-user-doc -->
      * <p>

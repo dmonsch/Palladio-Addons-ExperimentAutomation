@@ -26,6 +26,7 @@ import org.palladiosimulator.experimentautomation.experiments.LinearValueProvide
  * @generated
  */
 public class LinearValueProviderImpl extends ValueProviderImpl implements LinearValueProvider {
+
     /**
      * The default value of the '{@link #getSummand() <em>Summand</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -106,8 +107,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
         this.summand = newSummand;
         if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.LINEAR_VALUE_PROVIDER__SUMMAND,
-                    oldSummand, this.summand));
+                    ExperimentsPackage.LINEAR_VALUE_PROVIDER__SUMMAND, oldSummand, this.summand));
         }
     }
 
@@ -132,8 +132,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
         this.factor = newFactor;
         if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.LINEAR_VALUE_PROVIDER__FACTOR,
-                    oldFactor, this.factor));
+                    ExperimentsPackage.LINEAR_VALUE_PROVIDER__FACTOR, oldFactor, this.factor));
         }
     }
 
@@ -144,8 +143,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER__SUMMAND:
             return this.getSummand();
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER__FACTOR:
@@ -161,8 +159,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER__SUMMAND:
             this.setSummand((Double) newValue);
             return;
@@ -180,8 +177,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER__SUMMAND:
             this.setSummand(SUMMAND_EDEFAULT);
             return;
@@ -199,8 +195,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER__SUMMAND:
             return this.summand != SUMMAND_EDEFAULT;
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER__FACTOR:

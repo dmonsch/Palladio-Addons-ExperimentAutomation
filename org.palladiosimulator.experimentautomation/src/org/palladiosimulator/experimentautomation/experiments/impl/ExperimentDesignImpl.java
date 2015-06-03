@@ -16,6 +16,7 @@ import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
  * @generated
  */
 public abstract class ExperimentDesignImpl extends EObjectImpl implements ExperimentDesign {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

@@ -10,6 +10,7 @@ import org.palladiosimulator.experimentautomation.variation.ValueVariation;
 import org.palladiosimulator.experimentautomation.variation.VariationPackage;
 import org.palladiosimulator.experimentautomation.variation.VariationRepository;
 import org.palladiosimulator.experimentautomation.variation.VariationType;
+import org.palladiosimulator.mdsdprofiles.StereotypableElement;
 
 import de.uka.ipd.sdq.identifier.Identifier;
 
@@ -24,6 +25,7 @@ import de.uka.ipd.sdq.identifier.Identifier;
  * @generated
  */
 public class VariationSwitch<T> extends Switch<T> {
+
     /**
      * The cached model package <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -37,8 +39,7 @@ public class VariationSwitch<T> extends Switch<T> {
      * @generated
      */
     public VariationSwitch() {
-        if (modelPackage == null)
-        {
+        if (modelPackage == null) {
             modelPackage = VariationPackage.eINSTANCE;
         }
     }
@@ -65,13 +66,15 @@ public class VariationSwitch<T> extends Switch<T> {
      */
     @Override
     protected T doSwitch(final int classifierID, final EObject theEObject) {
-        switch (classifierID)
-        {
+        switch (classifierID) {
         case VariationPackage.VARIATION_TYPE: {
             final VariationType variationType = (VariationType) theEObject;
             T result = this.caseVariationType(variationType);
             if (result == null) {
                 result = this.caseIdentifier(variationType);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(variationType);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -88,6 +91,9 @@ public class VariationSwitch<T> extends Switch<T> {
                 result = this.caseIdentifier(valueVariation);
             }
             if (result == null) {
+                result = this.caseStereotypableElement(valueVariation);
+            }
+            if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
@@ -100,6 +106,9 @@ public class VariationSwitch<T> extends Switch<T> {
             }
             if (result == null) {
                 result = this.caseIdentifier(structuralVariation);
+            }
+            if (result == null) {
+                result = this.caseStereotypableElement(structuralVariation);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -177,6 +186,22 @@ public class VariationSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseVariationRepository(final VariationRepository object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '
+     * <em>Stereotypable Element</em>'. <!-- begin-user-doc --> This implementation returns null;
+     * returning a non-null result will terminate the switch. <!-- end-user-doc -->
+     *
+     * @param object
+     *            the target of the switch.
+     * @return the result of interpreting the object as an instance of '
+     *         <em>Stereotypable Element</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseStereotypableElement(final StereotypableElement object) {
         return null;
     }
 

@@ -23,6 +23,7 @@ package org.palladiosimulator.experimentautomation.experiments;
  * @generated
  */
 public interface PolynomialValueProvider extends ValueProvider {
+
     /**
      * Returns the value of the '<em><b>Exponent</b></em>' attribute. <!-- begin-user-doc -->
      * <p>

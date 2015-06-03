@@ -4,13 +4,13 @@ package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
+import org.palladiosimulator.monitorrepository.MonitorRepository;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
 import org.scaledl.usageevolution.UsageEvolution;
 
@@ -64,6 +64,7 @@ import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
  * @generated
  */
 public class InitialModelImpl extends EObjectImpl implements InitialModel {
+
     /**
      * The cached value of the '{@link #getUsageModel() <em>Usage Model</em>}' reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -123,7 +124,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      * @generated
      * @ordered
      */
-    protected org.palladiosimulator.monitorrepository.MonitorRepository monitorRepository;
+    protected MonitorRepository monitorRepository;
 
     /**
      * The cached value of the '{@link #getServiceLevelObjectives()
@@ -201,12 +202,10 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public UsageModel getUsageModel() {
-        if (this.usageModel != null && ((EObject) this.usageModel).eIsProxy())
-        {
+        if (this.usageModel != null && this.usageModel.eIsProxy()) {
             final InternalEObject oldUsageModel = (InternalEObject) this.usageModel;
             this.usageModel = (UsageModel) this.eResolveProxy(oldUsageModel);
-            if (this.usageModel != oldUsageModel)
-            {
+            if (this.usageModel != oldUsageModel) {
                 if (this.eNotificationRequired()) {
                     this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
                             ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL, oldUsageModel, this.usageModel));
@@ -247,12 +246,10 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public Allocation getAllocation() {
-        if (this.allocation != null && ((EObject) this.allocation).eIsProxy())
-        {
+        if (this.allocation != null && this.allocation.eIsProxy()) {
             final InternalEObject oldAllocation = (InternalEObject) this.allocation;
             this.allocation = (Allocation) this.eResolveProxy(oldAllocation);
-            if (this.allocation != oldAllocation)
-            {
+            if (this.allocation != oldAllocation) {
                 if (this.eNotificationRequired()) {
                     this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
                             ExperimentsPackage.INITIAL_MODEL__ALLOCATION, oldAllocation, this.allocation));
@@ -293,12 +290,10 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public Repository getMiddlewareRepository() {
-        if (this.middlewareRepository != null && ((EObject) this.middlewareRepository).eIsProxy())
-        {
+        if (this.middlewareRepository != null && this.middlewareRepository.eIsProxy()) {
             final InternalEObject oldMiddlewareRepository = (InternalEObject) this.middlewareRepository;
             this.middlewareRepository = (Repository) this.eResolveProxy(oldMiddlewareRepository);
-            if (this.middlewareRepository != oldMiddlewareRepository)
-            {
+            if (this.middlewareRepository != oldMiddlewareRepository) {
                 if (this.eNotificationRequired()) {
                     this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
                             ExperimentsPackage.INITIAL_MODEL__MIDDLEWARE_REPOSITORY, oldMiddlewareRepository,
@@ -341,12 +336,10 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public Repository getEventMiddleWareRepository() {
-        if (this.eventMiddleWareRepository != null && ((EObject) this.eventMiddleWareRepository).eIsProxy())
-        {
+        if (this.eventMiddleWareRepository != null && this.eventMiddleWareRepository.eIsProxy()) {
             final InternalEObject oldEventMiddleWareRepository = (InternalEObject) this.eventMiddleWareRepository;
             this.eventMiddleWareRepository = (Repository) this.eResolveProxy(oldEventMiddleWareRepository);
-            if (this.eventMiddleWareRepository != oldEventMiddleWareRepository)
-            {
+            if (this.eventMiddleWareRepository != oldEventMiddleWareRepository) {
                 if (this.eNotificationRequired()) {
                     this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
                             ExperimentsPackage.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY,
@@ -389,12 +382,10 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public ReconfigurationRulesFolder getReconfigurationRules() {
-        if (this.reconfigurationRules != null && this.reconfigurationRules.eIsProxy())
-        {
+        if (this.reconfigurationRules != null && this.reconfigurationRules.eIsProxy()) {
             final InternalEObject oldReconfigurationRules = (InternalEObject) this.reconfigurationRules;
             this.reconfigurationRules = (ReconfigurationRulesFolder) this.eResolveProxy(oldReconfigurationRules);
-            if (this.reconfigurationRules != oldReconfigurationRules)
-            {
+            if (this.reconfigurationRules != oldReconfigurationRules) {
                 if (this.eNotificationRequired()) {
                     this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
                             ExperimentsPackage.INITIAL_MODEL__RECONFIGURATION_RULES, oldReconfigurationRules,
@@ -436,14 +427,11 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      * @generated
      */
     @Override
-    public org.palladiosimulator.monitorrepository.MonitorRepository getMonitorRepository() {
-        if (this.monitorRepository != null && this.monitorRepository.eIsProxy())
-        {
+    public MonitorRepository getMonitorRepository() {
+        if (this.monitorRepository != null && this.monitorRepository.eIsProxy()) {
             final InternalEObject oldMonitorRepository = (InternalEObject) this.monitorRepository;
-            this.monitorRepository = (org.palladiosimulator.monitorrepository.MonitorRepository) this
-                    .eResolveProxy(oldMonitorRepository);
-            if (this.monitorRepository != oldMonitorRepository)
-            {
+            this.monitorRepository = (MonitorRepository) this.eResolveProxy(oldMonitorRepository);
+            if (this.monitorRepository != oldMonitorRepository) {
                 if (this.eNotificationRequired()) {
                     this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
                             ExperimentsPackage.INITIAL_MODEL__MONITOR_REPOSITORY, oldMonitorRepository,
@@ -459,7 +447,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      *
      * @generated
      */
-    public org.palladiosimulator.monitorrepository.MonitorRepository basicGetMonitorRepository() {
+    public MonitorRepository basicGetMonitorRepository() {
         return this.monitorRepository;
     }
 
@@ -469,15 +457,12 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      * @generated
      */
     @Override
-    public void setMonitorRepository(
-            final org.palladiosimulator.monitorrepository.MonitorRepository newMonitorRepository)
-    {
-        final org.palladiosimulator.monitorrepository.MonitorRepository oldMonitorRepository = this.monitorRepository;
+    public void setMonitorRepository(final MonitorRepository newMonitorRepository) {
+        final MonitorRepository oldMonitorRepository = this.monitorRepository;
         this.monitorRepository = newMonitorRepository;
         if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.INITIAL_MODEL__MONITOR_REPOSITORY,
-                    oldMonitorRepository, this.monitorRepository));
+                    ExperimentsPackage.INITIAL_MODEL__MONITOR_REPOSITORY, oldMonitorRepository, this.monitorRepository));
         }
     }
 
@@ -488,13 +473,11 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public ServiceLevelObjectiveRepository getServiceLevelObjectives() {
-        if (this.serviceLevelObjectives != null && this.serviceLevelObjectives.eIsProxy())
-        {
+        if (this.serviceLevelObjectives != null && this.serviceLevelObjectives.eIsProxy()) {
             final InternalEObject oldServiceLevelObjectives = (InternalEObject) this.serviceLevelObjectives;
             this.serviceLevelObjectives = (ServiceLevelObjectiveRepository) this
                     .eResolveProxy(oldServiceLevelObjectives);
-            if (this.serviceLevelObjectives != oldServiceLevelObjectives)
-            {
+            if (this.serviceLevelObjectives != oldServiceLevelObjectives) {
                 if (this.eNotificationRequired()) {
                     this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
                             ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES, oldServiceLevelObjectives,
@@ -537,12 +520,10 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public Repository getRepository() {
-        if (this.repository != null && ((EObject) this.repository).eIsProxy())
-        {
+        if (this.repository != null && this.repository.eIsProxy()) {
             final InternalEObject oldRepository = (InternalEObject) this.repository;
             this.repository = (Repository) this.eResolveProxy(oldRepository);
-            if (this.repository != oldRepository)
-            {
+            if (this.repository != oldRepository) {
                 if (this.eNotificationRequired()) {
                     this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
                             ExperimentsPackage.INITIAL_MODEL__REPOSITORY, oldRepository, this.repository));
@@ -583,16 +564,13 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public de.uka.ipd.sdq.pcm.system.System getSystem() {
-        if (this.system != null && ((EObject) this.system).eIsProxy())
-        {
+        if (this.system != null && this.system.eIsProxy()) {
             final InternalEObject oldSystem = (InternalEObject) this.system;
             this.system = (de.uka.ipd.sdq.pcm.system.System) this.eResolveProxy(oldSystem);
-            if (this.system != oldSystem)
-            {
+            if (this.system != oldSystem) {
                 if (this.eNotificationRequired()) {
                     this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.INITIAL_MODEL__SYSTEM,
-                            oldSystem, this.system));
+                            ExperimentsPackage.INITIAL_MODEL__SYSTEM, oldSystem, this.system));
                 }
             }
         }
@@ -619,8 +597,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
         this.system = newSystem;
         if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.INITIAL_MODEL__SYSTEM,
-                    oldSystem,
-                    this.system));
+                    oldSystem, this.system));
         }
     }
 
@@ -631,12 +608,10 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public ResourceEnvironment getResourceEnvironment() {
-        if (this.resourceEnvironment != null && ((EObject) this.resourceEnvironment).eIsProxy())
-        {
+        if (this.resourceEnvironment != null && this.resourceEnvironment.eIsProxy()) {
             final InternalEObject oldResourceEnvironment = (InternalEObject) this.resourceEnvironment;
             this.resourceEnvironment = (ResourceEnvironment) this.eResolveProxy(oldResourceEnvironment);
-            if (this.resourceEnvironment != oldResourceEnvironment)
-            {
+            if (this.resourceEnvironment != oldResourceEnvironment) {
                 if (this.eNotificationRequired()) {
                     this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
                             ExperimentsPackage.INITIAL_MODEL__RESOURCE_ENVIRONMENT, oldResourceEnvironment,
@@ -679,12 +654,10 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public UsageEvolution getUsageEvolution() {
-        if (this.usageEvolution != null && this.usageEvolution.eIsProxy())
-        {
+        if (this.usageEvolution != null && this.usageEvolution.eIsProxy()) {
             final InternalEObject oldUsageEvolution = (InternalEObject) this.usageEvolution;
             this.usageEvolution = (UsageEvolution) this.eResolveProxy(oldUsageEvolution);
-            if (this.usageEvolution != oldUsageEvolution)
-            {
+            if (this.usageEvolution != oldUsageEvolution) {
                 if (this.eNotificationRequired()) {
                     this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
                             ExperimentsPackage.INITIAL_MODEL__USAGE_EVOLUTION, oldUsageEvolution, this.usageEvolution));
@@ -714,8 +687,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
         this.usageEvolution = newUsageEvolution;
         if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.INITIAL_MODEL__USAGE_EVOLUTION,
-                    oldUsageEvolution, this.usageEvolution));
+                    ExperimentsPackage.INITIAL_MODEL__USAGE_EVOLUTION, oldUsageEvolution, this.usageEvolution));
         }
     }
 
@@ -726,8 +698,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL:
             if (resolve) {
                 return this.getUsageModel();
@@ -794,8 +765,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL:
             this.setUsageModel((UsageModel) newValue);
             return;
@@ -812,7 +782,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
             this.setReconfigurationRules((ReconfigurationRulesFolder) newValue);
             return;
         case ExperimentsPackage.INITIAL_MODEL__MONITOR_REPOSITORY:
-            this.setMonitorRepository((org.palladiosimulator.monitorrepository.MonitorRepository) newValue);
+            this.setMonitorRepository((MonitorRepository) newValue);
             return;
         case ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES:
             this.setServiceLevelObjectives((ServiceLevelObjectiveRepository) newValue);
@@ -840,8 +810,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL:
             this.setUsageModel((UsageModel) null);
             return;
@@ -858,7 +827,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
             this.setReconfigurationRules((ReconfigurationRulesFolder) null);
             return;
         case ExperimentsPackage.INITIAL_MODEL__MONITOR_REPOSITORY:
-            this.setMonitorRepository((org.palladiosimulator.monitorrepository.MonitorRepository) null);
+            this.setMonitorRepository((MonitorRepository) null);
             return;
         case ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES:
             this.setServiceLevelObjectives((ServiceLevelObjectiveRepository) null);
@@ -886,8 +855,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL:
             return this.usageModel != null;
         case ExperimentsPackage.INITIAL_MODEL__ALLOCATION:

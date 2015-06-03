@@ -26,6 +26,7 @@ import de.uka.ipd.sdq.identifier.provider.IdentifierItemProvider;
  * @generated
  */
 public class VariationTypeItemProvider extends IdentifierItemProvider {
+
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
@@ -44,8 +45,7 @@ public class VariationTypeItemProvider extends IdentifierItemProvider {
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
             this.addNamePropertyDescriptor(object);
@@ -62,20 +62,12 @@ public class VariationTypeItemProvider extends IdentifierItemProvider {
      * @generated
      */
     protected void addNamePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-                (this.createItemPropertyDescriptor
-                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_VariationType_name_feature"),
-                        this.getString("_UI_PropertyDescriptor_description", "_UI_VariationType_name_feature",
-                                "_UI_VariationType_type"),
-                                VariationPackage.Literals.VARIATION_TYPE__NAME,
-                                true,
-                                false,
-                                false,
-                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                                null,
-                                null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_VariationType_name_feature"), this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_VariationType_name_feature", "_UI_VariationType_type"),
+                        VariationPackage.Literals.VARIATION_TYPE__NAME, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -85,21 +77,12 @@ public class VariationTypeItemProvider extends IdentifierItemProvider {
      * @generated
      */
     protected void addStrategyClassPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-                (this.createItemPropertyDescriptor
-                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_VariationType_strategyClass_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_VariationType_strategyClass_feature",
-                                "_UI_VariationType_type"),
-                                VariationPackage.Literals.VARIATION_TYPE__STRATEGY_CLASS,
-                                true,
-                                false,
-                                false,
-                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                                null,
-                                null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_VariationType_strategyClass_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_VariationType_strategyClass_feature",
+                        "_UI_VariationType_type"), VariationPackage.Literals.VARIATION_TYPE__STRATEGY_CLASS, true,
+                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -109,20 +92,12 @@ public class VariationTypeItemProvider extends IdentifierItemProvider {
      * @generated
      */
     protected void addVariedEntityInterfacePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-                (this.createItemPropertyDescriptor
-                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_VariationType_variedEntityInterface_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_VariationType_variedEntityInterface_feature", "_UI_VariationType_type"),
-                                VariationPackage.Literals.VARIATION_TYPE__VARIED_ENTITY_INTERFACE,
-                                true,
-                                false,
-                                false,
-                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                                null,
-                                null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_VariationType_variedEntityInterface_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_VariationType_variedEntityInterface_feature",
+                        "_UI_VariationType_type"), VariationPackage.Literals.VARIATION_TYPE__VARIED_ENTITY_INTERFACE,
+                true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -134,9 +109,8 @@ public class VariationTypeItemProvider extends IdentifierItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((VariationType) object).getName();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_VariationType_type") :
-                this.getString("_UI_VariationType_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_VariationType_type") : this
+                .getString("_UI_VariationType_type") + " " + label;
     }
 
     /**
@@ -150,8 +124,7 @@ public class VariationTypeItemProvider extends IdentifierItemProvider {
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(VariationType.class))
-        {
+        switch (notification.getFeatureID(VariationType.class)) {
         case VariationPackage.VARIATION_TYPE__NAME:
         case VariationPackage.VARIATION_TYPE__STRATEGY_CLASS:
         case VariationPackage.VARIATION_TYPE__VARIED_ENTITY_INTERFACE:

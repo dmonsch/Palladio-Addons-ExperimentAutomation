@@ -23,6 +23,7 @@ package org.palladiosimulator.experimentautomation.experiments;
  * @generated
  */
 public interface NestedIntervalsDoubleValueProvider extends ValueProvider {
+
     /**
      * Returns the value of the '<em><b>Min Value</b></em>' attribute. <!-- begin-user-doc -->
      * <p>

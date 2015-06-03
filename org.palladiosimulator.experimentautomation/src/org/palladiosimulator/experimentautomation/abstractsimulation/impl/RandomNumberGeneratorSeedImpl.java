@@ -39,6 +39,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumbe
  * @generated
  */
 public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements RandomNumberGeneratorSeed {
+
     /**
      * The default value of the '{@link #getSeed0() <em>Seed0</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
@@ -335,8 +336,7 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED0:
             return this.getSeed0();
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED1:
@@ -360,8 +360,7 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED0:
             this.setSeed0((Integer) newValue);
             return;
@@ -391,8 +390,7 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED0:
             this.setSeed0(SEED0_EDEFAULT);
             return;
@@ -422,8 +420,7 @@ public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements Random
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED0:
             return this.seed0 != SEED0_EDEFAULT;
         case AbstractsimulationPackage.RANDOM_NUMBER_GENERATOR_SEED__SEED1:

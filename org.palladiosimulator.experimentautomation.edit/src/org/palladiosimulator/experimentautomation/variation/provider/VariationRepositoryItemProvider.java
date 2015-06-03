@@ -31,6 +31,7 @@ import org.palladiosimulator.experimentautomation.variation.VariationRepository;
  */
 public class VariationRepositoryItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
         IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
@@ -49,8 +50,7 @@ public class VariationRepositoryItemProvider extends ItemProviderAdapter impleme
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
         }
@@ -68,8 +68,7 @@ public class VariationRepositoryItemProvider extends ItemProviderAdapter impleme
      */
     @Override
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
-        if (this.childrenFeatures == null)
-        {
+        if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
             this.childrenFeatures.add(VariationPackage.Literals.VARIATION_REPOSITORY__VARIATION);
         }
@@ -121,8 +120,7 @@ public class VariationRepositoryItemProvider extends ItemProviderAdapter impleme
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(VariationRepository.class))
-        {
+        switch (notification.getFeatureID(VariationRepository.class)) {
         case VariationPackage.VARIATION_REPOSITORY__VARIATION:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
@@ -140,15 +138,11 @@ public class VariationRepositoryItemProvider extends ItemProviderAdapter impleme
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add
-                (this.createChildParameter
-                (VariationPackage.Literals.VARIATION_REPOSITORY__VARIATION,
-                        VariationFactory.eINSTANCE.createValueVariation()));
+        newChildDescriptors.add(this.createChildParameter(VariationPackage.Literals.VARIATION_REPOSITORY__VARIATION,
+                VariationFactory.eINSTANCE.createValueVariation()));
 
-        newChildDescriptors.add
-                (this.createChildParameter
-                (VariationPackage.Literals.VARIATION_REPOSITORY__VARIATION,
-                        VariationFactory.eINSTANCE.createStructuralVariation()));
+        newChildDescriptors.add(this.createChildParameter(VariationPackage.Literals.VARIATION_REPOSITORY__VARIATION,
+                VariationFactory.eINSTANCE.createStructuralVariation()));
     }
 
     /**

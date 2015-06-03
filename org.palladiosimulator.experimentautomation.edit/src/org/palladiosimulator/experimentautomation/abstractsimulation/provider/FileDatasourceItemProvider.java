@@ -22,6 +22,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasou
  * @generated
  */
 public class FileDatasourceItemProvider extends EDP2DatasourceItemProvider {
+
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
@@ -40,8 +41,7 @@ public class FileDatasourceItemProvider extends EDP2DatasourceItemProvider {
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
             this.addLocationPropertyDescriptor(object);
@@ -56,21 +56,12 @@ public class FileDatasourceItemProvider extends EDP2DatasourceItemProvider {
      * @generated
      */
     protected void addLocationPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-                (this.createItemPropertyDescriptor
-                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_FileDatasource_location_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_FileDatasource_location_feature",
-                                "_UI_FileDatasource_type"),
-                                AbstractsimulationPackage.Literals.FILE_DATASOURCE__LOCATION,
-                                true,
-                                false,
-                                false,
-                                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-                                null,
-                                null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_FileDatasource_location_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_FileDatasource_location_feature",
+                        "_UI_FileDatasource_type"), AbstractsimulationPackage.Literals.FILE_DATASOURCE__LOCATION, true,
+                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -92,9 +83,8 @@ public class FileDatasourceItemProvider extends EDP2DatasourceItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((FileDatasource) object).getId();
-        return label == null || label.length() == 0 ?
-                this.getString("_UI_FileDatasource_type") :
-                this.getString("_UI_FileDatasource_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_FileDatasource_type") : this
+                .getString("_UI_FileDatasource_type") + " " + label;
     }
 
     /**
@@ -108,8 +98,7 @@ public class FileDatasourceItemProvider extends EDP2DatasourceItemProvider {
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(FileDatasource.class))
-        {
+        switch (notification.getFeatureID(FileDatasource.class)) {
         case AbstractsimulationPackage.FILE_DATASOURCE__LOCATION:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;

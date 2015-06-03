@@ -16,6 +16,7 @@ import org.palladiosimulator.experimentautomation.experiments.ResponseMeasuremen
  * @generated
  */
 public abstract class ResponseMeasurementImpl extends EObjectImpl implements ResponseMeasurement {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

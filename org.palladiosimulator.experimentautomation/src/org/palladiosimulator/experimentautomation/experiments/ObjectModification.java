@@ -28,6 +28,7 @@ import org.palladiosimulator.experimentautomation.variation.VariationType;
  * @generated
  */
 public interface ObjectModification extends Modification {
+
     /**
      * Returns the value of the '<em><b>Type</b></em>' reference. <!-- begin-user-doc -->
      * <p>

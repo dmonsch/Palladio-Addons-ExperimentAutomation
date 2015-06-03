@@ -26,6 +26,7 @@ import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLon
  * @generated
  */
 public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl implements NestedIntervalsLongValueProvider {
+
     /**
      * The default value of the '{@link #getMinValue() <em>Min Value</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -142,8 +143,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.NESTED_INTERVALS_LONG_VALUE_PROVIDER__MIN_VALUE:
             return this.getMinValue();
         case ExperimentsPackage.NESTED_INTERVALS_LONG_VALUE_PROVIDER__MAX_VALUE:
@@ -159,8 +159,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.NESTED_INTERVALS_LONG_VALUE_PROVIDER__MIN_VALUE:
             this.setMinValue((Long) newValue);
             return;
@@ -178,8 +177,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.NESTED_INTERVALS_LONG_VALUE_PROVIDER__MIN_VALUE:
             this.setMinValue(MIN_VALUE_EDEFAULT);
             return;
@@ -197,8 +195,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.NESTED_INTERVALS_LONG_VALUE_PROVIDER__MIN_VALUE:
             return this.minValue != MIN_VALUE_EDEFAULT;
         case ExperimentsPackage.NESTED_INTERVALS_LONG_VALUE_PROVIDER__MAX_VALUE:

@@ -25,6 +25,7 @@ import de.uka.ipd.sdq.identifier.IdentifierPackage;
  * @generated
  */
 public interface VariationPackage extends EPackage {
+
     /**
      * The package name. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -63,6 +64,15 @@ public interface VariationPackage extends EPackage {
      * @generated
      */
     int VARIATION_TYPE = 0;
+
+    /**
+     * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int VARIATION_TYPE__PROFILEABLE_ELEMENT = IdentifierPackage.IDENTIFIER__PROFILEABLE_ELEMENT;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -121,6 +131,15 @@ public interface VariationPackage extends EPackage {
     int VALUE_VARIATION = 1;
 
     /**
+     * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int VALUE_VARIATION__PROFILEABLE_ELEMENT = VARIATION_TYPE__PROFILEABLE_ELEMENT;
+
+    /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -175,6 +194,15 @@ public interface VariationPackage extends EPackage {
      * @generated
      */
     int STRUCTURAL_VARIATION = 2;
+
+    /**
+     * The feature id for the '<em><b>Profileable Element</b></em>' reference. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int STRUCTURAL_VARIATION__PROFILEABLE_ELEMENT = VARIATION_TYPE__PROFILEABLE_ELEMENT;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -364,6 +392,7 @@ public interface VariationPackage extends EPackage {
      * @generated
      */
     interface Literals {
+
         /**
          * The meta object literal for the '
          * {@link org.palladiosimulator.experimentautomation.variation.impl.VariationTypeImpl

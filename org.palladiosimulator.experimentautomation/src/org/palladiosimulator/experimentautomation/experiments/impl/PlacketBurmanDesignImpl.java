@@ -16,6 +16,7 @@ import org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesig
  * @generated
  */
 public class PlacketBurmanDesignImpl extends EObjectImpl implements PlacketBurmanDesign {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

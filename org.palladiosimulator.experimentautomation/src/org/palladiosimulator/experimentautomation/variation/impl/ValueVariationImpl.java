@@ -15,6 +15,7 @@ import org.palladiosimulator.experimentautomation.variation.VariationPackage;
  * @generated
  */
 public class ValueVariationImpl extends VariationTypeImpl implements ValueVariation {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

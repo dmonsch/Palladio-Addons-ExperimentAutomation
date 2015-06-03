@@ -34,6 +34,7 @@ import org.palladiosimulator.experimentautomation.variation.VariationType;
  * @generated
  */
 public interface Variation extends EObject {
+
     /**
      * Returns the value of the '<em><b>Type</b></em>' reference. <!-- begin-user-doc -->
      * <p>

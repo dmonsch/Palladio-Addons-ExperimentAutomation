@@ -19,6 +19,7 @@ package org.palladiosimulator.experimentautomation.experiments;
  * @generated
  */
 public interface SetValueProvider extends ValueProvider {
+
     /**
      * Returns the value of the '<em><b>Values</b></em>' attribute. <!-- begin-user-doc -->
      * <p>

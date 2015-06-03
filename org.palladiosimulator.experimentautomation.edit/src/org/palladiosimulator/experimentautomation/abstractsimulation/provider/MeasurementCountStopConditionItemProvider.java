@@ -22,6 +22,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.Measurement
  * @generated
  */
 public class MeasurementCountStopConditionItemProvider extends StopConditionItemProvider {
+
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
@@ -40,8 +41,7 @@ public class MeasurementCountStopConditionItemProvider extends StopConditionItem
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
             this.addMeasurementCountPropertyDescriptor(object);
@@ -56,21 +56,14 @@ public class MeasurementCountStopConditionItemProvider extends StopConditionItem
      * @generated
      */
     protected void addMeasurementCountPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-                (this.createItemPropertyDescriptor
-                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_MeasurementCountStopCondition_measurementCount_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_MeasurementCountStopCondition_measurementCount_feature",
-                                "_UI_MeasurementCountStopCondition_type"),
-                                AbstractsimulationPackage.Literals.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT,
-                                true,
-                                false,
-                                false,
-                                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                                null,
-                                null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_MeasurementCountStopCondition_measurementCount_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description",
+                        "_UI_MeasurementCountStopCondition_measurementCount_feature",
+                        "_UI_MeasurementCountStopCondition_type"),
+                AbstractsimulationPackage.Literals.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT, true, false,
+                false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -108,8 +101,7 @@ public class MeasurementCountStopConditionItemProvider extends StopConditionItem
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(MeasurementCountStopCondition.class))
-        {
+        switch (notification.getFeatureID(MeasurementCountStopCondition.class)) {
         case AbstractsimulationPackage.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;

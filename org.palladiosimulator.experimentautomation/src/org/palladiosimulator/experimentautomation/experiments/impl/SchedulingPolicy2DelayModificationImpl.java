@@ -16,6 +16,7 @@ import org.palladiosimulator.experimentautomation.experiments.SchedulingPolicy2D
  */
 public class SchedulingPolicy2DelayModificationImpl extends ModificationImpl implements
 SchedulingPolicy2DelayModification {
+
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *

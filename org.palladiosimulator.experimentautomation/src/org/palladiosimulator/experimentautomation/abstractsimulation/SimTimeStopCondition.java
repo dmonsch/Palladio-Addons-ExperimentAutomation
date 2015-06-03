@@ -20,6 +20,7 @@ package org.palladiosimulator.experimentautomation.abstractsimulation;
  * @generated
  */
 public interface SimTimeStopCondition extends StopCondition {
+
     /**
      * Returns the value of the '<em><b>Simulation Time</b></em>' attribute. <!-- begin-user-doc -->
      * <p>

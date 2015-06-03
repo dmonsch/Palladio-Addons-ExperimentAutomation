@@ -20,6 +20,7 @@ package org.palladiosimulator.experimentautomation.abstractsimulation;
  * @generated
  */
 public interface FileDatasource extends EDP2Datasource {
+
     /**
      * Returns the value of the '<em><b>Location</b></em>' attribute. <!-- begin-user-doc -->
      * <p>

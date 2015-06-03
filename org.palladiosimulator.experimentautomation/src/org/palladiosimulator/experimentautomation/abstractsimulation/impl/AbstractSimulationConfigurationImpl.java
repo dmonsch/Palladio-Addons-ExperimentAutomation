@@ -47,6 +47,7 @@ import org.palladiosimulator.experimentautomation.experiments.impl.ToolConfigura
  */
 public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurationImpl implements
 AbstractSimulationConfiguration {
+
     /**
      * The cached value of the '{@link #getStopConditions() <em>Stop Conditions</em>}' containment
      * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -146,8 +147,7 @@ AbstractSimulationConfiguration {
      */
     @Override
     public EList<StopCondition> getStopConditions() {
-        if (this.stopConditions == null)
-        {
+        if (this.stopConditions == null) {
             this.stopConditions = new EObjectContainmentEList<StopCondition>(StopCondition.class, this,
                     AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS);
         }
@@ -173,8 +173,7 @@ AbstractSimulationConfiguration {
             final RandomNumberGeneratorSeed newRandomNumberGeneratorSeed, NotificationChain msgs) {
         final RandomNumberGeneratorSeed oldRandomNumberGeneratorSeed = this.randomNumberGeneratorSeed;
         this.randomNumberGeneratorSeed = newRandomNumberGeneratorSeed;
-        if (this.eNotificationRequired())
-        {
+        if (this.eNotificationRequired()) {
             final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
                     AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED,
                     oldRandomNumberGeneratorSeed, newRandomNumberGeneratorSeed);
@@ -194,8 +193,7 @@ AbstractSimulationConfiguration {
      */
     @Override
     public void setRandomNumberGeneratorSeed(final RandomNumberGeneratorSeed newRandomNumberGeneratorSeed) {
-        if (newRandomNumberGeneratorSeed != this.randomNumberGeneratorSeed)
-        {
+        if (newRandomNumberGeneratorSeed != this.randomNumberGeneratorSeed) {
             NotificationChain msgs = null;
             if (this.randomNumberGeneratorSeed != null) {
                 msgs = ((InternalEObject) this.randomNumberGeneratorSeed).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
@@ -211,8 +209,7 @@ AbstractSimulationConfiguration {
             if (msgs != null) {
                 msgs.dispatch();
             }
-        }
-        else if (this.eNotificationRequired()) {
+        } else if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET,
                     AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED,
                     newRandomNumberGeneratorSeed, newRandomNumberGeneratorSeed));
@@ -289,8 +286,7 @@ AbstractSimulationConfiguration {
     public NotificationChain basicSetDatasource(final EDP2Datasource newDatasource, NotificationChain msgs) {
         final EDP2Datasource oldDatasource = this.datasource;
         this.datasource = newDatasource;
-        if (this.eNotificationRequired())
-        {
+        if (this.eNotificationRequired()) {
             final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
                     AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE, oldDatasource,
                     newDatasource);
@@ -310,8 +306,7 @@ AbstractSimulationConfiguration {
      */
     @Override
     public void setDatasource(final EDP2Datasource newDatasource) {
-        if (newDatasource != this.datasource)
-        {
+        if (newDatasource != this.datasource) {
             NotificationChain msgs = null;
             if (this.datasource != null) {
                 msgs = ((InternalEObject) this.datasource).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
@@ -325,8 +320,7 @@ AbstractSimulationConfiguration {
             if (msgs != null) {
                 msgs.dispatch();
             }
-        }
-        else if (this.eNotificationRequired()) {
+        } else if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET,
                     AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE, newDatasource,
                     newDatasource));
@@ -341,8 +335,7 @@ AbstractSimulationConfiguration {
     @Override
     public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS:
             return ((InternalEList<?>) this.getStopConditions()).basicRemove(otherEnd, msgs);
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED:
@@ -360,8 +353,7 @@ AbstractSimulationConfiguration {
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS:
             return this.getStopConditions();
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED:
@@ -384,8 +376,7 @@ AbstractSimulationConfiguration {
     @SuppressWarnings("unchecked")
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS:
             this.getStopConditions().clear();
             this.getStopConditions().addAll((Collection<? extends StopCondition>) newValue);
@@ -413,8 +404,7 @@ AbstractSimulationConfiguration {
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS:
             this.getStopConditions().clear();
             return;
@@ -441,8 +431,7 @@ AbstractSimulationConfiguration {
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS:
             return this.stopConditions != null && !this.stopConditions.isEmpty();
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED:

@@ -20,6 +20,7 @@ package org.palladiosimulator.experimentautomation.experiments;
  * @generated
  */
 public interface JMXMeasurement extends ResponseMeasurement {
+
     /**
      * Returns the value of the '<em><b>Polling Period</b></em>' attribute. <!-- begin-user-doc -->
      * <p>

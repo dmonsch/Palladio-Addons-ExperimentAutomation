@@ -23,6 +23,7 @@ import org.palladiosimulator.experimentautomation.experiments.SetValueProvider;
  * @generated
  */
 public class SetValueProviderImpl extends ValueProviderImpl implements SetValueProvider {
+
     /**
      * The default value of the '{@link #getValues() <em>Values</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -94,8 +95,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.SET_VALUE_PROVIDER__VALUES:
             return this.getValues();
         }
@@ -109,8 +109,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.SET_VALUE_PROVIDER__VALUES:
             this.setValues((String) newValue);
             return;
@@ -125,8 +124,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.SET_VALUE_PROVIDER__VALUES:
             this.setValues(VALUES_EDEFAULT);
             return;
@@ -141,8 +139,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.SET_VALUE_PROVIDER__VALUES:
             return VALUES_EDEFAULT == null ? this.values != null : !VALUES_EDEFAULT.equals(this.values);
         }

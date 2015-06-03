@@ -2,8 +2,6 @@
  */
 package org.palladiosimulator.experimentautomation.variation;
 
-import org.eclipse.emf.ecore.EObject;
-
 import de.uka.ipd.sdq.identifier.Identifier;
 
 /**
@@ -27,7 +25,8 @@ import de.uka.ipd.sdq.identifier.Identifier;
  * @model abstract="true"
  * @generated
  */
-public interface VariationType extends EObject, Identifier {
+public interface VariationType extends Identifier {
+
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc -->
      * <p>

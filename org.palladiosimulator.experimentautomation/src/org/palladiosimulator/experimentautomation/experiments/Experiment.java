@@ -44,6 +44,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.StopConditi
  * @generated
  */
 public interface Experiment extends EObject {
+
     /**
      * Returns the value of the '<em><b>Variations</b></em>' containment reference list. The list
      * contents are of type {@link org.palladiosimulator.experimentautomation.experiments.Variation}

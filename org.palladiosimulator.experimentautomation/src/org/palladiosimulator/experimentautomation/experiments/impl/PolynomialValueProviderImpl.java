@@ -26,6 +26,7 @@ import org.palladiosimulator.experimentautomation.experiments.PolynomialValuePro
  * @generated
  */
 public class PolynomialValueProviderImpl extends ValueProviderImpl implements PolynomialValueProvider {
+
     /**
      * The default value of the '{@link #getExponent() <em>Exponent</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -131,8 +132,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
         this.factor = newFactor;
         if (this.eNotificationRequired()) {
             this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER__FACTOR,
-                    oldFactor, this.factor));
+                    ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER__FACTOR, oldFactor, this.factor));
         }
     }
 
@@ -143,8 +143,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER__EXPONENT:
             return this.getExponent();
         case ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER__FACTOR:
@@ -160,8 +159,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER__EXPONENT:
             this.setExponent((Double) newValue);
             return;
@@ -179,8 +177,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER__EXPONENT:
             this.setExponent(EXPONENT_EDEFAULT);
             return;
@@ -198,8 +195,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER__EXPONENT:
             return this.exponent != EXPONENT_EDEFAULT;
         case ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER__FACTOR:

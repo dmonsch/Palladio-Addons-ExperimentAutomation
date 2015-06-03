@@ -27,6 +27,7 @@ import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
  * @generated
  */
 public class AbstractsimulationSwitch<T> extends Switch<T> {
+
     /**
      * The cached model package <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -40,8 +41,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      * @generated
      */
     public AbstractsimulationSwitch() {
-        if (modelPackage == null)
-        {
+        if (modelPackage == null) {
             modelPackage = AbstractsimulationPackage.eINSTANCE;
         }
     }
@@ -68,8 +68,7 @@ public class AbstractsimulationSwitch<T> extends Switch<T> {
      */
     @Override
     protected T doSwitch(final int classifierID, final EObject theEObject) {
-        switch (classifierID)
-        {
+        switch (classifierID) {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION: {
             final AbstractSimulationConfiguration abstractSimulationConfiguration = (AbstractSimulationConfiguration) theEObject;
             T result = this.caseAbstractSimulationConfiguration(abstractSimulationConfiguration);

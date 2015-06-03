@@ -23,6 +23,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.Measurement
  * @generated
  */
 public class MeasurementCountStopConditionImpl extends StopConditionImpl implements MeasurementCountStopCondition {
+
     /**
      * The default value of the '{@link #getMeasurementCount() <em>Measurement Count</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -95,8 +96,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case AbstractsimulationPackage.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT:
             return this.getMeasurementCount();
         }
@@ -110,8 +110,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case AbstractsimulationPackage.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT:
             this.setMeasurementCount((Integer) newValue);
             return;
@@ -126,8 +125,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case AbstractsimulationPackage.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT:
             this.setMeasurementCount(MEASUREMENT_COUNT_EDEFAULT);
             return;
@@ -142,8 +140,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case AbstractsimulationPackage.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT:
             return this.measurementCount != MEASUREMENT_COUNT_EDEFAULT;
         }

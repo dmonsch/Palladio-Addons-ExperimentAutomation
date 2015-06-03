@@ -22,6 +22,7 @@ import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLon
  * @generated
  */
 public class NestedIntervalsLongValueProviderItemProvider extends ValueProviderItemProvider {
+
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
@@ -40,8 +41,7 @@ public class NestedIntervalsLongValueProviderItemProvider extends ValueProviderI
      */
     @Override
     public List<IItemPropertyDescriptor> getPropertyDescriptors(final Object object) {
-        if (this.itemPropertyDescriptors == null)
-        {
+        if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
             this.addMinValuePropertyDescriptor(object);
@@ -57,21 +57,13 @@ public class NestedIntervalsLongValueProviderItemProvider extends ValueProviderI
      * @generated
      */
     protected void addMinValuePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-                (this.createItemPropertyDescriptor
-                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_NestedIntervalsLongValueProvider_minValue_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_NestedIntervalsLongValueProvider_minValue_feature",
-                                "_UI_NestedIntervalsLongValueProvider_type"),
-                                ExperimentsPackage.Literals.NESTED_INTERVALS_LONG_VALUE_PROVIDER__MIN_VALUE,
-                                true,
-                                false,
-                                false,
-                                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                                null,
-                                null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_NestedIntervalsLongValueProvider_minValue_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_NestedIntervalsLongValueProvider_minValue_feature",
+                        "_UI_NestedIntervalsLongValueProvider_type"),
+                ExperimentsPackage.Literals.NESTED_INTERVALS_LONG_VALUE_PROVIDER__MIN_VALUE, true, false, false,
+                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -81,21 +73,13 @@ public class NestedIntervalsLongValueProviderItemProvider extends ValueProviderI
      * @generated
      */
     protected void addMaxValuePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add
-                (this.createItemPropertyDescriptor
-                (((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
-                        this.getResourceLocator(),
-                        this.getString("_UI_NestedIntervalsLongValueProvider_maxValue_feature"),
-                        this.getString("_UI_PropertyDescriptor_description",
-                                "_UI_NestedIntervalsLongValueProvider_maxValue_feature",
-                                "_UI_NestedIntervalsLongValueProvider_type"),
-                                ExperimentsPackage.Literals.NESTED_INTERVALS_LONG_VALUE_PROVIDER__MAX_VALUE,
-                                true,
-                                false,
-                                false,
-                                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-                                null,
-                                null));
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_NestedIntervalsLongValueProvider_maxValue_feature"), this.getString(
+                        "_UI_PropertyDescriptor_description", "_UI_NestedIntervalsLongValueProvider_maxValue_feature",
+                        "_UI_NestedIntervalsLongValueProvider_type"),
+                ExperimentsPackage.Literals.NESTED_INTERVALS_LONG_VALUE_PROVIDER__MAX_VALUE, true, false, false,
+                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -134,8 +118,7 @@ public class NestedIntervalsLongValueProviderItemProvider extends ValueProviderI
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(NestedIntervalsLongValueProvider.class))
-        {
+        switch (notification.getFeatureID(NestedIntervalsLongValueProvider.class)) {
         case ExperimentsPackage.NESTED_INTERVALS_LONG_VALUE_PROVIDER__MIN_VALUE:
         case ExperimentsPackage.NESTED_INTERVALS_LONG_VALUE_PROVIDER__MAX_VALUE:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

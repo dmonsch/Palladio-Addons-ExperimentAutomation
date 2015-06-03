@@ -35,6 +35,7 @@ import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
  * @generated
  */
 public interface AbstractSimulationConfiguration extends ToolConfiguration {
+
     /**
      * Returns the value of the '<em><b>Stop Conditions</b></em>' containment reference list. The
      * list contents are of type

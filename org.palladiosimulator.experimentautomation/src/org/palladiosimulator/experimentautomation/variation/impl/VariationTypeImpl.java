@@ -30,6 +30,7 @@ import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
  * @generated
  */
 public abstract class VariationTypeImpl extends IdentifierImpl implements VariationType {
+
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
@@ -192,8 +193,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
      */
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case VariationPackage.VARIATION_TYPE__NAME:
             return this.getName();
         case VariationPackage.VARIATION_TYPE__STRATEGY_CLASS:
@@ -211,8 +211,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
      */
     @Override
     public void eSet(final int featureID, final Object newValue) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case VariationPackage.VARIATION_TYPE__NAME:
             this.setName((String) newValue);
             return;
@@ -233,8 +232,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
      */
     @Override
     public void eUnset(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case VariationPackage.VARIATION_TYPE__NAME:
             this.setName(NAME_EDEFAULT);
             return;
@@ -255,8 +253,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
      */
     @Override
     public boolean eIsSet(final int featureID) {
-        switch (featureID)
-        {
+        switch (featureID) {
         case VariationPackage.VARIATION_TYPE__NAME:
             return NAME_EDEFAULT == null ? this.name != null : !NAME_EDEFAULT.equals(this.name);
         case VariationPackage.VARIATION_TYPE__STRATEGY_CLASS:
