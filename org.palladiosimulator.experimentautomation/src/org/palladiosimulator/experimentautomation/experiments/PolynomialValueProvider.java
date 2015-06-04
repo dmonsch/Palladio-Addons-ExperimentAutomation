@@ -31,7 +31,7 @@ public interface PolynomialValueProvider extends ValueProvider {
      * of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Exponent</em>' attribute.
      * @see #setExponent(double)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getPolynomialValueProvider_Exponent()
@@ -44,7 +44,7 @@ public interface PolynomialValueProvider extends ValueProvider {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider#getExponent
      * <em>Exponent</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Exponent</em>' attribute.
      * @see #getExponent()
@@ -59,7 +59,7 @@ public interface PolynomialValueProvider extends ValueProvider {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Factor</em>' attribute.
      * @see #setFactor(double)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getPolynomialValueProvider_Factor()
@@ -72,7 +72,7 @@ public interface PolynomialValueProvider extends ValueProvider {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider#getFactor
      * <em>Factor</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Factor</em>' attribute.
      * @see #getFactor()

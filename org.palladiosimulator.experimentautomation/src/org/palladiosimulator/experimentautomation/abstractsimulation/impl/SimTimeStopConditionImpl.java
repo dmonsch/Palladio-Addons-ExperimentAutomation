@@ -27,7 +27,7 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
     /**
      * The default value of the '{@link #getSimulationTime() <em>Simulation Time</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getSimulationTime()
      * @generated
      * @ordered
@@ -37,7 +37,7 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
     /**
      * The cached value of the '{@link #getSimulationTime() <em>Simulation Time</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getSimulationTime()
      * @generated
      * @ordered
@@ -46,7 +46,7 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected SimTimeStopConditionImpl() {
@@ -55,7 +55,7 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -65,7 +65,7 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -75,7 +75,7 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -91,7 +91,7 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -105,7 +105,7 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -120,7 +120,7 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -135,7 +135,7 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -149,7 +149,7 @@ public class SimTimeStopConditionImpl extends StopConditionImpl implements SimTi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

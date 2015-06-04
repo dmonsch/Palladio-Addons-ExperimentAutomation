@@ -34,7 +34,7 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
     /**
      * The cached value of the '{@link #getVariation() <em>Variation</em>}' containment reference
      * list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getVariation()
      * @generated
      * @ordered
@@ -43,7 +43,7 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected VariationRepositoryImpl() {
@@ -52,7 +52,7 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -62,7 +62,7 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -76,7 +76,7 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -91,7 +91,7 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -105,7 +105,7 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -122,7 +122,7 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -137,7 +137,7 @@ public class VariationRepositoryImpl extends EObjectImpl implements VariationRep
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

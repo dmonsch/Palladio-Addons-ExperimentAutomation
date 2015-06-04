@@ -19,7 +19,7 @@ public abstract class ExperimentDesignImpl extends EObjectImpl implements Experi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ExperimentDesignImpl() {
@@ -28,7 +28,7 @@ public abstract class ExperimentDesignImpl extends EObjectImpl implements Experi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

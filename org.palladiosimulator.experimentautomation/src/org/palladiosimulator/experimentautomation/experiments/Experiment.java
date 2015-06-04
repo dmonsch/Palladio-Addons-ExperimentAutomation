@@ -54,7 +54,7 @@ public interface Experiment extends EObject {
      * really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Variations</em>' containment reference list.
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperiment_Variations()
      * @model containment="true" ordered="false"
@@ -87,7 +87,7 @@ public interface Experiment extends EObject {
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Id</em>' attribute.
      * @see #setId(String)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperiment_Id()
@@ -100,7 +100,7 @@ public interface Experiment extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getId <em>Id</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Id</em>' attribute.
      * @see #getId()
@@ -115,7 +115,7 @@ public interface Experiment extends EObject {
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperiment_Name()
@@ -128,7 +128,7 @@ public interface Experiment extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getName
      * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Name</em>' attribute.
      * @see #getName()
@@ -179,7 +179,7 @@ public interface Experiment extends EObject {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Description</em>' attribute.
      * @see #setDescription(String)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperiment_Description()
@@ -192,7 +192,7 @@ public interface Experiment extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getDescription
      * <em>Description</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Description</em>' attribute.
      * @see #getDescription()
@@ -252,7 +252,7 @@ public interface Experiment extends EObject {
      * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getResponseMeasurement
      * <em>Response Measurement</em>}' containment reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Response Measurement</em>' containment reference.
      * @see #getResponseMeasurement()
@@ -281,7 +281,7 @@ public interface Experiment extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getInitialModel
      * <em>Initial Model</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Initial Model</em>' containment reference.
      * @see #getInitialModel()
@@ -296,7 +296,7 @@ public interface Experiment extends EObject {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Repetitions</em>' attribute.
      * @see #setRepetitions(int)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperiment_Repetitions()
@@ -309,7 +309,7 @@ public interface Experiment extends EObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.Experiment#getRepetitions
      * <em>Repetitions</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Repetitions</em>' attribute.
      * @see #getRepetitions()

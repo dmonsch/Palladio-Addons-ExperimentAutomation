@@ -31,7 +31,7 @@ public interface NestedIntervalsLongValueProvider extends ValueProvider {
      * of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Min Value</em>' attribute.
      * @see #setMinValue(long)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getNestedIntervalsLongValueProvider_MinValue()
@@ -44,7 +44,7 @@ public interface NestedIntervalsLongValueProvider extends ValueProvider {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider#getMinValue
      * <em>Min Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Min Value</em>' attribute.
      * @see #getMinValue()
@@ -59,7 +59,7 @@ public interface NestedIntervalsLongValueProvider extends ValueProvider {
      * of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Max Value</em>' attribute.
      * @see #setMaxValue(long)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getNestedIntervalsLongValueProvider_MaxValue()
@@ -72,7 +72,7 @@ public interface NestedIntervalsLongValueProvider extends ValueProvider {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider#getMaxValue
      * <em>Max Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Max Value</em>' attribute.
      * @see #getMaxValue()

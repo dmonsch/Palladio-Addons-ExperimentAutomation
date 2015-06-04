@@ -19,7 +19,7 @@ public abstract class ModificationImpl extends EObjectImpl implements Modificati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ModificationImpl() {
@@ -28,7 +28,7 @@ public abstract class ModificationImpl extends EObjectImpl implements Modificati
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

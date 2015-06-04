@@ -19,7 +19,7 @@ public abstract class ResponseMeasurementImpl extends EObjectImpl implements Res
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ResponseMeasurementImpl() {
@@ -28,7 +28,7 @@ public abstract class ResponseMeasurementImpl extends EObjectImpl implements Res
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

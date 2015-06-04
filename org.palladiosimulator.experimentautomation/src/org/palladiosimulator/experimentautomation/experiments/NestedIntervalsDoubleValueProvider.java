@@ -31,7 +31,7 @@ public interface NestedIntervalsDoubleValueProvider extends ValueProvider {
      * of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Min Value</em>' attribute.
      * @see #setMinValue(double)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getNestedIntervalsDoubleValueProvider_MinValue()
@@ -44,7 +44,7 @@ public interface NestedIntervalsDoubleValueProvider extends ValueProvider {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider#getMinValue
      * <em>Min Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Min Value</em>' attribute.
      * @see #getMinValue()
@@ -59,7 +59,7 @@ public interface NestedIntervalsDoubleValueProvider extends ValueProvider {
      * of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Max Value</em>' attribute.
      * @see #setMaxValue(double)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getNestedIntervalsDoubleValueProvider_MaxValue()
@@ -72,7 +72,7 @@ public interface NestedIntervalsDoubleValueProvider extends ValueProvider {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider#getMaxValue
      * <em>Max Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Max Value</em>' attribute.
      * @see #getMaxValue()

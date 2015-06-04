@@ -28,7 +28,7 @@ public abstract class ToolConfigurationImpl extends EObjectImpl implements ToolC
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -38,7 +38,7 @@ public abstract class ToolConfigurationImpl extends EObjectImpl implements ToolC
     /**
      * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -47,7 +47,7 @@ public abstract class ToolConfigurationImpl extends EObjectImpl implements ToolC
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ToolConfigurationImpl() {
@@ -56,7 +56,7 @@ public abstract class ToolConfigurationImpl extends EObjectImpl implements ToolC
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -66,7 +66,7 @@ public abstract class ToolConfigurationImpl extends EObjectImpl implements ToolC
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -76,7 +76,7 @@ public abstract class ToolConfigurationImpl extends EObjectImpl implements ToolC
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -91,7 +91,7 @@ public abstract class ToolConfigurationImpl extends EObjectImpl implements ToolC
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -105,7 +105,7 @@ public abstract class ToolConfigurationImpl extends EObjectImpl implements ToolC
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -120,7 +120,7 @@ public abstract class ToolConfigurationImpl extends EObjectImpl implements ToolC
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -135,7 +135,7 @@ public abstract class ToolConfigurationImpl extends EObjectImpl implements ToolC
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -149,7 +149,7 @@ public abstract class ToolConfigurationImpl extends EObjectImpl implements ToolC
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

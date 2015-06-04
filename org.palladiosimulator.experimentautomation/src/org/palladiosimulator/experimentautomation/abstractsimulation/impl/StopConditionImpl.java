@@ -19,7 +19,7 @@ public abstract class StopConditionImpl extends EObjectImpl implements StopCondi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected StopConditionImpl() {
@@ -28,7 +28,7 @@ public abstract class StopConditionImpl extends EObjectImpl implements StopCondi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

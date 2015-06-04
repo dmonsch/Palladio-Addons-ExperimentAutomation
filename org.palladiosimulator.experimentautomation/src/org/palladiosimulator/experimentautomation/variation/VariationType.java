@@ -34,7 +34,7 @@ public interface VariationType extends Identifier {
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
      * @see org.palladiosimulator.experimentautomation.variation.VariationPackage#getVariationType_Name()
@@ -47,7 +47,7 @@ public interface VariationType extends Identifier {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.variation.VariationType#getName
      * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Name</em>' attribute.
      * @see #getName()
@@ -62,7 +62,7 @@ public interface VariationType extends Identifier {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Strategy Class</em>' attribute.
      * @see #setStrategyClass(String)
      * @see org.palladiosimulator.experimentautomation.variation.VariationPackage#getVariationType_StrategyClass()
@@ -75,7 +75,7 @@ public interface VariationType extends Identifier {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.variation.VariationType#getStrategyClass
      * <em>Strategy Class</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Strategy Class</em>' attribute.
      * @see #getStrategyClass()
@@ -104,7 +104,7 @@ public interface VariationType extends Identifier {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.variation.VariationType#getVariedEntityInterface
      * <em>Varied Entity Interface</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Varied Entity Interface</em>' attribute.
      * @see #getVariedEntityInterface()

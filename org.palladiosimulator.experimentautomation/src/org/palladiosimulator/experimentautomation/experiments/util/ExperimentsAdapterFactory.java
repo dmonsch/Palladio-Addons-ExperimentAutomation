@@ -36,7 +36,7 @@ import org.palladiosimulator.experimentautomation.experiments.Variation;
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
  * <code>createXXX</code> method for each class of the model. <!-- end-user-doc -->
- *
+ * 
  * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
  * @generated
  */
@@ -44,14 +44,14 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * The cached model package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected static ExperimentsPackage modelPackage;
 
     /**
      * Creates an instance of the adapter factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public ExperimentsAdapterFactory() {
@@ -64,7 +64,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * Returns whether this factory is applicable for the type of the object. <!-- begin-user-doc
      * --> This implementation returns <code>true</code> if the object is either the model's package
      * or is an instance object of the model. <!-- end-user-doc -->
-     *
+     * 
      * @return whether this factory is applicable for the type of the object.
      * @generated
      */
@@ -82,7 +82,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     /**
      * The switch that delegates to the <code>createXXX</code> methods. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ExperimentsSwitch<Adapter> modelSwitch = new ExperimentsSwitch<Adapter>() {
@@ -220,7 +220,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates an adapter for the <code>target</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param target
      *            the object to adapt.
      * @return the adapter for the <code>target</code>.
@@ -237,7 +237,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Experiment Repository</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentRepository
      * @generated
@@ -252,7 +252,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily
      * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.Experiment
      * @generated
@@ -267,7 +267,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.Variation
      * @generated
@@ -282,7 +282,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Value Provider</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.ValueProvider
      * @generated
@@ -297,7 +297,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Tool Configuration</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.ToolConfiguration
      * @generated
@@ -312,7 +312,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Experiment Design</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentDesign
      * @generated
@@ -327,7 +327,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Response Measurement</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.ResponseMeasurement
      * @generated
@@ -342,7 +342,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Polynomial Value Provider</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider
      * @generated
@@ -357,7 +357,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Exponential Value Provider</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider
      * @generated
@@ -372,7 +372,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Set Value Provider</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.SetValueProvider
      * @generated
@@ -387,7 +387,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Placket Burman Design</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign
      * @generated
@@ -402,7 +402,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Full Factorial Design</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.FullFactorialDesign
      * @generated
@@ -417,7 +417,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Fractional Factorial Design</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.FractionalFactorialDesign
      * @generated
@@ -432,7 +432,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>One Factor At ATime</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.OneFactorAtATime
      * @generated
@@ -447,7 +447,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Simulation Duration Measurement</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.SimulationDurationMeasurement
      * @generated
@@ -462,7 +462,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Profiling Measurement</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.ProfilingMeasurement
      * @generated
@@ -477,7 +477,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>JMX Measurement</em>}'. <!-- begin-user-doc --> This default implementation returns null
      * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
      * all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.JMXMeasurement
      * @generated
@@ -492,7 +492,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Linear Value Provider</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.LinearValueProvider
      * @generated
@@ -507,7 +507,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Object Modification</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.ObjectModification
      * @generated
@@ -522,7 +522,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Initial Model</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.InitialModel
      * @generated
@@ -537,7 +537,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Reconfiguration Rules Folder</em>}'. <!-- begin-user-doc --> This default implementation
      * returns null so that we can easily ignore cases; it's useful to ignore a case when
      * inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder
      * @generated
@@ -552,7 +552,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Nested Intervals Double Value Provider</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider
      * @generated
@@ -567,7 +567,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Nested Intervals Long Value Provider</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider
      * @generated
@@ -582,7 +582,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Modification</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.Modification
      * @generated
@@ -597,7 +597,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
      * <em>Scheduling Policy2 Delay Modification</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.experimentautomation.experiments.SchedulingPolicy2DelayModification
      * @generated
@@ -609,7 +609,7 @@ public class ExperimentsAdapterFactory extends AdapterFactoryImpl {
     /**
      * Creates a new adapter for the default case. <!-- begin-user-doc --> This default
      * implementation returns null. <!-- end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @generated
      */

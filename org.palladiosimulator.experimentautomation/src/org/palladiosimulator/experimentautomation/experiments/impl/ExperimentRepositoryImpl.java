@@ -34,7 +34,7 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
     /**
      * The cached value of the '{@link #getExperiments() <em>Experiments</em>}' containment
      * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getExperiments()
      * @generated
      * @ordered
@@ -43,7 +43,7 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ExperimentRepositoryImpl() {
@@ -52,7 +52,7 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -62,7 +62,7 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -76,7 +76,7 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -91,7 +91,7 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -105,7 +105,7 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -122,7 +122,7 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -137,7 +137,7 @@ public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

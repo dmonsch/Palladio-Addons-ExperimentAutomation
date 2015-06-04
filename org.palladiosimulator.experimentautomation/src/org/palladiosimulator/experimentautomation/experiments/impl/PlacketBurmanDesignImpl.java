@@ -19,7 +19,7 @@ public class PlacketBurmanDesignImpl extends EObjectImpl implements PlacketBurma
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected PlacketBurmanDesignImpl() {
@@ -28,7 +28,7 @@ public class PlacketBurmanDesignImpl extends EObjectImpl implements PlacketBurma
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
