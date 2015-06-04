@@ -46,6 +46,9 @@
       <import plugin="org.palladiosimulator.recorderframework" version="2.0.1" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.edp2.visualization" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.emfstore.common"/>
+      <import plugin="org.palladiosimulator.simulizar.reconfiguration.storydiagram"/>
+      <import plugin="org.palladiosimulator.servicelevelobjective.edp2"/>
+      <import plugin="de.uka.ipd.sdq.statistics"/>
    </requires>
 
    <plugin
