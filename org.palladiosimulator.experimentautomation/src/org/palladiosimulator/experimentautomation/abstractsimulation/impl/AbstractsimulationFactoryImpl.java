@@ -17,14 +17,14 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStop
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class AbstractsimulationFactoryImpl extends EFactoryImpl implements AbstractsimulationFactory {
 
     /**
      * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static AbstractsimulationFactory init() {
@@ -42,7 +42,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public AbstractsimulationFactoryImpl() {
@@ -51,7 +51,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -74,7 +74,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -85,7 +85,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -96,7 +96,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -107,7 +107,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -118,7 +118,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -129,7 +129,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -139,7 +139,7 @@ public class AbstractsimulationFactoryImpl extends EFactoryImpl implements Abstr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @deprecated
      * @generated
      */

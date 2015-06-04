@@ -18,7 +18,7 @@ public class ProfilingMeasurementImpl extends ResponseMeasurementImpl implements
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ProfilingMeasurementImpl() {
@@ -27,7 +27,7 @@ public class ProfilingMeasurementImpl extends ResponseMeasurementImpl implements
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

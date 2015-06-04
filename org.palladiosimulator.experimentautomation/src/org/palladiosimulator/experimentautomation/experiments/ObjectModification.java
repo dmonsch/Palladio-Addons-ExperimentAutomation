@@ -36,7 +36,7 @@ public interface ObjectModification extends Modification {
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Type</em>' reference.
      * @see #setType(VariationType)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getObjectModification_Type()
@@ -49,7 +49,7 @@ public interface ObjectModification extends Modification {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.ObjectModification#getType
      * <em>Type</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Type</em>' reference.
      * @see #getType()
@@ -64,7 +64,7 @@ public interface ObjectModification extends Modification {
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getObjectModification_Name()
@@ -77,7 +77,7 @@ public interface ObjectModification extends Modification {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.ObjectModification#getName
      * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Name</em>' attribute.
      * @see #getName()
@@ -93,7 +93,7 @@ public interface ObjectModification extends Modification {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Varied Object Id</em>' attribute.
      * @see #setVariedObjectId(String)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getObjectModification_VariedObjectId()
@@ -106,7 +106,7 @@ public interface ObjectModification extends Modification {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.ObjectModification#getVariedObjectId
      * <em>Varied Object Id</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Varied Object Id</em>' attribute.
      * @see #getVariedObjectId()
@@ -121,7 +121,7 @@ public interface ObjectModification extends Modification {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Value</em>' attribute.
      * @see #setValue(long)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getObjectModification_Value()
@@ -134,7 +134,7 @@ public interface ObjectModification extends Modification {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.ObjectModification#getValue
      * <em>Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Value</em>' attribute.
      * @see #getValue()

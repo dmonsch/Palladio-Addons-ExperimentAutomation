@@ -18,7 +18,7 @@ public class MemoryDatasourceImpl extends EDP2DatasourceImpl implements MemoryDa
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MemoryDatasourceImpl() {
@@ -27,7 +27,7 @@ public class MemoryDatasourceImpl extends EDP2DatasourceImpl implements MemoryDa
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

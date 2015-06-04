@@ -28,7 +28,7 @@ public interface FileDatasource extends EDP2Datasource {
      * of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Location</em>' attribute.
      * @see #setLocation(String)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getFileDatasource_Location()
@@ -41,7 +41,7 @@ public interface FileDatasource extends EDP2Datasource {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource#getLocation
      * <em>Location</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Location</em>' attribute.
      * @see #getLocation()

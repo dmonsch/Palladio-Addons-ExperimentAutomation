@@ -19,7 +19,7 @@ public class FractionalFactorialDesignImpl extends EObjectImpl implements Fracti
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected FractionalFactorialDesignImpl() {
@@ -28,7 +28,7 @@ public class FractionalFactorialDesignImpl extends EObjectImpl implements Fracti
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

@@ -27,7 +27,7 @@ public interface SetValueProvider extends ValueProvider {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Values</em>' attribute.
      * @see #setValues(String)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getSetValueProvider_Values()
@@ -40,7 +40,7 @@ public interface SetValueProvider extends ValueProvider {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.SetValueProvider#getValues
      * <em>Values</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Values</em>' attribute.
      * @see #getValues()

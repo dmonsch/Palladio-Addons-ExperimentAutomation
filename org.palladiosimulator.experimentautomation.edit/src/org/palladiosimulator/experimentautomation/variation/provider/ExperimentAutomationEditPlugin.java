@@ -5,10 +5,7 @@ package org.palladiosimulator.experimentautomation.variation.provider;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
-import org.modelversioning.emfprofile.provider.EMFProfileEditPlugin;
-import org.modelversioning.emfprofileapplication.provider.EMFProfileApplicationEditPlugin;
 import org.palladiosimulator.edp2.models.ExperimentData.provider.EDP2EditPlugin;
-import org.palladiosimulator.mdsdprofiles.provider.MdsdprofilesEditPlugin;
 import org.palladiosimulator.metricspec.provider.MetricSpecEditPlugin;
 import org.palladiosimulator.monitorrepository.provider.MonitorrepositoryEditPlugin;
 import org.palladiosimulator.servicelevelobjective.provider.ServiceLevelObjectiveEditPlugin;
@@ -53,8 +50,7 @@ public final class ExperimentAutomationEditPlugin extends EMFPlugin {
                 MetricSpecEditPlugin.INSTANCE, MonitorrepositoryEditPlugin.INSTANCE,
                 PalladioComponentModelEditPlugin.INSTANCE, ProbabilityFunctionEditPlugin.INSTANCE,
                 ServiceLevelObjectiveEditPlugin.INSTANCE, StoexEditPlugin.INSTANCE, UnitsEditPlugin.INSTANCE,
-                UsageevolutionEditPlugin.INSTANCE, MdsdprofilesEditPlugin.INSTANCE, EMFProfileEditPlugin.INSTANCE,
-                EMFProfileApplicationEditPlugin.INSTANCE, EcoreEditPlugin.INSTANCE, });
+                UsageevolutionEditPlugin.INSTANCE, EcoreEditPlugin.INSTANCE, });
     }
 
     /**

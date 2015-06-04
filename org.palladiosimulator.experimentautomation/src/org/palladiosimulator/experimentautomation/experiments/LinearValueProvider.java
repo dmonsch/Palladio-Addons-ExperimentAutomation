@@ -29,7 +29,7 @@ public interface LinearValueProvider extends ValueProvider {
      * of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Summand</em>' attribute.
      * @see #setSummand(double)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getLinearValueProvider_Summand()
@@ -42,7 +42,7 @@ public interface LinearValueProvider extends ValueProvider {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.LinearValueProvider#getSummand
      * <em>Summand</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Summand</em>' attribute.
      * @see #getSummand()
@@ -57,7 +57,7 @@ public interface LinearValueProvider extends ValueProvider {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Factor</em>' attribute.
      * @see #setFactor(double)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getLinearValueProvider_Factor()
@@ -70,7 +70,7 @@ public interface LinearValueProvider extends ValueProvider {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.experiments.LinearValueProvider#getFactor
      * <em>Factor</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Factor</em>' attribute.
      * @see #getFactor()

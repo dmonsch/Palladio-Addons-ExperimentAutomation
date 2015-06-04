@@ -38,7 +38,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
     /**
      * The cached value of the '{@link #getType() <em>Type</em>}' reference. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getType()
      * @generated
      * @ordered
@@ -48,7 +48,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getName()
      * @generated
      * @ordered
@@ -58,7 +58,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
     /**
      * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getName()
      * @generated
      * @ordered
@@ -68,7 +68,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
     /**
      * The default value of the '{@link #getVariedObjectId() <em>Varied Object Id</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getVariedObjectId()
      * @generated
      * @ordered
@@ -78,7 +78,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
     /**
      * The cached value of the '{@link #getVariedObjectId() <em>Varied Object Id</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getVariedObjectId()
      * @generated
      * @ordered
@@ -88,7 +88,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
     /**
      * The default value of the '{@link #getValue() <em>Value</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getValue()
      * @generated
      * @ordered
@@ -98,7 +98,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
     /**
      * The cached value of the '{@link #getValue() <em>Value</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getValue()
      * @generated
      * @ordered
@@ -107,7 +107,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ObjectModificationImpl() {
@@ -116,7 +116,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -126,7 +126,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -146,7 +146,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public VariationType basicGetType() {
@@ -155,7 +155,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -170,7 +170,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -180,7 +180,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -195,7 +195,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -205,7 +205,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -220,7 +220,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -230,7 +230,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -245,7 +245,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -268,7 +268,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -292,7 +292,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -316,7 +316,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -337,7 +337,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

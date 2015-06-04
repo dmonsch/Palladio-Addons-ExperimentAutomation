@@ -18,7 +18,7 @@ public class FullFactorialDesignImpl extends ExperimentDesignImpl implements Ful
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected FullFactorialDesignImpl() {
@@ -27,7 +27,7 @@ public class FullFactorialDesignImpl extends ExperimentDesignImpl implements Ful
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

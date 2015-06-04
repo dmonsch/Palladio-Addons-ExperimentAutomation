@@ -46,7 +46,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
     /**
      * The cached value of the '{@link #getType() <em>Type</em>}' reference. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getType()
      * @generated
      * @ordered
@@ -56,7 +56,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
     /**
      * The cached value of the '{@link #getValueProvider() <em>Value Provider</em>}' containment
      * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getValueProvider()
      * @generated
      * @ordered
@@ -106,7 +106,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
     /**
      * The default value of the '{@link #getMaxVariations() <em>Max Variations</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getMaxVariations()
      * @generated
      * @ordered
@@ -126,7 +126,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
     /**
      * The default value of the '{@link #getVariedObjectId() <em>Varied Object Id</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getVariedObjectId()
      * @generated
      * @ordered
@@ -136,7 +136,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
     /**
      * The cached value of the '{@link #getVariedObjectId() <em>Varied Object Id</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getVariedObjectId()
      * @generated
      * @ordered
@@ -146,7 +146,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getName()
      * @generated
      * @ordered
@@ -156,7 +156,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
     /**
      * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getName()
      * @generated
      * @ordered
@@ -165,7 +165,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected VariationImpl() {
@@ -174,7 +174,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -184,7 +184,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -204,7 +204,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public VariationType basicGetType() {
@@ -213,7 +213,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -228,7 +228,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -238,7 +238,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetValueProvider(final ValueProvider newValueProvider, NotificationChain msgs) {
@@ -258,7 +258,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -285,7 +285,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -295,7 +295,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -310,7 +310,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -320,7 +320,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -335,7 +335,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -345,7 +345,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -360,7 +360,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -370,7 +370,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -385,7 +385,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -395,7 +395,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -410,7 +410,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -425,7 +425,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -454,7 +454,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -487,7 +487,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -520,7 +520,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -547,7 +547,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

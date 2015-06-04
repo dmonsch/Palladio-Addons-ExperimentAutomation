@@ -69,7 +69,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected NestedIntervalsLongValueProviderImpl() {
@@ -78,7 +78,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -88,7 +88,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -98,7 +98,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -113,7 +113,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -123,7 +123,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -138,7 +138,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -154,7 +154,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -172,7 +172,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -190,7 +190,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -206,7 +206,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

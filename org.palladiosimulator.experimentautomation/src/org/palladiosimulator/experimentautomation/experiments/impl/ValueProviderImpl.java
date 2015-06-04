@@ -19,7 +19,7 @@ public abstract class ValueProviderImpl extends EObjectImpl implements ValueProv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ValueProviderImpl() {
@@ -28,7 +28,7 @@ public abstract class ValueProviderImpl extends EObjectImpl implements ValueProv
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

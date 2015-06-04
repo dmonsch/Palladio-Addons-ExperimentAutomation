@@ -47,7 +47,7 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ReconfigurationRulesFolderImpl() {
@@ -56,7 +56,7 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -66,7 +66,7 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -76,7 +76,7 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -91,7 +91,7 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -105,7 +105,7 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -120,7 +120,7 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -135,7 +135,7 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -149,7 +149,7 @@ public class ReconfigurationRulesFolderImpl extends EObjectImpl implements Recon
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

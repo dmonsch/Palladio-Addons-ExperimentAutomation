@@ -28,7 +28,7 @@ public interface SimTimeStopCondition extends StopCondition {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Simulation Time</em>' attribute.
      * @see #setSimulationTime(int)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getSimTimeStopCondition_SimulationTime()
@@ -41,7 +41,7 @@ public interface SimTimeStopCondition extends StopCondition {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition#getSimulationTime
      * <em>Simulation Time</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Simulation Time</em>' attribute.
      * @see #getSimulationTime()

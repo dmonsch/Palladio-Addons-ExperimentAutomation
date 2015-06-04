@@ -117,15 +117,12 @@ import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
 import org.eclipse.ui.views.properties.IPropertySheetPage;
 import org.eclipse.ui.views.properties.PropertySheet;
 import org.eclipse.ui.views.properties.PropertySheetPage;
-import org.modelversioning.emfprofile.provider.EMFProfileItemProviderAdapterFactory;
-import org.modelversioning.emfprofileapplication.provider.EMFProfileApplicationItemProviderAdapterFactory;
 import org.palladiosimulator.edp2.models.ExperimentData.provider.ExperimentDataItemProviderAdapterFactory;
 import org.palladiosimulator.edp2.models.Repository.provider.RepositoryItemProviderAdapterFactory;
 import org.palladiosimulator.edp2.models.measuringpoint.provider.MeasuringpointItemProviderAdapterFactory;
 import org.palladiosimulator.experimentautomation.abstractsimulation.provider.AbstractsimulationItemProviderAdapterFactory;
 import org.palladiosimulator.experimentautomation.experiments.provider.ExperimentsItemProviderAdapterFactory;
 import org.palladiosimulator.experimentautomation.variation.provider.VariationItemProviderAdapterFactory;
-import org.palladiosimulator.mdsdprofiles.provider.MdsdprofilesItemProviderAdapterFactory;
 import org.palladiosimulator.metricspec.provider.MetricSpecItemProviderAdapterFactory;
 import org.palladiosimulator.monitorrepository.provider.MonitorRepositoryItemProviderAdapterFactory;
 import org.palladiosimulator.servicelevelobjective.provider.ServicelevelObjectiveItemProviderAdapterFactory;
@@ -718,9 +715,6 @@ IMenuListener, IViewerProvider, IGotoMarker {
         this.adapterFactory.addAdapterFactory(new StoexItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new UnitsItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new UsageevolutionItemProviderAdapterFactory());
-        this.adapterFactory.addAdapterFactory(new MdsdprofilesItemProviderAdapterFactory());
-        this.adapterFactory.addAdapterFactory(new EMFProfileItemProviderAdapterFactory());
-        this.adapterFactory.addAdapterFactory(new EMFProfileApplicationItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new EcoreItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
