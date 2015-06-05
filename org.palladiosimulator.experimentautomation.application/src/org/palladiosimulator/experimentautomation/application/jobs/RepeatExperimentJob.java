@@ -9,10 +9,8 @@ import javax.measure.unit.SI;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.IProgressMonitor;
-import org.palladiosimulator.edp2.dao.exception.DataNotAccessibleException;
 import org.palladiosimulator.edp2.datastream.IDataSource;
 import org.palladiosimulator.edp2.datastream.edp2source.Edp2DataTupleDataSource;
-import org.palladiosimulator.edp2.impl.RepositoryManager;
 import org.palladiosimulator.edp2.models.ExperimentData.ExperimentGroup;
 import org.palladiosimulator.edp2.models.ExperimentData.ExperimentRun;
 import org.palladiosimulator.edp2.models.ExperimentData.ExperimentSetting;
@@ -20,7 +18,6 @@ import org.palladiosimulator.edp2.models.ExperimentData.Measurement;
 import org.palladiosimulator.edp2.models.ExperimentData.MeasurementRange;
 import org.palladiosimulator.edp2.models.ExperimentData.RawMeasurements;
 import org.palladiosimulator.edp2.models.Repository.Repository;
-import org.palladiosimulator.edp2.util.MeasurementsUtility;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
 import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource;
 import org.palladiosimulator.experimentautomation.application.VariationFactorTuple;
@@ -85,7 +82,7 @@ public class RepeatExperimentJob extends SequentialBlackboardInteractingJob<MDSD
         super(false);
 
         datasoruce = simulationConfiguration.getDatasource();
-        this.batchAlgorithm = new StaticBatchAlgorithm(5, 3);
+        this.batchAlgorithm = new StaticBatchAlgorithm(10, 5);
         this.estimator = new SampleMeanEstimator();
         // TODO: Decide about real values here.
         this.confidenceLevel = 0.5;
@@ -108,10 +105,12 @@ public class RepeatExperimentJob extends SequentialBlackboardInteractingJob<MDSD
     }
 
     private void analyzeLastExperimentsReconfigurationTimes() {
-        final Repository repository = getEDP2Repository(datasoruce.getId());
-        final ExperimentGroup experimentGroup = getExperimentGroup(repository, "SimuLizar Load Balancer []");
-        ExperimentSetting experimentSetting = getExperimentSetting(experimentGroup,
-                "Variation [] [EDP2 SimuLizar Configuration]");
+        final Repository repository = ExperimentMasurementsUtils.getEDP2Repository(datasoruce.getId());
+        final ExperimentGroup experimentGroup = ExperimentMasurementsUtils.getExperimentGroup(repository,
+                this.experiment.getName() + " []");
+        ExperimentSetting experimentSetting = ExperimentMasurementsUtils.getExperimentSetting(experimentGroup,
+                "Variation [] [" + this.simulationConfiguration.getName() + "]");
+
         final int lastExperiment = experimentSetting.getExperimentRuns().size() - 1;
         final ExperimentRun experimentRun = experimentSetting.getExperimentRuns().get(lastExperiment);
 
@@ -135,15 +134,6 @@ public class RepeatExperimentJob extends SequentialBlackboardInteractingJob<MDSD
 
                         computeConfidenceInterval(reconfigurationTime.doubleValue(SI.SECOND));
                     }
-
-                    /*
-                     * Long startTime = (Long) measurementRange.getStartTime().getValue(); Long
-                     * endTime = (Long) measurementRange.getEndTime().getValue();
-                     * 
-                     * Long reconfigurationTime = endTime - startTime; // Random rand = new
-                     * Random(); LOGGER.info("Reconfiguration time:" + reconfigurationTime);
-                     * computeConfidenceInterval(reconfigurationTime);
-                     */
                 }
             }
         }
@@ -185,72 +175,6 @@ public class RepeatExperimentJob extends SequentialBlackboardInteractingJob<MDSD
                 }
             }
         }
-    }
-
-    /**
-     * Returns the EDP2 repository containing measurements from the last analysis run.
-     * 
-     * @param edp2datasourceID
-     *            the EDP2 datasource ID to get measurements from.
-     * @return the EDP2 repository.
-     */
-    private Repository getEDP2Repository(final String edp2datasourceID) {
-        final Repository repository = RepositoryManager.getRepositoryFromUUID(edp2datasourceID);
-
-        if (repository == null) {
-            throw new RuntimeException("Could not determine datasource type. This should not have happened.");
-        }
-
-        try {
-            MeasurementsUtility.ensureOpenRepository(repository);
-        } catch (DataNotAccessibleException e) {
-            throw new RuntimeException("Could not open EDP2 repository");
-        }
-
-        return repository;
-    }
-
-    /**
-     * Returns an experiment group object from the given repository, based on the experiment group
-     * purpose member variable.
-     * 
-     * @param repository
-     *            the repository containing the experiment group.
-     * @param purpose
-     *            the unique name of an experiment run; used to identify the experiment group of the
-     *            last analysis run.
-     * @return the experiment group of interest.
-     */
-    private ExperimentGroup getExperimentGroup(final Repository repository, final String purpose) {
-        for (final ExperimentGroup experimentGroup : repository.getExperimentGroups()) {
-            if (experimentGroup.getPurpose().equals(purpose)) {
-                return experimentGroup;
-            }
-        }
-
-        throw new IllegalArgumentException("Could not find experiment group with purpose \"" + purpose + "\"");
-    }
-
-    /**
-     * Returns the experiment setting from the given experiment group that is identified by the
-     * unique experiment setting description string.
-     * 
-     * @param experimentGroup
-     *            the experiment group to be investigated.
-     * @param experimentSettingDescription
-     *            the unique experiment setting description identifier.
-     * @return the experiment setting whose description matches the given identifier string.
-     */
-    private ExperimentSetting getExperimentSetting(final ExperimentGroup experimentGroup,
-            final String experimentSettingDescription) {
-        for (final ExperimentSetting expSetting : experimentGroup.getExperimentSettings()) {
-            if (expSetting.getDescription().equals(experimentSettingDescription)) {
-                return expSetting;
-            }
-        }
-
-        throw new IllegalArgumentException("Could not find experiment setting for variation \""
-                + experimentSettingDescription + "\"");
     }
 
 }
