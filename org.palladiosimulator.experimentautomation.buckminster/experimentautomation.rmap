@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rm:rmap xmlns:bc="http://www.eclipse.org/buckminster/Common-1.0" xmlns:rm="http://www.eclipse.org/buckminster/RMap-1.0">
-  <rm:locator searchPathRef="ExperimentAutomation" failOnError="false"/>
-  <rm:locator searchPathRef="StoryDiagrams" failOnError="false" pattern="^org\.storydriven\..*" />
-  <rm:locator searchPathRef="StoryDiagrams" failOnError="false" pattern="^de\.mdelab\..*" />
-  <rm:locator searchPathRef="StoryDiagrams" failOnError="false" pattern="^de\.upb\.swt\.core.*" />  
+  <rm:locator pattern="^org\.palladiosimulator\.experimentautomation.*" searchPathRef="ExperimentAutomation" failOnError="false"/>
+  <rm:locator pattern="^org\.storydriven\..*" searchPathRef="StoryDiagrams" failOnError="false"  />
+  <rm:locator pattern="^de\.mdelab\..*" searchPathRef="StoryDiagrams" failOnError="false"  />
+  <rm:locator pattern="^de\.upb\.swt\.core.*" searchPathRef="StoryDiagrams" failOnError="false"  />  
   <rm:locator pattern="^org\.palladiosimulator\..*" searchPathRef="RecorderFramework" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\.metricspec.*" searchPathRef="metricspec" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\.servicelevelobjective.*" searchPathRef="ServiceLevelObjectives" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\.edp2.*" searchPathRef="edp2" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\.measurementframework.*" searchPathRef="measurementframework" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\.simulizar.*" searchPathRef="SimuLizar" failOnError="false"/>
-    <rm:locator pattern="^org\.palladiosimulator\.experimentanalysis.*" searchPathRef="ExperimentAnalysis" failOnError="false"/>
+  <rm:locator pattern="^org\.palladiosimulator\.experimentanalysis.*" searchPathRef="ExperimentAnalysis" failOnError="false"/>
   <rm:locator pattern="^de\.fzi\.power.*" searchPathRef="PowerConsumptionAnalyzer" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\.monitor.*" searchPathRef="monitor" failOnError="false"/>
   <rm:locator pattern="^org\.palladiosimulator\..*" searchPathRef="ProbeFramework" failOnError="false"/>
