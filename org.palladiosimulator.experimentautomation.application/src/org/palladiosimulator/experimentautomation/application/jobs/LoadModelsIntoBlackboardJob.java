@@ -18,7 +18,6 @@ import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadMonitorRepositoryModelIntoBlackboardJob;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadSimuLizarModelsIntoBlackboardJob;
-import org.palladiosimulator.simulizar.launcher.jobs.LoadUEModelIntoBlackboardJob;
 import org.palladiosimulator.simulizar.reconfiguration.storydiagram.jobs.LoadSDMModelsIntoBlackboardJob;
 
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
@@ -50,12 +49,13 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
     @Override
     public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
         // Load the PCM models
-        List<EObject> pcmModels = new ArrayList<EObject>();
+        final List<EObject> pcmModels = new ArrayList<EObject>();
         pcmModels.add(this.initialModel.getRepository());
         pcmModels.add(this.initialModel.getSystem());
         pcmModels.add(this.initialModel.getResourceEnvironment());
         pcmModels.add(this.initialModel.getAllocation());
         pcmModels.add(this.initialModel.getUsageModel());
+        pcmModels.add(this.initialModel.getUsageEvolution());
 
         // load the PCM model into a original inital PCM model partition
         loadIntoBlackboard(LoadSimuLizarModelsIntoBlackboardJob.ORIGINAL_PCM_MODELS_PARTITION_ID, pcmModels);
@@ -74,9 +74,6 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
         // load monitor repository model
         loadIntoBlackboard(LoadMonitorRepositoryModelIntoBlackboardJob.MONITOR_REPOSITORY_MODEL_PARTITION_ID,
                 this.initialModel.getMonitorRepository());
-
-        // load Usage Evolution model
-        loadIntoBlackboard(LoadUEModelIntoBlackboardJob.UE_MODEL_PARTITION_ID, this.initialModel.getUsageEvolution());
 
         // load SDM models
         final ReconfigurationRulesFolder reconfigurationRulesFolder = this.initialModel.getReconfigurationRules();

@@ -3,9 +3,7 @@ package org.palladiosimulator.experimentautomation.application.jobs;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadMonitorRepositoryModelIntoBlackboardJob;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadSimuLizarModelsIntoBlackboardJob;
-import org.palladiosimulator.simulizar.launcher.jobs.LoadUEModelIntoBlackboardJob;
 import org.palladiosimulator.simulizar.launcher.partitions.MonitorRepositoryResourceSetPartition;
-import org.palladiosimulator.simulizar.launcher.partitions.UEResourceSetPartition;
 import org.palladiosimulator.simulizar.reconfiguration.storydiagram.jobs.LoadSDMModelsIntoBlackboardJob;
 import org.palladiosimulator.simulizar.reconfiguration.storydiagram.modelaccess.SDMResourceSetPartition;
 
@@ -29,7 +27,7 @@ public class PrepareBlackboardJob extends SequentialBlackboardInteractingJob<MDS
     }
 
     @Override
-    public void execute(IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
+    public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
         // get PCM partition
         final ResourceSetPartition pcmPartition = this.getBlackboard().getPartition(
                 LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID);
@@ -40,10 +38,6 @@ public class PrepareBlackboardJob extends SequentialBlackboardInteractingJob<MDS
         this.getBlackboard().addPartition(
                 LoadMonitorRepositoryModelIntoBlackboardJob.MONITOR_REPOSITORY_MODEL_PARTITION_ID,
                 monitorRepositoryPartition);
-
-        // configure Usage Evolution model partition
-        final UEResourceSetPartition uePartition = new UEResourceSetPartition((PCMResourceSetPartition) pcmPartition);
-        this.getBlackboard().addPartition(LoadUEModelIntoBlackboardJob.UE_MODEL_PARTITION_ID, uePartition);
 
         // configure SDM models partition
         final SDMResourceSetPartition sdmPartition = new SDMResourceSetPartition();
