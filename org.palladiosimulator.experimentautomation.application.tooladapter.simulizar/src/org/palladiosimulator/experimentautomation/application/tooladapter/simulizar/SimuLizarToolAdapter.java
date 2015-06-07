@@ -6,7 +6,6 @@ import java.util.Map;
 
 import org.palladiosimulator.experimentautomation.application.VariationFactorTuple;
 import org.palladiosimulator.experimentautomation.application.jobs.CheckForSLOViolationsJob;
-import org.palladiosimulator.experimentautomation.application.jobs.CopyOriginalPCMModelsJob;
 import org.palladiosimulator.experimentautomation.application.jobs.LogExperimentInformationJob;
 import org.palladiosimulator.experimentautomation.application.tooladapter.IToolAdapter;
 import org.palladiosimulator.experimentautomation.application.tooladapter.RunAnalysisJob;
@@ -45,7 +44,8 @@ public class SimuLizarToolAdapter implements IToolAdapter {
         final RunAnalysisJob result = new RunAnalysisJob();
         result.setConfiguration(configMap);
         result.addJob(new LogExperimentInformationJob(experiment, simuComConfig, variationFactorTuples, repetition));
-        result.addJob(new CopyOriginalPCMModelsJob());
+        // FIXME This job does not work (Usage Evolution is ignored) [Lehrig]
+        // result.addJob(new CopyOriginalPCMModelsJob());
         result.addJob(new PCMStartInterpretationJob(workflowConfig));
         if (experiment.getInitialModel().getServiceLevelObjectives() != null) {
             result.addJob(new CheckForSLOViolationsJob(result,

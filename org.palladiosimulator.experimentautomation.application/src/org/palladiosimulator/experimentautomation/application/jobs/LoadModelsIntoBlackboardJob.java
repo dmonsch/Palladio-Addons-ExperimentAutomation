@@ -57,10 +57,10 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
         pcmModels.add(this.initialModel.getUsageModel());
         pcmModels.add(this.initialModel.getUsageEvolution());
 
-        // load the PCM model into a original inital PCM model partition
+        // load the PCM model into a original initial PCM model partition
         loadIntoBlackboard(LoadSimuLizarModelsIntoBlackboardJob.ORIGINAL_PCM_MODELS_PARTITION_ID, pcmModels);
 
-        // load the PCM model into the standard parition
+        // load the PCM model into the standard partition
         loadIntoBlackboard(LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID, pcmModels);
 
         // load the middleware completion

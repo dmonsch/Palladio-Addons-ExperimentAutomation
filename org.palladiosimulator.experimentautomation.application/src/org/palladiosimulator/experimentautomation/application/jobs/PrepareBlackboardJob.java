@@ -32,6 +32,11 @@ public class PrepareBlackboardJob extends SequentialBlackboardInteractingJob<MDS
         final ResourceSetPartition pcmPartition = this.getBlackboard().getPartition(
                 LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID);
 
+        // configure the original PCM model partition
+        final PCMResourceSetPartition originalPcmPartition = new PCMResourceSetPartition();
+        this.getBlackboard().addPartition(LoadSimuLizarModelsIntoBlackboardJob.ORIGINAL_PCM_MODELS_PARTITION_ID,
+                originalPcmPartition);
+
         // configure MonitorRepository model partition
         final MonitorRepositoryResourceSetPartition monitorRepositoryPartition = new MonitorRepositoryResourceSetPartition(
                 (PCMResourceSetPartition) pcmPartition);
@@ -43,10 +48,6 @@ public class PrepareBlackboardJob extends SequentialBlackboardInteractingJob<MDS
         final SDMResourceSetPartition sdmPartition = new SDMResourceSetPartition();
         this.getBlackboard().addPartition(LoadSDMModelsIntoBlackboardJob.SDM_MODEL_PARTITION_ID, sdmPartition);
 
-        // configure the original PCM model partition
-        final PCMResourceSetPartition originalPcmPartition = new PCMResourceSetPartition();
-        this.getBlackboard().addPartition(LoadSimuLizarModelsIntoBlackboardJob.ORIGINAL_PCM_MODELS_PARTITION_ID,
-                originalPcmPartition);
     }
 
 }

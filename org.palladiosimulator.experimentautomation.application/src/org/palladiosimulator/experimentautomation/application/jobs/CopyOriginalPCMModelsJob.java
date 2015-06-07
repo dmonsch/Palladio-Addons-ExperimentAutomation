@@ -34,18 +34,18 @@ public class CopyOriginalPCMModelsJob extends SequentialBlackboardInteractingJob
     @Override
     public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
 
-        LOGGER.info("Cloning originial PCM models for experiment run.");
+        LOGGER.info("Cloning original PCM models for experiment run.");
         // copy the original initial PCM model into the PCM model partition
         this.getBlackboard().removePartition(LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID);
 
-        PCMResourceSetPartition newPartition = new PCMResourceSetPartition();
+        final PCMResourceSetPartition newPartition = new PCMResourceSetPartition();
 
-        ResourceSetPartition orginalPCMModelPartition = this.getBlackboard().getPartition(
+        final ResourceSetPartition orginalPCMModelPartition = this.getBlackboard().getPartition(
                 LoadSimuLizarModelsIntoBlackboardJob.ORIGINAL_PCM_MODELS_PARTITION_ID);
 
-        List<EObject> modelCopy = EMFCopyHelper.deepCopyToEObjectList(orginalPCMModelPartition.getResourceSet());
+        final List<EObject> modelCopy = EMFCopyHelper.deepCopyToEObjectList(orginalPCMModelPartition.getResourceSet());
         for (int i = 0; i < modelCopy.size(); i++) {
-            Resource resource = newPartition.getResourceSet().createResource(URI.createFileURI("/temp" + i));
+            final Resource resource = newPartition.getResourceSet().createResource(URI.createFileURI("/temp" + i));
             resource.getContents().add(modelCopy.get(i));
         }
 
