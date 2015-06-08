@@ -3,6 +3,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
     modelDirectory="/org.palladiosimulator.experimentautomation/src"
     modelPluginID="org.palladiosimulator.experimentautomation" modelName="ExperimentAutomation"
+    rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
     codeFormatting="true" testsDirectory="/org.palladiosimulator.experimentautomation.tests/src"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
     testsPluginID="org.palladiosimulator.experimentautomation.tests" usedGenPackages="platform:/plugin/tools.descartes.dlim.generator/src/tools/descartes/dlim/model/dlim.genmodel#//dlim platform:/plugin/org.palladiosimulator.edp2/model/EDP2.genmodel#//models platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.genmodel#//metricspec platform:/plugin/org.palladiosimulator.monitorrepository/model/monitorrepository.genmodel#//monitorrepository platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.genmodel#//pcm platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction platform:/plugin/org.palladiosimulator.servicelevelobjective/model/servicelevelobjective.genmodel#//servicelevelobjective platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel#//units platform:/plugin/org.scaledl.usageevolution/model/usageevolution.genmodel#//usageevolution platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
@@ -26,6 +27,7 @@
     <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
   </genAnnotations>
   <foreignModel>experimentautomation.ecore</foreignModel>
+  <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
   <genPackages xsi:type="genmodel:GenPackage" prefix="ExperimentAutomation" basePackage="org.palladiosimulator"
       resource="XML" disposableProviderFactory="true" extensibleProviderFactory="true"
       ecorePackage="experimentautomation.ecore#/" publicationLocation="">

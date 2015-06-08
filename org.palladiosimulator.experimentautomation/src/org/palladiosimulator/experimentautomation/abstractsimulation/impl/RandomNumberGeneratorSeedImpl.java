@@ -5,7 +5,7 @@ package org.palladiosimulator.experimentautomation.abstractsimulation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
 import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
 
@@ -38,7 +38,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumbe
  *
  * @generated
  */
-public class RandomNumberGeneratorSeedImpl extends EObjectImpl implements RandomNumberGeneratorSeed {
+public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements RandomNumberGeneratorSeed {
 
     /**
      * The default value of the '{@link #getSeed0() <em>Seed0</em>}' attribute. <!-- begin-user-doc

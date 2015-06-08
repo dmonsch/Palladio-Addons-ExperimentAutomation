@@ -3,7 +3,7 @@
 package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.Modification;
 
@@ -15,7 +15,7 @@ import org.palladiosimulator.experimentautomation.experiments.Modification;
  *
  * @generated
  */
-public abstract class ModificationImpl extends EObjectImpl implements Modification {
+public abstract class ModificationImpl extends CDOObjectImpl implements Modification {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->

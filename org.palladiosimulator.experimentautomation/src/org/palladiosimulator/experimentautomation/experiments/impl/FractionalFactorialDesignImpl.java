@@ -3,7 +3,7 @@
 package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.FractionalFactorialDesign;
 
@@ -15,7 +15,7 @@ import org.palladiosimulator.experimentautomation.experiments.FractionalFactoria
  *
  * @generated
  */
-public class FractionalFactorialDesignImpl extends EObjectImpl implements FractionalFactorialDesign {
+public class FractionalFactorialDesignImpl extends CDOObjectImpl implements FractionalFactorialDesign {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->

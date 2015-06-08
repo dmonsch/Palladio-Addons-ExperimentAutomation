@@ -4,6 +4,7 @@ package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
@@ -131,7 +132,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
      */
     @Override
     public VariationType getType() {
-        if (this.type != null && this.type.eIsProxy()) {
+        if (this.type != null && ((EObject) this.type).eIsProxy()) {
             final InternalEObject oldType = (InternalEObject) this.type;
             this.type = (VariationType) this.eResolveProxy(oldType);
             if (this.type != oldType) {

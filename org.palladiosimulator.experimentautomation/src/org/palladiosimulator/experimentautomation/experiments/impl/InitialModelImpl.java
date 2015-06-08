@@ -4,9 +4,10 @@ package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
@@ -63,7 +64,7 @@ import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
  *
  * @generated
  */
-public class InitialModelImpl extends EObjectImpl implements InitialModel {
+public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * The cached value of the '{@link #getUsageModel() <em>Usage Model</em>}' reference. <!--
@@ -202,7 +203,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public UsageModel getUsageModel() {
-        if (this.usageModel != null && this.usageModel.eIsProxy()) {
+        if (this.usageModel != null && ((EObject) this.usageModel).eIsProxy()) {
             final InternalEObject oldUsageModel = (InternalEObject) this.usageModel;
             this.usageModel = (UsageModel) this.eResolveProxy(oldUsageModel);
             if (this.usageModel != oldUsageModel) {
@@ -246,7 +247,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public Allocation getAllocation() {
-        if (this.allocation != null && this.allocation.eIsProxy()) {
+        if (this.allocation != null && ((EObject) this.allocation).eIsProxy()) {
             final InternalEObject oldAllocation = (InternalEObject) this.allocation;
             this.allocation = (Allocation) this.eResolveProxy(oldAllocation);
             if (this.allocation != oldAllocation) {
@@ -290,7 +291,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public Repository getMiddlewareRepository() {
-        if (this.middlewareRepository != null && this.middlewareRepository.eIsProxy()) {
+        if (this.middlewareRepository != null && ((EObject) this.middlewareRepository).eIsProxy()) {
             final InternalEObject oldMiddlewareRepository = (InternalEObject) this.middlewareRepository;
             this.middlewareRepository = (Repository) this.eResolveProxy(oldMiddlewareRepository);
             if (this.middlewareRepository != oldMiddlewareRepository) {
@@ -336,7 +337,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public Repository getEventMiddleWareRepository() {
-        if (this.eventMiddleWareRepository != null && this.eventMiddleWareRepository.eIsProxy()) {
+        if (this.eventMiddleWareRepository != null && ((EObject) this.eventMiddleWareRepository).eIsProxy()) {
             final InternalEObject oldEventMiddleWareRepository = (InternalEObject) this.eventMiddleWareRepository;
             this.eventMiddleWareRepository = (Repository) this.eResolveProxy(oldEventMiddleWareRepository);
             if (this.eventMiddleWareRepository != oldEventMiddleWareRepository) {
@@ -382,7 +383,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public ReconfigurationRulesFolder getReconfigurationRules() {
-        if (this.reconfigurationRules != null && this.reconfigurationRules.eIsProxy()) {
+        if (this.reconfigurationRules != null && ((EObject) this.reconfigurationRules).eIsProxy()) {
             final InternalEObject oldReconfigurationRules = (InternalEObject) this.reconfigurationRules;
             this.reconfigurationRules = (ReconfigurationRulesFolder) this.eResolveProxy(oldReconfigurationRules);
             if (this.reconfigurationRules != oldReconfigurationRules) {
@@ -520,7 +521,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public Repository getRepository() {
-        if (this.repository != null && this.repository.eIsProxy()) {
+        if (this.repository != null && ((EObject) this.repository).eIsProxy()) {
             final InternalEObject oldRepository = (InternalEObject) this.repository;
             this.repository = (Repository) this.eResolveProxy(oldRepository);
             if (this.repository != oldRepository) {
@@ -564,7 +565,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public de.uka.ipd.sdq.pcm.system.System getSystem() {
-        if (this.system != null && this.system.eIsProxy()) {
+        if (this.system != null && ((EObject) this.system).eIsProxy()) {
             final InternalEObject oldSystem = (InternalEObject) this.system;
             this.system = (de.uka.ipd.sdq.pcm.system.System) this.eResolveProxy(oldSystem);
             if (this.system != oldSystem) {
@@ -608,7 +609,7 @@ public class InitialModelImpl extends EObjectImpl implements InitialModel {
      */
     @Override
     public ResourceEnvironment getResourceEnvironment() {
-        if (this.resourceEnvironment != null && this.resourceEnvironment.eIsProxy()) {
+        if (this.resourceEnvironment != null && ((EObject) this.resourceEnvironment).eIsProxy()) {
             final InternalEObject oldResourceEnvironment = (InternalEObject) this.resourceEnvironment;
             this.resourceEnvironment = (ResourceEnvironment) this.eResolveProxy(oldResourceEnvironment);
             if (this.resourceEnvironment != oldResourceEnvironment) {

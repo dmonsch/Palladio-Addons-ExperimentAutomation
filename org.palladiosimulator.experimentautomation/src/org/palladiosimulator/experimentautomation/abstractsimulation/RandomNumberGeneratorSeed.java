@@ -2,7 +2,7 @@
  */
 package org.palladiosimulator.experimentautomation.abstractsimulation;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
@@ -34,9 +34,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface RandomNumberGeneratorSeed extends EObject {
+public interface RandomNumberGeneratorSeed extends CDOObject {
 
     /**
      * Returns the value of the '<em><b>Seed0</b></em>' attribute. <!-- begin-user-doc -->

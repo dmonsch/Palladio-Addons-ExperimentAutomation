@@ -5,7 +5,7 @@ package org.palladiosimulator.experimentautomation.abstractsimulation.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
 import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource;
 
@@ -23,7 +23,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasou
  *
  * @generated
  */
-public abstract class EDP2DatasourceImpl extends EObjectImpl implements EDP2Datasource {
+public abstract class EDP2DatasourceImpl extends CDOObjectImpl implements EDP2Datasource {
 
     /**
      * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc -->

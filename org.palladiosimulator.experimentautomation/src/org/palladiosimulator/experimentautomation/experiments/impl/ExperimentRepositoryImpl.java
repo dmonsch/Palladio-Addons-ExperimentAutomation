@@ -8,9 +8,9 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentRepository;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
@@ -29,7 +29,7 @@ import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
  *
  * @generated
  */
-public class ExperimentRepositoryImpl extends EObjectImpl implements ExperimentRepository {
+public class ExperimentRepositoryImpl extends CDOObjectImpl implements ExperimentRepository {
 
     /**
      * The cached value of the '{@link #getExperiments() <em>Experiments</em>}' containment

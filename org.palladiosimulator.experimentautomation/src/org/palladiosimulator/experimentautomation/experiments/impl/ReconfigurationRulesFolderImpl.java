@@ -5,7 +5,7 @@ package org.palladiosimulator.experimentautomation.experiments.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
 
@@ -23,7 +23,7 @@ import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRul
  *
  * @generated
  */
-public class ReconfigurationRulesFolderImpl extends EObjectImpl implements ReconfigurationRulesFolder {
+public class ReconfigurationRulesFolderImpl extends CDOObjectImpl implements ReconfigurationRulesFolder {
 
     /**
      * The default value of the '{@link #getFolderUri() <em>Folder Uri</em>}' attribute. <!--

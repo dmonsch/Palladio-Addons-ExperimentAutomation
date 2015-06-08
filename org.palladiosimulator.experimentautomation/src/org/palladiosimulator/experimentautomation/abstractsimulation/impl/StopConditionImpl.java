@@ -3,7 +3,7 @@
 package org.palladiosimulator.experimentautomation.abstractsimulation.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
 import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
 
@@ -15,7 +15,7 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.StopConditi
  *
  * @generated
  */
-public abstract class StopConditionImpl extends EObjectImpl implements StopCondition {
+public abstract class StopConditionImpl extends CDOObjectImpl implements StopCondition {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->

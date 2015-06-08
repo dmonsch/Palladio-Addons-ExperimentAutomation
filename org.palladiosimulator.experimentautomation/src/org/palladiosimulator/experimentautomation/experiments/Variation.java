@@ -2,7 +2,7 @@
  */
 package org.palladiosimulator.experimentautomation.experiments;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 import org.palladiosimulator.experimentautomation.variation.VariationType;
 
 /**
@@ -31,9 +31,10 @@ import org.palladiosimulator.experimentautomation.variation.VariationType;
  *
  * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getVariation()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface Variation extends EObject {
+public interface Variation extends CDOObject {
 
     /**
      * Returns the value of the '<em><b>Type</b></em>' reference. <!-- begin-user-doc -->

@@ -3,7 +3,7 @@
 package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign;
 
@@ -15,7 +15,7 @@ import org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesig
  *
  * @generated
  */
-public class PlacketBurmanDesignImpl extends EObjectImpl implements PlacketBurmanDesign {
+public class PlacketBurmanDesignImpl extends CDOObjectImpl implements PlacketBurmanDesign {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->

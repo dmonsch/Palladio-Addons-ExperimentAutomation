@@ -2,7 +2,7 @@
  */
 package org.palladiosimulator.experimentautomation.experiments;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 import org.palladiosimulator.monitorrepository.MonitorRepository;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
 import org.scaledl.usageevolution.UsageEvolution;
@@ -52,9 +52,10 @@ import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
  *
  * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface InitialModel extends EObject {
+public interface InitialModel extends CDOObject {
 
     /**
      * Returns the value of the '<em><b>Usage Model</b></em>' reference. <!-- begin-user-doc -->

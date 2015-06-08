@@ -10,9 +10,9 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentDesign;
@@ -65,7 +65,7 @@ import org.palladiosimulator.experimentautomation.experiments.Variation;
  *
  * @generated
  */
-public class ExperimentImpl extends EObjectImpl implements Experiment {
+public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * The cached value of the '{@link #getVariations() <em>Variations</em>}' containment reference

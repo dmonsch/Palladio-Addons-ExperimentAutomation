@@ -2,7 +2,7 @@
  */
 package org.palladiosimulator.experimentautomation.experiments;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
@@ -19,9 +19,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getReconfigurationRulesFolder()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface ReconfigurationRulesFolder extends EObject {
+public interface ReconfigurationRulesFolder extends CDOObject {
 
     /**
      * Returns the value of the '<em><b>Folder Uri</b></em>' attribute. <!-- begin-user-doc -->

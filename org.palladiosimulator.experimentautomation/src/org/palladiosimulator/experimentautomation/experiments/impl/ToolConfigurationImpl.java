@@ -5,7 +5,7 @@ package org.palladiosimulator.experimentautomation.experiments.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 
@@ -23,7 +23,7 @@ import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
  *
  * @generated
  */
-public abstract class ToolConfigurationImpl extends EObjectImpl implements ToolConfiguration {
+public abstract class ToolConfigurationImpl extends CDOObjectImpl implements ToolConfiguration {
 
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc

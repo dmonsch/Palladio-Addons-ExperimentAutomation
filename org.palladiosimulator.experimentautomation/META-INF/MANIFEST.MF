@@ -18,6 +18,7 @@ Export-Package: org.palladiosimulator.experimentautomation.abstractsimulation,
  org.palladiosimulator.experimentautomation.variation.util
 Require-Bundle: org.eclipse.core.runtime;bundle-version="3.10.0",
  org.eclipse.emf.ecore;bundle-version="2.10.0";visibility:=reexport,
+ org.eclipse.emf.cdo;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;bundle-version="2.10.0";visibility:=reexport,
  de.uka.ipd.sdq.identifier;bundle-version="2.1.0";visibility:=reexport,
  org.palladiosimulator.metricspec;bundle-version="1.0.0";visibility:=reexport,

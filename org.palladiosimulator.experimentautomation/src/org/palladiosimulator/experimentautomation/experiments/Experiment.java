@@ -2,8 +2,8 @@
  */
 package org.palladiosimulator.experimentautomation.experiments;
 
+import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition;
 
 /**
@@ -41,9 +41,10 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.StopConditi
  *
  * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperiment()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface Experiment extends EObject {
+public interface Experiment extends CDOObject {
 
     /**
      * Returns the value of the '<em><b>Variations</b></em>' containment reference list. The list

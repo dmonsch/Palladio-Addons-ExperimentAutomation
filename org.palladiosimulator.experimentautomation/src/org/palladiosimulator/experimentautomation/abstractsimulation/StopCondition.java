@@ -2,7 +2,7 @@
  */
 package org.palladiosimulator.experimentautomation.abstractsimulation;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Stop Condition</b></em>'.
@@ -11,7 +11,8 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getStopCondition()
  * @model abstract="true"
+ * @extends CDOObject
  * @generated
  */
-public interface StopCondition extends EObject {
+public interface StopCondition extends CDOObject {
 } // StopCondition

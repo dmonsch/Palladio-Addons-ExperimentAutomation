@@ -3,7 +3,7 @@
 package org.palladiosimulator.experimentautomation.experiments.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.ValueProvider;
 
@@ -15,7 +15,7 @@ import org.palladiosimulator.experimentautomation.experiments.ValueProvider;
  *
  * @generated
  */
-public abstract class ValueProviderImpl extends EObjectImpl implements ValueProvider {
+public abstract class ValueProviderImpl extends CDOObjectImpl implements ValueProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->

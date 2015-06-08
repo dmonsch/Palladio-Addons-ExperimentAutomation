@@ -5,9 +5,10 @@ package org.palladiosimulator.experimentautomation.experiments.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.ValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.Variation;
@@ -41,7 +42,7 @@ import org.palladiosimulator.experimentautomation.variation.VariationType;
  *
  * @generated
  */
-public class VariationImpl extends EObjectImpl implements Variation {
+public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * The cached value of the '{@link #getType() <em>Type</em>}' reference. <!-- begin-user-doc -->
@@ -189,7 +190,7 @@ public class VariationImpl extends EObjectImpl implements Variation {
      */
     @Override
     public VariationType getType() {
-        if (this.type != null && this.type.eIsProxy()) {
+        if (this.type != null && ((EObject) this.type).eIsProxy()) {
             final InternalEObject oldType = (InternalEObject) this.type;
             this.type = (VariationType) this.eResolveProxy(oldType);
             if (this.type != oldType) {

@@ -2,7 +2,7 @@
  */
 package org.palladiosimulator.experimentautomation.experiments;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Tool Configuration</b></em>
@@ -18,9 +18,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getToolConfiguration()
  * @model abstract="true"
+ * @extends CDOObject
  * @generated
  */
-public interface ToolConfiguration extends EObject {
+public interface ToolConfiguration extends CDOObject {
 
     /**
      * Returns the value of the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc -->

@@ -2,7 +2,7 @@
  */
 package org.palladiosimulator.experimentautomation.experiments;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '
@@ -11,7 +11,8 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getResponseMeasurement()
  * @model abstract="true"
+ * @extends CDOObject
  * @generated
  */
-public interface ResponseMeasurement extends EObject {
+public interface ResponseMeasurement extends CDOObject {
 } // ResponseMeasurement

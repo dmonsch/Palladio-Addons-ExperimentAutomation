@@ -8,9 +8,9 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.variation.VariationPackage;
 import org.palladiosimulator.experimentautomation.variation.VariationRepository;
 import org.palladiosimulator.experimentautomation.variation.VariationType;
@@ -29,7 +29,7 @@ import org.palladiosimulator.experimentautomation.variation.VariationType;
  *
  * @generated
  */
-public class VariationRepositoryImpl extends EObjectImpl implements VariationRepository {
+public class VariationRepositoryImpl extends CDOObjectImpl implements VariationRepository {
 
     /**
      * The cached value of the '{@link #getVariation() <em>Variation</em>}' containment reference

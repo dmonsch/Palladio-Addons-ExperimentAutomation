@@ -2,7 +2,7 @@
  */
 package org.palladiosimulator.experimentautomation.abstractsimulation;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>EDP2 Datasource</b></em>'.
@@ -18,9 +18,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getEDP2Datasource()
  * @model abstract="true"
+ * @extends CDOObject
  * @generated
  */
-public interface EDP2Datasource extends EObject {
+public interface EDP2Datasource extends CDOObject {
 
     /**
      * Returns the value of the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc -->
