@@ -16,7 +16,6 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
-import org.palladiosimulator.simulizar.launcher.jobs.LoadMonitorRepositoryModelIntoBlackboardJob;
 import org.palladiosimulator.simulizar.launcher.jobs.LoadSimuLizarModelsIntoBlackboardJob;
 import org.palladiosimulator.simulizar.reconfiguration.storydiagram.jobs.LoadSDMModelsIntoBlackboardJob;
 
@@ -56,6 +55,7 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
         pcmModels.add(this.initialModel.getAllocation());
         pcmModels.add(this.initialModel.getUsageModel());
         pcmModels.add(this.initialModel.getUsageEvolution());
+        pcmModels.add(this.initialModel.getMonitorRepository());
 
         // load the PCM model into a original initial PCM model partition
         loadIntoBlackboard(LoadSimuLizarModelsIntoBlackboardJob.ORIGINAL_PCM_MODELS_PARTITION_ID, pcmModels);
@@ -70,10 +70,6 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
         // load the event middleware repository
         loadIntoBlackboard(LoadPCMModelsIntoBlackboardJob.EVENT_MIDDLEWARE_PARTITION_ID,
                 this.initialModel.getEventMiddleWareRepository());
-
-        // load monitor repository model
-        loadIntoBlackboard(LoadMonitorRepositoryModelIntoBlackboardJob.MONITOR_REPOSITORY_MODEL_PARTITION_ID,
-                this.initialModel.getMonitorRepository());
 
         // load SDM models
         final ReconfigurationRulesFolder reconfigurationRulesFolder = this.initialModel.getReconfigurationRules();
