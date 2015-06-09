@@ -6,7 +6,7 @@ import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import de.uka.ipd.sdq.codegen.simucontroller.debug.IDebugListener;
 import de.uka.ipd.sdq.workflow.extension.AbstractExtendableJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
-import de.uka.ipd.sdq.workflow.pcm.jobs.PreparePCMBlackboardPartionJob;
+import de.uka.ipd.sdq.workflow.pcm.jobs.PreparePCMBlackboardPartitionJob;
 
 /**
  * This job conducts a series of experiments. Each experiment has its own initial set of Palladio
@@ -45,7 +45,7 @@ public class RunExperimentAutomationJob extends AbstractExtendableJob<MDSDBlackb
             throw new IllegalArgumentException("Debug listener has to be non-null for debug runs");
         }
 
-        this.add(new PreparePCMBlackboardPartionJob());
+        this.add(new PreparePCMBlackboardPartitionJob());
         for (final Experiment experiment : configuration.getExperiments()) {
             this.add(new PrepareBlackboardJob());
             this.add(new LoadModelsIntoBlackboardJob(experiment.getInitialModel()));

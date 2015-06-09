@@ -5,7 +5,6 @@ import java.io.FilenameFilter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.apache.log4j.Level;
@@ -56,20 +55,14 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
         pcmModels.add(this.initialModel.getUsageModel());
         pcmModels.add(this.initialModel.getUsageEvolution());
         pcmModels.add(this.initialModel.getMonitorRepository());
+        pcmModels.add(this.initialModel.getMiddlewareRepository());
+        pcmModels.add(this.initialModel.getEventMiddleWareRepository());
 
         // load the PCM model into a original initial PCM model partition
         loadIntoBlackboard(LoadSimuLizarModelsIntoBlackboardJob.ORIGINAL_PCM_MODELS_PARTITION_ID, pcmModels);
 
         // load the PCM model into the standard partition
         loadIntoBlackboard(LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID, pcmModels);
-
-        // load the middleware completion
-        loadIntoBlackboard(LoadPCMModelsIntoBlackboardJob.RMI_MIDDLEWARE_PARTITION_ID,
-                this.initialModel.getMiddlewareRepository());
-
-        // load the event middleware repository
-        loadIntoBlackboard(LoadPCMModelsIntoBlackboardJob.EVENT_MIDDLEWARE_PARTITION_ID,
-                this.initialModel.getEventMiddleWareRepository());
 
         // load SDM models
         final ReconfigurationRulesFolder reconfigurationRulesFolder = this.initialModel.getReconfigurationRules();
@@ -116,10 +109,6 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
                 LOGGER.info("No SDM models found, SD reconfigurations disabled.");
             }
         }
-    }
-
-    private void loadIntoBlackboard(final String partitionId, final EObject eObject) {
-        loadIntoBlackboard(partitionId, Arrays.asList(eObject));
     }
 
     private void loadIntoBlackboard(final String partitionId, final List<EObject> eObjects) {
