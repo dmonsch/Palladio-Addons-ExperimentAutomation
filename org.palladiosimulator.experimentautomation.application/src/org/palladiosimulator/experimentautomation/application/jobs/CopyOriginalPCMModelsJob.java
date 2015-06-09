@@ -41,7 +41,7 @@ public class CopyOriginalPCMModelsJob extends SequentialBlackboardInteractingJob
         final PCMResourceSetPartition newPartition = new PCMResourceSetPartition();
 
         final ResourceSetPartition orginalPCMModelPartition = this.getBlackboard().getPartition(
-                LoadSimuLizarModelsIntoBlackboardJob.ORIGINAL_PCM_MODELS_PARTITION_ID);
+                LoadSimuLizarModelsIntoBlackboardJob.PCM_MODELS_ANALYZED_PARTITION_ID);
 
         final List<EObject> modelCopy = EMFCopyHelper.deepCopyToEObjectList(orginalPCMModelPartition.getResourceSet());
         for (int i = 0; i < modelCopy.size(); i++) {

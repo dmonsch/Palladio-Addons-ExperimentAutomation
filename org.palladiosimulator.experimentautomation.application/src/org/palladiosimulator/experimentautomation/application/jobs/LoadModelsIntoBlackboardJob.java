@@ -15,7 +15,6 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
-import org.palladiosimulator.simulizar.launcher.jobs.LoadSimuLizarModelsIntoBlackboardJob;
 import org.palladiosimulator.simulizar.reconfiguration.storydiagram.jobs.LoadSDMModelsIntoBlackboardJob;
 
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
@@ -36,6 +35,8 @@ import de.uka.ipd.sdq.workflow.pcm.jobs.LoadPCMModelsIntoBlackboardJob;
 public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
 
     private static final Logger LOGGER = Logger.getLogger(LoadModelsIntoBlackboardJob.class);
+
+    public static final String PCM_MODELS_ORIGINAL_PARTITION_ID = "org.palladiosimulator.pcmmodels.original.partition";
 
     private final InitialModel initialModel;
 
@@ -59,7 +60,7 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
         pcmModels.add(this.initialModel.getEventMiddleWareRepository());
 
         // load the PCM model into a original initial PCM model partition
-        loadIntoBlackboard(LoadSimuLizarModelsIntoBlackboardJob.ORIGINAL_PCM_MODELS_PARTITION_ID, pcmModels);
+        loadIntoBlackboard(PCM_MODELS_ORIGINAL_PARTITION_ID, pcmModels);
 
         // load the PCM model into the standard partition
         loadIntoBlackboard(LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID, pcmModels);

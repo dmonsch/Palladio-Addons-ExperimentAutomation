@@ -44,6 +44,7 @@ public class SimuLizarToolAdapter implements IToolAdapter {
         final RunAnalysisJob result = new RunAnalysisJob();
         result.setConfiguration(configMap);
         result.addJob(new LogExperimentInformationJob(experiment, simuComConfig, variationFactorTuples, repetition));
+
         // FIXME This job does not work (Usage Evolution is ignored) [Lehrig]
         // result.addJob(new CopyOriginalPCMModelsJob());
         result.addJob(new PCMStartInterpretationJob(workflowConfig));

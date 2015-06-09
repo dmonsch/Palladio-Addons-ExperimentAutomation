@@ -25,13 +25,16 @@ public class PrepareBlackboardJob extends SequentialBlackboardInteractingJob<MDS
     @Override
     public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
         // configure the original PCM model partition
-        this.getBlackboard().addPartition(LoadSimuLizarModelsIntoBlackboardJob.ORIGINAL_PCM_MODELS_PARTITION_ID,
+        this.getBlackboard().addPartition(LoadModelsIntoBlackboardJob.PCM_MODELS_ORIGINAL_PARTITION_ID,
                 new PCMResourceSetPartition());
 
         // configure SDM models partition
         this.getBlackboard().addPartition(LoadSDMModelsIntoBlackboardJob.SDM_MODEL_PARTITION_ID,
                 new SDMResourceSetPartition());
 
+        // configure the analyzed PCM model partition
+        this.getBlackboard().addPartition(LoadSimuLizarModelsIntoBlackboardJob.PCM_MODELS_ANALYZED_PARTITION_ID,
+                new PCMResourceSetPartition());
     }
 
 }
