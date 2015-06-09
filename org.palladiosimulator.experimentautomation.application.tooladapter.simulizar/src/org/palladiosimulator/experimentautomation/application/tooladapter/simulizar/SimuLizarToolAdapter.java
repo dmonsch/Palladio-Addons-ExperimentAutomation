@@ -45,8 +45,10 @@ public class SimuLizarToolAdapter implements IToolAdapter {
         result.setConfiguration(configMap);
         result.addJob(new LogExperimentInformationJob(experiment, simuComConfig, variationFactorTuples, repetition));
 
-        // FIXME This job does not work (Usage Evolution is ignored) [Lehrig]
-        // result.addJob(new CopyOriginalPCMModelsJob());
+        // FIXME I get an array out of bounds exceptions during analysis (when enabled) [Lehrig]
+        // result.addJob(new
+        // CopyPartitionJob(LoadSimuLizarModelsIntoBlackboardJob.PCM_MODELS_ANALYZED_PARTITION_ID,
+        // LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID));
         result.addJob(new PCMStartInterpretationJob(workflowConfig));
         if (experiment.getInitialModel().getServiceLevelObjectives() != null) {
             result.addJob(new CheckForSLOViolationsJob(result,

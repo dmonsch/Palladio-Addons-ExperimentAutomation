@@ -8,7 +8,6 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.palladiosimulator.commons.emfutils.EMFCopyHelper;
-import org.palladiosimulator.simulizar.launcher.jobs.LoadSimuLizarModelsIntoBlackboardJob;
 
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
 import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
@@ -16,41 +15,40 @@ import de.uka.ipd.sdq.workflow.jobs.UserCanceledException;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.ResourceSetPartition;
 import de.uka.ipd.sdq.workflow.pcm.blackboard.PCMResourceSetPartition;
-import de.uka.ipd.sdq.workflow.pcm.jobs.LoadPCMModelsIntoBlackboardJob;
 
 /**
- * Copies the original PCM models to the standard PCM model blackboard partition.
+ * Copies the contents of a given partition to another blackboard partition.
  * 
- * @author Matthias Becker
+ * @author Matthias Becker, Sebastian Lehrig
  */
-public class CopyOriginalPCMModelsJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
+public class CopyPartitionJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
 
-    private static final Logger LOGGER = Logger.getLogger(CopyOriginalPCMModelsJob.class);
+    private static final Logger LOGGER = Logger.getLogger(CopyPartitionJob.class);
 
-    public CopyOriginalPCMModelsJob() {
+    private final String sourcePartition;
+    private final String targetPartition;
+
+    public CopyPartitionJob(final String sourcePartition, final String targetPartition) {
         super(false);
+
+        this.sourcePartition = sourcePartition;
+        this.targetPartition = targetPartition;
     }
 
     @Override
     public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
-
-        LOGGER.info("Cloning original PCM models for experiment run.");
-        // copy the original initial PCM model into the PCM model partition
-        this.getBlackboard().removePartition(LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID);
+        LOGGER.info("Cloning " + this.sourcePartition + " to " + this.targetPartition);
+        this.getBlackboard().removePartition(this.targetPartition);
 
         final PCMResourceSetPartition newPartition = new PCMResourceSetPartition();
-
-        final ResourceSetPartition orginalPCMModelPartition = this.getBlackboard().getPartition(
-                LoadSimuLizarModelsIntoBlackboardJob.PCM_MODELS_ANALYZED_PARTITION_ID);
-
+        final ResourceSetPartition orginalPCMModelPartition = this.getBlackboard().getPartition(this.sourcePartition);
         final List<EObject> modelCopy = EMFCopyHelper.deepCopyToEObjectList(orginalPCMModelPartition.getResourceSet());
         for (int i = 0; i < modelCopy.size(); i++) {
             final Resource resource = newPartition.getResourceSet().createResource(URI.createFileURI("/temp" + i));
             resource.getContents().add(modelCopy.get(i));
         }
 
-        this.getBlackboard().addPartition(LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID, newPartition);
-
+        this.getBlackboard().addPartition(this.targetPartition, newPartition);
     }
 
     /**
@@ -58,6 +56,6 @@ public class CopyOriginalPCMModelsJob extends SequentialBlackboardInteractingJob
      */
     @Override
     public String getName() {
-        return "Clone PCM models";
+        return "Clone Partition Contents";
     }
 }

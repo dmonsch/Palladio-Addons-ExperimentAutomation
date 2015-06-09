@@ -2,10 +2,12 @@ package org.palladiosimulator.experimentautomation.application.jobs;
 
 import org.palladiosimulator.experimentautomation.application.config.ExperimentAutomationConfiguration;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
+import org.palladiosimulator.simulizar.launcher.jobs.LoadSimuLizarModelsIntoBlackboardJob;
 
 import de.uka.ipd.sdq.codegen.simucontroller.debug.IDebugListener;
 import de.uka.ipd.sdq.workflow.extension.AbstractExtendableJob;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
+import de.uka.ipd.sdq.workflow.pcm.jobs.LoadPCMModelsIntoBlackboardJob;
 import de.uka.ipd.sdq.workflow.pcm.jobs.PreparePCMBlackboardPartitionJob;
 
 /**
@@ -54,6 +56,9 @@ public class RunExperimentAutomationJob extends AbstractExtendableJob<MDSDBlackb
             // All Workflow extension jobs with the extension hook id
             // WORKFLOW_ID_BEFORE_EXPERIMENT_RUN
             handleJobExtensions(WORKFLOW_ID_BEFORE_EXPERIMENT_RUN, configuration);
+
+            this.add(new CopyPartitionJob(LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID,
+                    LoadSimuLizarModelsIntoBlackboardJob.PCM_MODELS_ANALYZED_PARTITION_ID));
 
             this.add(new RunExperimentForEachToolJob(experiment));
         }
