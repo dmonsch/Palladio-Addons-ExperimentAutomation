@@ -2,11 +2,7 @@
  */
 package org.palladiosimulator.experimentautomation.experiments.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
@@ -67,119 +63,8 @@ import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
 public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
-     * The cached value of the '{@link #getUsageModel() <em>Usage Model</em>}' reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getUsageModel()
-     * @generated
-     * @ordered
-     */
-    protected UsageModel usageModel;
-
-    /**
-     * The cached value of the '{@link #getAllocation() <em>Allocation</em>}' reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getAllocation()
-     * @generated
-     * @ordered
-     */
-    protected Allocation allocation;
-
-    /**
-     * The cached value of the '{@link #getMiddlewareRepository() <em>Middleware Repository</em>}'
-     * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getMiddlewareRepository()
-     * @generated
-     * @ordered
-     */
-    protected Repository middlewareRepository;
-
-    /**
-     * The cached value of the '{@link #getEventMiddleWareRepository()
-     * <em>Event Middle Ware Repository</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc
-     * -->
-     *
-     * @see #getEventMiddleWareRepository()
-     * @generated
-     * @ordered
-     */
-    protected Repository eventMiddleWareRepository;
-
-    /**
-     * The cached value of the '{@link #getReconfigurationRules() <em>Reconfiguration Rules</em>}'
-     * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getReconfigurationRules()
-     * @generated
-     * @ordered
-     */
-    protected ReconfigurationRulesFolder reconfigurationRules;
-
-    /**
-     * The cached value of the '{@link #getMonitorRepository() <em>Monitor Repository</em>}'
-     * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getMonitorRepository()
-     * @generated
-     * @ordered
-     */
-    protected MonitorRepository monitorRepository;
-
-    /**
-     * The cached value of the '{@link #getServiceLevelObjectives()
-     * <em>Service Level Objectives</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getServiceLevelObjectives()
-     * @generated
-     * @ordered
-     */
-    protected ServiceLevelObjectiveRepository serviceLevelObjectives;
-
-    /**
-     * The cached value of the '{@link #getRepository() <em>Repository</em>}' reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getRepository()
-     * @generated
-     * @ordered
-     */
-    protected Repository repository;
-
-    /**
-     * The cached value of the '{@link #getSystem() <em>System</em>}' reference. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @see #getSystem()
-     * @generated
-     * @ordered
-     */
-    protected de.uka.ipd.sdq.pcm.system.System system;
-
-    /**
-     * The cached value of the '{@link #getResourceEnvironment() <em>Resource Environment</em>}'
-     * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getResourceEnvironment()
-     * @generated
-     * @ordered
-     */
-    protected ResourceEnvironment resourceEnvironment;
-
-    /**
-     * The cached value of the '{@link #getUsageEvolution() <em>Usage Evolution</em>}' reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getUsageEvolution()
-     * @generated
-     * @ordered
-     */
-    protected UsageEvolution usageEvolution;
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected InitialModelImpl() {
@@ -188,7 +73,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -198,503 +83,371 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
+     * @generated
+     */
+    @Override
+    protected int eStaticFeatureCount() {
+        return 0;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public UsageModel getUsageModel() {
-        if (this.usageModel != null && ((EObject) this.usageModel).eIsProxy()) {
-            final InternalEObject oldUsageModel = (InternalEObject) this.usageModel;
-            this.usageModel = (UsageModel) this.eResolveProxy(oldUsageModel);
-            if (this.usageModel != oldUsageModel) {
-                if (this.eNotificationRequired()) {
-                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL, oldUsageModel, this.usageModel));
-                }
-            }
-        }
-        return this.usageModel;
+        return (UsageModel) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL,
+                ExperimentsPackage.Literals.INITIAL_MODEL__USAGE_MODEL, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public UsageModel basicGetUsageModel() {
-        return this.usageModel;
+        return (UsageModel) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL,
+                ExperimentsPackage.Literals.INITIAL_MODEL__USAGE_MODEL, false, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setUsageModel(final UsageModel newUsageModel) {
-        final UsageModel oldUsageModel = this.usageModel;
-        this.usageModel = newUsageModel;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL,
-                    oldUsageModel, this.usageModel));
-        }
+        this.eDynamicSet(ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL,
+                ExperimentsPackage.Literals.INITIAL_MODEL__USAGE_MODEL, newUsageModel);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public Allocation getAllocation() {
-        if (this.allocation != null && ((EObject) this.allocation).eIsProxy()) {
-            final InternalEObject oldAllocation = (InternalEObject) this.allocation;
-            this.allocation = (Allocation) this.eResolveProxy(oldAllocation);
-            if (this.allocation != oldAllocation) {
-                if (this.eNotificationRequired()) {
-                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.INITIAL_MODEL__ALLOCATION, oldAllocation, this.allocation));
-                }
-            }
-        }
-        return this.allocation;
+        return (Allocation) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__ALLOCATION,
+                ExperimentsPackage.Literals.INITIAL_MODEL__ALLOCATION, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public Allocation basicGetAllocation() {
-        return this.allocation;
+        return (Allocation) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__ALLOCATION,
+                ExperimentsPackage.Literals.INITIAL_MODEL__ALLOCATION, false, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setAllocation(final Allocation newAllocation) {
-        final Allocation oldAllocation = this.allocation;
-        this.allocation = newAllocation;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.INITIAL_MODEL__ALLOCATION,
-                    oldAllocation, this.allocation));
-        }
+        this.eDynamicSet(ExperimentsPackage.INITIAL_MODEL__ALLOCATION,
+                ExperimentsPackage.Literals.INITIAL_MODEL__ALLOCATION, newAllocation);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public Repository getMiddlewareRepository() {
-        if (this.middlewareRepository != null && ((EObject) this.middlewareRepository).eIsProxy()) {
-            final InternalEObject oldMiddlewareRepository = (InternalEObject) this.middlewareRepository;
-            this.middlewareRepository = (Repository) this.eResolveProxy(oldMiddlewareRepository);
-            if (this.middlewareRepository != oldMiddlewareRepository) {
-                if (this.eNotificationRequired()) {
-                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.INITIAL_MODEL__MIDDLEWARE_REPOSITORY, oldMiddlewareRepository,
-                            this.middlewareRepository));
-                }
-            }
-        }
-        return this.middlewareRepository;
+        return (Repository) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__MIDDLEWARE_REPOSITORY,
+                ExperimentsPackage.Literals.INITIAL_MODEL__MIDDLEWARE_REPOSITORY, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public Repository basicGetMiddlewareRepository() {
-        return this.middlewareRepository;
+        return (Repository) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__MIDDLEWARE_REPOSITORY,
+                ExperimentsPackage.Literals.INITIAL_MODEL__MIDDLEWARE_REPOSITORY, false, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setMiddlewareRepository(final Repository newMiddlewareRepository) {
-        final Repository oldMiddlewareRepository = this.middlewareRepository;
-        this.middlewareRepository = newMiddlewareRepository;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.INITIAL_MODEL__MIDDLEWARE_REPOSITORY, oldMiddlewareRepository,
-                    this.middlewareRepository));
-        }
+        this.eDynamicSet(ExperimentsPackage.INITIAL_MODEL__MIDDLEWARE_REPOSITORY,
+                ExperimentsPackage.Literals.INITIAL_MODEL__MIDDLEWARE_REPOSITORY, newMiddlewareRepository);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public Repository getEventMiddleWareRepository() {
-        if (this.eventMiddleWareRepository != null && ((EObject) this.eventMiddleWareRepository).eIsProxy()) {
-            final InternalEObject oldEventMiddleWareRepository = (InternalEObject) this.eventMiddleWareRepository;
-            this.eventMiddleWareRepository = (Repository) this.eResolveProxy(oldEventMiddleWareRepository);
-            if (this.eventMiddleWareRepository != oldEventMiddleWareRepository) {
-                if (this.eNotificationRequired()) {
-                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY,
-                            oldEventMiddleWareRepository, this.eventMiddleWareRepository));
-                }
-            }
-        }
-        return this.eventMiddleWareRepository;
+        return (Repository) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY,
+                ExperimentsPackage.Literals.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public Repository basicGetEventMiddleWareRepository() {
-        return this.eventMiddleWareRepository;
+        return (Repository) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY,
+                ExperimentsPackage.Literals.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY, false, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setEventMiddleWareRepository(final Repository newEventMiddleWareRepository) {
-        final Repository oldEventMiddleWareRepository = this.eventMiddleWareRepository;
-        this.eventMiddleWareRepository = newEventMiddleWareRepository;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY, oldEventMiddleWareRepository,
-                    this.eventMiddleWareRepository));
-        }
+        this.eDynamicSet(ExperimentsPackage.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY,
+                ExperimentsPackage.Literals.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY, newEventMiddleWareRepository);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public ReconfigurationRulesFolder getReconfigurationRules() {
-        if (this.reconfigurationRules != null && ((EObject) this.reconfigurationRules).eIsProxy()) {
-            final InternalEObject oldReconfigurationRules = (InternalEObject) this.reconfigurationRules;
-            this.reconfigurationRules = (ReconfigurationRulesFolder) this.eResolveProxy(oldReconfigurationRules);
-            if (this.reconfigurationRules != oldReconfigurationRules) {
-                if (this.eNotificationRequired()) {
-                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.INITIAL_MODEL__RECONFIGURATION_RULES, oldReconfigurationRules,
-                            this.reconfigurationRules));
-                }
-            }
-        }
-        return this.reconfigurationRules;
+        return (ReconfigurationRulesFolder) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__RECONFIGURATION_RULES,
+                ExperimentsPackage.Literals.INITIAL_MODEL__RECONFIGURATION_RULES, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public ReconfigurationRulesFolder basicGetReconfigurationRules() {
-        return this.reconfigurationRules;
+        return (ReconfigurationRulesFolder) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__RECONFIGURATION_RULES,
+                ExperimentsPackage.Literals.INITIAL_MODEL__RECONFIGURATION_RULES, false, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setReconfigurationRules(final ReconfigurationRulesFolder newReconfigurationRules) {
-        final ReconfigurationRulesFolder oldReconfigurationRules = this.reconfigurationRules;
-        this.reconfigurationRules = newReconfigurationRules;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.INITIAL_MODEL__RECONFIGURATION_RULES, oldReconfigurationRules,
-                    this.reconfigurationRules));
-        }
+        this.eDynamicSet(ExperimentsPackage.INITIAL_MODEL__RECONFIGURATION_RULES,
+                ExperimentsPackage.Literals.INITIAL_MODEL__RECONFIGURATION_RULES, newReconfigurationRules);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public MonitorRepository getMonitorRepository() {
-        if (this.monitorRepository != null && this.monitorRepository.eIsProxy()) {
-            final InternalEObject oldMonitorRepository = (InternalEObject) this.monitorRepository;
-            this.monitorRepository = (MonitorRepository) this.eResolveProxy(oldMonitorRepository);
-            if (this.monitorRepository != oldMonitorRepository) {
-                if (this.eNotificationRequired()) {
-                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.INITIAL_MODEL__MONITOR_REPOSITORY, oldMonitorRepository,
-                            this.monitorRepository));
-                }
-            }
-        }
-        return this.monitorRepository;
+        return (MonitorRepository) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__MONITOR_REPOSITORY,
+                ExperimentsPackage.Literals.INITIAL_MODEL__MONITOR_REPOSITORY, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public MonitorRepository basicGetMonitorRepository() {
-        return this.monitorRepository;
+        return (MonitorRepository) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__MONITOR_REPOSITORY,
+                ExperimentsPackage.Literals.INITIAL_MODEL__MONITOR_REPOSITORY, false, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setMonitorRepository(final MonitorRepository newMonitorRepository) {
-        final MonitorRepository oldMonitorRepository = this.monitorRepository;
-        this.monitorRepository = newMonitorRepository;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.INITIAL_MODEL__MONITOR_REPOSITORY, oldMonitorRepository, this.monitorRepository));
-        }
+        this.eDynamicSet(ExperimentsPackage.INITIAL_MODEL__MONITOR_REPOSITORY,
+                ExperimentsPackage.Literals.INITIAL_MODEL__MONITOR_REPOSITORY, newMonitorRepository);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public ServiceLevelObjectiveRepository getServiceLevelObjectives() {
-        if (this.serviceLevelObjectives != null && this.serviceLevelObjectives.eIsProxy()) {
-            final InternalEObject oldServiceLevelObjectives = (InternalEObject) this.serviceLevelObjectives;
-            this.serviceLevelObjectives = (ServiceLevelObjectiveRepository) this
-                    .eResolveProxy(oldServiceLevelObjectives);
-            if (this.serviceLevelObjectives != oldServiceLevelObjectives) {
-                if (this.eNotificationRequired()) {
-                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES, oldServiceLevelObjectives,
-                            this.serviceLevelObjectives));
-                }
-            }
-        }
-        return this.serviceLevelObjectives;
+        return (ServiceLevelObjectiveRepository) this.eDynamicGet(
+                ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES,
+                ExperimentsPackage.Literals.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public ServiceLevelObjectiveRepository basicGetServiceLevelObjectives() {
-        return this.serviceLevelObjectives;
+        return (ServiceLevelObjectiveRepository) this.eDynamicGet(
+                ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES,
+                ExperimentsPackage.Literals.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES, false, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setServiceLevelObjectives(final ServiceLevelObjectiveRepository newServiceLevelObjectives) {
-        final ServiceLevelObjectiveRepository oldServiceLevelObjectives = this.serviceLevelObjectives;
-        this.serviceLevelObjectives = newServiceLevelObjectives;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES, oldServiceLevelObjectives,
-                    this.serviceLevelObjectives));
-        }
+        this.eDynamicSet(ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES,
+                ExperimentsPackage.Literals.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES, newServiceLevelObjectives);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public Repository getRepository() {
-        if (this.repository != null && ((EObject) this.repository).eIsProxy()) {
-            final InternalEObject oldRepository = (InternalEObject) this.repository;
-            this.repository = (Repository) this.eResolveProxy(oldRepository);
-            if (this.repository != oldRepository) {
-                if (this.eNotificationRequired()) {
-                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.INITIAL_MODEL__REPOSITORY, oldRepository, this.repository));
-                }
-            }
-        }
-        return this.repository;
+        return (Repository) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__REPOSITORY,
+                ExperimentsPackage.Literals.INITIAL_MODEL__REPOSITORY, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public Repository basicGetRepository() {
-        return this.repository;
+        return (Repository) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__REPOSITORY,
+                ExperimentsPackage.Literals.INITIAL_MODEL__REPOSITORY, false, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setRepository(final Repository newRepository) {
-        final Repository oldRepository = this.repository;
-        this.repository = newRepository;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.INITIAL_MODEL__REPOSITORY,
-                    oldRepository, this.repository));
-        }
+        this.eDynamicSet(ExperimentsPackage.INITIAL_MODEL__REPOSITORY,
+                ExperimentsPackage.Literals.INITIAL_MODEL__REPOSITORY, newRepository);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public de.uka.ipd.sdq.pcm.system.System getSystem() {
-        if (this.system != null && ((EObject) this.system).eIsProxy()) {
-            final InternalEObject oldSystem = (InternalEObject) this.system;
-            this.system = (de.uka.ipd.sdq.pcm.system.System) this.eResolveProxy(oldSystem);
-            if (this.system != oldSystem) {
-                if (this.eNotificationRequired()) {
-                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.INITIAL_MODEL__SYSTEM, oldSystem, this.system));
-                }
-            }
-        }
-        return this.system;
+        return (de.uka.ipd.sdq.pcm.system.System) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__SYSTEM,
+                ExperimentsPackage.Literals.INITIAL_MODEL__SYSTEM, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public de.uka.ipd.sdq.pcm.system.System basicGetSystem() {
-        return this.system;
+        return (de.uka.ipd.sdq.pcm.system.System) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__SYSTEM,
+                ExperimentsPackage.Literals.INITIAL_MODEL__SYSTEM, false, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setSystem(final de.uka.ipd.sdq.pcm.system.System newSystem) {
-        final de.uka.ipd.sdq.pcm.system.System oldSystem = this.system;
-        this.system = newSystem;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.INITIAL_MODEL__SYSTEM,
-                    oldSystem, this.system));
-        }
+        this.eDynamicSet(ExperimentsPackage.INITIAL_MODEL__SYSTEM, ExperimentsPackage.Literals.INITIAL_MODEL__SYSTEM,
+                newSystem);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public ResourceEnvironment getResourceEnvironment() {
-        if (this.resourceEnvironment != null && ((EObject) this.resourceEnvironment).eIsProxy()) {
-            final InternalEObject oldResourceEnvironment = (InternalEObject) this.resourceEnvironment;
-            this.resourceEnvironment = (ResourceEnvironment) this.eResolveProxy(oldResourceEnvironment);
-            if (this.resourceEnvironment != oldResourceEnvironment) {
-                if (this.eNotificationRequired()) {
-                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.INITIAL_MODEL__RESOURCE_ENVIRONMENT, oldResourceEnvironment,
-                            this.resourceEnvironment));
-                }
-            }
-        }
-        return this.resourceEnvironment;
+        return (ResourceEnvironment) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__RESOURCE_ENVIRONMENT,
+                ExperimentsPackage.Literals.INITIAL_MODEL__RESOURCE_ENVIRONMENT, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public ResourceEnvironment basicGetResourceEnvironment() {
-        return this.resourceEnvironment;
+        return (ResourceEnvironment) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__RESOURCE_ENVIRONMENT,
+                ExperimentsPackage.Literals.INITIAL_MODEL__RESOURCE_ENVIRONMENT, false, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setResourceEnvironment(final ResourceEnvironment newResourceEnvironment) {
-        final ResourceEnvironment oldResourceEnvironment = this.resourceEnvironment;
-        this.resourceEnvironment = newResourceEnvironment;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.INITIAL_MODEL__RESOURCE_ENVIRONMENT, oldResourceEnvironment,
-                    this.resourceEnvironment));
-        }
+        this.eDynamicSet(ExperimentsPackage.INITIAL_MODEL__RESOURCE_ENVIRONMENT,
+                ExperimentsPackage.Literals.INITIAL_MODEL__RESOURCE_ENVIRONMENT, newResourceEnvironment);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public UsageEvolution getUsageEvolution() {
-        if (this.usageEvolution != null && this.usageEvolution.eIsProxy()) {
-            final InternalEObject oldUsageEvolution = (InternalEObject) this.usageEvolution;
-            this.usageEvolution = (UsageEvolution) this.eResolveProxy(oldUsageEvolution);
-            if (this.usageEvolution != oldUsageEvolution) {
-                if (this.eNotificationRequired()) {
-                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                            ExperimentsPackage.INITIAL_MODEL__USAGE_EVOLUTION, oldUsageEvolution, this.usageEvolution));
-                }
-            }
-        }
-        return this.usageEvolution;
+        return (UsageEvolution) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__USAGE_EVOLUTION,
+                ExperimentsPackage.Literals.INITIAL_MODEL__USAGE_EVOLUTION, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public UsageEvolution basicGetUsageEvolution() {
-        return this.usageEvolution;
+        return (UsageEvolution) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__USAGE_EVOLUTION,
+                ExperimentsPackage.Literals.INITIAL_MODEL__USAGE_EVOLUTION, false, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setUsageEvolution(final UsageEvolution newUsageEvolution) {
-        final UsageEvolution oldUsageEvolution = this.usageEvolution;
-        this.usageEvolution = newUsageEvolution;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.INITIAL_MODEL__USAGE_EVOLUTION, oldUsageEvolution, this.usageEvolution));
-        }
+        this.eDynamicSet(ExperimentsPackage.INITIAL_MODEL__USAGE_EVOLUTION,
+                ExperimentsPackage.Literals.INITIAL_MODEL__USAGE_EVOLUTION, newUsageEvolution);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -761,7 +514,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -806,7 +559,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -851,34 +604,34 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.INITIAL_MODEL__USAGE_MODEL:
-            return this.usageModel != null;
+            return this.basicGetUsageModel() != null;
         case ExperimentsPackage.INITIAL_MODEL__ALLOCATION:
-            return this.allocation != null;
+            return this.basicGetAllocation() != null;
         case ExperimentsPackage.INITIAL_MODEL__MIDDLEWARE_REPOSITORY:
-            return this.middlewareRepository != null;
+            return this.basicGetMiddlewareRepository() != null;
         case ExperimentsPackage.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY:
-            return this.eventMiddleWareRepository != null;
+            return this.basicGetEventMiddleWareRepository() != null;
         case ExperimentsPackage.INITIAL_MODEL__RECONFIGURATION_RULES:
-            return this.reconfigurationRules != null;
+            return this.basicGetReconfigurationRules() != null;
         case ExperimentsPackage.INITIAL_MODEL__MONITOR_REPOSITORY:
-            return this.monitorRepository != null;
+            return this.basicGetMonitorRepository() != null;
         case ExperimentsPackage.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES:
-            return this.serviceLevelObjectives != null;
+            return this.basicGetServiceLevelObjectives() != null;
         case ExperimentsPackage.INITIAL_MODEL__REPOSITORY:
-            return this.repository != null;
+            return this.basicGetRepository() != null;
         case ExperimentsPackage.INITIAL_MODEL__SYSTEM:
-            return this.system != null;
+            return this.basicGetSystem() != null;
         case ExperimentsPackage.INITIAL_MODEL__RESOURCE_ENVIRONMENT:
-            return this.resourceEnvironment != null;
+            return this.basicGetResourceEnvironment() != null;
         case ExperimentsPackage.INITIAL_MODEL__USAGE_EVOLUTION:
-            return this.usageEvolution != null;
+            return this.basicGetUsageEvolution() != null;
         }
         return super.eIsSet(featureID);
     }

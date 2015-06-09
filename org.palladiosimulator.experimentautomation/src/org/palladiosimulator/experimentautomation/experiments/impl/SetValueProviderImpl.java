@@ -2,9 +2,7 @@
  */
 package org.palladiosimulator.experimentautomation.experiments.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.SetValueProvider;
 
@@ -35,18 +33,8 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
     protected static final String VALUES_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getValues() <em>Values</em>}' attribute. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @see #getValues()
-     * @generated
-     * @ordered
-     */
-    protected String values = VALUES_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected SetValueProviderImpl() {
@@ -55,7 +43,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -65,32 +53,29 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public String getValues() {
-        return this.values;
+        return (String) this.eDynamicGet(ExperimentsPackage.SET_VALUE_PROVIDER__VALUES,
+                ExperimentsPackage.Literals.SET_VALUE_PROVIDER__VALUES, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setValues(final String newValues) {
-        final String oldValues = this.values;
-        this.values = newValues;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.SET_VALUE_PROVIDER__VALUES,
-                    oldValues, this.values));
-        }
+        this.eDynamicSet(ExperimentsPackage.SET_VALUE_PROVIDER__VALUES,
+                ExperimentsPackage.Literals.SET_VALUE_PROVIDER__VALUES, newValues);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -104,7 +89,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -119,7 +104,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -134,34 +119,16 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.SET_VALUE_PROVIDER__VALUES:
-            return VALUES_EDEFAULT == null ? this.values != null : !VALUES_EDEFAULT.equals(this.values);
+            return VALUES_EDEFAULT == null ? this.getValues() != null : !VALUES_EDEFAULT.equals(this.getValues());
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (values: ");
-        result.append(this.values);
-        result.append(')');
-        return result.toString();
     }
 
 } // SetValueProviderImpl

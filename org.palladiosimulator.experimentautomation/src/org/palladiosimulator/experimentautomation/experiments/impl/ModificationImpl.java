@@ -19,7 +19,7 @@ public abstract class ModificationImpl extends CDOObjectImpl implements Modifica
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ModificationImpl() {
@@ -28,12 +28,22 @@ public abstract class ModificationImpl extends CDOObjectImpl implements Modifica
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     protected EClass eStaticClass() {
         return ExperimentsPackage.Literals.MODIFICATION;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    protected int eStaticFeatureCount() {
+        return 0;
     }
 
 } // ModificationImpl

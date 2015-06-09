@@ -8,7 +8,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
@@ -32,18 +31,8 @@ import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
 public class ExperimentRepositoryImpl extends CDOObjectImpl implements ExperimentRepository {
 
     /**
-     * The cached value of the '{@link #getExperiments() <em>Experiments</em>}' containment
-     * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getExperiments()
-     * @generated
-     * @ordered
-     */
-    protected EList<Experiment> experiments;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ExperimentRepositoryImpl() {
@@ -52,7 +41,7 @@ public class ExperimentRepositoryImpl extends CDOObjectImpl implements Experimen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -62,21 +51,29 @@ public class ExperimentRepositoryImpl extends CDOObjectImpl implements Experimen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
-    public EList<Experiment> getExperiments() {
-        if (this.experiments == null) {
-            this.experiments = new EObjectContainmentEList<Experiment>(Experiment.class, this,
-                    ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS);
-        }
-        return this.experiments;
+    protected int eStaticFeatureCount() {
+        return 0;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<Experiment> getExperiments() {
+        return (EList<Experiment>) this.eDynamicGet(ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS,
+                ExperimentsPackage.Literals.EXPERIMENT_REPOSITORY__EXPERIMENTS, true, true);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -91,7 +88,7 @@ public class ExperimentRepositoryImpl extends CDOObjectImpl implements Experimen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -105,7 +102,7 @@ public class ExperimentRepositoryImpl extends CDOObjectImpl implements Experimen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -122,7 +119,7 @@ public class ExperimentRepositoryImpl extends CDOObjectImpl implements Experimen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -137,14 +134,14 @@ public class ExperimentRepositoryImpl extends CDOObjectImpl implements Experimen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.EXPERIMENT_REPOSITORY__EXPERIMENTS:
-            return this.experiments != null && !this.experiments.isEmpty();
+            return !this.getExperiments().isEmpty();
         }
         return super.eIsSet(featureID);
     }

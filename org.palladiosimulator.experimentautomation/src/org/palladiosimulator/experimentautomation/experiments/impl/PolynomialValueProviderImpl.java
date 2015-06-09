@@ -2,9 +2,7 @@
  */
 package org.palladiosimulator.experimentautomation.experiments.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.PolynomialValueProvider;
 
@@ -38,16 +36,6 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
     protected static final double EXPONENT_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getExponent() <em>Exponent</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getExponent()
-     * @generated
-     * @ordered
-     */
-    protected double exponent = EXPONENT_EDEFAULT;
-
-    /**
      * The default value of the '{@link #getFactor() <em>Factor</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
@@ -58,18 +46,8 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
     protected static final double FACTOR_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getFactor() <em>Factor</em>}' attribute. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @see #getFactor()
-     * @generated
-     * @ordered
-     */
-    protected double factor = FACTOR_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected PolynomialValueProviderImpl() {
@@ -78,7 +56,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -88,57 +66,51 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public double getExponent() {
-        return this.exponent;
+        return (Double) this.eDynamicGet(ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER__EXPONENT,
+                ExperimentsPackage.Literals.POLYNOMIAL_VALUE_PROVIDER__EXPONENT, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setExponent(final double newExponent) {
-        final double oldExponent = this.exponent;
-        this.exponent = newExponent;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER__EXPONENT, oldExponent, this.exponent));
-        }
+        this.eDynamicSet(ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER__EXPONENT,
+                ExperimentsPackage.Literals.POLYNOMIAL_VALUE_PROVIDER__EXPONENT, newExponent);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public double getFactor() {
-        return this.factor;
+        return (Double) this.eDynamicGet(ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER__FACTOR,
+                ExperimentsPackage.Literals.POLYNOMIAL_VALUE_PROVIDER__FACTOR, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setFactor(final double newFactor) {
-        final double oldFactor = this.factor;
-        this.factor = newFactor;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER__FACTOR, oldFactor, this.factor));
-        }
+        this.eDynamicSet(ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER__FACTOR,
+                ExperimentsPackage.Literals.POLYNOMIAL_VALUE_PROVIDER__FACTOR, newFactor);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -154,7 +126,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -172,7 +144,7 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -190,38 +162,18 @@ public class PolynomialValueProviderImpl extends ValueProviderImpl implements Po
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER__EXPONENT:
-            return this.exponent != EXPONENT_EDEFAULT;
+            return this.getExponent() != EXPONENT_EDEFAULT;
         case ExperimentsPackage.POLYNOMIAL_VALUE_PROVIDER__FACTOR:
-            return this.factor != FACTOR_EDEFAULT;
+            return this.getFactor() != FACTOR_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (exponent: ");
-        result.append(this.exponent);
-        result.append(", factor: ");
-        result.append(this.factor);
-        result.append(')');
-        return result.toString();
     }
 
 } // PolynomialValueProviderImpl

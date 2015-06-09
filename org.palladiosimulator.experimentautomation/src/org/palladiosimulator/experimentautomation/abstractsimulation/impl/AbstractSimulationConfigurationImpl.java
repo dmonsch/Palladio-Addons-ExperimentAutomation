@@ -4,13 +4,10 @@ package org.palladiosimulator.experimentautomation.abstractsimulation.impl;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
@@ -49,27 +46,6 @@ public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurat
 AbstractSimulationConfiguration {
 
     /**
-     * The cached value of the '{@link #getStopConditions() <em>Stop Conditions</em>}' containment
-     * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getStopConditions()
-     * @generated
-     * @ordered
-     */
-    protected EList<StopCondition> stopConditions;
-
-    /**
-     * The cached value of the '{@link #getRandomNumberGeneratorSeed()
-     * <em>Random Number Generator Seed</em>}' containment reference. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     *
-     * @see #getRandomNumberGeneratorSeed()
-     * @generated
-     * @ordered
-     */
-    protected RandomNumberGeneratorSeed randomNumberGeneratorSeed;
-
-    /**
      * The default value of the '{@link #isSimulateLinkingResources()
      * <em>Simulate Linking Resources</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
@@ -81,20 +57,9 @@ AbstractSimulationConfiguration {
     protected static final boolean SIMULATE_LINKING_RESOURCES_EDEFAULT = false;
 
     /**
-     * The cached value of the '{@link #isSimulateLinkingResources()
-     * <em>Simulate Linking Resources</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
-     * -->
-     *
-     * @see #isSimulateLinkingResources()
-     * @generated
-     * @ordered
-     */
-    protected boolean simulateLinkingResources = SIMULATE_LINKING_RESOURCES_EDEFAULT;
-
-    /**
      * The default value of the '{@link #isSimulateFailures() <em>Simulate Failures</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #isSimulateFailures()
      * @generated
      * @ordered
@@ -102,28 +67,8 @@ AbstractSimulationConfiguration {
     protected static final boolean SIMULATE_FAILURES_EDEFAULT = false;
 
     /**
-     * The cached value of the '{@link #isSimulateFailures() <em>Simulate Failures</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #isSimulateFailures()
-     * @generated
-     * @ordered
-     */
-    protected boolean simulateFailures = SIMULATE_FAILURES_EDEFAULT;
-
-    /**
-     * The cached value of the '{@link #getDatasource() <em>Datasource</em>}' containment reference.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getDatasource()
-     * @generated
-     * @ordered
-     */
-    protected EDP2Datasource datasource;
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected AbstractSimulationConfigurationImpl() {
@@ -132,7 +77,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -142,194 +87,140 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public EList<StopCondition> getStopConditions() {
-        if (this.stopConditions == null) {
-            this.stopConditions = new EObjectContainmentEList<StopCondition>(StopCondition.class, this,
-                    AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS);
-        }
-        return this.stopConditions;
+        return (EList<StopCondition>) this.eDynamicGet(
+                AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS,
+                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public RandomNumberGeneratorSeed getRandomNumberGeneratorSeed() {
-        return this.randomNumberGeneratorSeed;
+        return (RandomNumberGeneratorSeed) this.eDynamicGet(
+                AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED,
+                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED,
+                true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public NotificationChain basicSetRandomNumberGeneratorSeed(
             final RandomNumberGeneratorSeed newRandomNumberGeneratorSeed, NotificationChain msgs) {
-        final RandomNumberGeneratorSeed oldRandomNumberGeneratorSeed = this.randomNumberGeneratorSeed;
-        this.randomNumberGeneratorSeed = newRandomNumberGeneratorSeed;
-        if (this.eNotificationRequired()) {
-            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED,
-                    oldRandomNumberGeneratorSeed, newRandomNumberGeneratorSeed);
-            if (msgs == null) {
-                msgs = notification;
-            } else {
-                msgs.add(notification);
-            }
-        }
+        msgs = this.eDynamicInverseAdd((InternalEObject) newRandomNumberGeneratorSeed,
+                AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED, msgs);
         return msgs;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setRandomNumberGeneratorSeed(final RandomNumberGeneratorSeed newRandomNumberGeneratorSeed) {
-        if (newRandomNumberGeneratorSeed != this.randomNumberGeneratorSeed) {
-            NotificationChain msgs = null;
-            if (this.randomNumberGeneratorSeed != null) {
-                msgs = ((InternalEObject) this.randomNumberGeneratorSeed).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED,
-                        null, msgs);
-            }
-            if (newRandomNumberGeneratorSeed != null) {
-                msgs = ((InternalEObject) newRandomNumberGeneratorSeed).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED,
-                        null, msgs);
-            }
-            msgs = this.basicSetRandomNumberGeneratorSeed(newRandomNumberGeneratorSeed, msgs);
-            if (msgs != null) {
-                msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED,
-                    newRandomNumberGeneratorSeed, newRandomNumberGeneratorSeed));
-        }
+        this.eDynamicSet(AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED,
+                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED,
+                newRandomNumberGeneratorSeed);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean isSimulateLinkingResources() {
-        return this.simulateLinkingResources;
+        return (Boolean) this.eDynamicGet(
+                AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES,
+                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES, true,
+                true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setSimulateLinkingResources(final boolean newSimulateLinkingResources) {
-        final boolean oldSimulateLinkingResources = this.simulateLinkingResources;
-        this.simulateLinkingResources = newSimulateLinkingResources;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES,
-                    oldSimulateLinkingResources, this.simulateLinkingResources));
-        }
+        this.eDynamicSet(AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES,
+                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES,
+                newSimulateLinkingResources);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean isSimulateFailures() {
-        return this.simulateFailures;
+        return (Boolean) this.eDynamicGet(
+                AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES,
+                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setSimulateFailures(final boolean newSimulateFailures) {
-        final boolean oldSimulateFailures = this.simulateFailures;
-        this.simulateFailures = newSimulateFailures;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES,
-                    oldSimulateFailures, this.simulateFailures));
-        }
+        this.eDynamicSet(AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES,
+                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES,
+                newSimulateFailures);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public EDP2Datasource getDatasource() {
-        return this.datasource;
+        return (EDP2Datasource) this.eDynamicGet(
+                AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE,
+                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public NotificationChain basicSetDatasource(final EDP2Datasource newDatasource, NotificationChain msgs) {
-        final EDP2Datasource oldDatasource = this.datasource;
-        this.datasource = newDatasource;
-        if (this.eNotificationRequired()) {
-            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE, oldDatasource,
-                    newDatasource);
-            if (msgs == null) {
-                msgs = notification;
-            } else {
-                msgs.add(notification);
-            }
-        }
+        msgs = this.eDynamicInverseAdd((InternalEObject) newDatasource,
+                AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE, msgs);
         return msgs;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setDatasource(final EDP2Datasource newDatasource) {
-        if (newDatasource != this.datasource) {
-            NotificationChain msgs = null;
-            if (this.datasource != null) {
-                msgs = ((InternalEObject) this.datasource).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE, null, msgs);
-            }
-            if (newDatasource != null) {
-                msgs = ((InternalEObject) newDatasource).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE, null, msgs);
-            }
-            msgs = this.basicSetDatasource(newDatasource, msgs);
-            if (msgs != null) {
-                msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE, newDatasource,
-                    newDatasource));
-        }
+        this.eDynamicSet(AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE,
+                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE, newDatasource);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -348,7 +239,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -370,7 +261,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -399,7 +290,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -426,44 +317,24 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS:
-            return this.stopConditions != null && !this.stopConditions.isEmpty();
+            return !this.getStopConditions().isEmpty();
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED:
-            return this.randomNumberGeneratorSeed != null;
+            return this.getRandomNumberGeneratorSeed() != null;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES:
-            return this.simulateLinkingResources != SIMULATE_LINKING_RESOURCES_EDEFAULT;
+            return this.isSimulateLinkingResources() != SIMULATE_LINKING_RESOURCES_EDEFAULT;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES:
-            return this.simulateFailures != SIMULATE_FAILURES_EDEFAULT;
+            return this.isSimulateFailures() != SIMULATE_FAILURES_EDEFAULT;
         case AbstractsimulationPackage.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE:
-            return this.datasource != null;
+            return this.getDatasource() != null;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (simulateLinkingResources: ");
-        result.append(this.simulateLinkingResources);
-        result.append(", simulateFailures: ");
-        result.append(this.simulateFailures);
-        result.append(')');
-        return result.toString();
     }
 
 } // AbstractSimulationConfigurationImpl

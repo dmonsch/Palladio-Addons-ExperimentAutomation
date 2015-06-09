@@ -8,7 +8,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.variation.VariationPackage;
@@ -32,18 +31,8 @@ import org.palladiosimulator.experimentautomation.variation.VariationType;
 public class VariationRepositoryImpl extends CDOObjectImpl implements VariationRepository {
 
     /**
-     * The cached value of the '{@link #getVariation() <em>Variation</em>}' containment reference
-     * list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getVariation()
-     * @generated
-     * @ordered
-     */
-    protected EList<VariationType> variation;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected VariationRepositoryImpl() {
@@ -52,7 +41,7 @@ public class VariationRepositoryImpl extends CDOObjectImpl implements VariationR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -62,21 +51,29 @@ public class VariationRepositoryImpl extends CDOObjectImpl implements VariationR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
-    public EList<VariationType> getVariation() {
-        if (this.variation == null) {
-            this.variation = new EObjectContainmentEList<VariationType>(VariationType.class, this,
-                    VariationPackage.VARIATION_REPOSITORY__VARIATION);
-        }
-        return this.variation;
+    protected int eStaticFeatureCount() {
+        return 0;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public EList<VariationType> getVariation() {
+        return (EList<VariationType>) this.eDynamicGet(VariationPackage.VARIATION_REPOSITORY__VARIATION,
+                VariationPackage.Literals.VARIATION_REPOSITORY__VARIATION, true, true);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -91,7 +88,7 @@ public class VariationRepositoryImpl extends CDOObjectImpl implements VariationR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -105,7 +102,7 @@ public class VariationRepositoryImpl extends CDOObjectImpl implements VariationR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -122,7 +119,7 @@ public class VariationRepositoryImpl extends CDOObjectImpl implements VariationR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -137,14 +134,14 @@ public class VariationRepositoryImpl extends CDOObjectImpl implements VariationR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case VariationPackage.VARIATION_REPOSITORY__VARIATION:
-            return this.variation != null && !this.variation.isEmpty();
+            return !this.getVariation().isEmpty();
         }
         return super.eIsSet(featureID);
     }

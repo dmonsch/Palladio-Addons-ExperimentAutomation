@@ -18,7 +18,7 @@ public class StructuralVariationImpl extends VariationTypeImpl implements Struct
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected StructuralVariationImpl() {
@@ -27,7 +27,7 @@ public class StructuralVariationImpl extends VariationTypeImpl implements Struct
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

@@ -19,7 +19,7 @@ public class FractionalFactorialDesignImpl extends CDOObjectImpl implements Frac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected FractionalFactorialDesignImpl() {
@@ -28,12 +28,22 @@ public class FractionalFactorialDesignImpl extends CDOObjectImpl implements Frac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     protected EClass eStaticClass() {
         return ExperimentsPackage.Literals.FRACTIONAL_FACTORIAL_DESIGN;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    protected int eStaticFeatureCount() {
+        return 0;
     }
 
 } // FractionalFactorialDesignImpl

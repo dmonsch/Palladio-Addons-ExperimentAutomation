@@ -2,9 +2,7 @@
  */
 package org.palladiosimulator.experimentautomation.abstractsimulation.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
 import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource;
@@ -28,7 +26,7 @@ public abstract class EDP2DatasourceImpl extends CDOObjectImpl implements EDP2Da
     /**
      * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #getId()
      * @generated
      * @ordered
@@ -36,18 +34,8 @@ public abstract class EDP2DatasourceImpl extends CDOObjectImpl implements EDP2Da
     protected static final String ID_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     *
-     * @see #getId()
-     * @generated
-     * @ordered
-     */
-    protected String id = ID_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected EDP2DatasourceImpl() {
@@ -56,7 +44,7 @@ public abstract class EDP2DatasourceImpl extends CDOObjectImpl implements EDP2Da
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -66,32 +54,39 @@ public abstract class EDP2DatasourceImpl extends CDOObjectImpl implements EDP2Da
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
+     * @generated
+     */
+    @Override
+    protected int eStaticFeatureCount() {
+        return 0;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String getId() {
-        return this.id;
+        return (String) this.eDynamicGet(AbstractsimulationPackage.EDP2_DATASOURCE__ID,
+                AbstractsimulationPackage.Literals.EDP2_DATASOURCE__ID, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setId(final String newId) {
-        final String oldId = this.id;
-        this.id = newId;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, AbstractsimulationPackage.EDP2_DATASOURCE__ID,
-                    oldId, this.id));
-        }
+        this.eDynamicSet(AbstractsimulationPackage.EDP2_DATASOURCE__ID,
+                AbstractsimulationPackage.Literals.EDP2_DATASOURCE__ID, newId);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -105,7 +100,7 @@ public abstract class EDP2DatasourceImpl extends CDOObjectImpl implements EDP2Da
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -120,7 +115,7 @@ public abstract class EDP2DatasourceImpl extends CDOObjectImpl implements EDP2Da
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -135,34 +130,16 @@ public abstract class EDP2DatasourceImpl extends CDOObjectImpl implements EDP2Da
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.EDP2_DATASOURCE__ID:
-            return ID_EDEFAULT == null ? this.id != null : !ID_EDEFAULT.equals(this.id);
+            return ID_EDEFAULT == null ? this.getId() != null : !ID_EDEFAULT.equals(this.getId());
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (id: ");
-        result.append(this.id);
-        result.append(')');
-        return result.toString();
     }
 
 } // EDP2DatasourceImpl

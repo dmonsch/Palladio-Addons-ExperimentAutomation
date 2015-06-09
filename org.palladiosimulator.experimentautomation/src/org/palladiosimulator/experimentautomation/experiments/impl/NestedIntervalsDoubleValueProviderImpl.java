@@ -2,9 +2,7 @@
  */
 package org.palladiosimulator.experimentautomation.experiments.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider;
 
@@ -39,16 +37,6 @@ NestedIntervalsDoubleValueProvider {
     protected static final double MIN_VALUE_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getMinValue() <em>Min Value</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getMinValue()
-     * @generated
-     * @ordered
-     */
-    protected double minValue = MIN_VALUE_EDEFAULT;
-
-    /**
      * The default value of the '{@link #getMaxValue() <em>Max Value</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
@@ -59,18 +47,8 @@ NestedIntervalsDoubleValueProvider {
     protected static final double MAX_VALUE_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getMaxValue() <em>Max Value</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getMaxValue()
-     * @generated
-     * @ordered
-     */
-    protected double maxValue = MAX_VALUE_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected NestedIntervalsDoubleValueProviderImpl() {
@@ -79,7 +57,7 @@ NestedIntervalsDoubleValueProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -89,57 +67,51 @@ NestedIntervalsDoubleValueProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public double getMinValue() {
-        return this.minValue;
+        return (Double) this.eDynamicGet(ExperimentsPackage.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MIN_VALUE,
+                ExperimentsPackage.Literals.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MIN_VALUE, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setMinValue(final double newMinValue) {
-        final double oldMinValue = this.minValue;
-        this.minValue = newMinValue;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MIN_VALUE, oldMinValue, this.minValue));
-        }
+        this.eDynamicSet(ExperimentsPackage.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MIN_VALUE,
+                ExperimentsPackage.Literals.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MIN_VALUE, newMinValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public double getMaxValue() {
-        return this.maxValue;
+        return (Double) this.eDynamicGet(ExperimentsPackage.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MAX_VALUE,
+                ExperimentsPackage.Literals.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MAX_VALUE, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setMaxValue(final double newMaxValue) {
-        final double oldMaxValue = this.maxValue;
-        this.maxValue = newMaxValue;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MAX_VALUE, oldMaxValue, this.maxValue));
-        }
+        this.eDynamicSet(ExperimentsPackage.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MAX_VALUE,
+                ExperimentsPackage.Literals.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MAX_VALUE, newMaxValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -155,7 +127,7 @@ NestedIntervalsDoubleValueProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -173,7 +145,7 @@ NestedIntervalsDoubleValueProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -191,38 +163,18 @@ NestedIntervalsDoubleValueProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MIN_VALUE:
-            return this.minValue != MIN_VALUE_EDEFAULT;
+            return this.getMinValue() != MIN_VALUE_EDEFAULT;
         case ExperimentsPackage.NESTED_INTERVALS_DOUBLE_VALUE_PROVIDER__MAX_VALUE:
-            return this.maxValue != MAX_VALUE_EDEFAULT;
+            return this.getMaxValue() != MAX_VALUE_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (minValue: ");
-        result.append(this.minValue);
-        result.append(", maxValue: ");
-        result.append(this.maxValue);
-        result.append(')');
-        return result.toString();
     }
 
 } // NestedIntervalsDoubleValueProviderImpl

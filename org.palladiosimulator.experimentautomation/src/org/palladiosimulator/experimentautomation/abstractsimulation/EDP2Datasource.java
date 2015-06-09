@@ -30,7 +30,7 @@ public interface EDP2Datasource extends CDOObject {
      * description here...
      * </p>
      * <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Id</em>' attribute.
      * @see #setId(String)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getEDP2Datasource_Id()
@@ -43,7 +43,7 @@ public interface EDP2Datasource extends CDOObject {
      * Sets the value of the '
      * {@link org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource#getId
      * <em>Id</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Id</em>' attribute.
      * @see #getId()

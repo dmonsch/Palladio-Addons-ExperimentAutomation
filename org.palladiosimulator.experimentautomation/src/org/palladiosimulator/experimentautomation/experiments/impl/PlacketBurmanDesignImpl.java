@@ -19,7 +19,7 @@ public class PlacketBurmanDesignImpl extends CDOObjectImpl implements PlacketBur
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected PlacketBurmanDesignImpl() {
@@ -28,12 +28,22 @@ public class PlacketBurmanDesignImpl extends CDOObjectImpl implements PlacketBur
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     protected EClass eStaticClass() {
         return ExperimentsPackage.Literals.PLACKET_BURMAN_DESIGN;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    protected int eStaticFeatureCount() {
+        return 0;
     }
 
 } // PlacketBurmanDesignImpl

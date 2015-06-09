@@ -2,12 +2,9 @@
  */
 package org.palladiosimulator.experimentautomation.experiments.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.ValueProvider;
@@ -45,26 +42,6 @@ import org.palladiosimulator.experimentautomation.variation.VariationType;
 public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
-     * The cached value of the '{@link #getType() <em>Type</em>}' reference. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     *
-     * @see #getType()
-     * @generated
-     * @ordered
-     */
-    protected VariationType type;
-
-    /**
-     * The cached value of the '{@link #getValueProvider() <em>Value Provider</em>}' containment
-     * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getValueProvider()
-     * @generated
-     * @ordered
-     */
-    protected ValueProvider valueProvider;
-
-    /**
      * The default value of the '{@link #getMinValue() <em>Min Value</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
@@ -73,16 +50,6 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
      * @ordered
      */
     protected static final double MIN_VALUE_EDEFAULT = 0.0;
-
-    /**
-     * The cached value of the '{@link #getMinValue() <em>Min Value</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getMinValue()
-     * @generated
-     * @ordered
-     */
-    protected double minValue = MIN_VALUE_EDEFAULT;
 
     /**
      * The default value of the '{@link #getMaxValue() <em>Max Value</em>}' attribute. <!--
@@ -95,19 +62,9 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
     protected static final double MAX_VALUE_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getMaxValue() <em>Max Value</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getMaxValue()
-     * @generated
-     * @ordered
-     */
-    protected double maxValue = MAX_VALUE_EDEFAULT;
-
-    /**
      * The default value of the '{@link #getMaxVariations() <em>Max Variations</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getMaxVariations()
      * @generated
      * @ordered
@@ -115,19 +72,9 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
     protected static final long MAX_VARIATIONS_EDEFAULT = 0L;
 
     /**
-     * The cached value of the '{@link #getMaxVariations() <em>Max Variations</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getMaxVariations()
-     * @generated
-     * @ordered
-     */
-    protected long maxVariations = MAX_VARIATIONS_EDEFAULT;
-
-    /**
      * The default value of the '{@link #getVariedObjectId() <em>Varied Object Id</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getVariedObjectId()
      * @generated
      * @ordered
@@ -135,19 +82,9 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
     protected static final String VARIED_OBJECT_ID_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getVariedObjectId() <em>Varied Object Id</em>}' attribute.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getVariedObjectId()
-     * @generated
-     * @ordered
-     */
-    protected String variedObjectId = VARIED_OBJECT_ID_EDEFAULT;
-
-    /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -155,18 +92,8 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
     protected static final String NAME_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     *
-     * @see #getName()
-     * @generated
-     * @ordered
-     */
-    protected String name = NAME_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected VariationImpl() {
@@ -175,7 +102,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -185,233 +112,190 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
+     * @generated
+     */
+    @Override
+    protected int eStaticFeatureCount() {
+        return 0;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public VariationType getType() {
-        if (this.type != null && ((EObject) this.type).eIsProxy()) {
-            final InternalEObject oldType = (InternalEObject) this.type;
-            this.type = (VariationType) this.eResolveProxy(oldType);
-            if (this.type != oldType) {
-                if (this.eNotificationRequired()) {
-                    this.eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExperimentsPackage.VARIATION__TYPE,
-                            oldType, this.type));
-                }
-            }
-        }
-        return this.type;
+        return (VariationType) this.eDynamicGet(ExperimentsPackage.VARIATION__TYPE,
+                ExperimentsPackage.Literals.VARIATION__TYPE, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public VariationType basicGetType() {
-        return this.type;
+        return (VariationType) this.eDynamicGet(ExperimentsPackage.VARIATION__TYPE,
+                ExperimentsPackage.Literals.VARIATION__TYPE, false, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setType(final VariationType newType) {
-        final VariationType oldType = this.type;
-        this.type = newType;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.VARIATION__TYPE, oldType,
-                    this.type));
-        }
+        this.eDynamicSet(ExperimentsPackage.VARIATION__TYPE, ExperimentsPackage.Literals.VARIATION__TYPE, newType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public ValueProvider getValueProvider() {
-        return this.valueProvider;
+        return (ValueProvider) this.eDynamicGet(ExperimentsPackage.VARIATION__VALUE_PROVIDER,
+                ExperimentsPackage.Literals.VARIATION__VALUE_PROVIDER, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public NotificationChain basicSetValueProvider(final ValueProvider newValueProvider, NotificationChain msgs) {
-        final ValueProvider oldValueProvider = this.valueProvider;
-        this.valueProvider = newValueProvider;
-        if (this.eNotificationRequired()) {
-            final ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.VARIATION__VALUE_PROVIDER, oldValueProvider, newValueProvider);
-            if (msgs == null) {
-                msgs = notification;
-            } else {
-                msgs.add(notification);
-            }
-        }
+        msgs = this.eDynamicInverseAdd((InternalEObject) newValueProvider,
+                ExperimentsPackage.VARIATION__VALUE_PROVIDER, msgs);
         return msgs;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setValueProvider(final ValueProvider newValueProvider) {
-        if (newValueProvider != this.valueProvider) {
-            NotificationChain msgs = null;
-            if (this.valueProvider != null) {
-                msgs = ((InternalEObject) this.valueProvider).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - ExperimentsPackage.VARIATION__VALUE_PROVIDER, null, msgs);
-            }
-            if (newValueProvider != null) {
-                msgs = ((InternalEObject) newValueProvider).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - ExperimentsPackage.VARIATION__VALUE_PROVIDER, null, msgs);
-            }
-            msgs = this.basicSetValueProvider(newValueProvider, msgs);
-            if (msgs != null) {
-                msgs.dispatch();
-            }
-        } else if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.VARIATION__VALUE_PROVIDER,
-                    newValueProvider, newValueProvider));
-        }
+        this.eDynamicSet(ExperimentsPackage.VARIATION__VALUE_PROVIDER,
+                ExperimentsPackage.Literals.VARIATION__VALUE_PROVIDER, newValueProvider);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public double getMinValue() {
-        return this.minValue;
+        return (Double) this.eDynamicGet(ExperimentsPackage.VARIATION__MIN_VALUE,
+                ExperimentsPackage.Literals.VARIATION__MIN_VALUE, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setMinValue(final double newMinValue) {
-        final double oldMinValue = this.minValue;
-        this.minValue = newMinValue;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.VARIATION__MIN_VALUE,
-                    oldMinValue, this.minValue));
-        }
+        this.eDynamicSet(ExperimentsPackage.VARIATION__MIN_VALUE, ExperimentsPackage.Literals.VARIATION__MIN_VALUE,
+                newMinValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public double getMaxValue() {
-        return this.maxValue;
+        return (Double) this.eDynamicGet(ExperimentsPackage.VARIATION__MAX_VALUE,
+                ExperimentsPackage.Literals.VARIATION__MAX_VALUE, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setMaxValue(final double newMaxValue) {
-        final double oldMaxValue = this.maxValue;
-        this.maxValue = newMaxValue;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.VARIATION__MAX_VALUE,
-                    oldMaxValue, this.maxValue));
-        }
+        this.eDynamicSet(ExperimentsPackage.VARIATION__MAX_VALUE, ExperimentsPackage.Literals.VARIATION__MAX_VALUE,
+                newMaxValue);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public long getMaxVariations() {
-        return this.maxVariations;
+        return (Long) this.eDynamicGet(ExperimentsPackage.VARIATION__MAX_VARIATIONS,
+                ExperimentsPackage.Literals.VARIATION__MAX_VARIATIONS, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setMaxVariations(final long newMaxVariations) {
-        final long oldMaxVariations = this.maxVariations;
-        this.maxVariations = newMaxVariations;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.VARIATION__MAX_VARIATIONS,
-                    oldMaxVariations, this.maxVariations));
-        }
+        this.eDynamicSet(ExperimentsPackage.VARIATION__MAX_VARIATIONS,
+                ExperimentsPackage.Literals.VARIATION__MAX_VARIATIONS, newMaxVariations);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public String getVariedObjectId() {
-        return this.variedObjectId;
+        return (String) this.eDynamicGet(ExperimentsPackage.VARIATION__VARIED_OBJECT_ID,
+                ExperimentsPackage.Literals.VARIATION__VARIED_OBJECT_ID, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setVariedObjectId(final String newVariedObjectId) {
-        final String oldVariedObjectId = this.variedObjectId;
-        this.variedObjectId = newVariedObjectId;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.VARIATION__VARIED_OBJECT_ID,
-                    oldVariedObjectId, this.variedObjectId));
-        }
+        this.eDynamicSet(ExperimentsPackage.VARIATION__VARIED_OBJECT_ID,
+                ExperimentsPackage.Literals.VARIATION__VARIED_OBJECT_ID, newVariedObjectId);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public String getName() {
-        return this.name;
+        return (String) this.eDynamicGet(ExperimentsPackage.VARIATION__NAME,
+                ExperimentsPackage.Literals.VARIATION__NAME, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setName(final String newName) {
-        final String oldName = this.name;
-        this.name = newName;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, ExperimentsPackage.VARIATION__NAME, oldName,
-                    this.name));
-        }
+        this.eDynamicSet(ExperimentsPackage.VARIATION__NAME, ExperimentsPackage.Literals.VARIATION__NAME, newName);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -426,7 +310,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -455,7 +339,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -488,7 +372,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -521,55 +405,29 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.VARIATION__TYPE:
-            return this.type != null;
+            return this.basicGetType() != null;
         case ExperimentsPackage.VARIATION__VALUE_PROVIDER:
-            return this.valueProvider != null;
+            return this.getValueProvider() != null;
         case ExperimentsPackage.VARIATION__MIN_VALUE:
-            return this.minValue != MIN_VALUE_EDEFAULT;
+            return this.getMinValue() != MIN_VALUE_EDEFAULT;
         case ExperimentsPackage.VARIATION__MAX_VALUE:
-            return this.maxValue != MAX_VALUE_EDEFAULT;
+            return this.getMaxValue() != MAX_VALUE_EDEFAULT;
         case ExperimentsPackage.VARIATION__MAX_VARIATIONS:
-            return this.maxVariations != MAX_VARIATIONS_EDEFAULT;
+            return this.getMaxVariations() != MAX_VARIATIONS_EDEFAULT;
         case ExperimentsPackage.VARIATION__VARIED_OBJECT_ID:
-            return VARIED_OBJECT_ID_EDEFAULT == null ? this.variedObjectId != null : !VARIED_OBJECT_ID_EDEFAULT
-            .equals(this.variedObjectId);
+            return VARIED_OBJECT_ID_EDEFAULT == null ? this.getVariedObjectId() != null : !VARIED_OBJECT_ID_EDEFAULT
+            .equals(this.getVariedObjectId());
         case ExperimentsPackage.VARIATION__NAME:
-            return NAME_EDEFAULT == null ? this.name != null : !NAME_EDEFAULT.equals(this.name);
+            return NAME_EDEFAULT == null ? this.getName() != null : !NAME_EDEFAULT.equals(this.getName());
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (minValue: ");
-        result.append(this.minValue);
-        result.append(", maxValue: ");
-        result.append(this.maxValue);
-        result.append(", maxVariations: ");
-        result.append(this.maxVariations);
-        result.append(", variedObjectId: ");
-        result.append(this.variedObjectId);
-        result.append(", name: ");
-        result.append(this.name);
-        result.append(')');
-        return result.toString();
     }
 
 } // VariationImpl

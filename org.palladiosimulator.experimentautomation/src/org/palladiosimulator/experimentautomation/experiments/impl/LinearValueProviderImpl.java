@@ -2,9 +2,7 @@
  */
 package org.palladiosimulator.experimentautomation.experiments.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
 
@@ -38,16 +36,6 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
     protected static final double SUMMAND_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getSummand() <em>Summand</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getSummand()
-     * @generated
-     * @ordered
-     */
-    protected double summand = SUMMAND_EDEFAULT;
-
-    /**
      * The default value of the '{@link #getFactor() <em>Factor</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
@@ -58,18 +46,8 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
     protected static final double FACTOR_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getFactor() <em>Factor</em>}' attribute. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @see #getFactor()
-     * @generated
-     * @ordered
-     */
-    protected double factor = FACTOR_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected LinearValueProviderImpl() {
@@ -78,7 +56,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -88,57 +66,51 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public double getSummand() {
-        return this.summand;
+        return (Double) this.eDynamicGet(ExperimentsPackage.LINEAR_VALUE_PROVIDER__SUMMAND,
+                ExperimentsPackage.Literals.LINEAR_VALUE_PROVIDER__SUMMAND, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setSummand(final double newSummand) {
-        final double oldSummand = this.summand;
-        this.summand = newSummand;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.LINEAR_VALUE_PROVIDER__SUMMAND, oldSummand, this.summand));
-        }
+        this.eDynamicSet(ExperimentsPackage.LINEAR_VALUE_PROVIDER__SUMMAND,
+                ExperimentsPackage.Literals.LINEAR_VALUE_PROVIDER__SUMMAND, newSummand);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public double getFactor() {
-        return this.factor;
+        return (Double) this.eDynamicGet(ExperimentsPackage.LINEAR_VALUE_PROVIDER__FACTOR,
+                ExperimentsPackage.Literals.LINEAR_VALUE_PROVIDER__FACTOR, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setFactor(final double newFactor) {
-        final double oldFactor = this.factor;
-        this.factor = newFactor;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.LINEAR_VALUE_PROVIDER__FACTOR, oldFactor, this.factor));
-        }
+        this.eDynamicSet(ExperimentsPackage.LINEAR_VALUE_PROVIDER__FACTOR,
+                ExperimentsPackage.Literals.LINEAR_VALUE_PROVIDER__FACTOR, newFactor);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -154,7 +126,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -172,7 +144,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -190,38 +162,18 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER__SUMMAND:
-            return this.summand != SUMMAND_EDEFAULT;
+            return this.getSummand() != SUMMAND_EDEFAULT;
         case ExperimentsPackage.LINEAR_VALUE_PROVIDER__FACTOR:
-            return this.factor != FACTOR_EDEFAULT;
+            return this.getFactor() != FACTOR_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (summand: ");
-        result.append(this.summand);
-        result.append(", factor: ");
-        result.append(this.factor);
-        result.append(')');
-        return result.toString();
     }
 
 } // LinearValueProviderImpl

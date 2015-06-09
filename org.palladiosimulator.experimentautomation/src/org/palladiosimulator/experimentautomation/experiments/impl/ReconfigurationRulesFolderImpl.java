@@ -2,9 +2,7 @@
  */
 package org.palladiosimulator.experimentautomation.experiments.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
@@ -36,18 +34,8 @@ public class ReconfigurationRulesFolderImpl extends CDOObjectImpl implements Rec
     protected static final String FOLDER_URI_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getFolderUri() <em>Folder Uri</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getFolderUri()
-     * @generated
-     * @ordered
-     */
-    protected String folderUri = FOLDER_URI_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ReconfigurationRulesFolderImpl() {
@@ -56,7 +44,7 @@ public class ReconfigurationRulesFolderImpl extends CDOObjectImpl implements Rec
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -66,32 +54,39 @@ public class ReconfigurationRulesFolderImpl extends CDOObjectImpl implements Rec
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
+     * @generated
+     */
+    @Override
+    protected int eStaticFeatureCount() {
+        return 0;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String getFolderUri() {
-        return this.folderUri;
+        return (String) this.eDynamicGet(ExperimentsPackage.RECONFIGURATION_RULES_FOLDER__FOLDER_URI,
+                ExperimentsPackage.Literals.RECONFIGURATION_RULES_FOLDER__FOLDER_URI, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setFolderUri(final String newFolderUri) {
-        final String oldFolderUri = this.folderUri;
-        this.folderUri = newFolderUri;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.RECONFIGURATION_RULES_FOLDER__FOLDER_URI, oldFolderUri, this.folderUri));
-        }
+        this.eDynamicSet(ExperimentsPackage.RECONFIGURATION_RULES_FOLDER__FOLDER_URI,
+                ExperimentsPackage.Literals.RECONFIGURATION_RULES_FOLDER__FOLDER_URI, newFolderUri);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -105,7 +100,7 @@ public class ReconfigurationRulesFolderImpl extends CDOObjectImpl implements Rec
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -120,7 +115,7 @@ public class ReconfigurationRulesFolderImpl extends CDOObjectImpl implements Rec
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -135,34 +130,17 @@ public class ReconfigurationRulesFolderImpl extends CDOObjectImpl implements Rec
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.RECONFIGURATION_RULES_FOLDER__FOLDER_URI:
-            return FOLDER_URI_EDEFAULT == null ? this.folderUri != null : !FOLDER_URI_EDEFAULT.equals(this.folderUri);
+            return FOLDER_URI_EDEFAULT == null ? this.getFolderUri() != null : !FOLDER_URI_EDEFAULT.equals(this
+                    .getFolderUri());
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (folderUri: ");
-        result.append(this.folderUri);
-        result.append(')');
-        return result.toString();
     }
 
 } // ReconfigurationRulesFolderImpl

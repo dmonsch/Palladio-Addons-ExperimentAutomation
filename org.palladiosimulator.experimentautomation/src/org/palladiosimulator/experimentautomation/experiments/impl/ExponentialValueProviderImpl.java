@@ -2,9 +2,7 @@
  */
 package org.palladiosimulator.experimentautomation.experiments.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 import org.palladiosimulator.experimentautomation.experiments.ExponentialValueProvider;
 
@@ -27,7 +25,7 @@ public class ExponentialValueProviderImpl extends ValueProviderImpl implements E
     /**
      * The default value of the '{@link #getBase() <em>Base</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getBase()
      * @generated
      * @ordered
@@ -35,18 +33,8 @@ public class ExponentialValueProviderImpl extends ValueProviderImpl implements E
     protected static final double BASE_EDEFAULT = 0.0;
 
     /**
-     * The cached value of the '{@link #getBase() <em>Base</em>}' attribute. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     *
-     * @see #getBase()
-     * @generated
-     * @ordered
-     */
-    protected double base = BASE_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ExponentialValueProviderImpl() {
@@ -55,7 +43,7 @@ public class ExponentialValueProviderImpl extends ValueProviderImpl implements E
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -65,32 +53,29 @@ public class ExponentialValueProviderImpl extends ValueProviderImpl implements E
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public double getBase() {
-        return this.base;
+        return (Double) this.eDynamicGet(ExperimentsPackage.EXPONENTIAL_VALUE_PROVIDER__BASE,
+                ExperimentsPackage.Literals.EXPONENTIAL_VALUE_PROVIDER__BASE, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setBase(final double newBase) {
-        final double oldBase = this.base;
-        this.base = newBase;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    ExperimentsPackage.EXPONENTIAL_VALUE_PROVIDER__BASE, oldBase, this.base));
-        }
+        this.eDynamicSet(ExperimentsPackage.EXPONENTIAL_VALUE_PROVIDER__BASE,
+                ExperimentsPackage.Literals.EXPONENTIAL_VALUE_PROVIDER__BASE, newBase);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -104,7 +89,7 @@ public class ExponentialValueProviderImpl extends ValueProviderImpl implements E
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -119,7 +104,7 @@ public class ExponentialValueProviderImpl extends ValueProviderImpl implements E
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -134,34 +119,16 @@ public class ExponentialValueProviderImpl extends ValueProviderImpl implements E
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.EXPONENTIAL_VALUE_PROVIDER__BASE:
-            return this.base != BASE_EDEFAULT;
+            return this.getBase() != BASE_EDEFAULT;
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (base: ");
-        result.append(this.base);
-        result.append(')');
-        return result.toString();
     }
 
 } // ExponentialValueProviderImpl

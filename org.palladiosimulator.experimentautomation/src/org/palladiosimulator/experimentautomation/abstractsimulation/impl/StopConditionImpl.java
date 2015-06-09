@@ -19,7 +19,7 @@ public abstract class StopConditionImpl extends CDOObjectImpl implements StopCon
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected StopConditionImpl() {
@@ -28,12 +28,22 @@ public abstract class StopConditionImpl extends CDOObjectImpl implements StopCon
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     protected EClass eStaticClass() {
         return AbstractsimulationPackage.Literals.STOP_CONDITION;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    protected int eStaticFeatureCount() {
+        return 0;
     }
 
 } // StopConditionImpl

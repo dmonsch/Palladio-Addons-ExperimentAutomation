@@ -19,7 +19,7 @@ public abstract class ValueProviderImpl extends CDOObjectImpl implements ValuePr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ValueProviderImpl() {
@@ -28,12 +28,22 @@ public abstract class ValueProviderImpl extends CDOObjectImpl implements ValuePr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     protected EClass eStaticClass() {
         return ExperimentsPackage.Literals.VALUE_PROVIDER;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    protected int eStaticFeatureCount() {
+        return 0;
     }
 
 } // ValueProviderImpl

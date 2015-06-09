@@ -19,7 +19,7 @@ public abstract class ResponseMeasurementImpl extends CDOObjectImpl implements R
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ResponseMeasurementImpl() {
@@ -28,12 +28,22 @@ public abstract class ResponseMeasurementImpl extends CDOObjectImpl implements R
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     protected EClass eStaticClass() {
         return ExperimentsPackage.Literals.RESPONSE_MEASUREMENT;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    protected int eStaticFeatureCount() {
+        return 0;
     }
 
 } // ResponseMeasurementImpl

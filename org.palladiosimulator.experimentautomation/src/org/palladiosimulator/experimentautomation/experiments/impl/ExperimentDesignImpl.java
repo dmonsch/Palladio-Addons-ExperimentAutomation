@@ -19,7 +19,7 @@ public abstract class ExperimentDesignImpl extends CDOObjectImpl implements Expe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected ExperimentDesignImpl() {
@@ -28,12 +28,22 @@ public abstract class ExperimentDesignImpl extends CDOObjectImpl implements Expe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     protected EClass eStaticClass() {
         return ExperimentsPackage.Literals.EXPERIMENT_DESIGN;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    protected int eStaticFeatureCount() {
+        return 0;
     }
 
 } // ExperimentDesignImpl

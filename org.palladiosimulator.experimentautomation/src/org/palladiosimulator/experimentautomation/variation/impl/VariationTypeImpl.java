@@ -2,9 +2,7 @@
  */
 package org.palladiosimulator.experimentautomation.variation.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.palladiosimulator.experimentautomation.variation.VariationPackage;
 import org.palladiosimulator.experimentautomation.variation.VariationType;
 
@@ -34,7 +32,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -42,19 +40,9 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
     protected static final String NAME_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     *
-     * @see #getName()
-     * @generated
-     * @ordered
-     */
-    protected String name = NAME_EDEFAULT;
-
-    /**
      * The default value of the '{@link #getStrategyClass() <em>Strategy Class</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getStrategyClass()
      * @generated
      * @ordered
@@ -62,19 +50,9 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
     protected static final String STRATEGY_CLASS_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getStrategyClass() <em>Strategy Class</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getStrategyClass()
-     * @generated
-     * @ordered
-     */
-    protected String strategyClass = STRATEGY_CLASS_EDEFAULT;
-
-    /**
      * The default value of the '{@link #getVariedEntityInterface()
      * <em>Varied Entity Interface</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getVariedEntityInterface()
      * @generated
      * @ordered
@@ -82,18 +60,8 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
     protected static final String VARIED_ENTITY_INTERFACE_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getVariedEntityInterface() <em>Varied Entity Interface</em>}
-     * ' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @see #getVariedEntityInterface()
-     * @generated
-     * @ordered
-     */
-    protected String variedEntityInterface = VARIED_ENTITY_INTERFACE_EDEFAULT;
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected VariationTypeImpl() {
@@ -102,7 +70,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -112,83 +80,72 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public String getName() {
-        return this.name;
+        return (String) this.eDynamicGet(VariationPackage.VARIATION_TYPE__NAME,
+                VariationPackage.Literals.VARIATION_TYPE__NAME, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setName(final String newName) {
-        final String oldName = this.name;
-        this.name = newName;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, VariationPackage.VARIATION_TYPE__NAME, oldName,
-                    this.name));
-        }
+        this.eDynamicSet(VariationPackage.VARIATION_TYPE__NAME, VariationPackage.Literals.VARIATION_TYPE__NAME, newName);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public String getStrategyClass() {
-        return this.strategyClass;
+        return (String) this.eDynamicGet(VariationPackage.VARIATION_TYPE__STRATEGY_CLASS,
+                VariationPackage.Literals.VARIATION_TYPE__STRATEGY_CLASS, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setStrategyClass(final String newStrategyClass) {
-        final String oldStrategyClass = this.strategyClass;
-        this.strategyClass = newStrategyClass;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET, VariationPackage.VARIATION_TYPE__STRATEGY_CLASS,
-                    oldStrategyClass, this.strategyClass));
-        }
+        this.eDynamicSet(VariationPackage.VARIATION_TYPE__STRATEGY_CLASS,
+                VariationPackage.Literals.VARIATION_TYPE__STRATEGY_CLASS, newStrategyClass);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public String getVariedEntityInterface() {
-        return this.variedEntityInterface;
+        return (String) this.eDynamicGet(VariationPackage.VARIATION_TYPE__VARIED_ENTITY_INTERFACE,
+                VariationPackage.Literals.VARIATION_TYPE__VARIED_ENTITY_INTERFACE, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public void setVariedEntityInterface(final String newVariedEntityInterface) {
-        final String oldVariedEntityInterface = this.variedEntityInterface;
-        this.variedEntityInterface = newVariedEntityInterface;
-        if (this.eNotificationRequired()) {
-            this.eNotify(new ENotificationImpl(this, Notification.SET,
-                    VariationPackage.VARIATION_TYPE__VARIED_ENTITY_INTERFACE, oldVariedEntityInterface,
-                    this.variedEntityInterface));
-        }
+        this.eDynamicSet(VariationPackage.VARIATION_TYPE__VARIED_ENTITY_INTERFACE,
+                VariationPackage.Literals.VARIATION_TYPE__VARIED_ENTITY_INTERFACE, newVariedEntityInterface);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -206,7 +163,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -227,7 +184,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -248,44 +205,22 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case VariationPackage.VARIATION_TYPE__NAME:
-            return NAME_EDEFAULT == null ? this.name != null : !NAME_EDEFAULT.equals(this.name);
+            return NAME_EDEFAULT == null ? this.getName() != null : !NAME_EDEFAULT.equals(this.getName());
         case VariationPackage.VARIATION_TYPE__STRATEGY_CLASS:
-            return STRATEGY_CLASS_EDEFAULT == null ? this.strategyClass != null : !STRATEGY_CLASS_EDEFAULT
-            .equals(this.strategyClass);
+            return STRATEGY_CLASS_EDEFAULT == null ? this.getStrategyClass() != null : !STRATEGY_CLASS_EDEFAULT
+            .equals(this.getStrategyClass());
         case VariationPackage.VARIATION_TYPE__VARIED_ENTITY_INTERFACE:
-            return VARIED_ENTITY_INTERFACE_EDEFAULT == null ? this.variedEntityInterface != null
-            : !VARIED_ENTITY_INTERFACE_EDEFAULT.equals(this.variedEntityInterface);
+            return VARIED_ENTITY_INTERFACE_EDEFAULT == null ? this.getVariedEntityInterface() != null
+            : !VARIED_ENTITY_INTERFACE_EDEFAULT.equals(this.getVariedEntityInterface());
         }
         return super.eIsSet(featureID);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (this.eIsProxy()) {
-            return super.toString();
-        }
-
-        final StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (name: ");
-        result.append(this.name);
-        result.append(", strategyClass: ");
-        result.append(this.strategyClass);
-        result.append(", variedEntityInterface: ");
-        result.append(this.variedEntityInterface);
-        result.append(')');
-        return result.toString();
     }
 
 } // VariationTypeImpl

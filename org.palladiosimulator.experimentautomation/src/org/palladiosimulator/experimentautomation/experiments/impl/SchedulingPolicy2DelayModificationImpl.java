@@ -19,7 +19,7 @@ SchedulingPolicy2DelayModification {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected SchedulingPolicy2DelayModificationImpl() {
@@ -28,7 +28,7 @@ SchedulingPolicy2DelayModification {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
