@@ -5,7 +5,6 @@ import java.io.FilenameFilter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.apache.log4j.Level;
@@ -16,9 +15,6 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
-import org.palladiosimulator.simulizar.launcher.jobs.LoadMonitorRepositoryModelIntoBlackboardJob;
-import org.palladiosimulator.simulizar.launcher.jobs.LoadSimuLizarModelsIntoBlackboardJob;
-import org.palladiosimulator.simulizar.launcher.jobs.LoadUEModelIntoBlackboardJob;
 import org.palladiosimulator.simulizar.reconfiguration.storydiagram.jobs.LoadSDMModelsIntoBlackboardJob;
 
 import de.uka.ipd.sdq.workflow.jobs.JobFailedException;
@@ -40,6 +36,8 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
 
     private static final Logger LOGGER = Logger.getLogger(LoadModelsIntoBlackboardJob.class);
 
+    public static final String PCM_MODELS_ORIGINAL_PARTITION_ID = "org.palladiosimulator.pcmmodels.original.partition";
+
     private final InitialModel initialModel;
 
     public LoadModelsIntoBlackboardJob(final InitialModel initialModel) {
@@ -50,33 +48,22 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
     @Override
     public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
         // Load the PCM models
-        List<EObject> pcmModels = new ArrayList<EObject>();
+        final List<EObject> pcmModels = new ArrayList<EObject>();
         pcmModels.add(this.initialModel.getRepository());
         pcmModels.add(this.initialModel.getSystem());
         pcmModels.add(this.initialModel.getResourceEnvironment());
         pcmModels.add(this.initialModel.getAllocation());
         pcmModels.add(this.initialModel.getUsageModel());
+        pcmModels.add(this.initialModel.getUsageEvolution());
+        pcmModels.add(this.initialModel.getMonitorRepository());
+        pcmModels.add(this.initialModel.getMiddlewareRepository());
+        pcmModels.add(this.initialModel.getEventMiddleWareRepository());
 
-        // load the PCM model into a original inital PCM model partition
-        loadIntoBlackboard(LoadSimuLizarModelsIntoBlackboardJob.ORIGINAL_PCM_MODELS_PARTITION_ID, pcmModels);
+        // load the PCM model into a original initial PCM model partition
+        loadIntoBlackboard(PCM_MODELS_ORIGINAL_PARTITION_ID, pcmModels);
 
-        // load the PCM model into the standard parition
+        // load the PCM model into the standard partition
         loadIntoBlackboard(LoadPCMModelsIntoBlackboardJob.PCM_MODELS_PARTITION_ID, pcmModels);
-
-        // load the middleware completion
-        loadIntoBlackboard(LoadPCMModelsIntoBlackboardJob.RMI_MIDDLEWARE_PARTITION_ID,
-                this.initialModel.getMiddlewareRepository());
-
-        // load the event middleware repository
-        loadIntoBlackboard(LoadPCMModelsIntoBlackboardJob.EVENT_MIDDLEWARE_PARTITION_ID,
-                this.initialModel.getEventMiddleWareRepository());
-
-        // load monitor repository model
-        loadIntoBlackboard(LoadMonitorRepositoryModelIntoBlackboardJob.MONITOR_REPOSITORY_MODEL_PARTITION_ID,
-                this.initialModel.getMonitorRepository());
-
-        // load Usage Evolution model
-        loadIntoBlackboard(LoadUEModelIntoBlackboardJob.UE_MODEL_PARTITION_ID, this.initialModel.getUsageEvolution());
 
         // load SDM models
         final ReconfigurationRulesFolder reconfigurationRulesFolder = this.initialModel.getReconfigurationRules();
@@ -123,10 +110,6 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
                 LOGGER.info("No SDM models found, SD reconfigurations disabled.");
             }
         }
-    }
-
-    private void loadIntoBlackboard(final String partitionId, final EObject eObject) {
-        loadIntoBlackboard(partitionId, Arrays.asList(eObject));
     }
 
     private void loadIntoBlackboard(final String partitionId, final List<EObject> eObjects) {
