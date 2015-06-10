@@ -97,11 +97,15 @@ public class RepeatExperimentJob extends SequentialBlackboardInteractingJob<MDSD
 
     @Override
     public void execute(IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
-        do {
+        int repetition = 1;
+        while (!confidenceReached && (repetition <= experiment.getRepetitions())) {
+            repetition++;
             super.execute(monitor);
             analyzeLastExperimentsReconfigurationTimes();
-            this.add(new RunExperimentJob(experiment, simulationConfiguration, variationFactorTuples, 1));
-        } while (!confidenceReached);
+            RunExperimentJob runExperimentJob = new RunExperimentJob(experiment, simulationConfiguration,
+                    variationFactorTuples, 1);
+            this.add(runExperimentJob);
+        }
     }
 
     private void analyzeLastExperimentsReconfigurationTimes() {
