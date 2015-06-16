@@ -7,19 +7,19 @@
 
    <url>
       <discovery label="Palladio" url="https://sdqweb.ipd.kit.edu/eclipse/palladio/nightly"/>
-      <discovery label="Palladio Workflow Engine" url="http://sdqweb.ipd.kit.edu/eclipse/workflowengine/nightly"/>
+      <discovery label="Palladio Workflow Engine" url="https://sdqweb.ipd.kit.edu/eclipse/workflowengine/nightly"/>
       <discovery label="SimuLizar" url="https://sdqweb.ipd.kit.edu/eclipse/simulizar/nightly"/>
-      <discovery label="StoryDiagrams" url="http://sdqweb.ipd.kit.edu/eclipse/storydiagraminterpreter/nightly/"/>
-      <discovery label="Palladio Recorder Framework" url="http://sdqweb.ipd.kit.edu/eclipse/recorderframework/nightly/"/>
-      <discovery label="Palladio Probe Framework" url="http://sdqweb.ipd.kit.edu/eclipse/probeframework/nightly/"/>
-      <discovery label="Palladio Service Level Objectives" url="http://sdqweb.ipd.kit.edu/eclipse/servicelevelobjectives/nightly/"/>
-      <discovery label="Palladio Commons" url="http://sdqweb.ipd.kit.edu/eclipse/commons/nightly/"/>
-      <discovery label="Palladio Workflow Engine" url="http://sdqweb.ipd.kit.edu/eclipse/workflowengine/nightly/"/>
+      <discovery label="StoryDiagrams" url="https://sdqweb.ipd.kit.edu/eclipse/storydiagraminterpreter/nightly/"/>
+      <discovery label="Palladio Recorder Framework" url="https://sdqweb.ipd.kit.edu/eclipse/recorderframework/nightly/"/>
+      <discovery label="Palladio Probe Framework" url="https://sdqweb.ipd.kit.edu/eclipse/probeframework/nightly/"/>
+      <discovery label="Palladio Service Level Objectives" url="https://sdqweb.ipd.kit.edu/eclipse/servicelevelobjectives/nightly/"/>
+      <discovery label="Palladio Commons" url="https://sdqweb.ipd.kit.edu/eclipse/commons/nightly/"/>
+      <discovery label="Palladio Workflow Engine" url="https://sdqweb.ipd.kit.edu/eclipse/workflowengine/nightly/"/>
       <discovery label="Palladio" url="https://sdqweb.ipd.kit.edu/eclipse/palladio/nightly"/>
-      <discovery label="Feature Model" url="http://sdqweb.ipd.kit.edu/eclipse/featuremodel/nightly/"/>
-      <discovery label="EDP2" url="http://sdqweb.ipd.kit.edu/eclipse/edp2/nightly/"/>
-      <discovery label="Metric Specification Framework" url="http://sdqweb.ipd.kit.edu/eclipse/metricspec/nightly/"/>
-      <discovery label="Measurement Framework Update Site" url="http://sdqweb.ipd.kit.edu/eclipse/measurementframework/nightly/"/>
+      <discovery label="Feature Model" url="https://sdqweb.ipd.kit.edu/eclipse/featuremodel/nightly/"/>
+      <discovery label="EDP2" url="https://sdqweb.ipd.kit.edu/eclipse/edp2/nightly/"/>
+      <discovery label="Metric Specification Framework" url="https://sdqweb.ipd.kit.edu/eclipse/metricspec/nightly/"/>
+      <discovery label="Measurement Framework Update Site" url="https://sdqweb.ipd.kit.edu/eclipse/measurementframework/nightly/"/>
       <discovery label="ScaleDL Usage Evolution" url="http://cloudscale.xlab.si/cse/updatesites/usageevolution/nightly/"/>
       <discovery label="Limbo" url="http://se2.informatik.uni-wuerzburg.de/eclipse/limbo/"/>
       <discovery label="Eclipse Release" url="http://download.eclipse.org/releases/luna/"/>
