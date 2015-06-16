@@ -7,15 +7,10 @@
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
 
-   <description url="http://www.example.com/description">
-      [Enter Feature Description here.]
+   <description url="https://sdqweb.ipd.kit.edu/wiki/Palladio_Experiment_Automation">
+      Experiment Automation adapter for SimuLizar.
    </description>
 
-   <copyright url="http://www.example.com/copyright">
-      [Enter Copyright Description here.]
-   </copyright>
-
-   
    <requires>
       <import plugin="de.uka.ipd.sdq.workflow.mdsd"/>
       <import plugin="org.palladiosimulator.experimentautomation"/>

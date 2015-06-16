@@ -7,14 +7,9 @@
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
 
-   <description url="http://www.example.com/description">
-      [Enter Feature Description here.]
+   <description url="https://sdqweb.ipd.kit.edu/wiki/Palladio_Experiment_Automation">
+      The Palladio Experiment Automation enables automatic execution of Palladio simulation runs. Allows to specify experiment runs for arbitrary solvers within a model; also supports experiment variations, e.g., for sensitivity analyses.
    </description>
-
-   <copyright url="http://www.example.com/copyright">
-      [Enter Copyright Description here.]
-   </copyright>
-
    
    <requires>
       <import plugin="org.eclipse.core.runtime" version="3.10.0" match="greaterOrEqual"/>

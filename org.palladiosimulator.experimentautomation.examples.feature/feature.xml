@@ -7,14 +7,9 @@
       license-feature="org.palladiosimulator.license"
       license-feature-version="1.0.0">
 
-   <description url="http://www.example.com/description">
-      [Enter Feature Description here.]
+   <description url="https://sdqweb.ipd.kit.edu/wiki/Palladio_Experiment_Automation">
+      Experiment Automation examples.
    </description>
-
-   <copyright url="http://www.example.com/copyright">
-      [Enter Copyright Description here.]
-   </copyright>
-
    
    <plugin
          id="org.palladiosimulator.experimentautomation.examples.espresso"
