@@ -33,7 +33,7 @@
       <import plugin="org.eclipse.emf.edit" version="2.10.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.identifier.edit" version="2.1.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.metricspec.edit" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.pcm.edit" version="3.6.0" match="greaterOrEqual"/>
+      <import plugin="org.palladiosimulator.pcm.edit" version="3.6.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.monitorrepository.edit" version="2.0.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.probfunction.edit" version="2.1.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.servicelevelobjective.edit"/>
