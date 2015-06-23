@@ -1,6 +1,6 @@
 package org.palladiosimulator.experimentautomation.application.utils;
 
-import de.uka.ipd.sdq.pcm.core.entity.Entity;
+import org.palladiosimulator.pcm.core.entity.Entity;
 
 public class PCMModelHelper {
 

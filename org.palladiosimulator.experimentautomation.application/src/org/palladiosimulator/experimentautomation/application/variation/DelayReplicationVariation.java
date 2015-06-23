@@ -2,10 +2,10 @@ package org.palladiosimulator.experimentautomation.application.variation;
 
 //package org.palladiosimulator.experimentautomation.application.variation;
 //
-//import de.uka.ipd.sdq.pcm.core.CoreFactory;
-//import de.uka.ipd.sdq.pcm.core.PCMRandomVariable;
-//import de.uka.ipd.sdq.pcm.usagemodel.Delay;
-//import de.uka.ipd.sdq.pcm.usagemodel.UsagemodelFactory;
+//import org.palladiosimulator.pcm.core.CoreFactory;
+//import org.palladiosimulator.pcm.core.PCMRandomVariable;
+//import org.palladiosimulator.pcm.usagemodel.Delay;
+//import org.palladiosimulator.pcm.usagemodel.UsagemodelFactory;
 //
 //public class DelayReplicationVariation extends AbstractUserActionReplicationVariation<Delay> {
 //

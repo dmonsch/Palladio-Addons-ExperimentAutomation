@@ -4,7 +4,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.experimentautomation.application.utils.EcoreHelper;
 import org.palladiosimulator.experimentautomation.application.utils.PCMModelHelper;
 
-import de.uka.ipd.sdq.pcm.usagemodel.AbstractUserAction;
+import org.palladiosimulator.pcm.usagemodel.AbstractUserAction;
 
 public class AbstractUserActionReplication implements IVariationStrategy<Long> {
 

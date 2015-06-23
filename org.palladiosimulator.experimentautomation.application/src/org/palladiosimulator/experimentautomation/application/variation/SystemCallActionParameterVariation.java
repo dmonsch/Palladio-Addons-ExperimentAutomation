@@ -4,10 +4,10 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
 
-import de.uka.ipd.sdq.pcm.core.CoreFactory;
-import de.uka.ipd.sdq.pcm.core.PCMRandomVariable;
-import de.uka.ipd.sdq.pcm.parameter.VariableUsage;
-import de.uka.ipd.sdq.pcm.usagemodel.EntryLevelSystemCall;
+import org.palladiosimulator.pcm.core.CoreFactory;
+import org.palladiosimulator.pcm.core.PCMRandomVariable;
+import org.palladiosimulator.pcm.parameter.VariableUsage;
+import org.palladiosimulator.pcm.usagemodel.EntryLevelSystemCall;
 
 public class SystemCallActionParameterVariation implements IVariationStrategy<Double> {
 

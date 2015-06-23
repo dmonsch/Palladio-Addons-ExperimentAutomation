@@ -7,10 +7,10 @@ import org.palladiosimulator.monitorrepository.MonitorRepository;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
 import org.scaledl.usageevolution.UsageEvolution;
 
-import de.uka.ipd.sdq.pcm.allocation.Allocation;
-import de.uka.ipd.sdq.pcm.repository.Repository;
-import de.uka.ipd.sdq.pcm.resourceenvironment.ResourceEnvironment;
-import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
+import org.palladiosimulator.pcm.allocation.Allocation;
+import org.palladiosimulator.pcm.repository.Repository;
+import org.palladiosimulator.pcm.resourceenvironment.ResourceEnvironment;
+import org.palladiosimulator.pcm.usagemodel.UsageModel;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Initial Model</b></em>'.
@@ -296,12 +296,12 @@ public interface InitialModel extends CDOObject {
      * <!-- end-user-doc -->
      * 
      * @return the value of the '<em>System</em>' reference.
-     * @see #setSystem(de.uka.ipd.sdq.pcm.system.System)
+     * @see #setSystem(org.palladiosimulator.pcm.system.System)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_System()
      * @model
      * @generated
      */
-    de.uka.ipd.sdq.pcm.system.System getSystem();
+    org.palladiosimulator.pcm.system.System getSystem();
 
     /**
      * Sets the value of the '
@@ -313,7 +313,7 @@ public interface InitialModel extends CDOObject {
      * @see #getSystem()
      * @generated
      */
-    void setSystem(de.uka.ipd.sdq.pcm.system.System value);
+    void setSystem(org.palladiosimulator.pcm.system.System value);
 
     /**
      * Returns the value of the '<em><b>Resource Environment</b></em>' reference. <!--

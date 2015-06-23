@@ -11,10 +11,10 @@ import org.palladiosimulator.monitorrepository.MonitorRepository;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
 import org.scaledl.usageevolution.UsageEvolution;
 
-import de.uka.ipd.sdq.pcm.allocation.Allocation;
-import de.uka.ipd.sdq.pcm.repository.Repository;
-import de.uka.ipd.sdq.pcm.resourceenvironment.ResourceEnvironment;
-import de.uka.ipd.sdq.pcm.usagemodel.UsageModel;
+import org.palladiosimulator.pcm.allocation.Allocation;
+import org.palladiosimulator.pcm.repository.Repository;
+import org.palladiosimulator.pcm.resourceenvironment.ResourceEnvironment;
+import org.palladiosimulator.pcm.usagemodel.UsageModel;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Initial Model</b></em>'.
@@ -355,8 +355,8 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
      * @generated
      */
     @Override
-    public de.uka.ipd.sdq.pcm.system.System getSystem() {
-        return (de.uka.ipd.sdq.pcm.system.System) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__SYSTEM,
+    public org.palladiosimulator.pcm.system.System getSystem() {
+        return (org.palladiosimulator.pcm.system.System) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__SYSTEM,
                 ExperimentsPackage.Literals.INITIAL_MODEL__SYSTEM, true, true);
     }
 
@@ -365,8 +365,8 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
      * 
      * @generated
      */
-    public de.uka.ipd.sdq.pcm.system.System basicGetSystem() {
-        return (de.uka.ipd.sdq.pcm.system.System) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__SYSTEM,
+    public org.palladiosimulator.pcm.system.System basicGetSystem() {
+        return (org.palladiosimulator.pcm.system.System) this.eDynamicGet(ExperimentsPackage.INITIAL_MODEL__SYSTEM,
                 ExperimentsPackage.Literals.INITIAL_MODEL__SYSTEM, false, true);
     }
 
@@ -376,7 +376,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
      * @generated
      */
     @Override
-    public void setSystem(final de.uka.ipd.sdq.pcm.system.System newSystem) {
+    public void setSystem(final org.palladiosimulator.pcm.system.System newSystem) {
         this.eDynamicSet(ExperimentsPackage.INITIAL_MODEL__SYSTEM, ExperimentsPackage.Literals.INITIAL_MODEL__SYSTEM,
                 newSystem);
     }
@@ -545,7 +545,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
             this.setRepository((Repository) newValue);
             return;
         case ExperimentsPackage.INITIAL_MODEL__SYSTEM:
-            this.setSystem((de.uka.ipd.sdq.pcm.system.System) newValue);
+            this.setSystem((org.palladiosimulator.pcm.system.System) newValue);
             return;
         case ExperimentsPackage.INITIAL_MODEL__RESOURCE_ENVIRONMENT:
             this.setResourceEnvironment((ResourceEnvironment) newValue);
@@ -590,7 +590,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
             this.setRepository((Repository) null);
             return;
         case ExperimentsPackage.INITIAL_MODEL__SYSTEM:
-            this.setSystem((de.uka.ipd.sdq.pcm.system.System) null);
+            this.setSystem((org.palladiosimulator.pcm.system.System) null);
             return;
         case ExperimentsPackage.INITIAL_MODEL__RESOURCE_ENVIRONMENT:
             this.setResourceEnvironment((ResourceEnvironment) null);

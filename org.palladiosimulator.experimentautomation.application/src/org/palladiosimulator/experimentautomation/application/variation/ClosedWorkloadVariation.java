@@ -4,8 +4,8 @@ import org.apache.log4j.Logger;
 import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.experimentautomation.application.utils.PCMModelHelper;
 
-import de.uka.ipd.sdq.pcm.usagemodel.ClosedWorkload;
-import de.uka.ipd.sdq.pcm.usagemodel.UsageScenario;
+import org.palladiosimulator.pcm.usagemodel.ClosedWorkload;
+import org.palladiosimulator.pcm.usagemodel.UsageScenario;
 
 public class ClosedWorkloadVariation implements IVariationStrategy<Long> {
 
