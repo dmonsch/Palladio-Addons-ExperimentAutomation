@@ -3,6 +3,7 @@ package org.palladiosimulator.experimentautomation.application.jobs;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.palladiosimulator.analyzer.workflow.jobs.LoadPCMModelsIntoBlackboardJob;
 import org.palladiosimulator.experimentautomation.application.utils.EcoreHelper;
 import org.palladiosimulator.experimentautomation.application.variation.IVariationStrategy;
 import org.palladiosimulator.experimentautomation.application.variation.VariationStrategyFactory;
@@ -13,7 +14,6 @@ import de.uka.ipd.sdq.workflow.jobs.SequentialBlackboardInteractingJob;
 import de.uka.ipd.sdq.workflow.jobs.UserCanceledException;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.MDSDBlackboard;
 import de.uka.ipd.sdq.workflow.mdsd.blackboard.ResourceSetPartition;
-import de.uka.ipd.sdq.workflow.pcm.jobs.LoadPCMModelsIntoBlackboardJob;
 
 public class ObjectModificationJob extends SequentialBlackboardInteractingJob<MDSDBlackboard> {
 
