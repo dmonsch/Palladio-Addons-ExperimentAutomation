@@ -114,21 +114,21 @@
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="InitialModel">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="usageModel" eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//usagemodel/UsageModel"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="allocation" eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="usageModel" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//usagemodel/UsageModel"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allocation" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="middlewareRepository"
-          lowerBound="1" eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Repository"/>
+          lowerBound="1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Repository"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="eventMiddleWareRepository"
-          lowerBound="1" eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Repository"/>
+          lowerBound="1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Repository"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="reconfigurationRules"
           eType="#//experiments/ReconfigurationRulesFolder"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="monitorRepository" eType="ecore:EClass platform:/plugin/org.palladiosimulator.monitorrepository/model/monitorrepository.ecore#//MonitorRepository"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="serviceLevelObjectives"
           eType="ecore:EClass platform:/plugin/org.palladiosimulator.servicelevelobjective/model/servicelevelobjective.ecore#//ServiceLevelObjectiveRepository"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="repository" eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Repository"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="system" eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//system/System"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="repository" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Repository"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="system" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//system/System"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="resourceEnvironment"
-          eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//resourceenvironment/ResourceEnvironment"/>
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/ResourceEnvironment"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="usageEvolution" eType="ecore:EClass platform:/plugin/org.scaledl.usageevolution/model/usageevolution.ecore#//UsageEvolution"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ReconfigurationRulesFolder">

@@ -3,7 +3,7 @@
   <models xmi:type="ecore:EPackage" href="experimentautomation.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="http://www.eclipse.org/emf/2002/Ecore#/"/>
-  <models xmi:type="ecore:EPackage" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#/"/>
+  <models xmi:type="ecore:EPackage" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/org.palladiosimulator.monitorrepository/model/monitorrepository.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/org.palladiosimulator.edp2/model/EDP2.ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore#/"/>
@@ -21,7 +21,7 @@
   <models xmi:type="genmodel_1:GenModel" href="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#/"/>
   <models xmi:type="genmodel_1:GenModel" href="platform:/plugin/org.palladiosimulator.metricspec/model/metricspec.genmodel#/"/>
   <models xmi:type="genmodel_1:GenModel" href="platform:/plugin/org.palladiosimulator.monitorrepository/model/monitorrepository.genmodel#/"/>
-  <models xmi:type="genmodel:GenModel" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.genmodel#/"/>
+  <models xmi:type="genmodel:GenModel" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.genmodel#/"/>
   <models xmi:type="genmodel:GenModel" href="platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#/"/>
   <models xmi:type="genmodel_1:GenModel" href="platform:/plugin/org.palladiosimulator.servicelevelobjective/model/servicelevelobjective.genmodel#/"/>
   <models xmi:type="genmodel:GenModel" href="platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#/"/>
@@ -2373,7 +2373,7 @@
               </value>
             </value>
             <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="_kIBmsEDAEeSLb91TFw18Yg">
-              <key xmi:type="ecore:EReference" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/system_Allocation"/>
+              <key xmi:type="ecore:EReference" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/system_Allocation"/>
               <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="_kIBmsUDAEeSLb91TFw18Yg" key="_kIAYkEDAEeSLb91TFw18Yg">
                 <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="_kIBmtUDAEeSLb91TFw18Yg" value="_kIBmskDAEeSLb91TFw18Yg">
                   <key xmi:type="ecore:EPackage" href="experimentautomation.ecore#//experiments"/>
@@ -3266,8 +3266,8 @@
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Related%20EClasses']/@containerMappings[name='EC%20External%20EClasses']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_-g5WxRZhEeSOwq7oB4WALw" name="UsageModel" visible="false" tooltipText="" incomingEdges="_-h6DYBZhEeSOwq7oB4WALw">
-        <target xmi:type="ecore:EClass" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//usagemodel/UsageModel"/>
-        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//usagemodel/UsageModel"/>
+        <target xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//usagemodel/UsageModel"/>
+        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//usagemodel/UsageModel"/>
         <decorations xmi:type="viewpoint:Decoration" xmi:id="_-hvrURZhEeSOwq7oB4WALw">
           <description xmi:type="description:SemanticBasedDecoration" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='External']"/>
         </decorations>
@@ -3284,8 +3284,8 @@
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Related%20EClasses']/@containerMappings[name='EC%20External%20EClasses']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_-g591RZhEeSOwq7oB4WALw" name="Allocation" visible="false" tooltipText="" outgoingEdges="_oTPC5kDAEeSLb91TFw18Yg _8Ow9NkDAEeSLb91TFw18Yg" incomingEdges="_-h7RgBZhEeSOwq7oB4WALw">
-        <target xmi:type="ecore:EClass" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation"/>
-        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation"/>
+        <target xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation"/>
+        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation"/>
         <decorations xmi:type="viewpoint:Decoration" xmi:id="_-hvrUhZhEeSOwq7oB4WALw">
           <description xmi:type="description:SemanticBasedDecoration" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='External']"/>
         </decorations>
@@ -3301,10 +3301,10 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Related%20EClasses']/@containerMappings[name='EC%20External%20EClasses']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_-g-PQBZhEeSOwq7oB4WALw" name="EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce(diagnostics EDiagnosticChain, context EMap) : EBoolean" visible="false" tooltipText="EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce(diagnostics, context) : EBoolean">
-          <target xmi:type="ecore:EOperation" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce"/>
-          <semanticElements xmi:type="ecore:EOperation" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce"/>
-          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce/context"/>
-          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce/diagnostics"/>
+          <target xmi:type="ecore:EOperation" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce"/>
+          <semanticElements xmi:type="ecore:EOperation" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce"/>
+          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce/context"/>
+          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce/diagnostics"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_-hP8EBZhEeSOwq7oB4WALw" labelAlignment="LEFT">
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_-hP8ERZhEeSOwq7oB4WALw"/>
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
@@ -3314,10 +3314,10 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_-hQjIBZhEeSOwq7oB4WALw" name="CommunicatingServersHaveToBeConnectedByLinkingResource(diagnostics EDiagnosticChain, context EMap) : EBoolean" visible="false" tooltipText="CommunicatingServersHaveToBeConnectedByLinkingResource(diagnostics, context) : EBoolean">
-          <target xmi:type="ecore:EOperation" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/CommunicatingServersHaveToBeConnectedByLinkingResource"/>
-          <semanticElements xmi:type="ecore:EOperation" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/CommunicatingServersHaveToBeConnectedByLinkingResource"/>
-          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/CommunicatingServersHaveToBeConnectedByLinkingResource/context"/>
-          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/CommunicatingServersHaveToBeConnectedByLinkingResource/diagnostics"/>
+          <target xmi:type="ecore:EOperation" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/CommunicatingServersHaveToBeConnectedByLinkingResource"/>
+          <semanticElements xmi:type="ecore:EOperation" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/CommunicatingServersHaveToBeConnectedByLinkingResource"/>
+          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/CommunicatingServersHaveToBeConnectedByLinkingResource/context"/>
+          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/CommunicatingServersHaveToBeConnectedByLinkingResource/diagnostics"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_-hRKMBZhEeSOwq7oB4WALw" labelAlignment="LEFT">
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_-hRKMRZhEeSOwq7oB4WALw"/>
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
@@ -3328,8 +3328,8 @@
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_-g7zBRZhEeSOwq7oB4WALw" name="Repository" visible="false" tooltipText="" incomingEdges="_-h74kBZhEeSOwq7oB4WALw _-h9GsBZhEeSOwq7oB4WALw _O-0YUEDAEeSLb91TFw18Yg">
-        <target xmi:type="ecore:EClass" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Repository"/>
-        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Repository"/>
+        <target xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Repository"/>
+        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Repository"/>
         <decorations xmi:type="viewpoint:Decoration" xmi:id="_-hvrUxZhEeSOwq7oB4WALw">
           <description xmi:type="description:SemanticBasedDecoration" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='External']"/>
         </decorations>
@@ -3345,8 +3345,8 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Related%20EClasses']/@containerMappings[name='EC%20External%20EClasses']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_-hTmcBZhEeSOwq7oB4WALw" name="repositoryDescription : EString" visible="false" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Repository/repositoryDescription"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Repository/repositoryDescription"/>
+          <target xmi:type="ecore:EAttribute" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Repository/repositoryDescription"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Repository/repositoryDescription"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_-hU0kBZhEeSOwq7oB4WALw" labelAlignment="LEFT">
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_-hU0kRZhEeSOwq7oB4WALw"/>
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
@@ -3703,8 +3703,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_yGiTQBffEeSoUsjueZK-JA" name="Allocation" tooltipText="" outgoingEdges="_kIAYkEDAEeSLb91TFw18Yg _zxt4YEDAEeSLb91TFw18Yg" incomingEdges="_yHUWYBffEeSoUsjueZK-JA" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation"/>
-        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation"/>
+        <target xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation"/>
+        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation"/>
         <decorations xmi:type="viewpoint:Decoration" xmi:id="_yHOPwBffEeSoUsjueZK-JA">
           <description xmi:type="description:SemanticBasedDecoration" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='External']"/>
         </decorations>
@@ -3720,10 +3720,10 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_yHLzgBffEeSoUsjueZK-JA" name="EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce(diagnostics EDiagnosticChain, context EMap) : EBoolean" tooltipText="EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce(diagnostics, context) : EBoolean">
-          <target xmi:type="ecore:EOperation" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce"/>
-          <semanticElements xmi:type="ecore:EOperation" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce"/>
-          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce/context"/>
-          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce/diagnostics"/>
+          <target xmi:type="ecore:EOperation" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce"/>
+          <semanticElements xmi:type="ecore:EOperation" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce"/>
+          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce/context"/>
+          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce/diagnostics"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_yHMakBffEeSoUsjueZK-JA" labelAlignment="LEFT">
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_yHMakRffEeSoUsjueZK-JA"/>
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
@@ -3733,10 +3733,10 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
         </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_yHMalBffEeSoUsjueZK-JA" name="CommunicatingServersHaveToBeConnectedByLinkingResource(diagnostics EDiagnosticChain, context EMap) : EBoolean" tooltipText="CommunicatingServersHaveToBeConnectedByLinkingResource(diagnostics, context) : EBoolean">
-          <target xmi:type="ecore:EOperation" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/CommunicatingServersHaveToBeConnectedByLinkingResource"/>
-          <semanticElements xmi:type="ecore:EOperation" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/CommunicatingServersHaveToBeConnectedByLinkingResource"/>
-          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/CommunicatingServersHaveToBeConnectedByLinkingResource/context"/>
-          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/CommunicatingServersHaveToBeConnectedByLinkingResource/diagnostics"/>
+          <target xmi:type="ecore:EOperation" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/CommunicatingServersHaveToBeConnectedByLinkingResource"/>
+          <semanticElements xmi:type="ecore:EOperation" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/CommunicatingServersHaveToBeConnectedByLinkingResource"/>
+          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/CommunicatingServersHaveToBeConnectedByLinkingResource/context"/>
+          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/CommunicatingServersHaveToBeConnectedByLinkingResource/diagnostics"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_yHNBoBffEeSoUsjueZK-JA" labelAlignment="LEFT">
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_yHNBoRffEeSoUsjueZK-JA"/>
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
@@ -3765,8 +3765,8 @@
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_yGl9oBffEeSoUsjueZK-JA" name="Repository" tooltipText="" incomingEdges="_yHU9cBffEeSoUsjueZK-JA _yHVkgBffEeSoUsjueZK-JA _O-zKMEDAEeSLb91TFw18Yg" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Repository"/>
-        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Repository"/>
+        <target xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Repository"/>
+        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Repository"/>
         <decorations xmi:type="viewpoint:Decoration" xmi:id="_yHOPwhffEeSoUsjueZK-JA">
           <description xmi:type="description:SemanticBasedDecoration" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='External']"/>
         </decorations>
@@ -3782,8 +3782,8 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_yHNBpBffEeSoUsjueZK-JA" name="repositoryDescription : EString" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Repository/repositoryDescription"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Repository/repositoryDescription"/>
+          <target xmi:type="ecore:EAttribute" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Repository/repositoryDescription"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Repository/repositoryDescription"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_yHNosBffEeSoUsjueZK-JA" labelAlignment="LEFT">
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_yHNosRffEeSoUsjueZK-JA"/>
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
@@ -3794,8 +3794,8 @@
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_yGmktRffEeSoUsjueZK-JA" name="UsageModel" tooltipText="" incomingEdges="_yHTIQBffEeSoUsjueZK-JA" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//usagemodel/UsageModel"/>
-        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//usagemodel/UsageModel"/>
+        <target xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//usagemodel/UsageModel"/>
+        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//usagemodel/UsageModel"/>
         <decorations xmi:type="viewpoint:Decoration" xmi:id="_yHOPwxffEeSoUsjueZK-JA">
           <description xmi:type="description:SemanticBasedDecoration" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='External']"/>
         </decorations>
@@ -3939,8 +3939,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_kGlcQEDAEeSLb91TFw18Yg" name="System" tooltipText="" incomingEdges="_kIAYkEDAEeSLb91TFw18Yg _oTOb0EDAEeSLb91TFw18Yg _oTPC5kDAEeSLb91TFw18Yg" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//system/System"/>
-        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//system/System"/>
+        <target xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//system/System"/>
+        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//system/System"/>
         <decorations xmi:type="viewpoint:Decoration" xmi:id="_kH1ZcEDAEeSLb91TFw18Yg">
           <description xmi:type="description:SemanticBasedDecoration" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='External']"/>
         </decorations>
@@ -3956,10 +3956,10 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_kHy9MEDAEeSLb91TFw18Yg" name="SystemMustHaveAtLeastOneProvidedRole(diagnostics EDiagnosticChain, context EMap) : EBoolean" tooltipText="SystemMustHaveAtLeastOneProvidedRole(diagnostics, context) : EBoolean">
-          <target xmi:type="ecore:EOperation" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//system/System/SystemMustHaveAtLeastOneProvidedRole"/>
-          <semanticElements xmi:type="ecore:EOperation" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//system/System/SystemMustHaveAtLeastOneProvidedRole"/>
-          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//system/System/SystemMustHaveAtLeastOneProvidedRole/context"/>
-          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//system/System/SystemMustHaveAtLeastOneProvidedRole/diagnostics"/>
+          <target xmi:type="ecore:EOperation" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//system/System/SystemMustHaveAtLeastOneProvidedRole"/>
+          <semanticElements xmi:type="ecore:EOperation" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//system/System/SystemMustHaveAtLeastOneProvidedRole"/>
+          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//system/System/SystemMustHaveAtLeastOneProvidedRole/context"/>
+          <semanticElements xmi:type="ecore:EParameter" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//system/System/SystemMustHaveAtLeastOneProvidedRole/diagnostics"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_kHzkQEDAEeSLb91TFw18Yg" labelAlignment="LEFT">
             <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_kHzkQUDAEeSLb91TFw18Yg"/>
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
@@ -3970,8 +3970,8 @@
         </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_kIAYkEDAEeSLb91TFw18Yg" name="[1..1] system_Allocation" sourceNode="_yGiTQBffEeSoUsjueZK-JA" targetNode="_kGlcQEDAEeSLb91TFw18Yg">
-        <target xmi:type="ecore:EReference" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/system_Allocation"/>
-        <semanticElements xmi:type="ecore:EReference" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/system_Allocation"/>
+        <target xmi:type="ecore:EReference" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/system_Allocation"/>
+        <semanticElements xmi:type="ecore:EReference" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/system_Allocation"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_kIBmtkDAEeSLb91TFw18Yg" description="_kIBmskDAEeSLb91TFw18Yg" routingStyle="manhattan">
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_kIBmt0DAEeSLb91TFw18Yg"/>
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_kIBmuEDAEeSLb91TFw18Yg" labelFormat="bold" showIcon="false">
@@ -4003,8 +4003,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_oTPC5kDAEeSLb91TFw18Yg" name="[1..1] system_Allocation" visible="false" sourceNode="_-g591RZhEeSOwq7oB4WALw" targetNode="_kGlcQEDAEeSLb91TFw18Yg">
-        <target xmi:type="ecore:EReference" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/system_Allocation"/>
-        <semanticElements xmi:type="ecore:EReference" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/system_Allocation"/>
+        <target xmi:type="ecore:EReference" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/system_Allocation"/>
+        <semanticElements xmi:type="ecore:EReference" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/system_Allocation"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_oTPp9UDAEeSLb91TFw18Yg" description="_oTPp8UDAEeSLb91TFw18Yg" routingStyle="manhattan">
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_oTPp9kDAEeSLb91TFw18Yg"/>
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_oTPp90DAEeSLb91TFw18Yg" labelFormat="bold" showIcon="false">
@@ -4019,8 +4019,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_zxHbcEDAEeSLb91TFw18Yg" name="ResourceEnvironment" tooltipText="" incomingEdges="_zxt4YEDAEeSLb91TFw18Yg _8OwWIEDAEeSLb91TFw18Yg _8Ow9NkDAEeSLb91TFw18Yg" width="12" height="10">
-        <target xmi:type="ecore:EClass" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//resourceenvironment/ResourceEnvironment"/>
-        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//resourceenvironment/ResourceEnvironment"/>
+        <target xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/ResourceEnvironment"/>
+        <semanticElements xmi:type="ecore:EClass" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/ResourceEnvironment"/>
         <decorations xmi:type="viewpoint:Decoration" xmi:id="_zxmjoEDAEeSLb91TFw18Yg">
           <description xmi:type="description:SemanticBasedDecoration" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='External']"/>
         </decorations>
@@ -4037,8 +4037,8 @@
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_zxt4YEDAEeSLb91TFw18Yg" name="[0..1] targetResourceEnvironment_Allocation" sourceNode="_yGiTQBffEeSoUsjueZK-JA" targetNode="_zxHbcEDAEeSLb91TFw18Yg">
-        <target xmi:type="ecore:EReference" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/targetResourceEnvironment_Allocation"/>
-        <semanticElements xmi:type="ecore:EReference" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/targetResourceEnvironment_Allocation"/>
+        <target xmi:type="ecore:EReference" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/targetResourceEnvironment_Allocation"/>
+        <semanticElements xmi:type="ecore:EReference" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/targetResourceEnvironment_Allocation"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_zxt4YUDAEeSLb91TFw18Yg" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_zxt4YkDAEeSLb91TFw18Yg"/>
@@ -4071,8 +4071,8 @@
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_8Ow9NkDAEeSLb91TFw18Yg" name="[0..1] targetResourceEnvironment_Allocation" visible="false" sourceNode="_-g591RZhEeSOwq7oB4WALw" targetNode="_zxHbcEDAEeSLb91TFw18Yg">
-        <target xmi:type="ecore:EReference" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/targetResourceEnvironment_Allocation"/>
-        <semanticElements xmi:type="ecore:EReference" href="platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//allocation/Allocation/targetResourceEnvironment_Allocation"/>
+        <target xmi:type="ecore:EReference" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/targetResourceEnvironment_Allocation"/>
+        <semanticElements xmi:type="ecore:EReference" href="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation/targetResourceEnvironment_Allocation"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_8Ow9N0DAEeSLb91TFw18Yg" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']/@style"/>
           <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_8Ow9OEDAEeSLb91TFw18Yg"/>
