@@ -9,7 +9,7 @@
    <description url="https://sdqweb.ipd.kit.edu/wiki/Palladio_Experiment_Automation">
       Experiment Automation adapter for SimuCom.
    </description>
-   
+
    <requires>
       <import plugin="de.uka.ipd.sdq.simulation" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.simucomframework" version="2.0.0" match="greaterOrEqual"/>
@@ -26,11 +26,15 @@
       <import plugin="org.palladiosimulator.edp2" version="2.0.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.identifier" version="2.1.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.metricspec" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="de.uka.ipd.sdq.pcm" version="3.6.0" match="greaterOrEqual"/>
+      <import plugin="org.palladiosimulator.pcm" version="3.6.0" match="greaterOrEqual"/>
       <import plugin="org.palladiosimulator.monitorrepository" version="2.0.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.probfunction" version="2.1.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.stoex" version="2.2.0" match="greaterOrEqual"/>
       <import plugin="de.uka.ipd.sdq.units" version="2.1.0" match="greaterOrEqual"/>
+      <import plugin="org.palladiosimulator.recorderframework"/>
+      <import plugin="org.palladiosimulator.servicelevelobjective"/>
+      <import plugin="org.scaledl.usageevolution"/>
+      <import plugin="tools.descartes.dlim.generator"/>
    </requires>
 
    <plugin
