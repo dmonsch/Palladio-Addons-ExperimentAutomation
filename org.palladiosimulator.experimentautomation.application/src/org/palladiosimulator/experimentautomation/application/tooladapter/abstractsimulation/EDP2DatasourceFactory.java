@@ -6,7 +6,7 @@ import org.eclipse.emf.common.util.URI;
 import org.palladiosimulator.edp2.impl.RepositoryManager;
 import org.palladiosimulator.edp2.models.Repository.Repository;
 import org.palladiosimulator.edp2.models.Repository.RepositoryFactory;
-import org.palladiosimulator.edp2.models.Repository.impl.LocalDirectoryRepositoryImpl;
+import org.palladiosimulator.edp2.repository.local.LocalDirectoryRepositoryHelper;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
 import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource;
 import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource;
@@ -15,7 +15,7 @@ public class EDP2DatasourceFactory {
 
     /**
      * Loads an EDP2 repository based on the given data source.
-     * 
+     *
      * @param datasource
      *            The data source to be used for loading, e.g., a memory or a file data source.
      * @return The repository corresponding to the given data source.
@@ -34,12 +34,12 @@ public class EDP2DatasourceFactory {
             final FileDatasource fileDatasource = (FileDatasource) datasource;
             final File file = new File(fileDatasource.getLocation());
             final String repositoryID = URI.createFileURI(file.getAbsolutePath()).toString();
-            final LocalDirectoryRepositoryImpl ldRepository = (LocalDirectoryRepositoryImpl) RepositoryManager
+            final Repository ldRepository = RepositoryManager
                     .getRepositoryFromUUID(repositoryID);
 
             if (ldRepository == null) {
                 // create LocalDirectory Repository
-                repository = RepositoryManager.initializeLocalDirectoryRepository(file);
+                repository = LocalDirectoryRepositoryHelper.initializeLocalDirectoryRepository(file);
             } else {
                 // found existing LocalDirectory Repository
                 repository = ldRepository;
