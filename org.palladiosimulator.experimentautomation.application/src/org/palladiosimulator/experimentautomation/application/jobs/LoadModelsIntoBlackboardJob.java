@@ -1,19 +1,15 @@
 package org.palladiosimulator.experimentautomation.application.jobs;
 
-import java.io.File;
-import java.io.FilenameFilter;
-import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.analyzer.workflow.jobs.LoadPCMModelsIntoBlackboardJob;
+import org.palladiosimulator.commons.eclipseutils.FileHelper;
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
 import org.palladiosimulator.simulizar.reconfiguration.storydiagram.jobs.LoadSDMModelsIntoBlackboardJob;
@@ -71,45 +67,36 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
             if (LOGGER.isEnabledFor(Level.INFO)) {
                 LOGGER.info("Loading models for partition " + LoadSDMModelsIntoBlackboardJob.SDM_MODEL_PARTITION_ID);
             }
-            // add file protocol only if necessary
-            File folder = null;
-            if (!reconfigurationRulesFolder.getFolderUri().startsWith("platform:")) {
-                final String filePath = "file:///" + reconfigurationRulesFolder.getFolderUri();
-                final URI pathToSDM = URI.createURI(filePath);
 
-                folder = new File(pathToSDM.toFileString());
-            } else {
-                try {
-                    final URL pathURL = FileLocator.resolve(new URL(reconfigurationRulesFolder.getFolderUri()));
-                    final String folderString = pathURL.toExternalForm().replace("file:", "");
-
-                    folder = new File(folderString);
-                } catch (final IOException e) {
-                    LOGGER.warn("No SDM models found, SD reconfigurations disabled.", e);
-                    return;
-                }
-            }
-
-            if (!folder.exists()) {
-                LOGGER.warn("Folder " + folder + " does not exist. No reconfiguration rules will be loaded.");
-                return;
-            }
-            final File[] files = folder.listFiles(new FilenameFilter() {
-
-                @Override
-                public boolean accept(final File dir, final String name) {
-                    return name.endsWith(LoadSDMModelsIntoBlackboardJob.STORYDIAGRAMS_FILE_EXTENSION);
-                }
-            });
-            if (files != null && files.length > 0) {
-                for (final File file : files) {
+            final URI[] files = getStoryDiagramFiles(reconfigurationRulesFolder.getFolderUri());
+            if (files.length > 0) {
+                for (final URI file : files) {
                     this.getBlackboard().getPartition(LoadSDMModelsIntoBlackboardJob.SDM_MODEL_PARTITION_ID)
-                            .loadModel(URI.createFileURI(file.getPath()));
+                            .loadModel(file);
                 }
             } else {
                 LOGGER.info("No SDM models found, SD reconfigurations disabled.");
             }
         }
+    }
+
+    /**
+     * Gets the StoryDiagram files within the specified path.
+     * 
+     * @param path
+     *            Path to reconfiguration rules.
+     * @return The StoryDiagram files within the given path. Returns an empty array in case no files
+     *         are found.
+     */
+    private URI[] getStoryDiagramFiles(final String path) {
+        if (path.equals("")) {
+            if (LOGGER.isDebugEnabled()) {
+                LOGGER.debug("No path to Story Diagrams given.");
+            }
+            return new URI[0];
+        }
+
+        return FileHelper.getURIs(path, LoadSDMModelsIntoBlackboardJob.STORYDIAGRAMS_FILE_EXTENSION);
     }
 
     private void loadIntoBlackboard(final String partitionId, final List<EObject> eObjects) {
