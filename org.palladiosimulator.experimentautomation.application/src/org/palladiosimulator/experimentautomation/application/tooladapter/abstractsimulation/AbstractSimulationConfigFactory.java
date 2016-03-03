@@ -28,8 +28,6 @@ import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
  */
 public class AbstractSimulationConfigFactory {
 
-    public static final String EDP2_ID = "Experiment Data Persistency & Presentation (EDP2)";
-
     /**
      * Fills out the run configuration features of an {@link AbstractSimulationConfig}.
      * 
@@ -60,7 +58,8 @@ public class AbstractSimulationConfigFactory {
                 computeExperimentSettingName(simConfig, variationFactorTuples));
 
         /** Simulation Results */
-        map.put(AbstractSimulationConfig.PERSISTENCE_RECORDER_NAME, EDP2_ID);
+        map.put(AbstractSimulationConfig.PERSISTENCE_RECORDER_NAME,
+                org.palladiosimulator.recorderframework.edp2.Activator.EDP2_ID);
         map.put(EDP2RecorderConfigurationFactory.REPOSITORY_ID, getPersistenceRecorder(simConfig.getDatasource()));
 
         /** Stop Conditions */
