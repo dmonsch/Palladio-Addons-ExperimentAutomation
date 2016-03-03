@@ -28,7 +28,7 @@ import de.uka.ipd.sdq.simulation.AbstractSimulationConfig;
  */
 public class AbstractSimulationConfigFactory {
 
-    private static final String EDP2_ID = "Experiment Data Persistency & Presentation (EDP2)";
+    public static final String EDP2_ID = "Experiment Data Persistency & Presentation (EDP2)";
 
     /**
      * Fills out the run configuration features of an {@link AbstractSimulationConfig}.
@@ -56,7 +56,8 @@ public class AbstractSimulationConfigFactory {
 
         /** Experiment Run */
         map.put(AbstractSimulationConfig.EXPERIMENT_RUN, computeExperimentGroupPurpose(experiment));
-        map.put(EDP2RecorderConfigurationFactory.VARIATION_ID, computeExperimentSettingName(simConfig, variationFactorTuples));
+        map.put(EDP2RecorderConfigurationFactory.VARIATION_ID,
+                computeExperimentSettingName(simConfig, variationFactorTuples));
 
         /** Simulation Results */
         map.put(AbstractSimulationConfig.PERSISTENCE_RECORDER_NAME, EDP2_ID);
