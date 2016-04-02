@@ -23,10 +23,12 @@ Require-Bundle: de.uka.ipd.sdq.simucomframework;bundle-version="2.0.0",
  org.palladiosimulator.edp2.repository.local;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.palladiosimulator.experimentautomation.application,
+ org.palladiosimulator.experimentautomation.application.config,
  org.palladiosimulator.experimentautomation.application.jobs,
  org.palladiosimulator.experimentautomation.application.tooladapter,
  org.palladiosimulator.experimentautomation.application.tooladapter.abstractsimulation,
  org.palladiosimulator.experimentautomation.application.utils,
- org.palladiosimulator.experimentautomation.application.variation
+ org.palladiosimulator.experimentautomation.application.variation,
+ org.palladiosimulator.experimentautomation.application.workflow
 Bundle-ClassPath: .
 Bundle-ActivationPolicy: lazy
