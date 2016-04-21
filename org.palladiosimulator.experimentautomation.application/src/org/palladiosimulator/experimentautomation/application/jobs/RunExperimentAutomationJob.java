@@ -47,10 +47,14 @@ public class RunExperimentAutomationJob extends AbstractExtendableJob<MDSDBlackb
             throw new IllegalArgumentException("Debug listener has to be non-null for debug runs");
         }
 
-        this.add(new PreparePCMBlackboardPartitionJob());
+        if (configuration.isLoadModels()) {
+            this.add(new PreparePCMBlackboardPartitionJob());
+        }
         for (final Experiment experiment : configuration.getExperiments()) {
             this.add(new PrepareBlackboardJob());
-            this.add(new LoadModelsIntoBlackboardJob(experiment.getInitialModel()));
+
+            this.add(new LoadModelsIntoBlackboardJob(experiment.getInitialModel(), configuration.isLoadModels()));
+
             this.add(new ModifyModelsJob(experiment.getModifications()));
 
             // All Workflow extension jobs with the extension hook id

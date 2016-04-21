@@ -36,26 +36,33 @@ public class LoadModelsIntoBlackboardJob extends SequentialBlackboardInteracting
 
     private final InitialModel initialModel;
 
-    public LoadModelsIntoBlackboardJob(final InitialModel initialModel) {
+    /** Allows to deactivate model loading, e.g., when models are already in a blackboard. */
+    private final boolean loadDefaultPcmModels;
+
+    public LoadModelsIntoBlackboardJob(final InitialModel initialModel, final boolean loadModels) {
         super(false);
         this.initialModel = initialModel;
+        this.loadDefaultPcmModels = loadModels;
     }
 
     @Override
     public void execute(final IProgressMonitor monitor) throws JobFailedException, UserCanceledException {
         // Load the PCM models
         final List<EObject> pcmModels = new ArrayList<EObject>();
-        pcmModels.add(this.initialModel.getRepository());
-        pcmModels.add(this.initialModel.getSystem());
-        pcmModels.add(this.initialModel.getResourceEnvironment());
-        pcmModels.add(this.initialModel.getAllocation());
-        pcmModels.add(this.initialModel.getUsageModel());
+        if (this.loadDefaultPcmModels) {
+            pcmModels.add(this.initialModel.getRepository());
+            pcmModels.add(this.initialModel.getSystem());
+            pcmModels.add(this.initialModel.getResourceEnvironment());
+            pcmModels.add(this.initialModel.getAllocation());
+            pcmModels.add(this.initialModel.getUsageModel());
+            pcmModels.add(this.initialModel.getMiddlewareRepository());
+            pcmModels.add(this.initialModel.getEventMiddleWareRepository());
+        }
+
         pcmModels.add(this.initialModel.getUsageEvolution());
         pcmModels.add(this.initialModel.getMonitorRepository());
-        pcmModels.add(this.initialModel.getMiddlewareRepository());
-        pcmModels.add(this.initialModel.getEventMiddleWareRepository());
 
-        // load the PCM model into a original initial PCM model partition
+        // load the PCM model into an original initial PCM model partition
         loadIntoBlackboard(PCM_MODELS_ORIGINAL_PARTITION_ID, pcmModels);
 
         // load the PCM model into the standard partition

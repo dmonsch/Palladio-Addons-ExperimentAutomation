@@ -8,13 +8,16 @@ import org.palladiosimulator.experimentautomation.experiments.Experiment;
 import de.uka.ipd.sdq.workflow.extension.ExtendableJobConfiguration;
 import de.uka.ipd.sdq.workflow.launchconfig.AbstractWorkflowBasedRunConfiguration;
 
-public class ExperimentAutomationConfiguration extends AbstractWorkflowBasedRunConfiguration implements
-        ExtendableJobConfiguration {
+public class ExperimentAutomationConfiguration extends AbstractWorkflowBasedRunConfiguration
+        implements ExtendableJobConfiguration {
 
     private List<Experiment> experiments;
 
     /** The configuration of the current launch to work with. */
     private Map<String, Object> attributes;
+
+    /** Allows to deactivate model loading, e.g., when models are already in a blackboard. */
+    private boolean loadModels = true;
 
     public void setExperiments(final List<Experiment> experiments) {
         this.experiments = experiments;
@@ -36,7 +39,7 @@ public class ExperimentAutomationConfiguration extends AbstractWorkflowBasedRunC
         throw new RuntimeException("Not implemented. No defaults defined.");
     }
 
-    public void setAttributes(Map<String, Object> attributes) {
+    public void setAttributes(final Map<String, Object> attributes) {
         this.attributes = attributes;
     }
 
@@ -45,4 +48,11 @@ public class ExperimentAutomationConfiguration extends AbstractWorkflowBasedRunC
         return this.attributes;
     }
 
+    public void setLoadModels(final boolean loadModels) {
+        this.loadModels = loadModels;
+    }
+
+    public boolean isLoadModels() {
+        return this.loadModels;
+    }
 }
