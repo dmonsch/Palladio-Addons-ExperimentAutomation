@@ -20,6 +20,7 @@ import org.palladiosimulator.edp2.util.MeasurementsUtility;
 import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource;
 import org.palladiosimulator.experimentautomation.application.tooladapter.RunAnalysisJob;
 import org.palladiosimulator.measurementframework.MeasuringValue;
+import org.palladiosimulator.measurementframework.measureprovider.IMeasureProvider;
 import org.palladiosimulator.metricspec.MetricDescription;
 import org.palladiosimulator.metricspec.MetricSetDescription;
 import org.palladiosimulator.servicelevelobjective.ServiceLevelObjective;
@@ -119,11 +120,21 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
             properties.put(SLOViolationEDP2DatasourceFilterConfiguration.SLO_KEY, serviceLevelObjective);
 
             final IDataSource dataSource = new Edp2DataTupleDataSource(rawMeasurements);
+            final IDataStream<IMeasureProvider> measurements = dataSource.getDataStream();
+            final long totalMeasurements = measurements.size();
+            measurements.close();
+
             final SLOViolationEDP2DatasourceFilter sloFilter = new SLOViolationEDP2DatasourceFilter(dataSource);
             sloFilter.setProperties(properties);
             final IDataStream<MeasuringValue> dataStream = sloFilter.getDataStream();
 
-            sloViolations += dataStream.size();
+            if (totalMeasurements > 0) {
+                final double percentageOfViolations = ((double) dataStream.size()) / ((double) totalMeasurements);
+                if (percentageOfViolations > 0.1) {
+                    sloViolations++;
+                }
+            }
+
             dataStream.close();
         }
 
@@ -145,8 +156,8 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
     private Measurement findMeasurement(final List<Measurement> measurementList,
             final ServiceLevelObjective serviceLevelObjective) {
         for (final Measurement measurement : measurementList) {
-            if (containsMetric(measurement.getMeasuringType().getMetric(), serviceLevelObjective
-                    .getMeasurementSpecification().getMetricDescription())) {
+            if (containsMetric(measurement.getMeasuringType().getMetric(),
+                    serviceLevelObjective.getMeasurementSpecification().getMetricDescription())) {
                 final String measureMeasuringPoint = measurement.getMeasuringType().getMeasuringPoint()
                         .getStringRepresentation();
                 final String sloMeasuringPoint = serviceLevelObjective.getMeasurementSpecification().getMonitor()
@@ -173,13 +184,13 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
                 + "\" not found. MeasurementList has " + measurementList.size() + " elements.");
     }
 
-    private boolean containsMetric(MetricDescription metric, MetricDescription metricToCheckFor) {
+    private boolean containsMetric(final MetricDescription metric, final MetricDescription metricToCheckFor) {
         if (metric == metricToCheckFor || metric.getId().equals(metricToCheckFor.getId())) {
             return true;
         }
 
         if (metric instanceof MetricSetDescription) {
-            for (MetricDescription subMetric : ((MetricSetDescription) metric).getSubsumedMetrics()) {
+            for (final MetricDescription subMetric : ((MetricSetDescription) metric).getSubsumedMetrics()) {
                 if (containsMetric(subMetric, metricToCheckFor)) {
                     return true;
                 }
@@ -228,8 +239,8 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
             }
         }
 
-        throw new IllegalArgumentException("Could not find experiment setting for variation \""
-                + experimentSettingDescription + "\"");
+        throw new IllegalArgumentException(
+                "Could not find experiment setting for variation \"" + experimentSettingDescription + "\"");
     }
 
     /**
@@ -248,7 +259,7 @@ public class CheckForSLOViolationsJob extends SequentialBlackboardInteractingJob
 
         try {
             MeasurementsUtility.ensureOpenRepository(repository);
-        } catch (DataNotAccessibleException e) {
+        } catch (final DataNotAccessibleException e) {
             throw new RuntimeException("Could not open EDP2 repository");
         }
 
