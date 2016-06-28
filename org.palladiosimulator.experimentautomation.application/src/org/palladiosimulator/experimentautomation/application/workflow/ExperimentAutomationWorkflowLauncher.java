@@ -48,7 +48,7 @@ public class ExperimentAutomationWorkflowLauncher extends
 
         // TODO This code is tool-dependent. Should be realized by extenders for logger
         // configurations.
-        loggerList.add(setupLogger("org.scaledl.architecturaltemplates", logLevel,
+        loggerList.add(setupLogger("org.palladiosimulator.architecturaltemplates", logLevel,
                 Level.DEBUG == logLevel ? DETAILED_LOG_PATTERN : SHORT_LOG_PATTERN));
 
         // TODO This code is tool-dependent. Should be realized by extenders for logger
