@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Application
 Bundle-SymbolicName: org.palladiosimulator.experimentautomation.application;singleton:=true
-Bundle-Version: 1.0.1.qualifier
+Bundle-Version: 1.1.0.qualifier
 Bundle-Activator: org.palladiosimulator.experimentautomation.application.Activator
 Require-Bundle: de.uka.ipd.sdq.simucomframework;bundle-version="2.0.0",
  de.uka.ipd.sdq.codegen.simucontroller;bundle-version="1.0.0",
@@ -21,7 +21,7 @@ Require-Bundle: de.uka.ipd.sdq.simucomframework;bundle-version="2.0.0",
  org.palladiosimulator.simulizar.reconfiguration.storydiagram,
  org.palladiosimulator.servicelevelobjective.edp2;bundle-version="1.0.1",
  org.palladiosimulator.edp2.repository.local;bundle-version="1.0.0"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: org.palladiosimulator.experimentautomation.application,
  org.palladiosimulator.experimentautomation.application.config,
  org.palladiosimulator.experimentautomation.application.jobs,
