@@ -24,6 +24,13 @@ import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLon
 public class NestedIntervalsLongValueProviderItemProvider extends ValueProviderItemProvider {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -58,12 +65,19 @@ public class NestedIntervalsLongValueProviderItemProvider extends ValueProviderI
      */
     protected void addMinValuePropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_NestedIntervalsLongValueProvider_minValue_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_NestedIntervalsLongValueProvider_minValue_feature",
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                this.getResourceLocator(),
+                this.getString("_UI_NestedIntervalsLongValueProvider_minValue_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_NestedIntervalsLongValueProvider_minValue_feature",
                         "_UI_NestedIntervalsLongValueProvider_type"),
-                ExperimentsPackage.Literals.NESTED_INTERVALS_LONG_VALUE_PROVIDER__MIN_VALUE, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                ExperimentsPackage.Literals.NESTED_INTERVALS_LONG_VALUE_PROVIDER__MIN_VALUE,
+                true,
+                false,
+                false,
+                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                null,
+                null));
     }
 
     /**
@@ -74,12 +88,19 @@ public class NestedIntervalsLongValueProviderItemProvider extends ValueProviderI
      */
     protected void addMaxValuePropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_NestedIntervalsLongValueProvider_maxValue_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_NestedIntervalsLongValueProvider_maxValue_feature",
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                this.getResourceLocator(),
+                this.getString("_UI_NestedIntervalsLongValueProvider_maxValue_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_NestedIntervalsLongValueProvider_maxValue_feature",
                         "_UI_NestedIntervalsLongValueProvider_type"),
-                ExperimentsPackage.Literals.NESTED_INTERVALS_LONG_VALUE_PROVIDER__MAX_VALUE, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+                ExperimentsPackage.Literals.NESTED_INTERVALS_LONG_VALUE_PROVIDER__MAX_VALUE,
+                true,
+                false,
+                false,
+                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                null,
+                null));
     }
 
     /**
@@ -109,8 +130,8 @@ public class NestedIntervalsLongValueProviderItemProvider extends ValueProviderI
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

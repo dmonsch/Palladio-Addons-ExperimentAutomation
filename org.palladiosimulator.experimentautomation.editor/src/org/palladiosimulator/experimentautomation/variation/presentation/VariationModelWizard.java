@@ -67,13 +67,20 @@ import org.palladiosimulator.experimentautomation.variation.provider.ExperimentA
 public class VariationModelWizard extends Wizard implements INewWizard {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * The supported extensions for created files. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
      */
-    public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(Arrays
-            .asList(ExperimentAutomationEditorPlugin.INSTANCE.getString("_UI_VariationEditorFilenameExtensions").split(
-                    "\\s*,\\s*")));
+    public static final List<String> FILE_EXTENSIONS = Collections
+            .unmodifiableList(Arrays.asList(ExperimentAutomationEditorPlugin.INSTANCE
+                    .getString("_UI_VariationEditorFilenameExtensions").split("\\s*,\\s*")));
 
     /**
      * A formatted list of supported file extensions, suitable for display. <!-- begin-user-doc -->
@@ -81,8 +88,8 @@ public class VariationModelWizard extends Wizard implements INewWizard {
      * 
      * @generated
      */
-    public static final String FORMATTED_FILE_EXTENSIONS = ExperimentAutomationEditorPlugin.INSTANCE.getString(
-            "_UI_VariationEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+    public static final String FORMATTED_FILE_EXTENSIONS = ExperimentAutomationEditorPlugin.INSTANCE
+            .getString("_UI_VariationEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
     /**
      * This caches an instance of the model package. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -177,8 +184,8 @@ public class VariationModelWizard extends Wizard implements INewWizard {
      * @generated
      */
     protected EObject createInitialModel() {
-        final EClass eClass = (EClass) this.variationPackage.getEClassifier(this.initialObjectCreationPage
-                .getInitialObjectName());
+        final EClass eClass = (EClass) this.variationPackage
+                .getEClassifier(this.initialObjectCreationPage.getInitialObjectName());
         final EObject rootObject = this.variationFactory.create(eClass);
         return rootObject;
     }
@@ -198,7 +205,6 @@ public class VariationModelWizard extends Wizard implements INewWizard {
             // Do the work within an operation.
             //
             final WorkspaceModifyOperation operation = new WorkspaceModifyOperation() {
-
                 @Override
                 protected void execute(final IProgressMonitor progressMonitor) {
                     try {
@@ -245,7 +251,6 @@ public class VariationModelWizard extends Wizard implements INewWizard {
             if (activePart instanceof ISetSelectionTarget) {
                 final ISelection targetSelection = new StructuredSelection(modelFile);
                 this.getShell().getDisplay().asyncExec(new Runnable() {
-
                     @Override
                     public void run() {
                         ((ISetSelectionTarget) activePart).selectReveal(targetSelection);
@@ -257,7 +262,8 @@ public class VariationModelWizard extends Wizard implements INewWizard {
             //
             try {
                 page.openEditor(new FileEditorInput(modelFile),
-                        this.workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());
+                        this.workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString())
+                                .getId());
             } catch (final PartInitException exception) {
                 MessageDialog.openError(workbenchWindow.getShell(),
                         ExperimentAutomationEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"),
@@ -437,7 +443,6 @@ public class VariationModelWizard extends Wizard implements INewWizard {
          * @generated
          */
         protected ModifyListener validator = new ModifyListener() {
-
             @Override
             public void modifyText(final ModifyEvent e) {
                 VariationModelWizardInitialObjectCreationPage.this
@@ -523,7 +528,7 @@ public class VariationModelWizard extends Wizard implements INewWizard {
                 this.encodings = new ArrayList<String>();
                 for (final StringTokenizer stringTokenizer = new StringTokenizer(
                         ExperimentAutomationEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer
-                        .hasMoreTokens();) {
+                                .hasMoreTokens();) {
                     this.encodings.add(stringTokenizer.nextToken());
                 }
             }
@@ -542,12 +547,13 @@ public class VariationModelWizard extends Wizard implements INewWizard {
         // Create a page, set the title, and the initial model file name.
         //
         this.newFileCreationPage = new VariationModelWizardNewFileCreationPage("Whatever", this.selection);
-        this.newFileCreationPage.setTitle(ExperimentAutomationEditorPlugin.INSTANCE
-                .getString("_UI_VariationModelWizard_label"));
-        this.newFileCreationPage.setDescription(ExperimentAutomationEditorPlugin.INSTANCE
-                .getString("_UI_VariationModelWizard_description"));
-        this.newFileCreationPage.setFileName(ExperimentAutomationEditorPlugin.INSTANCE
-                .getString("_UI_VariationEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
+        this.newFileCreationPage
+                .setTitle(ExperimentAutomationEditorPlugin.INSTANCE.getString("_UI_VariationModelWizard_label"));
+        this.newFileCreationPage.setDescription(
+                ExperimentAutomationEditorPlugin.INSTANCE.getString("_UI_VariationModelWizard_description"));
+        this.newFileCreationPage.setFileName(
+                ExperimentAutomationEditorPlugin.INSTANCE.getString("_UI_VariationEditorFilenameDefaultBase") + "."
+                        + FILE_EXTENSIONS.get(0));
         this.addPage(this.newFileCreationPage);
 
         // Try and get the resource selection to determine a current directory for the file dialog.
@@ -585,10 +591,10 @@ public class VariationModelWizard extends Wizard implements INewWizard {
             }
         }
         this.initialObjectCreationPage = new VariationModelWizardInitialObjectCreationPage("Whatever2");
-        this.initialObjectCreationPage.setTitle(ExperimentAutomationEditorPlugin.INSTANCE
-                .getString("_UI_VariationModelWizard_label"));
-        this.initialObjectCreationPage.setDescription(ExperimentAutomationEditorPlugin.INSTANCE
-                .getString("_UI_Wizard_initial_object_description"));
+        this.initialObjectCreationPage
+                .setTitle(ExperimentAutomationEditorPlugin.INSTANCE.getString("_UI_VariationModelWizard_label"));
+        this.initialObjectCreationPage.setDescription(
+                ExperimentAutomationEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
         this.addPage(this.initialObjectCreationPage);
     }
 

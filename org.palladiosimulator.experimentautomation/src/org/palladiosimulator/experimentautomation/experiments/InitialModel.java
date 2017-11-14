@@ -4,13 +4,12 @@ package org.palladiosimulator.experimentautomation.experiments;
 
 import org.eclipse.emf.cdo.CDOObject;
 import org.palladiosimulator.monitorrepository.MonitorRepository;
-import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
-import org.scaledl.usageevolution.UsageEvolution;
-
 import org.palladiosimulator.pcm.allocation.Allocation;
 import org.palladiosimulator.pcm.repository.Repository;
 import org.palladiosimulator.pcm.resourceenvironment.ResourceEnvironment;
 import org.palladiosimulator.pcm.usagemodel.UsageModel;
+import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
+import org.scaledl.usageevolution.UsageEvolution;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Initial Model</b></em>'.
@@ -18,37 +17,31 @@ import org.palladiosimulator.pcm.usagemodel.UsageModel;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getUsageModel <em>
- * Usage Model</em>}</li>
- * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getAllocation <em>
- * Allocation</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getMiddlewareRepository
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getUsageModel
+ * <em>Usage Model</em>}</li>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getAllocation
+ * <em>Allocation</em>}</li>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getMiddlewareRepository
  * <em>Middleware Repository</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getEventMiddleWareRepository
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getEventMiddleWareRepository
  * <em>Event Middle Ware Repository</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getReconfigurationRules
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getReconfigurationRules
  * <em>Reconfiguration Rules</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getMonitorRepository
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getMonitorRepository
  * <em>Monitor Repository</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getServiceLevelObjectives
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getServiceLevelObjectives
  * <em>Service Level Objectives</em>}</li>
- * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getRepository <em>
- * Repository</em>}</li>
- * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getSystem <em>
- * System</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getResourceEnvironment
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getRepository
+ * <em>Repository</em>}</li>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getSystem
+ * <em>System</em>}</li>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getResourceEnvironment
  * <em>Resource Environment</em>}</li>
  * <li>{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getUsageEvolution
  * <em>Usage Evolution</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel()
  * @model
@@ -58,13 +51,20 @@ import org.palladiosimulator.pcm.usagemodel.UsageModel;
 public interface InitialModel extends CDOObject {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * Returns the value of the '<em><b>Usage Model</b></em>' reference. <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Usage Model</em>' reference isn't clear, there really should be
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Usage Model</em>' reference.
      * @see #setUsageModel(UsageModel)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_UsageModel()
@@ -74,10 +74,10 @@ public interface InitialModel extends CDOObject {
     UsageModel getUsageModel();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getUsageModel
+     * Sets the value of the
+     * '{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getUsageModel
      * <em>Usage Model</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Usage Model</em>' reference.
      * @see #getUsageModel()
@@ -92,7 +92,7 @@ public interface InitialModel extends CDOObject {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Allocation</em>' reference.
      * @see #setAllocation(Allocation)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_Allocation()
@@ -102,10 +102,10 @@ public interface InitialModel extends CDOObject {
     Allocation getAllocation();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getAllocation
+     * Sets the value of the
+     * '{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getAllocation
      * <em>Allocation</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Allocation</em>' reference.
      * @see #getAllocation()
@@ -131,10 +131,10 @@ public interface InitialModel extends CDOObject {
     Repository getMiddlewareRepository();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getMiddlewareRepository
+     * Sets the value of the
+     * '{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getMiddlewareRepository
      * <em>Middleware Repository</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Middleware Repository</em>' reference.
      * @see #getMiddlewareRepository()
@@ -190,10 +190,10 @@ public interface InitialModel extends CDOObject {
     ReconfigurationRulesFolder getReconfigurationRules();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getReconfigurationRules
+     * Sets the value of the
+     * '{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getReconfigurationRules
      * <em>Reconfiguration Rules</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Reconfiguration Rules</em>' reference.
      * @see #getReconfigurationRules()
@@ -209,7 +209,7 @@ public interface InitialModel extends CDOObject {
      * should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Monitor Repository</em>' reference.
      * @see #setMonitorRepository(MonitorRepository)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_MonitorRepository()
@@ -219,10 +219,10 @@ public interface InitialModel extends CDOObject {
     MonitorRepository getMonitorRepository();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getMonitorRepository
+     * Sets the value of the
+     * '{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getMonitorRepository
      * <em>Monitor Repository</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Monitor Repository</em>' reference.
      * @see #getMonitorRepository()
@@ -248,10 +248,10 @@ public interface InitialModel extends CDOObject {
     ServiceLevelObjectiveRepository getServiceLevelObjectives();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getServiceLevelObjectives
+     * Sets the value of the
+     * '{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getServiceLevelObjectives
      * <em>Service Level Objectives</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Service Level Objectives</em>' reference.
      * @see #getServiceLevelObjectives()
@@ -266,7 +266,7 @@ public interface InitialModel extends CDOObject {
      * more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Repository</em>' reference.
      * @see #setRepository(Repository)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_Repository()
@@ -276,10 +276,10 @@ public interface InitialModel extends CDOObject {
     Repository getRepository();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getRepository
+     * Sets the value of the
+     * '{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getRepository
      * <em>Repository</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Repository</em>' reference.
      * @see #getRepository()
@@ -294,7 +294,7 @@ public interface InitialModel extends CDOObject {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>System</em>' reference.
      * @see #setSystem(org.palladiosimulator.pcm.system.System)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_System()
@@ -304,10 +304,10 @@ public interface InitialModel extends CDOObject {
     org.palladiosimulator.pcm.system.System getSystem();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getSystem
+     * Sets the value of the
+     * '{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getSystem
      * <em>System</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>System</em>' reference.
      * @see #getSystem()
@@ -333,10 +333,10 @@ public interface InitialModel extends CDOObject {
     ResourceEnvironment getResourceEnvironment();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getResourceEnvironment
+     * Sets the value of the
+     * '{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getResourceEnvironment
      * <em>Resource Environment</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Resource Environment</em>' reference.
      * @see #getResourceEnvironment()
@@ -351,7 +351,7 @@ public interface InitialModel extends CDOObject {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Usage Evolution</em>' reference.
      * @see #setUsageEvolution(UsageEvolution)
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getInitialModel_UsageEvolution()
@@ -361,10 +361,10 @@ public interface InitialModel extends CDOObject {
     UsageEvolution getUsageEvolution();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getUsageEvolution
+     * Sets the value of the
+     * '{@link org.palladiosimulator.experimentautomation.experiments.InitialModel#getUsageEvolution
      * <em>Usage Evolution</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Usage Evolution</em>' reference.
      * @see #getUsageEvolution()

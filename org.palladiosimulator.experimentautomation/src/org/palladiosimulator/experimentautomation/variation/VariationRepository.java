@@ -11,11 +11,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  * <li>{@link org.palladiosimulator.experimentautomation.variation.VariationRepository#getVariation
  * <em>Variation</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.palladiosimulator.experimentautomation.variation.VariationPackage#getVariationRepository()
  * @model
@@ -23,6 +23,13 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface VariationRepository extends CDOObject {
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    String copyright = "Palladiosimulator.org 2008-2017";
 
     /**
      * Returns the value of the '<em><b>Variation</b></em>' containment reference list. The list

@@ -25,49 +25,47 @@ import org.palladiosimulator.experimentautomation.experiments.Variation;
  * end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getVariations
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getVariations
  * <em>Variations</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getModifications
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getModifications
  * <em>Modifications</em>}</li>
- * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getId <em>
- * Id</em>}</li>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getId
+ * <em>Id</em>}</li>
  * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getName
  * <em>Name</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getToolConfiguration
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getToolConfiguration
  * <em>Tool Configuration</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getStopConditions
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getStopConditions
  * <em>Stop Conditions</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getDescription
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getDescription
  * <em>Description</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getExperimentDesign
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getExperimentDesign
  * <em>Experiment Design</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getResponseMeasurement
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getResponseMeasurement
  * <em>Response Measurement</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getInitialModel
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getInitialModel
  * <em>Initial Model</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getRepetitions
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentImpl#getRepetitions
  * <em>Repetitions</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getId()
      * @generated
      * @ordered
@@ -77,7 +75,7 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getName()
      * @generated
      * @ordered
@@ -106,7 +104,7 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ExperimentImpl() {
@@ -115,7 +113,7 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -125,7 +123,7 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -135,7 +133,7 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -147,7 +145,7 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -159,18 +157,19 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String getId() {
         return (String) this.eDynamicGet(ExperimentsPackage.EXPERIMENT__ID, ExperimentsPackage.Literals.EXPERIMENT__ID,
-                true, true);
+                true,
+                true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -180,18 +179,19 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String getName() {
         return (String) this.eDynamicGet(ExperimentsPackage.EXPERIMENT__NAME,
-                ExperimentsPackage.Literals.EXPERIMENT__NAME, true, true);
+                ExperimentsPackage.Literals.EXPERIMENT__NAME,
+                true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -201,7 +201,7 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -213,7 +213,7 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -225,7 +225,7 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -236,18 +236,19 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setDescription(final String newDescription) {
         this.eDynamicSet(ExperimentsPackage.EXPERIMENT__DESCRIPTION,
-                ExperimentsPackage.Literals.EXPERIMENT__DESCRIPTION, newDescription);
+                ExperimentsPackage.Literals.EXPERIMENT__DESCRIPTION,
+                newDescription);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -258,10 +259,11 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
-    public NotificationChain basicSetExperimentDesign(final ExperimentDesign newExperimentDesign, NotificationChain msgs) {
+    public NotificationChain basicSetExperimentDesign(final ExperimentDesign newExperimentDesign,
+            NotificationChain msgs) {
         msgs = this.eDynamicInverseAdd((InternalEObject) newExperimentDesign,
                 ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN, msgs);
         return msgs;
@@ -269,7 +271,7 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -280,7 +282,7 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -291,7 +293,7 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetResponseMeasurement(final ResponseMeasurement newResponseMeasurement,
@@ -303,7 +305,7 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -314,7 +316,7 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -325,7 +327,7 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetInitialModel(final InitialModel newInitialModel, NotificationChain msgs) {
@@ -336,18 +338,19 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setInitialModel(final InitialModel newInitialModel) {
         this.eDynamicSet(ExperimentsPackage.EXPERIMENT__INITIAL_MODEL,
-                ExperimentsPackage.Literals.EXPERIMENT__INITIAL_MODEL, newInitialModel);
+                ExperimentsPackage.Literals.EXPERIMENT__INITIAL_MODEL,
+                newInitialModel);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -358,18 +361,19 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setRepetitions(final int newRepetitions) {
         this.eDynamicSet(ExperimentsPackage.EXPERIMENT__REPETITIONS,
-                ExperimentsPackage.Literals.EXPERIMENT__REPETITIONS, newRepetitions);
+                ExperimentsPackage.Literals.EXPERIMENT__REPETITIONS,
+                newRepetitions);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -396,7 +400,7 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -430,7 +434,7 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -480,7 +484,7 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -525,7 +529,7 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -544,8 +548,8 @@ public class ExperimentImpl extends CDOObjectImpl implements Experiment {
         case ExperimentsPackage.EXPERIMENT__STOP_CONDITIONS:
             return !this.getStopConditions().isEmpty();
         case ExperimentsPackage.EXPERIMENT__DESCRIPTION:
-            return DESCRIPTION_EDEFAULT == null ? this.getDescription() != null : !DESCRIPTION_EDEFAULT.equals(this
-                    .getDescription());
+            return DESCRIPTION_EDEFAULT == null ? this.getDescription() != null
+                    : !DESCRIPTION_EDEFAULT.equals(this.getDescription());
         case ExperimentsPackage.EXPERIMENT__EXPERIMENT_DESIGN:
             return this.getExperimentDesign() != null;
         case ExperimentsPackage.EXPERIMENT__RESPONSE_MEASUREMENT:

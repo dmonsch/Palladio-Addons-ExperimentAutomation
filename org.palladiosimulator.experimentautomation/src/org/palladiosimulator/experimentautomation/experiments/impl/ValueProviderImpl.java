@@ -10,8 +10,6 @@ import org.palladiosimulator.experimentautomation.experiments.ValueProvider;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Value Provider</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -19,7 +17,14 @@ public abstract class ValueProviderImpl extends CDOObjectImpl implements ValuePr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     protected ValueProviderImpl() {
@@ -28,7 +33,7 @@ public abstract class ValueProviderImpl extends CDOObjectImpl implements ValuePr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -38,7 +43,7 @@ public abstract class ValueProviderImpl extends CDOObjectImpl implements ValuePr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

@@ -33,6 +33,13 @@ public class ToolConfigurationItemProvider extends ItemProviderAdapter implement
         IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -65,12 +72,20 @@ public class ToolConfigurationItemProvider extends ItemProviderAdapter implement
      * @generated
      */
     protected void addNamePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_ToolConfiguration_name_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_ToolConfiguration_name_feature",
-                        "_UI_ToolConfiguration_type"), ExperimentsPackage.Literals.TOOL_CONFIGURATION__NAME, true,
-                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_ToolConfiguration_name_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_ToolConfiguration_name_feature",
+                                "_UI_ToolConfiguration_type"),
+                        ExperimentsPackage.Literals.TOOL_CONFIGURATION__NAME,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
@@ -82,14 +97,14 @@ public class ToolConfigurationItemProvider extends ItemProviderAdapter implement
     @Override
     public String getText(final Object object) {
         final String label = ((ToolConfiguration) object).getName();
-        return label == null || label.length() == 0 ? this.getString("_UI_ToolConfiguration_type") : this
-                .getString("_UI_ToolConfiguration_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_ToolConfiguration_type")
+                : this.getString("_UI_ToolConfiguration_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

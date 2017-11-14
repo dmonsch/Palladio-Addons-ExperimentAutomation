@@ -24,6 +24,13 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.Measurement
 public class MeasurementCountStopConditionItemProvider extends StopConditionItemProvider {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -56,14 +63,21 @@ public class MeasurementCountStopConditionItemProvider extends StopConditionItem
      * @generated
      */
     protected void addMeasurementCountPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_MeasurementCountStopCondition_measurementCount_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description",
-                        "_UI_MeasurementCountStopCondition_measurementCount_feature",
-                        "_UI_MeasurementCountStopCondition_type"),
-                AbstractsimulationPackage.Literals.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT, true, false,
-                false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_MeasurementCountStopCondition_measurementCount_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_MeasurementCountStopCondition_measurementCount_feature",
+                                "_UI_MeasurementCountStopCondition_type"),
+                        AbstractsimulationPackage.Literals.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
@@ -73,8 +87,8 @@ public class MeasurementCountStopConditionItemProvider extends StopConditionItem
      */
     @Override
     public Object getImage(final Object object) {
-        return this
-                .overlayImage(object, this.getResourceLocator().getImage("full/obj16/MeasurementCountStopCondition"));
+        return this.overlayImage(object,
+                this.getResourceLocator().getImage("full/obj16/MeasurementCountStopCondition"));
     }
 
     /**
@@ -92,8 +106,8 @@ public class MeasurementCountStopConditionItemProvider extends StopConditionItem
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

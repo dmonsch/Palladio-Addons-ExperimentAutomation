@@ -10,8 +10,6 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.StopConditi
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Stop Condition</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -19,7 +17,14 @@ public abstract class StopConditionImpl extends CDOObjectImpl implements StopCon
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     protected StopConditionImpl() {
@@ -28,7 +33,7 @@ public abstract class StopConditionImpl extends CDOObjectImpl implements StopCon
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -38,7 +43,7 @@ public abstract class StopConditionImpl extends CDOObjectImpl implements StopCon
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

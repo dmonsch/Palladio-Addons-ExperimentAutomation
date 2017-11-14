@@ -11,17 +11,22 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasou
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.FileDatasourceImpl#getLocation
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.FileDatasourceImpl#getLocation
  * <em>Location</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class FileDatasourceImpl extends EDP2DatasourceImpl implements FileDatasource {
 
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
     /**
      * The default value of the '{@link #getLocation() <em>Location</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -34,7 +39,7 @@ public class FileDatasourceImpl extends EDP2DatasourceImpl implements FileDataso
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected FileDatasourceImpl() {
@@ -43,7 +48,7 @@ public class FileDatasourceImpl extends EDP2DatasourceImpl implements FileDataso
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -53,7 +58,7 @@ public class FileDatasourceImpl extends EDP2DatasourceImpl implements FileDataso
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -64,7 +69,7 @@ public class FileDatasourceImpl extends EDP2DatasourceImpl implements FileDataso
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -75,7 +80,7 @@ public class FileDatasourceImpl extends EDP2DatasourceImpl implements FileDataso
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -89,7 +94,7 @@ public class FileDatasourceImpl extends EDP2DatasourceImpl implements FileDataso
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -104,7 +109,7 @@ public class FileDatasourceImpl extends EDP2DatasourceImpl implements FileDataso
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -119,15 +124,15 @@ public class FileDatasourceImpl extends EDP2DatasourceImpl implements FileDataso
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case AbstractsimulationPackage.FILE_DATASOURCE__LOCATION:
-            return LOCATION_EDEFAULT == null ? this.getLocation() != null : !LOCATION_EDEFAULT.equals(this
-                    .getLocation());
+            return LOCATION_EDEFAULT == null ? this.getLocation() != null
+                    : !LOCATION_EDEFAULT.equals(this.getLocation());
         }
         return super.eIsSet(featureID);
     }

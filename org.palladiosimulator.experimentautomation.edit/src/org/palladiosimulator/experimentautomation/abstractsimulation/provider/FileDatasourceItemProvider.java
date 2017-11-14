@@ -24,6 +24,13 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasou
 public class FileDatasourceItemProvider extends EDP2DatasourceItemProvider {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -56,12 +63,20 @@ public class FileDatasourceItemProvider extends EDP2DatasourceItemProvider {
      * @generated
      */
     protected void addLocationPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_FileDatasource_location_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_FileDatasource_location_feature",
-                        "_UI_FileDatasource_type"), AbstractsimulationPackage.Literals.FILE_DATASOURCE__LOCATION, true,
-                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_FileDatasource_location_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_FileDatasource_location_feature",
+                                "_UI_FileDatasource_type"),
+                        AbstractsimulationPackage.Literals.FILE_DATASOURCE__LOCATION,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
@@ -83,14 +98,14 @@ public class FileDatasourceItemProvider extends EDP2DatasourceItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((FileDatasource) object).getId();
-        return label == null || label.length() == 0 ? this.getString("_UI_FileDatasource_type") : this
-                .getString("_UI_FileDatasource_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_FileDatasource_type")
+                : this.getString("_UI_FileDatasource_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

@@ -27,6 +27,13 @@ import org.palladiosimulator.experimentautomation.experiments.provider.ToolConfi
 public class AbstractSimulationConfigurationItemProvider extends ToolConfigurationItemProvider {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -61,13 +68,19 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
      */
     protected void addSimulateLinkingResourcesPropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_AbstractSimulationConfiguration_simulateLinkingResources_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description",
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                this.getResourceLocator(),
+                this.getString("_UI_AbstractSimulationConfiguration_simulateLinkingResources_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
                         "_UI_AbstractSimulationConfiguration_simulateLinkingResources_feature",
                         "_UI_AbstractSimulationConfiguration_type"),
-                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES, true,
-                false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES,
+                true,
+                false,
+                false,
+                ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+                null,
+                null));
     }
 
     /**
@@ -77,14 +90,21 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
      * @generated
      */
     protected void addSimulateFailuresPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_AbstractSimulationConfiguration_simulateFailures_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description",
-                        "_UI_AbstractSimulationConfiguration_simulateFailures_feature",
-                        "_UI_AbstractSimulationConfiguration_type"),
-                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES, true, false,
-                false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_AbstractSimulationConfiguration_simulateFailures_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_AbstractSimulationConfiguration_simulateFailures_feature",
+                                "_UI_AbstractSimulationConfiguration_type"),
+                        AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
@@ -101,9 +121,9 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
         if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
             this.childrenFeatures
-            .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS);
-            this.childrenFeatures
-                    .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED);
+                    .add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS);
+            this.childrenFeatures.add(
+                    AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED);
             this.childrenFeatures.add(AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE);
         }
         return this.childrenFeatures;
@@ -131,14 +151,14 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
     @Override
     public String getText(final Object object) {
         final String label = ((AbstractSimulationConfiguration) object).getName();
-        return label == null || label.length() == 0 ? this.getString("_UI_AbstractSimulationConfiguration_type") : this
-                .getString("_UI_AbstractSimulationConfiguration_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_AbstractSimulationConfiguration_type")
+                : this.getString("_UI_AbstractSimulationConfiguration_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -182,13 +202,15 @@ public class AbstractSimulationConfigurationItemProvider extends ToolConfigurati
                 AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED,
                 AbstractsimulationFactory.eINSTANCE.createRandomNumberGeneratorSeed()));
 
-        newChildDescriptors.add(this.createChildParameter(
-                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE,
-                AbstractsimulationFactory.eINSTANCE.createMemoryDatasource()));
+        newChildDescriptors.add(
+                this.createChildParameter(
+                        AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE,
+                        AbstractsimulationFactory.eINSTANCE.createMemoryDatasource()));
 
-        newChildDescriptors.add(this.createChildParameter(
-                AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE,
-                AbstractsimulationFactory.eINSTANCE.createFileDatasource()));
+        newChildDescriptors.add(
+                this.createChildParameter(
+                        AbstractsimulationPackage.Literals.ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE,
+                        AbstractsimulationFactory.eINSTANCE.createFileDatasource()));
     }
 
 }

@@ -13,26 +13,31 @@ import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
  * end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  * <li>{@link org.palladiosimulator.experimentautomation.variation.impl.VariationTypeImpl#getName
  * <em>Name</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.variation.impl.VariationTypeImpl#getStrategyClass
+ * <li>{@link org.palladiosimulator.experimentautomation.variation.impl.VariationTypeImpl#getStrategyClass
  * <em>Strategy Class</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.variation.impl.VariationTypeImpl#getVariedEntityInterface
+ * <li>{@link org.palladiosimulator.experimentautomation.variation.impl.VariationTypeImpl#getVariedEntityInterface
  * <em>Varied Entity Interface</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public abstract class VariationTypeImpl extends IdentifierImpl implements VariationType {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getName()
      * @generated
      * @ordered
@@ -42,7 +47,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
     /**
      * The default value of the '{@link #getStrategyClass() <em>Strategy Class</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getStrategyClass()
      * @generated
      * @ordered
@@ -50,9 +55,9 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
     protected static final String STRATEGY_CLASS_EDEFAULT = null;
 
     /**
-     * The default value of the '{@link #getVariedEntityInterface()
-     * <em>Varied Entity Interface</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getVariedEntityInterface() <em>Varied Entity
+     * Interface</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @see #getVariedEntityInterface()
      * @generated
      * @ordered
@@ -61,7 +66,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected VariationTypeImpl() {
@@ -70,7 +75,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -80,7 +85,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -91,17 +96,18 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setName(final String newName) {
-        this.eDynamicSet(VariationPackage.VARIATION_TYPE__NAME, VariationPackage.Literals.VARIATION_TYPE__NAME, newName);
+        this.eDynamicSet(VariationPackage.VARIATION_TYPE__NAME, VariationPackage.Literals.VARIATION_TYPE__NAME,
+                newName);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -112,7 +118,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -123,7 +129,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -134,7 +140,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -145,7 +151,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -163,7 +169,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -184,7 +190,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -205,7 +211,7 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -214,11 +220,11 @@ public abstract class VariationTypeImpl extends IdentifierImpl implements Variat
         case VariationPackage.VARIATION_TYPE__NAME:
             return NAME_EDEFAULT == null ? this.getName() != null : !NAME_EDEFAULT.equals(this.getName());
         case VariationPackage.VARIATION_TYPE__STRATEGY_CLASS:
-            return STRATEGY_CLASS_EDEFAULT == null ? this.getStrategyClass() != null : !STRATEGY_CLASS_EDEFAULT
-            .equals(this.getStrategyClass());
+            return STRATEGY_CLASS_EDEFAULT == null ? this.getStrategyClass() != null
+                    : !STRATEGY_CLASS_EDEFAULT.equals(this.getStrategyClass());
         case VariationPackage.VARIATION_TYPE__VARIED_ENTITY_INTERFACE:
             return VARIED_ENTITY_INTERFACE_EDEFAULT == null ? this.getVariedEntityInterface() != null
-            : !VARIED_ENTITY_INTERFACE_EDEFAULT.equals(this.getVariedEntityInterface());
+                    : !VARIED_ENTITY_INTERFACE_EDEFAULT.equals(this.getVariedEntityInterface());
         }
         return super.eIsSet(featureID);
     }

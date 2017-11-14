@@ -32,14 +32,21 @@ import org.palladiosimulator.experimentautomation.experiments.Variation;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsFactory {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static ExperimentsFactory init() {
@@ -57,7 +64,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ExperimentsFactoryImpl() {
@@ -66,7 +73,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -119,7 +126,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -130,7 +137,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -141,7 +148,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -152,7 +159,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -163,7 +170,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -174,7 +181,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -185,7 +192,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -196,7 +203,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -207,7 +214,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -218,7 +225,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -229,7 +236,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -240,7 +247,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -251,7 +258,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -262,7 +269,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -273,7 +280,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -284,7 +291,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -295,7 +302,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -306,7 +313,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -317,7 +324,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -328,7 +335,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -339,7 +346,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -349,7 +356,7 @@ public class ExperimentsFactoryImpl extends EFactoryImpl implements ExperimentsF
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @deprecated
      * @generated
      */

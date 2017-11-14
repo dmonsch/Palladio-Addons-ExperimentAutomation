@@ -24,6 +24,13 @@ import org.palladiosimulator.experimentautomation.experiments.SetValueProvider;
 public class SetValueProviderItemProvider extends ValueProviderItemProvider {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -56,12 +63,20 @@ public class SetValueProviderItemProvider extends ValueProviderItemProvider {
      * @generated
      */
     protected void addValuesPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_SetValueProvider_values_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_SetValueProvider_values_feature",
-                        "_UI_SetValueProvider_type"), ExperimentsPackage.Literals.SET_VALUE_PROVIDER__VALUES, true,
-                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_SetValueProvider_values_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_SetValueProvider_values_feature",
+                                "_UI_SetValueProvider_type"),
+                        ExperimentsPackage.Literals.SET_VALUE_PROVIDER__VALUES,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
@@ -83,14 +98,14 @@ public class SetValueProviderItemProvider extends ValueProviderItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((SetValueProvider) object).getValues();
-        return label == null || label.length() == 0 ? this.getString("_UI_SetValueProvider_type") : this
-                .getString("_UI_SetValueProvider_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_SetValueProvider_type")
+                : this.getString("_UI_SetValueProvider_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

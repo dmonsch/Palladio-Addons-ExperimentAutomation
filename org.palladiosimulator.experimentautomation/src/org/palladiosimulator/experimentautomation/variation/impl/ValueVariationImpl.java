@@ -9,8 +9,6 @@ import org.palladiosimulator.experimentautomation.variation.VariationPackage;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Value Variation</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -18,7 +16,14 @@ public class ValueVariationImpl extends VariationTypeImpl implements ValueVariat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     protected ValueVariationImpl() {
@@ -27,7 +32,7 @@ public class ValueVariationImpl extends VariationTypeImpl implements ValueVariat
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

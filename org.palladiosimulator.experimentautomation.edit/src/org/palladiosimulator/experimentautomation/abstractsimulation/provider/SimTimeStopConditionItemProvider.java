@@ -24,6 +24,13 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStop
 public class SimTimeStopConditionItemProvider extends StopConditionItemProvider {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -56,13 +63,20 @@ public class SimTimeStopConditionItemProvider extends StopConditionItemProvider 
      * @generated
      */
     protected void addSimulationTimePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_SimTimeStopCondition_simulationTime_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_SimTimeStopCondition_simulationTime_feature",
-                        "_UI_SimTimeStopCondition_type"),
-                AbstractsimulationPackage.Literals.SIM_TIME_STOP_CONDITION__SIMULATION_TIME, true, false, false,
-                ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_SimTimeStopCondition_simulationTime_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_SimTimeStopCondition_simulationTime_feature", "_UI_SimTimeStopCondition_type"),
+                        AbstractsimulationPackage.Literals.SIM_TIME_STOP_CONDITION__SIMULATION_TIME,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
@@ -89,8 +103,8 @@ public class SimTimeStopConditionItemProvider extends StopConditionItemProvider 
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

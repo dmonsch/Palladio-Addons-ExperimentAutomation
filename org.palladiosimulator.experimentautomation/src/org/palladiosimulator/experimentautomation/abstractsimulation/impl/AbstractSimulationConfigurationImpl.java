@@ -17,38 +17,39 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.StopConditi
 import org.palladiosimulator.experimentautomation.experiments.impl.ToolConfigurationImpl;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Abstract Simulation Configuration</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Abstract Simulation
+ * Configuration</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#getStopConditions
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#getStopConditions
  * <em>Stop Conditions</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#getRandomNumberGeneratorSeed
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#getRandomNumberGeneratorSeed
  * <em>Random Number Generator Seed</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#isSimulateLinkingResources
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#isSimulateLinkingResources
  * <em>Simulate Linking Resources</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#isSimulateFailures
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#isSimulateFailures
  * <em>Simulate Failures</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#getDatasource
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl#getDatasource
  * <em>Datasource</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public abstract class AbstractSimulationConfigurationImpl extends ToolConfigurationImpl implements
-AbstractSimulationConfiguration {
+        AbstractSimulationConfiguration {
 
     /**
-     * The default value of the '{@link #isSimulateLinkingResources()
-     * <em>Simulate Linking Resources</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
-     * -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
+     * The default value of the '{@link #isSimulateLinkingResources() <em>Simulate Linking
+     * Resources</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see #isSimulateLinkingResources()
      * @generated
@@ -59,7 +60,7 @@ AbstractSimulationConfiguration {
     /**
      * The default value of the '{@link #isSimulateFailures() <em>Simulate Failures</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #isSimulateFailures()
      * @generated
      * @ordered
@@ -68,7 +69,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected AbstractSimulationConfigurationImpl() {
@@ -77,7 +78,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -87,7 +88,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -100,7 +101,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -113,7 +114,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetRandomNumberGeneratorSeed(
@@ -125,7 +126,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -137,7 +138,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -150,7 +151,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -162,7 +163,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -174,7 +175,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -186,7 +187,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -198,7 +199,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetDatasource(final EDP2Datasource newDatasource, NotificationChain msgs) {
@@ -209,7 +210,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -220,7 +221,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -239,7 +240,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -261,7 +262,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -290,7 +291,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -317,7 +318,7 @@ AbstractSimulationConfiguration {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

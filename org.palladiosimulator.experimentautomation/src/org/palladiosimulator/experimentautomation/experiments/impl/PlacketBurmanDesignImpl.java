@@ -8,10 +8,8 @@ import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
 import org.palladiosimulator.experimentautomation.experiments.PlacketBurmanDesign;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Placket Burman Design</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
+ * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Placket Burman
+ * Design</b></em>'. <!-- end-user-doc -->
  *
  * @generated
  */
@@ -19,7 +17,14 @@ public class PlacketBurmanDesignImpl extends CDOObjectImpl implements PlacketBur
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     protected PlacketBurmanDesignImpl() {
@@ -28,7 +33,7 @@ public class PlacketBurmanDesignImpl extends CDOObjectImpl implements PlacketBur
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -38,7 +43,7 @@ public class PlacketBurmanDesignImpl extends CDOObjectImpl implements PlacketBur
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

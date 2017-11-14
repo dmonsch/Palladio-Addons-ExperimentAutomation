@@ -18,7 +18,7 @@ import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
  * <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * 
+ *
  * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationFactory
  * @model kind="package"
  * @generated
@@ -26,29 +26,36 @@ import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
 public interface AbstractsimulationPackage extends EPackage {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * The package name. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String eNAME = "abstractsimulation";
 
     /**
      * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String eNS_URI = "http://palladiosimulator.org/ExperimentAutomation/AbstractSimulation/1.0";
 
     /**
      * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     String eNS_PREFIX = "ExperimentAutomation.Experiments.AbstractSimulation";
 
     /**
      * The singleton instance of the package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     AbstractsimulationPackage eINSTANCE = org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl
@@ -69,7 +76,7 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -87,11 +94,12 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Random Number Generator Seed</b></em>' containment reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
-    int ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED = ExperimentsPackage.TOOL_CONFIGURATION_FEATURE_COUNT + 1;
+    int ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED = ExperimentsPackage.TOOL_CONFIGURATION_FEATURE_COUNT
+            + 1;
 
     /**
      * The feature id for the '<em><b>Simulate Linking Resources</b></em>' attribute. <!--
@@ -100,12 +108,13 @@ public interface AbstractsimulationPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES = ExperimentsPackage.TOOL_CONFIGURATION_FEATURE_COUNT + 2;
+    int ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES = ExperimentsPackage.TOOL_CONFIGURATION_FEATURE_COUNT
+            + 2;
 
     /**
      * The feature id for the '<em><b>Simulate Failures</b></em>' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -123,17 +132,17 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Abstract Simulation Configuration</em>' class.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
     int ABSTRACT_SIMULATION_CONFIGURATION_FEATURE_COUNT = ExperimentsPackage.TOOL_CONFIGURATION_FEATURE_COUNT + 5;
 
     /**
-     * The meta object id for the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl
+     * The meta object id for the
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl
      * <em>Random Number Generator Seed</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getRandomNumberGeneratorSeed()
      * @generated
@@ -141,10 +150,10 @@ public interface AbstractsimulationPackage extends EPackage {
     int RANDOM_NUMBER_GENERATOR_SEED = 1;
 
     /**
-     * The meta object id for the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl
+     * The meta object id for the
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl
      * <em>Memory Datasource</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getMemoryDatasource()
      * @generated
@@ -152,10 +161,10 @@ public interface AbstractsimulationPackage extends EPackage {
     int MEMORY_DATASOURCE = 3;
 
     /**
-     * The meta object id for the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.FileDatasourceImpl
+     * The meta object id for the
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.FileDatasourceImpl
      * <em>File Datasource</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.FileDatasourceImpl
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getFileDatasource()
      * @generated
@@ -163,10 +172,10 @@ public interface AbstractsimulationPackage extends EPackage {
     int FILE_DATASOURCE = 4;
 
     /**
-     * The meta object id for the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.StopConditionImpl
+     * The meta object id for the
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.StopConditionImpl
      * <em>Stop Condition</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.StopConditionImpl
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getStopCondition()
      * @generated
@@ -186,10 +195,10 @@ public interface AbstractsimulationPackage extends EPackage {
     int MEASUREMENT_COUNT_STOP_CONDITION = 5;
 
     /**
-     * The meta object id for the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl
+     * The meta object id for the
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl
      * <em>Sim Time Stop Condition</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSimTimeStopCondition()
      * @generated
@@ -199,7 +208,7 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Seed0</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -208,7 +217,7 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Seed1</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -217,7 +226,7 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Seed2</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -226,7 +235,7 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Seed3</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -235,7 +244,7 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Seed4</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -244,7 +253,7 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Seed5</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -260,10 +269,10 @@ public interface AbstractsimulationPackage extends EPackage {
     int RANDOM_NUMBER_GENERATOR_SEED_FEATURE_COUNT = 6;
 
     /**
-     * The meta object id for the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.EDP2DatasourceImpl
+     * The meta object id for the
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.EDP2DatasourceImpl
      * <em>EDP2 Datasource</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.EDP2DatasourceImpl
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getEDP2Datasource()
      * @generated
@@ -273,7 +282,7 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -291,7 +300,7 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -309,7 +318,7 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -318,7 +327,7 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Location</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -336,7 +345,7 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Stop Condition</em>' class. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -345,7 +354,7 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Measurement Count</b></em>' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -354,7 +363,7 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Measurement Count Stop Condition</em>' class.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -363,7 +372,7 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Simulation Time</b></em>' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      * @ordered
      */
@@ -379,10 +388,10 @@ public interface AbstractsimulationPackage extends EPackage {
     int SIM_TIME_STOP_CONDITION_FEATURE_COUNT = STOP_CONDITION_FEATURE_COUNT + 1;
 
     /**
-     * Returns the meta object for class '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
      * <em>Abstract Simulation Configuration</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Abstract Simulation Configuration</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration
      * @generated
@@ -390,10 +399,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getAbstractSimulationConfiguration();
 
     /**
-     * Returns the meta object for the containment reference list '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getStopConditions
+     * Returns the meta object for the containment reference list
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getStopConditions
      * <em>Stop Conditions</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the containment reference list '<em>Stop Conditions</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getStopConditions()
      * @see #getAbstractSimulationConfiguration()
@@ -402,12 +411,12 @@ public interface AbstractsimulationPackage extends EPackage {
     EReference getAbstractSimulationConfiguration_StopConditions();
 
     /**
-     * Returns the meta object for the containment reference '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed
+     * Returns the meta object for the containment reference
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed
      * <em>Random Number Generator Seed</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for the containment reference '<em>Random Number Generator Seed</em>
-     *         '.
+     *
+     * @return the meta object for the containment reference '<em>Random Number Generator
+     *         Seed</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed()
      * @see #getAbstractSimulationConfiguration()
      * @generated
@@ -415,10 +424,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EReference getAbstractSimulationConfiguration_RandomNumberGeneratorSeed();
 
     /**
-     * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateLinkingResources
+     * Returns the meta object for the attribute
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateLinkingResources
      * <em>Simulate Linking Resources</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Simulate Linking Resources</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateLinkingResources()
      * @see #getAbstractSimulationConfiguration()
@@ -427,10 +436,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getAbstractSimulationConfiguration_SimulateLinkingResources();
 
     /**
-     * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
+     * Returns the meta object for the attribute
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
      * <em>Simulate Failures</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Simulate Failures</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures()
      * @see #getAbstractSimulationConfiguration()
@@ -439,10 +448,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getAbstractSimulationConfiguration_SimulateFailures();
 
     /**
-     * Returns the meta object for the containment reference '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getDatasource
+     * Returns the meta object for the containment reference
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getDatasource
      * <em>Datasource</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the containment reference '<em>Datasource</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getDatasource()
      * @see #getAbstractSimulationConfiguration()
@@ -451,10 +460,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EReference getAbstractSimulationConfiguration_Datasource();
 
     /**
-     * Returns the meta object for class '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed
      * <em>Random Number Generator Seed</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Random Number Generator Seed</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed
      * @generated
@@ -462,10 +471,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getRandomNumberGeneratorSeed();
 
     /**
-     * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed0
+     * Returns the meta object for the attribute
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed0
      * <em>Seed0</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Seed0</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed0()
      * @see #getRandomNumberGeneratorSeed()
@@ -474,10 +483,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getRandomNumberGeneratorSeed_Seed0();
 
     /**
-     * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed1
+     * Returns the meta object for the attribute
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed1
      * <em>Seed1</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Seed1</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed1()
      * @see #getRandomNumberGeneratorSeed()
@@ -486,10 +495,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getRandomNumberGeneratorSeed_Seed1();
 
     /**
-     * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed2
+     * Returns the meta object for the attribute
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed2
      * <em>Seed2</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Seed2</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed2()
      * @see #getRandomNumberGeneratorSeed()
@@ -498,10 +507,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getRandomNumberGeneratorSeed_Seed2();
 
     /**
-     * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed3
+     * Returns the meta object for the attribute
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed3
      * <em>Seed3</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Seed3</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed3()
      * @see #getRandomNumberGeneratorSeed()
@@ -510,10 +519,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getRandomNumberGeneratorSeed_Seed3();
 
     /**
-     * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed4
+     * Returns the meta object for the attribute
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed4
      * <em>Seed4</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Seed4</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed4()
      * @see #getRandomNumberGeneratorSeed()
@@ -522,10 +531,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getRandomNumberGeneratorSeed_Seed4();
 
     /**
-     * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed5
+     * Returns the meta object for the attribute
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed5
      * <em>Seed5</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Seed5</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed5()
      * @see #getRandomNumberGeneratorSeed()
@@ -534,10 +543,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getRandomNumberGeneratorSeed_Seed5();
 
     /**
-     * Returns the meta object for class '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource
-     * <em>EDP2 Datasource</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource <em>EDP2
+     * Datasource</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @return the meta object for class '<em>EDP2 Datasource</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource
      * @generated
@@ -545,10 +554,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getEDP2Datasource();
 
     /**
-     * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource#getId
+     * Returns the meta object for the attribute
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource#getId
      * <em>Id</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Id</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasource#getId()
      * @see #getEDP2Datasource()
@@ -557,10 +566,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getEDP2Datasource_Id();
 
     /**
-     * Returns the meta object for class '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource
      * <em>Memory Datasource</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Memory Datasource</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatasource
      * @generated
@@ -568,10 +577,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getMemoryDatasource();
 
     /**
-     * Returns the meta object for class '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource
-     * <em>File Datasource</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource <em>File
+     * Datasource</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @return the meta object for class '<em>File Datasource</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource
      * @generated
@@ -579,10 +588,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getFileDatasource();
 
     /**
-     * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource#getLocation
+     * Returns the meta object for the attribute
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource#getLocation
      * <em>Location</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Location</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.FileDatasource#getLocation()
      * @see #getFileDatasource()
@@ -591,10 +600,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getFileDatasource_Location();
 
     /**
-     * Returns the meta object for class '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition
      * <em>Measurement Count Stop Condition</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Measurement Count Stop Condition</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition
      * @generated
@@ -602,10 +611,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getMeasurementCountStopCondition();
 
     /**
-     * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition#getMeasurementCount
+     * Returns the meta object for the attribute
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition#getMeasurementCount
      * <em>Measurement Count</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Measurement Count</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition#getMeasurementCount()
      * @see #getMeasurementCountStopCondition()
@@ -614,10 +623,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getMeasurementCountStopCondition_MeasurementCount();
 
     /**
-     * Returns the meta object for class '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition
      * <em>Sim Time Stop Condition</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for class '<em>Sim Time Stop Condition</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition
      * @generated
@@ -625,10 +634,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EClass getSimTimeStopCondition();
 
     /**
-     * Returns the meta object for the attribute '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition#getSimulationTime
+     * Returns the meta object for the attribute
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition#getSimulationTime
      * <em>Simulation Time</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the meta object for the attribute '<em>Simulation Time</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.SimTimeStopCondition#getSimulationTime()
      * @see #getSimTimeStopCondition()
@@ -637,10 +646,10 @@ public interface AbstractsimulationPackage extends EPackage {
     EAttribute getSimTimeStopCondition_SimulationTime();
 
     /**
-     * Returns the meta object for class '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition
-     * <em>Stop Condition</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition <em>Stop
+     * Condition</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @return the meta object for class '<em>Stop Condition</em>'.
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.StopCondition
      * @generated
@@ -650,7 +659,7 @@ public interface AbstractsimulationPackage extends EPackage {
     /**
      * Returns the factory that creates the instances of the model. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @return the factory that creates the instances of the model.
      * @generated
      */
@@ -665,17 +674,17 @@ public interface AbstractsimulationPackage extends EPackage {
      * <li>and each data type</li>
      * </ul>
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     interface Literals {
 
         /**
-         * The meta object literal for the '
-         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl
+         * The meta object literal for the
+         * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl
          * <em>Abstract Simulation Configuration</em>}' class. <!-- begin-user-doc --> <!--
          * end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractSimulationConfigurationImpl
          * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getAbstractSimulationConfiguration()
          * @generated
@@ -685,7 +694,7 @@ public interface AbstractsimulationPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Stop Conditions</b></em>' containment reference
          * list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EReference ABSTRACT_SIMULATION_CONFIGURATION__STOP_CONDITIONS = eINSTANCE
@@ -694,7 +703,7 @@ public interface AbstractsimulationPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Random Number Generator Seed</b></em>'
          * containment reference feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EReference ABSTRACT_SIMULATION_CONFIGURATION__RANDOM_NUMBER_GENERATOR_SEED = eINSTANCE
@@ -703,7 +712,7 @@ public interface AbstractsimulationPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Simulate Linking Resources</b></em>' attribute
          * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EAttribute ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_LINKING_RESOURCES = eINSTANCE
@@ -712,7 +721,7 @@ public interface AbstractsimulationPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Simulate Failures</b></em>' attribute feature.
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EAttribute ABSTRACT_SIMULATION_CONFIGURATION__SIMULATE_FAILURES = eINSTANCE
@@ -721,7 +730,7 @@ public interface AbstractsimulationPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Datasource</b></em>' containment reference
          * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EReference ABSTRACT_SIMULATION_CONFIGURATION__DATASOURCE = eINSTANCE
@@ -788,10 +797,10 @@ public interface AbstractsimulationPackage extends EPackage {
         EAttribute RANDOM_NUMBER_GENERATOR_SEED__SEED5 = eINSTANCE.getRandomNumberGeneratorSeed_Seed5();
 
         /**
-         * The meta object literal for the '
-         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.EDP2DatasourceImpl
+         * The meta object literal for the
+         * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.EDP2DatasourceImpl
          * <em>EDP2 Datasource</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.EDP2DatasourceImpl
          * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getEDP2Datasource()
          * @generated
@@ -807,10 +816,10 @@ public interface AbstractsimulationPackage extends EPackage {
         EAttribute EDP2_DATASOURCE__ID = eINSTANCE.getEDP2Datasource_Id();
 
         /**
-         * The meta object literal for the '
-         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl
+         * The meta object literal for the
+         * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl
          * <em>Memory Datasource</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.MemoryDatasourceImpl
          * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getMemoryDatasource()
          * @generated
@@ -818,10 +827,10 @@ public interface AbstractsimulationPackage extends EPackage {
         EClass MEMORY_DATASOURCE = eINSTANCE.getMemoryDatasource();
 
         /**
-         * The meta object literal for the '
-         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.FileDatasourceImpl
+         * The meta object literal for the
+         * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.FileDatasourceImpl
          * <em>File Datasource</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.FileDatasourceImpl
          * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getFileDatasource()
          * @generated
@@ -837,11 +846,11 @@ public interface AbstractsimulationPackage extends EPackage {
         EAttribute FILE_DATASOURCE__LOCATION = eINSTANCE.getFileDatasource_Location();
 
         /**
-         * The meta object literal for the '
-         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.MeasurementCountStopConditionImpl
+         * The meta object literal for the
+         * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.MeasurementCountStopConditionImpl
          * <em>Measurement Count Stop Condition</em>}' class. <!-- begin-user-doc --> <!--
          * end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.MeasurementCountStopConditionImpl
          * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getMeasurementCountStopCondition()
          * @generated
@@ -851,17 +860,17 @@ public interface AbstractsimulationPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Measurement Count</b></em>' attribute feature.
          * <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @generated
          */
         EAttribute MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT = eINSTANCE
                 .getMeasurementCountStopCondition_MeasurementCount();
 
         /**
-         * The meta object literal for the '
-         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl
+         * The meta object literal for the
+         * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl
          * <em>Sim Time Stop Condition</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.SimTimeStopConditionImpl
          * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getSimTimeStopCondition()
          * @generated
@@ -877,10 +886,10 @@ public interface AbstractsimulationPackage extends EPackage {
         EAttribute SIM_TIME_STOP_CONDITION__SIMULATION_TIME = eINSTANCE.getSimTimeStopCondition_SimulationTime();
 
         /**
-         * The meta object literal for the '
-         * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.StopConditionImpl
+         * The meta object literal for the
+         * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.StopConditionImpl
          * <em>Stop Condition</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
+         *
          * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.StopConditionImpl
          * @see org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl#getStopCondition()
          * @generated

@@ -20,6 +20,13 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatas
 public class MemoryDatasourceItemProvider extends EDP2DatasourceItemProvider {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -63,14 +70,14 @@ public class MemoryDatasourceItemProvider extends EDP2DatasourceItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((MemoryDatasource) object).getId();
-        return label == null || label.length() == 0 ? this.getString("_UI_MemoryDatasource_type") : this
-                .getString("_UI_MemoryDatasource_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_MemoryDatasource_type")
+                : this.getString("_UI_MemoryDatasource_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

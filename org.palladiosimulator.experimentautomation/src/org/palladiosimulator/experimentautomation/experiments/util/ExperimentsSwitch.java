@@ -38,22 +38,28 @@ import org.palladiosimulator.experimentautomation.experiments.Variation;
  * each class of the model, starting with the actual class of the object and proceeding up the
  * inheritance hierarchy until a non-null result is returned, which is the result of the switch.
  * <!-- end-user-doc -->
- * 
+ *
  * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
  * @generated
  */
 public class ExperimentsSwitch<T> extends Switch<T> {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+    /**
      * The cached model package <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected static ExperimentsPackage modelPackage;
 
     /**
      * Creates an instance of the switch. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ExperimentsSwitch() {
@@ -65,8 +71,9 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     /**
      * Checks whether this is a switch for the given package. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
-     * @parameter ePackage the package in question.
+     *
+     * @param ePackage
+     *            the package in question.
      * @return whether this is a switch for the given package.
      * @generated
      */
@@ -78,7 +85,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     /**
      * Calls <code>caseXXX</code> for each class of the model until one returns a non null result;
      * it yields that result. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @return the first non-null result returned by a <code>caseXXX</code> call.
      * @generated
      */
@@ -330,14 +337,14 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Experiment Repository</em>'. <!-- begin-user-doc --> This implementation returns null;
-     * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     * Returns the result of interpreting the object as an instance of '<em>Experiment
+     * Repository</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
+     *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Experiment Repository</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Experiment
+     *         Repository</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -379,7 +386,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Value Provider</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Value Provider</em>'.
@@ -391,14 +398,14 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Tool Configuration</em>
-     * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
-     * terminate the switch. <!-- end-user-doc -->
-     * 
+     * Returns the result of interpreting the object as an instance of '<em>Tool
+     * Configuration</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
+     *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Tool Configuration</em>
-     *         '.
+     * @return the result of interpreting the object as an instance of '<em>Tool
+     *         Configuration</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -410,7 +417,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Experiment Design</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Experiment Design</em>'.
@@ -422,14 +429,14 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Response Measurement</em>'. <!-- begin-user-doc --> This implementation returns null;
-     * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     * Returns the result of interpreting the object as an instance of '<em>Response
+     * Measurement</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
+     *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Response Measurement</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Response
+     *         Measurement</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -438,14 +445,14 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Polynomial Value Provider</em>'. <!-- begin-user-doc --> This implementation returns
-     * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     * Returns the result of interpreting the object as an instance of '<em>Polynomial Value
+     * Provider</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
+     *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Polynomial Value Provider</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Polynomial Value
+     *         Provider</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -454,14 +461,14 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Exponential Value Provider</em>'. <!-- begin-user-doc --> This implementation returns
-     * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     * Returns the result of interpreting the object as an instance of '<em>Exponential Value
+     * Provider</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
+     *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Exponential Value Provider</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Exponential Value
+     *         Provider</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -470,14 +477,14 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Set Value Provider</em>
-     * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
-     * terminate the switch. <!-- end-user-doc -->
-     * 
+     * Returns the result of interpreting the object as an instance of '<em>Set Value
+     * Provider</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
+     *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Set Value Provider</em>
-     *         '.
+     * @return the result of interpreting the object as an instance of '<em>Set Value
+     *         Provider</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -486,14 +493,14 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Placket Burman Design</em>'. <!-- begin-user-doc --> This implementation returns null;
-     * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     * Returns the result of interpreting the object as an instance of '<em>Placket Burman
+     * Design</em>'. <!-- begin-user-doc --> This implementation returns null; returning a non-null
+     * result will terminate the switch. <!-- end-user-doc -->
+     *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Placket Burman Design</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Placket Burman
+     *         Design</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -502,14 +509,14 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Full Factorial Design</em>'. <!-- begin-user-doc --> This implementation returns null;
-     * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     * Returns the result of interpreting the object as an instance of '<em>Full Factorial
+     * Design</em>'. <!-- begin-user-doc --> This implementation returns null; returning a non-null
+     * result will terminate the switch. <!-- end-user-doc -->
+     *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Full Factorial Design</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Full Factorial
+     *         Design</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -518,14 +525,14 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Fractional Factorial Design</em>'. <!-- begin-user-doc --> This implementation returns
-     * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     * Returns the result of interpreting the object as an instance of '<em>Fractional Factorial
+     * Design</em>'. <!-- begin-user-doc --> This implementation returns null; returning a non-null
+     * result will terminate the switch. <!-- end-user-doc -->
+     *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Fractional Factorial Design</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Fractional Factorial
+     *         Design</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -534,14 +541,14 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>One Factor At ATime</em>
-     * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
-     * terminate the switch. <!-- end-user-doc -->
-     * 
+     * Returns the result of interpreting the object as an instance of '<em>One Factor At
+     * ATime</em>'. <!-- begin-user-doc --> This implementation returns null; returning a non-null
+     * result will terminate the switch. <!-- end-user-doc -->
+     *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>One Factor At ATime</em>
-     *         '.
+     * @return the result of interpreting the object as an instance of '<em>One Factor At
+     *         ATime</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -550,14 +557,14 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Simulation Duration Measurement</em>'. <!-- begin-user-doc --> This implementation
-     * returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     * Returns the result of interpreting the object as an instance of '<em>Simulation Duration
+     * Measurement</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
+     *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Simulation Duration Measurement</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Simulation Duration
+     *         Measurement</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -566,14 +573,14 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Profiling Measurement</em>'. <!-- begin-user-doc --> This implementation returns null;
-     * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     * Returns the result of interpreting the object as an instance of '<em>Profiling
+     * Measurement</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
+     *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Profiling Measurement</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Profiling
+     *         Measurement</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -585,7 +592,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>JMX Measurement</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>JMX Measurement</em>'.
@@ -597,14 +604,14 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Linear Value Provider</em>'. <!-- begin-user-doc --> This implementation returns null;
-     * returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     * Returns the result of interpreting the object as an instance of '<em>Linear Value
+     * Provider</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
+     *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Linear Value Provider</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Linear Value
+     *         Provider</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -613,14 +620,14 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Object Modification</em>
-     * '. <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
-     * terminate the switch. <!-- end-user-doc -->
-     * 
+     * Returns the result of interpreting the object as an instance of '<em>Object
+     * Modification</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
+     *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Object Modification</em>
-     *         '.
+     * @return the result of interpreting the object as an instance of '<em>Object
+     *         Modification</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -632,7 +639,7 @@ public class ExperimentsSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Initial Model</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     * 
+     *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Initial Model</em>'.
@@ -644,14 +651,14 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Reconfiguration Rules Folder</em>'. <!-- begin-user-doc --> This implementation returns
-     * null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     * Returns the result of interpreting the object as an instance of '<em>Reconfiguration Rules
+     * Folder</em>'. <!-- begin-user-doc --> This implementation returns null; returning a non-null
+     * result will terminate the switch. <!-- end-user-doc -->
+     *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Reconfiguration Rules Folder</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Reconfiguration Rules
+     *         Folder</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -660,14 +667,14 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Nested Intervals Double Value Provider</em>'. <!-- begin-user-doc --> This implementation
-     * returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     * Returns the result of interpreting the object as an instance of '<em>Nested Intervals Double
+     * Value Provider</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
+     *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Nested Intervals Double Value Provider</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Nested Intervals Double
+     *         Value Provider</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -676,14 +683,14 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Nested Intervals Long Value Provider</em>'. <!-- begin-user-doc --> This implementation
-     * returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     * Returns the result of interpreting the object as an instance of '<em>Nested Intervals Long
+     * Value Provider</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
+     *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Nested Intervals Long Value Provider</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Nested Intervals Long
+     *         Value Provider</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
@@ -707,14 +714,14 @@ public class ExperimentsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '
-     * <em>Scheduling Policy2 Delay Modification</em>'. <!-- begin-user-doc --> This implementation
-     * returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
-     * 
+     * Returns the result of interpreting the object as an instance of '<em>Scheduling Policy2 Delay
+     * Modification</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
+     *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '
-     *         <em>Scheduling Policy2 Delay Modification</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Scheduling Policy2 Delay
+     *         Modification</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */

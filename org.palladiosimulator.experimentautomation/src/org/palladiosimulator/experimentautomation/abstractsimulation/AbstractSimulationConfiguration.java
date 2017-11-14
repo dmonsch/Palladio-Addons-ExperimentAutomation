@@ -6,35 +6,37 @@ import org.eclipse.emf.common.util.EList;
 import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
 
 /**
- * <!-- begin-user-doc --> A representation of the model object '
- * <em><b>Abstract Simulation Configuration</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object ' <em><b>Abstract Simulation
+ * Configuration</b></em>'. <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getStopConditions
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getStopConditions
  * <em>Stop Conditions</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed
  * <em>Random Number Generator Seed</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateLinkingResources
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateLinkingResources
  * <em>Simulate Linking Resources</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
  * <em>Simulate Failures</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getDatasource
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getDatasource
  * <em>Datasource</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration()
  * @model abstract="true"
  * @generated
  */
 public interface AbstractSimulationConfiguration extends ToolConfiguration {
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    String copyright = "Palladiosimulator.org 2008-2017";
 
     /**
      * Returns the value of the '<em><b>Stop Conditions</b></em>' containment reference list. The
@@ -62,7 +64,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * clear, there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Random Number Generator Seed</em>' containment reference.
      * @see #setRandomNumberGeneratorSeed(RandomNumberGeneratorSeed)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_RandomNumberGeneratorSeed()
@@ -72,11 +74,11 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
     RandomNumberGeneratorSeed getRandomNumberGeneratorSeed();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed
+     * Sets the value of the
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getRandomNumberGeneratorSeed
      * <em>Random Number Generator Seed</em>}' containment reference. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Random Number Generator Seed</em>' containment
      *            reference.
@@ -123,7 +125,7 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
      * be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Simulate Failures</em>' attribute.
      * @see #setSimulateFailures(boolean)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getAbstractSimulationConfiguration_SimulateFailures()
@@ -133,10 +135,10 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
     boolean isSimulateFailures();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
+     * Sets the value of the
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#isSimulateFailures
      * <em>Simulate Failures</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Simulate Failures</em>' attribute.
      * @see #isSimulateFailures()
@@ -162,10 +164,10 @@ public interface AbstractSimulationConfiguration extends ToolConfiguration {
     EDP2Datasource getDatasource();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getDatasource
+     * Sets the value of the
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.AbstractSimulationConfiguration#getDatasource
      * <em>Datasource</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Datasource</em>' containment reference.
      * @see #getDatasource()

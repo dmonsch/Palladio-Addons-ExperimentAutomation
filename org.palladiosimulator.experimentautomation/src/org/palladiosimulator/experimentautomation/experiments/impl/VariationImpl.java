@@ -16,30 +16,34 @@ import org.palladiosimulator.experimentautomation.variation.VariationType;
  * end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl#getType <em>
- * Type</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl#getValueProvider
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl#getType
+ * <em>Type</em>}</li>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl#getValueProvider
  * <em>Value Provider</em>}</li>
  * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl#getMinValue
  * <em>Min Value</em>}</li>
  * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl#getMaxValue
  * <em>Max Value</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl#getMaxVariations
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl#getMaxVariations
  * <em>Max Variations</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl#getVariedObjectId
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl#getVariedObjectId
  * <em>Varied Object Id</em>}</li>
- * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl#getName <em>
- * Name</em>}</li>
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.VariationImpl#getName
+ * <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class VariationImpl extends CDOObjectImpl implements Variation {
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
 
     /**
      * The default value of the '{@link #getMinValue() <em>Min Value</em>}' attribute. <!--
@@ -64,7 +68,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
     /**
      * The default value of the '{@link #getMaxVariations() <em>Max Variations</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getMaxVariations()
      * @generated
      * @ordered
@@ -74,7 +78,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
     /**
      * The default value of the '{@link #getVariedObjectId() <em>Varied Object Id</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getVariedObjectId()
      * @generated
      * @ordered
@@ -84,7 +88,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getName()
      * @generated
      * @ordered
@@ -93,7 +97,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected VariationImpl() {
@@ -102,7 +106,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -112,7 +116,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -122,7 +126,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -133,7 +137,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public VariationType basicGetType() {
@@ -143,7 +147,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -153,7 +157,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -164,29 +168,30 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetValueProvider(final ValueProvider newValueProvider, NotificationChain msgs) {
-        msgs = this.eDynamicInverseAdd((InternalEObject) newValueProvider,
-                ExperimentsPackage.VARIATION__VALUE_PROVIDER, msgs);
+        msgs = this.eDynamicInverseAdd((InternalEObject) newValueProvider, ExperimentsPackage.VARIATION__VALUE_PROVIDER,
+                msgs);
         return msgs;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setValueProvider(final ValueProvider newValueProvider) {
         this.eDynamicSet(ExperimentsPackage.VARIATION__VALUE_PROVIDER,
-                ExperimentsPackage.Literals.VARIATION__VALUE_PROVIDER, newValueProvider);
+                ExperimentsPackage.Literals.VARIATION__VALUE_PROVIDER,
+                newValueProvider);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -197,7 +202,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -208,7 +213,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -219,7 +224,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -230,7 +235,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -241,18 +246,19 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setMaxVariations(final long newMaxVariations) {
         this.eDynamicSet(ExperimentsPackage.VARIATION__MAX_VARIATIONS,
-                ExperimentsPackage.Literals.VARIATION__MAX_VARIATIONS, newMaxVariations);
+                ExperimentsPackage.Literals.VARIATION__MAX_VARIATIONS,
+                newMaxVariations);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -263,7 +269,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -274,18 +280,19 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String getName() {
         return (String) this.eDynamicGet(ExperimentsPackage.VARIATION__NAME,
-                ExperimentsPackage.Literals.VARIATION__NAME, true, true);
+                ExperimentsPackage.Literals.VARIATION__NAME,
+                true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -295,7 +302,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -310,7 +317,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -339,7 +346,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -372,7 +379,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -405,7 +412,7 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -422,8 +429,8 @@ public class VariationImpl extends CDOObjectImpl implements Variation {
         case ExperimentsPackage.VARIATION__MAX_VARIATIONS:
             return this.getMaxVariations() != MAX_VARIATIONS_EDEFAULT;
         case ExperimentsPackage.VARIATION__VARIED_OBJECT_ID:
-            return VARIED_OBJECT_ID_EDEFAULT == null ? this.getVariedObjectId() != null : !VARIED_OBJECT_ID_EDEFAULT
-            .equals(this.getVariedObjectId());
+            return VARIED_OBJECT_ID_EDEFAULT == null ? this.getVariedObjectId() != null
+                    : !VARIED_OBJECT_ID_EDEFAULT.equals(this.getVariedObjectId());
         case ExperimentsPackage.VARIATION__NAME:
             return NAME_EDEFAULT == null ? this.getName() != null : !NAME_EDEFAULT.equals(this.getName());
         }

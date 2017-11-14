@@ -11,21 +11,26 @@ import org.palladiosimulator.experimentautomation.experiments.JMXMeasurement;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.JMXMeasurementImpl#getPollingPeriod
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.JMXMeasurementImpl#getPollingPeriod
  * <em>Polling Period</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMeasurement {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+    /**
      * The default value of the '{@link #getPollingPeriod() <em>Polling Period</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getPollingPeriod()
      * @generated
      * @ordered
@@ -34,7 +39,7 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected JMXMeasurementImpl() {
@@ -43,7 +48,7 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -53,7 +58,7 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -64,7 +69,7 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -75,7 +80,7 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -89,7 +94,7 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -104,7 +109,7 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -119,15 +124,15 @@ public class JMXMeasurementImpl extends ResponseMeasurementImpl implements JMXMe
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.JMX_MEASUREMENT__POLLING_PERIOD:
-            return POLLING_PERIOD_EDEFAULT == null ? this.getPollingPeriod() != null : !POLLING_PERIOD_EDEFAULT
-            .equals(this.getPollingPeriod());
+            return POLLING_PERIOD_EDEFAULT == null ? this.getPollingPeriod() != null
+                    : !POLLING_PERIOD_EDEFAULT.equals(this.getPollingPeriod());
         }
         return super.eIsSet(featureID);
     }

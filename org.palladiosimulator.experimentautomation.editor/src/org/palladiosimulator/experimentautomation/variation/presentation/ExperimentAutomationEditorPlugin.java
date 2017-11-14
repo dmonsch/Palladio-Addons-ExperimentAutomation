@@ -9,15 +9,15 @@ import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
 import org.palladiosimulator.edp2.models.ExperimentData.provider.EDP2EditPlugin;
 import org.palladiosimulator.metricspec.provider.MetricSpecEditPlugin;
 import org.palladiosimulator.monitorrepository.provider.MonitorrepositoryEditPlugin;
+import org.palladiosimulator.pcm.core.provider.PalladioComponentModelEditPlugin;
 import org.palladiosimulator.servicelevelobjective.provider.ServiceLevelObjectiveEditPlugin;
 import org.scaledl.usageevolution.provider.UsageevolutionEditPlugin;
 
-import tools.descartes.dlim.provider.DlimEditPlugin;
 import de.uka.ipd.sdq.identifier.provider.IdentifierEditPlugin;
-import org.palladiosimulator.pcm.core.provider.PalladioComponentModelEditPlugin;
 import de.uka.ipd.sdq.probfunction.provider.ProbabilityFunctionEditPlugin;
 import de.uka.ipd.sdq.stoex.provider.StoexEditPlugin;
 import de.uka.ipd.sdq.units.provider.UnitsEditPlugin;
+import tools.descartes.dlim.provider.DlimEditPlugin;
 
 /**
  * This is the central singleton for the ExperimentAutomation editor plugin. <!-- begin-user-doc -->
@@ -26,6 +26,13 @@ import de.uka.ipd.sdq.units.provider.UnitsEditPlugin;
  * @generated
  */
 public final class ExperimentAutomationEditorPlugin extends EMFPlugin {
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
 
     /**
      * Keep track of the singleton. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -47,11 +54,20 @@ public final class ExperimentAutomationEditorPlugin extends EMFPlugin {
      * @generated
      */
     public ExperimentAutomationEditorPlugin() {
-        super(new ResourceLocator[] { DlimEditPlugin.INSTANCE, EDP2EditPlugin.INSTANCE, IdentifierEditPlugin.INSTANCE,
-                MetricSpecEditPlugin.INSTANCE, MonitorrepositoryEditPlugin.INSTANCE,
-                PalladioComponentModelEditPlugin.INSTANCE, ProbabilityFunctionEditPlugin.INSTANCE,
-                ServiceLevelObjectiveEditPlugin.INSTANCE, StoexEditPlugin.INSTANCE, UnitsEditPlugin.INSTANCE,
-                UsageevolutionEditPlugin.INSTANCE, EcoreEditPlugin.INSTANCE, });
+        super(new ResourceLocator[] {
+                DlimEditPlugin.INSTANCE,
+                EDP2EditPlugin.INSTANCE,
+                IdentifierEditPlugin.INSTANCE,
+                MetricSpecEditPlugin.INSTANCE,
+                MonitorrepositoryEditPlugin.INSTANCE,
+                PalladioComponentModelEditPlugin.INSTANCE,
+                ProbabilityFunctionEditPlugin.INSTANCE,
+                ServiceLevelObjectiveEditPlugin.INSTANCE,
+                StoexEditPlugin.INSTANCE,
+                UnitsEditPlugin.INSTANCE,
+                UsageevolutionEditPlugin.INSTANCE,
+                EcoreEditPlugin.INSTANCE,
+        });
     }
 
     /**

@@ -33,6 +33,13 @@ public class ExperimentRepositoryItemProvider extends ItemProviderAdapter implem
         IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -111,8 +118,8 @@ public class ExperimentRepositoryItemProvider extends ItemProviderAdapter implem
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -138,9 +145,9 @@ public class ExperimentRepositoryItemProvider extends ItemProviderAdapter implem
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(this.createChildParameter(
-                ExperimentsPackage.Literals.EXPERIMENT_REPOSITORY__EXPERIMENTS,
-                ExperimentsFactory.eINSTANCE.createExperiment()));
+        newChildDescriptors
+                .add(this.createChildParameter(ExperimentsPackage.Literals.EXPERIMENT_REPOSITORY__EXPERIMENTS,
+                        ExperimentsFactory.eINSTANCE.createExperiment()));
     }
 
     /**

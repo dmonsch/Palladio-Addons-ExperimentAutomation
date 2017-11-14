@@ -41,6 +41,13 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
         ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
@@ -521,8 +528,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider}.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -547,8 +554,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider}.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -572,8 +579,8 @@ public class ExperimentsItemProviderAdapterFactory extends ExperimentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.experimentautomation.experiments.SchedulingPolicy2DelayModification}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.experiments.SchedulingPolicy2DelayModification}.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

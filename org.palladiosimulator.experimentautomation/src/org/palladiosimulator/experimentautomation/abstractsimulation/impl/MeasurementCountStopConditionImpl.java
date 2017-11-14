@@ -7,25 +7,30 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.Abstractsim
 import org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Measurement Count Stop Condition</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Measurement Count Stop
+ * Condition</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.MeasurementCountStopConditionImpl#getMeasurementCount
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.MeasurementCountStopConditionImpl#getMeasurementCount
  * <em>Measurement Count</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class MeasurementCountStopConditionImpl extends StopConditionImpl implements MeasurementCountStopCondition {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+    /**
      * The default value of the '{@link #getMeasurementCount() <em>Measurement Count</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getMeasurementCount()
      * @generated
      * @ordered
@@ -34,7 +39,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MeasurementCountStopConditionImpl() {
@@ -43,7 +48,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -53,19 +58,18 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public int getMeasurementCount() {
-        return (Integer) this.eDynamicGet(
-                AbstractsimulationPackage.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT,
+        return (Integer) this.eDynamicGet(AbstractsimulationPackage.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT,
                 AbstractsimulationPackage.Literals.MEASUREMENT_COUNT_STOP_CONDITION__MEASUREMENT_COUNT, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -77,7 +81,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -91,7 +95,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -106,7 +110,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -121,7 +125,7 @@ public class MeasurementCountStopConditionImpl extends StopConditionImpl impleme
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

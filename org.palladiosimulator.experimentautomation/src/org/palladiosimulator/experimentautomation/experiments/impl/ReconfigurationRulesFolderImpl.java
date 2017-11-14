@@ -8,21 +8,26 @@ import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Reconfiguration Rules Folder</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Reconfiguration Rules
+ * Folder</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.ReconfigurationRulesFolderImpl#getFolderUri
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ReconfigurationRulesFolderImpl#getFolderUri
  * <em>Folder Uri</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class ReconfigurationRulesFolderImpl extends CDOObjectImpl implements ReconfigurationRulesFolder {
 
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
     /**
      * The default value of the '{@link #getFolderUri() <em>Folder Uri</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -35,7 +40,7 @@ public class ReconfigurationRulesFolderImpl extends CDOObjectImpl implements Rec
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ReconfigurationRulesFolderImpl() {
@@ -44,7 +49,7 @@ public class ReconfigurationRulesFolderImpl extends CDOObjectImpl implements Rec
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -54,7 +59,7 @@ public class ReconfigurationRulesFolderImpl extends CDOObjectImpl implements Rec
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -64,7 +69,7 @@ public class ReconfigurationRulesFolderImpl extends CDOObjectImpl implements Rec
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -75,7 +80,7 @@ public class ReconfigurationRulesFolderImpl extends CDOObjectImpl implements Rec
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -86,7 +91,7 @@ public class ReconfigurationRulesFolderImpl extends CDOObjectImpl implements Rec
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -100,7 +105,7 @@ public class ReconfigurationRulesFolderImpl extends CDOObjectImpl implements Rec
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -115,7 +120,7 @@ public class ReconfigurationRulesFolderImpl extends CDOObjectImpl implements Rec
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -130,15 +135,15 @@ public class ReconfigurationRulesFolderImpl extends CDOObjectImpl implements Rec
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ExperimentsPackage.RECONFIGURATION_RULES_FOLDER__FOLDER_URI:
-            return FOLDER_URI_EDEFAULT == null ? this.getFolderUri() != null : !FOLDER_URI_EDEFAULT.equals(this
-                    .getFolderUri());
+            return FOLDER_URI_EDEFAULT == null ? this.getFolderUri() != null
+                    : !FOLDER_URI_EDEFAULT.equals(this.getFolderUri());
         }
         return super.eIsSet(featureID);
     }

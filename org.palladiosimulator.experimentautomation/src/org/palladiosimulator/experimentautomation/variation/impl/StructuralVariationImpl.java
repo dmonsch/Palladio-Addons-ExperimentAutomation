@@ -7,10 +7,8 @@ import org.palladiosimulator.experimentautomation.variation.StructuralVariation;
 import org.palladiosimulator.experimentautomation.variation.VariationPackage;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Structural Variation</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
+ * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Structural
+ * Variation</b></em>'. <!-- end-user-doc -->
  *
  * @generated
  */
@@ -18,7 +16,14 @@ public class StructuralVariationImpl extends VariationTypeImpl implements Struct
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     protected StructuralVariationImpl() {
@@ -27,7 +32,7 @@ public class StructuralVariationImpl extends VariationTypeImpl implements Struct
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

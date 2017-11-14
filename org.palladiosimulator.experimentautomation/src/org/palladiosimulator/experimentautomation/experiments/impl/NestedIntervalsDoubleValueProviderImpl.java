@@ -7,24 +7,29 @@ import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsDoubleValueProvider;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Nested Intervals Double Value Provider</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Nested Intervals Double
+ * Value Provider</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsDoubleValueProviderImpl#getMinValue
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsDoubleValueProviderImpl#getMinValue
  * <em>Min Value</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsDoubleValueProviderImpl#getMaxValue
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsDoubleValueProviderImpl#getMaxValue
  * <em>Max Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class NestedIntervalsDoubleValueProviderImpl extends ValueProviderImpl implements
-NestedIntervalsDoubleValueProvider {
+        NestedIntervalsDoubleValueProvider {
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
 
     /**
      * The default value of the '{@link #getMinValue() <em>Min Value</em>}' attribute. <!--
@@ -48,7 +53,7 @@ NestedIntervalsDoubleValueProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected NestedIntervalsDoubleValueProviderImpl() {
@@ -57,7 +62,7 @@ NestedIntervalsDoubleValueProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -67,7 +72,7 @@ NestedIntervalsDoubleValueProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -78,7 +83,7 @@ NestedIntervalsDoubleValueProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -89,7 +94,7 @@ NestedIntervalsDoubleValueProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -100,7 +105,7 @@ NestedIntervalsDoubleValueProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -111,7 +116,7 @@ NestedIntervalsDoubleValueProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -127,7 +132,7 @@ NestedIntervalsDoubleValueProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -145,7 +150,7 @@ NestedIntervalsDoubleValueProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -163,7 +168,7 @@ NestedIntervalsDoubleValueProvider {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

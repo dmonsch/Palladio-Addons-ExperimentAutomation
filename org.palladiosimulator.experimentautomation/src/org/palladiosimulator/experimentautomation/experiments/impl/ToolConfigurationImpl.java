@@ -12,21 +12,26 @@ import org.palladiosimulator.experimentautomation.experiments.ToolConfiguration;
  * '. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.ToolConfigurationImpl#getName
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ToolConfigurationImpl#getName
  * <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public abstract class ToolConfigurationImpl extends CDOObjectImpl implements ToolConfiguration {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+    /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getName()
      * @generated
      * @ordered
@@ -35,7 +40,7 @@ public abstract class ToolConfigurationImpl extends CDOObjectImpl implements Too
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ToolConfigurationImpl() {
@@ -44,7 +49,7 @@ public abstract class ToolConfigurationImpl extends CDOObjectImpl implements Too
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -54,7 +59,7 @@ public abstract class ToolConfigurationImpl extends CDOObjectImpl implements Too
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -64,7 +69,7 @@ public abstract class ToolConfigurationImpl extends CDOObjectImpl implements Too
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -75,18 +80,19 @@ public abstract class ToolConfigurationImpl extends CDOObjectImpl implements Too
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setName(final String newName) {
         this.eDynamicSet(ExperimentsPackage.TOOL_CONFIGURATION__NAME,
-                ExperimentsPackage.Literals.TOOL_CONFIGURATION__NAME, newName);
+                ExperimentsPackage.Literals.TOOL_CONFIGURATION__NAME,
+                newName);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -100,7 +106,7 @@ public abstract class ToolConfigurationImpl extends CDOObjectImpl implements Too
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -115,7 +121,7 @@ public abstract class ToolConfigurationImpl extends CDOObjectImpl implements Too
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -130,7 +136,7 @@ public abstract class ToolConfigurationImpl extends CDOObjectImpl implements Too
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

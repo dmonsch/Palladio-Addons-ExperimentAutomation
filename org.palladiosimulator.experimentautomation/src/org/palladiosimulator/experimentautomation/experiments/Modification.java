@@ -15,4 +15,11 @@ import org.eclipse.emf.cdo.CDOObject;
  * @generated
  */
 public interface Modification extends CDOObject {
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    String copyright = "Palladiosimulator.org 2008-2017";
 } // Modification

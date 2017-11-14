@@ -7,23 +7,29 @@ import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
 import org.palladiosimulator.experimentautomation.experiments.NestedIntervalsLongValueProvider;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Nested Intervals Long Value Provider</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Nested Intervals Long
+ * Value Provider</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsLongValueProviderImpl#getMinValue
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsLongValueProviderImpl#getMinValue
  * <em>Min Value</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsLongValueProviderImpl#getMaxValue
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.NestedIntervalsLongValueProviderImpl#getMaxValue
  * <em>Max Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl implements NestedIntervalsLongValueProvider {
+public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl
+        implements NestedIntervalsLongValueProvider {
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
 
     /**
      * The default value of the '{@link #getMinValue() <em>Min Value</em>}' attribute. <!--
@@ -47,7 +53,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected NestedIntervalsLongValueProviderImpl() {
@@ -56,7 +62,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -66,7 +72,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -77,7 +83,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -88,7 +94,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -99,7 +105,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -110,7 +116,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -126,7 +132,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -144,7 +150,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -162,7 +168,7 @@ public class NestedIntervalsLongValueProviderImpl extends ValueProviderImpl impl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

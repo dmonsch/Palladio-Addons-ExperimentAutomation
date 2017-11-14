@@ -40,6 +40,13 @@ public class VariationItemProviderAdapterFactory extends VariationAdapterFactory
         IChangeNotifier, IDisposable, IChildCreationExtender {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *

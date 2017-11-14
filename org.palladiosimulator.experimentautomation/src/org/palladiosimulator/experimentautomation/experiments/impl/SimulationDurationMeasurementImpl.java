@@ -7,18 +7,24 @@ import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
 import org.palladiosimulator.experimentautomation.experiments.SimulationDurationMeasurement;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Simulation Duration Measurement</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
+ * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Simulation Duration
+ * Measurement</b></em>'. <!-- end-user-doc -->
  *
  * @generated
  */
-public class SimulationDurationMeasurementImpl extends ResponseMeasurementImpl implements SimulationDurationMeasurement {
+public class SimulationDurationMeasurementImpl extends ResponseMeasurementImpl
+        implements SimulationDurationMeasurement {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     protected SimulationDurationMeasurementImpl() {
@@ -27,7 +33,7 @@ public class SimulationDurationMeasurementImpl extends ResponseMeasurementImpl i
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

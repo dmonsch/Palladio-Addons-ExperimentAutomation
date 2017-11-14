@@ -20,6 +20,13 @@ import org.palladiosimulator.experimentautomation.variation.ValueVariation;
 public class ValueVariationItemProvider extends VariationTypeItemProvider {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -63,14 +70,14 @@ public class ValueVariationItemProvider extends VariationTypeItemProvider {
     @Override
     public String getText(final Object object) {
         final String label = ((ValueVariation) object).getName();
-        return label == null || label.length() == 0 ? this.getString("_UI_ValueVariation_type") : this
-                .getString("_UI_ValueVariation_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_ValueVariation_type")
+                : this.getString("_UI_ValueVariation_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

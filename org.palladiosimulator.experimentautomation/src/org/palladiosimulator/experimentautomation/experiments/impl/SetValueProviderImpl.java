@@ -11,17 +11,22 @@ import org.palladiosimulator.experimentautomation.experiments.SetValueProvider;
  * '. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.SetValueProviderImpl#getValues
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.SetValueProviderImpl#getValues
  * <em>Values</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class SetValueProviderImpl extends ValueProviderImpl implements SetValueProvider {
 
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
     /**
      * The default value of the '{@link #getValues() <em>Values</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -34,7 +39,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected SetValueProviderImpl() {
@@ -43,7 +48,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -53,7 +58,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -64,7 +69,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -75,7 +80,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -89,7 +94,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -104,7 +109,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -119,7 +124,7 @@ public class SetValueProviderImpl extends ValueProviderImpl implements SetValueP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

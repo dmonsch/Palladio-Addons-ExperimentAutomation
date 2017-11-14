@@ -8,40 +8,41 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.Abstractsim
 import org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Random Number Generator Seed</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Random Number Generator
+ * Seed</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed0
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed0
  * <em>Seed0</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed1
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed1
  * <em>Seed1</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed2
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed2
  * <em>Seed2</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed3
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed3
  * <em>Seed3</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed4
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed4
  * <em>Seed4</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed5
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.RandomNumberGeneratorSeedImpl#getSeed5
  * <em>Seed5</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements RandomNumberGeneratorSeed {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * The default value of the '{@link #getSeed0() <em>Seed0</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSeed0()
      * @generated
      * @ordered
@@ -51,7 +52,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
     /**
      * The default value of the '{@link #getSeed1() <em>Seed1</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSeed1()
      * @generated
      * @ordered
@@ -61,7 +62,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
     /**
      * The default value of the '{@link #getSeed2() <em>Seed2</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSeed2()
      * @generated
      * @ordered
@@ -71,7 +72,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
     /**
      * The default value of the '{@link #getSeed3() <em>Seed3</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSeed3()
      * @generated
      * @ordered
@@ -81,7 +82,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
     /**
      * The default value of the '{@link #getSeed4() <em>Seed4</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSeed4()
      * @generated
      * @ordered
@@ -91,7 +92,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
     /**
      * The default value of the '{@link #getSeed5() <em>Seed5</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getSeed5()
      * @generated
      * @ordered
@@ -100,7 +101,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected RandomNumberGeneratorSeedImpl() {
@@ -109,7 +110,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -119,7 +120,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -129,7 +130,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -140,7 +141,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -151,7 +152,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -162,7 +163,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -173,7 +174,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -184,7 +185,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -195,7 +196,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -206,7 +207,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -217,7 +218,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -228,7 +229,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -239,7 +240,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -250,7 +251,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -261,7 +262,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -285,7 +286,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -315,7 +316,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -345,7 +346,7 @@ public class RandomNumberGeneratorSeedImpl extends CDOObjectImpl implements Rand
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

@@ -8,34 +8,37 @@ import org.palladiosimulator.experimentautomation.experiments.ObjectModification
 import org.palladiosimulator.experimentautomation.variation.VariationType;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Object Modification</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Object
+ * Modification</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.ObjectModificationImpl#getType
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ObjectModificationImpl#getType
  * <em>Type</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.ObjectModificationImpl#getName
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ObjectModificationImpl#getName
  * <em>Name</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.ObjectModificationImpl#getVariedObjectId
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ObjectModificationImpl#getVariedObjectId
  * <em>Varied Object Id</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.ObjectModificationImpl#getValue
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ObjectModificationImpl#getValue
  * <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class ObjectModificationImpl extends ModificationImpl implements ObjectModification {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getName()
      * @generated
      * @ordered
@@ -45,7 +48,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
     /**
      * The default value of the '{@link #getVariedObjectId() <em>Varied Object Id</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getVariedObjectId()
      * @generated
      * @ordered
@@ -55,7 +58,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
     /**
      * The default value of the '{@link #getValue() <em>Value</em>}' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     * 
+     *
      * @see #getValue()
      * @generated
      * @ordered
@@ -64,7 +67,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ObjectModificationImpl() {
@@ -73,7 +76,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -83,7 +86,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -94,7 +97,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public VariationType basicGetType() {
@@ -104,18 +107,19 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setType(final VariationType newType) {
         this.eDynamicSet(ExperimentsPackage.OBJECT_MODIFICATION__TYPE,
-                ExperimentsPackage.Literals.OBJECT_MODIFICATION__TYPE, newType);
+                ExperimentsPackage.Literals.OBJECT_MODIFICATION__TYPE,
+                newType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -126,18 +130,19 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setName(final String newName) {
         this.eDynamicSet(ExperimentsPackage.OBJECT_MODIFICATION__NAME,
-                ExperimentsPackage.Literals.OBJECT_MODIFICATION__NAME, newName);
+                ExperimentsPackage.Literals.OBJECT_MODIFICATION__NAME,
+                newName);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -148,7 +153,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -159,7 +164,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -170,7 +175,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -181,7 +186,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -204,7 +209,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -228,7 +233,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -252,7 +257,7 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -263,8 +268,8 @@ public class ObjectModificationImpl extends ModificationImpl implements ObjectMo
         case ExperimentsPackage.OBJECT_MODIFICATION__NAME:
             return NAME_EDEFAULT == null ? this.getName() != null : !NAME_EDEFAULT.equals(this.getName());
         case ExperimentsPackage.OBJECT_MODIFICATION__VARIED_OBJECT_ID:
-            return VARIED_OBJECT_ID_EDEFAULT == null ? this.getVariedObjectId() != null : !VARIED_OBJECT_ID_EDEFAULT
-            .equals(this.getVariedObjectId());
+            return VARIED_OBJECT_ID_EDEFAULT == null ? this.getVariedObjectId() != null
+                    : !VARIED_OBJECT_ID_EDEFAULT.equals(this.getVariedObjectId());
         case ExperimentsPackage.OBJECT_MODIFICATION__VALUE:
             return this.getValue() != VALUE_EDEFAULT;
         }

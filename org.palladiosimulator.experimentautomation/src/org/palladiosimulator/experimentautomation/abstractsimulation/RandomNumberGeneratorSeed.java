@@ -5,32 +5,26 @@ package org.palladiosimulator.experimentautomation.abstractsimulation;
 import org.eclipse.emf.cdo.CDOObject;
 
 /**
- * <!-- begin-user-doc --> A representation of the model object '
- * <em><b>Random Number Generator Seed</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object ' <em><b>Random Number Generator
+ * Seed</b></em>'. <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed0
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed0
  * <em>Seed0</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed1
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed1
  * <em>Seed1</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed2
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed2
  * <em>Seed2</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed3
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed3
  * <em>Seed3</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed4
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed4
  * <em>Seed4</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed5
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed5
  * <em>Seed5</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed()
  * @model
@@ -40,13 +34,20 @@ import org.eclipse.emf.cdo.CDOObject;
 public interface RandomNumberGeneratorSeed extends CDOObject {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * Returns the value of the '<em><b>Seed0</b></em>' attribute. <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Seed0</em>' attribute isn't clear, there really should be more of
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Seed0</em>' attribute.
      * @see #setSeed0(int)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed0()
@@ -56,10 +57,10 @@ public interface RandomNumberGeneratorSeed extends CDOObject {
     int getSeed0();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed0
+     * Sets the value of the
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed0
      * <em>Seed0</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Seed0</em>' attribute.
      * @see #getSeed0()
@@ -74,7 +75,7 @@ public interface RandomNumberGeneratorSeed extends CDOObject {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Seed1</em>' attribute.
      * @see #setSeed1(int)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed1()
@@ -84,10 +85,10 @@ public interface RandomNumberGeneratorSeed extends CDOObject {
     int getSeed1();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed1
+     * Sets the value of the
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed1
      * <em>Seed1</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Seed1</em>' attribute.
      * @see #getSeed1()
@@ -102,7 +103,7 @@ public interface RandomNumberGeneratorSeed extends CDOObject {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Seed2</em>' attribute.
      * @see #setSeed2(int)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed2()
@@ -112,10 +113,10 @@ public interface RandomNumberGeneratorSeed extends CDOObject {
     int getSeed2();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed2
+     * Sets the value of the
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed2
      * <em>Seed2</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Seed2</em>' attribute.
      * @see #getSeed2()
@@ -130,7 +131,7 @@ public interface RandomNumberGeneratorSeed extends CDOObject {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Seed3</em>' attribute.
      * @see #setSeed3(int)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed3()
@@ -140,10 +141,10 @@ public interface RandomNumberGeneratorSeed extends CDOObject {
     int getSeed3();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed3
+     * Sets the value of the
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed3
      * <em>Seed3</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Seed3</em>' attribute.
      * @see #getSeed3()
@@ -158,7 +159,7 @@ public interface RandomNumberGeneratorSeed extends CDOObject {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Seed4</em>' attribute.
      * @see #setSeed4(int)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed4()
@@ -168,10 +169,10 @@ public interface RandomNumberGeneratorSeed extends CDOObject {
     int getSeed4();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed4
+     * Sets the value of the
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed4
      * <em>Seed4</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Seed4</em>' attribute.
      * @see #getSeed4()
@@ -186,7 +187,7 @@ public interface RandomNumberGeneratorSeed extends CDOObject {
      * a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
+     *
      * @return the value of the '<em>Seed5</em>' attribute.
      * @see #setSeed5(int)
      * @see org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage#getRandomNumberGeneratorSeed_Seed5()
@@ -196,10 +197,10 @@ public interface RandomNumberGeneratorSeed extends CDOObject {
     int getSeed5();
 
     /**
-     * Sets the value of the '
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed5
+     * Sets the value of the
+     * '{@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed#getSeed5
      * <em>Seed5</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @param value
      *            the new value of the '<em>Seed5</em>' attribute.
      * @see #getSeed5()

@@ -6,17 +6,16 @@ import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
 
 /**
- * <!-- begin-user-doc --> A representation of the model object '
- * <em><b>Experiment Repository</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object ' <em><b>Experiment
+ * Repository</b></em>'. <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.ExperimentRepository#getExperiments
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.ExperimentRepository#getExperiments
  * <em>Experiments</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#getExperimentRepository()
  * @model
@@ -24,6 +23,13 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface ExperimentRepository extends CDOObject {
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    String copyright = "Palladiosimulator.org 2008-2017";
 
     /**
      * Returns the value of the '<em><b>Experiments</b></em>' containment reference list. The list

@@ -7,23 +7,28 @@ import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
 import org.palladiosimulator.experimentautomation.experiments.LinearValueProvider;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Linear Value Provider</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Linear Value
+ * Provider</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.LinearValueProviderImpl#getSummand
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.LinearValueProviderImpl#getSummand
  * <em>Summand</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.LinearValueProviderImpl#getFactor
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.LinearValueProviderImpl#getFactor
  * <em>Factor</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class LinearValueProviderImpl extends ValueProviderImpl implements LinearValueProvider {
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
 
     /**
      * The default value of the '{@link #getSummand() <em>Summand</em>}' attribute. <!--
@@ -47,7 +52,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected LinearValueProviderImpl() {
@@ -56,7 +61,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -66,7 +71,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -77,7 +82,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -88,7 +93,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -99,7 +104,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -110,7 +115,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -126,7 +131,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -144,7 +149,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -162,7 +167,7 @@ public class LinearValueProviderImpl extends ValueProviderImpl implements Linear
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

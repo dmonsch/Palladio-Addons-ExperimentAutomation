@@ -15,16 +15,15 @@ import org.palladiosimulator.experimentautomation.experiments.ExperimentReposito
 import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Experiment Repository</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Experiment
+ * Repository</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentRepositoryImpl#getExperiments
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.ExperimentRepositoryImpl#getExperiments
  * <em>Experiments</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -32,7 +31,14 @@ public class ExperimentRepositoryImpl extends CDOObjectImpl implements Experimen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     protected ExperimentRepositoryImpl() {
@@ -41,7 +47,7 @@ public class ExperimentRepositoryImpl extends CDOObjectImpl implements Experimen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -51,7 +57,7 @@ public class ExperimentRepositoryImpl extends CDOObjectImpl implements Experimen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -61,7 +67,7 @@ public class ExperimentRepositoryImpl extends CDOObjectImpl implements Experimen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -73,7 +79,7 @@ public class ExperimentRepositoryImpl extends CDOObjectImpl implements Experimen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -88,7 +94,7 @@ public class ExperimentRepositoryImpl extends CDOObjectImpl implements Experimen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -102,7 +108,7 @@ public class ExperimentRepositoryImpl extends CDOObjectImpl implements Experimen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -119,7 +125,7 @@ public class ExperimentRepositoryImpl extends CDOObjectImpl implements Experimen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -134,7 +140,7 @@ public class ExperimentRepositoryImpl extends CDOObjectImpl implements Experimen
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

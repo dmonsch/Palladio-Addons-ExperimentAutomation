@@ -24,6 +24,13 @@ import org.palladiosimulator.experimentautomation.experiments.LinearValueProvide
 public class LinearValueProviderItemProvider extends ValueProviderItemProvider {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -57,12 +64,20 @@ public class LinearValueProviderItemProvider extends ValueProviderItemProvider {
      * @generated
      */
     protected void addSummandPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_LinearValueProvider_summand_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_LinearValueProvider_summand_feature",
-                        "_UI_LinearValueProvider_type"), ExperimentsPackage.Literals.LINEAR_VALUE_PROVIDER__SUMMAND,
-                true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_LinearValueProvider_summand_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_LinearValueProvider_summand_feature",
+                                "_UI_LinearValueProvider_type"),
+                        ExperimentsPackage.Literals.LINEAR_VALUE_PROVIDER__SUMMAND,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
@@ -72,12 +87,20 @@ public class LinearValueProviderItemProvider extends ValueProviderItemProvider {
      * @generated
      */
     protected void addFactorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_LinearValueProvider_factor_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_LinearValueProvider_factor_feature",
-                        "_UI_LinearValueProvider_type"), ExperimentsPackage.Literals.LINEAR_VALUE_PROVIDER__FACTOR,
-                true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_LinearValueProvider_factor_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_LinearValueProvider_factor_feature",
+                                "_UI_LinearValueProvider_type"),
+                        ExperimentsPackage.Literals.LINEAR_VALUE_PROVIDER__FACTOR,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
@@ -104,8 +127,8 @@ public class LinearValueProviderItemProvider extends ValueProviderItemProvider {
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

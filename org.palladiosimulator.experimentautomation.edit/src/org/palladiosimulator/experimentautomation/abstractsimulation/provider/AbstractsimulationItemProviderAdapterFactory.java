@@ -41,6 +41,13 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
         ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
@@ -96,8 +103,8 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.RandomNumberGeneratorSeed}.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -171,8 +178,8 @@ public class AbstractsimulationItemProviderAdapterFactory extends Abstractsimula
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.experimentautomation.abstractsimulation.MeasurementCountStopCondition}.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

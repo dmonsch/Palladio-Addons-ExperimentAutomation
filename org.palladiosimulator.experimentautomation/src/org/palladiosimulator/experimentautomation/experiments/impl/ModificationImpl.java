@@ -10,8 +10,6 @@ import org.palladiosimulator.experimentautomation.experiments.Modification;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Modification</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -19,7 +17,14 @@ public abstract class ModificationImpl extends CDOObjectImpl implements Modifica
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     protected ModificationImpl() {
@@ -28,7 +33,7 @@ public abstract class ModificationImpl extends CDOObjectImpl implements Modifica
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -38,7 +43,7 @@ public abstract class ModificationImpl extends CDOObjectImpl implements Modifica
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

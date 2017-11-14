@@ -7,10 +7,8 @@ import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
 import org.palladiosimulator.experimentautomation.experiments.ProfilingMeasurement;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '
- * <em><b>Profiling Measurement</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
+ * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Profiling
+ * Measurement</b></em>'. <!-- end-user-doc -->
  *
  * @generated
  */
@@ -18,7 +16,14 @@ public class ProfilingMeasurementImpl extends ResponseMeasurementImpl implements
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     protected ProfilingMeasurementImpl() {
@@ -27,7 +32,7 @@ public class ProfilingMeasurementImpl extends ResponseMeasurementImpl implements
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

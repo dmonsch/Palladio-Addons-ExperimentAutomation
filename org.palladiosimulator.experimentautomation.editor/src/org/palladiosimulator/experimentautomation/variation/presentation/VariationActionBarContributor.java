@@ -41,7 +41,14 @@ import org.eclipse.ui.PartInitException;
  * @generated
  */
 public class VariationActionBarContributor extends EditingDomainActionBarContributor implements
-ISelectionChangedListener {
+        ISelectionChangedListener {
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
 
     /**
      * This keeps track of the active editor. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -65,7 +72,6 @@ ISelectionChangedListener {
      */
     protected IAction showPropertiesViewAction = new Action(
             ExperimentAutomationEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
-
         @Override
         public void run() {
             try {
@@ -85,7 +91,6 @@ ISelectionChangedListener {
      */
     protected IAction refreshViewerAction = new Action(
             ExperimentAutomationEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
-
         @Override
         public boolean isEnabled() {
             return VariationActionBarContributor.this.activeEditorPart instanceof IViewerProvider;
@@ -195,7 +200,6 @@ ISelectionChangedListener {
         // Force an update because Eclipse hides empty menus now.
         //
         submenuManager.addMenuListener(new IMenuListener() {
-
             @Override
             public void menuAboutToShow(final IMenuManager menuManager) {
                 menuManager.updateAll(true);
@@ -230,8 +234,8 @@ ISelectionChangedListener {
             // Fake a selection changed event to update the menus.
             //
             if (this.selectionProvider.getSelection() != null) {
-                this.selectionChanged(new SelectionChangedEvent(this.selectionProvider, this.selectionProvider
-                        .getSelection()));
+                this.selectionChanged(
+                        new SelectionChangedEvent(this.selectionProvider, this.selectionProvider.getSelection()));
             }
         }
     }
@@ -292,7 +296,8 @@ ISelectionChangedListener {
      * 
      * @generated
      */
-    protected Collection<IAction> generateCreateChildActions(final Collection<?> descriptors, final ISelection selection) {
+    protected Collection<IAction> generateCreateChildActions(final Collection<?> descriptors,
+            final ISelection selection) {
         final Collection<IAction> actions = new ArrayList<IAction>();
         if (descriptors != null) {
             for (final Object descriptor : descriptors) {

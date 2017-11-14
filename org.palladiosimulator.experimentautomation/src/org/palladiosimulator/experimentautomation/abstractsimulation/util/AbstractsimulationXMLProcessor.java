@@ -12,14 +12,21 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.Abstractsim
 /**
  * This class contains helper methods to serialize and deserialize XML documents <!-- begin-user-doc
  * --> <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class AbstractsimulationXMLProcessor extends XMLProcessor {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * Public constructor to instantiate the helper. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public AbstractsimulationXMLProcessor() {
@@ -30,7 +37,7 @@ public class AbstractsimulationXMLProcessor extends XMLProcessor {
     /**
      * Register for "*" and "xml" file extensions the AbstractsimulationResourceFactoryImpl factory.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

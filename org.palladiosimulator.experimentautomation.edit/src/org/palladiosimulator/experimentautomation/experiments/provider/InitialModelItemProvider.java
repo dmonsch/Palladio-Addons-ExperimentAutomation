@@ -30,6 +30,13 @@ public class InitialModelItemProvider extends ItemProviderAdapter implements IEd
         IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -72,12 +79,20 @@ public class InitialModelItemProvider extends ItemProviderAdapter implements IEd
      * @generated
      */
     protected void addUsageModelPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_InitialModel_usageModel_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_InitialModel_usageModel_feature",
-                        "_UI_InitialModel_type"), ExperimentsPackage.Literals.INITIAL_MODEL__USAGE_MODEL, true, false,
-                true, null, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_InitialModel_usageModel_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_InitialModel_usageModel_feature",
+                                "_UI_InitialModel_type"),
+                        ExperimentsPackage.Literals.INITIAL_MODEL__USAGE_MODEL,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -87,12 +102,20 @@ public class InitialModelItemProvider extends ItemProviderAdapter implements IEd
      * @generated
      */
     protected void addAllocationPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_InitialModel_allocation_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_InitialModel_allocation_feature",
-                        "_UI_InitialModel_type"), ExperimentsPackage.Literals.INITIAL_MODEL__ALLOCATION, true, false,
-                true, null, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_InitialModel_allocation_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_InitialModel_allocation_feature",
+                                "_UI_InitialModel_type"),
+                        ExperimentsPackage.Literals.INITIAL_MODEL__ALLOCATION,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -102,12 +125,21 @@ public class InitialModelItemProvider extends ItemProviderAdapter implements IEd
      * @generated
      */
     protected void addMiddlewareRepositoryPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_InitialModel_middlewareRepository_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_InitialModel_middlewareRepository_feature",
-                        "_UI_InitialModel_type"), ExperimentsPackage.Literals.INITIAL_MODEL__MIDDLEWARE_REPOSITORY,
-                true, false, true, null, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_InitialModel_middlewareRepository_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_InitialModel_middlewareRepository_feature",
+                                "_UI_InitialModel_type"),
+                        ExperimentsPackage.Literals.INITIAL_MODEL__MIDDLEWARE_REPOSITORY,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -117,13 +149,20 @@ public class InitialModelItemProvider extends ItemProviderAdapter implements IEd
      * @generated
      */
     protected void addEventMiddleWareRepositoryPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_InitialModel_eventMiddleWareRepository_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_InitialModel_eventMiddleWareRepository_feature",
-                        "_UI_InitialModel_type"),
-                ExperimentsPackage.Literals.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY, true, false, true, null, null,
-                null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_InitialModel_eventMiddleWareRepository_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_InitialModel_eventMiddleWareRepository_feature", "_UI_InitialModel_type"),
+                        ExperimentsPackage.Literals.INITIAL_MODEL__EVENT_MIDDLE_WARE_REPOSITORY,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -133,12 +172,21 @@ public class InitialModelItemProvider extends ItemProviderAdapter implements IEd
      * @generated
      */
     protected void addReconfigurationRulesPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_InitialModel_reconfigurationRules_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_InitialModel_reconfigurationRules_feature",
-                        "_UI_InitialModel_type"), ExperimentsPackage.Literals.INITIAL_MODEL__RECONFIGURATION_RULES,
-                true, false, true, null, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_InitialModel_reconfigurationRules_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_InitialModel_reconfigurationRules_feature",
+                                "_UI_InitialModel_type"),
+                        ExperimentsPackage.Literals.INITIAL_MODEL__RECONFIGURATION_RULES,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -148,12 +196,21 @@ public class InitialModelItemProvider extends ItemProviderAdapter implements IEd
      * @generated
      */
     protected void addMonitorRepositoryPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_InitialModel_monitorRepository_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_InitialModel_monitorRepository_feature",
-                        "_UI_InitialModel_type"), ExperimentsPackage.Literals.INITIAL_MODEL__MONITOR_REPOSITORY, true,
-                false, true, null, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_InitialModel_monitorRepository_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_InitialModel_monitorRepository_feature",
+                                "_UI_InitialModel_type"),
+                        ExperimentsPackage.Literals.INITIAL_MODEL__MONITOR_REPOSITORY,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -163,12 +220,20 @@ public class InitialModelItemProvider extends ItemProviderAdapter implements IEd
      * @generated
      */
     protected void addServiceLevelObjectivesPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_InitialModel_serviceLevelObjectives_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_InitialModel_serviceLevelObjectives_feature",
-                        "_UI_InitialModel_type"), ExperimentsPackage.Literals.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES,
-                true, false, true, null, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_InitialModel_serviceLevelObjectives_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_InitialModel_serviceLevelObjectives_feature", "_UI_InitialModel_type"),
+                        ExperimentsPackage.Literals.INITIAL_MODEL__SERVICE_LEVEL_OBJECTIVES,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -178,12 +243,20 @@ public class InitialModelItemProvider extends ItemProviderAdapter implements IEd
      * @generated
      */
     protected void addRepositoryPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_InitialModel_repository_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_InitialModel_repository_feature",
-                        "_UI_InitialModel_type"), ExperimentsPackage.Literals.INITIAL_MODEL__REPOSITORY, true, false,
-                true, null, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_InitialModel_repository_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_InitialModel_repository_feature",
+                                "_UI_InitialModel_type"),
+                        ExperimentsPackage.Literals.INITIAL_MODEL__REPOSITORY,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -193,11 +266,20 @@ public class InitialModelItemProvider extends ItemProviderAdapter implements IEd
      * @generated
      */
     protected void addSystemPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_InitialModel_system_feature"), this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_InitialModel_system_feature", "_UI_InitialModel_type"),
-                        ExperimentsPackage.Literals.INITIAL_MODEL__SYSTEM, true, false, true, null, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_InitialModel_system_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_InitialModel_system_feature",
+                                "_UI_InitialModel_type"),
+                        ExperimentsPackage.Literals.INITIAL_MODEL__SYSTEM,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -207,12 +289,21 @@ public class InitialModelItemProvider extends ItemProviderAdapter implements IEd
      * @generated
      */
     protected void addResourceEnvironmentPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_InitialModel_resourceEnvironment_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_InitialModel_resourceEnvironment_feature",
-                        "_UI_InitialModel_type"), ExperimentsPackage.Literals.INITIAL_MODEL__RESOURCE_ENVIRONMENT,
-                true, false, true, null, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_InitialModel_resourceEnvironment_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_InitialModel_resourceEnvironment_feature",
+                                "_UI_InitialModel_type"),
+                        ExperimentsPackage.Literals.INITIAL_MODEL__RESOURCE_ENVIRONMENT,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -222,12 +313,20 @@ public class InitialModelItemProvider extends ItemProviderAdapter implements IEd
      * @generated
      */
     protected void addUsageEvolutionPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_InitialModel_usageEvolution_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_InitialModel_usageEvolution_feature",
-                        "_UI_InitialModel_type"), ExperimentsPackage.Literals.INITIAL_MODEL__USAGE_EVOLUTION, true,
-                false, true, null, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_InitialModel_usageEvolution_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_InitialModel_usageEvolution_feature",
+                                "_UI_InitialModel_type"),
+                        ExperimentsPackage.Literals.INITIAL_MODEL__USAGE_EVOLUTION,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -253,8 +352,8 @@ public class InitialModelItemProvider extends ItemProviderAdapter implements IEd
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

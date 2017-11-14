@@ -6,7 +6,10 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.palladiosimulator.edp2.models.ExperimentData.ExperimentDataPackage;
+import org.palladiosimulator.edp2.models.measuringpoint.MeasuringpointPackage;
 import org.palladiosimulator.experimentautomation.abstractsimulation.AbstractsimulationPackage;
 import org.palladiosimulator.experimentautomation.abstractsimulation.impl.AbstractsimulationPackageImpl;
 import org.palladiosimulator.experimentautomation.experiments.Experiment;
@@ -38,194 +41,208 @@ import org.palladiosimulator.experimentautomation.experiments.ValueProvider;
 import org.palladiosimulator.experimentautomation.experiments.Variation;
 import org.palladiosimulator.experimentautomation.variation.VariationPackage;
 import org.palladiosimulator.experimentautomation.variation.impl.VariationPackageImpl;
+import org.palladiosimulator.metricspec.MetricSpecPackage;
 import org.palladiosimulator.monitorrepository.MonitorRepositoryPackage;
-import org.palladiosimulator.servicelevelobjective.ServicelevelObjectivePackage;
-import org.scaledl.usageevolution.UsageevolutionPackage;
-
+import org.palladiosimulator.pcm.PcmPackage;
 import org.palladiosimulator.pcm.allocation.AllocationPackage;
 import org.palladiosimulator.pcm.repository.RepositoryPackage;
 import org.palladiosimulator.pcm.resourceenvironment.ResourceenvironmentPackage;
 import org.palladiosimulator.pcm.system.SystemPackage;
 import org.palladiosimulator.pcm.usagemodel.UsagemodelPackage;
+import org.palladiosimulator.servicelevelobjective.ServicelevelObjectivePackage;
+import org.scaledl.usageevolution.UsageevolutionPackage;
+
+import de.uka.ipd.sdq.identifier.IdentifierPackage;
+import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
+import de.uka.ipd.sdq.stoex.StoexPackage;
+import de.uka.ipd.sdq.units.UnitsPackage;
+import tools.descartes.dlim.DlimPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsPackage {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     private EClass experimentRepositoryEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass experimentEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass variationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass valueProviderEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass toolConfigurationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass experimentDesignEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass responseMeasurementEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass polynomialValueProviderEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass exponentialValueProviderEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass setValueProviderEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass placketBurmanDesignEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass fullFactorialDesignEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass fractionalFactorialDesignEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass oneFactorAtATimeEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass simulationDurationMeasurementEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass profilingMeasurementEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass jmxMeasurementEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass linearValueProviderEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass objectModificationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass initialModelEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass reconfigurationRulesFolderEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass nestedIntervalsDoubleValueProviderEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass nestedIntervalsLongValueProviderEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass modificationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private EClass schedulingPolicy2DelayModificationEClass = null;
@@ -238,7 +255,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      * Note: the correct way to create the package is via the static factory method {@link #init
      * init()}, which also performs initialization of the package, or returns the registered
      * package, if one already exists. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see org.eclipse.emf.ecore.EPackage.Registry
      * @see org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage#eNS_URI
      * @see #init()
@@ -250,7 +267,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private static boolean isInited = false;
@@ -263,7 +280,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
      * This method is used to initialize {@link ExperimentsPackage#eINSTANCE} when that field is
      * accessed. Clients should not invoke it directly. Instead, they should simply access that
      * field to obtain the package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @see #eNS_URI
      * @see #createPackageContents()
      * @see #initializePackageContents()
@@ -282,16 +299,30 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         isInited = true;
 
         // Initialize simple dependencies
+        DlimPackage.eINSTANCE.eClass();
+        ExperimentDataPackage.eINSTANCE.eClass();
+        org.palladiosimulator.edp2.models.Repository.RepositoryPackage.eINSTANCE.eClass();
+        MeasuringpointPackage.eINSTANCE.eClass();
+        IdentifierPackage.eINSTANCE.eClass();
+        MetricSpecPackage.eINSTANCE.eClass();
+        MonitorRepositoryPackage.eINSTANCE.eClass();
+        PcmPackage.eINSTANCE.eClass();
+        ProbfunctionPackage.eINSTANCE.eClass();
         ServicelevelObjectivePackage.eINSTANCE.eClass();
+        StoexPackage.eINSTANCE.eClass();
+        UnitsPackage.eINSTANCE.eClass();
         UsageevolutionPackage.eINSTANCE.eClass();
+        EcorePackage.eINSTANCE.eClass();
 
         // Obtain or create and register interdependencies
         final VariationPackageImpl theVariationPackage = (VariationPackageImpl) (EPackage.Registry.INSTANCE
-                .getEPackage(VariationPackage.eNS_URI) instanceof VariationPackageImpl ? EPackage.Registry.INSTANCE
-                        .getEPackage(VariationPackage.eNS_URI) : VariationPackage.eINSTANCE);
+                .getEPackage(VariationPackage.eNS_URI) instanceof VariationPackageImpl
+                        ? EPackage.Registry.INSTANCE.getEPackage(VariationPackage.eNS_URI)
+                        : VariationPackage.eINSTANCE);
         final AbstractsimulationPackageImpl theAbstractsimulationPackage = (AbstractsimulationPackageImpl) (EPackage.Registry.INSTANCE
-                .getEPackage(AbstractsimulationPackage.eNS_URI) instanceof AbstractsimulationPackageImpl ? EPackage.Registry.INSTANCE
-                        .getEPackage(AbstractsimulationPackage.eNS_URI) : AbstractsimulationPackage.eINSTANCE);
+                .getEPackage(AbstractsimulationPackage.eNS_URI) instanceof AbstractsimulationPackageImpl
+                        ? EPackage.Registry.INSTANCE.getEPackage(AbstractsimulationPackage.eNS_URI)
+                        : AbstractsimulationPackage.eINSTANCE);
 
         // Create package meta-data objects
         theExperimentsPackage.createPackageContents();
@@ -313,7 +344,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -323,7 +354,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -333,7 +364,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -343,7 +374,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -353,7 +384,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -363,7 +394,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -373,7 +404,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -383,7 +414,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -393,7 +424,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -403,7 +434,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -413,7 +444,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -423,7 +454,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -433,7 +464,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -443,7 +474,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -453,7 +484,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -463,7 +494,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -473,7 +504,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -483,7 +514,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -493,7 +524,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -503,7 +534,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -513,7 +544,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -523,7 +554,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -533,7 +564,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -543,7 +574,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -553,7 +584,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -563,7 +594,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -573,7 +604,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -583,7 +614,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -593,7 +624,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -603,7 +634,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -613,7 +644,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -623,7 +654,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -633,7 +664,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -643,7 +674,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -653,7 +684,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -663,7 +694,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -673,7 +704,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -683,7 +714,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -693,7 +724,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -703,7 +734,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -713,7 +744,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -723,7 +754,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -733,7 +764,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -743,7 +774,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -753,7 +784,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -763,7 +794,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -773,7 +804,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -783,7 +814,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -793,7 +824,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -803,7 +834,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -813,7 +844,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -823,7 +854,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -833,7 +864,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -843,7 +874,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -853,7 +884,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -863,7 +894,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -873,7 +904,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -883,7 +914,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -893,7 +924,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -903,7 +934,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -913,7 +944,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -923,7 +954,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -933,7 +964,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -943,7 +974,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -953,7 +984,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -963,7 +994,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -973,7 +1004,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -983,7 +1014,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -993,7 +1024,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -1003,7 +1034,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -1013,7 +1044,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -1023,7 +1054,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -1033,7 +1064,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -1043,7 +1074,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private boolean isCreated = false;
@@ -1051,7 +1082,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
     /**
      * Creates the meta-model objects for the package. This method is guarded to have no affect on
      * any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public void createPackageContents() {
@@ -1165,7 +1196,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     private boolean isInitialized = false;
@@ -1173,7 +1204,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
     /**
      * Complete the initialization of the package and its meta-model. This method is guarded to have
      * no affect on any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public void initializePackageContents() {
@@ -1196,7 +1227,7 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
                 .getEPackage(UsagemodelPackage.eNS_URI);
         final AllocationPackage theAllocationPackage = (AllocationPackage) EPackage.Registry.INSTANCE
                 .getEPackage(AllocationPackage.eNS_URI);
-        final RepositoryPackage theRepositoryPackage = (RepositoryPackage) EPackage.Registry.INSTANCE
+        final RepositoryPackage theRepositoryPackage_1 = (RepositoryPackage) EPackage.Registry.INSTANCE
                 .getEPackage(RepositoryPackage.eNS_URI);
         final MonitorRepositoryPackage theMonitorRepositoryPackage = (MonitorRepositoryPackage) EPackage.Registry.INSTANCE
                 .getEPackage(MonitorRepositoryPackage.eNS_URI);
@@ -1230,9 +1261,11 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
 
         // Initialize classes and features; add operations and parameters
         this.initEClass(this.experimentRepositoryEClass, ExperimentRepository.class, "ExperimentRepository",
-                !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getExperimentRepository_Experiments(), this.getExperiment(), null, "experiments",
-                null, 0, -1, ExperimentRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getExperimentRepository_Experiments(), this.getExperiment(), null, "experiments", null,
+                0, -1,
+                ExperimentRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
                 !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.experimentEClass, Experiment.class, "Experiment", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1241,35 +1274,41 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
                 Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
         this.initEReference(this.getExperiment_Modifications(), this.getModification(), null, "modifications", null, 0,
-                -1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                -1,
+                Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEAttribute(this.getExperiment_Id(), this.ecorePackage.getEString(), "id", null, 1, 1,
-                Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-                !IS_DERIVED, !IS_ORDERED);
+        this.initEAttribute(this.getExperiment_Id(), this.ecorePackage.getEString(), "id", null, 1, 1, Experiment.class,
+                !IS_TRANSIENT,
+                !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
         this.initEAttribute(this.getExperiment_Name(), this.ecorePackage.getEString(), "name", null, 1, 1,
-                Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-                !IS_DERIVED, !IS_ORDERED);
+                Experiment.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+                !IS_ORDERED);
         this.initEReference(this.getExperiment_ToolConfiguration(), this.getToolConfiguration(), null,
-                "toolConfiguration", null, 1, -1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+                "toolConfiguration", null,
+                1, -1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
         this.initEReference(this.getExperiment_StopConditions(), theAbstractsimulationPackage.getStopCondition(), null,
                 "stopConditions", null, 0, -1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEAttribute(this.getExperiment_Description(), this.ecorePackage.getEString(), "description", null, 1,
-                1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-                !IS_DERIVED, !IS_ORDERED);
-        this.initEReference(this.getExperiment_ExperimentDesign(), this.getExperimentDesign(), null,
-                "experimentDesign", null, 1, 1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEReference(this.getExperiment_ResponseMeasurement(), this.getResponseMeasurement(), null,
-                "responseMeasurement", null, 1, 1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEReference(this.getExperiment_InitialModel(), this.getInitialModel(), null, "initialModel", null, 1,
-                1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEAttribute(this.getExperiment_Repetitions(), this.ecorePackage.getEInt(), "repetitions", null, 1, 1,
+        this.initEAttribute(this.getExperiment_Description(), this.ecorePackage.getEString(), "description", null, 1, 1,
                 Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, !IS_ORDERED);
+        this.initEReference(this.getExperiment_ExperimentDesign(), this.getExperimentDesign(), null, "experimentDesign",
+                null, 1,
+                1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEReference(this.getExperiment_ResponseMeasurement(), this.getResponseMeasurement(), null,
+                "responseMeasurement",
+                null, 1, 1, Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEReference(this.getExperiment_InitialModel(), this.getInitialModel(), null, "initialModel", null, 1, 1,
+                Experiment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEAttribute(this.getExperiment_Repetitions(), this.ecorePackage.getEInt(), "repetitions", null, 1, 1,
+                Experiment.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+                !IS_ORDERED);
 
         this.initEClass(this.variationEClass, Variation.class, "Variation", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
@@ -1277,35 +1316,43 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
                 Variation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
         this.initEReference(this.getVariation_ValueProvider(), this.getValueProvider(), null, "valueProvider", null, 1,
-                1, Variation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+                1,
+                Variation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
         this.initEAttribute(this.getVariation_MinValue(), this.ecorePackage.getEDouble(), "minValue", null, 1, 1,
-                Variation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-                !IS_DERIVED, !IS_ORDERED);
+                Variation.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+                !IS_ORDERED);
         this.initEAttribute(this.getVariation_MaxValue(), this.ecorePackage.getEDouble(), "maxValue", null, 1, 1,
-                Variation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-                !IS_DERIVED, !IS_ORDERED);
+                Variation.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+                !IS_ORDERED);
         this.initEAttribute(this.getVariation_MaxVariations(), this.ecorePackage.getELong(), "maxVariations", null, 1,
-                1, Variation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                1,
+                Variation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, !IS_ORDERED);
         this.initEAttribute(this.getVariation_VariedObjectId(), this.ecorePackage.getEString(), "variedObjectId", null,
-                1, 1, Variation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-                !IS_DERIVED, !IS_ORDERED);
-        this.initEAttribute(this.getVariation_Name(), this.ecorePackage.getEString(), "name", null, 1, 1,
+                1, 1,
                 Variation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, !IS_ORDERED);
+        this.initEAttribute(this.getVariation_Name(), this.ecorePackage.getEString(), "name", null, 1, 1,
+                Variation.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+                !IS_ORDERED);
 
         this.initEClass(this.valueProviderEClass, ValueProvider.class, "ValueProvider", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
 
         this.initEClass(this.toolConfigurationEClass, ToolConfiguration.class, "ToolConfiguration", IS_ABSTRACT,
-                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+                !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getToolConfiguration_Name(), this.ecorePackage.getEString(), "name", null, 1, 1,
                 ToolConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.experimentDesignEClass, ExperimentDesign.class, "ExperimentDesign", IS_ABSTRACT,
-                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+                !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
 
         this.initEClass(this.responseMeasurementEClass, ResponseMeasurement.class, "ResponseMeasurement", IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1313,20 +1360,23 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         this.initEClass(this.polynomialValueProviderEClass, PolynomialValueProvider.class, "PolynomialValueProvider",
                 !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getPolynomialValueProvider_Exponent(), this.ecorePackage.getEDouble(), "exponent",
-                null, 1, 1, PolynomialValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
-                !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEAttribute(this.getPolynomialValueProvider_Factor(), this.ecorePackage.getEDouble(), "factor", null,
-                1, 1, PolynomialValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
-                !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+                null, 1, 1,
+                PolynomialValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEAttribute(this.getPolynomialValueProvider_Factor(), this.ecorePackage.getEDouble(), "factor", null, 1,
+                1,
+                PolynomialValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        this.initEClass(this.exponentialValueProviderEClass, ExponentialValueProvider.class,
-                "ExponentialValueProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEAttribute(this.getExponentialValueProvider_Base(), this.ecorePackage.getEDouble(), "base", null, 1,
-                1, ExponentialValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+        this.initEClass(this.exponentialValueProviderEClass, ExponentialValueProvider.class, "ExponentialValueProvider",
+                !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEAttribute(this.getExponentialValueProvider_Base(), this.ecorePackage.getEDouble(), "base", null, 1, 1,
+                ExponentialValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
                 IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.setValueProviderEClass, SetValueProvider.class, "SetValueProvider", !IS_ABSTRACT,
-                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+                !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getSetValueProvider_Values(), this.ecorePackage.getEString(), "values", null, 1, 1,
                 SetValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, !IS_ORDERED);
@@ -1338,27 +1388,32 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         this.initEClass(this.fractionalFactorialDesignEClass, FractionalFactorialDesign.class,
-                "FractionalFactorialDesign", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+                "FractionalFactorialDesign",
+                !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         this.initEClass(this.oneFactorAtATimeEClass, OneFactorAtATime.class, "OneFactorAtATime", !IS_ABSTRACT,
-                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+                !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
 
         this.initEClass(this.simulationDurationMeasurementEClass, SimulationDurationMeasurement.class,
                 "SimulationDurationMeasurement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         this.initEClass(this.profilingMeasurementEClass, ProfilingMeasurement.class, "ProfilingMeasurement",
-                !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+                !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         this.initEClass(this.jmxMeasurementEClass, JMXMeasurement.class, "JMXMeasurement", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getJMXMeasurement_PollingPeriod(), this.ecorePackage.getEIntegerObject(),
-                "pollingPeriod", null, 1, 1, JMXMeasurement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+                "pollingPeriod", null, 1, 1,
+                JMXMeasurement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.linearValueProviderEClass, LinearValueProvider.class, "LinearValueProvider", !IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getLinearValueProvider_Summand(), this.ecorePackage.getEDouble(), "summand", null, 1,
-                1, LinearValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                1,
+                LinearValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
                 IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
         this.initEAttribute(this.getLinearValueProvider_Factor(), this.ecorePackage.getEDouble(), "factor", null, 1, 1,
                 LinearValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
@@ -1367,80 +1422,92 @@ public class ExperimentsPackageImpl extends EPackageImpl implements ExperimentsP
         this.initEClass(this.objectModificationEClass, ObjectModification.class, "ObjectModification", !IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         this.initEReference(this.getObjectModification_Type(), theVariationPackage.getVariationType(), null, "type",
-                null, 0, 1, ObjectModification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-                IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+                null, 0, 1,
+                ObjectModification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEAttribute(this.getObjectModification_Name(), this.ecorePackage.getEString(), "name", null, 1, 1,
-                ObjectModification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+                ObjectModification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
         this.initEAttribute(this.getObjectModification_VariedObjectId(), this.ecorePackage.getEString(),
-                "variedObjectId", null, 1, 1, ObjectModification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+                "variedObjectId", null, 1, 1,
+                ObjectModification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
         this.initEAttribute(this.getObjectModification_Value(), this.ecorePackage.getELong(), "value", null, 1, 1,
-                ObjectModification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-                IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+                ObjectModification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.initialModelEClass, InitialModel.class, "InitialModel", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getInitialModel_UsageModel(), theUsagemodelPackage.getUsageModel(), null,
-                "usageModel", null, 0, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getInitialModel_Allocation(), theAllocationPackage.getAllocation(), null,
-                "allocation", null, 0, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getInitialModel_MiddlewareRepository(), theRepositoryPackage.getRepository(), null,
+        this.initEReference(this.getInitialModel_UsageModel(), theUsagemodelPackage.getUsageModel(), null, "usageModel",
+                null, 0,
+                1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getInitialModel_Allocation(), theAllocationPackage.getAllocation(), null, "allocation",
+                null, 0,
+                1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getInitialModel_MiddlewareRepository(), theRepositoryPackage_1.getRepository(), null,
                 "middlewareRepository", null, 1, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getInitialModel_EventMiddleWareRepository(), theRepositoryPackage.getRepository(),
-                null, "eventMiddleWareRepository", null, 1, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE,
-                IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getInitialModel_EventMiddleWareRepository(), theRepositoryPackage_1.getRepository(),
+                null,
+                "eventMiddleWareRepository", null, 1, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEReference(this.getInitialModel_ReconfigurationRules(), this.getReconfigurationRulesFolder(), null,
                 "reconfigurationRules", null, 0, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEReference(this.getInitialModel_MonitorRepository(),
-                theMonitorRepositoryPackage.getMonitorRepository(), null, "monitorRepository", null, 0, 1,
-                InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+                theMonitorRepositoryPackage.getMonitorRepository(), null,
+                "monitorRepository", null, 0, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEReference(this.getInitialModel_ServiceLevelObjectives(),
                 theServicelevelObjectivePackage.getServiceLevelObjectiveRepository(), null, "serviceLevelObjectives",
                 null, 0, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getInitialModel_Repository(), theRepositoryPackage.getRepository(), null,
-                "repository", null, 0, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getInitialModel_Repository(), theRepositoryPackage_1.getRepository(), null,
+                "repository", null,
+                0, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEReference(this.getInitialModel_System(), theSystemPackage.getSystem(), null, "system", null, 0, 1,
                 InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEReference(this.getInitialModel_ResourceEnvironment(),
-                theResourceenvironmentPackage.getResourceEnvironment(), null, "resourceEnvironment", null, 0, 1,
-                InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+                theResourceenvironmentPackage.getResourceEnvironment(),
+                null, "resourceEnvironment", null, 0, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEReference(this.getInitialModel_UsageEvolution(), theUsageevolutionPackage.getUsageEvolution(), null,
                 "usageEvolution", null, 0, 1, InitialModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.reconfigurationRulesFolderEClass, ReconfigurationRulesFolder.class,
-                "ReconfigurationRulesFolder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEAttribute(this.getReconfigurationRulesFolder_FolderUri(), this.ecorePackage.getEString(),
-                "folderUri", null, 1, 1, ReconfigurationRulesFolder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+                "ReconfigurationRulesFolder",
+                !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEAttribute(this.getReconfigurationRulesFolder_FolderUri(), this.ecorePackage.getEString(), "folderUri",
+                null, 1, 1,
+                ReconfigurationRulesFolder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.nestedIntervalsDoubleValueProviderEClass, NestedIntervalsDoubleValueProvider.class,
                 "NestedIntervalsDoubleValueProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getNestedIntervalsDoubleValueProvider_MinValue(), this.ecorePackage.getEDouble(),
-                "minValue", null, 1, 1, NestedIntervalsDoubleValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE,
-                IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+                "minValue", null, 1,
+                1, NestedIntervalsDoubleValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+                !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEAttribute(this.getNestedIntervalsDoubleValueProvider_MaxValue(), this.ecorePackage.getEDouble(),
-                "maxValue", null, 1, 1, NestedIntervalsDoubleValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE,
-                IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+                "maxValue", null, 1,
+                1, NestedIntervalsDoubleValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+                !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.nestedIntervalsLongValueProviderEClass, NestedIntervalsLongValueProvider.class,
                 "NestedIntervalsLongValueProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         this.initEAttribute(this.getNestedIntervalsLongValueProvider_MinValue(), this.ecorePackage.getELong(),
-                "minValue", null, 1, 1, NestedIntervalsLongValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE,
-                IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+                "minValue", null, 1, 1,
+                NestedIntervalsLongValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+                !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEAttribute(this.getNestedIntervalsLongValueProvider_MaxValue(), this.ecorePackage.getELong(),
-                "maxValue", null, 1, 1, NestedIntervalsLongValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE,
-                IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+                "maxValue", null, 1, 1,
+                NestedIntervalsLongValueProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+                !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.modificationEClass, Modification.class, "Modification", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);

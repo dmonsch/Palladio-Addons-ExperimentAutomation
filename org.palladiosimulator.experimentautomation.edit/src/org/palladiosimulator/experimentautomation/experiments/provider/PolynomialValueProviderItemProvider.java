@@ -24,6 +24,13 @@ import org.palladiosimulator.experimentautomation.experiments.PolynomialValuePro
 public class PolynomialValueProviderItemProvider extends ValueProviderItemProvider {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -57,13 +64,21 @@ public class PolynomialValueProviderItemProvider extends ValueProviderItemProvid
      * @generated
      */
     protected void addExponentPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_PolynomialValueProvider_exponent_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_PolynomialValueProvider_exponent_feature",
-                        "_UI_PolynomialValueProvider_type"),
-                ExperimentsPackage.Literals.POLYNOMIAL_VALUE_PROVIDER__EXPONENT, true, false, false,
-                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_PolynomialValueProvider_exponent_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_PolynomialValueProvider_exponent_feature",
+                                "_UI_PolynomialValueProvider_type"),
+                        ExperimentsPackage.Literals.POLYNOMIAL_VALUE_PROVIDER__EXPONENT,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
@@ -73,13 +88,21 @@ public class PolynomialValueProviderItemProvider extends ValueProviderItemProvid
      * @generated
      */
     protected void addFactorPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_PolynomialValueProvider_factor_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_PolynomialValueProvider_factor_feature",
-                        "_UI_PolynomialValueProvider_type"),
-                ExperimentsPackage.Literals.POLYNOMIAL_VALUE_PROVIDER__FACTOR, true, false, false,
-                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_PolynomialValueProvider_factor_feature"),
+                        this.getString("_UI_PropertyDescriptor_description",
+                                "_UI_PolynomialValueProvider_factor_feature",
+                                "_UI_PolynomialValueProvider_type"),
+                        ExperimentsPackage.Literals.POLYNOMIAL_VALUE_PROVIDER__FACTOR,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
@@ -106,8 +129,8 @@ public class PolynomialValueProviderItemProvider extends ValueProviderItemProvid
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

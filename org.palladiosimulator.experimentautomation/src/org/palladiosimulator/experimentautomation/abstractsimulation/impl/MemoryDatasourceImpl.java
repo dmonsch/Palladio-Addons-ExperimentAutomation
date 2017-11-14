@@ -9,8 +9,6 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.MemoryDatas
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Memory Datasource</b></em>
  * '. <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
@@ -18,7 +16,14 @@ public class MemoryDatasourceImpl extends EDP2DatasourceImpl implements MemoryDa
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     protected MemoryDatasourceImpl() {
@@ -27,7 +32,7 @@ public class MemoryDatasourceImpl extends EDP2DatasourceImpl implements MemoryDa
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

@@ -15,14 +15,21 @@ import org.palladiosimulator.experimentautomation.variation.VariationRepository;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
- * 
+ *
  * @generated
  */
 public class VariationFactoryImpl extends EFactoryImpl implements VariationFactory {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public static VariationFactory init() {
@@ -40,7 +47,7 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
 
     /**
      * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public VariationFactoryImpl() {
@@ -49,7 +56,7 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -68,7 +75,7 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -79,7 +86,7 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -90,7 +97,7 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -101,7 +108,7 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -111,7 +118,7 @@ public class VariationFactoryImpl extends EFactoryImpl implements VariationFacto
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @deprecated
      * @generated
      */

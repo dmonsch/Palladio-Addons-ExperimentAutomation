@@ -19,12 +19,11 @@ import org.palladiosimulator.experimentautomation.variation.VariationType;
  * end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.variation.impl.VariationRepositoryImpl#getVariation
+ * <li>{@link org.palladiosimulator.experimentautomation.variation.impl.VariationRepositoryImpl#getVariation
  * <em>Variation</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -32,7 +31,14 @@ public class VariationRepositoryImpl extends CDOObjectImpl implements VariationR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     protected VariationRepositoryImpl() {
@@ -41,7 +47,7 @@ public class VariationRepositoryImpl extends CDOObjectImpl implements VariationR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -51,7 +57,7 @@ public class VariationRepositoryImpl extends CDOObjectImpl implements VariationR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -61,7 +67,7 @@ public class VariationRepositoryImpl extends CDOObjectImpl implements VariationR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -73,7 +79,7 @@ public class VariationRepositoryImpl extends CDOObjectImpl implements VariationR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -88,7 +94,7 @@ public class VariationRepositoryImpl extends CDOObjectImpl implements VariationR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -102,7 +108,7 @@ public class VariationRepositoryImpl extends CDOObjectImpl implements VariationR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -119,7 +125,7 @@ public class VariationRepositoryImpl extends CDOObjectImpl implements VariationR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -134,7 +140,7 @@ public class VariationRepositoryImpl extends CDOObjectImpl implements VariationR
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

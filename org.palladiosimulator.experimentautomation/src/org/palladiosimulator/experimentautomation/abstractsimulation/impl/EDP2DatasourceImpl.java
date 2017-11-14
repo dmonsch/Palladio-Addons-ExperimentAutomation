@@ -12,21 +12,26 @@ import org.palladiosimulator.experimentautomation.abstractsimulation.EDP2Datasou
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.EDP2DatasourceImpl#getId
+ * <li>{@link org.palladiosimulator.experimentautomation.abstractsimulation.impl.EDP2DatasourceImpl#getId
  * <em>Id</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public abstract class EDP2DatasourceImpl extends CDOObjectImpl implements EDP2Datasource {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+    /**
      * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getId()
      * @generated
      * @ordered
@@ -35,7 +40,7 @@ public abstract class EDP2DatasourceImpl extends CDOObjectImpl implements EDP2Da
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected EDP2DatasourceImpl() {
@@ -44,7 +49,7 @@ public abstract class EDP2DatasourceImpl extends CDOObjectImpl implements EDP2Da
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -54,7 +59,7 @@ public abstract class EDP2DatasourceImpl extends CDOObjectImpl implements EDP2Da
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -64,7 +69,7 @@ public abstract class EDP2DatasourceImpl extends CDOObjectImpl implements EDP2Da
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -75,7 +80,7 @@ public abstract class EDP2DatasourceImpl extends CDOObjectImpl implements EDP2Da
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -86,7 +91,7 @@ public abstract class EDP2DatasourceImpl extends CDOObjectImpl implements EDP2Da
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -100,7 +105,7 @@ public abstract class EDP2DatasourceImpl extends CDOObjectImpl implements EDP2Da
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -115,7 +120,7 @@ public abstract class EDP2DatasourceImpl extends CDOObjectImpl implements EDP2Da
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -130,7 +135,7 @@ public abstract class EDP2DatasourceImpl extends CDOObjectImpl implements EDP2Da
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

@@ -33,6 +33,13 @@ public class ReconfigurationRulesFolderItemProvider extends ItemProviderAdapter 
         IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -66,12 +73,18 @@ public class ReconfigurationRulesFolderItemProvider extends ItemProviderAdapter 
      */
     protected void addFolderUriPropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_ReconfigurationRulesFolder_folderUri_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_ReconfigurationRulesFolder_folderUri_feature",
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                this.getResourceLocator(),
+                this.getString("_UI_ReconfigurationRulesFolder_folderUri_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_ReconfigurationRulesFolder_folderUri_feature",
                         "_UI_ReconfigurationRulesFolder_type"),
-                ExperimentsPackage.Literals.RECONFIGURATION_RULES_FOLDER__FOLDER_URI, true, false, false,
-                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                ExperimentsPackage.Literals.RECONFIGURATION_RULES_FOLDER__FOLDER_URI,
+                true,
+                false,
+                false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                null,
+                null));
     }
 
     /**
@@ -93,14 +106,14 @@ public class ReconfigurationRulesFolderItemProvider extends ItemProviderAdapter 
     @Override
     public String getText(final Object object) {
         final String label = ((ReconfigurationRulesFolder) object).getFolderUri();
-        return label == null || label.length() == 0 ? this.getString("_UI_ReconfigurationRulesFolder_type") : this
-                .getString("_UI_ReconfigurationRulesFolder_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_ReconfigurationRulesFolder_type")
+                : this.getString("_UI_ReconfigurationRulesFolder_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

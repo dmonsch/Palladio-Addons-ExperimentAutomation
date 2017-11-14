@@ -36,6 +36,13 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
         IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 
     /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -72,12 +79,20 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
      * @generated
      */
     protected void addIdPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Experiment_id_feature"), this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_Experiment_id_feature", "_UI_Experiment_type"),
-                        ExperimentsPackage.Literals.EXPERIMENT__ID, true, false, false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_Experiment_id_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_Experiment_id_feature",
+                                "_UI_Experiment_type"),
+                        ExperimentsPackage.Literals.EXPERIMENT__ID,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
@@ -87,12 +102,20 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
      * @generated
      */
     protected void addNamePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Experiment_name_feature"), this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_Experiment_name_feature", "_UI_Experiment_type"),
-                        ExperimentsPackage.Literals.EXPERIMENT__NAME, true, false, false,
-                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_Experiment_name_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_Experiment_name_feature",
+                                "_UI_Experiment_type"),
+                        ExperimentsPackage.Literals.EXPERIMENT__NAME,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
@@ -102,12 +125,20 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
      * @generated
      */
     protected void addToolConfigurationPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Experiment_toolConfiguration_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_Experiment_toolConfiguration_feature",
-                        "_UI_Experiment_type"), ExperimentsPackage.Literals.EXPERIMENT__TOOL_CONFIGURATION, true,
-                false, true, null, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_Experiment_toolConfiguration_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_Experiment_toolConfiguration_feature",
+                                "_UI_Experiment_type"),
+                        ExperimentsPackage.Literals.EXPERIMENT__TOOL_CONFIGURATION,
+                        true,
+                        false,
+                        true,
+                        null,
+                        null,
+                        null));
     }
 
     /**
@@ -117,12 +148,20 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
      * @generated
      */
     protected void addDescriptionPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Experiment_description_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_Experiment_description_feature",
-                        "_UI_Experiment_type"), ExperimentsPackage.Literals.EXPERIMENT__DESCRIPTION, true, false,
-                false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_Experiment_description_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_Experiment_description_feature",
+                                "_UI_Experiment_type"),
+                        ExperimentsPackage.Literals.EXPERIMENT__DESCRIPTION,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
@@ -132,12 +171,20 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
      * @generated
      */
     protected void addRepetitionsPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_Experiment_repetitions_feature"), this.getString(
-                        "_UI_PropertyDescriptor_description", "_UI_Experiment_repetitions_feature",
-                        "_UI_Experiment_type"), ExperimentsPackage.Literals.EXPERIMENT__REPETITIONS, true, false,
-                false, ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+        this.itemPropertyDescriptors
+                .add(this.createItemPropertyDescriptor(
+                        ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(),
+                        this.getResourceLocator(),
+                        this.getString("_UI_Experiment_repetitions_feature"),
+                        this.getString("_UI_PropertyDescriptor_description", "_UI_Experiment_repetitions_feature",
+                                "_UI_Experiment_type"),
+                        ExperimentsPackage.Literals.EXPERIMENT__REPETITIONS,
+                        true,
+                        false,
+                        false,
+                        ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+                        null,
+                        null));
     }
 
     /**
@@ -195,14 +242,14 @@ public class ExperimentItemProvider extends ItemProviderAdapter implements IEdit
     @Override
     public String getText(final Object object) {
         final String label = ((Experiment) object).getName();
-        return label == null || label.length() == 0 ? this.getString("_UI_Experiment_type") : this
-                .getString("_UI_Experiment_type") + " " + label;
+        return label == null || label.length() == 0 ? this.getString("_UI_Experiment_type")
+                : this.getString("_UI_Experiment_type") + " " + label;
     }
 
     /**
      * This handles model notifications by calling {@link #updateChildren} to update any cached
-     * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}
-     * . <!-- begin-user-doc --> <!-- end-user-doc -->
+     * children and by creating a viewer notification, which it passes to
+     * {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

@@ -8,55 +8,43 @@ import org.palladiosimulator.experimentautomation.experiments.ExperimentsPackage
 import org.palladiosimulator.experimentautomation.experiments.InitialModel;
 import org.palladiosimulator.experimentautomation.experiments.ReconfigurationRulesFolder;
 import org.palladiosimulator.monitorrepository.MonitorRepository;
-import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
-import org.scaledl.usageevolution.UsageEvolution;
-
 import org.palladiosimulator.pcm.allocation.Allocation;
 import org.palladiosimulator.pcm.repository.Repository;
 import org.palladiosimulator.pcm.resourceenvironment.ResourceEnvironment;
 import org.palladiosimulator.pcm.usagemodel.UsageModel;
+import org.palladiosimulator.servicelevelobjective.ServiceLevelObjectiveRepository;
+import org.scaledl.usageevolution.UsageEvolution;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Initial Model</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getUsageModel
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getUsageModel
  * <em>Usage Model</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getAllocation
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getAllocation
  * <em>Allocation</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getMiddlewareRepository
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getMiddlewareRepository
  * <em>Middleware Repository</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getEventMiddleWareRepository
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getEventMiddleWareRepository
  * <em>Event Middle Ware Repository</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getReconfigurationRules
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getReconfigurationRules
  * <em>Reconfiguration Rules</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getMonitorRepository
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getMonitorRepository
  * <em>Monitor Repository</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getServiceLevelObjectives
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getServiceLevelObjectives
  * <em>Service Level Objectives</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getRepository
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getRepository
  * <em>Repository</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getSystem
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getSystem
  * <em>System</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getResourceEnvironment
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getResourceEnvironment
  * <em>Resource Environment</em>}</li>
- * <li>
- * {@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getUsageEvolution
+ * <li>{@link org.palladiosimulator.experimentautomation.experiments.impl.InitialModelImpl#getUsageEvolution
  * <em>Usage Evolution</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -64,7 +52,14 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
+     * @generated
+     */
+    public static final String copyright = "Palladiosimulator.org 2008-2017";
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
      * @generated
      */
     protected InitialModelImpl() {
@@ -73,7 +68,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -83,7 +78,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -93,7 +88,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -104,7 +99,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public UsageModel basicGetUsageModel() {
@@ -114,7 +109,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -125,7 +120,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -136,7 +131,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public Allocation basicGetAllocation() {
@@ -146,18 +141,19 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setAllocation(final Allocation newAllocation) {
         this.eDynamicSet(ExperimentsPackage.INITIAL_MODEL__ALLOCATION,
-                ExperimentsPackage.Literals.INITIAL_MODEL__ALLOCATION, newAllocation);
+                ExperimentsPackage.Literals.INITIAL_MODEL__ALLOCATION,
+                newAllocation);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -168,7 +164,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public Repository basicGetMiddlewareRepository() {
@@ -178,7 +174,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -189,7 +185,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -200,7 +196,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public Repository basicGetEventMiddleWareRepository() {
@@ -210,7 +206,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -221,7 +217,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -232,7 +228,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ReconfigurationRulesFolder basicGetReconfigurationRules() {
@@ -242,7 +238,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -253,7 +249,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -264,7 +260,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public MonitorRepository basicGetMonitorRepository() {
@@ -274,7 +270,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -285,7 +281,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -297,7 +293,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ServiceLevelObjectiveRepository basicGetServiceLevelObjectives() {
@@ -308,7 +304,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -319,7 +315,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -330,7 +326,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public Repository basicGetRepository() {
@@ -340,18 +336,19 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setRepository(final Repository newRepository) {
         this.eDynamicSet(ExperimentsPackage.INITIAL_MODEL__REPOSITORY,
-                ExperimentsPackage.Literals.INITIAL_MODEL__REPOSITORY, newRepository);
+                ExperimentsPackage.Literals.INITIAL_MODEL__REPOSITORY,
+                newRepository);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -362,7 +359,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public org.palladiosimulator.pcm.system.System basicGetSystem() {
@@ -372,7 +369,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -383,7 +380,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -394,7 +391,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public ResourceEnvironment basicGetResourceEnvironment() {
@@ -404,7 +401,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -415,7 +412,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -426,7 +423,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public UsageEvolution basicGetUsageEvolution() {
@@ -436,7 +433,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -447,7 +444,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -514,7 +511,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -559,7 +556,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -604,7 +601,7 @@ public class InitialModelImpl extends CDOObjectImpl implements InitialModel {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
