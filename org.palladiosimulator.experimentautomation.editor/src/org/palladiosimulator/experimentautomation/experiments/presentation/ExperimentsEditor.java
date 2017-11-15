@@ -638,10 +638,13 @@ public class ExperimentsEditor extends MultiPageEditorPart implements IEditingDo
             }
 
             if (this.markerHelper.hasMarkers(this.editingDomain.getResourceSet())) {
-                try {
-                    this.markerHelper.updateMarkers(diagnostic);
-                } catch (final CoreException exception) {
-                    ExperimentAutomationEditorPlugin.INSTANCE.log(exception);
+                this.markerHelper.deleteMarkers(this.editingDomain.getResourceSet());
+                if (diagnostic.getSeverity() != Diagnostic.OK) {
+                    try {
+                        this.markerHelper.createMarkers(diagnostic);
+                    } catch (final CoreException exception) {
+                        ExperimentAutomationEditorPlugin.INSTANCE.log(exception);
+                    }
                 }
             }
         }

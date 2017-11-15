@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.palladiosimulator.experimentautomation.edit;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 1.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.experimentautomation.variation.provider.ExperimentAutomationEditPlugin$Implementation
 Bundle-Vendor: %providerName
@@ -13,7 +13,7 @@ Export-Package: org.palladiosimulator.experimentautomation.abstractsimulation.pr
  org.palladiosimulator.experimentautomation.variation.provider
 Require-Bundle: org.eclipse.core.runtime;bundle-version="3.10.0",
  org.palladiosimulator.experimentautomation;bundle-version="1.0.0";visibility:=reexport,
- org.eclipse.emf.edit;bundle-version="2.10.0";visibility:=reexport,
+ org.eclipse.emf.edit;bundle-version="2.12.0";visibility:=reexport,
  tools.descartes.dlim.generator;visibility:=reexport,
  org.palladiosimulator.edp2;bundle-version="2.0.0";visibility:=reexport,
  org.palladiosimulator.edp2.edit;bundle-version="1.0.0";visibility:=reexport,
@@ -35,7 +35,7 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="3.10.0",
  de.uka.ipd.sdq.units.edit;bundle-version="2.1.0";visibility:=reexport,
  org.scaledl.usageevolution;visibility:=reexport,
  org.scaledl.usageevolution.edit;visibility:=reexport,
- org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.ecore;bundle-version="2.12.0";visibility:=reexport,
  org.eclipse.emf.ecore.edit;visibility:=reexport,
  org.eclipse.uml2.common.edit;bundle-version="2.0.0";visibility:=reexport,
  tools.descartes.dlim.generator.edit;bundle-version="0.14.10";visibility:=reexport
