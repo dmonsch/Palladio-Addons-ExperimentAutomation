@@ -6,7 +6,7 @@
   <rm:locator pattern="^org\.palladiosimulator\.experimentautomation.*" searchPathRef="ExperimentAutomation" failOnError="false"/>
   
   <rm:redirect pattern=".*"
-		href="https://anonymous:anonymous@svnserver.informatik.kit.edu/i43/svn/code/Palladio/Incubation/SimuLizar/trunk/org.palladiosimulator.simulizar.buckminster/simulizar.rmap" />
+		href="https://raw.githubusercontent.com/PalladioSimulator/Palladio-Analyzer-SimuLizar/master/org.palladiosimulator.simulizar.buckminster/simulizar.rmap" />
 
   <rm:searchPath name="ExperimentAutomation">
     <rm:provider resolutionFilter="(resolveFrom=nightly)" componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
