@@ -3,6 +3,7 @@ package org.palladiosimulator.experimentautomation.application;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
@@ -72,7 +73,16 @@ public class ExperimentApplication implements IApplication {
         final List<Experiment> experiments = getExperiments(experimentsLocation, filteredExperimentIDs);
         final ExperimentAutomationConfiguration experimentAutomationConfiguration = new ExperimentAutomationConfiguration();
         experimentAutomationConfiguration.setExperiments(experiments);
-        experimentAutomationConfiguration.setAttributes(new HashMap<String, Object>());
+        //experimentAutomationConfiguration.setLoadModels(false);
+        
+        // QUICK N DIRTY FIX
+        Map<String, Object> props = new HashMap<String, Object>();
+        props.put("org.palladiosimulator.architecturaltemplates.jobs.config.modelStorageLocation", "org.palladiosimulator.architecturaltemplates.temporary");
+        props.put("org.palladiosimulator.architecturaltemplates.jobs.config.storeCompletedModels", false);
+        props.put("de.uka.ipd.sdq.workflowengine.debuglevel", 2);
+        props.put("outpath", "org.palladiosimulator.temporary");
+        
+        experimentAutomationConfiguration.setAttributes(props);
 
         // run experiments via blackboard-based workflow
         final MDSDBlackboard blackboard = new MDSDBlackboard();
